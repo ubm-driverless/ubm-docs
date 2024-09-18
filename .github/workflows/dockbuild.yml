@@ -31,24 +31,30 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        
       - name: Install rosdoc2
         run: |
             python3 -m pip install rosdoc2
-      - name: Clone remote repo
+            
+      - name: Clone private repository
         run: |
-            eval `ssh-agent -s`
-            ssh-add - <<< "${{ secrets.PRIVATE_SSH_KEY }}"
             git clone git@github.com:ubm-driverless/ubm-f1tenth.git
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            
       - name: Generate docs
         run: |
             for f in $(find ./ubm-f1tenth/ -type f -iname "package.xml"); do rosdoc2 build -p ${f%package.xml} -o ./docs/; done
+            
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: './docs/'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
