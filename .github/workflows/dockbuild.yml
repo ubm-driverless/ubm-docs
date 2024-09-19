@@ -47,8 +47,8 @@ jobs:
         run: |
             mkdir ./docs
             echo '<html><head><title>ubm-driverless ros packages documentation index</title></head><body><h1>Index of packages documentation for ubm-driverless/ubm-f1tenth</h1><ul>' > ./docs/index.html
-            for f in $(find ./ubm-f1tenth/ -type f -iname "package.xml"); do rosdoc2 build -p ${f%package.xml} -o ./docs/; echo "<li><a href='/ubm-docs/${${f%/package.xml}##*/}'>${${f%/package.xml}##*/}</a></li>" > ./docs/index.html ; done
-            echo '' > ./docs/index.html
+            for f in $(find ./ubm-f1tenth/ -type f -iname "package.xml"); do g="${${f%/package.xml}##*/}"; echo "Building $g"; rosdoc2 build -p ${f%package.xml} -o ./docs/; echo "<li><a href='/ubm-docs/$g'>$g</a></li>" >> ./docs/index.html ; done
+            echo '</ul></body></html>' >> ./docs/index.html
             
       - name: Setup Pages
         uses: actions/configure-pages@v5
