@@ -34,6 +34,7 @@ jobs:
         
       - name: Install rosdoc2
         run: |
+            sudo apt install -y doxygen
             python3 -m pip install rosdoc2
 
       - name: Clone private repo
