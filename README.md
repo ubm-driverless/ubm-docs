@@ -5,6 +5,10 @@ Open a powershell prompt and install WSL:
 ```bash
 wsl --install
 ```
+To make sure wsl uses Ubuntu as the default distribution:
+```bash
+wsl -s Ubuntu
+```
 Now open wsl by typing:
 ```bash
 wsl
