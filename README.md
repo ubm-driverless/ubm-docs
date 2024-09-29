@@ -1,4 +1,54 @@
 # HOW TO
+## Instructions to set up the "ubm-f1tenth" enviroment on Linux/Mac
+If you're on MacOS you'd have to install tigervnc-viewer through the website, otherwise on Linux you can do:
+```bash
+sudo apt install tigervnc-viewer
+
+```
+To remove the corrupted configs and restore the docker CLI config to default
+Run the following command:
+```bash
+sudo rm ~/.docker/config.json
+```
+Now clone the repository and enter its folder.
+Now we're gonna build our docker environment running the following command:
+```bash
+docker build -t f1tenth-ubm-sim -f Dockerfile .
+```
+This will take a long time, around 10-30 minutes. You only have to do it once! Now start the docker container.
+```bash
+docker compose up
+```
+And in as many other terminals as you want to access the simulation run: 
+```bash
+docker exec -it ubm-f1tenth-sim-1 /bin/bash
+```
+In one of these terminals bring up the simulation:
+```bash
+launch sim.py
+```
+Now that the simulation is up, you can see it by launching TigerVNC Viewer it will be in your windows apps.
+Connect to the server:
+- **VNC Server:** `localhost:5901`
+- **Password:** `[redacted]`  
+
+You will see the car and the track!  
+In another one of the Visual Studio Code terminals start up the control stack:
+```bash
+launch control.py
+```
+In another one of these terminals send virtual telecommand signals:
+```bash
+press_circle
+```
+This starts the pure pursuit algorithm and the car will move. The telecommand to stop the car is:
+```bash
+press_L1
+```
+To shut it down, go to the first terminal, the one you started the container with "docker compose up" and press ^C.
+Next time you wish to code, open VSCode in the correct directory, start docker and connect with Tiger VNC.
+
+
 ## Instructions to set up the "ubm-f1tenth" enviroment on Windows
 For compatibility, it runs within WSL. This is a linux virtual machine provided by Microsoft that runs with near bare metal performance.
 Open a powershell prompt and install WSL:
@@ -83,8 +133,7 @@ press_L1
 ```
 To shut it down, go to the first terminal, the one you started the container with "docker compose up" and press ^C.
 Next time you wish to code, start WSL, open VSCode in the correct directory, start docker and connect with Tiger VNC.
-
-## Useful Information
+# Useful Information
 
 ### When to Use `colcon build`
 - **After Cloning a New ROS2 Package or Project:** If you’ve cloned a new ROS2 package or project into your workspace, run `colcon build` to compile it.
