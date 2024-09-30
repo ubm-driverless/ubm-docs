@@ -97,7 +97,7 @@ Navigate inside the repo and open it in Visual Studio code.
 cd ubm-f1tenth/
 code .
 ```
-This is your development enviroment. Cool! Now to install ROS2 in a docker container, use a new terminal within Visual Studio Code. This ensures it is the correct directory and also in WSL.
+This is your development enviroment. Cool! Now to install ROS2 in a docker container, use a new terminal within Visual Studio Code. This ensures it is the correct directory and also in WSL. It's perfectly fine to run this in a new terminal if the vs code one is not working. It might be solved by rebooting.
 ```bash
 docker build -t f1tenth-ubm-sim -f Dockerfile .
 ```
