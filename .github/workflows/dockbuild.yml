@@ -24,6 +24,14 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    container:
+      image: ubmdriverless/f1tenth:latest
+      credentials:
+        username: ubmdriverless
+        password: ${{ secrets.DOCKER_HUB_TOKEN_READ_ONLY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -43,8 +51,27 @@ jobs:
         run: |
             mkdir ./docs
             echo '<html><head><title>ubm-driverless ros packages documentation index</title></head><body><h1>Index of packages documentation for ubm-driverless/ubm-f1tenth</h1><ul>' > ./docs/index.html
-            for f in $(find ./ubm-f1tenth/ -type f -iname "package.xml"); do h="${f%/package.xml}"; g="${h##*/}"; echo "Building $g"; rosdoc2 build -p ${f%package.xml} -o ./docs/; echo "<li><a href='/ubm-docs/$g'>$g</a></li>" >> ./docs/index.html ; done
-            echo '</ul></body></html>' >> ./docs/index.html
+            echo "Building doc of C++ packages..."
+            for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
+              h="${f%/package.xml}";
+              g="${h##*/}";
+              cat $f | grep rosdoc2 &>/dev/null
+              if [ $? -eq 0 ]; then
+                echo "building $g with rosdoc2"
+                rosdoc2 build -p ${f%package.xml} -o ./docs/;
+                echo "<li><a href='/ubm-docs/$g'>$g</a></li>" >> ./docs/index.html;
+              fi
+            done
+            echo "Building doc of Python packages..."
+            source ~/doc/bin/activate
+            for f in $(find ./ubm-f1tenth -type f -iname "mkdocs.yml"); do
+              h="${f%/mkdocs.yml}";
+              g="${h##*/}";
+              cd $h;
+              python -m mkdocs build -d ../../docs/$g;
+              echo "<li><a href='/ubm-docs/$g'>$g</a></li>" >> ./docs/index.html;
+              cd ../..;
+            done
             
       - name: Setup Pages
         uses: actions/configure-pages@v5
