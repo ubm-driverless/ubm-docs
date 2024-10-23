@@ -39,6 +39,10 @@ jobs:
           ssh-private-key: ${{ secrets.PRIVATE_SSH_KEY_TEST2 }}
       - name: Clone private repo
         run: |
+          echo ".ssh dir:"
+          ls -la /home/ubm/.ssh
+          echo "known_hosts:"
+          cat /home/ubm/.ssh/known_hosts
           git clone git@github.com:ubm-driverless/ubm-f1tenth.git
             
       - name: Generate docs
