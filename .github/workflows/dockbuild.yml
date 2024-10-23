@@ -24,9 +24,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
     container:
       image: ubmdriverless/f1tenth:latest
       credentials:
@@ -40,9 +37,9 @@ jobs:
       - name: Clone private repo
         run: |
           echo ".ssh dir:"
-          ls -la ~/.ssh
+          ls -la /root/.ssh
           echo "known_hosts:"
-          cat ~/.ssh/known_hosts
+          cat /root/.ssh/known_hosts
           git clone git@github.com:ubm-driverless/ubm-f1tenth.git
             
       - name: Generate docs
