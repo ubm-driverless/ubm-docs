@@ -32,6 +32,8 @@ jobs:
       credentials:
         username: ubmdriverless
         password: ${{ secrets.DOCKER_HUB_TOKEN_READ_ONLY }}
+      env:
+        HOME: /home/ubm
     steps:
       - name: Clone private repo
         run: |
