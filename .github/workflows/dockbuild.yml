@@ -36,7 +36,8 @@ jobs:
       - name: Clone private repo
         run: |
           eval `ssh-agent -s`
-          ssh-add - <<< "${{ secrets.PRIVATE_SSH_KEY_TEST }}"
+          ssh-add - <<< "${{ secrets.PRIVATE_SSH_KEY }}"
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
           git clone git@github.com:ubm-driverless/ubm-f1tenth.git
             
       - name: Generate docs
