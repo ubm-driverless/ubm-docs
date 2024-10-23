@@ -32,14 +32,12 @@ jobs:
       credentials:
         username: ubmdriverless
         password: ${{ secrets.DOCKER_HUB_TOKEN_READ_ONLY }}
-      env:
-        HOME: /home/ubm
     steps:
       - name: Clone private repo
         run: |
           eval `ssh-agent -s`
           ssh-add - <<< "${{ secrets.PRIVATE_SSH_KEY }}"
-          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+          ssh-keyscan -H github.com >> /home/ubm/.ssh/known_hosts
           git clone git@github.com:ubm-driverless/ubm-f1tenth.git
             
       - name: Generate docs
