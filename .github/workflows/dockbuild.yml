@@ -47,9 +47,7 @@ jobs:
             for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
               h="${f%/package.xml}";
               g="${h##*/}";
-              grep rosdoc2 $f > /tmp/grepRes;
-              FOUND=$(wc -l /tmp/grepRes | cut -c1);
-              if [ $FOUND -eq 1 ]; then
+              if [ $(grep rosdoc2 $f | wc -l - | cut -c1) -eq 1 ]; then
                 echo "building $g with rosdoc2"
                 rosdoc2 build -p ${f%package.xml} -o ./docs/;
                 echo "<li><a href='/ubm-docs/$g'>$g</a></li>" >> ./docs/index.html;
