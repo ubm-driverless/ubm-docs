@@ -36,11 +36,7 @@ jobs:
           ssh-private-key: ${{ secrets.PRIVATE_SSH_KEY_TEST2 }}
       - name: Clone private repo
         run: |
-          echo ".ssh dir:"
-          ls -la /root/.ssh
-          echo "known_hosts:"
           ssh-keyscan -H github.com >> /root/.ssh/known_hosts
-          cat /root/.ssh/known_hosts
           git clone git@github.com:ubm-driverless/ubm-f1tenth.git
             
       - name: Generate docs
@@ -51,7 +47,8 @@ jobs:
             for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
               h="${f%/package.xml}";
               g="${h##*/}";
-              cat $f | grep rosdoc2 &>/dev/null
+              cat $f;
+              grep rosdoc2 $f &>/dev/null;
               if [ $? -eq 0 ]; then
                 echo "building $g with rosdoc2"
                 rosdoc2 build -p ${f%package.xml} -o ./docs/;
