@@ -41,6 +41,11 @@ jobs:
             
       - name: Generate docs
         run: |
+            echo "pwd: $(pwd)"
+            echo "ls:"
+            ls
+            echo "ls /home/ubm/"
+            ls /home/ubm
             mkdir ./docs
             echo '<html><head><title>ubm-driverless ros packages documentation index</title></head><body><h1>Index of packages documentation for ubm-driverless/ubm-f1tenth</h1><ul>' > ./docs/index.html
             echo "Building doc of C++ packages..."
