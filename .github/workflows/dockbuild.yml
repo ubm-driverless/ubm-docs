@@ -53,6 +53,7 @@ jobs:
             echo '<html><head><title>ubm-driverless ros packages documentation index</title></head><body><h1>Index of packages documentation for ubm-driverless/ubm-f1tenth</h1><ul>' > ./docs/index.html
             echo "Building doc of C++ packages..."
             source /home/ubm/rosdoc2/bin/activate
+            source /opt/ros/foxy/setup.bash
             for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
               h="${f%/package.xml}";
               g="${h##*/}";
