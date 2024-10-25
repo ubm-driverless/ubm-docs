@@ -33,7 +33,7 @@ jobs:
       - name: Setup ssh
         uses: webfactory/ssh-agent@v0.9.0
         with:
-          ssh-private-key: ${{ secrets.PRIVATE_SSH_KEY_TEST2 }}
+          ssh-private-key: ${{ secrets.PRIVATE_SSH_KEY }}
       - name: Clone private repo
         run: |
           ssh-keyscan -H github.com >> /root/.ssh/known_hosts
@@ -44,6 +44,7 @@ jobs:
             mkdir ./docs
             echo '<html><head><title>ubm-driverless ros packages documentation index</title></head><body><h1>Index of packages documentation for ubm-driverless/ubm-f1tenth</h1><ul>' > ./docs/index.html
             echo "Building doc of C++ packages..."
+            source /home/ubm/rosdoc2/bin/activate
             for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
               h="${f%/package.xml}";
               g="${h##*/}";
@@ -54,7 +55,8 @@ jobs:
               fi
             done
             echo "Building doc of Python packages..."
-            source ~/doc/bin/activate
+            deactivate
+            source /home/ubm/mkdocs/bin/activate
             for f in $(find ./ubm-f1tenth -type f -iname "mkdocs.yml"); do
               h="${f%/mkdocs.yml}";
               g="${h##*/}";
