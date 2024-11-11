@@ -8,7 +8,7 @@ on:
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  # pages: write
+  pages: write
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
@@ -53,18 +53,28 @@ jobs:
           DOCS_BASE_DIR="./docs"
           CPP_DOCS_DIR="$DOCS_BASE_DIR/cpp_packages"
           PYTHON_DOCS_DIR="$DOCS_BASE_DIR/python_packages"
+          MARKDOWN_FILE="$DOCS_BASE_DIR/CPP_PACKAGES.md"
           mkdir -p "$DOCS_BASE_DIR" "$CPP_DOCS_DIR" "$PYTHON_DOCS_DIR"
+
 
           # Building docs for C++ packages
           echo "Building docs of C++ packages..."
           source /home/ubm/rosdoc2/bin/activate
           source /opt/ros/foxy/setup.bash
+          echo "# C++ Package Documentation" > "$MARKDOWN_FILE"
+          echo "" >> "$MARKDOWN_FILE"
           for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
             package_dir="${f%/package.xml}";
             package_name="${package_dir##*/}"
+            package_markdown="$CPP_DOCS_DIR/$package_name.md"
+            package_doc_path="$CPP_DOCS_DIR/$package_name/index.html"
             if grep -q "rosdoc2" "$f"; then
               echo "Building $package_name with rosdoc2"
-              rosdoc2 build -p "$package_dir" -o "$CPP_DOCS_DIR/$package_name"
+              rosdoc2 build -p "$package_dir" -o "$CPP_DOCS_DIR/"
+              if [ -f "$package_doc_path" ]; then
+                echo "- [$package_name](cpp_packages/$package_name.md)" >> "$MARKDOWN_FILE"
+                echo "<html><head><meta http-equiv='refresh' content='0; url=./$package_name/index.html' /></head></html>" > "$package_markdown"
+              fi
             fi
           done
           deactivate
@@ -88,6 +98,6 @@ jobs:
           # Upload entire repository
           path: './docs/'
           
-      # - name: Deploy to GitHub Pages
-      #   id: deployment
-      #   uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
