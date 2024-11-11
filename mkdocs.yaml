@@ -1,0 +1,55 @@
+site_name: UBM Test Documentation
+site_url: https://ubm-driverless.github.io/ubm-docs/
+
+theme:
+  logo: assets/logo.png
+  name: material
+   features:
+     - navigation.tabs
+     - navigation.sections
+     - navigation.expand
+     - toc.follow
+     - toc.integrate
+     - navigation.top
+     - search.suggest
+     - search.highlight
+     - content.tabs.link
+     - content.code.annotation
+     - content.code.copy
+  language: en
+  # font:
+  #   text: Roboto
+  #   code: Roboto Mono
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: red
+  
+plugins:
+  - search
+  - mkdocstrings
+  #- offline
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+
+copyright: '2024 © UniBo Motorsport'
+
+extra:
+  generator: false
+  version:
+    provider: mike
+
+repo_url: https://github.com/ubm-driverless
+repo_name: ubm-driverless
