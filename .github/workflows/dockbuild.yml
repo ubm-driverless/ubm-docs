@@ -44,36 +44,50 @@ jobs:
             
       - name: Generate docs
         run: |
-            echo "pwd: $(pwd)"
-            echo "ls:"
-            ls
-            echo "ls /home/ubm/"
-            ls /home/ubm
-            mkdir ./docs
-            echo '<html><head><title>ubm-driverless ros packages documentation index</title></head><body><h1>Index of packages documentation for ubm-driverless/ubm-f1tenth</h1><ul>' > ./docs/index.html
-            echo "Building doc of C++ packages..."
-            source /home/ubm/rosdoc2/bin/activate
-            source /opt/ros/foxy/setup.bash
-            for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
-              h="${f%/package.xml}";
-              g="${h##*/}";
-              if [ $(grep rosdoc2 $f | wc -l - | cut -c1) -eq 1 ]; then
-                echo "building $g with rosdoc2"
-                rosdoc2 build -p ${f%package.xml} -o ./docs/;
-                echo "<li><a href='/ubm-docs/$g'>$g</a></li>" >> ./docs/index.html;
+          set -e
+
+          echo "pwd: $(pwd)"
+          echo "ls: $(ls)"
+
+          # Paths
+          DOCS_BASE_DIR="./docs"
+          CPP_DOCS_DIR="$DOCS_BASE_DIR/cpp_packages"
+          PYTHON_DOCS_DIR="$DOCS_BASE_DIR/python_packages"
+          MARKDOWN_FILE="$DOCS_BASE_DIR/CPP_PACKAGES.md"
+          mkdir -p "$DOCS_BASE_DIR" "$CPP_DOCS_DIR" "$PYTHON_DOCS_DIR"
+
+
+          # Building docs for C++ packages
+          echo "Building docs of C++ packages..."
+          source /home/ubm/rosdoc2/bin/activate
+          source /opt/ros/foxy/setup.bash
+          echo "# C++ Package Documentation" > "$MARKDOWN_FILE"
+          echo "" >> "$MARKDOWN_FILE"
+          for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
+            package_dir="${f%/package.xml}";
+            package_name="${package_dir##*/}"
+            package_markdown="$CPP_DOCS_DIR/$package_name.md"
+            package_doc_path="$CPP_DOCS_DIR/$package_name/index.html"
+            if grep -q "rosdoc2" "$f"; then
+              echo "Building $package_name with rosdoc2"
+              rosdoc2 build -p "$package_dir" -o "$CPP_DOCS_DIR/"
+              if [ -f "$package_doc_path" ]; then
+                echo "- [$package_name](cpp_packages/$package_name.md)" >> "$MARKDOWN_FILE"
+                echo "<html><head><meta http-equiv='refresh' content='0; url=./$package_name/index.html' /></head></html>" > "$package_markdown"
               fi
-            done
-            echo "Building doc of Python packages..."
-            deactivate
-            source /home/ubm/mkdocs/bin/activate
-            for f in $(find ./ubm-f1tenth -type f -iname "mkdocs.yml"); do
-              h="${f%/mkdocs.yml}";
-              g="${h##*/}";
-              cd $h;
-              python -m mkdocs build -d ../../docs/$g;
-              echo "<li><a href='/ubm-docs/$g'>$g</a></li>" >> ./docs/index.html;
-              cd ../..;
-            done
+            fi
+          done
+          deactivate
+
+          # Building docs for Python packages
+          echo "Building docs of Python packages..."
+          source /home/ubm/mkdocs/bin/activate
+          for f in $(find ./ubm-f1tenth -type f -iname "mkdocs.yml"); do
+            package_dir="${f%/mkdocs.yml}"
+            package_name="${package_dir##*/}"
+            python -m mkdocs build -f "$f" -d "$PYTHON_DOCS_DIR/$package_name"
+          done
+          deactivate
             
       - name: Setup Pages
         uses: actions/configure-pages@v5
