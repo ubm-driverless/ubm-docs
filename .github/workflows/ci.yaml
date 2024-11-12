@@ -72,7 +72,7 @@ jobs:
             package_doc_path="$CPP_DOCS_DIR/$package_name/index.html"
             if grep -q "rosdoc2" "$f"; then
               echo "Building $package_name with rosdoc2"
-              rosdoc2 build -p "$package_dir" -o "$CPP_DOCS_DIR/"
+              rosdoc2 build -p "$package_dir" -o "$CPP_DOCS_DIR/" > /dev/null
               if [ -f "$package_doc_path" ]; then
                 echo "- [$package_name](cpp_packages/$package_name.md)" >> "$MARKDOWN_FILE"
                 echo "<html><head><meta http-equiv='refresh' content='0; url=./$package_name/index.html' /></head></html>" > "$package_markdown"
@@ -87,8 +87,18 @@ jobs:
           for f in $(find ./ubm-f1tenth -type f -iname "mkdocs.yml"); do
             package_dir="${f%/mkdocs.yml}"
             package_name="${package_dir##*/}"
+            echo "Building $package_name with mkdocs"
             python -m mkdocs build -f "$f" -d "$PYTHON_DOCS_DIR/$package_name"
           done
+          deactivate
+          
+          - uses: actions/setup-python@v5
+              with:
+                python-version: 3.x
+                
+          - run: |
+              pip install mkdocs-material
+              pip install mkdocstrings
           
           - name: Deploy to GitHub Pages
             run: mkdocs gh-deploy --force
