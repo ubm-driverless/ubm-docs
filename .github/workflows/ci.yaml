@@ -97,6 +97,11 @@ jobs:
             echo "Building $package_name with mkdocs"
             python -m mkdocs build -f "$f" -d "$PYTHON_DOCS_DIR/$package_name"
           done
+      
+      - name: Copy excluded directories to site/
+        run: |
+          cp -r ./docs/cpp_packages ./site/
+          cp -r ./docs/python_packages ./site/
 
       - name: Configure Git for Deployment
         run: |
