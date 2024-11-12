@@ -1,4 +1,8 @@
 # Workflow for deploying documentation to GitHub Pages
+
+# WARNING: Make sure that code that is not meant to be public is not included in the ./docs folder.
+# This workflow will make the content of the ./docs folder public.
+
 name: ci
 
 on:
@@ -53,18 +57,17 @@ jobs:
           echo "ls: $(ls)"
 
           # Paths
-          DOCS_BASE_DIR="./docs"
-          CPP_DOCS_DIR="$DOCS_BASE_DIR/cpp_packages"
-          PYTHON_DOCS_DIR="$DOCS_BASE_DIR/python_packages"
-          MARKDOWN_FILE="$DOCS_BASE_DIR/CPP_PACKAGES.md"
-          mkdir -p "$DOCS_BASE_DIR" "$CPP_DOCS_DIR" "$PYTHON_DOCS_DIR"
+          CPP_DOCS_DIR="./docs/cpp_packages"
+          PYTHON_DOCS_DIR="./docs/python_packages"
+          mkdir -p "$CPP_DOCS_DIR" "$PYTHON_DOCS_DIR"
 
-
+          MARKDOWN_FILE="./docs/CPP_PACKAGES.md"
+          
           # Building docs for C++ packages
           echo "Building docs of C++ packages..."
           source /home/ubm/rosdoc2/bin/activate
           source /opt/ros/foxy/setup.bash
-          echo "# C++ Package Documentation" > "$MARKDOWN_FILE"
+          echo "# C++ Packages" > "$MARKDOWN_FILE"
           echo "" >> "$MARKDOWN_FILE"
           for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
             package_dir="${f%/package.xml}";
@@ -82,6 +85,9 @@ jobs:
           done
           deactivate
 
+          # Note: by using the following code, python documentation will be built 2 times. (now, and during mkdocs gh-deploy).
+          # I don't know if this is a problem or not.
+           
           # Building docs for Python packages
           echo "Building docs of Python packages..."
           source /home/ubm/mkdocs/bin/activate
@@ -94,8 +100,6 @@ jobs:
 
       - name: Configure Git for Deployment
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
           git config --global --add safe.directory /__w/ubm-docs/ubm-docs
       
       - name: Deploy to GitHub Pages
