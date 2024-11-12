@@ -100,8 +100,8 @@ jobs:
       
       - name: Copy excluded directories to site/
         run: |
-          cp -r ./docs/cpp_packages ./site/
-          cp -r ./docs/python_packages ./site/
+          mv ./docs/cpp_packages ./site/
+          mv ./docs/python_packages ./site/
 
       - name: Configure Git for Deployment
         run: |
