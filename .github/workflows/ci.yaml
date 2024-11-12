@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Workflow for deploying documentation to GitHub Pages
 name: ci
 
 on:
@@ -7,20 +7,17 @@ on:
     branches:
       - main
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+
 permissions:
-  contents: write
+  contents: write 
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -37,10 +34,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Setup ssh
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.PRIVATE_SSH_KEY }}
+
       - name: Clone private repo
         run: |
           ssh-keyscan -H github.com >> /root/.ssh/known_hosts
@@ -92,6 +91,12 @@ jobs:
             echo "Building $package_name with mkdocs"
             python -m mkdocs build -f "$f" -d "$PYTHON_DOCS_DIR/$package_name"
           done
+
+      - name: Configure Git for Deployment
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git config --global --add safe.directory /__w/ubm-docs/ubm-docs
       
       - name: Deploy to GitHub Pages
         run: |
