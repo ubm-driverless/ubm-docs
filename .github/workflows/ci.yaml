@@ -94,4 +94,6 @@ jobs:
           done
       
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+        run: |
+          source /home/ubm/mkdocs/bin/activate
+          mkdocs gh-deploy --force
