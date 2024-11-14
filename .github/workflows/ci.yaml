@@ -56,19 +56,22 @@ jobs:
 
 
       - name: Generate docs
+        id: generate_docs
         run: |
           set -e
 
           echo "pwd: $(pwd)"
           echo "ls: $(ls)"
 
-          # Paths
+          # Configurable Paths (mkdocs.yml needs to be updated accordingly)
           ROSDOC2_OUTPUT="./docs/rosdoc2_generated"
           PYTHON_DOCS_DIR="./docs/python_packages"
-          mkdir -p "$ROSDOC2_OUTPUT" "$PYTHON_DOCS_DIR"
-
           MARKDOWN_FILE="./docs/CPP_PACKAGES.md"
-          
+
+          mkdir -p "$ROSDOC2_OUTPUT" "$PYTHON_DOCS_DIR"
+          echo "::set-output name=rosdoc2_output::$ROSDOC2_OUTPUT"
+          echo "::set-output name=python_docs_dir::$PYTHON_DOCS_DIR"
+
           # Building docs for C++ packages
           echo "Building docs of C++ packages..."
           source /home/ubm/rosdoc2/bin/activate
@@ -107,9 +110,9 @@ jobs:
 
       - name: Add additional files to site
         run: |
-          cp -r $ROSDOC2_OUTPUT ./site/
-          # cp -r $PYTHON_DOCS_DIR ./site/
-
+          cp -r "${{ steps.generate_docs.outputs.rosdoc2_output }}" ./site/
+          cp -r "${{ steps.generate_docs.outputs.python_docs_dir }}" ./site/
+          
       - name: Configure Git for Deployment
         run: |
           git config --global --add safe.directory /__w/ubm-docs/ubm-docs
