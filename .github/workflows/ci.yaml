@@ -11,9 +11,8 @@ on:
     branches:
       - main
 
-
 permissions:
-  contents: write 
+  contents: write
   pages: write
   id-token: write
 
@@ -28,8 +27,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     defaults:
-        run:
-          shell: bash
+      run:
+        shell: bash
     container:
       image: ubmdriverless/f1tenth:latest
       credentials:
@@ -48,12 +47,19 @@ jobs:
         run: |
           ssh-keyscan -H github.com >> /root/.ssh/known_hosts
           git clone git@github.com:ubm-driverless/ubm-f1tenth.git
-            
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Install tools
         run: |
-          pip install mkdocs mkdocstrings mkdocs-material 
-          pip install ghp-import
-
+          pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Generate docs
         id: generate_docs
@@ -72,14 +78,14 @@ jobs:
           echo "rosdoc2_output=$ROSDOC2_OUTPUT" >> $GITHUB_OUTPUT
           echo "python_docs_dir=$PYTHON_DOCS_DIR" >> $GITHUB_OUTPUT
 
-          # Building docs for C++ packages
+          # Build C++ packages docs with rosdoc2
           echo "Building docs of C++ packages..."
           source /home/ubm/rosdoc2/bin/activate
           source /opt/ros/foxy/setup.bash
           echo "# C++ Packages" > "$MARKDOWN_FILE"
           echo "" >> "$MARKDOWN_FILE"
           for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
-            package_dir="${f%/package.xml}";
+            package_dir="${f%/package.xml}"
             package_name="${package_dir##*/}"
             package_doc_path="$ROSDOC2_OUTPUT/$package_name/index.html"
             if grep -q "rosdoc2" "$f"; then
@@ -112,11 +118,11 @@ jobs:
         run: |
           cp -r "${{ steps.generate_docs.outputs.rosdoc2_output }}" ./site/
           cp -r "${{ steps.generate_docs.outputs.python_docs_dir }}" ./site/
-          
+
       - name: Configure Git for Deployment
         run: |
           git config --global --add safe.directory /__w/ubm-docs/ubm-docs
-      
+
       - name: Deploy with ghp-import
         run: |
           ghp-import --no-jekyll --push --force site
