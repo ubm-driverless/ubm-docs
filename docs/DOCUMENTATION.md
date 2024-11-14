@@ -27,6 +27,7 @@ nav:
 - index.md
 ```
 Now you can place the documentation in markdown format inside the `docs` folder:
+
 - You can use the usual markdown formatting instructions, such as tables and images (put the images in the `docs/img` folder)
 - To generate the documentation automatically from the python docstrings use the `:::` directive (more info [here](https://mkdocstrings.github.io/usage/)) 🚨 **If you do this ALWAYS include the** `show_source: false` **option** 🚨, like so:
 ```md
