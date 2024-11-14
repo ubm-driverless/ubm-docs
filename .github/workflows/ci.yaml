@@ -64,13 +64,13 @@ jobs:
           echo "ls: $(ls)"
 
           # Configurable Paths (mkdocs.yml needs to be updated accordingly)
-          ROSDOC2_OUTPUT="./docs/rosdoc2_generated"
-          PYTHON_DOCS_DIR="./docs/python_packages"
+          ROSDOC2_OUTPUT="./rosdoc2_generated"
+          PYTHON_DOCS_DIR="./python_packages"
           MARKDOWN_FILE="./docs/CPP_PACKAGES.md"
 
           mkdir -p "$ROSDOC2_OUTPUT" "$PYTHON_DOCS_DIR"
-          echo "::set-output name=rosdoc2_output::$ROSDOC2_OUTPUT"
-          echo "::set-output name=python_docs_dir::$PYTHON_DOCS_DIR"
+          echo "rosdoc2_output=$ROSDOC2_OUTPUT" >> $GITHUB_OUTPUT
+          echo "python_docs_dir=$PYTHON_DOCS_DIR" >> $GITHUB_OUTPUT
 
           # Building docs for C++ packages
           echo "Building docs of C++ packages..."
@@ -86,7 +86,7 @@ jobs:
               echo "Building $package_name with rosdoc2"
               rosdoc2 build -p "$package_dir" -o "$ROSDOC2_OUTPUT/" > /dev/null 2>&1
               if [ -f "$package_doc_path" ]; then
-                echo "- [$package_name]($ROSDOC2_OUTPUT/$package_name/)" >> "$MARKDOWN_FILE"
+                echo "- [$package_name](../$ROSDOC2_OUTPUT/$package_name/)" >> "$MARKDOWN_FILE"
               fi
             fi
           done
