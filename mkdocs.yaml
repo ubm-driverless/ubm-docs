@@ -7,11 +7,15 @@ site_url: https://ubm-driverless.github.io/ubm-docs/
 #
 
 nav:
-  - C++ Packages: cpp_packages/
+  - C++ Packages: CPP_PACKAGES/
   - Python Packages: python_packages/
   - Home: index.md
   - Setup: SETUP.md
   - Documentation instructions: DOCUMENTATION.md
+
+# File/Folders to not include in mkdocs build process
+draft_docs: |
+  /rosdoc2_generated/
 
 theme:
   logo: assets/UBM-Logo.png
