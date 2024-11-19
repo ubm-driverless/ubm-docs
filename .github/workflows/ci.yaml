@@ -105,6 +105,7 @@ jobs:
             if grep -q "ament_python" "$f"; then
               echo "Copying $package_name to $SRC_FOLDER"
               cp -r "$package_dir" "$SRC_FOLDER/$package_name"
+              touch ./docs/python_packages/$package_name.md
               echo "# $package_name
               ::: src.$package_name
               " > "./docs/python_packages/$package_name.md"
