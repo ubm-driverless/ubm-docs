@@ -9,7 +9,7 @@ site_url: https://ubm-driverless.github.io/ubm-docs/
 nav:
   - Home: index.md
   - C++ Packages: CPP_PACKAGES/
-  - Python Packages: python_packages/
+  - Python Packages: PYTHON_PACKAGES.md
   - Setup: SETUP.md
   - Documentation instructions: DOCUMENTATION.md
 
@@ -41,11 +41,17 @@ theme:
     - scheme: slate
       primary: indigo
       accent: red
+      text: '#ececec'
+      background: '#212121'
+      
   
 plugins:
   - search
-  - mkdocstrings
-  #- offline
+  - mkdocstrings:
+      handlers:
+          python:
+            options:
+              show_source: false # WARNING: do not change this value. Otherwise, private repositories will be exposed!
 
 markdown_extensions:
   - pymdownx.highlight:

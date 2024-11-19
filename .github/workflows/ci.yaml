@@ -71,19 +71,18 @@ jobs:
 
           # Configurable Paths (mkdocs.yml needs to be updated accordingly)
           ROSDOC2_OUTPUT="./rosdoc2_generated"
-          PYTHON_DOCS_DIR="./python_packages"
-          MARKDOWN_FILE="./docs/CPP_PACKAGES.md"
-
-          mkdir -p "$ROSDOC2_OUTPUT" "$PYTHON_DOCS_DIR"
+          SRC_FOLDER="./src"
+          mkdir -p "$ROSDOC2_OUTPUT" "$SRC_FOLDER"
+          CPP_PACKAGES_MD="./docs/CPP_PACKAGES.md"
+          PYTHON_PACKAGES_MD="./docs/PYTHON_PACKAGES.md"
           echo "rosdoc2_output=$ROSDOC2_OUTPUT" >> $GITHUB_OUTPUT
-          echo "python_docs_dir=$PYTHON_DOCS_DIR" >> $GITHUB_OUTPUT
 
           # Build C++ packages docs with rosdoc2
           echo "Building docs of C++ packages..."
           source /home/ubm/rosdoc2/bin/activate
           source /opt/ros/foxy/setup.bash
-          echo "# C++ Packages" > "$MARKDOWN_FILE"
-          echo "" >> "$MARKDOWN_FILE"
+          echo "# C++ Packages" > "$CPP_PACKAGES_MD"
+          echo "" >> "$CPP_PACKAGES_MD"
           for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
             package_dir="${f%/package.xml}"
             package_name="${package_dir##*/}"
@@ -92,32 +91,33 @@ jobs:
               echo "Building $package_name with rosdoc2"
               rosdoc2 build -p "$package_dir" -o "$ROSDOC2_OUTPUT/" > /dev/null 2>&1
               if [ -f "$package_doc_path" ]; then
-                echo "- [$package_name](../$ROSDOC2_OUTPUT/$package_name/)" >> "$MARKDOWN_FILE"
+                echo "- [$package_name](../$ROSDOC2_OUTPUT/$package_name/)" >> "$CPP_PACKAGES_MD"
               fi
             fi
           done
           deactivate
            
-          # Skippying Python packages for now
-          # # Building docs for Python packages
-          # echo "Building docs of Python packages..."
-          # source /home/ubm/mkdocs/bin/activate
-          # for f in $(find ./ubm-f1tenth -type f -iname "mkdocs.yml"); do
-          #   package_dir="${f%/mkdocs.yml}"
-          #   package_name="${package_dir##*/}"
-          #   echo "Building $package_name with mkdocs"
-          #   python -m mkdocs build -f "$f" -d "$PYTHON_DOCS_DIR/$package_name"
-          # done
-          # deactivate
+          # Preparing Python packages for mkdocs
+          for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
+            package_dir="${f%/package.xml}"
+            package_name="${package_dir##*/}"
+            if grep -q "ament_python" "$f"; then
+              cp -r "$package_dir" "$SRC_FOLDER/$package_name"
+              echo "# $package_name
+              ::: src.$package_name
+              " >> "./docs/python_packages/$package_name.md"
+              echo "- [$package_name](python_packages/$package_name.md)" >> "$PYTHON_PACKAGES_MD"
+            fi
+          done
 
       - name: Build documentation
         run: |
+          export PYTHONPATH="$PYTHONPATH:$(pwd)/src"
           mkdocs build --clean --use-directory-urls
 
       - name: Add additional files to site
         run: |
           cp -r "${{ steps.generate_docs.outputs.rosdoc2_output }}" ./site/
-          cp -r "${{ steps.generate_docs.outputs.python_docs_dir }}" ./site/
 
       - name: Configure Git for Deployment
         run: |
