@@ -72,7 +72,7 @@ jobs:
           # Configurable Paths (mkdocs.yml needs to be updated accordingly)
           ROSDOC2_OUTPUT="./rosdoc2_generated"
           SRC_FOLDER="./src"
-          PYHTON_PACKAGES="./docs/python_packages"
+          PYTHON_PACKAGES="./docs/python_packages"
           mkdir -p "$ROSDOC2_OUTPUT" "$SRC_FOLDER" "$PYTHON_PACKAGES"
           CPP_PACKAGES_MD="./docs/CPP_PACKAGES.md"
           PYTHON_PACKAGES_MD="./docs/PYTHON_PACKAGES.md"
@@ -108,7 +108,7 @@ jobs:
               cp -r "$package_dir" "$SRC_FOLDER/$package_name"
               echo "# $package_name
               ::: src.$package_name
-              " > "$PYHTON_PACKAGES/$package_name.md"
+              " > "$PYTHON_PACKAGES/$package_name.md"
               echo "- [$package_name](python_packages/$package_name.md)" >> "$PYTHON_PACKAGES_MD"
             fi
           done
