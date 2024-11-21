@@ -15,7 +15,7 @@ for path in sorted(src.rglob("*.py")):
     logging.info(f"Processing file: {path}")
     
     # Skip files containing the following kywords in their path
-    if any(part in {"deprecated", "old_stuff", "f1tenth_system", "f1tenth_stack"} for part in path.parts):
+    if any(part in {"deprecated", "old_stuff", "f1tenth_system", "f1tenth_stack", "launch"} for part in path.parts):
         logging.info(f"Skipping: {path}")
         continue
     
