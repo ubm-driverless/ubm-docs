@@ -110,6 +110,7 @@ jobs:
 
       - name: Build documentation
         run: |
+          export PYTHONPATH="$PYTHONPATH:$(pwd)/src"
           mkdocs build --clean --use-directory-urls
 
       - name: Add additional files to site
