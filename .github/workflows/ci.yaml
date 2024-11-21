@@ -117,6 +117,10 @@ jobs:
         run: |
           cp -r "${{ steps.generate_docs.outputs.rosdoc2_output }}" ./site/
 
+      - name: Configure Git for Deployment
+        run: |
+          git config --global --add safe.directory /__w/ubm-docs/ubm-docs
+  
       - name: Deploy with ghp-import
         run: |
           ghp-import --no-jekyll --push --force site
