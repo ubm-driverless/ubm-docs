@@ -13,7 +13,7 @@ src = root / "src"
 for path in sorted(src.rglob("*.py")):
         
     # Skip files containing the following kywords in their path
-    if any(part in {"old_stuff", "f1tenth_stack", "provide_map_launch", "example"} for part in path.parts):
+    if any(part in {"old_stuff", "f1tenth_stack", "provide_map_launch", "launch"} for part in path.parts):
         logging.info(f"Skipping: {path}")
         continue
     
