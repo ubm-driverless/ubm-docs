@@ -10,6 +10,7 @@ nav:
   - Home: index.md
   - C++ Packages: CPP_PACKAGES/
   - Python Packages: PYTHON_PACKAGES.md
+  - Code Reference: reference/  
   - Setup: SETUP.md
   - Documentation instructions: DOCUMENTATION.md
 
@@ -47,6 +48,12 @@ theme:
   
 plugins:
   - search
+  - gen-files:
+      scripts:
+        - scripts/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
   - mkdocstrings:
       handlers:
           python:
