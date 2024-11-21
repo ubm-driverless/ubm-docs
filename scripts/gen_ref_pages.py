@@ -1,8 +1,9 @@
 """Generate the code reference pages and navigation."""
-
+import logging
 from pathlib import Path
-
 import mkdocs_gen_files
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 nav = mkdocs_gen_files.Nav()
 
@@ -11,8 +12,9 @@ src = root / "src"
 
 for path in sorted(src.rglob("*.py")):
     
-    # Skip files containing 'deprecated' or 'old_stuff' in their path
-    if any(part in {"deprecated", "old_stuff"} for part in path.parts):
+    # Skip files containing the following kywords in their path
+    if any(part in {"deprecated", "old_stuff", "f1tenth_system"} for part in path.parts):
+        logging.info(f"Skipping: {path}")
         continue
     
     module_path = path.relative_to(src).with_suffix("")
@@ -33,8 +35,10 @@ for path in sorted(src.rglob("*.py")):
     with mkdocs_gen_files.open(full_doc_path, "w") as fd:
         ident = ".".join(parts)
         fd.write(f"::: {ident}")
+        logging.info(f"Processed file: {path}")
 
     mkdocs_gen_files.set_edit_path(full_doc_path, path.relative_to(root))
 
 with mkdocs_gen_files.open("reference/SUMMARY.md", "w") as nav_file:
     nav_file.writelines(nav.build_literate_nav())
+    logging.info("Generated SUMMARY.md")
