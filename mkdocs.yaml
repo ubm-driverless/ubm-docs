@@ -8,10 +8,13 @@ site_url: https://ubm-driverless.github.io/ubm-docs/
 
 nav:
   - Home: index.md
+  - Setup:
+    - Getting Started: setup/QUICKSTART.md
+    - Setup ubm-f1tenth: setup/SETUP.md 
   - C++ Packages: CPP_PACKAGES/
-  - Python Packages: reference/
-  - Setup: SETUP.md
-  - Documentation instructions: DOCUMENTATION.md
+  - Python Packages: PYTHON_PACKAGES/
+  - Guides:
+    - istructions: guides/DOCUMENTATION.md
 
 # File/Folders to not include in mkdocs build process
 draft_docs: |
@@ -22,7 +25,7 @@ theme:
   favicon: assets/favicon.png
   name: material
   features:
-    # - navigation.tabs
+    - navigation.tabs
     # - navigation.sections
     # - navigation.expand
     - navigation.top

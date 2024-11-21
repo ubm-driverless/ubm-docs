@@ -58,8 +58,9 @@ jobs:
 
       - name: Install tools
         run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
+          mkdir -p .pip-cache
+          pip install --cache-dir .pip-cache --upgrade pip
+          pip install --cache-dir .pip-cache -r requirements.txt
 
       - name: Generate docs
         id: generate_docs
@@ -109,16 +110,11 @@ jobs:
 
       - name: Build documentation
         run: |
-          export PYTHONPATH="$PYTHONPATH:$(pwd)/src"
           mkdocs build --clean --use-directory-urls
 
       - name: Add additional files to site
         run: |
           cp -r "${{ steps.generate_docs.outputs.rosdoc2_output }}" ./site/
-
-      - name: Configure Git for Deployment
-        run: |
-          git config --global --add safe.directory /__w/ubm-docs/ubm-docs
 
       - name: Deploy with ghp-import
         run: |

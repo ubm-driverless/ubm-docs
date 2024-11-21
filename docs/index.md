@@ -12,7 +12,7 @@ To get started with our project, please refer to the [Setup Guide](SETUP.md). Th
 
 <!-- ## Contributing
 
-We welcome contributions from the community! If you are interested in contributing to our project, please check out our [Contribution Guidelines](CONTRIBUTING.md) for more information on how to get involved. -->
+We welcome contributions from the community! If you are interested in contributing to our project, please check out our [Contribution Guidelines](CONTRIBUTING.md) for more information on how to get involved. 
 
 ## Contact Us
 
@@ -20,7 +20,7 @@ For sponsorship proposals:
 [commercial@motorsport.unibo.it](mailto:commercial@motorsport.unibo.it).
 
 To join the team:
-[hr@motorsport.unibo.it](mailto:hr@motorsport.unibo.it).
+[hr@motorsport.unibo.it](mailto:hr@motorsport.unibo.it). -->
 
 ---
 
