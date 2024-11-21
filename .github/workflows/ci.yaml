@@ -72,10 +72,8 @@ jobs:
           # Configurable Paths (mkdocs.yml needs to be updated accordingly)
           ROSDOC2_OUTPUT="./rosdoc2_generated"
           SRC_FOLDER="./src"
-          PYTHON_PACKAGES="./docs/python_packages"
-          mkdir -p "$ROSDOC2_OUTPUT" "$SRC_FOLDER" "$PYTHON_PACKAGES"
+          mkdir -p "$ROSDOC2_OUTPUT" "$SRC_FOLDER"
           CPP_PACKAGES_MD="./docs/CPP_PACKAGES.md"
-          PYTHON_PACKAGES_MD="./docs/PYTHON_PACKAGES.md"
           echo "rosdoc2_output=$ROSDOC2_OUTPUT" >> $GITHUB_OUTPUT
 
           # Build C++ packages docs with rosdoc2
@@ -106,10 +104,6 @@ jobs:
             if grep -q "ament_python" "$f"; then
               echo "Copying $package_name to $SRC_FOLDER"
               cp -r "$package_dir" "$SRC_FOLDER/$package_name"
-              echo "# $package_name
-              ::: src.$package_name
-              " > "$PYTHON_PACKAGES/$package_name.md"
-              echo "- [$package_name](python_packages/$package_name.md)" >> "$PYTHON_PACKAGES_MD"
             fi
           done
 
