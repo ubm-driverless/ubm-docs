@@ -1,1 +1,1 @@
-# Quick start guide to setup the environment
+# Quick start guide
