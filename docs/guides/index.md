@@ -1,5 +1,3 @@
 <html>
-<script>
-    window.location.href = './ADD_DOCUMENTATION';
-</script>
+    <meta http-equiv="refresh" content="0; url=./ADD_DOCUMENTATION" />
 </html>

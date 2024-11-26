@@ -1,5 +1,3 @@
 <html>
-<script>
-    window.location.href = './SETUP';
-</script>
+    <meta http-equiv="refresh" content="0; url=./SETUP" />
 </html>
