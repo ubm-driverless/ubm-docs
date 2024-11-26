@@ -18,8 +18,8 @@ To contribute new documentation to the website, follow these steps:
 2. **Write the Documentation**  
     - Create a Markdown file (`.md`) for your document and place it in the most appropriate subfolder within the `docs/` directory.  
     - If you need to add a new section (tab) and its corresponding subfolder:  
-      1. Create a new folder inside the `docs/` directory. Add your documentation file and include an empty `index.md` file in the same folder.  
-      2. Update the `nav:` section in the `mkdocs.yaml` file (located in the root of the repository) to include the new folder and its files.
+       1. Create a new folder inside the `docs/` directory. Add your documentation file and include an empty `index.md` file in the same folder.  
+       2. Update the `nav:` section in the `mkdocs.yaml` file (located in the root of the repository) to include the new folder and its files.
 
 3. **Submit a Pull Request**  
     - Commit your changes and push the branch to the repository:
