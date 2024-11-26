@@ -1,7 +1,8 @@
 # How to Add Documentation
 
-> [!NOTE]
-> Please read the guidelines on how to write documentation, refer to [**UEP 11 - Documentation Guidelines**](https://github.com/ubm-driverless/ubm-ueps/blob/main/uep-0011.md).
+!!! note
+
+    Please read the guidelines on how to write documentation, refer to [**UEP 11 - Documentation Guidelines**](https://github.com/ubm-driverless/ubm-ueps/blob/main/uep-0011.md).
 
 To add new documentation to the website all that need to be done is the following:
 

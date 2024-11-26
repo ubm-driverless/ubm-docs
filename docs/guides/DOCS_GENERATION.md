@@ -41,9 +41,11 @@ The CI/CD workflow automates the process of building and deploying documentation
 6. **Deploy with ghp-import**:
     - Deploys the content of `site/` to GitHub Pages using the `ghp-import` tool.
 
-    > [!IMPORTANT]
-    > `ghp-import` will DESTROY the gh-pages branch. This script assumes that gh-pages is 100% derivative. You should never edit files in your gh-pages branch by hand because you will lose your work.
+    !!! danger
 
-> [!IMPORTANT]
-> Make sure that informations that are not meant to be public are not included in the ./docs folder or ./site folder
-> The workflow will make the content of the ./docs folder and ./site folder public.
+        `ghp-import` will DESTROY the gh-pages branch. This script assumes that gh-pages is 100% derivative. You should never edit files in your gh-pages branch by hand because you will lose your work.
+
+!!! warning
+
+    Make sure that informations that are not meant to be public are not included in the ./docs folder or ./site folder
+    The workflow will make the content of the ./docs folder and ./site folder public.
