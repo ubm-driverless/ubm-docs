@@ -1,5 +1,5 @@
-# Guides
-
 <html>
-    <meta http-equiv="refresh" content="0; url=./ADD_DOCUMENTATION" />
+<script>
+    window.location.href = './ADD_DOCUMENTATION';
+</script>
 </html>

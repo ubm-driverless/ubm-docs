@@ -1,5 +1,3 @@
-# Guides
+# Python Packages
 
-<html>
-    <meta http-equiv="refresh" content="0; url=./ai_controller/ai_controller/" />
-</html>
+Please navigate the table of contents to show documentation of python packages.
