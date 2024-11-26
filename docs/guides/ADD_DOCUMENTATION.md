@@ -4,13 +4,37 @@
 
     Please read the guidelines on how to write documentation, refer to [**UEP 11 - Documentation Guidelines**](https://github.com/ubm-driverless/ubm-ueps/blob/main/uep-0011.md).
 
-To add new documentation to the website, simply follow these steps:
+To contribute new documentation to the website, follow these steps:
 
-1. Write the document in a markdown file.
-2. Place it in the appropriate subfolder inside the docs/ directory (of the ubm-docs main branch).
-3. Push the changes.
+1. **Create a Branch**  
+    - Clone the [ubm-docs repository](https://github.com/ubm-driverless/ubm-docs) locally.  
+    - Create a new branch for your changes.
 
-A workflow will start automatically and update the website.
+    ```bash
+    git clone "https://github.com/ubm-driverless/ubm-docs.git"
+    git checkout -b your-branch-name
+    ```
+
+2. **Write the Documentation**  
+    - Create a Markdown file (`.md`) for your document and place it in the most appropriate subfolder within the `docs/` directory.  
+    - If you need to add a new section (tab) and its corresponding subfolder:  
+      1. Create a new folder inside the `docs/` directory. Add your documentation file and include an empty `index.md` file in the same folder.  
+      2. Update the `nav:` section in the `mkdocs.yaml` file (located in the root of the repository) to include the new folder and its files.
+
+3. **Submit a Pull Request**  
+    - Commit your changes and push the branch to the repository:
+
+    ```bash
+    git add .
+    git commit -m "Add new documentation for [feature/topic]"
+    git push origin your-branch-name
+    ```
+
+    - Open a Pull Request (PR) on GitHub, providing a clear description of your changes.
+
+4. **Deployment**  
+    - Once the PR is merged into the `main` branch, an automated workflow will trigger to rebuild and update the website.
+
 
 ## Specific Guidelines by Language
 
