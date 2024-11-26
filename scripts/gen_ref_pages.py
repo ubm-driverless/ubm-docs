@@ -42,3 +42,25 @@ for path in sorted(src.rglob("*.py")):
 with mkdocs_gen_files.open("PYTHON_PACKAGES/SUMMARY.md", "w") as nav_file:
     nav_file.writelines(nav.build_literate_nav())
     logging.info("Generated SUMMARY.md")
+
+# Create the index.md file with the HTML redirect
+    summary_path = Path("PYTHON_PACKAGES/SUMMARY.md")
+    index_path = Path("PYTHON_PACKAGES/index.md")
+
+    # Read the content of SUMMARY.md
+    with summary_path.open("r") as summary_file:
+        summary_content = summary_file.readlines()
+
+    # Find the first link at the leaf of the nested structure
+    first_link = None
+    for line in summary_content:
+        if line.strip().startswith("- ["):
+            first_link = line.split("](")[1].rstrip(")\n")
+            break
+    logging.info(f"First link found: {first_link}")
+
+    # Create the index.md file with the HTML redirect
+    if first_link:
+        with index_path.open("w") as index_file:
+            index_file.write(f'<meta http-equiv="refresh" content="0; url={first_link}" />')
+            logging.info(f"Created index.md with redirect to {first_link}")
