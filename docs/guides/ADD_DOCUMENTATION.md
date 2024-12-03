@@ -35,17 +35,23 @@ To contribute new documentation to the website, follow these steps:
 4. **Deployment**  
     - Once the PR is merged into the `main` branch, an automated workflow will trigger to rebuild and update the website.
 
-## Specific Guidelines by Language
+## Add Documentation from Code
 
 Documentation is automatically generated from code. In order to see updates in the website the `ci.yaml` workflow needs to be activated.
 
-### Python
+### Requisites for Python
 
 - Write Docstrings in the correct format. Refer to [**UEP 11**](https://github.com/ubm-driverless/ubm-ueps/blob/main/uep-0011.md) for more details.
 
-### C++ Packages
+### Requisites for C++ Packages
 
 - Write Docstrings in the correct format. Refer to [**UEP 11**](https://github.com/ubm-driverless/ubm-ueps/blob/main/uep-0011.md) for more details.
 - Ensure that the package is ROS2-compliant.
-- Inside the `package.xml` files add `<buildtool_depend>rosdoc2</buildtool_depend>`.
 - Place header files in the `include` directory.
+- In the `package.xml` file inside the `<export>` tag make sure to have a link to the rosdoc2.yml confing file.
+
+    ```
+    <export>
+        <rosdoc2>../rosdoc2.yml</rosdoc2> <!--add this, make sure to use the correct relative path -->
+    </export>
+    ```
