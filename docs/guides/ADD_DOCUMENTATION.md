@@ -15,11 +15,16 @@ To contribute new documentation to the website, follow these steps:
     git checkout -b your-branch-name
     ```
 
-2. **Write the Documentation**  
-    - Create a Markdown file (`.md`) for your document and place it in the most appropriate subfolder within the `docs/` directory.  
-    - If you need to add a new section (tab) and its corresponding subfolder:  
-        1. Create a new folder inside the `docs/` directory. Add your documentation file and include an empty `index.md` file in the same folder.  
-        2. Update the `nav:` section in the `mkdocs.yaml` file (located in the root of the repository) to include the new folder and its files.
+2. **Write the Documentation**
+    - Write one or more Markdown files (`.md`) and place them in the most appropriate subfolder within the `docs/` directory.
+        - If you need to add a subsection:
+            1. Create a new subfolder inside an existing subfolder in the `docs/` directory.
+            2. Add your documentation files to this folder and include an empty `index.md` file in the same folder.
+        - If you need to add a new section (a new tab):
+            1. Create a new folder inside the `docs/` directory.
+            2. Add an `index.md` file to the new folder. The content of this file will be displayed when the tab is clicked.
+            3. Add your additional documentation files to the new folder.
+            4. Update the `nav:` section in the `mkdocs.yaml` file (located in the root of the repository) to include the new folder and its files.
 
 3. **Submit a Pull Request**  
     - Commit your changes and push the branch to the repository:
