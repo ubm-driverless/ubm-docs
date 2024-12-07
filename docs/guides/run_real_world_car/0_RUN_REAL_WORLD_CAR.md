@@ -4,30 +4,23 @@ This guide provides a comprehensive workflow for operating the real-world car.
 
 <!-- TODO: LEGENDA -->
 
-Start-up the car
-
-`ssh 192.168.1.2` (philly)
-`ssh 192.168.1.3` (ben)
-
-```
-connect-controller-philly
-launch bringup.py
-```
-
-- mapping
-
-```
-launch localize_launch_mit.py
-launch control.py
-```
-
-(raceline will pop up in rviz)
 
 <!-- # Shut down procedure
 - CTRL-C everything, flick switch, remove battery
 
 
 -----STILL NOT COVERED BY US
+
+
+<!-- ## Sync github repo with the new map
+<!-- needs to be connected to the internet -->
+```
+git checkout philly
+git pull
+git add .
+git commit "upload new map"
+git push
+``` -->
 
 ## At any time if you need to check battery
 

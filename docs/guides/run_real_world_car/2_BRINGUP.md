@@ -8,13 +8,13 @@ To launch bringup run
 launch bringup.py
 ```
 
-Connect the joystik (of the right car) by pressing the PlayStation button.
+Connect the joystick (of the right car) by pressing the PlayStation button.
 
 - If the joystick does not connect run
 
      ```bash
-     connect-controller-philly # to cennect to the Philly joystick
-     connect-controller-ben # to cennect to the Ben joystick
+     connect-controller-philly # to connect to the Philly joystick
+     connect-controller-ben # to connect to the Ben joystick
      ```
 
 In the logs of the bringup command check for the following line:
