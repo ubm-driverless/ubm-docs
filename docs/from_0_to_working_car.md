@@ -105,7 +105,7 @@ In this step by step tutorial I will inlustrate you how to setup all our working
 9. ```sudo apt install ros-foxy-desktop python3-argcomplete```
 10. ```sudo apt install ros-dev-tools```
 Let's try if ros2 is working:
-11. ```source /opt/ros/foxy/setup.bash````
+11. ```source /opt/ros/foxy/setup.bash```
 12. ```ros2 run demo_nodes_cpp talker```
 Expected Output:
 ```
@@ -230,5 +230,15 @@ TimeoutStopSec=10
 WantedBy=multi-user.target
 ```
 4. ```sudo systemctl daemon-reload```
+
 5. ```sudo systemctl start vnc.service```
+
+## Let's Install JetsonGPIO
+
+1. ```cd /home/ubm```
+2. ```git clone https://github.com/pjueon/JetsonGPIO```
+3. ```cd JetsonGPIO```
+4. ```mkdir build && cd build```
+5. ```cmake .. ```
+6. ```sudo cmake --build . --target install```
 
