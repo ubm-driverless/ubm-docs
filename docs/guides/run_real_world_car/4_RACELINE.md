@@ -20,10 +20,13 @@
     conda activate raceline
     ```
 
-- Execute the raceline algorithm providing all the necessary parameters.
+- Execute the raceline algorithm by providing all the necessary parameters:
 
 Usage of the command:
+
 ```bash
+$ python raceline.py
+
 usage: raceline.py [-h] -r RACELINE_MAP_PATH [-m LOC_MAP_PATH] [-c CAR_IP]
                    [--disable_plots] [--invert_direction] [-d DOWNSAMPLE]
 
@@ -47,6 +50,14 @@ optional arguments:
                         The downsample factor to use
 ```
 
-Follow the terminal instructions. The raceline and speed profile will be computed. 
-Then it will ask you to upload the results to the car. 
+Generally, only the flags -r, -m, and -c are used, while other parameters are omitted.
+These flags correspond to:
+
+- path to `mapname_edited.pgm`, 
+- path to `mapname_raceline.pgm`,
+- `<CAR-IP>`:
+
+Follow the terminal instructions. The raceline and speed profile will be computed.
+If you provided the ip of the car then it will ask you to upload the results to the car.
+
 By accepting, the car will receive the map and the raceline, and it will be ready to run all the algorithms that require maps and localization!

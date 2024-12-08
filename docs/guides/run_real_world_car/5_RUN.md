@@ -8,9 +8,11 @@
     cat launch/config/launch_config.yaml
     ```
 
-    If not, execute the `update_settings.py` located in the root of the repository.
+    If not, execute the `update_settings.py` located in the root of the repository providing all necessary parameters.
 
     ```bash
+    $ python update_settings.py -h
+
     usage: update_settings.py [-h] -m MAP_PATH [-y YAML_PATH] -r RACELINE_FILE -b BOUNDARIES_FILE
 
     options:
@@ -30,14 +32,17 @@
 
 ## Race
 
-1. **Run Bringup**:
-    follow [bringup guide](2_BRINGUP.md)
+1. **Run Bringup**
+
+    Follow [bringup guide](2_BRINGUP.md)
 
 2. **Open rviz**
-    from the VNC instance, open a terminal and run `rviz2`.
+
+    From the VNC instance, open a terminal and run `rviz2`.
 
 3. **Localize the car**
-    to start the localization algorithm open a new ssh instance and run run:
+
+    To start the localization algorithm open a new ssh instance and run run:
 
     ```bash
     launch localize_launch_mit.py
@@ -48,7 +53,8 @@
     Use `2D pose estimate` in rviz to place the car in the correct location.
 
 4. **Launch control node and race!**
-    to start the control node open a new ssh instance and run:
+
+    To start the control stack open a new ssh instance and run:
 
     ```bash
     launch control.py
@@ -56,4 +62,12 @@
 
     The raceline should pop up in rviz.
 
-    You can now press one of button of the joystick to run a control algorithm. For example, to run pure pursuit press the circle button.
+    You can now press one of button of the joystick to run a control algorithm.
+
+    | Symbol    | Algorithm            |
+    |-----------|----------------------|
+    | Cross     | Disparity Extender   |
+    | Circle    | Pure Pursuit         |
+    | Triangle  | Potential Field      |
+    | Square    | Potential Pursuit    |
+    | **L1**    | **STOP**             |

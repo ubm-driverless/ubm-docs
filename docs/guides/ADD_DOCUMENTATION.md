@@ -19,14 +19,46 @@ To contribute new documentation to the website, follow these steps:
     - Write one or more Markdown files (`.md`) and place them in the most appropriate subfolder within the `docs/` directory.
         - If you need to add a subsection:
             1. Create a new subfolder inside an existing subfolder in the `docs/` directory.
-            2. Add your documentation files to this folder and include an empty `index.md` file in the same folder.
+            2. Add your documentation files to this folder. Consider that the first element shown when the subsection is selected is the first file in alphabetical order. A good practice is to add a `0_` prefix. (a.e. `0_firstfile`)
         - If you need to add a new section (a new tab):
             1. Create a new folder inside the `docs/` directory.
             2. Add an `index.md` file to the new folder. The content of this file will be displayed when the tab is clicked.
             3. Add your additional documentation files to the new folder.
             4. Update the `nav:` section in the `mkdocs.yaml` file (located in the root of the repository) to include the new folder and its files.
 
-3. **Submit a Pull Request**  
+    !!! tip
+
+        The files in the website are sorted in alphabetical order, but the title of the page is given by the markdown title of the markdown file  
+
+3. **Verify that the website works as expected with your added pages**
+
+    1. Enable the ubm-docs environment. If you use a bash shell run:
+
+        ```bash
+        source ./venv/bin/activate
+        ```
+
+    2. Modify the `PYTHONPATH` environment variable for the current terminal session
+
+        ```bash
+        export PYTHONPATH="$PYTHONPATH:$(pwd)/src"
+        ```
+
+    3. Serve locally the website with mkdocs
+
+        ```bash
+        mkdocs serve
+        ```
+
+!!! tip
+
+    Serve locally the website while editing the markdown files. You can see the website update each time you save the file. Very useful to verify that it looks as you intend!
+
+!!! note
+
+    While serving the website on your local machine it is normal that Python Packages and C++ Packages pages are not shown correctly
+
+1. **Submit a Pull Request**
     - Commit your changes and push the branch to the repository:
 
     ``` bash
@@ -37,7 +69,7 @@ To contribute new documentation to the website, follow these steps:
 
     - Open a Pull Request (PR) on GitHub, providing a clear description of your changes.
 
-4. **Deployment**  
+2. **Deployment**  
     - Once the PR is merged into the `main` branch, an automated workflow will trigger to rebuild and update the website.
 
 ## Add Documentation from Code
@@ -55,7 +87,7 @@ Documentation is automatically generated from code. In order to see updates in t
 - Place header files in the `include` directory.
 - In the `package.xml` file inside the `<export>` tag make sure to have a link to the rosdoc2.yml confing file.
 
-    ```
+    ```xml
     <export>
         <rosdoc2>../rosdoc2.yml</rosdoc2> <!--add this, make sure to use the correct relative path -->
     </export>

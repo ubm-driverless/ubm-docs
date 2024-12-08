@@ -1,53 +1,37 @@
 # Run Real World Car
 
-This guide provides a comprehensive workflow for operating the real-world car.
+This guide provides quick access to all procedures for operating the real-world car. Click on any section to go to the detailed instructions.
 
-<!-- TODO: LEGENDA -->
+If you encounter any issues during operation, please refer to the [Troubleshooting Guide](TROUBLESHOOTING.md).
 
+## 1. [Checklist](1_CHECKLIST.md)
 
-<!-- # Shut down procedure
-- CTRL-C everything, flick switch, remove battery
+- [Battery Levels](1_CHECKLIST.md#1-battery-level)
+- [Turn on the devices](1_CHECKLIST.md#2-turn-on-the-devices)
+- [Car Connection](1_CHECKLIST.md#3-car-connection)
+- [Sync the ubm-f1tenth repository](1_CHECKLIST.md#4-sync-the-ubm-f1tenth-repository-with-the-desired-state)
 
+## 2. [Bringup](2_BRINGUP.md)
 
------STILL NOT COVERED BY US
+- [Launch Bringup](2_BRINGUP.md#bringup)
+- [Controller Connection](2_BRINGUP.md#bringup)
 
+## 3. [Mapping](3_MAPPING.md)
 
-<!-- ## Sync github repo with the new map
-<!-- needs to be connected to the internet -->
-```
-git checkout philly
-git pull
-git add .
-git commit "upload new map"
-git push
-``` -->
+- [Preparation](3_MAPPING.md#preparation)
+- [Scan environment](3_MAPPING.md#scan-environment)
+- [Edit the generated map](3_MAPPING.md#edit-the-generated-map)
 
-## At any time if you need to check battery
+## 4. [Raceline & Speed Profile](4_RACELINE.md)
 
-- it has to be after bringup
-- ros2 topic echo /sensors/core
-- [Note] The voltage is biased (about 0.2 higher). 
+- [Preparation](4_RACELINE.md#preparation)
+- [Run the raceline algorithm](4_RACELINE.md#run-the-raceline-algorithm)
 
-## Clean up the workspace 
-rm -r build/ build_old/ car_setup.sh data get_parameter_or install/ install_old log/ log_old
+## 5. [Run](5_RUN.md)
 
-# Check if repo is up to date
-(if you have any problems with the router go to 192.168.1.1/ **user**: root **pass**: ubm12345)
-- to check if up to date no internet: git log -l see last commit if it matches the one of remote repo
-- if not up to date:
--- connect with phone with usb cable (**ON USB PORT 1**), tether internet and pull
+- [Preparation](5_RUN.md#preparation)
+- [Race](5_RUN.md#race)
 
+## 6. [Shutdown](6_SHUTDOWN.md)
 
-# Controller Commands
-- Manual mode: hold L1 and drive
-- Gap-follower: X
-- Pure-pursuit: O
-
-# Change mapping and localization parameters
-- For mapping: /home/ubm/repo/src/f1tenth_system/config/mapper_params_online_async.yaml
-- For localization: /home/ubm/repo/launch/localization.py
-- Do: Colcon Build from f1tenth_ws and source again with src 
-
-notes:
-- Always read help instructions for launch
-    - if something is not working try rebuilding with the command `build_ws` and source by running `src` -->
+## [Troubleshooting](TROUBLESHOOTING.md)

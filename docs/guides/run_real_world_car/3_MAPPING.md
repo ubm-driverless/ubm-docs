@@ -4,17 +4,20 @@ The mapping procedure allows to map the track or more in general an environment.
 
 ## Preparation
 
-    - Verify that the bring up is on and running by moving left and right the wheels of the car a couple of times
-    - Open rviz2: from the VNC instance, open a terminal and run `rviz2`.
-        - Since we still don't have a map, we won't se anything right away. Thus set fixed frame to `laser` in order to see the lidar scans. 
+- **Verify that the bring up is on:** Move left and right the wheels of the car a couple of times.
 
-        > [!note]
-        > If you don't see the lidar scans or they are stuck move the wheels of the car with the joystick
+- **Open rviz2**: from the VNC instance, open a terminal and run `rviz2`.
+    - Since we still don't have a map, we won't se anything right away. Thus set fixed frame to `laser` in order to see the lidar scans. 
 
-## Scan environment
+    !!! note
+
+        If you don't see the lidar scans or they are stuck move the wheels of the car with the joystick
+
+## Scan the environment
 
 - **Run the mapping algorithm**
-    - Open a new ssh instance and run
+
+    Open a new ssh instance and run
 
     ```bash
     launch offline_mapping_closure.py
@@ -48,8 +51,8 @@ In order to improve the localization capabilities and supply the speed profile a
     1. **Modify the `.pgm` File**  
         Use an image editor to open the `.pgm` file. [GIMP](https://www.gimp.org/) is recommended for this procedure.
 
-        **Objective:**  
-        Refine the map to ensure the localization algorithm performs accurately by removing all gray pixels.  
+        **Objective:** Refine the map to ensure the localization algorithm performs accurately by removing all gray pixels.
+
         - All pixels **must** be either completely black (#000000) or completely white (#FFFFFF).  
         - Avoid making significant changes to the map, as it should closely resemble what the LiDAR scans will detect.
 
@@ -61,18 +64,19 @@ In order to improve the localization capabilities and supply the speed profile a
         - Update the `image` parameter to point to `mapname_edited.pgm`.  
         - Save the modified file as `mapname_edited.yaml`.
 
-    4. **Reference Video**  
-        The video below demonstrates this procedure: 
+    **Reference Video**  
+    The video below demonstrates this procedure: 
 
-        <video controls>
-        <source src="/assets/gimp-tutorial/map_edited.mp4" type="video/mp4">
-        </video>
+    <video controls>
+    <source src="site:/assets/gimp-tutorial/map_edited.mp4" type="video/mp4">
+    </video>
 
 3. **Edit the map for raceline**
+
     1. **Modify the `mapname_edited.pgm` File**
 
-        **Objective**
-        Refine the map to ensure the raceline algorithm performs accurately by providing a smooth path.
+        **Objective:** Refine the map to ensure the raceline algorithm performs accurately by providing a smooth path.
+
         - Remove parts of the map where the raceline should not go
         - There **must** be only a feasible path. If there are obstacles remove all of them. If there are 2 paths to make the lap give the algorithm only one option
         - Make all corners as smooth as possible.
@@ -86,9 +90,9 @@ In order to improve the localization capabilities and supply the speed profile a
         - Update the `image` parameter to point to `mapname_raceline.pgm`.  
         - Save the modified file as `mapname_raceline.yaml`.
 
-    4. **Reference Video**  
-        The video below demonstrates this procedure: 
+    **Reference Video**  
+    The video below demonstrates this procedure: 
 
-        <video controls>
-        <source src="/assets/gimp-tutorial/map_raceline.mp4" type="video/mp4">
-        </video>
+    <video controls>
+    <source src="site:/assets/gimp-tutorial/map_raceline.mp4" type="video/mp4">
+    </video>
