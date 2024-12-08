@@ -31,7 +31,7 @@ The mapping procedure allows to map the track or more in general an environment.
 - **Save the map**
     - From rviz make sure to have the SLAM toolbox visible. If not open it clicking on "panels > add new panel > SLAM toolbox plugin"
     - Next to the `Save Map` button write the name that you want to give to the map. A suggested name is `YYYYMMDD`
-    - Click the `Save Map` button. In the logs of the mapping algorithm you should see that the map is successfully saved. You should see 2 new files in the folder where the mapping algorithm was executed. One is a `.pgm` file and one is a `.jaml` file. Now you can stop the mapping algorithm using `CTRL-C` in the terminal.
+    - Click the `Save Map` button. In the logs of the mapping algorithm you should see that the map is successfully saved. You should see 2 new files in the folder where the mapping algorithm was executed. One is a `.pgm` file and one is a `.yaml` file. Now you can stop the mapping algorithm using `CTRL-C` in the terminal.
     - A good practice is to move these 2 files in a new folder called `YYYYMMDD` inside the `/home/ubm/repo/maps/` directory.
 
 ## Edit the generated map
