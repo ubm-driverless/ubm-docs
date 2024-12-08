@@ -32,21 +32,23 @@ To contribute new documentation to the website, follow these steps:
 
 3. **Verify that the website works as expected with your added pages**
 
-    1. Enable the ubm-docs environment. If you use a bash shell run:
+    1. Create and setup the python virtual environment.
+
+        ```bash
+        python -m venv venv
+        pip install -r requirements.txt
+        ```
+
+    2. Enable the virtual environment (for bash shell)
 
         ```bash
         source ./venv/bin/activate
         ```
 
-    2. Modify the `PYTHONPATH` environment variable for the current terminal session
+    3. Modify the `PYTHONPATH` environment variable for the current terminal session and serve locally the website with mkdocs
 
         ```bash
         export PYTHONPATH="$PYTHONPATH:$(pwd)/src"
-        ```
-
-    3. Serve locally the website with mkdocs
-
-        ```bash
         mkdocs serve
         ```
 
