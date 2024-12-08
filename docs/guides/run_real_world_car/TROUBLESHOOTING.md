@@ -41,12 +41,11 @@ This guide provides solutions for common issues and important checks during oper
       ls ~/f1tenth_ws/src
       ```
 
-      If the package is missing, create a symbolic link to the package location, build the workspace and source again.
+      If the package is missing, create a symbolic link to the package location and build the workspace.
 
       ```bash
       ln -s /path/to/package ~/f1tenth_ws/src/
       build_ws
-      src
       ```
 
 ---
