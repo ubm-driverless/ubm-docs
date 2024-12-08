@@ -28,7 +28,7 @@
     ```
 
 - Stop bringup, and every other running node.
-- From VNC close rviz2
+- From VNC close RViz
 
 ## Race
 
@@ -36,7 +36,7 @@
 
     Follow [bringup guide](2_BRINGUP.md)
 
-2. **Open rviz**
+2. **Open RViz**
 
     From the VNC instance, open a terminal and run `rviz2`.
 
@@ -48,9 +48,9 @@
     launch localize_launch_mit.py
     ```
 
-    The map should pop up in rviz.
+    The map should pop up in RViz.
 
-    Use `2D pose estimate` in rviz to place the car in the correct location.
+    Use `2D pose estimate` in RViz to place the car in the correct location.
 
 4. **Launch control node and race!**
 
@@ -60,14 +60,14 @@
     launch control.py
     ```
 
-    The raceline should pop up in rviz.
+    The raceline should pop up in RViz.
 
     You can now press one of button of the joystick to run a control algorithm.
 
-    | Symbol    | Algorithm            |
-    |-----------|----------------------|
-    | Cross     | Disparity Extender   |
-    | Circle    | Pure Pursuit         |
-    | Triangle  | Potential Field      |
-    | Square    | Potential Pursuit    |
-    | **L1**    | **STOP**             |
+    | Symbol       | Algorithm            |
+    |--------------|----------------------|
+    | Cross        | Disparity Extender   |
+    | Circle       | Pure Pursuit         |
+    | Triangle     | Potential Field      |
+    | Square       | Potential Pursuit    |
+    | **L1 or R1** | **STOP**             |

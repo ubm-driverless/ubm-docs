@@ -30,7 +30,7 @@ If all the 3 are equal to 1 than it means that the car:
 The car now can be moved with the joystick:
 
 - Hold L1 for slow movement.
-- Hold L2 for fast movement.
+- Hold R1 for fast movement.
 - Use the left stick to control forward and backward motion.
 - Use the right stick to steer the car.
 

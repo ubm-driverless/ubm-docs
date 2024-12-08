@@ -6,7 +6,7 @@ The mapping procedure allows to map the track or more in general an environment.
 
 - **Verify that the bring up is on:** Move left and right the wheels of the car a couple of times.
 
-- **Open rviz2**: from the VNC instance, open a terminal and run `rviz2`.
+- **Open RViz2**: from the VNC instance, open a terminal and run `rviz2`.
     - Since we still don't have a map, we won't se anything right away. Thus set fixed frame to `laser` in order to see the lidar scans. 
 
     !!! note
@@ -23,13 +23,13 @@ The mapping procedure allows to map the track or more in general an environment.
     launch offline_mapping_closure.py
     ```
 
-    From rviz it should be visible that the mapping has started since it starts to build the map.
+    From RViz it should be visible that the mapping has started since it starts to build the map.
 
 - **Explore the environment**
     - Move the car slowly around the whole environment. Avoid doing many turns. Less you steer better the mapping will be.
     - When you feel satisfied with the result, keep the car still and do not stop the mapping algorithm because the map needs still to saved.
 - **Save the map**
-    - From rviz make sure to have the SLAM toolbox visible. If not open it clicking on "panels > add new panel > SLAM toolbox plugin"
+    - From RViz make sure to have the SLAM toolbox visible. If not open it clicking on "panels > add new panel > SLAM toolbox plugin"
     - Next to the `Save Map` button write the name that you want to give to the map. A suggested name is `YYYYMMDD`
     - Click the `Save Map` button. In the logs of the mapping algorithm you should see that the map is successfully saved. You should see 2 new files in the folder where the mapping algorithm was executed. One is a `.pgm` file and one is a `.yaml` file. Now you can stop the mapping algorithm using `CTRL-C` in the terminal.
     - A good practice is to move these 2 files in a new folder called `YYYYMMDD` inside the `/home/ubm/repo/maps/` directory.
