@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classThetaStar" kind="class" language="C++" prot="public">
+    <compoundname>ThetaStar</compoundname>
+    <includes local="no">theta_star.hpp</includes>
+    <innerclass refid="classThetaStar_1_1Comparator" prot="public">ThetaStar::Comparator</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classThetaStar_1a40816ca73615a2f74dd73d15c1ff5ea7" prot="public" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat ThetaStar::gCost</definition>
+        <argsstring></argsstring>
+        <name>gCost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="54" column="13" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThetaStar_1af1f144477115d2125e29cceec8a8a101" prot="public" static="no" mutable="no">
+        <type>tuple&lt; int, int &gt;</type>
+        <definition>tuple&lt;int, int&gt; ThetaStar::goalVert</definition>
+        <argsstring></argsstring>
+        <name>goalVert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="55" column="11" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThetaStar_1a6c2ef99babf0de227da7af05c1e45a50" prot="public" static="no" mutable="no">
+        <type>unordered_map&lt; tuple&lt; int, int &gt;, tuple&lt; int, int &gt; &gt;</type>
+        <definition>unordered_map&lt;tuple&lt;int, int&gt;, tuple&lt;int, int&gt; &gt; ThetaStar::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="56" column="19" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThetaStar_1a12b411776eee32ef2a9ff94dfb015325" prot="public" static="no" mutable="no">
+        <type>set&lt; tuple&lt; int, int &gt;, <ref refid="classThetaStar_1_1Comparator" kindref="compound">Comparator</ref> &gt;</type>
+        <definition>set&lt;tuple&lt;int, int&gt;, Comparator&gt; ThetaStar::open</definition>
+        <argsstring></argsstring>
+        <name>open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="57" column="9" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThetaStar_1a4f9608859378bd1465055b5e5e397f38" prot="public" static="no" mutable="no">
+        <type>list&lt; tuple&lt; int, int &gt; &gt;</type>
+        <definition>list&lt;tuple&lt;int, int&gt; &gt; ThetaStar::closed</definition>
+        <argsstring></argsstring>
+        <name>closed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="58" column="10" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThetaStar_1a3c61785cbe6909b3ddbe0d344d0d7256" prot="public" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat ThetaStar::mapImage</definition>
+        <argsstring></argsstring>
+        <name>mapImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="59" column="13" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classThetaStar_1a43aa0f9483b97f947ae77b30d29d4485" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ThetaStar::ThetaStar</definition>
+        <argsstring>()</argsstring>
+        <name>ThetaStar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="33" column="5" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classThetaStar_1ac0614c170d39056ee10918ac8e96b490" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ThetaStar::updateVertex</definition>
+        <argsstring>(const tuple&lt; int, int &gt; s, const tuple&lt; int, int &gt; sNeighbor, const cv::Mat &amp;map)</argsstring>
+        <name>updateVertex</name>
+        <param>
+          <type>const tuple&lt; int, int &gt;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const tuple&lt; int, int &gt;</type>
+          <declname>sNeighbor</declname>
+        </param>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Update routine of the theta* algorigthm, updates the <computeroutput>parent</computeroutput> of the current neighbor to either the <computeroutput>parent</computeroutput> of the <computeroutput>s</computeroutput> vertex if it has line of sight or to the <computeroutput>s</computeroutput> vertex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Depends on <computeroutput>gCost</computeroutput> and <computeroutput>mapImage</computeroutput></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vertex that is being currently expanded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sNeighbor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The neighbor of <computeroutput>s</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The occupancy map. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="185" column="10" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="185" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classThetaStar_1a8286b12236eba97ec4f794578ab29795" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>list&lt; tuple&lt; int, int &gt; &gt;</type>
+        <definition>list&lt;tuple&lt;int, int&gt; &gt; ThetaStar::thetaStar</definition>
+        <argsstring>(const tuple&lt; int, int &gt; start, tuple&lt; int, int &gt; goal, const cv::Mat &amp;map)</argsstring>
+        <name>thetaStar</name>
+        <param>
+          <type>const tuple&lt; int, int &gt;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>tuple&lt; int, int &gt;</type>
+          <declname>goal</declname>
+        </param>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Main function of the theta* algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Within the function we reverse the <computeroutput>x</computeroutput> and <computeroutput>y</computeroutput> coordinates of the vertices for compatability with the <computeroutput>lineOfSight</computeroutput> function. This detail should be ignored outside of the <computeroutput>thetaStar</computeroutput> function.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start vertex. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The goal vertex. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The occupancy map, binary image. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>list&lt;tuple&lt;int, int&gt;&gt; The path from the start vertex to the goal vertex, empty if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="217" column="10" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="217" bodyend="285"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classThetaStar_1a6595ff2070adfb5a2ee4c73482c39a35" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float ThetaStar::hCost</definition>
+        <argsstring>(const tuple&lt; int, int &gt; s, const tuple&lt; int, int &gt; goal)</argsstring>
+        <name>hCost</name>
+        <param>
+          <type>const tuple&lt; int, int &gt;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const tuple&lt; int, int &gt;</type>
+          <declname>goal</declname>
+        </param>
+        <briefdescription>
+<para>Calculate straight-line distance between the vertex <computeroutput>s</computeroutput> and <computeroutput>goal</computeroutput> vertex, used as an estimation of the cost of the path between <computeroutput>s</computeroutput> and <computeroutput>goal</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vertex </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the goal vertex </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="69" column="18" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classThetaStar_1a9fbfe378353e42b8ff6f2b287b42e73c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool ThetaStar::lineOfSight</definition>
+        <argsstring>(tuple&lt; int, int &gt; a, tuple&lt; int, int &gt; b, const cv::Mat &amp;map)</argsstring>
+        <name>lineOfSight</name>
+        <param>
+          <type>tuple&lt; int, int &gt;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>tuple&lt; int, int &gt;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Check for line of sight between two vertices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first vertex </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second vertex </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The occupancy map. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true If the vertex a has line of sight with vertex b. </para>
+</simplesect>
+<simplesect kind="return"><para>false If the vertex a does not have line of sight with vertex b. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="82" column="17" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="82" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classThetaStar_1ac8190b9c164f14e2e3f4263230dab2bd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>list&lt; tuple&lt; int, int &gt; &gt;</type>
+        <definition>static list&lt;tuple&lt;int, int&gt; &gt; ThetaStar::neighbors</definition>
+        <argsstring>(const tuple&lt; int, int &gt; s, const tuple&lt; int, int &gt; &amp;mapSize)</argsstring>
+        <name>neighbors</name>
+        <param>
+          <type>const tuple&lt; int, int &gt;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const tuple&lt; int, int &gt; &amp;</type>
+          <declname>mapSize</declname>
+        </param>
+        <briefdescription>
+<para>Get all neighbors of a vertex (we consider an 8-connected space, so diagonal neighbors included). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertex </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mapSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the map. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>list&lt;tuple&lt;int, int&gt;&gt; List of neighbors </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="148" column="17" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="148" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classThetaStar_1a4b7de48b3c837c962fd7235177bfabbf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float ThetaStar::straightLinecost</definition>
+        <argsstring>(const tuple&lt; int, int &gt; a, const tuple&lt; int, int &gt; b)</argsstring>
+        <name>straightLinecost</name>
+        <param>
+          <type>const tuple&lt; int, int &gt;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const tuple&lt; int, int &gt;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the lenght of the straight line between two vertices, in pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first vertex. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second vertex. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The distance between the two vertices as a straigth line in pixels. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/theta_star.hpp" line="172" column="18" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="172" bodyend="174"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implemetation of the Theta* algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>For <computeroutput>vertex</computeroutput> at coords <computeroutput>x</computeroutput> and <computeroutput>y</computeroutput> we mean the top-left vertex of the pixel at coords <computeroutput>x</computeroutput> and <computeroutput>y</computeroutput>. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/rrt_cpp/theta_star.hpp" line="31" column="16" bodyfile="include/rrt_cpp/theta_star.hpp" bodystart="31" bodyend="286"/>
+    <listofallmembers>
+      <member refid="classThetaStar_1a4f9608859378bd1465055b5e5e397f38" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>closed</name></member>
+      <member refid="classThetaStar_1a40816ca73615a2f74dd73d15c1ff5ea7" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>gCost</name></member>
+      <member refid="classThetaStar_1af1f144477115d2125e29cceec8a8a101" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>goalVert</name></member>
+      <member refid="classThetaStar_1a6595ff2070adfb5a2ee4c73482c39a35" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>hCost</name></member>
+      <member refid="classThetaStar_1a9fbfe378353e42b8ff6f2b287b42e73c" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>lineOfSight</name></member>
+      <member refid="classThetaStar_1a3c61785cbe6909b3ddbe0d344d0d7256" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>mapImage</name></member>
+      <member refid="classThetaStar_1ac8190b9c164f14e2e3f4263230dab2bd" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>neighbors</name></member>
+      <member refid="classThetaStar_1a12b411776eee32ef2a9ff94dfb015325" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>open</name></member>
+      <member refid="classThetaStar_1a6c2ef99babf0de227da7af05c1e45a50" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>parent</name></member>
+      <member refid="classThetaStar_1a4b7de48b3c837c962fd7235177bfabbf" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>straightLinecost</name></member>
+      <member refid="classThetaStar_1a43aa0f9483b97f947ae77b30d29d4485" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>ThetaStar</name></member>
+      <member refid="classThetaStar_1a8286b12236eba97ec4f794578ab29795" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>thetaStar</name></member>
+      <member refid="classThetaStar_1ac0614c170d39056ee10918ac8e96b490" prot="public" virt="non-virtual"><scope>ThetaStar</scope><name>updateVertex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

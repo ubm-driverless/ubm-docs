@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="curvature_8hpp" kind="file" language="C++">
+    <compoundname>curvature.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="1">
+        <label>include/rrt_cpp/curvature.hpp</label>
+        <link refid="curvature_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="curvature_8hpp_1a8dad529e41af758658e1b8b978f8c55b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gradient</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;arr)</argsstring>
+        <name>gradient</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>arr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/curvature.hpp" line="12" column="13" bodyfile="include/rrt_cpp/curvature.hpp" bodystart="12" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="curvature_8hpp_1a61d67ea7567e4d8a306ff4906924a6cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; compute_curvature</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;x, const std::vector&lt; float &gt; &amp;y)</argsstring>
+        <name>compute_curvature</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/curvature.hpp" line="25" column="13" bodyfile="include/rrt_cpp/curvature.hpp" bodystart="25" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This header file contains the functions implementations for curvature calculation of a 2D trajectory. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rrt_cpp/curvature.hpp"/>
+  </compounddef>
+</doxygen>

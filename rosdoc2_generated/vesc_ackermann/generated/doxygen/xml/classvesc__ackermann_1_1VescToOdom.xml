@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classvesc__ackermann_1_1VescToOdom" kind="class" language="C++" prot="public">
+    <compoundname>vesc_ackermann::VescToOdom</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a6b45e85386b4b2abdae1e312b697558f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vesc_ackermann::VescToOdom::odom_frame_</definition>
+        <argsstring></argsstring>
+        <name>odom_frame_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="57" column="15" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1ad14766950bfbf7dd8fdec8b2a75e1e6a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vesc_ackermann::VescToOdom::base_frame_</definition>
+        <argsstring></argsstring>
+        <name>base_frame_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="58" column="15" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a5ca25d5e4a92809d0bdffb022d759f82" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vesc_ackermann::VescToOdom::use_servo_cmd_</definition>
+        <argsstring></argsstring>
+        <name>use_servo_cmd_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>State message does not report servo position, so use the command instead </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="60" column="8" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a48c6b372c606edb3836b90523df49809" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::VescToOdom::speed_to_erpm_gain_</definition>
+        <argsstring></argsstring>
+        <name>speed_to_erpm_gain_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="62" column="10" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1adcbc88c4ea0e9048fddb242d05baa440" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::VescToOdom::speed_to_erpm_offset_</definition>
+        <argsstring></argsstring>
+        <name>speed_to_erpm_offset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="62" column="30" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1ab7c5fe8f3614b48c03f91c1a9572f63e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::VescToOdom::steering_to_servo_gain_</definition>
+        <argsstring></argsstring>
+        <name>steering_to_servo_gain_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="63" column="10" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a058601086bc87db6591c2e3084e0bbe4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::VescToOdom::steering_to_servo_offset_</definition>
+        <argsstring></argsstring>
+        <name>steering_to_servo_offset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="63" column="34" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1af44e702d959bbf3c504f048c5f9dd859" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::VescToOdom::wheelbase_</definition>
+        <argsstring></argsstring>
+        <name>wheelbase_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="64" column="10" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a7966f3567c2f829bb4a8daee3ab4701f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vesc_ackermann::VescToOdom::publish_tf_</definition>
+        <argsstring></argsstring>
+        <name>publish_tf_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="65" column="8" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1ab7b332d5086b03ac683274fdcb1a13b1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::VescToOdom::x_</definition>
+        <argsstring></argsstring>
+        <name>x_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="68" column="10" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a2999c19a1254f731036b63b2ea8c5843" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::VescToOdom::y_</definition>
+        <argsstring></argsstring>
+        <name>y_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="68" column="13" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a26f136cabfbc4c4579233a859b93ec92" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::VescToOdom::yaw_</definition>
+        <argsstring></argsstring>
+        <name>yaw_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="68" column="16" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a74b3f4c3815a29c492bb3fed879879f8" prot="private" static="no" mutable="no">
+        <type>Float64::SharedPtr</type>
+        <definition>Float64::SharedPtr vesc_ackermann::VescToOdom::last_servo_cmd_</definition>
+        <argsstring></argsstring>
+        <name>last_servo_cmd_</name>
+        <briefdescription>
+<para>Last servo position commanded value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="69" column="22" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1ad54628de54d42e5f1847a280f04a88a1" prot="private" static="no" mutable="no">
+        <type>VescStateStamped::SharedPtr</type>
+        <definition>VescStateStamped::SharedPtr vesc_ackermann::VescToOdom::last_state_</definition>
+        <argsstring></argsstring>
+        <name>last_state_</name>
+        <briefdescription>
+<para>Last received state message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="70" column="31" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a2f03141767ddc816fb31c906fd937936" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;Odometry&gt;::SharedPtr vesc_ackermann::VescToOdom::odom_pub_</definition>
+        <argsstring></argsstring>
+        <name>odom_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="73" column="33" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a085f17718d8307505e6f71b42653d767" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; VescStateStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;VescStateStamped&gt;::SharedPtr vesc_ackermann::VescToOdom::vesc_state_sub_</definition>
+        <argsstring></argsstring>
+        <name>vesc_state_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="74" column="36" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a0992fd75c13a9b56c5ba042e8d3331cb" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; Float64 &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;Float64&gt;::SharedPtr vesc_ackermann::VescToOdom::servo_sub_</definition>
+        <argsstring></argsstring>
+        <name>servo_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="75" column="36" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1VescToOdom_1a7eac8ef3e3afcfe01ed3e13c0e19e6ab" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; tf2_ros::TransformBroadcaster &gt;</type>
+        <definition>std::shared_ptr&lt;tf2_ros::TransformBroadcaster&gt; vesc_ackermann::VescToOdom::tf_pub_</definition>
+        <argsstring></argsstring>
+        <name>tf_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="76" column="19" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvesc__ackermann_1_1VescToOdom_1addf370ddfa57f32e8058329c0e6264ac" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vesc_ackermann::VescToOdom::VescToOdom</definition>
+        <argsstring>(const rclcpp::NodeOptions &amp;options)</argsstring>
+        <name>VescToOdom</name>
+        <param>
+          <type>const rclcpp::NodeOptions &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="53" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classvesc__ackermann_1_1VescToOdom_1a43d7a3a8e35ba4a8c44855d9b1a8cc32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_ackermann::VescToOdom::vescStateCallback</definition>
+        <argsstring>(const VescStateStamped::SharedPtr state)</argsstring>
+        <name>vescStateCallback</name>
+        <param>
+          <type>const VescStateStamped::SharedPtr</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="79" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__ackermann_1_1VescToOdom_1abc98726430fd345f8030ff79426d76a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_ackermann::VescToOdom::servoCmdCallback</definition>
+        <argsstring>(const Float64::SharedPtr servo)</argsstring>
+        <name>servoCmdCallback</name>
+        <param>
+          <type>const Float64::SharedPtr</type>
+          <declname>servo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="80" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>vesc_ackermann::VescToOdom</label>
+        <link refid="classvesc__ackermann_1_1VescToOdom"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>vesc_ackermann::VescToOdom</label>
+        <link refid="classvesc__ackermann_1_1VescToOdom"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/vesc_ackermann/vesc_to_odom.hpp" line="51" column="1" bodyfile="include/vesc_ackermann/vesc_to_odom.hpp" bodystart="50" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1ad14766950bfbf7dd8fdec8b2a75e1e6a" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>base_frame_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a74b3f4c3815a29c492bb3fed879879f8" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>last_servo_cmd_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1ad54628de54d42e5f1847a280f04a88a1" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>last_state_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a6b45e85386b4b2abdae1e312b697558f" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>odom_frame_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a2f03141767ddc816fb31c906fd937936" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>odom_pub_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a7966f3567c2f829bb4a8daee3ab4701f" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>publish_tf_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a0992fd75c13a9b56c5ba042e8d3331cb" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>servo_sub_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1abc98726430fd345f8030ff79426d76a3" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>servoCmdCallback</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a48c6b372c606edb3836b90523df49809" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>speed_to_erpm_gain_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1adcbc88c4ea0e9048fddb242d05baa440" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>speed_to_erpm_offset_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1ab7c5fe8f3614b48c03f91c1a9572f63e" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>steering_to_servo_gain_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a058601086bc87db6591c2e3084e0bbe4" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>steering_to_servo_offset_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a7eac8ef3e3afcfe01ed3e13c0e19e6ab" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>tf_pub_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a5ca25d5e4a92809d0bdffb022d759f82" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>use_servo_cmd_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a085f17718d8307505e6f71b42653d767" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>vesc_state_sub_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a43d7a3a8e35ba4a8c44855d9b1a8cc32" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>vescStateCallback</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1addf370ddfa57f32e8058329c0e6264ac" prot="public" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>VescToOdom</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1af44e702d959bbf3c504f048c5f9dd859" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>wheelbase_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1ab7b332d5086b03ac683274fdcb1a13b1" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>x_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a2999c19a1254f731036b63b2ea8c5843" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>y_</name></member>
+      <member refid="classvesc__ackermann_1_1VescToOdom_1a26f136cabfbc4c4579233a859b93ec92" prot="private" virt="non-virtual"><scope>vesc_ackermann::VescToOdom</scope><name>yaw_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classnanoflann_1_1RadiusResultSet" kind="class" language="C++" prot="public">
+    <compoundname>nanoflann::RadiusResultSet</compoundname>
+    <includes local="no">nanoflann.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename _DistanceType</type>
+      </param>
+      <param>
+        <type>typename _IndexType</type>
+        <defval>size_t</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classnanoflann_1_1RadiusResultSet_1a9960a190d865ff8492d3d0f1e23aa5db" prot="public" static="no">
+        <type>_DistanceType</type>
+        <definition>using nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::DistanceType =  _DistanceType</definition>
+        <argsstring></argsstring>
+        <name>DistanceType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="365" column="5" bodyfile="include/nanoflann.hpp" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1RadiusResultSet_1af526a6d4653b3f7d112a416d2b573f44" prot="public" static="no">
+        <type>_IndexType</type>
+        <definition>using nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::IndexType =  _IndexType</definition>
+        <argsstring></argsstring>
+        <name>IndexType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="366" column="5" bodyfile="include/nanoflann.hpp" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classnanoflann_1_1RadiusResultSet_1a31110cc73f82eb69e0e020717bf04dcc" prot="public" static="no" mutable="no">
+        <type>const DistanceType</type>
+        <definition>const DistanceType nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::radius</definition>
+        <argsstring></argsstring>
+        <name>radius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="369" column="24" bodyfile="include/nanoflann.hpp" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1RadiusResultSet_1ab66cfe164b7b5d3212d3c390b38a6b1a" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structnanoflann_1_1ResultItem" kindref="compound">ResultItem</ref>&lt; IndexType, DistanceType &gt; &gt; &amp;</type>
+        <definition>std::vector&lt;ResultItem&lt;IndexType, DistanceType&gt; &gt;&amp; nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::m_indices_dists</definition>
+        <argsstring></argsstring>
+        <name>m_indices_dists</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="371" column="17" bodyfile="include/nanoflann.hpp" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnanoflann_1_1RadiusResultSet_1a3b53a1391fa92d5bc05099ccbd3242f3" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::RadiusResultSet</definition>
+        <argsstring>(DistanceType radius_, std::vector&lt; ResultItem&lt; IndexType, DistanceType &gt;&gt; &amp;indices_dists)</argsstring>
+        <name>RadiusResultSet</name>
+        <param>
+          <type>DistanceType</type>
+          <declname>radius_</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structnanoflann_1_1ResultItem" kindref="compound">ResultItem</ref>&lt; IndexType, DistanceType &gt;&gt; &amp;</type>
+          <declname>indices_dists</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="373" column="14" bodyfile="include/nanoflann.hpp" bodystart="373" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1RadiusResultSet_1a27c5b218e8bf1badba91377f6a735207" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="381" column="10" bodyfile="include/nanoflann.hpp" bodystart="381" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1RadiusResultSet_1ad7b2196e8a2fae8c3920ab76852ee38f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="382" column="10" bodyfile="include/nanoflann.hpp" bodystart="382" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1RadiusResultSet_1ab5a0a9dd5259c59a88d21dd04c384dbe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="384" column="12" bodyfile="include/nanoflann.hpp" bodystart="384" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1RadiusResultSet_1a4a38130ce141badf9583de7b7341fb3e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="385" column="12" bodyfile="include/nanoflann.hpp" bodystart="385" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1RadiusResultSet_1a9ce86eefc9fb24970970e73f5ebc54bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::full</definition>
+        <argsstring>() const</argsstring>
+        <name>full</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="387" column="10" bodyfile="include/nanoflann.hpp" bodystart="387" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1RadiusResultSet_1afd71ccbde9e8cfaac24d8fccb416fa3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::addPoint</definition>
+        <argsstring>(DistanceType dist, IndexType index)</argsstring>
+        <name>addPoint</name>
+        <param>
+          <type>DistanceType</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type>IndexType</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called during search to add an element matching the criteria. <simplesect kind="return"><para>true if the search should be continued, false if the results are sufficient </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="394" column="10" bodyfile="include/nanoflann.hpp" bodystart="394" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1RadiusResultSet_1a54df1902b1609123fdf0d7e52ba531a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>DistanceType</type>
+        <definition>DistanceType nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::worstDist</definition>
+        <argsstring>() const</argsstring>
+        <name>worstDist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="400" column="18" bodyfile="include/nanoflann.hpp" bodystart="400" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1RadiusResultSet_1ad07427f09211c002d9c0b32d0591b5d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structnanoflann_1_1ResultItem" kindref="compound">ResultItem</ref>&lt; IndexType, DistanceType &gt;</type>
+        <definition>ResultItem&lt;IndexType, DistanceType&gt; nanoflann::RadiusResultSet&lt; _DistanceType, _IndexType &gt;::worst_item</definition>
+        <argsstring>() const</argsstring>
+        <name>worst_item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find the worst result (farthest neighbor) without copying or sorting Pre-conditions: size() &gt; 0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="406" column="16" bodyfile="include/nanoflann.hpp" bodystart="406" bodyend="415"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A result-set class used when performing a radius based search. </para>
+    </detaileddescription>
+    <location file="include/nanoflann.hpp" line="363" column="1" bodyfile="include/nanoflann.hpp" bodystart="362" bodyend="416"/>
+    <listofallmembers>
+      <member refid="classnanoflann_1_1RadiusResultSet_1afd71ccbde9e8cfaac24d8fccb416fa3c" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>addPoint</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1ad7b2196e8a2fae8c3920ab76852ee38f" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>clear</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1a9960a190d865ff8492d3d0f1e23aa5db" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>DistanceType</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1a4a38130ce141badf9583de7b7341fb3e" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>empty</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1a9ce86eefc9fb24970970e73f5ebc54bd" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>full</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1af526a6d4653b3f7d112a416d2b573f44" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>IndexType</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1a27c5b218e8bf1badba91377f6a735207" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>init</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1ab66cfe164b7b5d3212d3c390b38a6b1a" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>m_indices_dists</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1a31110cc73f82eb69e0e020717bf04dcc" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>radius</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1a3b53a1391fa92d5bc05099ccbd3242f3" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>RadiusResultSet</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1ab5a0a9dd5259c59a88d21dd04c384dbe" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>size</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1ad07427f09211c002d9c0b32d0591b5d7" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>worst_item</name></member>
+      <member refid="classnanoflann_1_1RadiusResultSet_1a54df1902b1609123fdf0d7e52ba531a1" prot="public" virt="non-virtual"><scope>nanoflann::RadiusResultSet</scope><name>worstDist</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

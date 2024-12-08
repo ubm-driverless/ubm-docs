@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template Struct KDTreeEigenMatrixAdaptor &mdash; reactive_algorithms_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct KDTreeSingleIndexAdaptorParams" href="structnanoflann_1_1KDTreeSingleIndexAdaptorParams.html" />
+    <link rel="prev" title="Struct KDTreeBaseClass::Node" href="structnanoflann_1_1KDTreeBaseClass_1_1Node.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            reactive_algorithms_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#nanoflann-c-api-documentation">nanoflann C++ API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#defines">Defines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#directories">Directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#reactive-algorithms">Reactive Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#to-start-the-algorithm">To Start the algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#disparity-extender">Disparity extender</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#potential-field">Potential Field</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">reactive_algorithms_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Template Struct KDTreeEigenMatrixAdaptor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/structnanoflann_1_1KDTreeEigenMatrixAdaptor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-struct-kdtreeeigenmatrixadaptor">
+<span id="exhale-struct-structnanoflann-1-1kdtreeeigenmatrixadaptor"></span><h1>Template Struct KDTreeEigenMatrixAdaptor<a class="headerlink" href="#template-struct-kdtreeeigenmatrixadaptor" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_nanoflann.hpp.html#file-include-nanoflann-hpp"><span class="std std-ref">File nanoflann.hpp</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE">
+<span id="_CPPv3I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE"></span><span id="_CPPv2I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatrixType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DIM</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Distance</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">nanoflann</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="structnanoflann_1_1metric__L2.html#_CPPv4N9nanoflann9metric_L2E" title="nanoflann::metric_L2"><span class="n"><span class="pre">metric_L2</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">row_major</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KDTreeEigenMatrixAdaptor</span></span></span><a class="headerlink" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="Link to this definition"></a><br /></dt>
+<dd><p>An L2-metric KD-tree adaptor for working with data directly stored in an Eigen Matrix, without duplicating the data storage. You can select whether a row or column in the matrix represents a point in the state space.</p>
+<p>Example of usage: <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">num_t</span><span class="p">,</span><span class="n">Eigen</span><span class="p">::</span><span class="n">Dynamic</span><span class="p">,</span><span class="n">Eigen</span><span class="p">::</span><span class="n">Dynamic</span><span class="o">&gt;</span>  <span class="n">mat</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Fill</span> <span class="n">out</span> <span class="s2">&quot;mat&quot;</span><span class="o">...</span>
+<span class="n">using</span> <span class="n">my_kd_tree_t</span> <span class="o">=</span> <span class="n">nanoflann</span><span class="p">::</span><span class="n">KDTreeEigenMatrixAdaptor</span><span class="o">&lt;</span>
+  <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">num_t</span><span class="p">,</span><span class="n">Dynamic</span><span class="p">,</span><span class="n">Dynamic</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+
+<span class="n">const</span> <span class="nb">int</span> <span class="n">max_leaf</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">my_kd_tree_t</span> <span class="n">mat_index</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">max_leaf</span><span class="p">);</span>
+<span class="n">mat_index</span><span class="o">.</span><span class="n">index</span><span class="o">-&gt;...</span>
+</pre></div>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DIM</strong> – If set to &gt;0, it specifies a compile-time fixed dimensionality for the points in the data set, allowing more compiler optimizations. </p></li>
+<li><p><strong>Distance</strong> – The distance metric to use: <a class="reference internal" href="structnanoflann_1_1metric__L1.html#structnanoflann_1_1metric__L1"><span class="std std-ref">nanoflann::metric_L1</span></a>, <a class="reference internal" href="structnanoflann_1_1metric__L2.html#structnanoflann_1_1metric__L2"><span class="std std-ref">nanoflann::metric_L2</span></a>, <a class="reference internal" href="structnanoflann_1_1metric__L2__Simple.html#structnanoflann_1_1metric__L2__Simple"><span class="std std-ref">nanoflann::metric_L2_Simple</span></a>, etc. </p></li>
+<li><p><strong>row_major</strong> – If set to true the rows of the matrix are used as the points, if set to false the columns of the matrix are used as the points. </p></li>
+</ul>
+</dd>
+</dl>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-interface-expected-by-kdtreesingleindexadaptor">Interface expected by KDTreeSingleIndexAdaptor</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9nanoflann24KDTreeEigenMatrixAdaptor7derivedEv">
+<span id="_CPPv3NK9nanoflann24KDTreeEigenMatrixAdaptor7derivedEv"></span><span id="_CPPv2NK9nanoflann24KDTreeEigenMatrixAdaptor7derivedEv"></span><span id="nanoflann::KDTreeEigenMatrixAdaptor::derivedC"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a05b6513444ef85fee0dc67b1cf9a70c9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6self_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::self_t"><span class="n"><span class="pre">self_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">derived</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9nanoflann24KDTreeEigenMatrixAdaptor7derivedEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor7derivedEv">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor7derivedEv"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor7derivedEv"></span><span id="nanoflann::KDTreeEigenMatrixAdaptor::derived"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1aef432711718fcf42884dd29d8708cc02"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6self_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::self_t"><span class="n"><span class="pre">self_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">derived</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor7derivedEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9nanoflann24KDTreeEigenMatrixAdaptor22kdtree_get_point_countEv">
+<span id="_CPPv3NK9nanoflann24KDTreeEigenMatrixAdaptor22kdtree_get_point_countEv"></span><span id="_CPPv2NK9nanoflann24KDTreeEigenMatrixAdaptor22kdtree_get_point_countEv"></span><span id="nanoflann::KDTreeEigenMatrixAdaptor::kdtree_get_point_countC"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a4917a1763ea83c4ba4ed6ce6a799b5f1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor4SizeE" title="nanoflann::KDTreeEigenMatrixAdaptor::Size"><span class="n"><span class="pre">Size</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kdtree_get_point_count</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9nanoflann24KDTreeEigenMatrixAdaptor22kdtree_get_point_countEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9nanoflann24KDTreeEigenMatrixAdaptor13kdtree_get_ptEK9IndexType6size_t">
+<span id="_CPPv3NK9nanoflann24KDTreeEigenMatrixAdaptor13kdtree_get_ptEK9IndexType6size_t"></span><span id="_CPPv2NK9nanoflann24KDTreeEigenMatrixAdaptor13kdtree_get_ptEK9IndexType6size_t"></span><span id="nanoflann::KDTreeEigenMatrixAdaptor::kdtree_get_pt__IndexTypeC.sC"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a39bd0881011a5999cf35d1e119038dc8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor5num_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::num_t"><span class="n"><span class="pre">num_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kdtree_get_pt</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor9IndexTypeE" title="nanoflann::KDTreeEigenMatrixAdaptor::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">idx</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9nanoflann24KDTreeEigenMatrixAdaptor13kdtree_get_ptEK9IndexType6size_t" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK9nanoflann24KDTreeEigenMatrixAdaptor15kdtree_get_bboxEbR4BBOX">
+<span id="_CPPv3I0ENK9nanoflann24KDTreeEigenMatrixAdaptor15kdtree_get_bboxER4BBOX"></span><span id="_CPPv2I0ENK9nanoflann24KDTreeEigenMatrixAdaptor15kdtree_get_bboxER4BBOX"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BBOX</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a7c92b544c47749c63ce228e885a4cba9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kdtree_get_bbox</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0ENK9nanoflann24KDTreeEigenMatrixAdaptor15kdtree_get_bboxEbR4BBOX" title="nanoflann::KDTreeEigenMatrixAdaptor::kdtree_get_bbox::BBOX"><span class="n"><span class="pre">BBOX</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK9nanoflann24KDTreeEigenMatrixAdaptor15kdtree_get_bboxEbR4BBOX" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6self_tE">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor6self_tE"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor6self_tE"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1affb5885085015a7a06915d2c895dec1d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">self_t</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor"><span class="n"><span class="pre">KDTreeEigenMatrixAdaptor</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::MatrixType"><span class="n"><span class="pre">MatrixType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::DIM"><span class="n"><span class="pre">DIM</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::Distance"><span class="n"><span class="pre">Distance</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::row_major"><span class="n"><span class="pre">row_major</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6self_tE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor5num_tE">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor5num_tE"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor5num_tE"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a30dd9b84ee35c67d50dbdb4c54679baf"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_t</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::MatrixType"><span class="n"><span class="pre">MatrixType</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Scalar</span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor5num_tE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor9IndexTypeE">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor9IndexTypeE"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor9IndexTypeE"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1acf4a5c6b5f552d634a1dd826894d7598"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IndexType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::MatrixType"><span class="n"><span class="pre">MatrixType</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Index</span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor9IndexTypeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor8metric_tE">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor8metric_tE"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor8metric_tE"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a303401ea6a2f96ae9c41979d7c9fe92d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">metric_t</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::Distance"><span class="n"><span class="pre">Distance</span></span></a><span class="p"><span class="pre">::</span></span><span class="k"><span class="pre">template</span></span><span class="w"> </span><span class="n"><span class="pre">traits</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor5num_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::num_t"><span class="n"><span class="pre">num_t</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6self_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::self_t"><span class="n"><span class="pre">self_t</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor9IndexTypeE" title="nanoflann::KDTreeEigenMatrixAdaptor::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">distance_t</span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor8metric_tE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor7index_tE">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor7index_tE"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor7index_tE"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a4f27e1c672443cbe436ffe2ba9d8cc61"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">index_t</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="classnanoflann_1_1KDTreeSingleIndexAdaptor.html#_CPPv4I00_7int32_t0EN9nanoflann24KDTreeSingleIndexAdaptorE" title="nanoflann::KDTreeSingleIndexAdaptor"><span class="n"><span class="pre">KDTreeSingleIndexAdaptor</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor8metric_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::metric_t"><span class="n"><span class="pre">metric_t</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6self_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::self_t"><span class="n"><span class="pre">self_t</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::row_major"><span class="n"><span class="pre">row_major</span></span></a><span class="w"> </span><span class="o"><span class="pre">?</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::MatrixType"><span class="n"><span class="pre">MatrixType</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ColsAtCompileTime</span></span><span class="w"> </span><span class="o"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::MatrixType"><span class="n"><span class="pre">MatrixType</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">RowsAtCompileTime</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor9IndexTypeE" title="nanoflann::KDTreeEigenMatrixAdaptor::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor7index_tE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6OffsetE">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor6OffsetE"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor6OffsetE"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1ae483cd39482dfe3ff90c68143e06d4ba"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Offset</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor7index_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::index_t"><span class="n"><span class="pre">index_t</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Offset</span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6OffsetE" title="Link to this definition"></a><br /></dt>
+<dd><p>The kd-tree index for the user to call its methods as usual with any other FLANN index. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor4SizeE">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor4SizeE"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor4SizeE"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a7bd78966dd8a05f4c69df6f5a52e2023"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Size</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor7index_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::index_t"><span class="n"><span class="pre">index_t</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Size</span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor4SizeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor9DimensionE">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor9DimensionE"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor9DimensionE"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1adf8a885af6cf91c4c522f281fadc7f72"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Dimension</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor7index_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::index_t"><span class="n"><span class="pre">index_t</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Dimension</span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor9DimensionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor24KDTreeEigenMatrixAdaptorEK9DimensionRKNSt17reference_wrapperIK10MatrixTypeEEKi">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor24KDTreeEigenMatrixAdaptorEK9DimensionRKNSt17reference_wrapperIK10MatrixTypeEEKi"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor24KDTreeEigenMatrixAdaptorEK9DimensionRKNSt17reference_wrapperIK10MatrixTypeEEKi"></span><span id="nanoflann::KDTreeEigenMatrixAdaptor::KDTreeEigenMatrixAdaptor__DimensionC.std::reference_wrapper:MatrixTypeC:CR.iC"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a659fac8a19c44741e3d35706f14706ef"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KDTreeEigenMatrixAdaptor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor9DimensionE" title="nanoflann::KDTreeEigenMatrixAdaptor::Dimension"><span class="n"><span class="pre">Dimension</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dimensionality</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">reference_wrapper</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::MatrixType"><span class="n"><span class="pre">MatrixType</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mat</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">leaf_max_size</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor24KDTreeEigenMatrixAdaptorEK9DimensionRKNSt17reference_wrapperIK10MatrixTypeEEKi" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor: takes a const ref to the matrix object with the data points. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor24KDTreeEigenMatrixAdaptorERK6self_t">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor24KDTreeEigenMatrixAdaptorERK6self_t"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor24KDTreeEigenMatrixAdaptorERK6self_t"></span><span id="nanoflann::KDTreeEigenMatrixAdaptor::KDTreeEigenMatrixAdaptor__self_tCR"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a8824b4223eebf63d4e26a594fadaa3e7"></span><span class="sig-name descname"><span class="n"><span class="pre">KDTreeEigenMatrixAdaptor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6self_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::self_t"><span class="n"><span class="pre">self_t</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor24KDTreeEigenMatrixAdaptorERK6self_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Deleted copy constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptorD0Ev">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptorD0Ev"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptorD0Ev"></span><span id="nanoflann::KDTreeEigenMatrixAdaptor::~KDTreeEigenMatrixAdaptor"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1af18c660f6de93e98ef9db9642247a5af"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~KDTreeEigenMatrixAdaptor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptorD0Ev" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9nanoflann24KDTreeEigenMatrixAdaptor5queryEPK5num_tK4SizeP9IndexTypeP5num_t">
+<span id="_CPPv3NK9nanoflann24KDTreeEigenMatrixAdaptor5queryEPK5num_tK4SizeP9IndexTypeP5num_t"></span><span id="_CPPv2NK9nanoflann24KDTreeEigenMatrixAdaptor5queryEPK5num_tK4SizeP9IndexTypeP5num_t"></span><span id="nanoflann::KDTreeEigenMatrixAdaptor::query__num_tCP.SizeC.IndexTypeP.num_tPC"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a1f7a3b7650512181407ef4f659d24577"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">query</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor5num_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::num_t"><span class="n"><span class="pre">num_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">query_point</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor4SizeE" title="nanoflann::KDTreeEigenMatrixAdaptor::Size"><span class="n"><span class="pre">Size</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">num_closest</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor9IndexTypeE" title="nanoflann::KDTreeEigenMatrixAdaptor::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">out_indices</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor5num_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::num_t"><span class="n"><span class="pre">num_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">out_distances</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9nanoflann24KDTreeEigenMatrixAdaptor5queryEPK5num_tK4SizeP9IndexTypeP5num_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Query for the <em>num_closest</em> closest points to a given point (entered as query_point[0:dim-1]). Note that this is a short-cut method for index-&gt;findNeighbors(). The user can also call index-&gt;… methods as desired.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If L2 norms are used, all returned distances are actually squared distances. </p>
+</div>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6index_E">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor6index_E"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor6index_E"></span><span id="nanoflann::KDTreeEigenMatrixAdaptor::index___index_tP"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1ab8483ad70594e45faa8fd98e3c84dc2d"></span><a class="reference internal" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor7index_tE" title="nanoflann::KDTreeEigenMatrixAdaptor::index_t"><span class="n"><span class="pre">index_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">index_</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor6index_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor13m_data_matrixE">
+<span id="_CPPv3N9nanoflann24KDTreeEigenMatrixAdaptor13m_data_matrixE"></span><span id="_CPPv2N9nanoflann24KDTreeEigenMatrixAdaptor13m_data_matrixE"></span><span id="nanoflann::KDTreeEigenMatrixAdaptor::m_data_matrix__std::reference_wrapper:MatrixTypeC:C"></span><span class="target" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a870f0613ab81450221cff60591a81204"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">reference_wrapper</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_7int32_t0_bEN9nanoflann24KDTreeEigenMatrixAdaptorE" title="nanoflann::KDTreeEigenMatrixAdaptor::MatrixType"><span class="n"><span class="pre">MatrixType</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_data_matrix</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann24KDTreeEigenMatrixAdaptor13m_data_matrixE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structnanoflann_1_1KDTreeBaseClass_1_1Node.html" class="btn btn-neutral float-left" title="Struct KDTreeBaseClass::Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structnanoflann_1_1KDTreeSingleIndexAdaptorParams.html" class="btn btn-neutral float-right" title="Struct KDTreeSingleIndexAdaptorParams" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;reactive_algorithms_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

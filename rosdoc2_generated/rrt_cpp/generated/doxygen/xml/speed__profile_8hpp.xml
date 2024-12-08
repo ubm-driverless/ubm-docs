@@ -1,0 +1,826 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="speed__profile_8hpp" kind="file" language="C++">
+    <compoundname>speed_profile.hpp</compoundname>
+    <includes local="no">armadillo</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">list</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">map</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>list</label>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="10">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>armadillo</label>
+      </node>
+      <node id="1">
+        <label>include/rrt_cpp/speed_profile.hpp</label>
+        <link refid="speed__profile_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="speed__profile_8hpp_1a0570f42ba212b500fe9c27afc5bf8de6" prot="public" static="no">
+        <name>ARMA_USE_BLAS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/speed_profile.hpp" line="19" column="9" bodyfile="include/rrt_cpp/speed_profile.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="speed__profile_8hpp_1aab812a38f679f60166dad22f623630b0" prot="public" static="no">
+        <name>ARMA_BLAS_OPENBLAS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/speed_profile.hpp" line="20" column="9" bodyfile="include/rrt_cpp/speed_profile.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="speed__profile_8hpp_1a764f9a9f83755beab38edca9fcdc7c46" prot="public" static="no">
+        <name>ARMA_USE_LAPACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/speed_profile.hpp" line="21" column="9" bodyfile="include/rrt_cpp/speed_profile.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="speed__profile_8hpp_1aa6f62f6f651486ac64571030ea53cd97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; double &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;double&gt; &gt; csv_to_mat</definition>
+        <argsstring>(const string &amp;filename)</argsstring>
+        <name>csv_to_mat</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Read a csv file and create a matrix (vector&lt;vector&lt;double&gt;&gt;) with its contents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the csv file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector&lt;vector&lt;double&gt;&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/speed_profile.hpp" line="32" column="8" declfile="include/rrt_cpp/speed_profile.hpp" declline="32" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="speed__profile_8hpp_1aead580dd40cec5d476a1eaaf210c21e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; extract_column</definition>
+        <argsstring>(const string &amp;filename, const string &amp;column_name)</argsstring>
+        <name>extract_column</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>column_name</declname>
+        </param>
+        <briefdescription>
+<para>Extract a single column for a csv file and return it as a vector&lt;doule&gt;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the csv file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the column to extract. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector&lt;double&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/speed_profile.hpp" line="41" column="8" declfile="include/rrt_cpp/speed_profile.hpp" declline="41" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="speed__profile_8hpp_1a5acaa385b9593ce5ccbef797a093609a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>map&lt; string, string &gt;</type>
+        <definition>map&lt;string, string&gt; parse_raceline_ini</definition>
+        <argsstring>(const string &amp;filename)</argsstring>
+        <name>parse_raceline_ini</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Parse the raceline.ini file and return its parameters as a map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the raceline.ini file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>map&lt;string, string&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/speed_profile.hpp" line="49" column="5" declfile="include/rrt_cpp/speed_profile.hpp" declline="49" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="speed__profile_8hpp_1a96d905a88bd72e193db451cc4d47322a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; float &gt;</type>
+        <definition>vector&lt;float&gt; calc_vel_profile</definition>
+        <argsstring>(const vector&lt; vector&lt; double &gt;&gt; &amp;ax_max_machines, const vector&lt; double &gt; &amp;kappa, const vector&lt; double &gt; &amp;el_lengths, double drag_coeff, double m_veh, const vector&lt; vector&lt; double &gt;&gt; &amp;ggv=vector&lt; vector&lt; double &gt;&gt;(), double v_max=numeric_limits&lt; double &gt;::quiet_NaN(), double dyn_model_exp=1.0, const vector&lt; double &gt; &amp;mu=vector&lt; double &gt;(), double v_start=numeric_limits&lt; double &gt;::quiet_NaN(), double v_end=numeric_limits&lt; double &gt;::quiet_NaN(), int filt_window=0)</argsstring>
+        <name>calc_vel_profile</name>
+        <param>
+          <type>const vector&lt; vector&lt; double &gt;&gt; &amp;</type>
+          <declname>ax_max_machines</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>kappa</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>el_lengths</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>drag_coeff</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m_veh</declname>
+        </param>
+        <param>
+          <type>const vector&lt; vector&lt; double &gt;&gt; &amp;</type>
+          <declname>ggv</declname>
+          <defval>vector&lt; vector&lt; double &gt;&gt;()</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_max</declname>
+          <defval>numeric_limits&lt; double &gt;::quiet_NaN()</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dyn_model_exp</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>mu</declname>
+          <defval>vector&lt; double &gt;()</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_start</declname>
+          <defval>numeric_limits&lt; double &gt;::quiet_NaN()</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_end</declname>
+          <defval>numeric_limits&lt; double &gt;::quiet_NaN()</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>filt_window</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Calculate the speed profile as a vector&lt;float&gt; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ax_max_machines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitudinal acceleration limits by the electrical motors: [vx, ax_max_machines]. Velocity in m/s, accelerations in m/s2. They should be handed in without considering drag resistance, i.e. simply by calculating F_x_drivetrain / m_veh </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kappa</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>curvature profile of given trajectory in rad/m (always unclosed). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>el_lengths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element lengths (distances between coordinates) of given trajectory. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag to set if the velocity profile must be calculated for a closed or unclosed trajectory. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drag_coeff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>drag coefficient including all constants: drag_coeff = 0.5 * c_w * A_front * rho_air </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_veh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vehicle mass in kg. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ggv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ggv-diagram to be applied: [vx, ax_max, ay_max]. Velocity in m/s, accelerations in m/s2. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum longitudinal speed in m/s (optional if ggv is supplied, taking the minimum of the fastest velocities covered by the ggv and ax_max_machines arrays then). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dyn_model_exp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exponent used in the vehicle dynamics model (usual range [1.0,2.0]). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>friction coefficients (always unclosed). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start velocity in m/s (used in unclosed case only). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end velocity in m/s (used in unclosed case only). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filt_window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filter window size for moving average filter (must be odd). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/speed_profile.hpp" line="72" column="8" declfile="include/rrt_cpp/speed_profile.hpp" declline="72" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="speed__profile_8hpp_1a88b02369187dae959eb78c1cc47bf703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double calc_ax_poss</definition>
+        <argsstring>(double vx_start, double radius, const arma::mat &amp;ggv, double mu, double dyn_model_exp, double drag_coeff, double m_veh, const arma::mat &amp;ax_max_machines, const string &amp;mode)</argsstring>
+        <name>calc_ax_poss</name>
+        <param>
+          <type>double</type>
+          <declname>vx_start</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>ggv</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dyn_model_exp</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>drag_coeff</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m_veh</declname>
+        </param>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>ax_max_machines</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Not to be called outside of the speed profile source code. Calculate the possible acceleration for a point in the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vx_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current velocity of the point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current curvature of the point in radii </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ggv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ggv profile </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>friction coefficients </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dyn_model_exp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exponent used in the vehicle dynamics model </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drag_coeff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>drag coefficient </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_veh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vehicle mass in kg </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ax_max_machines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitudinal acceleration limits by the electrical motors: [vx, ax_max_machines]. Velocity in m/s, accelerations in m/s2. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>either &quot;accel_forw&quot; for forward calculation or &quot;decel_backw&quot; for backwards calculation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double acceleration </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/speed_profile.hpp" line="101" column="8" declfile="include/rrt_cpp/speed_profile.hpp" declline="101" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="speed__profile_8hpp_1a4f1f4be1bd157a3bd1e7fb27288d6f0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::vec</type>
+        <definition>arma::vec __solver_fb_unclosed</definition>
+        <argsstring>(const arma::cube &amp;p_ggv, const arma::mat &amp;ax_max_machines, double v_max, const arma::vec &amp;radii, const arma::vec &amp;el_lengths, double v_start, double drag_coeff, double m_veh, const string &amp;op_mode, const arma::vec &amp;mu=arma::vec(), double v_end=numeric_limits&lt; double &gt;::quiet_NaN(), double dyn_model_exp=1.0)</argsstring>
+        <name>__solver_fb_unclosed</name>
+        <param>
+          <type>const arma::cube &amp;</type>
+          <declname>p_ggv</declname>
+        </param>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>ax_max_machines</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_max</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>radii</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>el_lengths</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_start</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>drag_coeff</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m_veh</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>op_mode</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>mu</declname>
+          <defval>arma::vec()</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_end</declname>
+          <defval>numeric_limits&lt; double &gt;::quiet_NaN()</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dyn_model_exp</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Not to be called outside of the speed profile source code. Calculate the speed profile of an unclosed section of the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_ggv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ggv-diagram to be applied: [vx, ax_max, ay_max]. Velocity in m/s, accelerations in m/s2. Copied for each point of the raceline. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ax_max_machines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitudinal acceleration limits by the electrical motors: [vx, ax_max_machines]. Velocity in m/s, accelerations in m/s2. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum velocity in m/s. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radii</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>curvature of every point in the raceline in radii. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>el_lengths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenghts of every segment of the raceline. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the velocity of the first point in the raceline. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drag_coeff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>drag coefficients. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_veh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vehicle mass in kg. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>op_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>should always be &quot;ggv&quot;. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>friction coefficients. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>velocity of the last point in the raceline. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dyn_model_exp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exponent used in the vehicle dynamics model. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>arma::vec the speed profile. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/speed_profile.hpp" line="130" column="11" declfile="include/rrt_cpp/speed_profile.hpp" declline="130" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="speed__profile_8hpp_1aca3bd2ad467e2fecea480c84b61d3ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::vec</type>
+        <definition>arma::vec __solver_fb_acc_profile</definition>
+        <argsstring>(const arma::cube &amp;p_ggv, const arma::mat &amp;ax_max_machines, double v_max, const arma::vec &amp;radii, const arma::vec &amp;el_lengths, const arma::vec &amp;mu, arma::vec &amp;vx_profile, double drag_coeff, double m_veh, double dyn_model_exp=1.0, bool backwards=false)</argsstring>
+        <name>__solver_fb_acc_profile</name>
+        <param>
+          <type>const arma::cube &amp;</type>
+          <declname>p_ggv</declname>
+        </param>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>ax_max_machines</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_max</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>radii</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>el_lengths</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>arma::vec &amp;</type>
+          <declname>vx_profile</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>drag_coeff</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m_veh</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dyn_model_exp</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>backwards</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Not to be called outside of the speed profile source code. Calculate the speed profile of the raceline either by forward acceleration or backwards deceleration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_ggv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ggv-diagram to be applied: [vx, ax_max, ay_max]. Velocity in m/s, accelerations in m/s2. Copied for each point of the raceline. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ax_max_machines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitudinal acceleration limits by the electrical motors: [vx, ax_max_machines]. Velocity in m/s, accelerations in m/s2. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum velocity in m/s. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radii</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>curvature of every point in the raceline in radii. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>el_lengths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenghts of every segment of the raceline. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>friction coefficients. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vx_profile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current velocity profile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drag_coeff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>drag coefficient including all constants: drag_coeff = 0.5 * c_w * A_front * rho_air </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_veh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vehicle mass in kg. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dyn_model_exp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exponent used in the vehicle dynamics model. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>backwards</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true for backwards deceleration, false otherwise. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>arma::vec the speed profile. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/speed_profile.hpp" line="161" column="11" declfile="include/rrt_cpp/speed_profile.hpp" declline="161" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This header file contains the function implementations for calculating the speed profile of an open trajectory. (i.e., start and end points are different) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rrt_cpp/speed_profile.hpp"/>
+  </compounddef>
+</doxygen>

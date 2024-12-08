@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="mean__yaw_8hpp" kind="file" language="C++">
+    <compoundname>mean_yaw.hpp</compoundname>
+    <includes local="no">geos/operation/buffer/OffsetCurve.h</includes>
+    <includes local="no">geos/simplify/DouglasPeuckerLineSimplifier.h</includes>
+    <includes refid="rrt_8hpp" local="no">rrt_cpp/rrt.hpp</includes>
+    <incdepgraph>
+      <node id="14">
+        <label>geos/operation/buffer/BufferParameters.h</label>
+      </node>
+      <node id="5">
+        <label>flann/flann.hpp</label>
+      </node>
+      <node id="10">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="2">
+        <label>geos/operation/buffer/OffsetCurve.h</label>
+      </node>
+      <node id="9">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="3">
+        <label>geos/simplify/DouglasPeuckerLineSimplifier.h</label>
+      </node>
+      <node id="1">
+        <label>include/rrt_cpp/mean_yaw.hpp</label>
+        <link refid="mean__yaw_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>fstream</label>
+      </node>
+      <node id="4">
+        <label>rrt_cpp/rrt.hpp</label>
+        <link refid="rrt_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>random</label>
+      </node>
+      <node id="12">
+        <label>geos/io/WKTReader.h</label>
+      </node>
+      <node id="8">
+        <label>sstream</label>
+      </node>
+      <node id="11">
+        <label>geos.h</label>
+      </node>
+      <node id="13">
+        <label>geos/io/WKTWriter.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mean__yaw_8hpp_1ac225fdfea0d655b0ae39a26273e1fae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rhombus_function</definition>
+        <argsstring>(const CoordinateSequence &amp;windowed_geodesic_coords, const Coordinate &amp;geodesic_coord, const AnyAnglePath &amp;path, const int &amp;idx_closest, const int &amp;idx_anterior_mean_yaw_window, const std::vector&lt; float &gt; &amp;segment_lengths, std::vector&lt; float &gt; &amp;yaws, std::vector&lt; float &gt; &amp;weights)</argsstring>
+        <name>rhombus_function</name>
+        <param>
+          <type>const CoordinateSequence &amp;</type>
+          <declname>windowed_geodesic_coords</declname>
+        </param>
+        <param>
+          <type>const Coordinate &amp;</type>
+          <declname>geodesic_coord</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structAnyAnglePath" kindref="compound">AnyAnglePath</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>idx_closest</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>idx_anterior_mean_yaw_window</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>segment_lengths</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>yaws</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>weights</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/mean_yaw.hpp" line="18" column="6" declfile="include/rrt_cpp/mean_yaw.hpp" declline="18" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="mean__yaw_8hpp_1aa22d082f84c4557e9f25b29ad720f4e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void find_line_equation</definition>
+        <argsstring>(float x1, float y1, float x2, float y2, float &amp;m, float &amp;q)</argsstring>
+        <name>find_line_equation</name>
+        <param>
+          <type>float</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/mean_yaw.hpp" line="27" column="13" bodyfile="include/rrt_cpp/mean_yaw.hpp" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="mean__yaw_8hpp_1af74387c16b74283985c968d207f38212" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float find_x_axis_intersection</definition>
+        <argsstring>(float m, float q)</argsstring>
+        <name>find_x_axis_intersection</name>
+        <param>
+          <type>float</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/mean_yaw.hpp" line="33" column="14" bodyfile="include/rrt_cpp/mean_yaw.hpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="mean__yaw_8hpp_1a0e5619640a3a7525eb560c0518c741b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float find_y_one_intersection</definition>
+        <argsstring>(float m, float q)</argsstring>
+        <name>find_y_one_intersection</name>
+        <param>
+          <type>float</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/mean_yaw.hpp" line="38" column="14" bodyfile="include/rrt_cpp/mean_yaw.hpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="mean__yaw_8hpp_1a784af806dd0918a54f9c2118eb84ccf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void trapezoidal_function</definition>
+        <argsstring>(const CoordinateSequence &amp;windowed_geodesic_coords, const Coordinate &amp;geodesic_coord, const AnyAnglePath &amp;path, const int &amp;idx_closest, const int &amp;idx_anterior_mean_yaw_window, const std::vector&lt; float &gt; &amp;segment_lengths, std::vector&lt; float &gt; &amp;yaws, std::vector&lt; float &gt; &amp;weights)</argsstring>
+        <name>trapezoidal_function</name>
+        <param>
+          <type>const CoordinateSequence &amp;</type>
+          <declname>windowed_geodesic_coords</declname>
+        </param>
+        <param>
+          <type>const Coordinate &amp;</type>
+          <declname>geodesic_coord</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structAnyAnglePath" kindref="compound">AnyAnglePath</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>idx_closest</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>idx_anterior_mean_yaw_window</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>segment_lengths</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>yaws</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>weights</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/mean_yaw.hpp" line="43" column="6" declfile="include/rrt_cpp/mean_yaw.hpp" declline="43" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="mean__yaw_8hpp_1a5feb8d66c15c32fec0d91f8dde86f7dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool found_mean_yaw</definition>
+        <argsstring>(const CoordinateXY &amp;coord, const CoordinateSequence &amp;line_coords, const AnyAnglePath &amp;path, const GeometryFactory &amp;factory, float &amp;mean_yaw, int &amp;idx_closest, geos_t &amp;distance_to_coord)</argsstring>
+        <name>found_mean_yaw</name>
+        <param>
+          <type>const CoordinateXY &amp;</type>
+          <declname>coord</declname>
+        </param>
+        <param>
+          <type>const CoordinateSequence &amp;</type>
+          <declname>line_coords</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structAnyAnglePath" kindref="compound">AnyAnglePath</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const GeometryFactory &amp;</type>
+          <declname>factory</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>mean_yaw</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>idx_closest</declname>
+        </param>
+        <param>
+          <type>geos_t &amp;</type>
+          <declname>distance_to_coord</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When trying to understand this function, see images <computeroutput>junction_zone.svg</computeroutput> and <computeroutput>projection_in_junction_zone.svg</computeroutput> in the <computeroutput>rrt_cpp</computeroutput> package as a reference. Good luck! TODO: add a more detailed explanation <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_coords</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mean_yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/mean_yaw.hpp" line="63" column="6" declfile="include/rrt_cpp/mean_yaw.hpp" declline="63" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This header file contains the functions declarations related to computing the mean yaw of a just sampled point considering the any-angle path. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rrt_cpp/mean_yaw.hpp"/>
+  </compounddef>
+</doxygen>

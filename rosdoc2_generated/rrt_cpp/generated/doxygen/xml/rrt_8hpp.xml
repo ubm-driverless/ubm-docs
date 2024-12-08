@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="rrt_8hpp" kind="file" language="C++">
+    <compoundname>rrt.hpp</compoundname>
+    <includes local="no">flann/flann.hpp</includes>
+    <includes local="no">random</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">rclcpp/logging.hpp</includes>
+    <includes local="no">geos.h</includes>
+    <includes local="no">geos/io/WKTReader.h</includes>
+    <includes local="no">geos/io/WKTWriter.h</includes>
+    <includes local="no">geos/operation/buffer/BufferParameters.h</includes>
+    <includedby refid="mean__yaw_8hpp" local="no">include/rrt_cpp/mean_yaw.hpp</includedby>
+    <includedby refid="nn__search_8hpp" local="no">include/rrt_cpp/nn_search.hpp</includedby>
+    <includedby refid="rrt__node_8hpp" local="no">include/rrt_cpp/rrt_node.hpp</includedby>
+    <includedby refid="steer_8hpp" local="no">include/rrt_cpp/steer.hpp</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>geos/operation/buffer/BufferParameters.h</label>
+      </node>
+      <node id="2">
+        <label>flann/flann.hpp</label>
+      </node>
+      <node id="7">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="6">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="1">
+        <label>include/rrt_cpp/rrt.hpp</label>
+        <link refid="rrt_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>random</label>
+      </node>
+      <node id="9">
+        <label>geos/io/WKTReader.h</label>
+      </node>
+      <node id="5">
+        <label>sstream</label>
+      </node>
+      <node id="8">
+        <label>geos.h</label>
+      </node>
+      <node id="10">
+        <label>geos/io/WKTWriter.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>include/rrt_cpp/steer.hpp</label>
+        <link refid="steer_8hpp"/>
+      </node>
+      <node id="2">
+        <label>include/rrt_cpp/mean_yaw.hpp</label>
+        <link refid="mean__yaw_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/rrt_cpp/rrt.hpp</label>
+        <link refid="rrt_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/rrt_cpp/nn_search.hpp</label>
+        <link refid="nn__search_8hpp"/>
+      </node>
+      <node id="4">
+        <label>include/rrt_cpp/rrt_node.hpp</label>
+        <link refid="rrt__node_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classGP" prot="public">GP</innerclass>
+    <innerclass refid="structAnyAnglePath" prot="public">AnyAnglePath</innerclass>
+    <innerclass refid="structTrajectory" prot="public">Trajectory</innerclass>
+    <innerclass refid="structRRTNode" prot="public">RRTNode</innerclass>
+    <innerclass refid="classAngleOp" prot="public">AngleOp</innerclass>
+    <innernamespace refid="namespacestd_1_1chrono__literals">std::chrono_literals</innernamespace>
+    <innernamespace refid="namespacegeos_1_1io">geos::io</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025" prot="public" static="no">
+        <type>double</type>
+        <definition>using geos_t =  double</definition>
+        <argsstring></argsstring>
+        <name>geos_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="33" column="1" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="rrt_8hpp_1ad364e8dea1dd6563f786cb44e7e1610b" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structTrajectory" kindref="compound">Trajectory</ref> &gt;</type>
+        <definition>using TrajectoryPtr =  std::shared_ptr&lt;Trajectory&gt;</definition>
+        <argsstring></argsstring>
+        <name>TrajectoryPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="346" column="1" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="rrt_8hpp_1ace7f7c015ed500d847ec0cb9fcf12be7" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t ROOT_NODE</definition>
+        <argsstring></argsstring>
+        <name>ROOT_NODE</name>
+        <initializer>= std::numeric_limits&lt;size_t&gt;::max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="36" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rrt_8hpp_1a565a04f5d5bd308aa382c2b3992d812d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void convert_output</definition>
+        <argsstring>(const std::vector&lt; Geometry::Ptr &gt; &amp;geoms, std::string filename)</argsstring>
+        <name>convert_output</name>
+        <param>
+          <type>const std::vector&lt; Geometry::Ptr &gt; &amp;</type>
+          <declname>geoms</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="39" column="6" declfile="include/rrt_cpp/rrt.hpp" declline="39" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This header file contains the general functions, classes and structures used in the Theta*-RRT algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rrt_cpp/rrt.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structnanoflann_1_1L2__Adaptor" kind="struct" language="C++" prot="public">
+    <compoundname>nanoflann::L2_Adaptor</compoundname>
+    <includes local="no">nanoflann.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+      <param>
+        <type>class DataSource</type>
+      </param>
+      <param>
+        <type>typename _DistanceType</type>
+        <defval>T</defval>
+      </param>
+      <param>
+        <type>typename IndexType</type>
+        <defval>uint32_t</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structnanoflann_1_1L2__Adaptor_1a6b5faf67079e9d0ee588c808091869ad" prot="public" static="no">
+        <type>T</type>
+        <definition>using nanoflann::L2_Adaptor&lt; T, DataSource, _DistanceType, IndexType &gt;::ElementType =  T</definition>
+        <argsstring></argsstring>
+        <name>ElementType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="536" column="5" bodyfile="include/nanoflann.hpp" bodystart="536" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structnanoflann_1_1L2__Adaptor_1a0747f02bd9f7d25d9a04bb42250b2964" prot="public" static="no">
+        <type>_DistanceType</type>
+        <definition>using nanoflann::L2_Adaptor&lt; T, DataSource, _DistanceType, IndexType &gt;::DistanceType =  _DistanceType</definition>
+        <argsstring></argsstring>
+        <name>DistanceType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="537" column="5" bodyfile="include/nanoflann.hpp" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnanoflann_1_1L2__Adaptor_1af976595b2ba5fc8ce269dd90ab54dabf" prot="public" static="no" mutable="no">
+        <type>const DataSource &amp;</type>
+        <definition>const DataSource&amp; nanoflann::L2_Adaptor&lt; T, DataSource, _DistanceType, IndexType &gt;::data_source</definition>
+        <argsstring></argsstring>
+        <name>data_source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="539" column="22" bodyfile="include/nanoflann.hpp" bodystart="539" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structnanoflann_1_1L2__Adaptor_1aa993f1f95d30282875cf3b99bb15b584" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nanoflann::L2_Adaptor&lt; T, DataSource, _DistanceType, IndexType &gt;::L2_Adaptor</definition>
+        <argsstring>(const DataSource &amp;_data_source)</argsstring>
+        <name>L2_Adaptor</name>
+        <param>
+          <type>const DataSource &amp;</type>
+          <declname>_data_source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="541" column="5" bodyfile="include/nanoflann.hpp" bodystart="541" bodyend="541"/>
+      </memberdef>
+      <memberdef kind="function" id="structnanoflann_1_1L2__Adaptor_1a6a3a2e26a05436d50a9aec206a6c35a9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>DistanceType</type>
+        <definition>DistanceType nanoflann::L2_Adaptor&lt; T, DataSource, _DistanceType, IndexType &gt;::evalMetric</definition>
+        <argsstring>(const T *a, const IndexType b_idx, size_t size, DistanceType worst_dist=-1) const</argsstring>
+        <name>evalMetric</name>
+        <param>
+          <type>const T *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const IndexType</type>
+          <declname>b_idx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>DistanceType</type>
+          <declname>worst_dist</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="543" column="18" bodyfile="include/nanoflann.hpp" bodystart="543" bodyend="577"/>
+      </memberdef>
+      <memberdef kind="function" id="structnanoflann_1_1L2__Adaptor_1a1240de71b18537570347efb44ab89afc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type>DistanceType</type>
+        <definition>DistanceType nanoflann::L2_Adaptor&lt; T, DataSource, _DistanceType, IndexType &gt;::accum_dist</definition>
+        <argsstring>(const U a, const V b, const size_t) const</argsstring>
+        <name>accum_dist</name>
+        <param>
+          <type>const U</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const V</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const</type>
+          <declname>size_t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="580" column="18" bodyfile="include/nanoflann.hpp" bodystart="580" bodyend="583"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><bold>Squared</bold> Euclidean distance functor (generic version, optimized for high-dimensionality data sets). Corresponding distance traits: <ref refid="structnanoflann_1_1metric__L2" kindref="compound">nanoflann::metric_L2</ref></para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the elements (e.g. double, float, uint8_t) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>DataSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source of the data, i.e. where the vectors are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_DistanceType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of distance variables (must be signed) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IndexType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the arguments with which the data can be accessed (e.g. float, double, int64_t, T*) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="include/nanoflann.hpp" line="535" column="1" bodyfile="include/nanoflann.hpp" bodystart="534" bodyend="584"/>
+    <listofallmembers>
+      <member refid="structnanoflann_1_1L2__Adaptor_1a1240de71b18537570347efb44ab89afc" prot="public" virt="non-virtual"><scope>nanoflann::L2_Adaptor</scope><name>accum_dist</name></member>
+      <member refid="structnanoflann_1_1L2__Adaptor_1af976595b2ba5fc8ce269dd90ab54dabf" prot="public" virt="non-virtual"><scope>nanoflann::L2_Adaptor</scope><name>data_source</name></member>
+      <member refid="structnanoflann_1_1L2__Adaptor_1a0747f02bd9f7d25d9a04bb42250b2964" prot="public" virt="non-virtual"><scope>nanoflann::L2_Adaptor</scope><name>DistanceType</name></member>
+      <member refid="structnanoflann_1_1L2__Adaptor_1a6b5faf67079e9d0ee588c808091869ad" prot="public" virt="non-virtual"><scope>nanoflann::L2_Adaptor</scope><name>ElementType</name></member>
+      <member refid="structnanoflann_1_1L2__Adaptor_1a6a3a2e26a05436d50a9aec206a6c35a9" prot="public" virt="non-virtual"><scope>nanoflann::L2_Adaptor</scope><name>evalMetric</name></member>
+      <member refid="structnanoflann_1_1L2__Adaptor_1aa993f1f95d30282875cf3b99bb15b584" prot="public" virt="non-virtual"><scope>nanoflann::L2_Adaptor</scope><name>L2_Adaptor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

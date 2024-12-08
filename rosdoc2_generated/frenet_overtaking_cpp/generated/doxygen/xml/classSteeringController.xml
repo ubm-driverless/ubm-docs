@@ -1,0 +1,526 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classSteeringController" kind="class" language="C++" prot="public">
+    <compoundname>SteeringController</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSteeringController_1a5ad34626cf8588449f31c021d7a677c6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteeringController::WB</definition>
+        <argsstring></argsstring>
+        <name>WB</name>
+        <briefdescription>
+<para>Wheelbase of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="64" column="11" bodyfile="include/steering_controller.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSteeringController_1a9e46fe0891b02c68e480d92b84c10636" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteeringController::MAX_STEER</definition>
+        <argsstring></argsstring>
+        <name>MAX_STEER</name>
+        <briefdescription>
+<para>Maximum allowable steering angle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="65" column="11" bodyfile="include/steering_controller.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSteeringController_1a244d8b2d0e72e08fa3b1f66ec7ea7785" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteeringController::KK_s</definition>
+        <argsstring></argsstring>
+        <name>KK_s</name>
+        <briefdescription>
+<para>Proportional gain for PD controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="66" column="11" bodyfile="include/steering_controller.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSteeringController_1a3da4c74bb609766f772d66df8159c0fb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteeringController::KD_s</definition>
+        <argsstring></argsstring>
+        <name>KD_s</name>
+        <briefdescription>
+<para>Derivative gain for PD controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="67" column="11" bodyfile="include/steering_controller.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSteeringController_1aa5b53b054d05451b4eb23c031bb33a79" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteeringController::MIN_SPEED</definition>
+        <argsstring></argsstring>
+        <name>MIN_SPEED</name>
+        <briefdescription>
+<para>Minimum speed for the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="68" column="11" bodyfile="include/steering_controller.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSteeringController_1a5f8f8e42e169e5264206e8c31a74cb18" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteeringController::MAX_SPEED</definition>
+        <argsstring></argsstring>
+        <name>MAX_SPEED</name>
+        <briefdescription>
+<para>Maximum speed for the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="69" column="11" bodyfile="include/steering_controller.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSteeringController_1aa45e6aed4cd08d7580c7132ee5711201" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteeringController::LINEAR_SPEED_COEFF</definition>
+        <argsstring></argsstring>
+        <name>LINEAR_SPEED_COEFF</name>
+        <briefdescription>
+<para>Coefficient for linear speed calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="70" column="11" bodyfile="include/steering_controller.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSteeringController_1aeb69db638352951a42b0afba25ce1dd1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SteeringController::steer_err_old</definition>
+        <argsstring></argsstring>
+        <name>steer_err_old</name>
+        <briefdescription>
+<para>Previous steering error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="71" column="11" bodyfile="include/steering_controller.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSteeringController_1aeaf032f85ce9b5765db848770956b1a4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SteeringController::derivative</definition>
+        <argsstring></argsstring>
+        <name>derivative</name>
+        <briefdescription>
+<para>Flag to toggle derivative use in PD controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="72" column="10" bodyfile="include/steering_controller.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSteeringController_1aaeb518af85dbdb823dc8d62d9db6021e" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point SteeringController::last_time</definition>
+        <argsstring></argsstring>
+        <name>last_time</name>
+        <briefdescription>
+<para>Last recorded time for PD controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="73" column="52" bodyfile="include/steering_controller.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSteeringController_1abf69e6cc951d8a18f6ab7418826c7b5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SteeringController::SteeringController</definition>
+        <argsstring>(float wb=0.32, float max_steer=0.38, float kk_s=0.8, float kd_s=0.04, float min_speed=0.0, float max_speed=1.0)</argsstring>
+        <name>SteeringController</name>
+        <param>
+          <type>float</type>
+          <declname>wb</declname>
+          <defval>0.32</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_steer</declname>
+          <defval>0.38</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>kk_s</declname>
+          <defval>0.8</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>kd_s</declname>
+          <defval>0.04</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>min_speed</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_speed</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for the steering_controller class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wheelbase of the vehicle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_steer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum steering angle (in radians) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kk_s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Proportional gain for PD controller </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kd_s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Derivative gain for PD controller </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="16" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classSteeringController_1a73689d9a002a82afce57a74ff94431ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SteeringController::heading_error</definition>
+        <argsstring>(float xc, float yc, float yawc, float la_x, float la_y)</argsstring>
+        <name>heading_error</name>
+        <param>
+          <type>float</type>
+          <declname>xc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yawc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>la_x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>la_y</declname>
+        </param>
+        <briefdescription>
+<para>Heading error calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current x position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current y position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yawc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current yaw angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>la_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Look-ahead x position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>la_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Look-ahead y position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float Heading error in radians </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="28" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classSteeringController_1a3bc73c629f8e0addb6ebe6dcd6336a18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SteeringController::pd_controller</definition>
+        <argsstring>(float xc, float yc, float yawc, float la_x, float la_y)</argsstring>
+        <name>pd_controller</name>
+        <param>
+          <type>float</type>
+          <declname>xc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yawc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>la_x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>la_y</declname>
+        </param>
+        <briefdescription>
+<para>PD controller for steering. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current x position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current y position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yawc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current yaw angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>la_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Look-ahead x position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>la_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Look-ahead y position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float Calculated steering angle in radians </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="40" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classSteeringController_1ad8cb18fdc38a4535d0d17f514f4ac2fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SteeringController::geometric_controller</definition>
+        <argsstring>(float xc, float yc, float yawc, float la_x, float la_y, float look_ahead_distance)</argsstring>
+        <name>geometric_controller</name>
+        <param>
+          <type>float</type>
+          <declname>xc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yawc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>la_x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>la_y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>look_ahead_distance</declname>
+        </param>
+        <briefdescription>
+<para>Pure pursuit-based steering control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current x position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current y position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yawc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current yaw angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>la_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Look-ahead x position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>la_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Look-ahead y position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>look_ahead_distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Look-ahead distance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float Calculated steering angle in radians </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="53" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classSteeringController_1adbb33287ffaf77d53d35f3d6757bc32c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SteeringController::speed_given_steering</definition>
+        <argsstring>(float steering_angle)</argsstring>
+        <name>speed_given_steering</name>
+        <param>
+          <type>float</type>
+          <declname>steering_angle</declname>
+        </param>
+        <briefdescription>
+<para>Speed control based on steering angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Steering angle in radians </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float Calculated speed for the vehicle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="61" column="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/steering_controller.hpp" line="6" column="25" bodyfile="include/steering_controller.hpp" bodystart="6" bodyend="74"/>
+    <listofallmembers>
+      <member refid="classSteeringController_1aeaf032f85ce9b5765db848770956b1a4" prot="private" virt="non-virtual"><scope>SteeringController</scope><name>derivative</name></member>
+      <member refid="classSteeringController_1ad8cb18fdc38a4535d0d17f514f4ac2fd" prot="public" virt="non-virtual"><scope>SteeringController</scope><name>geometric_controller</name></member>
+      <member refid="classSteeringController_1a73689d9a002a82afce57a74ff94431ec" prot="public" virt="non-virtual"><scope>SteeringController</scope><name>heading_error</name></member>
+      <member refid="classSteeringController_1a3da4c74bb609766f772d66df8159c0fb" prot="private" virt="non-virtual"><scope>SteeringController</scope><name>KD_s</name></member>
+      <member refid="classSteeringController_1a244d8b2d0e72e08fa3b1f66ec7ea7785" prot="private" virt="non-virtual"><scope>SteeringController</scope><name>KK_s</name></member>
+      <member refid="classSteeringController_1aaeb518af85dbdb823dc8d62d9db6021e" prot="private" virt="non-virtual"><scope>SteeringController</scope><name>last_time</name></member>
+      <member refid="classSteeringController_1aa45e6aed4cd08d7580c7132ee5711201" prot="private" virt="non-virtual"><scope>SteeringController</scope><name>LINEAR_SPEED_COEFF</name></member>
+      <member refid="classSteeringController_1a5f8f8e42e169e5264206e8c31a74cb18" prot="private" virt="non-virtual"><scope>SteeringController</scope><name>MAX_SPEED</name></member>
+      <member refid="classSteeringController_1a9e46fe0891b02c68e480d92b84c10636" prot="private" virt="non-virtual"><scope>SteeringController</scope><name>MAX_STEER</name></member>
+      <member refid="classSteeringController_1aa5b53b054d05451b4eb23c031bb33a79" prot="private" virt="non-virtual"><scope>SteeringController</scope><name>MIN_SPEED</name></member>
+      <member refid="classSteeringController_1a3bc73c629f8e0addb6ebe6dcd6336a18" prot="public" virt="non-virtual"><scope>SteeringController</scope><name>pd_controller</name></member>
+      <member refid="classSteeringController_1adbb33287ffaf77d53d35f3d6757bc32c" prot="public" virt="non-virtual"><scope>SteeringController</scope><name>speed_given_steering</name></member>
+      <member refid="classSteeringController_1aeb69db638352951a42b0afba25ce1dd1" prot="private" virt="non-virtual"><scope>SteeringController</scope><name>steer_err_old</name></member>
+      <member refid="classSteeringController_1abf69e6cc951d8a18f6ab7418826c7b5e" prot="public" virt="non-virtual"><scope>SteeringController</scope><name>SteeringController</name></member>
+      <member refid="classSteeringController_1a5ad34626cf8588449f31c021d7a677c6" prot="private" virt="non-virtual"><scope>SteeringController</scope><name>WB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structnanoflann_1_1ResultItem" kind="struct" language="C++" prot="public">
+    <compoundname>nanoflann::ResultItem</compoundname>
+    <includes local="no">nanoflann.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename IndexType</type>
+        <defval>size_t</defval>
+      </param>
+      <param>
+        <type>typename DistanceType</type>
+        <defval>double</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnanoflann_1_1ResultItem_1af0bde6901f6c26b99a8c67212cc41ddc" prot="public" static="no" mutable="no">
+        <type>IndexType</type>
+        <definition>IndexType nanoflann::ResultItem&lt; IndexType, DistanceType &gt;::first</definition>
+        <argsstring></argsstring>
+        <name>first</name>
+        <briefdescription>
+<para>Index of the sample in the dataset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="354" column="18" bodyfile="include/nanoflann.hpp" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnanoflann_1_1ResultItem_1a131d4fc59d80dc1bd0a509f6258889df" prot="public" static="no" mutable="no">
+        <type>DistanceType</type>
+        <definition>DistanceType nanoflann::ResultItem&lt; IndexType, DistanceType &gt;::second</definition>
+        <argsstring></argsstring>
+        <name>second</name>
+        <briefdescription>
+<para>Distance from sample to query point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="355" column="18" bodyfile="include/nanoflann.hpp" bodystart="355" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structnanoflann_1_1ResultItem_1a2ecdd45164fbde06dfed99ecd806c131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nanoflann::ResultItem&lt; IndexType, DistanceType &gt;::ResultItem</definition>
+        <argsstring>()=default</argsstring>
+        <name>ResultItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="348" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structnanoflann_1_1ResultItem_1a41ff8a6fce5409ff8ac55cedfba3c0e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nanoflann::ResultItem&lt; IndexType, DistanceType &gt;::ResultItem</definition>
+        <argsstring>(const IndexType index, const DistanceType distance)</argsstring>
+        <name>ResultItem</name>
+        <param>
+          <type>const IndexType</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const DistanceType</type>
+          <declname>distance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="349" column="5" bodyfile="include/nanoflann.hpp" bodystart="349" bodyend="352"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Each result element in <ref refid="classnanoflann_1_1RadiusResultSet" kindref="compound">RadiusResultSet</ref>. Note that distances and indices are named <computeroutput>first</computeroutput> and <computeroutput>second</computeroutput> to keep backward-compatibility with the <computeroutput>std::pair&lt;&gt;</computeroutput> type used in the past. In contrast, this structure is ensured to be <computeroutput>std::is_standard_layout</computeroutput> so it can be used in wrappers to other languages. See: <ulink url="https://github.com/jlblancoc/nanoflann/issues/166">https://github.com/jlblancoc/nanoflann/issues/166</ulink> </para>
+    </detaileddescription>
+    <location file="include/nanoflann.hpp" line="347" column="1" bodyfile="include/nanoflann.hpp" bodystart="346" bodyend="356"/>
+    <listofallmembers>
+      <member refid="structnanoflann_1_1ResultItem_1af0bde6901f6c26b99a8c67212cc41ddc" prot="public" virt="non-virtual"><scope>nanoflann::ResultItem</scope><name>first</name></member>
+      <member refid="structnanoflann_1_1ResultItem_1a2ecdd45164fbde06dfed99ecd806c131" prot="public" virt="non-virtual"><scope>nanoflann::ResultItem</scope><name>ResultItem</name></member>
+      <member refid="structnanoflann_1_1ResultItem_1a41ff8a6fce5409ff8ac55cedfba3c0e3" prot="public" virt="non-virtual"><scope>nanoflann::ResultItem</scope><name>ResultItem</name></member>
+      <member refid="structnanoflann_1_1ResultItem_1a131d4fc59d80dc1bd0a509f6258889df" prot="public" virt="non-virtual"><scope>nanoflann::ResultItem</scope><name>second</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

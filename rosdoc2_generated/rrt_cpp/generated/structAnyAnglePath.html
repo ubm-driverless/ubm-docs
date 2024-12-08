@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struct AnyAnglePath &mdash; rrt_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct RRTNode" href="structRRTNode.html" />
+    <link rel="prev" title="Namespace std::chrono_literals" href="namespace_std__chrono_literals.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            rrt_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_geos__io.html">Namespace geos::io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_std.html">Namespace std</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_std__chrono_literals.html">Namespace std::chrono_literals</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Struct AnyAnglePath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structRRTNode.html">Struct RRTNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structstd_1_1hash_3_01std_1_1tuple_3_01int_00_01int_01_4_01_4.html">Template Struct hash&lt; std::tuple&lt; int, int &gt; &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structTrajectory.html">Struct Trajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classAngleOp.html">Class AngleOp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classGP.html">Class GP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRRTMainNode.html">Class RRTMainNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThetaStar.html">Class ThetaStar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThetaStar_1_1Comparator.html">Class ThetaStar::Comparator</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1aca3bd2ad467e2fecea480c84b61d3ae6.html">Function __solver_fb_acc_profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a4f1f4be1bd157a3bd1e7fb27288d6f0f.html">Function __solver_fb_unclosed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_nn__search_8hpp_1a9b20cb03117e97499d09adf559ddfeb2.html">Function add_point_to_flann_tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a88b02369187dae959eb78c1cc47bf703.html">Function calc_ax_poss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a96d905a88bd72e193db451cc4d47322a.html">Function calc_vel_profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_curvature_8hpp_1a61d67ea7567e4d8a306ff4906924a6cf.html">Function compute_curvature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1abc32c0bf92e8134c7caf0acd0c77fdaf.html">Function compute_geodesic_distance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_rrt_8hpp_1a565a04f5d5bd308aa382c2b3992d812d.html">Function convert_output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1aa6f62f6f651486ac64571030ea53cd97.html">Function csv_to_mat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1aead580dd40cec5d476a1eaaf210c21e2.html">Function extract_column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1aa22d082f84c4557e9f25b29ad720f4e1.html">Function find_line_equation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1af74387c16b74283985c968d207f38212.html">Function find_x_axis_intersection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1a0e5619640a3a7525eb560c0518c741b5.html">Function find_y_one_intersection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1a28b05e89eb0ec086ec7bfb67bd707cde.html">Function found_best_x_near</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1a5feb8d66c15c32fec0d91f8dde86f7dd.html">Function found_mean_yaw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1aaf0a4f3ee9708f06cc01a6d65ab952d3.html">Function found_trajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_curvature_8hpp_1a8dad529e41af758658e1b8b978f8c55b.html">Function gradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_nn__search_8hpp_1a3d9d0e3d4904592004e921f6451480e3.html">Function is_already_inserted_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_nn__search_8hpp_1a7b2c55711253364d25a51c7a59bd25bc.html">Function is_already_inserted_xy_flann_tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a5acaa385b9593ce5ccbef797a093609a.html">Function parse_raceline_ini</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1a645dae98c1bee6221a0fe6de1af556c8.html">Function posq</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1ac225fdfea0d655b0ae39a26273e1fae0.html">Function rhombus_function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1a784af806dd0918a54f9c2118eb84ccf1.html">Function trapezoidal_function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="variable_rrt_8hpp_1ace7f7c015ed500d847ec0cb9fcf12be7.html">Variable ROOT_NODE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define_speed__profile_8hpp_1aab812a38f679f60166dad22f623630b0.html">Define ARMA_BLAS_OPENBLAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_speed__profile_8hpp_1a0570f42ba212b500fe9c27afc5bf8de6.html">Define ARMA_USE_BLAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_speed__profile_8hpp_1a764f9a9f83755beab38edca9fcdc7c46.html">Define ARMA_USE_LAPACK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_theta__star_8hpp_1a2760ab432671ac84142ffc272acd5180.html">Define NULL_PARENT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_theta__star_8hpp_1a217ad8485de2dcca79110f37d4da9688.html">Define OCCUPIED</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html">Typedef geos_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_rrt_8hpp_1ad364e8dea1dd6563f786cb44e7e1610b.html">Typedef TrajectoryPtr</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_rrt_cpp.html">Directory rrt_cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_curvature.hpp.html">File curvature.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_mean_yaw.hpp.html">File mean_yaw.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_nn_search.hpp.html">File nn_search.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_rrt.hpp.html">File rrt.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_rrt_node.hpp.html">File rrt_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_speed_profile.hpp.html">File speed_profile.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_steer.hpp.html">File steer.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_theta_star.hpp.html">File theta_star.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">rrt_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Struct AnyAnglePath</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/structAnyAnglePath.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-anyanglepath">
+<span id="exhale-struct-structanyanglepath"></span><h1>Struct AnyAnglePath<a class="headerlink" href="#struct-anyanglepath" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_rrt_cpp_rrt.hpp.html#file-include-rrt-cpp-rrt-hpp"><span class="std std-ref">File rrt.hpp</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv412AnyAnglePath">
+<span id="_CPPv312AnyAnglePath"></span><span id="_CPPv212AnyAnglePath"></span><span id="AnyAnglePath"></span><span class="target" id="structAnyAnglePath"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AnyAnglePath</span></span></span><a class="headerlink" href="#_CPPv412AnyAnglePath" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath3PtrE">
+<span id="_CPPv3N12AnyAnglePath3PtrE"></span><span id="_CPPv2N12AnyAnglePath3PtrE"></span><span class="target" id="structAnyAnglePath_1a59e7def7e0783ff8fc512347d9c44500"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Ptr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv412AnyAnglePath" title="AnyAnglePath"><span class="n"><span class="pre">AnyAnglePath</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N12AnyAnglePath3PtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK12AnyAnglePath8pts_sizeEv">
+<span id="_CPPv3NK12AnyAnglePath8pts_sizeEv"></span><span id="_CPPv2NK12AnyAnglePath8pts_sizeEv"></span><span id="AnyAnglePath::pts_sizeC"></span><span class="target" id="structAnyAnglePath_1acbb98f458e64d79ec482ae5bf2aafdd1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pts_size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK12AnyAnglePath8pts_sizeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the number of points in the path. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Use <code class="docutils literal notranslate"><a class="reference internal" href="#structAnyAnglePath_1a8732daa586c96c6146ad2ff1207a880d"><span class="std std-ref"><span class="pre">sgms_size()</span></span></a></code> instead to get the number of points in the path. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK12AnyAnglePath9sgms_sizeEv">
+<span id="_CPPv3NK12AnyAnglePath9sgms_sizeEv"></span><span id="_CPPv2NK12AnyAnglePath9sgms_sizeEv"></span><span id="AnyAnglePath::sgms_sizeC"></span><span class="target" id="structAnyAnglePath_1a8732daa586c96c6146ad2ff1207a880d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sgms_size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK12AnyAnglePath9sgms_sizeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the number of segments in the path. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Use <code class="docutils literal notranslate"><a class="reference internal" href="#structAnyAnglePath_1acbb98f458e64d79ec482ae5bf2aafdd1"><span class="std std-ref"><span class="pre">pts_size()</span></span></a></code> instead to get the number of points in the path. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath12AnyAnglePathERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorIfEERKfRKf">
+<span id="_CPPv3N12AnyAnglePath12AnyAnglePathERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorIfEERKfRKf"></span><span id="_CPPv2N12AnyAnglePath12AnyAnglePathERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorIfEERKfRKf"></span><span id="AnyAnglePath::AnyAnglePath__std::vector:geos_t:CR.std::vector:geos_t:CR.std::vector:geos_t:CR.std::vector:float:CR.floatCR.floatCR"></span><span class="target" id="structAnyAnglePath_1a84666447269072a981f4892ac262b991"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AnyAnglePath</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">x</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">y</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">segment_length</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">yaw</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">initial_yaw</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">final_yaw</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12AnyAnglePath12AnyAnglePathERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorIfEERKfRKf" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath1xE">
+<span id="_CPPv3N12AnyAnglePath1xE"></span><span id="_CPPv2N12AnyAnglePath1xE"></span><span id="AnyAnglePath::x__std::vector:geos_t:"></span><span class="target" id="structAnyAnglePath_1abbe66a0cc472f5c10867ab8708431cc4"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><a class="headerlink" href="#_CPPv4N12AnyAnglePath1xE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath1yE">
+<span id="_CPPv3N12AnyAnglePath1yE"></span><span id="_CPPv2N12AnyAnglePath1yE"></span><span id="AnyAnglePath::y__std::vector:geos_t:"></span><span class="target" id="structAnyAnglePath_1a76ccde7335a64422231498cc845cb2c2"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">y</span></span></span><a class="headerlink" href="#_CPPv4N12AnyAnglePath1yE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath14segment_lengthE">
+<span id="_CPPv3N12AnyAnglePath14segment_lengthE"></span><span id="_CPPv2N12AnyAnglePath14segment_lengthE"></span><span id="AnyAnglePath::segment_length__std::vector:geos_t:"></span><span class="target" id="structAnyAnglePath_1ae8532ef59cb4dbba6cc7cf134fac69bc"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">segment_length</span></span></span><a class="headerlink" href="#_CPPv4N12AnyAnglePath14segment_lengthE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath3yawE">
+<span id="_CPPv3N12AnyAnglePath3yawE"></span><span id="_CPPv2N12AnyAnglePath3yawE"></span><span id="AnyAnglePath::yaw__std::vector:float:"></span><span class="target" id="structAnyAnglePath_1a2580bbf1a3e3d367cdee3d1c3f67b823"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">yaw</span></span></span><a class="headerlink" href="#_CPPv4N12AnyAnglePath3yawE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath11initial_yawE">
+<span id="_CPPv3N12AnyAnglePath11initial_yawE"></span><span id="_CPPv2N12AnyAnglePath11initial_yawE"></span><span id="AnyAnglePath::initial_yaw__float"></span><span class="target" id="structAnyAnglePath_1a828265ba0951e7818dbbd7721dbff9b9"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initial_yaw</span></span></span><a class="headerlink" href="#_CPPv4N12AnyAnglePath11initial_yawE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath9final_yawE">
+<span id="_CPPv3N12AnyAnglePath9final_yawE"></span><span id="_CPPv2N12AnyAnglePath9final_yawE"></span><span id="AnyAnglePath::final_yaw__float"></span><span class="target" id="structAnyAnglePath_1a60be90a8c8bbdaab0b4dc548e1c3aefb"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">final_yaw</span></span></span><a class="headerlink" href="#_CPPv4N12AnyAnglePath9final_yawE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath6createERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorIfEERKfRKf">
+<span id="_CPPv3N12AnyAnglePath6createERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorIfEERKfRKf"></span><span id="_CPPv2N12AnyAnglePath6createERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorIfEERKfRKf"></span><span id="AnyAnglePath::create__std::vector:geos_t:CR.std::vector:geos_t:CR.std::vector:geos_t:CR.std::vector:float:CR.floatCR.floatCR"></span><span class="target" id="structAnyAnglePath_1ad41d273fbb071ea97484a152eb30a4f4"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv412AnyAnglePath" title="AnyAnglePath"><span class="n"><span class="pre">AnyAnglePath</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N12AnyAnglePath3PtrE" title="AnyAnglePath::Ptr"><span class="n"><span class="pre">Ptr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">x</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">y</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">segment_length</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">yaw</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">initial_yaw</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">final_yaw</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12AnyAnglePath6createERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorI6geos_tEERKNSt6vectorIfEERKfRKf" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath25process_theta_star_outputERKNSt4listINSt5tupleIiiEEEERKfRKf">
+<span id="_CPPv3N12AnyAnglePath25process_theta_star_outputERKNSt4listINSt5tupleIiiEEEERKfRKf"></span><span id="_CPPv2N12AnyAnglePath25process_theta_star_outputERKNSt4listINSt5tupleIiiEEEERKfRKf"></span><span id="AnyAnglePath::process_theta_star_output__std::list:std::tuple:i.i::CR.floatCR.floatCR"></span><span class="target" id="structAnyAnglePath_1a56b795705c809c7ecf6dadc65ee9d553"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv412AnyAnglePath" title="AnyAnglePath"><span class="n"><span class="pre">AnyAnglePath</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N12AnyAnglePath3PtrE" title="AnyAnglePath::Ptr"><span class="n"><span class="pre">Ptr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">process_theta_star_output</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">list</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">initial_yaw</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">final_yaw</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12AnyAnglePath25process_theta_star_outputERKNSt4listINSt5tupleIiiEEEERKfRKf" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePath25process_theta_star_outputERKNSt4listINSt5tupleIffEEEERKfRKf">
+<span id="_CPPv3N12AnyAnglePath25process_theta_star_outputERKNSt4listINSt5tupleIffEEEERKfRKf"></span><span id="_CPPv2N12AnyAnglePath25process_theta_star_outputERKNSt4listINSt5tupleIffEEEERKfRKf"></span><span id="AnyAnglePath::process_theta_star_output__std::list:std::tuple:float.float::CR.floatCR.floatCR"></span><span class="target" id="structAnyAnglePath_1a59e783d2e7c1595a071a1066ab0f93a0"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv412AnyAnglePath" title="AnyAnglePath"><span class="n"><span class="pre">AnyAnglePath</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N12AnyAnglePath3PtrE" title="AnyAnglePath::Ptr"><span class="n"><span class="pre">Ptr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">process_theta_star_output</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">list</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">initial_yaw</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">final_yaw</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12AnyAnglePath25process_theta_star_outputERKNSt4listINSt5tupleIffEEEERKfRKf" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12AnyAnglePathlsERNSt7ostreamERK12AnyAnglePath">
+<span id="_CPPv3N12AnyAnglePathlsERNSt7ostreamERK12AnyAnglePath"></span><span id="_CPPv2N12AnyAnglePathlsERNSt7ostreamERK12AnyAnglePath"></span><span id="AnyAnglePath::lshift-operator__osR.AnyAnglePathCR"></span><span class="target" id="structAnyAnglePath_1aa9f0fa78cca37bcffba45264caa877aa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">os</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv412AnyAnglePath" title="AnyAnglePath"><span class="n"><span class="pre">AnyAnglePath</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12AnyAnglePathlsERNSt7ostreamERK12AnyAnglePath" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="namespace_std__chrono_literals.html" class="btn btn-neutral float-left" title="Namespace std::chrono_literals" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structRRTNode.html" class="btn btn-neutral float-right" title="Struct RRTNode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;rrt_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,868 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classnanoflann_1_1KDTreeBaseClass" kind="class" language="C++" prot="public">
+    <compoundname>nanoflann::KDTreeBaseClass</compoundname>
+    <includes local="no">nanoflann.hpp</includes>
+    <innerclass refid="structnanoflann_1_1KDTreeBaseClass_1_1Interval" prot="public">nanoflann::KDTreeBaseClass::Interval</innerclass>
+    <innerclass refid="structnanoflann_1_1KDTreeBaseClass_1_1Node" prot="public">nanoflann::KDTreeBaseClass::Node</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class Derived</type>
+      </param>
+      <param>
+        <type>typename Distance</type>
+      </param>
+      <param>
+        <type>class DatasetAdaptor</type>
+      </param>
+      <param>
+        <type>int32_t</type>
+        <declname>DIM</declname>
+        <defname>DIM</defname>
+        <defval>-1</defval>
+      </param>
+      <param>
+        <type>typename IndexType</type>
+        <defval>uint32_t</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classnanoflann_1_1KDTreeBaseClass_1abe7f0b6d50e50ff7dd26f870e4fcd162" prot="public" static="no">
+        <type>typename Distance::ElementType</type>
+        <definition>using nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::ElementType =  typename Distance::ElementType</definition>
+        <argsstring></argsstring>
+        <name>ElementType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="996" column="5" bodyfile="include/nanoflann.hpp" bodystart="996" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1KDTreeBaseClass_1ad96518e746e611894ef07aadc2a0b737" prot="public" static="no">
+        <type>typename Distance::DistanceType</type>
+        <definition>using nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::DistanceType =  typename Distance::DistanceType</definition>
+        <argsstring></argsstring>
+        <name>DistanceType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="997" column="5" bodyfile="include/nanoflann.hpp" bodystart="997" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1KDTreeBaseClass_1afc202c7075788d7a5ce3d70120265988" prot="public" static="no">
+        <type>typename decltype(<ref refid="classnanoflann_1_1KDTreeBaseClass_1a38367010d4435bb111ded842f512935e" kindref="member">vAcc_</ref>)::size_type</type>
+        <definition>using nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::Offset =  typename decltype(vAcc_)::size_type</definition>
+        <argsstring></argsstring>
+        <name>Offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1004" column="5" bodyfile="include/nanoflann.hpp" bodystart="1004" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1KDTreeBaseClass_1aaca1d6ed26920b3cf194df1d3c871c7d" prot="public" static="no">
+        <type>typename decltype(<ref refid="classnanoflann_1_1KDTreeBaseClass_1a38367010d4435bb111ded842f512935e" kindref="member">vAcc_</ref>)::size_type</type>
+        <definition>using nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::Size =  typename decltype(vAcc_)::size_type</definition>
+        <argsstring></argsstring>
+        <name>Size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1005" column="5" bodyfile="include/nanoflann.hpp" bodystart="1005" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1KDTreeBaseClass_1af53ff4dd81982f82c9b9585f83d403a2" prot="public" static="no">
+        <type>int32_t</type>
+        <definition>using nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::Dimension =  int32_t</definition>
+        <argsstring></argsstring>
+        <name>Dimension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1006" column="5" bodyfile="include/nanoflann.hpp" bodystart="1006" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1KDTreeBaseClass_1adabdd59ff5929f4b0a0f7c214072560d" prot="public" static="no">
+        <type><ref refid="structnanoflann_1_1KDTreeBaseClass_1_1Node" kindref="compound">Node</ref> *</type>
+        <definition>using nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::NodePtr =  Node*</definition>
+        <argsstring></argsstring>
+        <name>NodePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1033" column="5" bodyfile="include/nanoflann.hpp" bodystart="1033" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1KDTreeBaseClass_1a6d819946c8d36af97474ec90d25478d0" prot="public" static="no">
+        <type>const <ref refid="structnanoflann_1_1KDTreeBaseClass_1_1Node" kindref="compound">Node</ref> *</type>
+        <definition>using nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::NodeConstPtr =  const Node*</definition>
+        <argsstring></argsstring>
+        <name>NodeConstPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1034" column="5" bodyfile="include/nanoflann.hpp" bodystart="1034" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1KDTreeBaseClass_1a9f50c8088fa1885155d0ac1f650a8de3" prot="public" static="no">
+        <type>typename <ref refid="structnanoflann_1_1array__or__vector" kindref="compound">array_or_vector</ref>&lt; DIM, <ref refid="structnanoflann_1_1KDTreeBaseClass_1_1Interval" kindref="compound">Interval</ref> &gt;::type</type>
+        <definition>using nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::BoundingBox =  typename array_or_vector&lt;DIM, Interval&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>BoundingBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Define &quot;BoundingBox&quot; as a fixed-size or variable-size container depending on &quot;DIM&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1055" column="5" bodyfile="include/nanoflann.hpp" bodystart="1055" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1KDTreeBaseClass_1a2ccf9b910d39e18090e68ba7c4c988d0" prot="public" static="no">
+        <type>typename <ref refid="structnanoflann_1_1array__or__vector" kindref="compound">array_or_vector</ref>&lt; DIM, DistanceType &gt;::type</type>
+        <definition>using nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::distance_vector_t =  typename array_or_vector&lt;DIM, DistanceType&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>distance_vector_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Define &quot;distance_vector_t&quot; as a fixed-size or variable-size container depending on &quot;DIM&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1059" column="5" bodyfile="include/nanoflann.hpp" bodystart="1059" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classnanoflann_1_1KDTreeBaseClass_1a38367010d4435bb111ded842f512935e" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; IndexType &gt;</type>
+        <definition>std::vector&lt;IndexType&gt; nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::vAcc_</definition>
+        <argsstring></argsstring>
+        <name>vAcc_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array of indices to vectors in the dataset_. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1002" column="17" bodyfile="include/nanoflann.hpp" bodystart="1002" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KDTreeBaseClass_1a0d9f7c2b7fddcc129c7eca50705942a8" prot="public" static="no" mutable="no">
+        <type><ref refid="structnanoflann_1_1KDTreeBaseClass_1_1Node" kindref="compound">NodePtr</ref></type>
+        <definition>NodePtr nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::root_node_</definition>
+        <argsstring></argsstring>
+        <name>root_node_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1041" column="13" bodyfile="include/nanoflann.hpp" bodystart="1041" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KDTreeBaseClass_1a2a9e0c84c47df6f7139b07a9ce96fd6f" prot="public" static="no" mutable="no">
+        <type>Size</type>
+        <definition>Size nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::leaf_max_size_</definition>
+        <argsstring></argsstring>
+        <name>leaf_max_size_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1043" column="10" bodyfile="include/nanoflann.hpp" bodystart="1043" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KDTreeBaseClass_1a9854e4c358710495d906757be54c10a5" prot="public" static="no" mutable="no">
+        <type>Size</type>
+        <definition>Size nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::n_thread_build_</definition>
+        <argsstring></argsstring>
+        <name>n_thread_build_</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Number of thread for concurrent tree build. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1046" column="10" bodyfile="include/nanoflann.hpp" bodystart="1046" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KDTreeBaseClass_1a3a142d37a32622c44c4e065934e364e1" prot="public" static="no" mutable="no">
+        <type>Size</type>
+        <definition>Size nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::size_</definition>
+        <argsstring></argsstring>
+        <name>size_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of current points in the dataset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1048" column="10" bodyfile="include/nanoflann.hpp" bodystart="1048" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KDTreeBaseClass_1a5d1d38994ddd21a55fe08b4d5294bdf0" prot="public" static="no" mutable="no">
+        <type>Size</type>
+        <definition>Size nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::size_at_index_build_</definition>
+        <argsstring></argsstring>
+        <name>size_at_index_build_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of points in the dataset when the index was built. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1050" column="15" bodyfile="include/nanoflann.hpp" bodystart="1050" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KDTreeBaseClass_1aadbe8c77146a8e5b4bcf0a09b9e7f0ca" prot="public" static="no" mutable="no">
+        <type>Dimension</type>
+        <definition>Dimension nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::dim_</definition>
+        <argsstring></argsstring>
+        <name>dim_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Dimensionality of each data point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1051" column="15" bodyfile="include/nanoflann.hpp" bodystart="1051" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KDTreeBaseClass_1a9f89305d43e68ff67d7e42b324ddd2e6" prot="public" static="no" mutable="no">
+        <type><ref refid="classnanoflann_1_1KDTreeBaseClass_1a9f50c8088fa1885155d0ac1f650a8de3" kindref="member">BoundingBox</ref></type>
+        <definition>BoundingBox nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::root_bbox_</definition>
+        <argsstring></argsstring>
+        <name>root_bbox_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The KD-tree used to find neighbours </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1062" column="17" bodyfile="include/nanoflann.hpp" bodystart="1062" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KDTreeBaseClass_1ac42bbd8b3f373b8b70e159c633d32374" prot="public" static="no" mutable="no">
+        <type><ref refid="classnanoflann_1_1PooledAllocator" kindref="compound">PooledAllocator</ref></type>
+        <definition>PooledAllocator nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::pool_</definition>
+        <argsstring></argsstring>
+        <name>pool_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pooled memory allocator.</para>
+<para>Using a pooled memory allocator is more efficient than allocating memory directly when there is a large number small of memory allocations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1071" column="21" bodyfile="include/nanoflann.hpp" bodystart="1071" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1a8a76f366cbbeb7feb8c0d2ecc91c4dcd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::freeIndex</definition>
+        <argsstring>(Derived &amp;obj)</argsstring>
+        <name>freeIndex</name>
+        <param>
+          <type>Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Frees the previously-built index. Automatically called within buildIndex(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="989" column="10" bodyfile="include/nanoflann.hpp" bodystart="989" bodyend="994"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1a87c4cdfb51bc80b902d7b56683b93e91" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Size</type>
+        <definition>Size nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::size</definition>
+        <argsstring>(const Derived &amp;obj) const</argsstring>
+        <name>size</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns number of points in dataset <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1074" column="10" bodyfile="include/nanoflann.hpp" bodystart="1074" bodyend="1074"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1ae524bf674ed5ca1fd6636f8133e6b1c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Size</type>
+        <definition>Size nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::veclen</definition>
+        <argsstring>(const Derived &amp;obj)</argsstring>
+        <name>veclen</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the length of each point in the dataset </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1077" column="10" bodyfile="include/nanoflann.hpp" bodystart="1077" bodyend="1077"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1ae324dc4d48301be5a7b5ff3072603883" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ElementType</type>
+        <definition>ElementType nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::dataset_get</definition>
+        <argsstring>(const Derived &amp;obj, IndexType element, Dimension component) const</argsstring>
+        <name>dataset_get</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>IndexType</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>Dimension</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Helper accessor to the dataset points: </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1080" column="17" bodyfile="include/nanoflann.hpp" bodystart="1080" bodyend="1084"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1a01e8a4ba6f6110969d2768aed4f292b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Size</type>
+        <definition>Size nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::usedMemory</definition>
+        <argsstring>(Derived &amp;obj)</argsstring>
+        <name>usedMemory</name>
+        <param>
+          <type>Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the inde memory usage Returns: memory used by the index </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1090" column="10" bodyfile="include/nanoflann.hpp" bodystart="1090" bodyend="1095"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1a5042b5c322b3455cf6c50e296fdf5955" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::computeMinMax</definition>
+        <argsstring>(const Derived &amp;obj, Offset ind, Size count, Dimension element, ElementType &amp;min_elem, ElementType &amp;max_elem)</argsstring>
+        <name>computeMinMax</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>Offset</type>
+          <declname>ind</declname>
+        </param>
+        <param>
+          <type>Size</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>Dimension</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>ElementType &amp;</type>
+          <declname>min_elem</declname>
+        </param>
+        <param>
+          <type>ElementType &amp;</type>
+          <declname>max_elem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1097" column="10" bodyfile="include/nanoflann.hpp" bodystart="1097" bodyend="1109"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1ac88bb3cfaa0ebfb28ba4da8d8500df4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structnanoflann_1_1KDTreeBaseClass_1_1Node" kindref="compound">NodePtr</ref></type>
+        <definition>NodePtr nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::divideTree</definition>
+        <argsstring>(Derived &amp;obj, const Offset left, const Offset right, BoundingBox &amp;bbox)</argsstring>
+        <name>divideTree</name>
+        <param>
+          <type>Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const Offset</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const Offset</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type><ref refid="classnanoflann_1_1KDTreeBaseClass_1a9f50c8088fa1885155d0ac1f650a8de3" kindref="member">BoundingBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a tree node that subdivides the list of vecs from vind[first] to vind[last]. The routine is called recursively on each sublist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the first vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the last vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1118" column="13" bodyfile="include/nanoflann.hpp" bodystart="1118" bodyend="1175"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1a08cdd77c7600f9ce8e6b78b98de50e91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structnanoflann_1_1KDTreeBaseClass_1_1Node" kindref="compound">NodePtr</ref></type>
+        <definition>NodePtr nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::divideTreeConcurrent</definition>
+        <argsstring>(Derived &amp;obj, const Offset left, const Offset right, BoundingBox &amp;bbox, std::atomic&lt; unsigned int &gt; &amp;thread_count, std::mutex &amp;mutex)</argsstring>
+        <name>divideTreeConcurrent</name>
+        <param>
+          <type>Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const Offset</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const Offset</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type><ref refid="classnanoflann_1_1KDTreeBaseClass_1a9f50c8088fa1885155d0ac1f650a8de3" kindref="member">BoundingBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>std::atomic&lt; unsigned int &gt; &amp;</type>
+          <declname>thread_count</declname>
+        </param>
+        <param>
+          <type>std::mutex &amp;</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a tree node that subdivides the list of vecs from vind[first] to vind[last] concurrently. The routine is called recursively on each sublist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the first vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the last vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thread_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>count of std::async threads </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mutex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mutex for mempool allocation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1187" column="13" bodyfile="include/nanoflann.hpp" bodystart="1187" bodyend="1275"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1ab0a21a9187adb1fa9b5d88ad44960d1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::middleSplit_</definition>
+        <argsstring>(const Derived &amp;obj, const Offset ind, const Size count, Offset &amp;index, Dimension &amp;cutfeat, DistanceType &amp;cutval, const BoundingBox &amp;bbox)</argsstring>
+        <name>middleSplit_</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const Offset</type>
+          <declname>ind</declname>
+        </param>
+        <param>
+          <type>const Size</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>Offset &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>Dimension &amp;</type>
+          <declname>cutfeat</declname>
+        </param>
+        <param>
+          <type>DistanceType &amp;</type>
+          <declname>cutval</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnanoflann_1_1KDTreeBaseClass_1a9f50c8088fa1885155d0ac1f650a8de3" kindref="member">BoundingBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1277" column="10" bodyfile="include/nanoflann.hpp" bodystart="1277" bodyend="1328"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1a19933a149853727061f804a35a7bfd05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::planeSplit</definition>
+        <argsstring>(const Derived &amp;obj, const Offset ind, const Size count, const Dimension cutfeat, const DistanceType &amp;cutval, Offset &amp;lim1, Offset &amp;lim2)</argsstring>
+        <name>planeSplit</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const Offset</type>
+          <declname>ind</declname>
+        </param>
+        <param>
+          <type>const Size</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>const Dimension</type>
+          <declname>cutfeat</declname>
+        </param>
+        <param>
+          <type>const DistanceType &amp;</type>
+          <declname>cutval</declname>
+        </param>
+        <param>
+          <type>Offset &amp;</type>
+          <declname>lim1</declname>
+        </param>
+        <param>
+          <type>Offset &amp;</type>
+          <declname>lim2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subdivide the list of points by a plane perpendicular on the axis corresponding to the &apos;cutfeat&apos; dimension at &apos;cutval&apos; position.</para>
+<para>On return: dataset[ind[0..lim1-1]][cutfeat]&lt;cutval dataset[ind[lim1..lim2-1]][cutfeat]==cutval dataset[ind[lim2..count]][cutfeat]&gt;cutval </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1339" column="10" bodyfile="include/nanoflann.hpp" bodystart="1339" bodyend="1381"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1a04f4a4f4d36571a943ef0098ff89cdf7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>DistanceType</type>
+        <definition>DistanceType nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::computeInitialDistances</definition>
+        <argsstring>(const Derived &amp;obj, const ElementType *vec, distance_vector_t &amp;dists) const</argsstring>
+        <name>computeInitialDistances</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const ElementType *</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type><ref refid="classnanoflann_1_1KDTreeBaseClass_1a2ccf9b910d39e18090e68ba7c4c988d0" kindref="member">distance_vector_t</ref> &amp;</type>
+          <declname>dists</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1383" column="18" bodyfile="include/nanoflann.hpp" bodystart="1383" bodyend="1406"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1aaf4a4c61ee6931a763b3734e4b1af8af" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::saveIndex</definition>
+        <argsstring>(const Derived &amp;obj, std::ostream &amp;stream) const</argsstring>
+        <name>saveIndex</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores the index in a binary file. IMPORTANT NOTE: The set of data points is NOT stored in the file, so when loading the index object it must be constructed associated to the same source of data points used while building it. See the example: examples/saveload_example.cpp <simplesect kind="see"><para><ref refid="classnanoflann_1_1KDTreeBaseClass_1a9decc1015f7982fe084337f3c5e6a974" kindref="member">loadIndex</ref> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1429" column="10" bodyfile="include/nanoflann.hpp" bodystart="1429" bodyend="1437"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1a9decc1015f7982fe084337f3c5e6a974" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::loadIndex</definition>
+        <argsstring>(Derived &amp;obj, std::istream &amp;stream)</argsstring>
+        <name>loadIndex</name>
+        <param>
+          <type>Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads a previous index from a binary file. IMPORTANT NOTE: The set of data points is NOT stored in the file, so the index object must be constructed associated to the same source of data points used while building the index. See the example: examples/saveload_example.cpp <simplesect kind="see"><para><ref refid="classnanoflann_1_1KDTreeBaseClass_1a9decc1015f7982fe084337f3c5e6a974" kindref="member">loadIndex</ref> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1444" column="10" bodyfile="include/nanoflann.hpp" bodystart="1444" bodyend="1452"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1aef4721325869483d27634000b3070405" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::save_tree</definition>
+        <argsstring>(const Derived &amp;obj, std::ostream &amp;stream, const NodeConstPtr tree)</argsstring>
+        <name>save_tree</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structnanoflann_1_1KDTreeBaseClass_1_1Node" kindref="compound">NodeConstPtr</ref></type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1408" column="17" bodyfile="include/nanoflann.hpp" bodystart="1408" bodyend="1414"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KDTreeBaseClass_1a55c45ff5c7cacd8c85e49eaba258566c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::load_tree</definition>
+        <argsstring>(Derived &amp;obj, std::istream &amp;stream, NodePtr &amp;tree)</argsstring>
+        <name>load_tree</name>
+        <param>
+          <type>Derived &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="structnanoflann_1_1KDTreeBaseClass_1_1Node" kindref="compound">NodePtr</ref> &amp;</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="1416" column="17" bodyfile="include/nanoflann.hpp" bodystart="1416" bodyend="1422"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>kd-tree base-class</para>
+<para>Contains the member functions common to the classes <ref refid="classnanoflann_1_1KDTreeSingleIndexAdaptor" kindref="compound">KDTreeSingleIndexAdaptor</ref> and <ref refid="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor__" kindref="compound">KDTreeSingleIndexDynamicAdaptor_</ref>.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Derived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class which inherits this class. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>DatasetAdaptor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user-provided adaptor, which must be ensured to have a lifetime equal or longer than the instance of this class. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distance metric to use, these are all classes derived from <ref refid="structnanoflann_1_1Metric" kindref="compound">nanoflann::Metric</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>DIM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dimensionality of data points (e.g. 3 for 3D points) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IndexType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the arguments with which the data can be accessed (e.g. float, double, int64_t, T*) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>nanoflann::PooledAllocator</label>
+        <link refid="classnanoflann_1_1PooledAllocator"/>
+      </node>
+      <node id="1">
+        <label>nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;</label>
+        <link refid="classnanoflann_1_1KDTreeBaseClass"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>root_bbox_</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>root_node_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>pool_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::Node</label>
+        <link refid="structnanoflann_1_1KDTreeBaseClass_1_1Node"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>child1</edgelabel>
+          <edgelabel>child2</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nanoflann::array_or_vector&lt; -1, Interval &gt;</label>
+        <link refid="structnanoflann_1_1array__or__vector"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/nanoflann.hpp" line="985" column="1" bodyfile="include/nanoflann.hpp" bodystart="984" bodyend="1453"/>
+    <listofallmembers>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a9f50c8088fa1885155d0ac1f650a8de3" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>BoundingBox</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a04f4a4f4d36571a943ef0098ff89cdf7" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>computeInitialDistances</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a5042b5c322b3455cf6c50e296fdf5955" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>computeMinMax</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1ae324dc4d48301be5a7b5ff3072603883" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>dataset_get</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1aadbe8c77146a8e5b4bcf0a09b9e7f0ca" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>dim_</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1af53ff4dd81982f82c9b9585f83d403a2" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>Dimension</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a2ccf9b910d39e18090e68ba7c4c988d0" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>distance_vector_t</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1ad96518e746e611894ef07aadc2a0b737" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>DistanceType</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1ac88bb3cfaa0ebfb28ba4da8d8500df4c" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>divideTree</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a08cdd77c7600f9ce8e6b78b98de50e91" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>divideTreeConcurrent</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1abe7f0b6d50e50ff7dd26f870e4fcd162" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>ElementType</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a8a76f366cbbeb7feb8c0d2ecc91c4dcd" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>freeIndex</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a2a9e0c84c47df6f7139b07a9ce96fd6f" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>leaf_max_size_</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a55c45ff5c7cacd8c85e49eaba258566c" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>load_tree</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a9decc1015f7982fe084337f3c5e6a974" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>loadIndex</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1ab0a21a9187adb1fa9b5d88ad44960d1c" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>middleSplit_</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a9854e4c358710495d906757be54c10a5" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>n_thread_build_</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a6d819946c8d36af97474ec90d25478d0" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>NodeConstPtr</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1adabdd59ff5929f4b0a0f7c214072560d" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>NodePtr</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1afc202c7075788d7a5ce3d70120265988" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>Offset</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a19933a149853727061f804a35a7bfd05" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>planeSplit</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1ac42bbd8b3f373b8b70e159c633d32374" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>pool_</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a9f89305d43e68ff67d7e42b324ddd2e6" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>root_bbox_</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a0d9f7c2b7fddcc129c7eca50705942a8" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>root_node_</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1aef4721325869483d27634000b3070405" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>save_tree</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1aaf4a4c61ee6931a763b3734e4b1af8af" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>saveIndex</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a87c4cdfb51bc80b902d7b56683b93e91" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>size</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1aaca1d6ed26920b3cf194df1d3c871c7d" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>Size</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a3a142d37a32622c44c4e065934e364e1" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>size_</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a5d1d38994ddd21a55fe08b4d5294bdf0" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>size_at_index_build_</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a01e8a4ba6f6110969d2768aed4f292b5" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>usedMemory</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1a38367010d4435bb111ded842f512935e" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>vAcc_</name></member>
+      <member refid="classnanoflann_1_1KDTreeBaseClass_1ae524bf674ed5ca1fd6636f8133e6b1c9" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeBaseClass</scope><name>veclen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

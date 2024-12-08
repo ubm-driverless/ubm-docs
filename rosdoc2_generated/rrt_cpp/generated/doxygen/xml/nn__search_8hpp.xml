@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="nn__search_8hpp" kind="file" language="C++">
+    <compoundname>nn_search.hpp</compoundname>
+    <includes local="no">flann/flann.hpp</includes>
+    <includes refid="rrt_8hpp" local="no">rrt_cpp/rrt.hpp</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>geos/operation/buffer/BufferParameters.h</label>
+      </node>
+      <node id="2">
+        <label>flann/flann.hpp</label>
+      </node>
+      <node id="8">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="7">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="3">
+        <label>rrt_cpp/rrt.hpp</label>
+        <link refid="rrt_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/rrt_cpp/nn_search.hpp</label>
+        <link refid="nn__search_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>random</label>
+      </node>
+      <node id="10">
+        <label>geos/io/WKTReader.h</label>
+      </node>
+      <node id="6">
+        <label>sstream</label>
+      </node>
+      <node id="9">
+        <label>geos.h</label>
+      </node>
+      <node id="11">
+        <label>geos/io/WKTWriter.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="nn__search_8hpp_1a3d9d0e3d4904592004e921f6451480e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool is_already_inserted_xy</definition>
+        <argsstring>(const CoordinateSequence &amp;samples, const CoordinateXY &amp;coord, std::vector&lt; CoordinateXY &gt; &amp;X_near, CoordinateXY &amp;closest_point, const bool &amp;fill_fn_params=true, const geos_t &amp;eps_L2_squared=GP::eps_L2_squared, const geos_t &amp;delta_R_squared=GP::delta_R_squared)</argsstring>
+        <name>is_already_inserted_xy</name>
+        <param>
+          <type>const CoordinateSequence &amp;</type>
+          <declname>samples</declname>
+        </param>
+        <param>
+          <type>const CoordinateXY &amp;</type>
+          <declname>coord</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; CoordinateXY &gt; &amp;</type>
+          <declname>X_near</declname>
+        </param>
+        <param>
+          <type>CoordinateXY &amp;</type>
+          <declname>closest_point</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>fill_fn_params</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>const geos_t &amp;</type>
+          <declname>eps_L2_squared</declname>
+          <defval>GP::eps_L2_squared</defval>
+        </param>
+        <param>
+          <type>const geos_t &amp;</type>
+          <declname>delta_R_squared</declname>
+          <defval>GP::delta_R_squared</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if a point is already inserted in the <computeroutput>samples</computeroutput> vector with a certain tolerance <computeroutput>eps_L2_squared</computeroutput>. Fills both the <computeroutput>X_near</computeroutput> vector with the points that within a ball of radius <computeroutput>sqrt(delta_R_squared)</computeroutput> centered at <computeroutput>coord</computeroutput> and the <computeroutput>closest_point</computeroutput> in <computeroutput>samples</computeroutput> wrt to <computeroutput>coord</computeroutput> if <computeroutput>fill_fn_params</computeroutput> is set to <computeroutput>true</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point to check if it is already inserted in <computeroutput>samples</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>X_near</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When the function returns <computeroutput>false</computeroutput>, it contains the points in <computeroutput>samples</computeroutput> within <computeroutput>delta_R</computeroutput> centered at <computeroutput>coord</computeroutput> if <computeroutput>fill_fn_params</computeroutput> is set to <computeroutput>true</computeroutput>; otherwise, it is undefined. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closest_point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When the function returns <computeroutput>false</computeroutput>, it contains the closest point in <computeroutput>samples</computeroutput> to <computeroutput>coord</computeroutput> if <computeroutput>fill_fn_params</computeroutput> is set to <computeroutput>true</computeroutput>; otherwise, it is undefined. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fill_fn_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eps_L2_squared</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Squared Euclidean distance tolerance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta_R_squared</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Squared radius of the ball centered at <computeroutput>coord</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if <computeroutput>coord</computeroutput> is too close to any point in <computeroutput>samples</computeroutput> with a tolerance of <computeroutput>eps_L2_squared</computeroutput>; otherwise, <computeroutput>false</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/nn_search.hpp" line="31" column="6" declfile="include/rrt_cpp/nn_search.hpp" declline="31" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__search_8hpp_1a7b2c55711253364d25a51c7a59bd25bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool is_already_inserted_xy_flann_tree</definition>
+        <argsstring>(flann::Index&lt; flann::L2_Simple&lt; geos_t &gt;&gt; &amp;kd_tree, const flann::Matrix&lt; geos_t &gt; &amp;query, flann::Matrix&lt; int &gt; &amp;k_indices, flann::Matrix&lt; geos_t &gt; &amp;k_distances, const std::vector&lt; RRTNode &gt; &amp;rrt_tree, std::vector&lt; std::reference_wrapper&lt; const RRTNode &gt;&gt; &amp;X_near, std::reference_wrapper&lt; const RRTNode &gt; &amp;closest_point, const bool &amp;fill_fn_params=true, const geos_t &amp;eps_L2_squared=GP::eps_L2_squared, const geos_t &amp;delta_R_squared=GP::delta_R_squared, const int &amp;max_neighbors=GP::max_neighbors)</argsstring>
+        <name>is_already_inserted_xy_flann_tree</name>
+        <param>
+          <type>flann::Index&lt; flann::L2_Simple&lt; geos_t &gt;&gt; &amp;</type>
+          <declname>kd_tree</declname>
+        </param>
+        <param>
+          <type>const flann::Matrix&lt; geos_t &gt; &amp;</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>flann::Matrix&lt; int &gt; &amp;</type>
+          <declname>k_indices</declname>
+        </param>
+        <param>
+          <type>flann::Matrix&lt; geos_t &gt; &amp;</type>
+          <declname>k_distances</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &gt; &amp;</type>
+          <declname>rrt_tree</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::reference_wrapper&lt; const <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &gt;&gt; &amp;</type>
+          <declname>X_near</declname>
+        </param>
+        <param>
+          <type>std::reference_wrapper&lt; const <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &gt; &amp;</type>
+          <declname>closest_point</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>fill_fn_params</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>const geos_t &amp;</type>
+          <declname>eps_L2_squared</declname>
+          <defval>GP::eps_L2_squared</defval>
+        </param>
+        <param>
+          <type>const geos_t &amp;</type>
+          <declname>delta_R_squared</declname>
+          <defval>GP::delta_R_squared</defval>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>max_neighbors</declname>
+          <defval>GP::max_neighbors</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/nn_search.hpp" line="39" column="6" declfile="include/rrt_cpp/nn_search.hpp" declline="39" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__search_8hpp_1a9b20cb03117e97499d09adf559ddfeb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void add_point_to_flann_tree</definition>
+        <argsstring>(flann::Index&lt; flann::L2_Simple&lt; geos_t &gt;&gt; &amp;kd_tree, const flann::Matrix&lt; geos_t &gt; &amp;query)</argsstring>
+        <name>add_point_to_flann_tree</name>
+        <param>
+          <type>flann::Index&lt; flann::L2_Simple&lt; geos_t &gt;&gt; &amp;</type>
+          <declname>kd_tree</declname>
+        </param>
+        <param>
+          <type>const flann::Matrix&lt; geos_t &gt; &amp;</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/nn_search.hpp" line="51" column="13" bodyfile="include/rrt_cpp/nn_search.hpp" bodystart="51" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This header file contains the functions declarations related to nearest neighbor search to find the closest nodes in the RRT tree wrt a random sample. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rrt_cpp/nn_search.hpp"/>
+  </compounddef>
+</doxygen>

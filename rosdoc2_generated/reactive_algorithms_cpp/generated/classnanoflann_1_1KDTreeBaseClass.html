@@ -1,0 +1,484 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template Class KDTreeBaseClass &mdash; reactive_algorithms_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class KDTreeSingleIndexAdaptor" href="classnanoflann_1_1KDTreeSingleIndexAdaptor.html" />
+    <link rel="prev" title="Template Struct SO3_Adaptor" href="structnanoflann_1_1SO3__Adaptor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            reactive_algorithms_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#nanoflann-c-api-documentation">nanoflann C++ API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#defines">Defines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#directories">Directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#reactive-algorithms">Reactive Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#to-start-the-algorithm">To Start the algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#disparity-extender">Disparity extender</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#potential-field">Potential Field</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">reactive_algorithms_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Template Class KDTreeBaseClass</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classnanoflann_1_1KDTreeBaseClass.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-class-kdtreebaseclass">
+<span id="exhale-class-classnanoflann-1-1kdtreebaseclass"></span><h1>Template Class KDTreeBaseClass<a class="headerlink" href="#template-class-kdtreebaseclass" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_nanoflann.hpp.html#file-include-nanoflann-hpp"><span class="std std-ref">File nanoflann.hpp</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Link to this heading"></a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structnanoflann_1_1KDTreeBaseClass_1_1Interval.html#exhale-struct-structnanoflann-1-1kdtreebaseclass-1-1interval"><span class="std std-ref">Struct KDTreeBaseClass::Interval</span></a></p></li>
+<li><p><a class="reference internal" href="structnanoflann_1_1KDTreeBaseClass_1_1Node.html#exhale-struct-structnanoflann-1-1kdtreebaseclass-1-1node"><span class="std std-ref">Struct KDTreeBaseClass::Node</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE">
+<span id="_CPPv3I000_7int32_t0EN9nanoflann15KDTreeBaseClassE"></span><span id="_CPPv2I000_7int32_t0EN9nanoflann15KDTreeBaseClassE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Derived</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Distance</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DatasetAdaptor</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DIM</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IndexType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classnanoflann_1_1KDTreeBaseClass"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KDTreeBaseClass</span></span></span><a class="headerlink" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="Link to this definition"></a><br /></dt>
+<dd><p>kd-tree base-class</p>
+<p>Contains the member functions common to the classes <a class="reference internal" href="classnanoflann_1_1KDTreeSingleIndexAdaptor.html#classnanoflann_1_1KDTreeSingleIndexAdaptor"><span class="std std-ref">KDTreeSingleIndexAdaptor</span></a> and <a class="reference internal" href="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor__.html#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor__"><span class="std std-ref">KDTreeSingleIndexDynamicAdaptor_</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Derived</strong> – The name of the class which inherits this class. </p></li>
+<li><p><strong>DatasetAdaptor</strong> – The user-provided adaptor, which must be ensured to have a lifetime equal or longer than the instance of this class. </p></li>
+<li><p><strong>Distance</strong> – The distance metric to use, these are all classes derived from <a class="reference internal" href="structnanoflann_1_1Metric.html#structnanoflann_1_1Metric"><span class="std std-ref">nanoflann::Metric</span></a></p></li>
+<li><p><strong>DIM</strong> – Dimensionality of data points (e.g. 3 for 3D points) </p></li>
+<li><p><strong>IndexType</strong> – Type of the arguments with which the data can be accessed (e.g. float, double, int64_t, T*) </p></li>
+</ul>
+</dd>
+</dl>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass11ElementTypeE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass11ElementTypeE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass11ElementTypeE"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1abe7f0b6d50e50ff7dd26f870e4fcd162"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ElementType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Distance"><span class="n"><span class="pre">Distance</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ElementType</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass11ElementTypeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass12DistanceTypeE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass12DistanceTypeE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass12DistanceTypeE"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1ad96518e746e611894ef07aadc2a0b737"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DistanceType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Distance"><span class="n"><span class="pre">Distance</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">DistanceType</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass12DistanceTypeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp">
+<span class="target" id="classnanoflann_1_1KDTreeBaseClass_1afc202c7075788d7a5ce3d70120265988"></span><span class="sig-name descname"><span class="pre">Offset</span> <span class="pre">=</span> <span class="pre">typename</span> <span class="pre">decltype(vAcc_)::size_type</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp">
+<span class="target" id="classnanoflann_1_1KDTreeBaseClass_1aaca1d6ed26920b3cf194df1d3c871c7d"></span><span class="sig-name descname"><span class="pre">Size</span> <span class="pre">=</span> <span class="pre">typename</span> <span class="pre">decltype(vAcc_)::size_type</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass9DimensionE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass9DimensionE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass9DimensionE"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1af53ff4dd81982f82c9b9585f83d403a2"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Dimension</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass9DimensionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass7NodePtrE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass7NodePtrE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass7NodePtrE"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1adabdd59ff5929f4b0a0f7c214072560d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodePtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass4NodeE" title="nanoflann::KDTreeBaseClass::Node"><span class="n"><span class="pre">Node</span></span></a><span class="p"><span class="pre">*</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass7NodePtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass12NodeConstPtrE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass12NodeConstPtrE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass12NodeConstPtrE"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a6d819946c8d36af97474ec90d25478d0"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeConstPtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass4NodeE" title="nanoflann::KDTreeBaseClass::Node"><span class="n"><span class="pre">Node</span></span></a><span class="p"><span class="pre">*</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass12NodeConstPtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass11BoundingBoxE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass11BoundingBoxE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass11BoundingBoxE"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a9f50c8088fa1885155d0ac1f650a8de3"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BoundingBox</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="structnanoflann_1_1array__or__vector.html#_CPPv4I_7int32_t0EN9nanoflann15array_or_vectorE" title="nanoflann::array_or_vector"><span class="n"><span class="pre">array_or_vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::DIM"><span class="n"><span class="pre">DIM</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass8IntervalE" title="nanoflann::KDTreeBaseClass::Interval"><span class="n"><span class="pre">Interval</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass11BoundingBoxE" title="Link to this definition"></a><br /></dt>
+<dd><p>Define “BoundingBox” as a fixed-size or variable-size container depending on “DIM” </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass17distance_vector_tE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass17distance_vector_tE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass17distance_vector_tE"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a2ccf9b910d39e18090e68ba7c4c988d0"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distance_vector_t</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="structnanoflann_1_1array__or__vector.html#_CPPv4I_7int32_t0EN9nanoflann15array_or_vectorE" title="nanoflann::array_or_vector"><span class="n"><span class="pre">array_or_vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::DIM"><span class="n"><span class="pre">DIM</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass12DistanceTypeE" title="nanoflann::KDTreeBaseClass::DistanceType"><span class="n"><span class="pre">DistanceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass17distance_vector_tE" title="Link to this definition"></a><br /></dt>
+<dd><p>Define “distance_vector_t” as a fixed-size or variable-size container depending on “DIM” </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass9freeIndexER7Derived">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass9freeIndexER7Derived"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass9freeIndexER7Derived"></span><span id="nanoflann::KDTreeBaseClass::freeIndex__DerivedR"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a8a76f366cbbeb7feb8c0d2ecc91c4dcd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">freeIndex</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass9freeIndexER7Derived" title="Link to this definition"></a><br /></dt>
+<dd><p>Frees the previously-built index. Automatically called within buildIndex(). </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9nanoflann15KDTreeBaseClass4sizeERK7Derived">
+<span id="_CPPv3NK9nanoflann15KDTreeBaseClass4sizeERK7Derived"></span><span id="_CPPv2NK9nanoflann15KDTreeBaseClass4sizeERK7Derived"></span><span id="nanoflann::KDTreeBaseClass::size__DerivedCRC"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a87c4cdfb51bc80b902d7b56683b93e91"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9nanoflann15KDTreeBaseClass4sizeERK7Derived" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns number of points in dataset </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass6veclenERK7Derived">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass6veclenERK7Derived"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass6veclenERK7Derived"></span><span id="nanoflann::KDTreeBaseClass::veclen__DerivedCR"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1ae524bf674ed5ca1fd6636f8133e6b1c9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">veclen</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass6veclenERK7Derived" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the length of each point in the dataset </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9nanoflann15KDTreeBaseClass11dataset_getERK7Derived9IndexType9Dimension">
+<span id="_CPPv3NK9nanoflann15KDTreeBaseClass11dataset_getERK7Derived9IndexType9Dimension"></span><span id="_CPPv2NK9nanoflann15KDTreeBaseClass11dataset_getERK7Derived9IndexType9Dimension"></span><span id="nanoflann::KDTreeBaseClass::dataset_get__DerivedCR.IndexType.DimensionC"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1ae324dc4d48301be5a7b5ff3072603883"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass11ElementTypeE" title="nanoflann::KDTreeBaseClass::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dataset_get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass9DimensionE" title="nanoflann::KDTreeBaseClass::Dimension"><span class="n"><span class="pre">Dimension</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">component</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9nanoflann15KDTreeBaseClass11dataset_getERK7Derived9IndexType9Dimension" title="Link to this definition"></a><br /></dt>
+<dd><p>Helper accessor to the dataset points: </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass10usedMemoryER7Derived">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass10usedMemoryER7Derived"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass10usedMemoryER7Derived"></span><span id="nanoflann::KDTreeBaseClass::usedMemory__DerivedR"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a01e8a4ba6f6110969d2768aed4f292b5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">usedMemory</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass10usedMemoryER7Derived" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes the inde memory usage Returns: memory used by the index </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass13computeMinMaxERK7Derived6Offset4Size9DimensionR11ElementTypeR11ElementType">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass13computeMinMaxERK7Derived6Offset4Size9DimensionR11ElementTypeR11ElementType"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass13computeMinMaxERK7Derived6Offset4Size9DimensionR11ElementTypeR11ElementType"></span><span id="nanoflann::KDTreeBaseClass::computeMinMax__DerivedCR.Offset.Size.Dimension.ElementTypeR.ElementTypeR"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a5042b5c322b3455cf6c50e296fdf5955"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeMinMax</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ind</span></span>, <span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass9DimensionE" title="nanoflann::KDTreeBaseClass::Dimension"><span class="n"><span class="pre">Dimension</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass11ElementTypeE" title="nanoflann::KDTreeBaseClass::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">min_elem</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass11ElementTypeE" title="nanoflann::KDTreeBaseClass::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">max_elem</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass13computeMinMaxERK7Derived6Offset4Size9DimensionR11ElementTypeR11ElementType" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass10divideTreeER7DerivedK6OffsetK6OffsetR11BoundingBox">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass10divideTreeER7DerivedK6OffsetK6OffsetR11BoundingBox"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass10divideTreeER7DerivedK6OffsetK6OffsetR11BoundingBox"></span><span id="nanoflann::KDTreeBaseClass::divideTree__DerivedR.OffsetC.OffsetC.BoundingBoxR"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1ac88bb3cfaa0ebfb28ba4da8d8500df4c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass7NodePtrE" title="nanoflann::KDTreeBaseClass::NodePtr"><span class="n"><span class="pre">NodePtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">divideTree</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">left</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">right</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass11BoundingBoxE" title="nanoflann::KDTreeBaseClass::BoundingBox"><span class="n"><span class="pre">BoundingBox</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bbox</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass10divideTreeER7DerivedK6OffsetK6OffsetR11BoundingBox" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a tree node that subdivides the list of vecs from vind[first] to vind[last]. The routine is called recursively on each sublist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> – index of the first vector </p></li>
+<li><p><strong>right</strong> – index of the last vector </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass20divideTreeConcurrentER7DerivedK6OffsetK6OffsetR11BoundingBoxRNSt6atomicIjEERNSt5mutexE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass20divideTreeConcurrentER7DerivedK6OffsetK6OffsetR11BoundingBoxRNSt6atomicIjEERNSt5mutexE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass20divideTreeConcurrentER7DerivedK6OffsetK6OffsetR11BoundingBoxRNSt6atomicIjEERNSt5mutexE"></span><span id="nanoflann::KDTreeBaseClass::divideTreeConcurrent__DerivedR.OffsetC.OffsetC.BoundingBoxR.std::atomic:unsigned-i:R.std::mutexR"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a08cdd77c7600f9ce8e6b78b98de50e91"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass7NodePtrE" title="nanoflann::KDTreeBaseClass::NodePtr"><span class="n"><span class="pre">NodePtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">divideTreeConcurrent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">left</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">right</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass11BoundingBoxE" title="nanoflann::KDTreeBaseClass::BoundingBox"><span class="n"><span class="pre">BoundingBox</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bbox</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">atomic</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">thread_count</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mutex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mutex</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass20divideTreeConcurrentER7DerivedK6OffsetK6OffsetR11BoundingBoxRNSt6atomicIjEERNSt5mutexE" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a tree node that subdivides the list of vecs from vind[first] to vind[last] concurrently. The routine is called recursively on each sublist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> – index of the first vector </p></li>
+<li><p><strong>right</strong> – index of the last vector </p></li>
+<li><p><strong>thread_count</strong> – count of std::async threads </p></li>
+<li><p><strong>mutex</strong> – mutex for mempool allocation </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass12middleSplit_ERK7DerivedK6OffsetK4SizeR6OffsetR9DimensionR12DistanceTypeRK11BoundingBox">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass12middleSplit_ERK7DerivedK6OffsetK4SizeR6OffsetR9DimensionR12DistanceTypeRK11BoundingBox"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass12middleSplit_ERK7DerivedK6OffsetK4SizeR6OffsetR9DimensionR12DistanceTypeRK11BoundingBox"></span><span id="nanoflann::KDTreeBaseClass::middleSplit___DerivedCR.OffsetC.SizeC.OffsetR.DimensionR.DistanceTypeR.BoundingBoxCR"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1ab0a21a9187adb1fa9b5d88ad44960d1c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">middleSplit_</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ind</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span>, <span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">index</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass9DimensionE" title="nanoflann::KDTreeBaseClass::Dimension"><span class="n"><span class="pre">Dimension</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cutfeat</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass12DistanceTypeE" title="nanoflann::KDTreeBaseClass::DistanceType"><span class="n"><span class="pre">DistanceType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cutval</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass11BoundingBoxE" title="nanoflann::KDTreeBaseClass::BoundingBox"><span class="n"><span class="pre">BoundingBox</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bbox</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass12middleSplit_ERK7DerivedK6OffsetK4SizeR6OffsetR9DimensionR12DistanceTypeRK11BoundingBox" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass10planeSplitERK7DerivedK6OffsetK4SizeK9DimensionRK12DistanceTypeR6OffsetR6Offset">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass10planeSplitERK7DerivedK6OffsetK4SizeK9DimensionRK12DistanceTypeR6OffsetR6Offset"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass10planeSplitERK7DerivedK6OffsetK4SizeK9DimensionRK12DistanceTypeR6OffsetR6Offset"></span><span id="nanoflann::KDTreeBaseClass::planeSplit__DerivedCR.OffsetC.SizeC.DimensionC.DistanceTypeCR.OffsetR.OffsetR"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a19933a149853727061f804a35a7bfd05"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">planeSplit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ind</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass9DimensionE" title="nanoflann::KDTreeBaseClass::Dimension"><span class="n"><span class="pre">Dimension</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cutfeat</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass12DistanceTypeE" title="nanoflann::KDTreeBaseClass::DistanceType"><span class="n"><span class="pre">DistanceType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cutval</span></span>, <span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lim1</span></span>, <span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lim2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass10planeSplitERK7DerivedK6OffsetK4SizeK9DimensionRK12DistanceTypeR6OffsetR6Offset" title="Link to this definition"></a><br /></dt>
+<dd><p>Subdivide the list of points by a plane perpendicular on the axis corresponding to the ‘cutfeat’ dimension at ‘cutval’ position.</p>
+<p>On return: dataset[ind[0..lim1-1]][cutfeat]&lt;cutval dataset[ind[lim1..lim2-1]][cutfeat]==cutval dataset[ind[lim2..count]][cutfeat]&gt;cutval </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9nanoflann15KDTreeBaseClass23computeInitialDistancesERK7DerivedPK11ElementTypeR17distance_vector_t">
+<span id="_CPPv3NK9nanoflann15KDTreeBaseClass23computeInitialDistancesERK7DerivedPK11ElementTypeR17distance_vector_t"></span><span id="_CPPv2NK9nanoflann15KDTreeBaseClass23computeInitialDistancesERK7DerivedPK11ElementTypeR17distance_vector_t"></span><span id="nanoflann::KDTreeBaseClass::computeInitialDistances__DerivedCR.ElementTypeCP.distance_vector_tRC"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a04f4a4f4d36571a943ef0098ff89cdf7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass12DistanceTypeE" title="nanoflann::KDTreeBaseClass::DistanceType"><span class="n"><span class="pre">DistanceType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeInitialDistances</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass11ElementTypeE" title="nanoflann::KDTreeBaseClass::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vec</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass17distance_vector_tE" title="nanoflann::KDTreeBaseClass::distance_vector_t"><span class="n"><span class="pre">distance_vector_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dists</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9nanoflann15KDTreeBaseClass23computeInitialDistancesERK7DerivedPK11ElementTypeR17distance_vector_t" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9nanoflann15KDTreeBaseClass9saveIndexERK7DerivedRNSt7ostreamE">
+<span id="_CPPv3NK9nanoflann15KDTreeBaseClass9saveIndexERK7DerivedRNSt7ostreamE"></span><span id="_CPPv2NK9nanoflann15KDTreeBaseClass9saveIndexERK7DerivedRNSt7ostreamE"></span><span id="nanoflann::KDTreeBaseClass::saveIndex__DerivedCR.osRC"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1aaf4a4c61ee6931a763b3734e4b1af8af"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveIndex</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9nanoflann15KDTreeBaseClass9saveIndexERK7DerivedRNSt7ostreamE" title="Link to this definition"></a><br /></dt>
+<dd><p>Stores the index in a binary file. IMPORTANT NOTE: The set of data points is NOT stored in the file, so when loading the index object it must be constructed associated to the same source of data points used while building it. See the example: examples/saveload_example.cpp <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classnanoflann_1_1KDTreeBaseClass_1a9decc1015f7982fe084337f3c5e6a974"><span class="std std-ref">loadIndex</span></a></p>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass9loadIndexER7DerivedRNSt7istreamE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass9loadIndexER7DerivedRNSt7istreamE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass9loadIndexER7DerivedRNSt7istreamE"></span><span id="nanoflann::KDTreeBaseClass::loadIndex__DerivedR.isR"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a9decc1015f7982fe084337f3c5e6a974"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">loadIndex</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">istream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass9loadIndexER7DerivedRNSt7istreamE" title="Link to this definition"></a><br /></dt>
+<dd><p>Loads a previous index from a binary file. IMPORTANT NOTE: The set of data points is NOT stored in the file, so the index object must be constructed associated to the same source of data points used while building the index. See the example: examples/saveload_example.cpp <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classnanoflann_1_1KDTreeBaseClass_1a9decc1015f7982fe084337f3c5e6a974"><span class="std std-ref">loadIndex</span></a></p>
+</div>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass5vAcc_E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass5vAcc_E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass5vAcc_E"></span><span id="nanoflann::KDTreeBaseClass::vAcc___std::vector:IndexType:"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a38367010d4435bb111ded842f512935e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vAcc_</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass5vAcc_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Array of indices to vectors in the dataset_. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass10root_node_E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass10root_node_E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass10root_node_E"></span><span id="nanoflann::KDTreeBaseClass::root_node___NodePtr"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a0d9f7c2b7fddcc129c7eca50705942a8"></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass7NodePtrE" title="nanoflann::KDTreeBaseClass::NodePtr"><span class="n"><span class="pre">NodePtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">root_node_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass10root_node_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass14leaf_max_size_E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass14leaf_max_size_E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass14leaf_max_size_E"></span><span id="nanoflann::KDTreeBaseClass::leaf_max_size___Size"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a2a9e0c84c47df6f7139b07a9ce96fd6f"></span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">leaf_max_size_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass14leaf_max_size_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass15n_thread_build_E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass15n_thread_build_E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass15n_thread_build_E"></span><span id="nanoflann::KDTreeBaseClass::n_thread_build___Size"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a9854e4c358710495d906757be54c10a5"></span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">n_thread_build_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass15n_thread_build_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Number of thread for concurrent tree build. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass5size_E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass5size_E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass5size_E"></span><span id="nanoflann::KDTreeBaseClass::size___Size"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a3a142d37a32622c44c4e065934e364e1"></span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass5size_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Number of current points in the dataset. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass20size_at_index_build_E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass20size_at_index_build_E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass20size_at_index_build_E"></span><span id="nanoflann::KDTreeBaseClass::size_at_index_build___Size"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a5d1d38994ddd21a55fe08b4d5294bdf0"></span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size_at_index_build_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass20size_at_index_build_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Number of points in the dataset when the index was built. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4dim_E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4dim_E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4dim_E"></span><span id="nanoflann::KDTreeBaseClass::dim___Dimension"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1aadbe8c77146a8e5b4bcf0a09b9e7f0ca"></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass9DimensionE" title="nanoflann::KDTreeBaseClass::Dimension"><span class="n"><span class="pre">Dimension</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dim_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4dim_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Dimensionality of each data point. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass10root_bbox_E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass10root_bbox_E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass10root_bbox_E"></span><span id="nanoflann::KDTreeBaseClass::root_bbox___BoundingBox"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a9f89305d43e68ff67d7e42b324ddd2e6"></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass11BoundingBoxE" title="nanoflann::KDTreeBaseClass::BoundingBox"><span class="n"><span class="pre">BoundingBox</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">root_bbox_</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass10root_bbox_E" title="Link to this definition"></a><br /></dt>
+<dd><p>The KD-tree used to find neighbours </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass5pool_E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass5pool_E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass5pool_E"></span><span id="nanoflann::KDTreeBaseClass::pool___PooledAllocator"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1ac42bbd8b3f373b8b70e159c633d32374"></span><a class="reference internal" href="classnanoflann_1_1PooledAllocator.html#_CPPv4N9nanoflann15PooledAllocatorE" title="nanoflann::PooledAllocator"><span class="n"><span class="pre">PooledAllocator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pool_</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass5pool_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Pooled memory allocator.</p>
+<p>Using a pooled memory allocator is more efficient than allocating memory directly when there is a large number small of memory allocations. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass9save_treeERK7DerivedRNSt7ostreamEK12NodeConstPtr">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass9save_treeERK7DerivedRNSt7ostreamEK12NodeConstPtr"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass9save_treeERK7DerivedRNSt7ostreamEK12NodeConstPtr"></span><span id="nanoflann::KDTreeBaseClass::save_tree__DerivedCR.osR.NodeConstPtrC"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1aef4721325869483d27634000b3070405"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">save_tree</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass12NodeConstPtrE" title="nanoflann::KDTreeBaseClass::NodeConstPtr"><span class="n"><span class="pre">NodeConstPtr</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tree</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass9save_treeERK7DerivedRNSt7ostreamEK12NodeConstPtr" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass9load_treeER7DerivedRNSt7istreamER7NodePtr">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass9load_treeER7DerivedRNSt7istreamER7NodePtr"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass9load_treeER7DerivedRNSt7istreamER7NodePtr"></span><span id="nanoflann::KDTreeBaseClass::load_tree__DerivedR.isR.NodePtrR"></span><span class="target" id="classnanoflann_1_1KDTreeBaseClass_1a55c45ff5c7cacd8c85e49eaba258566c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">load_tree</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass::Derived"><span class="n"><span class="pre">Derived</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">istream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass7NodePtrE" title="nanoflann::KDTreeBaseClass::NodePtr"><span class="n"><span class="pre">NodePtr</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tree</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass9load_treeER7DerivedRNSt7istreamER7NodePtr" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass8IntervalE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass8IntervalE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass8IntervalE"></span><span id="nanoflann::KDTreeBaseClass::Interval"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Interval"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Interval</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass8IntervalE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass8Interval3lowE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass8Interval3lowE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass8Interval3lowE"></span><span id="nanoflann::KDTreeBaseClass::Interval::low__ElementType"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Interval_1a75c5eb8ad6655399a320ab2347ba68e5"></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass11ElementTypeE" title="nanoflann::KDTreeBaseClass::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">low</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass8Interval3lowE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass8Interval4highE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass8Interval4highE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass8Interval4highE"></span><span id="nanoflann::KDTreeBaseClass::Interval::high__ElementType"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Interval_1ad39f54310e89737fc22369979df14ba9"></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass11ElementTypeE" title="nanoflann::KDTreeBaseClass::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">high</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass8Interval4highE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4NodeE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4NodeE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4NodeE"></span><span id="nanoflann::KDTreeBaseClass::Node"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Node</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4NodeE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4Node4leftE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4Node4leftE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4Node4leftE"></span><span id="nanoflann::KDTreeBaseClass::Node::left__Offset"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node_1a0954d127eacfacd28f3441010883743f"></span><span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4Node4leftE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4Node5rightE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4Node5rightE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4Node5rightE"></span><span id="nanoflann::KDTreeBaseClass::Node::right__Offset"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node_1aa3c0e043ad01bb01dc45c1a3b3b46829"></span><span class="n"><span class="pre">Offset</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4Node5rightE" title="Link to this definition"></a><br /></dt>
+<dd><p>Indices of points in leaf node. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4Node2lrE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4Node2lrE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4Node2lrE"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node_1ac0c16fb175aa8bc7559e5e1dd803432f"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">nanoflann</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass"><span class="n"><span class="pre">KDTreeBaseClass</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass4NodeE" title="nanoflann::KDTreeBaseClass::Node"><span class="n"><span class="pre">Node</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">[anonymous]</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">leaf</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lr</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4Node2lrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4Node7divfeatE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4Node7divfeatE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4Node7divfeatE"></span><span id="nanoflann::KDTreeBaseClass::Node::divfeat__Dimension"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node_1a4013d8322f7d7a12deaba47992d5c7de"></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass9DimensionE" title="nanoflann::KDTreeBaseClass::Dimension"><span class="n"><span class="pre">Dimension</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">divfeat</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4Node7divfeatE" title="Link to this definition"></a><br /></dt>
+<dd><p>Dimension used for subdivision. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4Node6divlowE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4Node6divlowE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4Node6divlowE"></span><span id="nanoflann::KDTreeBaseClass::Node::divlow__DistanceType"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node_1a36d85fcaa2e26e2b8882c9645fb774e0"></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass12DistanceTypeE" title="nanoflann::KDTreeBaseClass::DistanceType"><span class="n"><span class="pre">DistanceType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">divlow</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4Node6divlowE" title="Link to this definition"></a><br /></dt>
+<dd><p>The values used for subdivision. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4Node7divhighE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4Node7divhighE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4Node7divhighE"></span><span id="nanoflann::KDTreeBaseClass::Node::divhigh__DistanceType"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node_1a050d1d18ec3392e0dcd995f10f352f85"></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass12DistanceTypeE" title="nanoflann::KDTreeBaseClass::DistanceType"><span class="n"><span class="pre">DistanceType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">divhigh</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4Node7divhighE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4Node3subE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4Node3subE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4Node3subE"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node_1a109a793e2ca6ed519dbb7208e97e5db4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">nanoflann</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass"><span class="n"><span class="pre">KDTreeBaseClass</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass4NodeE" title="nanoflann::KDTreeBaseClass::Node"><span class="n"><span class="pre">Node</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">[anonymous]</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nonleaf</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sub</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4Node3subE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4Node9node_typeE">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4Node9node_typeE"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4Node9node_typeE"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node_1ad538b900e0f959fdc0555456981b8224"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="n"><span class="pre">nanoflann</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass"><span class="n"><span class="pre">KDTreeBaseClass</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass4NodeE" title="nanoflann::KDTreeBaseClass::Node"><span class="n"><span class="pre">Node</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">[anonymous]</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">node_type</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4Node9node_typeE" title="Link to this definition"></a><br /></dt>
+<dd><p>Union used because a node can be either a LEAF node or a non-leaf node, so both data fields are never used simultaneously </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4Node6child1E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4Node6child1E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4Node6child1E"></span><span id="nanoflann::KDTreeBaseClass::Node::child1__NodeP"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node_1a38804bb80edf051c061d72f48ba8ab9f"></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass4NodeE" title="nanoflann::KDTreeBaseClass::Node"><span class="n"><span class="pre">Node</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">child1</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4Node6child1E" title="Link to this definition"></a><br /></dt>
+<dd><p>Child nodes (both=nullptr mean its a leaf node) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15KDTreeBaseClass4Node6child2E">
+<span id="_CPPv3N9nanoflann15KDTreeBaseClass4Node6child2E"></span><span id="_CPPv2N9nanoflann15KDTreeBaseClass4Node6child2E"></span><span id="nanoflann::KDTreeBaseClass::Node::child2__NodeP"></span><span class="target" id="structnanoflann_1_1KDTreeBaseClass_1_1Node_1a96b98cd69094af26595961f83c0a2db1"></span><a class="reference internal" href="#_CPPv4N9nanoflann15KDTreeBaseClass4NodeE" title="nanoflann::KDTreeBaseClass::Node"><span class="n"><span class="pre">Node</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">child2</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15KDTreeBaseClass4Node6child2E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structnanoflann_1_1SO3__Adaptor.html" class="btn btn-neutral float-left" title="Template Struct SO3_Adaptor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classnanoflann_1_1KDTreeSingleIndexAdaptor.html" class="btn btn-neutral float-right" title="Template Class KDTreeSingleIndexAdaptor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;reactive_algorithms_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
