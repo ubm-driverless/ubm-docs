@@ -19,7 +19,7 @@ To contribute new documentation to the website, follow these steps:
     - Write one or more Markdown files (`.md`) and place them in the most appropriate subfolder within the `docs/` directory.
         - If you need to add a subsection:
             1. Create a new subfolder inside an existing subfolder in the `docs/` directory.
-            2. Add your documentation files to this folder. Consider that the first element shown when the subsection is selected is the first file in alphabetical order. A good practice is to add a `0_` prefix. (a.e. `0_firstfile`)
+            2. Please add your documentation files to this folder. Keep in mind that the first file displayed when the folder is opened on the website will be the file that comes first in alphabetical order, unless an `index.md` file is present. It is a good practice to include an `index.md` file that provides an overview of the folder's contents.
         - If you need to add a new section (a new tab):
             1. Create a new folder inside the `docs/` directory.
             2. Add an `index.md` file to the new folder. The content of this file will be displayed when the tab is clicked.
