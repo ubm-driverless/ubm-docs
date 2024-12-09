@@ -1,6 +1,6 @@
 # Linting 
 
-# C++ Linting
+## C++ Linting
 
 To ensure that your C++ code follows our coding conventions and guidelines, run
 the `clang-tidy` linting tool by following these instructions:
@@ -18,7 +18,7 @@ the `clang-tidy` linting tool by following these instructions:
 4. Read the output of the command and make sure that no errors were found.
 
 
-# Python Linting
+## Python Linting
 
 To ensure that your Python code follows our coding conventions and guidelines, run
 the `ruff` linting tool by following these instructions:
