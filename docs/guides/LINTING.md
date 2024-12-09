@@ -35,7 +35,7 @@ the `ruff` linting tool by following these instructions:
 
 Both `clang-tidy` and `ruff` can format the code so that it follows our rules.
 
-!!! note
+!!! warning
 
     Not all rules can be enforced automatically and using this functionality is often not enough for the code to be valid.
 
