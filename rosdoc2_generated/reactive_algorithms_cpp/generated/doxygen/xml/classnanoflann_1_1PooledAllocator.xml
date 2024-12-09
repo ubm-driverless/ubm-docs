@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classnanoflann_1_1PooledAllocator" kind="class" language="C++" prot="public">
+    <compoundname>nanoflann::PooledAllocator</compoundname>
+    <includes local="no">nanoflann.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classnanoflann_1_1PooledAllocator_1a4ae8104ffcf5c9971e42316921e49fcb" prot="private" static="no">
+        <type>size_t</type>
+        <definition>using nanoflann::PooledAllocator::Size =  size_t</definition>
+        <argsstring></argsstring>
+        <name>Size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="843" column="5" bodyfile="include/nanoflann.hpp" bodystart="843" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classnanoflann_1_1PooledAllocator_1a8d5adef53586c42579acd8003866d494" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t nanoflann::PooledAllocator::WORDSIZE</definition>
+        <argsstring></argsstring>
+        <name>WORDSIZE</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="834" column="29" bodyfile="include/nanoflann.hpp" bodystart="834" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1PooledAllocator_1a0c1b238f25fa0d1f2f710f5b8ec163d5" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t nanoflann::PooledAllocator::BLOCKSIZE</definition>
+        <argsstring></argsstring>
+        <name>BLOCKSIZE</name>
+        <initializer>= 8192</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="835" column="29" bodyfile="include/nanoflann.hpp" bodystart="835" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnanoflann_1_1PooledAllocator_1a714495988aa05ce4cb830a3473d07758" prot="private" static="no" mutable="no">
+        <type>Size</type>
+        <definition>Size nanoflann::PooledAllocator::remaining_</definition>
+        <argsstring></argsstring>
+        <name>remaining_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of bytes left in current block of storage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="845" column="11" bodyfile="include/nanoflann.hpp" bodystart="845" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1PooledAllocator_1ae515b170b29c2c0acef767fc4bdb36da" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* nanoflann::PooledAllocator::base_</definition>
+        <argsstring></argsstring>
+        <name>base_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Pointer to base of current block of storage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="846" column="10" bodyfile="include/nanoflann.hpp" bodystart="846" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1PooledAllocator_1a9b35e91a01c3eaa176b3c15903981b06" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* nanoflann::PooledAllocator::loc_</definition>
+        <argsstring></argsstring>
+        <name>loc_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Current location in block to next allocate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="847" column="10" bodyfile="include/nanoflann.hpp" bodystart="847" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classnanoflann_1_1PooledAllocator_1a738180fd27be69129876271b5ac20f43" prot="public" static="no" mutable="no">
+        <type>Size</type>
+        <definition>Size nanoflann::PooledAllocator::usedMemory</definition>
+        <argsstring></argsstring>
+        <name>usedMemory</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="858" column="10" bodyfile="include/nanoflann.hpp" bodystart="858" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1PooledAllocator_1a733a428738269c0a6d099dd975aa20a0" prot="public" static="no" mutable="no">
+        <type>Size</type>
+        <definition>Size nanoflann::PooledAllocator::wastedMemory</definition>
+        <argsstring></argsstring>
+        <name>wastedMemory</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="859" column="10" bodyfile="include/nanoflann.hpp" bodystart="859" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnanoflann_1_1PooledAllocator_1a46e50ce4ce9dc6f84eab3bc23a0fb20f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::PooledAllocator::internal_init</definition>
+        <argsstring>()</argsstring>
+        <name>internal_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="849" column="10" bodyfile="include/nanoflann.hpp" bodystart="849" bodyend="855"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnanoflann_1_1PooledAllocator_1ad193b067b17cd5015f4d5bf3e9573fc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nanoflann::PooledAllocator::PooledAllocator</definition>
+        <argsstring>()</argsstring>
+        <name>PooledAllocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor. Initializes a new pool. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="864" column="5" bodyfile="include/nanoflann.hpp" bodystart="864" bodyend="864"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1PooledAllocator_1a39c53213bc49d0f08fb8e4b0adc25b5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nanoflann::PooledAllocator::~PooledAllocator</definition>
+        <argsstring>()</argsstring>
+        <name>~PooledAllocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. Frees all the memory allocated in this pool. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="869" column="5" bodyfile="include/nanoflann.hpp" bodystart="869" bodyend="869"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1PooledAllocator_1a43c877d5e6004a65ee49584dbc29bcc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::PooledAllocator::free_all</definition>
+        <argsstring>()</argsstring>
+        <name>free_all</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Frees all allocated memory chunks </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="872" column="10" bodyfile="include/nanoflann.hpp" bodystart="872" bodyend="882"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1PooledAllocator_1ae6a1cfa103b81762ab700224f1c9d801" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* nanoflann::PooledAllocator::malloc</definition>
+        <argsstring>(const size_t req_size)</argsstring>
+        <name>malloc</name>
+        <param>
+          <type>const size_t</type>
+          <declname>req_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a pointer to a piece of new memory of the given size in bytes allocated from the pool. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="888" column="10" bodyfile="include/nanoflann.hpp" bodystart="888" bodyend="929"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1PooledAllocator_1a389b1614fd2b6fa641c009e698db8b44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* nanoflann::PooledAllocator::allocate</definition>
+        <argsstring>(const size_t count=1)</argsstring>
+        <name>allocate</name>
+        <param>
+          <type>const size_t</type>
+          <declname>count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocates (using this pool) a generic type T.</para>
+<para>Params: count = number of instances to allocate. Returns: pointer (of type T*) to memory buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="939" column="7" bodyfile="include/nanoflann.hpp" bodystart="939" bodyend="943"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Pooled storage allocator</para>
+<para>The following routines allow for the efficient allocation of storage in small chunks from a specified pool. Rather than allowing each structure to be freed individually, an entire pool of storage is freed at once. This method has two advantages over just using <ref refid="classnanoflann_1_1PooledAllocator_1ae6a1cfa103b81762ab700224f1c9d801" kindref="member">malloc()</ref> and free(). First, it is far more efficient for allocating small objects, as there is no overhead for remembering all the information needed to free each object or consolidating fragmented memory. Second, the decision about how long to keep an object is made at the time of allocation, and there is no need to track down all the objects to free them. </para>
+    </detaileddescription>
+    <location file="include/nanoflann.hpp" line="833" column="1" bodyfile="include/nanoflann.hpp" bodystart="832" bodyend="944"/>
+    <listofallmembers>
+      <member refid="classnanoflann_1_1PooledAllocator_1a389b1614fd2b6fa641c009e698db8b44" prot="public" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>allocate</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1ae515b170b29c2c0acef767fc4bdb36da" prot="private" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>base_</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1a0c1b238f25fa0d1f2f710f5b8ec163d5" prot="private" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>BLOCKSIZE</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1a43c877d5e6004a65ee49584dbc29bcc9" prot="public" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>free_all</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1a46e50ce4ce9dc6f84eab3bc23a0fb20f" prot="private" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>internal_init</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1a9b35e91a01c3eaa176b3c15903981b06" prot="private" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>loc_</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1ae6a1cfa103b81762ab700224f1c9d801" prot="public" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>malloc</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1ad193b067b17cd5015f4d5bf3e9573fc7" prot="public" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>PooledAllocator</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1a714495988aa05ce4cb830a3473d07758" prot="private" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>remaining_</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1a4ae8104ffcf5c9971e42316921e49fcb" prot="private" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>Size</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1a738180fd27be69129876271b5ac20f43" prot="public" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>usedMemory</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1a733a428738269c0a6d099dd975aa20a0" prot="public" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>wastedMemory</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1a8d5adef53586c42579acd8003866d494" prot="private" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>WORDSIZE</name></member>
+      <member refid="classnanoflann_1_1PooledAllocator_1a39c53213bc49d0f08fb8e4b0adc25b5e" prot="public" virt="non-virtual"><scope>nanoflann::PooledAllocator</scope><name>~PooledAllocator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

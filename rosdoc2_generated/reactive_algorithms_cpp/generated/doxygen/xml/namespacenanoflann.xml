@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacenanoflann" kind="namespace" language="C++">
+    <compoundname>nanoflann</compoundname>
+    <innerclass refid="structnanoflann_1_1array__or__vector" prot="public">nanoflann::array_or_vector</innerclass>
+    <innerclass refid="structnanoflann_1_1array__or__vector_3-1_00_01T_01_4" prot="public">nanoflann::array_or_vector&lt;-1, T &gt;</innerclass>
+    <innerclass refid="structnanoflann_1_1has__assign" prot="public">nanoflann::has_assign</innerclass>
+    <innerclass refid="structnanoflann_1_1has__assign_3_01T_00_01decltype_07_07void_08_01std_1_1declval_3_01T_01_4_07_0384656df8feb37b62ef12dfcd439e93e" prot="public">nanoflann::has_assign&lt; T, decltype((void) std::declval&lt; T &gt;().assign(1, 0), 0)&gt;</innerclass>
+    <innerclass refid="structnanoflann_1_1has__resize" prot="public">nanoflann::has_resize</innerclass>
+    <innerclass refid="structnanoflann_1_1has__resize_3_01T_00_01decltype_07_07void_08_01std_1_1declval_3_01T_01_4_07_08_8resize_071_08_00_010_08_4" prot="public">nanoflann::has_resize&lt; T, decltype((void) std::declval&lt; T &gt;().resize(1), 0)&gt;</innerclass>
+    <innerclass refid="structnanoflann_1_1IndexDist__Sorter" prot="public">nanoflann::IndexDist_Sorter</innerclass>
+    <innerclass refid="classnanoflann_1_1KDTreeBaseClass" prot="public">nanoflann::KDTreeBaseClass</innerclass>
+    <innerclass refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor" prot="public">nanoflann::KDTreeEigenMatrixAdaptor</innerclass>
+    <innerclass refid="classnanoflann_1_1KDTreeSingleIndexAdaptor" prot="public">nanoflann::KDTreeSingleIndexAdaptor</innerclass>
+    <innerclass refid="structnanoflann_1_1KDTreeSingleIndexAdaptorParams" prot="public">nanoflann::KDTreeSingleIndexAdaptorParams</innerclass>
+    <innerclass refid="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor" prot="public">nanoflann::KDTreeSingleIndexDynamicAdaptor</innerclass>
+    <innerclass refid="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor__" prot="public">nanoflann::KDTreeSingleIndexDynamicAdaptor_</innerclass>
+    <innerclass refid="classnanoflann_1_1KNNResultSet" prot="public">nanoflann::KNNResultSet</innerclass>
+    <innerclass refid="structnanoflann_1_1L1__Adaptor" prot="public">nanoflann::L1_Adaptor</innerclass>
+    <innerclass refid="structnanoflann_1_1L2__Adaptor" prot="public">nanoflann::L2_Adaptor</innerclass>
+    <innerclass refid="structnanoflann_1_1L2__Simple__Adaptor" prot="public">nanoflann::L2_Simple_Adaptor</innerclass>
+    <innerclass refid="structnanoflann_1_1Metric" prot="public">nanoflann::Metric</innerclass>
+    <innerclass refid="structnanoflann_1_1metric__L1" prot="public">nanoflann::metric_L1</innerclass>
+    <innerclass refid="structnanoflann_1_1metric__L2" prot="public">nanoflann::metric_L2</innerclass>
+    <innerclass refid="structnanoflann_1_1metric__L2__Simple" prot="public">nanoflann::metric_L2_Simple</innerclass>
+    <innerclass refid="structnanoflann_1_1metric__SO2" prot="public">nanoflann::metric_SO2</innerclass>
+    <innerclass refid="structnanoflann_1_1metric__SO3" prot="public">nanoflann::metric_SO3</innerclass>
+    <innerclass refid="classnanoflann_1_1PooledAllocator" prot="public">nanoflann::PooledAllocator</innerclass>
+    <innerclass refid="classnanoflann_1_1RadiusResultSet" prot="public">nanoflann::RadiusResultSet</innerclass>
+    <innerclass refid="structnanoflann_1_1ResultItem" prot="public">nanoflann::ResultItem</innerclass>
+    <innerclass refid="classnanoflann_1_1RKNNResultSet" prot="public">nanoflann::RKNNResultSet</innerclass>
+    <innerclass refid="structnanoflann_1_1SearchParameters" prot="public">nanoflann::SearchParameters</innerclass>
+    <innerclass refid="structnanoflann_1_1SO2__Adaptor" prot="public">nanoflann::SO2_Adaptor</innerclass>
+    <innerclass refid="structnanoflann_1_1SO3__Adaptor" prot="public">nanoflann::SO3_Adaptor</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__param__grp_1ga514edb9f2a1fb99ebe5b564ad45ab966" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>KDTreeSingleIndexAdaptorFlags</name>
+        <enumvalue id="group__param__grp_1gga514edb9f2a1fb99ebe5b564ad45ab966a6adf97f83acf6453d4a6a4b1070f3754" prot="public">
+          <name>None</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__param__grp_1gga514edb9f2a1fb99ebe5b564ad45ab966a69b43dd4fff146e11ad3ca12d83f4b6c" prot="public">
+          <name>SkipInitialBuildIndex</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="769" column="1" bodyfile="include/nanoflann.hpp" bodystart="768" bodyend="772"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__nanoflann__grp_1ga8f0721b066194bc7bb511f7344beb460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T nanoflann::pi_const</definition>
+        <argsstring>()</argsstring>
+        <name>pi_const</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the PI constant (required to avoid MSVC missing symbols) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="87" column="3" bodyfile="include/nanoflann.hpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nanoflann__grp_1gaec2db17610419f390df8fce56bdc4892" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="structnanoflann_1_1has__resize" kindref="compound">has_resize</ref>&lt; Container &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt;has_resize&lt;Container&gt;::value, void&gt;::type nanoflann::resize</definition>
+        <argsstring>(Container &amp;c, const size_t nElements)</argsstring>
+        <name>resize</name>
+        <param>
+          <type>Container &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>nElements</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free function to resize a resizable object </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="122" column="40" bodyfile="include/nanoflann.hpp" bodystart="122" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="nanoflann_8hpp_1gaec2db17610419f390df8fce56bdc4892" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!<ref refid="structnanoflann_1_1has__resize" kindref="compound">has_resize</ref>&lt; Container &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt;!has_resize&lt;Container&gt;::value, void&gt;::type nanoflann::resize</definition>
+        <argsstring>(Container &amp;c, const size_t nElements)</argsstring>
+        <name>resize</name>
+        <param>
+          <type>Container &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>nElements</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free function that has no effects on non resizable containers (e.g. std::array) It raises an exception if the expected size does not match </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="134" column="5" bodyfile="include/nanoflann.hpp" bodystart="134" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nanoflann__grp_1gada9f760672baea3da3422260fb03c8aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="structnanoflann_1_1has__assign" kindref="compound">has_assign</ref>&lt; Container &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt;has_assign&lt;Container&gt;::value, void&gt;::type nanoflann::assign</definition>
+        <argsstring>(Container &amp;c, const size_t nElements, const T &amp;value)</argsstring>
+        <name>assign</name>
+        <param>
+          <type>Container &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>nElements</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free function to assign to a container </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="144" column="40" bodyfile="include/nanoflann.hpp" bodystart="144" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="nanoflann_8hpp_1gada9f760672baea3da3422260fb03c8aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!<ref refid="structnanoflann_1_1has__assign" kindref="compound">has_assign</ref>&lt; Container &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt;!has_assign&lt;Container&gt;::value, void&gt;::type nanoflann::assign</definition>
+        <argsstring>(Container &amp;c, const size_t nElements, const T &amp;value)</argsstring>
+        <name>assign</name>
+        <param>
+          <type>Container &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>nElements</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free function to assign to a std::array </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="155" column="5" bodyfile="include/nanoflann.hpp" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__loadsave__grp_1gafdb5ad1880fbb1decc61c337c6d25223" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void nanoflann::save_value</definition>
+        <argsstring>(std::ostream &amp;stream, const T &amp;value)</argsstring>
+        <name>save_value</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="423" column="6" bodyfile="include/nanoflann.hpp" bodystart="423" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="group__loadsave__grp_1ga6f0e9f2183a70ef551b135c81285a1f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void nanoflann::save_value</definition>
+        <argsstring>(std::ostream &amp;stream, const std::vector&lt; T &gt; &amp;value)</argsstring>
+        <name>save_value</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="429" column="6" bodyfile="include/nanoflann.hpp" bodystart="429" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="group__loadsave__grp_1ga0e46446b869ab24cc7217bd799b5e11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void nanoflann::load_value</definition>
+        <argsstring>(std::istream &amp;stream, T &amp;value)</argsstring>
+        <name>load_value</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="437" column="6" bodyfile="include/nanoflann.hpp" bodystart="437" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="group__loadsave__grp_1gab17a4bc99128fe5246e377f502dc7d46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void nanoflann::load_value</definition>
+        <argsstring>(std::istream &amp;stream, std::vector&lt; T &gt; &amp;value)</argsstring>
+        <name>load_value</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="443" column="6" bodyfile="include/nanoflann.hpp" bodystart="443" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="group__param__grp_1gab478857c523266285da4a1895a57b3e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::underlying_type&lt; KDTreeSingleIndexAdaptorFlags &gt;::type</type>
+        <definition>std::underlying_type&lt;KDTreeSingleIndexAdaptorFlags&gt;::type nanoflann::operator&amp;</definition>
+        <argsstring>(KDTreeSingleIndexAdaptorFlags lhs, KDTreeSingleIndexAdaptorFlags rhs)</argsstring>
+        <name>operator&amp;</name>
+        <param>
+          <type>KDTreeSingleIndexAdaptorFlags</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>KDTreeSingleIndexAdaptorFlags</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="774" column="36" bodyfile="include/nanoflann.hpp" bodystart="774" bodyend="780"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/nanoflann.hpp" line="81" column="1"/>
+  </compounddef>
+</doxygen>

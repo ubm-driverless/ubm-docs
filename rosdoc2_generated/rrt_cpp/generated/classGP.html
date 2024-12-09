@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class GP &mdash; rrt_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class RRTMainNode" href="classRRTMainNode.html" />
+    <link rel="prev" title="Class AngleOp" href="classAngleOp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            rrt_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_geos__io.html">Namespace geos::io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_std.html">Namespace std</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_std__chrono_literals.html">Namespace std::chrono_literals</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structAnyAnglePath.html">Struct AnyAnglePath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structRRTNode.html">Struct RRTNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structstd_1_1hash_3_01std_1_1tuple_3_01int_00_01int_01_4_01_4.html">Template Struct hash&lt; std::tuple&lt; int, int &gt; &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structTrajectory.html">Struct Trajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classAngleOp.html">Class AngleOp</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class GP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRRTMainNode.html">Class RRTMainNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThetaStar.html">Class ThetaStar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThetaStar_1_1Comparator.html">Class ThetaStar::Comparator</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1aca3bd2ad467e2fecea480c84b61d3ae6.html">Function __solver_fb_acc_profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a4f1f4be1bd157a3bd1e7fb27288d6f0f.html">Function __solver_fb_unclosed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_nn__search_8hpp_1a9b20cb03117e97499d09adf559ddfeb2.html">Function add_point_to_flann_tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a88b02369187dae959eb78c1cc47bf703.html">Function calc_ax_poss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a96d905a88bd72e193db451cc4d47322a.html">Function calc_vel_profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_curvature_8hpp_1a61d67ea7567e4d8a306ff4906924a6cf.html">Function compute_curvature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1abc32c0bf92e8134c7caf0acd0c77fdaf.html">Function compute_geodesic_distance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_rrt_8hpp_1a565a04f5d5bd308aa382c2b3992d812d.html">Function convert_output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1aa6f62f6f651486ac64571030ea53cd97.html">Function csv_to_mat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1aead580dd40cec5d476a1eaaf210c21e2.html">Function extract_column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1aa22d082f84c4557e9f25b29ad720f4e1.html">Function find_line_equation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1af74387c16b74283985c968d207f38212.html">Function find_x_axis_intersection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1a0e5619640a3a7525eb560c0518c741b5.html">Function find_y_one_intersection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1a28b05e89eb0ec086ec7bfb67bd707cde.html">Function found_best_x_near</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1a5feb8d66c15c32fec0d91f8dde86f7dd.html">Function found_mean_yaw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1aaf0a4f3ee9708f06cc01a6d65ab952d3.html">Function found_trajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_curvature_8hpp_1a8dad529e41af758658e1b8b978f8c55b.html">Function gradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_nn__search_8hpp_1a3d9d0e3d4904592004e921f6451480e3.html">Function is_already_inserted_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_nn__search_8hpp_1a7b2c55711253364d25a51c7a59bd25bc.html">Function is_already_inserted_xy_flann_tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a5acaa385b9593ce5ccbef797a093609a.html">Function parse_raceline_ini</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1a645dae98c1bee6221a0fe6de1af556c8.html">Function posq</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1ac225fdfea0d655b0ae39a26273e1fae0.html">Function rhombus_function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1a784af806dd0918a54f9c2118eb84ccf1.html">Function trapezoidal_function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="variable_rrt_8hpp_1ace7f7c015ed500d847ec0cb9fcf12be7.html">Variable ROOT_NODE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define_speed__profile_8hpp_1aab812a38f679f60166dad22f623630b0.html">Define ARMA_BLAS_OPENBLAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_speed__profile_8hpp_1a0570f42ba212b500fe9c27afc5bf8de6.html">Define ARMA_USE_BLAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_speed__profile_8hpp_1a764f9a9f83755beab38edca9fcdc7c46.html">Define ARMA_USE_LAPACK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_theta__star_8hpp_1a2760ab432671ac84142ffc272acd5180.html">Define NULL_PARENT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_theta__star_8hpp_1a217ad8485de2dcca79110f37d4da9688.html">Define OCCUPIED</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html">Typedef geos_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_rrt_8hpp_1ad364e8dea1dd6563f786cb44e7e1610b.html">Typedef TrajectoryPtr</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_rrt_cpp.html">Directory rrt_cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_curvature.hpp.html">File curvature.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_mean_yaw.hpp.html">File mean_yaw.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_nn_search.hpp.html">File nn_search.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_rrt.hpp.html">File rrt.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_rrt_node.hpp.html">File rrt_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_speed_profile.hpp.html">File speed_profile.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_steer.hpp.html">File steer.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_theta_star.hpp.html">File theta_star.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">rrt_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class GP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classGP.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-gp">
+<span id="exhale-class-classgp"></span><h1>Class GP<a class="headerlink" href="#class-gp" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_rrt_cpp_rrt.hpp.html#file-include-rrt-cpp-rrt-hpp"><span class="std std-ref">File rrt.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv42GP">
+<span id="_CPPv32GP"></span><span id="_CPPv22GP"></span><span id="GP"></span><span class="target" id="classGP"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GP</span></span></span><a class="headerlink" href="#_CPPv42GP" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP2GPERK2GP">
+<span id="_CPPv3N2GP2GPERK2GP"></span><span id="_CPPv2N2GP2GPERK2GP"></span><span id="GP::GP__GPCR"></span><span class="target" id="classGP_1a9ddb7f8b8ea592e2efa4f5cf57b0df7a"></span><span class="sig-name descname"><span class="n"><span class="pre">GP</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2GP2GPERK2GP" title="GP::GP"><span class="n"><span class="pre">GP</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N2GP2GPERK2GP" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2GPaSERK2GP">
+<span id="_CPPv3N2GPaSERK2GP"></span><span id="_CPPv2N2GPaSERK2GP"></span><span id="GP::assign-operator__GPCR"></span><span class="target" id="classGP_1ab9683363b3e0e247ed7effcda6a8692f"></span><a class="reference internal" href="#_CPPv42GP" title="GP"><span class="n"><span class="pre">GP</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv42GP" title="GP"><span class="n"><span class="pre">GP</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N2GPaSERK2GP" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP5w_maxEv">
+<span id="_CPPv3N2GP5w_maxEv"></span><span id="_CPPv2N2GP5w_maxEv"></span><span id="GP::w_max"></span><span class="target" id="classGP_1a9e82b17837a30266535bcf20752645d6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">w_max</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2GP5w_maxEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP13assert_paramsEv">
+<span id="_CPPv3N2GP13assert_paramsEv"></span><span id="_CPPv2N2GP13assert_paramsEv"></span><span id="GP::assert_params"></span><span class="target" id="classGP_1ae21e315bf9fef3bb29636334d92a7502"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assert_params</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2GP13assert_paramsEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP7get_objEv">
+<span id="_CPPv3N2GP7get_objEv"></span><span id="_CPPv2N2GP7get_objEv"></span><span id="GP::get_obj"></span><span class="target" id="classGP_1abd7d70cd034ecc46a2cc909ae12f8c25"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv42GP" title="GP"><span class="n"><span class="pre">GP</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_obj</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2GP7get_objEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP11strip_widthE">
+<span id="_CPPv3N2GP11strip_widthE"></span><span id="_CPPv2N2GP11strip_widthE"></span><span id="GP::strip_width__float"></span><span class="target" id="classGP_1ae1bc441af912bdced370270613af3ff0"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">strip_width</span></span></span><a class="headerlink" href="#_CPPv4N2GP11strip_widthE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP12n_iterationsE">
+<span id="_CPPv3N2GP12n_iterationsE"></span><span id="_CPPv2N2GP12n_iterationsE"></span><span id="GP::n_iterations__i"></span><span class="target" id="classGP_1a970e263ccd37f6a818a9ad8644f05f4b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">n_iterations</span></span></span><a class="headerlink" href="#_CPPv4N2GP12n_iterationsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP14eps_L2_squaredE">
+<span id="_CPPv3N2GP14eps_L2_squaredE"></span><span id="_CPPv2N2GP14eps_L2_squaredE"></span><span id="GP::eps_L2_squared__geos_t"></span><span class="target" id="classGP_1a2dcec4e155be02bb5c7fbbd79c97d67e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eps_L2_squared</span></span></span><a class="headerlink" href="#_CPPv4N2GP14eps_L2_squaredE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP15delta_R_squaredE">
+<span id="_CPPv3N2GP15delta_R_squaredE"></span><span id="_CPPv2N2GP15delta_R_squaredE"></span><span id="GP::delta_R_squared__geos_t"></span><span class="target" id="classGP_1a0ad0ad3fb3ac9d48dd31be815fe57779"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">delta_R_squared</span></span></span><a class="headerlink" href="#_CPPv4N2GP15delta_R_squaredE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP13max_neighborsE">
+<span id="_CPPv3N2GP13max_neighborsE"></span><span id="_CPPv2N2GP13max_neighborsE"></span><span id="GP::max_neighbors__i"></span><span class="target" id="classGP_1a6eefc3c94b904691dc78678cb39c5f7f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_neighbors</span></span></span><a class="headerlink" href="#_CPPv4N2GP13max_neighborsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP9eps_L2_eqE">
+<span id="_CPPv3N2GP9eps_L2_eqE"></span><span id="_CPPv2N2GP9eps_L2_eqE"></span><span id="GP::eps_L2_eq__geos_t"></span><span class="target" id="classGP_1ab23cee0059acf9b994b89f64ecb170f3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html#_CPPv46geos_t" title="geos_t"><span class="n"><span class="pre">geos_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eps_L2_eq</span></span></span><a class="headerlink" href="#_CPPv4N2GP9eps_L2_eqE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP18simplify_toleranceE">
+<span id="_CPPv3N2GP18simplify_toleranceE"></span><span id="_CPPv2N2GP18simplify_toleranceE"></span><span id="GP::simplify_tolerance__double"></span><span class="target" id="classGP_1ab598a85a697bf8b6e757f27c9cd6bc12"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">simplify_tolerance</span></span></span><a class="headerlink" href="#_CPPv4N2GP18simplify_toleranceE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP13buffer_windowE">
+<span id="_CPPv3N2GP13buffer_windowE"></span><span id="_CPPv2N2GP13buffer_windowE"></span><span id="GP::buffer_window__i"></span><span class="target" id="classGP_1a7c2bfa53cd42fa20e7167eb9c31ae376"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buffer_window</span></span></span><a class="headerlink" href="#_CPPv4N2GP13buffer_windowE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP15mean_yaw_windowE">
+<span id="_CPPv3N2GP15mean_yaw_windowE"></span><span id="_CPPv2N2GP15mean_yaw_windowE"></span><span id="GP::mean_yaw_window__i"></span><span class="target" id="classGP_1a44aa4e73f193f48e1f762ad94fa76066"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mean_yaw_window</span></span></span><a class="headerlink" href="#_CPPv4N2GP15mean_yaw_windowE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP14buffer_retriesE">
+<span id="_CPPv3N2GP14buffer_retriesE"></span><span id="_CPPv2N2GP14buffer_retriesE"></span><span id="GP::buffer_retries__i"></span><span class="target" id="classGP_1a23f2f3e6fc080dc7cd3e0e465940f22d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buffer_retries</span></span></span><a class="headerlink" href="#_CPPv4N2GP14buffer_retriesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP20use_rhombus_functionE">
+<span id="_CPPv3N2GP20use_rhombus_functionE"></span><span id="_CPPv2N2GP20use_rhombus_functionE"></span><span id="GP::use_rhombus_function__b"></span><span class="target" id="classGP_1a5ed3a8c69f7814ed4de4efae266aafc9"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">use_rhombus_function</span></span></span><a class="headerlink" href="#_CPPv4N2GP20use_rhombus_functionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP24trapezoidal_one_fractionE">
+<span id="_CPPv3N2GP24trapezoidal_one_fractionE"></span><span id="_CPPv2N2GP24trapezoidal_one_fractionE"></span><span id="GP::trapezoidal_one_fraction__float"></span><span class="target" id="classGP_1a777a6f8cc640c418900273002b912b58"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trapezoidal_one_fraction</span></span></span><a class="headerlink" href="#_CPPv4N2GP24trapezoidal_one_fractionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP20use_orientation_biasE">
+<span id="_CPPv3N2GP20use_orientation_biasE"></span><span id="_CPPv2N2GP20use_orientation_biasE"></span><span id="GP::use_orientation_bias__b"></span><span class="target" id="classGP_1a835ce8833408e6e7141b80e29b5eabc2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">use_orientation_bias</span></span></span><a class="headerlink" href="#_CPPv4N2GP20use_orientation_biasE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP16orientation_biasE">
+<span id="_CPPv3N2GP16orientation_biasE"></span><span id="_CPPv2N2GP16orientation_biasE"></span><span id="GP::orientation_bias__float"></span><span class="target" id="classGP_1a644411e3e38ca1fad327a520c33ee917"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">orientation_bias</span></span></span><a class="headerlink" href="#_CPPv4N2GP16orientation_biasE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP22enable_X_free_samplingE">
+<span id="_CPPv3N2GP22enable_X_free_samplingE"></span><span id="_CPPv2N2GP22enable_X_free_samplingE"></span><span id="GP::enable_X_free_sampling__b"></span><span class="target" id="classGP_1afd288fccbdff28f50edbaa168c453c14"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable_X_free_sampling</span></span></span><a class="headerlink" href="#_CPPv4N2GP22enable_X_free_samplingE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP26X_free_interval_over_nodesE">
+<span id="_CPPv3N2GP26X_free_interval_over_nodesE"></span><span id="_CPPv2N2GP26X_free_interval_over_nodesE"></span><span id="GP::X_free_interval_over_nodes__i"></span><span class="target" id="classGP_1acc92c723e20fe60b34069def52626098"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">X_free_interval_over_nodes</span></span></span><a class="headerlink" href="#_CPPv4N2GP26X_free_interval_over_nodesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP31X_free_interval_over_iterationsE">
+<span id="_CPPv3N2GP31X_free_interval_over_iterationsE"></span><span id="_CPPv2N2GP31X_free_interval_over_iterationsE"></span><span id="GP::X_free_interval_over_iterations__i"></span><span class="target" id="classGP_1a2656b304bdb25e0409c21c0e3a96d478"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">X_free_interval_over_iterations</span></span></span><a class="headerlink" href="#_CPPv4N2GP31X_free_interval_over_iterationsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP18goal_region_radiusE">
+<span id="_CPPv3N2GP18goal_region_radiusE"></span><span id="_CPPv2N2GP18goal_region_radiusE"></span><span id="GP::goal_region_radius__float"></span><span class="target" id="classGP_1a648f4f6eb6075375cec536380fffe592"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">goal_region_radius</span></span></span><a class="headerlink" href="#_CPPv4N2GP18goal_region_radiusE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP3w_eE">
+<span id="_CPPv3N2GP3w_eE"></span><span id="_CPPv2N2GP3w_eE"></span><span id="GP::w_e__float"></span><span class="target" id="classGP_1ae2d51830749df3fe2bc7b8248ff47344"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">w_e</span></span></span><a class="headerlink" href="#_CPPv4N2GP3w_eE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP7w_thetaE">
+<span id="_CPPv3N2GP7w_thetaE"></span><span id="_CPPv2N2GP7w_thetaE"></span><span id="GP::w_theta__float"></span><span class="target" id="classGP_1a812f21181920800a8862de613b32b6ab"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">w_theta</span></span></span><a class="headerlink" href="#_CPPv4N2GP7w_thetaE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP3w_dE">
+<span id="_CPPv3N2GP3w_dE"></span><span id="_CPPv2N2GP3w_dE"></span><span id="GP::w_d__float"></span><span class="target" id="classGP_1ae1674c0cd67c2481ff779e99787cacc2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">w_d</span></span></span><a class="headerlink" href="#_CPPv4N2GP3w_dE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP3w_qE">
+<span id="_CPPv3N2GP3w_qE"></span><span id="_CPPv2N2GP3w_qE"></span><span id="GP::w_q__float"></span><span class="target" id="classGP_1a64df80ebece0ea717d0de2c6e4413385"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">w_q</span></span></span><a class="headerlink" href="#_CPPv4N2GP3w_qE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP2dtE">
+<span id="_CPPv3N2GP2dtE"></span><span id="_CPPv2N2GP2dtE"></span><span id="GP::dt__float"></span><span class="target" id="classGP_1ad9923e1797eeffbb42aeaec398b9362d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dt</span></span></span><a class="headerlink" href="#_CPPv4N2GP2dtE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP7k_alphaE">
+<span id="_CPPv3N2GP7k_alphaE"></span><span id="_CPPv2N2GP7k_alphaE"></span><span id="GP::k_alpha__float"></span><span class="target" id="classGP_1ac5e31ebee6e8cca74c03b66a57099e35"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">k_alpha</span></span></span><a class="headerlink" href="#_CPPv4N2GP7k_alphaE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP5k_phiE">
+<span id="_CPPv3N2GP5k_phiE"></span><span id="_CPPv2N2GP5k_phiE"></span><span id="GP::k_phi__float"></span><span class="target" id="classGP_1aca8809a501b1a4f306d58e920edd6393"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">k_phi</span></span></span><a class="headerlink" href="#_CPPv4N2GP5k_phiE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP3k_vE">
+<span id="_CPPv3N2GP3k_vE"></span><span id="_CPPv2N2GP3k_vE"></span><span id="GP::k_v__float"></span><span class="target" id="classGP_1aebc564ec80dc727b8e8d48adc3c064af"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">k_v</span></span></span><a class="headerlink" href="#_CPPv4N2GP3k_vE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP7k_gammaE">
+<span id="_CPPv3N2GP7k_gammaE"></span><span id="_CPPv2N2GP7k_gammaE"></span><span id="GP::k_gamma__float"></span><span class="target" id="classGP_1a8dcc93e43d0aeae28f1b9952fe210aba"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">k_gamma</span></span></span><a class="headerlink" href="#_CPPv4N2GP7k_gammaE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP2wbE">
+<span id="_CPPv3N2GP2wbE"></span><span id="_CPPv2N2GP2wbE"></span><span id="GP::wb__float"></span><span class="target" id="classGP_1a8eaf4002d4bc54996813f56752295982"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wb</span></span></span><a class="headerlink" href="#_CPPv4N2GP2wbE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP5speedE">
+<span id="_CPPv3N2GP5speedE"></span><span id="_CPPv2N2GP5speedE"></span><span id="GP::speed__float"></span><span class="target" id="classGP_1ab7e27693426a42ec63f021e9f04b0441"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">speed</span></span></span><a class="headerlink" href="#_CPPv4N2GP5speedE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP11steer_limitE">
+<span id="_CPPv3N2GP11steer_limitE"></span><span id="_CPPv2N2GP11steer_limitE"></span><span id="GP::steer_limit__float"></span><span class="target" id="classGP_1ae9b7e0297e702c67870745e7bb82b1b6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">steer_limit</span></span></span><a class="headerlink" href="#_CPPv4N2GP11steer_limitE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP29enable_angular_velocity_limitE">
+<span id="_CPPv3N2GP29enable_angular_velocity_limitE"></span><span id="_CPPv2N2GP29enable_angular_velocity_limitE"></span><span id="GP::enable_angular_velocity_limit__b"></span><span class="target" id="classGP_1a96fbd364ecb20e173c1f5eaa545d08a0"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable_angular_velocity_limit</span></span></span><a class="headerlink" href="#_CPPv4N2GP29enable_angular_velocity_limitE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP5k_rhoE">
+<span id="_CPPv3N2GP5k_rhoE"></span><span id="_CPPv2N2GP5k_rhoE"></span><span id="GP::k_rho__float"></span><span class="target" id="classGP_1acf68ff105858c1db161b10d5515a2158"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">k_rho</span></span></span><a class="headerlink" href="#_CPPv4N2GP5k_rhoE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP20k_max_num_iterationsE">
+<span id="_CPPv3N2GP20k_max_num_iterationsE"></span><span id="_CPPv2N2GP20k_max_num_iterationsE"></span><span id="GP::k_max_num_iterations__float"></span><span class="target" id="classGP_1a4733578f5e0475b6cf9c9f7144db99b7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">k_max_num_iterations</span></span></span><a class="headerlink" href="#_CPPv4N2GP20k_max_num_iterationsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP13yaw_toleranceE">
+<span id="_CPPv3N2GP13yaw_toleranceE"></span><span id="_CPPv2N2GP13yaw_toleranceE"></span><span id="GP::yaw_tolerance__float"></span><span class="target" id="classGP_1ae1c5085789f48cdaf652841ba0ffaebd"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">yaw_tolerance</span></span></span><a class="headerlink" href="#_CPPv4N2GP13yaw_toleranceE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP17downsample_factorE">
+<span id="_CPPv3N2GP17downsample_factorE"></span><span id="_CPPv2N2GP17downsample_factorE"></span><span id="GP::downsample_factor__i"></span><span class="target" id="classGP_1a33795032760d7be3986d8958e32f45df"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">downsample_factor</span></span></span><a class="headerlink" href="#_CPPv4N2GP17downsample_factorE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP10drag_coeffE">
+<span id="_CPPv3N2GP10drag_coeffE"></span><span id="_CPPv2N2GP10drag_coeffE"></span><span id="GP::drag_coeff__float"></span><span class="target" id="classGP_1ac283cbd810e01330ab57a4c7b08252d6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drag_coeff</span></span></span><a class="headerlink" href="#_CPPv4N2GP10drag_coeffE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP5m_vehE">
+<span id="_CPPv3N2GP5m_vehE"></span><span id="_CPPv2N2GP5m_vehE"></span><span id="GP::m_veh__float"></span><span class="target" id="classGP_1afa17dfc516173734782cec6e38ed16b3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_veh</span></span></span><a class="headerlink" href="#_CPPv4N2GP5m_vehE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP5v_maxE">
+<span id="_CPPv3N2GP5v_maxE"></span><span id="_CPPv2N2GP5v_maxE"></span><span id="GP::v_max__float"></span><span class="target" id="classGP_1a5563e918c8ad538af721e17c8ec39808"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">v_max</span></span></span><a class="headerlink" href="#_CPPv4N2GP5v_maxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2GP13dyn_model_expE">
+<span id="_CPPv3N2GP13dyn_model_expE"></span><span id="_CPPv2N2GP13dyn_model_expE"></span><span id="GP::dyn_model_exp__float"></span><span class="target" id="classGP_1acd1c0d7af8858af0b75ae374c9a0afe5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dyn_model_exp</span></span></span><a class="headerlink" href="#_CPPv4N2GP13dyn_model_expE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classAngleOp.html" class="btn btn-neutral float-left" title="Class AngleOp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classRRTMainNode.html" class="btn btn-neutral float-right" title="Class RRTMainNode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;rrt_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

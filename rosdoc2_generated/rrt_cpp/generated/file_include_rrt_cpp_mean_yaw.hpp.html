@@ -1,0 +1,235 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File mean_yaw.hpp &mdash; rrt_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="File nn_search.hpp" href="file_include_rrt_cpp_nn_search.hpp.html" />
+    <link rel="prev" title="File curvature.hpp" href="file_include_rrt_cpp_curvature.hpp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            rrt_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_geos__io.html">Namespace geos::io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_std.html">Namespace std</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_std__chrono_literals.html">Namespace std::chrono_literals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structAnyAnglePath.html">Struct AnyAnglePath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structRRTNode.html">Struct RRTNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structstd_1_1hash_3_01std_1_1tuple_3_01int_00_01int_01_4_01_4.html">Template Struct hash&lt; std::tuple&lt; int, int &gt; &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structTrajectory.html">Struct Trajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classAngleOp.html">Class AngleOp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classGP.html">Class GP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRRTMainNode.html">Class RRTMainNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThetaStar.html">Class ThetaStar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThetaStar_1_1Comparator.html">Class ThetaStar::Comparator</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1aca3bd2ad467e2fecea480c84b61d3ae6.html">Function __solver_fb_acc_profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a4f1f4be1bd157a3bd1e7fb27288d6f0f.html">Function __solver_fb_unclosed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_nn__search_8hpp_1a9b20cb03117e97499d09adf559ddfeb2.html">Function add_point_to_flann_tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a88b02369187dae959eb78c1cc47bf703.html">Function calc_ax_poss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a96d905a88bd72e193db451cc4d47322a.html">Function calc_vel_profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_curvature_8hpp_1a61d67ea7567e4d8a306ff4906924a6cf.html">Function compute_curvature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1abc32c0bf92e8134c7caf0acd0c77fdaf.html">Function compute_geodesic_distance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_rrt_8hpp_1a565a04f5d5bd308aa382c2b3992d812d.html">Function convert_output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1aa6f62f6f651486ac64571030ea53cd97.html">Function csv_to_mat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1aead580dd40cec5d476a1eaaf210c21e2.html">Function extract_column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1aa22d082f84c4557e9f25b29ad720f4e1.html">Function find_line_equation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1af74387c16b74283985c968d207f38212.html">Function find_x_axis_intersection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1a0e5619640a3a7525eb560c0518c741b5.html">Function find_y_one_intersection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1a28b05e89eb0ec086ec7bfb67bd707cde.html">Function found_best_x_near</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1a5feb8d66c15c32fec0d91f8dde86f7dd.html">Function found_mean_yaw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1aaf0a4f3ee9708f06cc01a6d65ab952d3.html">Function found_trajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_curvature_8hpp_1a8dad529e41af758658e1b8b978f8c55b.html">Function gradient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_nn__search_8hpp_1a3d9d0e3d4904592004e921f6451480e3.html">Function is_already_inserted_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_nn__search_8hpp_1a7b2c55711253364d25a51c7a59bd25bc.html">Function is_already_inserted_xy_flann_tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_speed__profile_8hpp_1a5acaa385b9593ce5ccbef797a093609a.html">Function parse_raceline_ini</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_steer_8hpp_1a645dae98c1bee6221a0fe6de1af556c8.html">Function posq</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1ac225fdfea0d655b0ae39a26273e1fae0.html">Function rhombus_function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mean__yaw_8hpp_1a784af806dd0918a54f9c2118eb84ccf1.html">Function trapezoidal_function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="variable_rrt_8hpp_1ace7f7c015ed500d847ec0cb9fcf12be7.html">Variable ROOT_NODE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define_speed__profile_8hpp_1aab812a38f679f60166dad22f623630b0.html">Define ARMA_BLAS_OPENBLAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_speed__profile_8hpp_1a0570f42ba212b500fe9c27afc5bf8de6.html">Define ARMA_USE_BLAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_speed__profile_8hpp_1a764f9a9f83755beab38edca9fcdc7c46.html">Define ARMA_USE_LAPACK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_theta__star_8hpp_1a2760ab432671ac84142ffc272acd5180.html">Define NULL_PARENT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_theta__star_8hpp_1a217ad8485de2dcca79110f37d4da9688.html">Define OCCUPIED</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_rrt_8hpp_1a4ab137b29c4ea29095b624dee14f9025.html">Typedef geos_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_rrt_8hpp_1ad364e8dea1dd6563f786cb44e7e1610b.html">Typedef TrajectoryPtr</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_rrt_cpp.html">Directory rrt_cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#files">Files</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_curvature.hpp.html">File curvature.hpp</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">File mean_yaw.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_nn_search.hpp.html">File nn_search.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_rrt.hpp.html">File rrt.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_rrt_node.hpp.html">File rrt_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_speed_profile.hpp.html">File speed_profile.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_steer.hpp.html">File steer.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_rrt_cpp_theta_star.hpp.html">File theta_star.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">rrt_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">File mean_yaw.hpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/file_include_rrt_cpp_mean_yaw.hpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-mean-yaw-hpp">
+<span id="file-include-rrt-cpp-mean-yaw-hpp"></span><h1>File mean_yaw.hpp<a class="headerlink" href="#file-mean-yaw-hpp" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="dir_include_rrt_cpp.html#dir-include-rrt-cpp"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">include/rrt_cpp</span></code>)</p>
+<p>This header file contains the functions declarations related to computing the mean yaw of a just sampled point considering the any-angle path.</p>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-include-rrt-cpp-mean-yaw-hpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">include/rrt_cpp/mean_yaw.hpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id3">Functions</a></p></li>
+</ul>
+</nav>
+<section id="definition-include-rrt-cpp-mean-yaw-hpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">include/rrt_cpp/mean_yaw.hpp</span></code>)<a class="headerlink" href="#definition-include-rrt-cpp-mean-yaw-hpp" title="Link to this heading"></a></h2>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">geos/operation/buffer/OffsetCurve.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geos/simplify/DouglasPeuckerLineSimplifier.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rrt_cpp/rrt.hpp</span></code> (<a class="reference internal" href="file_include_rrt_cpp_rrt.hpp.html#file-include-rrt-cpp-rrt-hpp"><span class="std std-ref">File rrt.hpp</span></a>)</p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_mean__yaw_8hpp_1aa22d082f84c4557e9f25b29ad720f4e1.html#exhale-function-mean-yaw-8hpp-1aa22d082f84c4557e9f25b29ad720f4e1"><span class="std std-ref">Function find_line_equation</span></a></p></li>
+<li><p><a class="reference internal" href="function_mean__yaw_8hpp_1af74387c16b74283985c968d207f38212.html#exhale-function-mean-yaw-8hpp-1af74387c16b74283985c968d207f38212"><span class="std std-ref">Function find_x_axis_intersection</span></a></p></li>
+<li><p><a class="reference internal" href="function_mean__yaw_8hpp_1a0e5619640a3a7525eb560c0518c741b5.html#exhale-function-mean-yaw-8hpp-1a0e5619640a3a7525eb560c0518c741b5"><span class="std std-ref">Function find_y_one_intersection</span></a></p></li>
+<li><p><a class="reference internal" href="function_mean__yaw_8hpp_1a5feb8d66c15c32fec0d91f8dde86f7dd.html#exhale-function-mean-yaw-8hpp-1a5feb8d66c15c32fec0d91f8dde86f7dd"><span class="std std-ref">Function found_mean_yaw</span></a></p></li>
+<li><p><a class="reference internal" href="function_mean__yaw_8hpp_1ac225fdfea0d655b0ae39a26273e1fae0.html#exhale-function-mean-yaw-8hpp-1ac225fdfea0d655b0ae39a26273e1fae0"><span class="std std-ref">Function rhombus_function</span></a></p></li>
+<li><p><a class="reference internal" href="function_mean__yaw_8hpp_1a784af806dd0918a54f9c2118eb84ccf1.html#exhale-function-mean-yaw-8hpp-1a784af806dd0918a54f9c2118eb84ccf1"><span class="std std-ref">Function trapezoidal_function</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="file_include_rrt_cpp_curvature.hpp.html" class="btn btn-neutral float-left" title="File curvature.hpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="file_include_rrt_cpp_nn_search.hpp.html" class="btn btn-neutral float-right" title="File nn_search.hpp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;rrt_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

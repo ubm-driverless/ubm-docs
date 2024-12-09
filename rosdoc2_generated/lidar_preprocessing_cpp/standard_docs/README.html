@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>README &mdash; lidar_preprocessing_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="PACKAGE" href="PACKAGE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            lidar_preprocessing_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../generated/index.html">C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generated/index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/index.html#full-c-api">Full C++ API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/namespace_lidarfilter.html">Namespace lidarfilter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/function_lidarfilter_8hpp_1a167ac08d1a2ff92ded45000ee28a3dcb.html">Function lidarfilter::central_linspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/function_lidarfilter_8hpp_1a3104f2ff02f65e537b8127f5ff359529.html">Function lidarfilter::mean_convolution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/function_lidarfilter_8hpp_1a3736c74e1640fc1035a029d21e792230.html">Function lidarfilter::mean_convolution_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/function_lidarfilter_8hpp_1a8e8fedbc4f3899a438bc8c911668c6d1.html">Function lidarfilter::medianFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/function_lidarfilter_8hpp_1abb2d5cd2f49a7b6464e6eb779a0d3cb8.html">Function lidarfilter::outliers_filtering</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/dir_include.html">Directory include</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/file_include_lidarfilter.hpp.html">File lidarfilter.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../standards.html">Standard Documents</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lidar-preprocessing-node">Lidar Preprocessing Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#to-start-the-algorithm">To Start the algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subscriptions-and-publications">Subscriptions and Publications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main-operations">Main operations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">lidar_preprocessing_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../standards.html">Standard Documents</a></li>
+      <li class="breadcrumb-item active">README</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/standard_docs/README.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="readme">
+<h1>README<a class="headerlink" href="#readme" title="Link to this heading"></a></h1>
+<section id="lidar-preprocessing-node">
+<h2>Lidar Preprocessing Node<a class="headerlink" href="#lidar-preprocessing-node" title="Link to this heading"></a></h2>
+<p>This ROS 2 node is designed to preprocess LiDAR data by applying various filters and transformations. The node takes raw LiDAR scan data, processes it to remove noise and outliers, and publishes the refined data for further use. The main filtering techniques used include outlier filtering, median filtering, and mean convolution.</p>
+<section id="to-start-the-algorithm">
+<h3>To Start the algorithm<a class="headerlink" href="#to-start-the-algorithm" title="Link to this heading"></a></h3>
+<p>The algorithm is starded by default in the “bringup.py” launch file</p>
+</section>
+<section id="subscriptions-and-publications">
+<h3>Subscriptions and Publications<a class="headerlink" href="#subscriptions-and-publications" title="Link to this heading"></a></h3>
+<p>Subscriber:</p>
+<ul class="simple">
+<li><p>/scan: The node subscribes to this topic to receive raw LiDAR scan data. The topic name can be changed using the scan_topic parameter.</p></li>
+</ul>
+<p>Publisher:</p>
+<ul class="simple">
+<li><p>/scan_preprocessed: The node publishes the preprocessed LiDAR scan data to this topic. The topic name can be changed using the scan_preprocessed_topic parameter.</p></li>
+</ul>
+</section>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<p>The following parameters can be configured:</p>
+<ul class="simple">
+<li><p>max_range: Maximum allowable range for LiDAR points. Points beyond this range will be clamped. Default is 10.0.</p></li>
+<li><p>min_range: Minimum allowable range for LiDAR points. Points below this range will be clamped. Default is 0.05.</p></li>
+<li><p>mean_filter_size: Size of the kernel used for mean convolution. Default is 31.</p></li>
+<li><p>number_of_mean_filter: Number of times the mean filter should be applied. Default is 1.</p></li>
+<li><p>median_filter_window: Window size for the median filter. Default is 5.</p></li>
+<li><p>turn_on_median_filter: Boolean flag to enable or disable median filtering. Default is false.</p></li>
+<li><p>scan_topic: Topic name for the incoming raw LiDAR scan data. Default is /scan.</p></li>
+<li><p>scan_preprocessed_topic: Topic name for the outgoing preprocessed LiDAR scan data. Default is /scan_preprocessed.</p></li>
+<li><p>car_name: Name of the vehicle, used for special processing. Default is philly.</p></li>
+</ul>
+</section>
+<section id="main-operations">
+<h3>Main operations<a class="headerlink" href="#main-operations" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Outlier Filtering: Outlier filtering is applied to remove LiDAR points that exceed the max_range. Points detected as outliers are replaced by interpolated values based on their neighboring points. It cannot be turned off from the parameters.</p></li>
+<li><p>Clipping LiDAR values: The ranges are clipped between min_range and max_range. It cannot be turned off from the parameters.</p></li>
+<li><p>Median Filter: The median filter is applied to smooth the LiDAR data. It is particularly useful for removing noise and small spikes in the data. The window size for the filter is controlled by the median_filter_window parameter. Median filtering can be enabled or disabled using the turn_on_median_filter parameter.</p></li>
+<li><p>Mean Convolution: The mean convolution filter is applied to further smooth the LiDAR data. This filter is applied number_of_mean_filter times using a kernel of size mean_filter_size. It helps in reducing noise and producing a more stable output.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="PACKAGE.html" class="btn btn-neutral float-left" title="PACKAGE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;lidar_preprocessing_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="steer_8hpp" kind="file" language="C++">
+    <compoundname>steer.hpp</compoundname>
+    <includes refid="rrt_8hpp" local="no">rrt_cpp/rrt.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>include/rrt_cpp/steer.hpp</label>
+        <link refid="steer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>geos/operation/buffer/BufferParameters.h</label>
+      </node>
+      <node id="3">
+        <label>flann/flann.hpp</label>
+      </node>
+      <node id="8">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="7">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>rrt_cpp/rrt.hpp</label>
+        <link refid="rrt_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>random</label>
+      </node>
+      <node id="10">
+        <label>geos/io/WKTReader.h</label>
+      </node>
+      <node id="6">
+        <label>sstream</label>
+      </node>
+      <node id="9">
+        <label>geos.h</label>
+      </node>
+      <node id="11">
+        <label>geos/io/WKTWriter.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="steer_8hpp_1a645dae98c1bee6221a0fe6de1af556c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TrajectoryPtr</type>
+        <definition>TrajectoryPtr posq</definition>
+        <argsstring>(float x_start, float y_start, float x_goal, float y_goal, float yaw_start, float yaw_goal, float &amp;cost)</argsstring>
+        <name>posq</name>
+        <param>
+          <type>float</type>
+          <declname>x_start</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y_start</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x_goal</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y_goal</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yaw_start</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yaw_goal</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/steer.hpp" line="12" column="15" declfile="include/rrt_cpp/steer.hpp" declline="12" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="steer_8hpp_1a28b05e89eb0ec086ec7bfb67bd707cde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool found_best_x_near</definition>
+        <argsstring>(const std::vector&lt; std::reference_wrapper&lt; const RRTNode &gt;&gt; &amp;X_near, const RRTNode &amp;x_rand, std::reference_wrapper&lt; const RRTNode &gt; &amp;x_near, TrajectoryPtr &amp;trajectory, float &amp;cost)</argsstring>
+        <name>found_best_x_near</name>
+        <param>
+          <type>const std::vector&lt; std::reference_wrapper&lt; const <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &gt;&gt; &amp;</type>
+          <declname>X_near</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &amp;</type>
+          <declname>x_rand</declname>
+        </param>
+        <param>
+          <type>std::reference_wrapper&lt; const <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &gt; &amp;</type>
+          <declname>x_near</declname>
+        </param>
+        <param>
+          <type>TrajectoryPtr &amp;</type>
+          <declname>trajectory</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/steer.hpp" line="14" column="6" declfile="include/rrt_cpp/steer.hpp" declline="14" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="steer_8hpp_1abc32c0bf92e8134c7caf0acd0c77fdaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float compute_geodesic_distance</definition>
+        <argsstring>(const RRTNode &amp;x1, const RRTNode &amp;x2)</argsstring>
+        <name>compute_geodesic_distance</name>
+        <param>
+          <type>const <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &amp;</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &amp;</type>
+          <declname>x2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/steer.hpp" line="20" column="14" bodyfile="include/rrt_cpp/steer.hpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="steer_8hpp_1aaf0a4f3ee9708f06cc01a6d65ab952d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool found_trajectory</definition>
+        <argsstring>(const RRTNode &amp;start, const RRTNode &amp;goal, TrajectoryPtr &amp;trajectory, float &amp;cost)</argsstring>
+        <name>found_trajectory</name>
+        <param>
+          <type>const <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &amp;</type>
+          <declname>goal</declname>
+        </param>
+        <param>
+          <type>TrajectoryPtr &amp;</type>
+          <declname>trajectory</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/steer.hpp" line="25" column="13" bodyfile="include/rrt_cpp/steer.hpp" bodystart="25" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This header file contains the functions declarations related to computing the trajectory between two RRT nodes and its real cost. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rrt_cpp/steer.hpp"/>
+  </compounddef>
+</doxygen>

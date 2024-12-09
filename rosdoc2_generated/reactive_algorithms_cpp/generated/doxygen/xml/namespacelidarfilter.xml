@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacelidarfilter" kind="namespace" language="C++">
+    <compoundname>lidarfilter</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lidarfilter_8hpp_1a3104f2ff02f65e537b8127f5ff359529" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; lidarfilter::mean_convolution</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;signal, const int kernel_size)</argsstring>
+        <name>mean_convolution</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>kernel_size</declname>
+        </param>
+        <briefdescription>
+<para>Apply a mean convolution of size kernel_size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1D array of floats to be filtered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kernel_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>kernel size of the mean convolution </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1D filtered vector of the same dimension of the input </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidarfilter.hpp" line="27" column="17" bodyfile="include/lidarfilter.hpp" bodystart="27" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="lidarfilter_8hpp_1a74339d9062f3b73574f089faacf5a967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; lidarfilter::mean_convolution_box</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;signal, const int kernel_size)</argsstring>
+        <name>mean_convolution_box</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>kernel_size</declname>
+        </param>
+        <briefdescription>
+<para>Apply a mean convolution of size kernel_size using box method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1D array of floats to be filtered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kernel_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>kernel size of the mean convolution </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1D filtered vector of the same dimension of the input </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidarfilter.hpp" line="73" column="17" bodyfile="include/lidarfilter.hpp" bodystart="73" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="lidarfilter_8hpp_1a3655bbe05cf4da6af01fbc6acfce6452" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; lidarfilter::medianFilter</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;signal, const int window_size)</argsstring>
+        <name>medianFilter</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>window_size</declname>
+        </param>
+        <briefdescription>
+<para>Apply a median filter of window window_size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Warning: High computation time! use with small window_size!!!!</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1D array of floats to be filtered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>window_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size o the window </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1D filtered vector of the same dimension of the input </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidarfilter.hpp" line="135" column="17" bodyfile="include/lidarfilter.hpp" bodystart="135" bodyend="192"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/lidarfilter.hpp" line="18" column="21"/>
+  </compounddef>
+</doxygen>

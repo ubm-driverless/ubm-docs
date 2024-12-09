@@ -1,0 +1,1548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classRRTMainNode" kind="class" language="C++" prot="public">
+    <compoundname>RRTMainNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRRTMainNode_1a93d7d5d22368a9f8f17e025b6f5e6e9a" prot="private" static="no" mutable="no">
+        <type>rclcpp::Clock::SharedPtr</type>
+        <definition>rclcpp::Clock::SharedPtr RRTMainNode::clock</definition>
+        <argsstring></argsstring>
+        <name>clock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="37" column="30" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a5a5d1d763904f7f67bcf2d2d5833d33f" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string RRTMainNode::MAP_FILEPATH</definition>
+        <argsstring></argsstring>
+        <name>MAP_FILEPATH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="39" column="23" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a12702abad85c0bf18ac3d8f5d21dac8a" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string RRTMainNode::MAP_YAMLPATH</definition>
+        <argsstring></argsstring>
+        <name>MAP_YAMLPATH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="40" column="23" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ad7679e545a74e238492fe54368271595" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool RRTMainNode::VISUALIZE_ROI</definition>
+        <argsstring></argsstring>
+        <name>VISUALIZE_ROI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="41" column="16" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a506f7781628b0fa433b220a86f9d6e08" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool RRTMainNode::VISUALIZE_ROI_ON_MAP</definition>
+        <argsstring></argsstring>
+        <name>VISUALIZE_ROI_ON_MAP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="42" column="16" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a8c64cfd121841737a7776854a15e8c47" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int RRTMainNode::RACELINE_POINTS_BEFORE</definition>
+        <argsstring></argsstring>
+        <name>RACELINE_POINTS_BEFORE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="43" column="15" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a1ea8529e99387f74e13294e6a69e6d89" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int RRTMainNode::RACELINE_POINTS_AFTER</definition>
+        <argsstring></argsstring>
+        <name>RACELINE_POINTS_AFTER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="44" column="15" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a2e02af0fe6eafe53dc753cd798ef9d20" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int RRTMainNode::RRT_GOAL_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>RRT_GOAL_OFFSET</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="45" column="15" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a5587a94e67c9cedd964136852fef33a6" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int RRTMainNode::TRACK_DILATION_SHAPE</definition>
+        <argsstring></argsstring>
+        <name>TRACK_DILATION_SHAPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="46" column="15" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a23404ac3024597f64a1092afb0de74fc" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int RRTMainNode::TRACK_DILATION_SIZE</definition>
+        <argsstring></argsstring>
+        <name>TRACK_DILATION_SIZE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="47" column="15" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1aadb61ce9daf9d90d4c027ab3a5b5aeca" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float RRTMainNode::OBSTACLE_DILATION_SIZE</definition>
+        <argsstring></argsstring>
+        <name>OBSTACLE_DILATION_SIZE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="48" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a48211fadd24b2d596d4282795df152be" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float RRTMainNode::MIN_DISTANCE_TO_OBSTACLE</definition>
+        <argsstring></argsstring>
+        <name>MIN_DISTANCE_TO_OBSTACLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="49" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1acc358555f5b4a8d8616a0a461172e40c" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string RRTMainNode::TOPIC_FOR_REAL_POSITION</definition>
+        <argsstring></argsstring>
+        <name>TOPIC_FOR_REAL_POSITION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="50" column="23" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a92eca80c443b95852f6f53114aaa2c1f" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int RRTMainNode::DISABLE_PRINT_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>DISABLE_PRINT_TIMEOUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="51" column="15" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ace5fca24166326c85d415967ef56f661" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RRTMainNode::check_min_distance_to_obstacle</definition>
+        <argsstring></argsstring>
+        <name>check_min_distance_to_obstacle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="53" column="10" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a8f71c7f9519ecda7c6ea278d2223fa74" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string RRTMainNode::slow_down_topic</definition>
+        <argsstring></argsstring>
+        <name>slow_down_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="54" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ad84c39150a5ee230418f1fea761d0f62" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RRTMainNode::send_slow_down</definition>
+        <argsstring></argsstring>
+        <name>send_slow_down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="55" column="10" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1acc0a7c7f9fe58716d1652478b92a230d" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose RRTMainNode::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="57" column="30" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a223ae9331a31649541d4884ecfd0c2e9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RRTMainNode::real_car_x</definition>
+        <argsstring></argsstring>
+        <name>real_car_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="58" column="11" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ae1d03e36e3e0ff71753619a4207c454b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RRTMainNode::real_car_y</definition>
+        <argsstring></argsstring>
+        <name>real_car_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="59" column="11" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ad82e78588bb72155d2e4e3c1ef95fb87" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RRTMainNode::pose_obtained</definition>
+        <argsstring></argsstring>
+        <name>pose_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="60" column="10" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1aed0ac9e82e42f718770c6e3287a7ead8" prot="private" static="no" mutable="no">
+        <type>f1tenth_msgs::msg::Raceline</type>
+        <definition>f1tenth_msgs::msg::Raceline RRTMainNode::raceline</definition>
+        <argsstring></argsstring>
+        <name>raceline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="62" column="33" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a42f21c45f7e05d7ccc80cf57e7a3f187" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RRTMainNode::raceline_obtained</definition>
+        <argsstring></argsstring>
+        <name>raceline_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="63" column="10" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a8eb43b644b019511dfad023d7cf06e96" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RRTMainNode::look_ahead_point_index</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="64" column="9" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a8ab8e97407d7f767bdee7f5451d4d3d6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RRTMainNode::look_ahead_point_index_obtained</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_index_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="65" column="10" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a77d9bee0b79cccdedf079b839a085277" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RRTMainNode::car_nearest_point_index</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="66" column="9" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a37d444de7082f381408faa085e4de276" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RRTMainNode::car_nearest_point_index_obtained</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_index_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="67" column="10" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a4d72c428cfa0134c02b0b9d8361177a1" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr RRTMainNode::pose_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>pose_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="69" column="38" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a4d5f7bcc154f833cd21b0fdd35027539" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; f1tenth_msgs::msg::ObstacleArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;f1tenth_msgs::msg::ObstacleArray&gt;::SharedPtr RRTMainNode::obstacle_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>obstacle_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="70" column="38" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a47f732c8541ed4019b150fcdb49a9a0d" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; f1tenth_msgs::msg::RacelineStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;f1tenth_msgs::msg::RacelineStamped&gt;::SharedPtr RRTMainNode::raceline_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>raceline_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="71" column="38" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a64c279c2d4fc26a67ca35badf7a11bab" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Int16 &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Int16&gt;::SharedPtr RRTMainNode::look_ahead_point_index_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_index_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="72" column="38" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a9286917bc5857b7d83d33006a353eaef" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Int16 &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Int16&gt;::SharedPtr RRTMainNode::car_nearest_point_index_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_index_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="73" column="38" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a55b10fb25cb5ca990f54030c92688649" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; f1tenth_msgs::msg::RacelineStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;f1tenth_msgs::msg::RacelineStamped&gt;::SharedPtr RRTMainNode::raceline_publisher_</definition>
+        <argsstring></argsstring>
+        <name>raceline_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="75" column="35" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a8eccc77c2b3391eade522b855cab4bc2" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;std_msgs::msg::Bool&gt;::SharedPtr RRTMainNode::slow_down_publisher_</definition>
+        <argsstring></argsstring>
+        <name>slow_down_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="76" column="35" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1aaa96a7e68cb1a98624dcc09bb9cf85e0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; RRTMainNode::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="78" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a81402d46939188cf29ecb473145d5a4f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; RRTMainNode::cx</definition>
+        <argsstring></argsstring>
+        <name>cx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="79" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a9b053fdb7d5987ec6bc5b83ebd5b536e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; RRTMainNode::cy</definition>
+        <argsstring></argsstring>
+        <name>cy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="80" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ae39591dd291948d7c996fc747b6c9447" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; RRTMainNode::heading</definition>
+        <argsstring></argsstring>
+        <name>heading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="81" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1af55d03bfcff21decc09b92e79cf39b80" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; RRTMainNode::curvature</definition>
+        <argsstring></argsstring>
+        <name>curvature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="82" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1adc7603f3d803e49b232f741697d1a283" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; RRTMainNode::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="83" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a3d560c2a2d2fee1593a6214c5b36579d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; RRTMainNode::width_right</definition>
+        <argsstring></argsstring>
+        <name>width_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="84" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a03c320cda219ef292c94f1cb5afcec9b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; RRTMainNode::width_left</definition>
+        <argsstring></argsstring>
+        <name>width_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="85" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ad2de3e145fd8f2022ed14e5eb86664c6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RRTMainNode::num_of_raceline_points</definition>
+        <argsstring></argsstring>
+        <name>num_of_raceline_points</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="86" column="9" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1aaab7c945168a964242efa06ea5711b15" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RRTMainNode::dilation_kernel_shape</definition>
+        <argsstring></argsstring>
+        <name>dilation_kernel_shape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="88" column="9" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ac4f73cd7a436c031c6a8fc1858217db9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; RRTMainNode::rotation_angles</definition>
+        <argsstring></argsstring>
+        <name>rotation_angles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="90" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a8dd3d4805e9d039f7be27059a57c614d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Mat &gt;</type>
+        <definition>std::vector&lt;cv::Mat&gt; RRTMainNode::rois</definition>
+        <argsstring></argsstring>
+        <name>rois</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="91" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a8d20e76ba96b2f451355ac10ffab5d3f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Mat &gt;</type>
+        <definition>std::vector&lt;cv::Mat&gt; RRTMainNode::rois_on_map</definition>
+        <argsstring></argsstring>
+        <name>rois_on_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="92" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a27771346fe20b7c8146d01156946b4fb" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Geometry::Ptr &gt;</type>
+        <definition>std::vector&lt;Geometry::Ptr&gt; RRTMainNode::rois_free_space_polygons</definition>
+        <argsstring></argsstring>
+        <name>rois_free_space_polygons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="93" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a9f539453a5358b122a309d6c42da1a62" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Mat &gt;</type>
+        <definition>std::vector&lt;cv::Mat&gt; RRTMainNode::translation_matrices</definition>
+        <argsstring></argsstring>
+        <name>translation_matrices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="94" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a0bcd959bee2360d1c8c7e545a1a39970" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Mat &gt;</type>
+        <definition>std::vector&lt;cv::Mat&gt; RRTMainNode::inverse_translation_matrices</definition>
+        <argsstring></argsstring>
+        <name>inverse_translation_matrices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="95" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a451850b65dc2fae8c42bad70858d55cc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Mat &gt;</type>
+        <definition>std::vector&lt;cv::Mat&gt; RRTMainNode::rotation_matrices</definition>
+        <argsstring></argsstring>
+        <name>rotation_matrices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="96" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ab238c5a7b446a7599ab9f8f81e9ca99a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Mat &gt;</type>
+        <definition>std::vector&lt;cv::Mat&gt; RRTMainNode::inverse_rotation_matrices</definition>
+        <argsstring></argsstring>
+        <name>inverse_rotation_matrices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="97" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1afa96f766b2d471bbb7f9c8b041d3ed87" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Point2f &gt;</type>
+        <definition>std::vector&lt;cv::Point2f&gt; RRTMainNode::values_to_subtract</definition>
+        <argsstring></argsstring>
+        <name>values_to_subtract</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="98" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1abb3eac8b1dbcd4f00c05b3803dda9823" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat RRTMainNode::current_roi</definition>
+        <argsstring></argsstring>
+        <name>current_roi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="100" column="13" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ae8d20ea580d740c8f63d495c98c8d5b4" prot="private" static="no" mutable="no">
+        <type>Geometry::Ptr</type>
+        <definition>Geometry::Ptr RRTMainNode::current_free_space</definition>
+        <argsstring></argsstring>
+        <name>current_free_space</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="101" column="19" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a75aae954713d8af7d47821304162b695" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat RRTMainNode::map_image</definition>
+        <argsstring></argsstring>
+        <name>map_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="103" column="13" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a581b54606ea1bc920cc502b431a1fa7b" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat RRTMainNode::original_map_image</definition>
+        <argsstring></argsstring>
+        <name>original_map_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="104" column="13" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a63c250a847e1b4d8c5afb53bc76fab7f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double RRTMainNode::resolution</definition>
+        <argsstring></argsstring>
+        <name>resolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="105" column="12" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a2dc558e1029f8c1fc168e3fb22991f43" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double RRTMainNode::o_x</definition>
+        <argsstring></argsstring>
+        <name>o_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="106" column="12" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1acbd0ec8645d490008a3f6b22ae5fbdc0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double RRTMainNode::o_y</definition>
+        <argsstring></argsstring>
+        <name>o_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="107" column="12" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a6aa64460dc49ab67b2d0224b7350fae5" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; RRTMainNode::left_x</definition>
+        <argsstring></argsstring>
+        <name>left_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="108" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1aaac84fceda57168bfcf44c326062fbfd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; RRTMainNode::left_y</definition>
+        <argsstring></argsstring>
+        <name>left_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="108" column="24" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1aae8a87178c5aaba4531e2563e7081673" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; RRTMainNode::right_x</definition>
+        <argsstring></argsstring>
+        <name>right_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="108" column="31" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1add6609d949b629114b1fc12d309b421c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; RRTMainNode::right_y</definition>
+        <argsstring></argsstring>
+        <name>right_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="108" column="39" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1aee9845b7101366832f24f35490f57d3c" prot="private" static="no" mutable="no">
+        <type>cv::Point</type>
+        <definition>cv::Point RRTMainNode::current_car_pose_in_roi</definition>
+        <argsstring></argsstring>
+        <name>current_car_pose_in_roi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="110" column="15" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a2d5b0cce48c3e45b4cfc0dfa44038158" prot="private" static="no" mutable="no">
+        <type>cv::Point</type>
+        <definition>cv::Point RRTMainNode::goal_in_roi</definition>
+        <argsstring></argsstring>
+        <name>goal_in_roi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="111" column="15" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1aea8c1e00d27f1c1d78117643a277be69" prot="private" static="no" mutable="no">
+        <type><ref refid="classThetaStar" kindref="compound">ThetaStar</ref></type>
+        <definition>ThetaStar RRTMainNode::any_angle_path_calculator</definition>
+        <argsstring></argsstring>
+        <name>any_angle_path_calculator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="112" column="15" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a28715b5c59f200702c80e56087ed7bb4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RRTMainNode::goal_idx</definition>
+        <argsstring></argsstring>
+        <name>goal_idx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="114" column="9" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1afed01b1b3aa87dd44897cf4245b5ee33" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RRTMainNode::current_speed</definition>
+        <argsstring></argsstring>
+        <name>current_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="115" column="11" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1abfde61ec738407f15198fe75550248b4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string RRTMainNode::ax_max_machines_path</definition>
+        <argsstring></argsstring>
+        <name>ax_max_machines_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="117" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a07f3d997e61387ffbbc9e1f7ae98d011" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string RRTMainNode::ggv_path</definition>
+        <argsstring></argsstring>
+        <name>ggv_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="118" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1ab25cf6e5fe468f4a5a7f4b06e2f52a0f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;double&gt; &gt; RRTMainNode::ax_max_machines</definition>
+        <argsstring></argsstring>
+        <name>ax_max_machines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="119" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a8aa87aa59408f7f7849d8f345f7c75f6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;double&gt; &gt; RRTMainNode::ggv</definition>
+        <argsstring></argsstring>
+        <name>ggv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="120" column="17" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1aa1b20e486e10a44a20552c8dc1951072" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RRTMainNode::new_trajectory_start_index</definition>
+        <argsstring></argsstring>
+        <name>new_trajectory_start_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="122" column="9" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a0efe76206eb261421f259e843e78a3f8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RRTMainNode::new_trajectory_end_index</definition>
+        <argsstring></argsstring>
+        <name>new_trajectory_end_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="123" column="9" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a1a553ab190fa8145711e74018e58a2af" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RRTMainNode::check_to_send_original_raceline</definition>
+        <argsstring></argsstring>
+        <name>check_to_send_original_raceline</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="124" column="10" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRRTMainNode_1a5c389d3b05ae419fdeae6916c9a3bc8d" prot="private" static="no" mutable="no">
+        <type>GeometryFactory::Ptr</type>
+        <definition>GeometryFactory::Ptr RRTMainNode::factory</definition>
+        <argsstring></argsstring>
+        <name>factory</name>
+        <initializer>= GeometryFactory::create()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="126" column="26" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRRTMainNode_1af44a921c665abf5598dc075dc71e54a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RRTMainNode::RRTMainNode</definition>
+        <argsstring>()</argsstring>
+        <name>RRTMainNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="34" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classRRTMainNode_1aef74a826fec771703545b3df1765bd15" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTMainNode::pose_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr pose_msg)</argsstring>
+        <name>pose_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>pose_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="128" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a9cabad95983a43da00368ffcf0bca812" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTMainNode::obstacle_callback</definition>
+        <argsstring>(const f1tenth_msgs::msg::ObstacleArray::SharedPtr msg)</argsstring>
+        <name>obstacle_callback</name>
+        <param>
+          <type>const f1tenth_msgs::msg::ObstacleArray::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="130" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1addda2033094f93558018376920730d90" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTMainNode::raceline_callback</definition>
+        <argsstring>(const f1tenth_msgs::msg::RacelineStamped::SharedPtr raceline_msg)</argsstring>
+        <name>raceline_callback</name>
+        <param>
+          <type>const f1tenth_msgs::msg::RacelineStamped::SharedPtr</type>
+          <declname>raceline_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="132" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a7cff0e5fa1259a51839a7e5bb05dc0ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTMainNode::initialize</definition>
+        <argsstring>(f1tenth_msgs::msg::Raceline raceline)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>f1tenth_msgs::msg::Raceline</type>
+          <declname>raceline</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="134" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a5e44a8e45e9eb70d448f9f3a4be552c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTMainNode::look_ahead_point_index_callback</definition>
+        <argsstring>(const std_msgs::msg::Int16::SharedPtr msg)</argsstring>
+        <name>look_ahead_point_index_callback</name>
+        <param>
+          <type>const std_msgs::msg::Int16::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="136" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1aa72e0c40277ba9200cc7e149a9f25ead" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTMainNode::car_nearest_point_index_callback</definition>
+        <argsstring>(const std_msgs::msg::Int16::SharedPtr msg)</argsstring>
+        <name>car_nearest_point_index_callback</name>
+        <param>
+          <type>const std_msgs::msg::Int16::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="138" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a570a3394e4cb919f1710ae9562e68a51" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTMainNode::rrt_main</definition>
+        <argsstring>()</argsstring>
+        <name>rrt_main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="140" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a18ed3db3974d1a0a10ac045f0706192a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTMainNode::get_rrt_trajectory</definition>
+        <argsstring>(const AnyAnglePath &amp;path, std::vector&lt; float &gt; &amp;length, std::vector&lt; float &gt; &amp;out_x, std::vector&lt; float &gt; &amp;out_y, std::vector&lt; float &gt; &amp;speed)</argsstring>
+        <name>get_rrt_trajectory</name>
+        <param>
+          <type>const <ref refid="structAnyAnglePath" kindref="compound">AnyAnglePath</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>out_x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>out_y</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="142" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1ad6d25e46b14da6e066468a40337b1920" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTMainNode::calculate_roi</definition>
+        <argsstring>(int car_nearest_raceline_index)</argsstring>
+        <name>calculate_roi</name>
+        <param>
+          <type>int</type>
+          <declname>car_nearest_raceline_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="148" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a88f8e5810c0da261821fb8314b29ff2a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RRTMainNode::px_to_m_x</definition>
+        <argsstring>(int x_px) const</argsstring>
+        <name>px_to_m_x</name>
+        <param>
+          <type>int</type>
+          <declname>x_px</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="155" column="19" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1aec22eb608addccd540c60c0db84790fc" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RRTMainNode::px_to_m_y</definition>
+        <argsstring>(int y_px) const</argsstring>
+        <name>px_to_m_y</name>
+        <param>
+          <type>int</type>
+          <declname>y_px</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="159" column="19" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a71c6712a880b345f7a9b9ff298ad240a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int RRTMainNode::m_to_px_x</definition>
+        <argsstring>(double x_m) const</argsstring>
+        <name>m_to_px_x</name>
+        <param>
+          <type>double</type>
+          <declname>x_m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="164" column="16" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a0e917eeab6a1944687c2490cd332af99" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int RRTMainNode::m_to_px_y</definition>
+        <argsstring>(double y_m) const</argsstring>
+        <name>m_to_px_y</name>
+        <param>
+          <type>double</type>
+          <declname>y_m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="168" column="16" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a1bc2d9def6e370ad7391c0e8c87ab8c1" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int RRTMainNode::my_round</definition>
+        <argsstring>(double value) const</argsstring>
+        <name>my_round</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="173" column="16" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a92ad7d03061b6bd6086a582d023d11a8" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>cv::Point2d</type>
+        <definition>cv::Point2d RRTMainNode::rotate_a_point</definition>
+        <argsstring>(cv::Point2d point_to_be_rotated, cv::Point2d car_position, double theta) const</argsstring>
+        <name>rotate_a_point</name>
+        <param>
+          <type>cv::Point2d</type>
+          <declname>point_to_be_rotated</declname>
+        </param>
+        <param>
+          <type>cv::Point2d</type>
+          <declname>car_position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="177" column="24" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="177" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a2775cb422af679418b0a503eb3104283" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>cv::Point2f</type>
+        <definition>cv::Point2f RRTMainNode::from_world_to_roi</definition>
+        <argsstring>(cv::Point2f a_point) const</argsstring>
+        <name>from_world_to_roi</name>
+        <param>
+          <type>cv::Point2f</type>
+          <declname>a_point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="185" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1a1687a62b9ca95b52b11d15bc2cfe1448" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>cv::Point2f</type>
+        <definition>cv::Point2f RRTMainNode::from_world_to_roi_with_index</definition>
+        <argsstring>(cv::Point2f a_point, int car_nearest_point_index) const</argsstring>
+        <name>from_world_to_roi_with_index</name>
+        <param>
+          <type>cv::Point2f</type>
+          <declname>a_point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>car_nearest_point_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="187" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1aa497a0fc23b3303586464f0dc8ae38b0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>cv::Point2f</type>
+        <definition>cv::Point2f RRTMainNode::from_roi_to_world</definition>
+        <argsstring>(cv::Point2f a_point) const</argsstring>
+        <name>from_roi_to_world</name>
+        <param>
+          <type>cv::Point2f</type>
+          <declname>a_point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="189" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1ae181e6fc0d9b18e6fb59a16d359e2b56" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTMainNode::from_roi_to_world</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;x_roi, const std::vector&lt; float &gt; &amp;y_roi, std::vector&lt; float &gt; &amp;x_world, std::vector&lt; float &gt; &amp;y_world) const</argsstring>
+        <name>from_roi_to_world</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>x_roi</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>y_roi</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>x_world</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>y_world</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="191" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRRTMainNode_1aaf0bb0d5ca6226362e75f953244c3d08" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RRTMainNode::is_point_in_free_space</definition>
+        <argsstring>(const cv::Mat &amp;roi, geos_t px_x, geos_t px_y, std::string unit) const</argsstring>
+        <name>is_point_in_free_space</name>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>roi</declname>
+        </param>
+        <param>
+          <type>geos_t</type>
+          <declname>px_x</declname>
+        </param>
+        <param>
+          <type>geos_t</type>
+          <declname>px_y</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>unit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt_node.hpp" line="196" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>RRTMainNode</label>
+        <link refid="classRRTMainNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>RRTMainNode</label>
+        <link refid="classRRTMainNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/rrt_cpp/rrt_node.hpp" line="32" column="1" bodyfile="include/rrt_cpp/rrt_node.hpp" bodystart="31" bodyend="197"/>
+    <listofallmembers>
+      <member refid="classRRTMainNode_1aea8c1e00d27f1c1d78117643a277be69" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>any_angle_path_calculator</name></member>
+      <member refid="classRRTMainNode_1ab25cf6e5fe468f4a5a7f4b06e2f52a0f" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>ax_max_machines</name></member>
+      <member refid="classRRTMainNode_1abfde61ec738407f15198fe75550248b4" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>ax_max_machines_path</name></member>
+      <member refid="classRRTMainNode_1ad6d25e46b14da6e066468a40337b1920" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>calculate_roi</name></member>
+      <member refid="classRRTMainNode_1a77d9bee0b79cccdedf079b839a085277" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>car_nearest_point_index</name></member>
+      <member refid="classRRTMainNode_1aa72e0c40277ba9200cc7e149a9f25ead" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>car_nearest_point_index_callback</name></member>
+      <member refid="classRRTMainNode_1a37d444de7082f381408faa085e4de276" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>car_nearest_point_index_obtained</name></member>
+      <member refid="classRRTMainNode_1a9286917bc5857b7d83d33006a353eaef" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>car_nearest_point_index_subscriber_</name></member>
+      <member refid="classRRTMainNode_1ace5fca24166326c85d415967ef56f661" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>check_min_distance_to_obstacle</name></member>
+      <member refid="classRRTMainNode_1a1a553ab190fa8145711e74018e58a2af" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>check_to_send_original_raceline</name></member>
+      <member refid="classRRTMainNode_1a93d7d5d22368a9f8f17e025b6f5e6e9a" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>clock</name></member>
+      <member refid="classRRTMainNode_1aee9845b7101366832f24f35490f57d3c" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>current_car_pose_in_roi</name></member>
+      <member refid="classRRTMainNode_1ae8d20ea580d740c8f63d495c98c8d5b4" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>current_free_space</name></member>
+      <member refid="classRRTMainNode_1acc0a7c7f9fe58716d1652478b92a230d" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>current_pose</name></member>
+      <member refid="classRRTMainNode_1abb3eac8b1dbcd4f00c05b3803dda9823" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>current_roi</name></member>
+      <member refid="classRRTMainNode_1afed01b1b3aa87dd44897cf4245b5ee33" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>current_speed</name></member>
+      <member refid="classRRTMainNode_1af55d03bfcff21decc09b92e79cf39b80" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>curvature</name></member>
+      <member refid="classRRTMainNode_1a81402d46939188cf29ecb473145d5a4f" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>cx</name></member>
+      <member refid="classRRTMainNode_1a9b053fdb7d5987ec6bc5b83ebd5b536e" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>cy</name></member>
+      <member refid="classRRTMainNode_1aaab7c945168a964242efa06ea5711b15" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>dilation_kernel_shape</name></member>
+      <member refid="classRRTMainNode_1a92eca80c443b95852f6f53114aaa2c1f" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>DISABLE_PRINT_TIMEOUT</name></member>
+      <member refid="classRRTMainNode_1a5c389d3b05ae419fdeae6916c9a3bc8d" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>factory</name></member>
+      <member refid="classRRTMainNode_1aa497a0fc23b3303586464f0dc8ae38b0" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>from_roi_to_world</name></member>
+      <member refid="classRRTMainNode_1ae181e6fc0d9b18e6fb59a16d359e2b56" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>from_roi_to_world</name></member>
+      <member refid="classRRTMainNode_1a2775cb422af679418b0a503eb3104283" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>from_world_to_roi</name></member>
+      <member refid="classRRTMainNode_1a1687a62b9ca95b52b11d15bc2cfe1448" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>from_world_to_roi_with_index</name></member>
+      <member refid="classRRTMainNode_1a18ed3db3974d1a0a10ac045f0706192a" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>get_rrt_trajectory</name></member>
+      <member refid="classRRTMainNode_1a8aa87aa59408f7f7849d8f345f7c75f6" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>ggv</name></member>
+      <member refid="classRRTMainNode_1a07f3d997e61387ffbbc9e1f7ae98d011" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>ggv_path</name></member>
+      <member refid="classRRTMainNode_1a28715b5c59f200702c80e56087ed7bb4" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>goal_idx</name></member>
+      <member refid="classRRTMainNode_1a2d5b0cce48c3e45b4cfc0dfa44038158" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>goal_in_roi</name></member>
+      <member refid="classRRTMainNode_1ae39591dd291948d7c996fc747b6c9447" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>heading</name></member>
+      <member refid="classRRTMainNode_1a7cff0e5fa1259a51839a7e5bb05dc0ce" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>initialize</name></member>
+      <member refid="classRRTMainNode_1ab238c5a7b446a7599ab9f8f81e9ca99a" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>inverse_rotation_matrices</name></member>
+      <member refid="classRRTMainNode_1a0bcd959bee2360d1c8c7e545a1a39970" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>inverse_translation_matrices</name></member>
+      <member refid="classRRTMainNode_1aaf0bb0d5ca6226362e75f953244c3d08" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>is_point_in_free_space</name></member>
+      <member refid="classRRTMainNode_1a6aa64460dc49ab67b2d0224b7350fae5" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>left_x</name></member>
+      <member refid="classRRTMainNode_1aaac84fceda57168bfcf44c326062fbfd" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>left_y</name></member>
+      <member refid="classRRTMainNode_1aaa96a7e68cb1a98624dcc09bb9cf85e0" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>length</name></member>
+      <member refid="classRRTMainNode_1a8eb43b644b019511dfad023d7cf06e96" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>look_ahead_point_index</name></member>
+      <member refid="classRRTMainNode_1a5e44a8e45e9eb70d448f9f3a4be552c5" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>look_ahead_point_index_callback</name></member>
+      <member refid="classRRTMainNode_1a8ab8e97407d7f767bdee7f5451d4d3d6" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>look_ahead_point_index_obtained</name></member>
+      <member refid="classRRTMainNode_1a64c279c2d4fc26a67ca35badf7a11bab" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>look_ahead_point_index_subscriber_</name></member>
+      <member refid="classRRTMainNode_1a71c6712a880b345f7a9b9ff298ad240a" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>m_to_px_x</name></member>
+      <member refid="classRRTMainNode_1a0e917eeab6a1944687c2490cd332af99" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>m_to_px_y</name></member>
+      <member refid="classRRTMainNode_1a5a5d1d763904f7f67bcf2d2d5833d33f" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>MAP_FILEPATH</name></member>
+      <member refid="classRRTMainNode_1a75aae954713d8af7d47821304162b695" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>map_image</name></member>
+      <member refid="classRRTMainNode_1a12702abad85c0bf18ac3d8f5d21dac8a" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>MAP_YAMLPATH</name></member>
+      <member refid="classRRTMainNode_1a48211fadd24b2d596d4282795df152be" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>MIN_DISTANCE_TO_OBSTACLE</name></member>
+      <member refid="classRRTMainNode_1a1bc2d9def6e370ad7391c0e8c87ab8c1" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>my_round</name></member>
+      <member refid="classRRTMainNode_1a0efe76206eb261421f259e843e78a3f8" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>new_trajectory_end_index</name></member>
+      <member refid="classRRTMainNode_1aa1b20e486e10a44a20552c8dc1951072" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>new_trajectory_start_index</name></member>
+      <member refid="classRRTMainNode_1ad2de3e145fd8f2022ed14e5eb86664c6" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>num_of_raceline_points</name></member>
+      <member refid="classRRTMainNode_1a2dc558e1029f8c1fc168e3fb22991f43" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>o_x</name></member>
+      <member refid="classRRTMainNode_1acbd0ec8645d490008a3f6b22ae5fbdc0" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>o_y</name></member>
+      <member refid="classRRTMainNode_1a9cabad95983a43da00368ffcf0bca812" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>obstacle_callback</name></member>
+      <member refid="classRRTMainNode_1aadb61ce9daf9d90d4c027ab3a5b5aeca" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>OBSTACLE_DILATION_SIZE</name></member>
+      <member refid="classRRTMainNode_1a4d5f7bcc154f833cd21b0fdd35027539" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>obstacle_subscriber_</name></member>
+      <member refid="classRRTMainNode_1a581b54606ea1bc920cc502b431a1fa7b" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>original_map_image</name></member>
+      <member refid="classRRTMainNode_1aef74a826fec771703545b3df1765bd15" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>pose_callback</name></member>
+      <member refid="classRRTMainNode_1ad82e78588bb72155d2e4e3c1ef95fb87" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>pose_obtained</name></member>
+      <member refid="classRRTMainNode_1a4d72c428cfa0134c02b0b9d8361177a1" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>pose_subscriber_</name></member>
+      <member refid="classRRTMainNode_1a88f8e5810c0da261821fb8314b29ff2a" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>px_to_m_x</name></member>
+      <member refid="classRRTMainNode_1aec22eb608addccd540c60c0db84790fc" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>px_to_m_y</name></member>
+      <member refid="classRRTMainNode_1aed0ac9e82e42f718770c6e3287a7ead8" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>raceline</name></member>
+      <member refid="classRRTMainNode_1addda2033094f93558018376920730d90" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>raceline_callback</name></member>
+      <member refid="classRRTMainNode_1a42f21c45f7e05d7ccc80cf57e7a3f187" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>raceline_obtained</name></member>
+      <member refid="classRRTMainNode_1a1ea8529e99387f74e13294e6a69e6d89" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>RACELINE_POINTS_AFTER</name></member>
+      <member refid="classRRTMainNode_1a8c64cfd121841737a7776854a15e8c47" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>RACELINE_POINTS_BEFORE</name></member>
+      <member refid="classRRTMainNode_1a55b10fb25cb5ca990f54030c92688649" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>raceline_publisher_</name></member>
+      <member refid="classRRTMainNode_1a47f732c8541ed4019b150fcdb49a9a0d" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>raceline_subscriber_</name></member>
+      <member refid="classRRTMainNode_1a223ae9331a31649541d4884ecfd0c2e9" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>real_car_x</name></member>
+      <member refid="classRRTMainNode_1ae1d03e36e3e0ff71753619a4207c454b" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>real_car_y</name></member>
+      <member refid="classRRTMainNode_1a63c250a847e1b4d8c5afb53bc76fab7f" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>resolution</name></member>
+      <member refid="classRRTMainNode_1aae8a87178c5aaba4531e2563e7081673" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>right_x</name></member>
+      <member refid="classRRTMainNode_1add6609d949b629114b1fc12d309b421c" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>right_y</name></member>
+      <member refid="classRRTMainNode_1a8dd3d4805e9d039f7be27059a57c614d" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>rois</name></member>
+      <member refid="classRRTMainNode_1a27771346fe20b7c8146d01156946b4fb" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>rois_free_space_polygons</name></member>
+      <member refid="classRRTMainNode_1a8d20e76ba96b2f451355ac10ffab5d3f" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>rois_on_map</name></member>
+      <member refid="classRRTMainNode_1a92ad7d03061b6bd6086a582d023d11a8" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>rotate_a_point</name></member>
+      <member refid="classRRTMainNode_1ac4f73cd7a436c031c6a8fc1858217db9" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>rotation_angles</name></member>
+      <member refid="classRRTMainNode_1a451850b65dc2fae8c42bad70858d55cc" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>rotation_matrices</name></member>
+      <member refid="classRRTMainNode_1a2e02af0fe6eafe53dc753cd798ef9d20" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>RRT_GOAL_OFFSET</name></member>
+      <member refid="classRRTMainNode_1a570a3394e4cb919f1710ae9562e68a51" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>rrt_main</name></member>
+      <member refid="classRRTMainNode_1af44a921c665abf5598dc075dc71e54a0" prot="public" virt="non-virtual"><scope>RRTMainNode</scope><name>RRTMainNode</name></member>
+      <member refid="classRRTMainNode_1ad84c39150a5ee230418f1fea761d0f62" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>send_slow_down</name></member>
+      <member refid="classRRTMainNode_1a8eccc77c2b3391eade522b855cab4bc2" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>slow_down_publisher_</name></member>
+      <member refid="classRRTMainNode_1a8f71c7f9519ecda7c6ea278d2223fa74" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>slow_down_topic</name></member>
+      <member refid="classRRTMainNode_1adc7603f3d803e49b232f741697d1a283" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>speed</name></member>
+      <member refid="classRRTMainNode_1acc358555f5b4a8d8616a0a461172e40c" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>TOPIC_FOR_REAL_POSITION</name></member>
+      <member refid="classRRTMainNode_1a5587a94e67c9cedd964136852fef33a6" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>TRACK_DILATION_SHAPE</name></member>
+      <member refid="classRRTMainNode_1a23404ac3024597f64a1092afb0de74fc" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>TRACK_DILATION_SIZE</name></member>
+      <member refid="classRRTMainNode_1a9f539453a5358b122a309d6c42da1a62" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>translation_matrices</name></member>
+      <member refid="classRRTMainNode_1afa96f766b2d471bbb7f9c8b041d3ed87" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>values_to_subtract</name></member>
+      <member refid="classRRTMainNode_1ad7679e545a74e238492fe54368271595" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>VISUALIZE_ROI</name></member>
+      <member refid="classRRTMainNode_1a506f7781628b0fa433b220a86f9d6e08" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>VISUALIZE_ROI_ON_MAP</name></member>
+      <member refid="classRRTMainNode_1a03c320cda219ef292c94f1cb5afcec9b" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>width_left</name></member>
+      <member refid="classRRTMainNode_1a3d560c2a2d2fee1593a6214c5b36579d" prot="private" virt="non-virtual"><scope>RRTMainNode</scope><name>width_right</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

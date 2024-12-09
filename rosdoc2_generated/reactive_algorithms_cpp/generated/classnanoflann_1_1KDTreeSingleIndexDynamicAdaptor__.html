@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template Class KDTreeSingleIndexDynamicAdaptor_ &mdash; reactive_algorithms_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class KNNResultSet" href="classnanoflann_1_1KNNResultSet.html" />
+    <link rel="prev" title="Template Class KDTreeSingleIndexDynamicAdaptor" href="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            reactive_algorithms_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#nanoflann-c-api-documentation">nanoflann C++ API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#defines">Defines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#directories">Directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#reactive-algorithms">Reactive Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#to-start-the-algorithm">To Start the algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#disparity-extender">Disparity extender</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#potential-field">Potential Field</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">reactive_algorithms_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Template Class KDTreeSingleIndexDynamicAdaptor_</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor__.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-class-kdtreesingleindexdynamicadaptor">
+<span id="exhale-class-classnanoflann-1-1kdtreesingleindexdynamicadaptor"></span><h1>Template Class <a href="#id1"><span class="problematic" id="id2">KDTreeSingleIndexDynamicAdaptor_</span></a><a class="headerlink" href="#template-class-kdtreesingleindexdynamicadaptor" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_nanoflann.hpp.html#file-include-nanoflann-hpp"><span class="std std-ref">File nanoflann.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">nanoflann::KDTreeBaseClass&lt;</span> <span class="pre">KDTreeSingleIndexDynamicAdaptor_&lt;</span> <span class="pre">Distance,</span> <span class="pre">DatasetAdaptor,</span> <span class="pre">-1,</span> <span class="pre">uint32_t</span> <span class="pre">&gt;,</span> <span class="pre">Distance,</span> <span class="pre">DatasetAdaptor,</span> <span class="pre">-1,</span> <span class="pre">uint32_t</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classnanoflann_1_1KDTreeBaseClass.html#exhale-class-classnanoflann-1-1kdtreebaseclass"><span class="std std-ref">Template Class KDTreeBaseClass</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E">
+<span id="_CPPv3I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E"></span><span id="_CPPv2I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Distance</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DatasetAdaptor</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DIM</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IndexType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor__"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KDTreeSingleIndexDynamicAdaptor_</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">nanoflann</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classnanoflann_1_1KDTreeBaseClass.html#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass"><span class="n"><span class="pre">KDTreeBaseClass</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_"><span class="n"><span class="pre">KDTreeSingleIndexDynamicAdaptor_</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Distance"><span class="n"><span class="pre">Distance</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DatasetAdaptor"><span class="n"><span class="pre">DatasetAdaptor</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Distance"><span class="n"><span class="pre">Distance</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DatasetAdaptor"><span class="n"><span class="pre">DatasetAdaptor</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="Link to this definition"></a><br /></dt>
+<dd><p>kd-tree dynamic index</p>
+<p>Contains the k-d trees and other information for indexing a set of points for nearest-neighbor matching.</p>
+<p>The class “DatasetAdaptor” must provide the following interface (can be non-virtual, inlined methods):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">//</span> <span class="n">Must</span> <span class="k">return</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">data</span> <span class="n">poins</span>
+  <span class="n">size_t</span> <span class="n">kdtree_get_point_count</span><span class="p">()</span> <span class="n">const</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+
+  <span class="o">//</span> <span class="n">Must</span> <span class="k">return</span> <span class="n">the</span> <span class="n">dim</span><span class="s1">&#39;th component of the idx&#39;</span><span class="n">th</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">class</span><span class="p">:</span>
+  <span class="n">T</span> <span class="n">kdtree_get_pt</span><span class="p">(</span><span class="n">const</span> <span class="n">size_t</span> <span class="n">idx</span><span class="p">,</span> <span class="n">const</span> <span class="n">size_t</span> <span class="n">dim</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+
+  <span class="o">//</span> <span class="n">Optional</span> <span class="n">bounding</span><span class="o">-</span><span class="n">box</span> <span class="n">computation</span><span class="p">:</span> <span class="k">return</span> <span class="n">false</span> <span class="n">to</span> <span class="n">default</span> <span class="n">to</span> <span class="n">a</span> <span class="n">standard</span>
+<span class="n">bbox</span> <span class="n">computation</span> <span class="n">loop</span><span class="o">.</span>
+  <span class="o">//</span>   <span class="n">Return</span> <span class="n">true</span> <span class="k">if</span> <span class="n">the</span> <span class="n">BBOX</span> <span class="n">was</span> <span class="n">already</span> <span class="n">computed</span> <span class="n">by</span> <span class="n">the</span> <span class="k">class</span> <span class="nc">and</span> <span class="n">returned</span>
+<span class="ow">in</span> <span class="s2">&quot;bb&quot;</span> <span class="n">so</span> <span class="n">it</span> <span class="n">can</span> <span class="n">be</span> <span class="n">avoided</span> <span class="n">to</span> <span class="n">redo</span> <span class="n">it</span> <span class="n">again</span><span class="o">.</span>
+  <span class="o">//</span>   <span class="n">Look</span> <span class="n">at</span> <span class="n">bb</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="n">to</span> <span class="n">find</span> <span class="n">out</span> <span class="n">the</span> <span class="n">expected</span> <span class="n">dimensionality</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="mi">2</span> <span class="ow">or</span> <span class="mi">3</span>
+<span class="k">for</span> <span class="n">point</span> <span class="n">clouds</span><span class="p">)</span> <span class="n">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">BBOX</span><span class="o">&gt;</span> <span class="nb">bool</span> <span class="n">kdtree_get_bbox</span><span class="p">(</span><span class="n">BBOX</span> <span class="o">&amp;</span><span class="n">bb</span><span class="p">)</span> <span class="n">const</span>
+  <span class="p">{</span>
+     <span class="n">bb</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">low</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span> <span class="n">bb</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">high</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>  <span class="o">//</span> <span class="mi">0</span><span class="n">th</span> <span class="n">dimension</span> <span class="n">limits</span>
+     <span class="n">bb</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">low</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span> <span class="n">bb</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">high</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>  <span class="o">//</span> <span class="mi">1</span><span class="n">st</span> <span class="n">dimension</span> <span class="n">limits</span>
+     <span class="o">...</span>
+     <span class="k">return</span> <span class="n">true</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DatasetAdaptor</strong> – The user-provided adaptor (see comments above). </p></li>
+<li><p><strong>Distance</strong> – The distance metric to use: <a class="reference internal" href="structnanoflann_1_1metric__L1.html#structnanoflann_1_1metric__L1"><span class="std std-ref">nanoflann::metric_L1</span></a>, <a class="reference internal" href="structnanoflann_1_1metric__L2.html#structnanoflann_1_1metric__L2"><span class="std std-ref">nanoflann::metric_L2</span></a>, <a class="reference internal" href="structnanoflann_1_1metric__L2__Simple.html#structnanoflann_1_1metric__L2__Simple"><span class="std std-ref">nanoflann::metric_L2_Simple</span></a>, etc. </p></li>
+<li><p><strong>DIM</strong> – Dimensionality of data points (e.g. 3 for 3D points) </p></li>
+<li><p><strong>IndexType</strong> – Type of the arguments with which the data can be accessed (e.g. float, double, int64_t, T*) </p></li>
+</ul>
+</dd>
+</dl>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-query-methods">Query methods</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_13findNeighborsEbR9RESULTSETPK11ElementTypeRK16SearchParameters">
+<span id="_CPPv3I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_13findNeighborsER9RESULTSETPK11ElementTypeRK16SearchParameters"></span><span id="_CPPv2I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_13findNeighborsER9RESULTSETPK11ElementTypeRK16SearchParameters"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RESULTSET</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1af187a96735d45182d4f77253b3f9c2d5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">findNeighbors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_13findNeighborsEbR9RESULTSETPK11ElementTypeRK16SearchParameters" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::findNeighbors::RESULTSET"><span class="n"><span class="pre">RESULTSET</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11ElementTypeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structnanoflann_1_1SearchParameters.html#_CPPv4N9nanoflann16SearchParametersE" title="nanoflann::SearchParameters"><span class="n"><span class="pre">SearchParameters</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">searchParams</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_13findNeighborsEbR9RESULTSETPK11ElementTypeRK16SearchParameters" title="Link to this definition"></a><br /></dt>
+<dd><p>Find set of nearest neighbors to vec[0:dim-1]. Their indices are stored inside the result object. This is the core search function, all others are wrappers around this one.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1acdd427b6306e8ce510acc8c36d3bb120"><span class="std std-ref">knnSearch()</span></a>, <a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1ac16d4e50ae9a35c221166a8ddfb13426"><span class="std std-ref">radiusSearch()</span></a>, <a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a68352e8b379d2076f47f5739d89c3a76"><span class="std std-ref">radiusSearchCustomCallback()</span></a></p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If L2 norms are used, all returned distances are actually squared distances. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result</strong> – The result object in which the indices of the nearest-neighbors are stored. </p></li>
+<li><p><strong>vec</strong> – The vector of the query point for which to search the nearest neighbors. </p></li>
+<li><p><strong>searchParams</strong> – Optional parameters for the search.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RESULTSET</strong> – Should be any ResultSet&lt;DistanceType&gt; </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the requested neighbors could be found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9nanoflann32KDTreeSingleIndexDynamicAdaptor_9knnSearchEPK11ElementTypeK4SizeP9IndexTypeP12DistanceTypeRK16SearchParameters">
+<span id="_CPPv3NK9nanoflann32KDTreeSingleIndexDynamicAdaptor_9knnSearchEPK11ElementTypeK4SizeP9IndexTypeP12DistanceTypeRK16SearchParameters"></span><span id="_CPPv2NK9nanoflann32KDTreeSingleIndexDynamicAdaptor_9knnSearchEPK11ElementTypeK4SizeP9IndexTypeP12DistanceTypeRK16SearchParameters"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::knnSearch__ElementTypeCP.SizeC.IndexTypeP.DistanceTypeP.SearchParametersCRC"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1acdd427b6306e8ce510acc8c36d3bb120"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4SizeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Size"><span class="n"><span class="pre">Size</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">knnSearch</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11ElementTypeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">query_point</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4SizeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Size"><span class="n"><span class="pre">Size</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">num_closest</span></span>, <a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">out_indices</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_12DistanceTypeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DistanceType"><span class="n"><span class="pre">DistanceType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">out_distances</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structnanoflann_1_1SearchParameters.html#_CPPv4N9nanoflann16SearchParametersE" title="nanoflann::SearchParameters"><span class="n"><span class="pre">SearchParameters</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">searchParams</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9nanoflann32KDTreeSingleIndexDynamicAdaptor_9knnSearchEPK11ElementTypeK4SizeP9IndexTypeP12DistanceTypeRK16SearchParameters" title="Link to this definition"></a><br /></dt>
+<dd><p>Find the “num_closest” nearest neighbors to the <em>query_point</em>[0:dim-1]. Their indices are stored inside the result object. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1ac16d4e50ae9a35c221166a8ddfb13426"><span class="std std-ref">radiusSearch</span></a>, <a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1af187a96735d45182d4f77253b3f9c2d5"><span class="std std-ref">findNeighbors</span></a></p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If L2 norms are used, all returned distances are actually squared distances.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only the first <code class="docutils literal notranslate"><span class="pre">N</span></code> entries in <code class="docutils literal notranslate"><span class="pre">out_indices</span></code> and <code class="docutils literal notranslate"><span class="pre">out_distances</span></code> will be valid. Return may be less than <code class="docutils literal notranslate"><span class="pre">num_closest</span></code> only if the number of elements in the tree is less than <code class="docutils literal notranslate"><span class="pre">num_closest</span></code>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number <code class="docutils literal notranslate"><span class="pre">N</span></code> of valid points in the result set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9nanoflann32KDTreeSingleIndexDynamicAdaptor_12radiusSearchEPK11ElementTypeRK12DistanceTypeRNSt6vectorI10ResultItemI9IndexType12DistanceTypeEEERK16SearchParameters">
+<span id="_CPPv3NK9nanoflann32KDTreeSingleIndexDynamicAdaptor_12radiusSearchEPK11ElementTypeRK12DistanceTypeRNSt6vectorI10ResultItemI9IndexType12DistanceTypeEEERK16SearchParameters"></span><span id="_CPPv2NK9nanoflann32KDTreeSingleIndexDynamicAdaptor_12radiusSearchEPK11ElementTypeRK12DistanceTypeRNSt6vectorI10ResultItemI9IndexType12DistanceTypeEEERK16SearchParameters"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::radiusSearch__ElementTypeCP.DistanceTypeCR.std::vector:ResultItem:IndexType.DistanceType::R.SearchParametersCRC"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1ac16d4e50ae9a35c221166a8ddfb13426"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4SizeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Size"><span class="n"><span class="pre">Size</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">radiusSearch</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11ElementTypeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">query_point</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_12DistanceTypeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DistanceType"><span class="n"><span class="pre">DistanceType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">radius</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structnanoflann_1_1ResultItem.html#_CPPv4I00EN9nanoflann10ResultItemE" title="nanoflann::ResultItem"><span class="n"><span class="pre">ResultItem</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_12DistanceTypeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DistanceType"><span class="n"><span class="pre">DistanceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">IndicesDists</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structnanoflann_1_1SearchParameters.html#_CPPv4N9nanoflann16SearchParametersE" title="nanoflann::SearchParameters"><span class="n"><span class="pre">SearchParameters</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">searchParams</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9nanoflann32KDTreeSingleIndexDynamicAdaptor_12radiusSearchEPK11ElementTypeRK12DistanceTypeRNSt6vectorI10ResultItemI9IndexType12DistanceTypeEEERK16SearchParameters" title="Link to this definition"></a><br /></dt>
+<dd><p>Find all the neighbors to <em>query_point</em>[0:dim-1] within a maximum radius. The output is given as a vector of pairs, of which the first element is a point index and the second the corresponding distance. Previous contents of <em>IndicesDists</em> are cleared.</p>
+<p>If searchParams.sorted==true, the output list is sorted by ascending distances.</p>
+<p>For a better performance, it is advisable to do a .reserve() on the vector if you have any wild guess about the number of expected matches.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1acdd427b6306e8ce510acc8c36d3bb120"><span class="std std-ref">knnSearch</span></a>, <a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1af187a96735d45182d4f77253b3f9c2d5"><span class="std std-ref">findNeighbors</span></a>, <a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a68352e8b379d2076f47f5739d89c3a76"><span class="std std-ref">radiusSearchCustomCallback</span></a></p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If L2 norms are used, search radius and all returned distances are actually squared distances. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of points within the given radius (i.e. indices.size() or dists.size() )</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_26radiusSearchCustomCallbackE4SizePK11ElementTypeR15SEARCH_CALLBACKRK16SearchParameters">
+<span id="_CPPv3I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_26radiusSearchCustomCallbackEPK11ElementTypeR15SEARCH_CALLBACKRK16SearchParameters"></span><span id="_CPPv2I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_26radiusSearchCustomCallbackEPK11ElementTypeR15SEARCH_CALLBACKRK16SearchParameters"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEARCH_CALLBACK</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a68352e8b379d2076f47f5739d89c3a76"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4SizeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Size"><span class="n"><span class="pre">Size</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">radiusSearchCustomCallback</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11ElementTypeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">query_point</span></span>, <a class="reference internal" href="#_CPPv4I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_26radiusSearchCustomCallbackE4SizePK11ElementTypeR15SEARCH_CALLBACKRK16SearchParameters" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::radiusSearchCustomCallback::SEARCH_CALLBACK"><span class="n"><span class="pre">SEARCH_CALLBACK</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">resultSet</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structnanoflann_1_1SearchParameters.html#_CPPv4N9nanoflann16SearchParametersE" title="nanoflann::SearchParameters"><span class="n"><span class="pre">SearchParameters</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">searchParams</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_26radiusSearchCustomCallbackE4SizePK11ElementTypeR15SEARCH_CALLBACKRK16SearchParameters" title="Link to this definition"></a><br /></dt>
+<dd><p>Just like <a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1ac16d4e50ae9a35c221166a8ddfb13426"><span class="std std-ref">radiusSearch()</span></a> but with a custom callback class for each point found in the radius of the query. See the source of RadiusResultSet&lt;&gt; as a start point for your own classes. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1ac16d4e50ae9a35c221166a8ddfb13426"><span class="std std-ref">radiusSearch</span></a></p>
+</div>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1abdbfc48760050219e1e6e3160c8c201c"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Base</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">nanoflann</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classnanoflann_1_1KDTreeBaseClass.html#_CPPv4I000_7int32_t0EN9nanoflann15KDTreeBaseClassE" title="nanoflann::KDTreeBaseClass"><span class="n"><span class="pre">KDTreeBaseClass</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">nanoflann</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_"><span class="n"><span class="pre">KDTreeSingleIndexDynamicAdaptor_</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Distance"><span class="n"><span class="pre">Distance</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DatasetAdaptor"><span class="n"><span class="pre">DatasetAdaptor</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DIM"><span class="n"><span class="pre">DIM</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Distance"><span class="n"><span class="pre">Distance</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DatasetAdaptor"><span class="n"><span class="pre">DatasetAdaptor</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DIM"><span class="n"><span class="pre">DIM</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11ElementTypeE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11ElementTypeE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11ElementTypeE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a7782fc1a54f66956fdcf2f6763dc28e2"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ElementType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Base"><span class="n"><span class="pre">Base</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ElementType</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11ElementTypeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_12DistanceTypeE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_12DistanceTypeE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_12DistanceTypeE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a6c7097df0fb9e8040265d07376b259a1"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DistanceType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Base"><span class="n"><span class="pre">Base</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">DistanceType</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_12DistanceTypeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_6OffsetE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_6OffsetE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_6OffsetE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a72d3160be6d172ba991bdc700c3f9a24"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Offset</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Base"><span class="n"><span class="pre">Base</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Offset</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_6OffsetE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4SizeE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4SizeE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4SizeE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1aa38daf8d0938193543f6991854d44e88"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Size</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Base"><span class="n"><span class="pre">Base</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Size</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4SizeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9DimensionE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9DimensionE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9DimensionE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a2bdeb32e3a9407afdffd1bca49769f43"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Dimension</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Base"><span class="n"><span class="pre">Base</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Dimension</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9DimensionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4NodeE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4NodeE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4NodeE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a8e6f480c3a9df615b33f9036d9d65ff7"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Node</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Base"><span class="n"><span class="pre">Base</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Node</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4NodeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_7NodePtrE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_7NodePtrE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_7NodePtrE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1ab3b6c9aa359ff2ae1247d54584633c2e"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodePtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4NodeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Node"><span class="n"><span class="pre">Node</span></span></a><span class="p"><span class="pre">*</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_7NodePtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_8IntervalE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_8IntervalE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_8IntervalE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1abc8cf7ab1b473b5daf1b9a1958dc2f29"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Interval</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Base"><span class="n"><span class="pre">Base</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Interval</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_8IntervalE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11BoundingBoxE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11BoundingBoxE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11BoundingBoxE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a2d0f3474f4bf465b5522436e5835ab96"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BoundingBox</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Base"><span class="n"><span class="pre">Base</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BoundingBox</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11BoundingBoxE" title="Link to this definition"></a><br /></dt>
+<dd><p>Define “BoundingBox” as a fixed-size or variable-size container depending on “DIM” </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_17distance_vector_tE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_17distance_vector_tE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_17distance_vector_tE"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1ab8e4892a81a63ba576567080f06fb81f"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distance_vector_t</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_4BaseE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Base"><span class="n"><span class="pre">Base</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">distance_vector_t</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_17distance_vector_tE" title="Link to this definition"></a><br /></dt>
+<dd><p>Define “distance_vector_t” as a fixed-size or variable-size container depending on “DIM” </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_32KDTreeSingleIndexDynamicAdaptor_EK9DimensionRK14DatasetAdaptorRNSt6vectorIiEERK30KDTreeSingleIndexAdaptorParams">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_32KDTreeSingleIndexDynamicAdaptor_EK9DimensionRK14DatasetAdaptorRNSt6vectorIiEERK30KDTreeSingleIndexAdaptorParams"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_32KDTreeSingleIndexDynamicAdaptor_EK9DimensionRK14DatasetAdaptorRNSt6vectorIiEERK30KDTreeSingleIndexAdaptorParams"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::KDTreeSingleIndexDynamicAdaptor___DimensionC.DatasetAdaptorCR.std::vector:i:R.KDTreeSingleIndexAdaptorParamsCR"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a1f73918ee3e91d0e30c11a9c728b912c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KDTreeSingleIndexDynamicAdaptor_</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9DimensionE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Dimension"><span class="n"><span class="pre">Dimension</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dimensionality</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DatasetAdaptor"><span class="n"><span class="pre">DatasetAdaptor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">inputData</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">treeIndex</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structnanoflann_1_1KDTreeSingleIndexAdaptorParams.html#_CPPv4N9nanoflann30KDTreeSingleIndexAdaptorParamsE" title="nanoflann::KDTreeSingleIndexAdaptorParams"><span class="n"><span class="pre">KDTreeSingleIndexAdaptorParams</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">params</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="structnanoflann_1_1KDTreeSingleIndexAdaptorParams.html#_CPPv4N9nanoflann30KDTreeSingleIndexAdaptorParamsE" title="nanoflann::KDTreeSingleIndexAdaptorParams"><span class="n"><span class="pre">KDTreeSingleIndexAdaptorParams</span></span></a><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_32KDTreeSingleIndexDynamicAdaptor_EK9DimensionRK14DatasetAdaptorRNSt6vectorIiEERK30KDTreeSingleIndexAdaptorParams" title="Link to this definition"></a><br /></dt>
+<dd><p>KDTree constructor</p>
+<p>Refer to docs in README.md or online in <a class="reference external" href="https://github.com/jlblancoc/nanoflann">https://github.com/jlblancoc/nanoflann</a></p>
+<p>The KD-Tree point dimension (the length of each point in the datase, e.g. 3 for 3D points) is determined by means of:<ul class="simple">
+<li><p>The <em>DIM</em> template parameter if &gt;0 (highest priority)</p></li>
+<li><p>Otherwise, the <em>dimensionality</em> parameter of this constructor.</p></li>
+</ul>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputData</strong> – Dataset with the input features. Its lifetime must be equal or longer than that of the instance of this class. </p></li>
+<li><p><strong>params</strong> – Basically, the maximum leaf node size </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_32KDTreeSingleIndexDynamicAdaptor_ERK32KDTreeSingleIndexDynamicAdaptor_">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_32KDTreeSingleIndexDynamicAdaptor_ERK32KDTreeSingleIndexDynamicAdaptor_"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_32KDTreeSingleIndexDynamicAdaptor_ERK32KDTreeSingleIndexDynamicAdaptor_"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::KDTreeSingleIndexDynamicAdaptor___KDTreeSingleIndexDynamicAdaptor_CR"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a71b7c8f4f12e1fc5c52fd0408ef1402d"></span><span class="sig-name descname"><span class="n"><span class="pre">KDTreeSingleIndexDynamicAdaptor_</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_32KDTreeSingleIndexDynamicAdaptor_ERK32KDTreeSingleIndexDynamicAdaptor_" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::KDTreeSingleIndexDynamicAdaptor_"><span class="n"><span class="pre">KDTreeSingleIndexDynamicAdaptor_</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rhs</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_32KDTreeSingleIndexDynamicAdaptor_ERK32KDTreeSingleIndexDynamicAdaptor_" title="Link to this definition"></a><br /></dt>
+<dd><p>Explicitly default the copy constructor </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_aSERK32KDTreeSingleIndexDynamicAdaptor_">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_aSERK32KDTreeSingleIndexDynamicAdaptor_"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_aSERK32KDTreeSingleIndexDynamicAdaptor_"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::assign-operator__KDTreeSingleIndexDynamicAdaptor_CR"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1afb4f7c5d6d99007bd1d0e8d1fb0cc1aa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_"><span class="n"><span class="pre">KDTreeSingleIndexDynamicAdaptor_</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_"><span class="n"><span class="pre">KDTreeSingleIndexDynamicAdaptor_</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rhs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_aSERK32KDTreeSingleIndexDynamicAdaptor_" title="Link to this definition"></a><br /></dt>
+<dd><p>Assignment operator definiton </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_10buildIndexEv">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_10buildIndexEv"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_10buildIndexEv"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::buildIndex"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a72f35d5aea4402ca6dd3d9fb22c6b020"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buildIndex</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_10buildIndexEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Builds the index </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_18computeBoundingBoxER11BoundingBox">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_18computeBoundingBoxER11BoundingBox"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_18computeBoundingBoxER11BoundingBox"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::computeBoundingBox__BoundingBoxR"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a86871ad8d9480dfd13f7921899a35cfe"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeBoundingBox</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11BoundingBoxE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::BoundingBox"><span class="n"><span class="pre">BoundingBox</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bbox</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_18computeBoundingBoxER11BoundingBox" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_11searchLevelEvR9RESULTSETPK11ElementTypeK7NodePtr12DistanceTypeR17distance_vector_tKf">
+<span id="_CPPv3I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_11searchLevelER9RESULTSETPK11ElementTypeK7NodePtr12DistanceTypeR17distance_vector_tKf"></span><span id="_CPPv2I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_11searchLevelER9RESULTSETPK11ElementTypeK7NodePtr12DistanceTypeR17distance_vector_tKf"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RESULTSET</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1aee801ab6e9bb9300194e1f08b7dcec6a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">searchLevel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_11searchLevelEvR9RESULTSETPK11ElementTypeK7NodePtr12DistanceTypeR17distance_vector_tKf" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::searchLevel::RESULTSET"><span class="n"><span class="pre">RESULTSET</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">result_set</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_11ElementTypeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_7NodePtrE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::NodePtr"><span class="n"><span class="pre">NodePtr</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">node</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_12DistanceTypeE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DistanceType"><span class="n"><span class="pre">DistanceType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mindist</span></span>, <a class="reference internal" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_17distance_vector_tE" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::distance_vector_t"><span class="n"><span class="pre">distance_vector_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dists</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">epsError</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK9nanoflann32KDTreeSingleIndexDynamicAdaptor_11searchLevelEvR9RESULTSETPK11ElementTypeK7NodePtr12DistanceTypeR17distance_vector_tKf" title="Link to this definition"></a><br /></dt>
+<dd><p>Performs an exact search in the tree starting from a node. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RESULTSET</strong> – Should be any ResultSet&lt;DistanceType&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9saveIndexERNSt7ostreamE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9saveIndexERNSt7ostreamE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9saveIndexERNSt7ostreamE"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::saveIndex__osR"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a7969bba85c656194c364920bca272b5c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveIndex</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9saveIndexERNSt7ostreamE" title="Link to this definition"></a><br /></dt>
+<dd><p>Stores the index in a binary file. IMPORTANT NOTE: The set of data points is NOT stored in the file, so when loading the index object it must be constructed associated to the same source of data points used while building it. See the example: examples/saveload_example.cpp <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1aba0f17989f4ba925b6b3f4c930235f63"><span class="std std-ref">loadIndex</span></a></p>
+</div>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9loadIndexERNSt7istreamE">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9loadIndexERNSt7istreamE"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9loadIndexERNSt7istreamE"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::loadIndex__isR"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1aba0f17989f4ba925b6b3f4c930235f63"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">loadIndex</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">istream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9loadIndexERNSt7istreamE" title="Link to this definition"></a><br /></dt>
+<dd><p>Loads a previous index from a binary file. IMPORTANT NOTE: The set of data points is NOT stored in the file, so the index object must be constructed associated to the same source of data points used while building the index. See the example: examples/saveload_example.cpp <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1aba0f17989f4ba925b6b3f4c930235f63"><span class="std std-ref">loadIndex</span></a></p>
+</div>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_8dataset_E">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_8dataset_E"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_8dataset_E"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::dataset___DatasetAdaptorCR"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a42aa7719e96d0a9e0c9804fc7e81b576"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::DatasetAdaptor"><span class="n"><span class="pre">DatasetAdaptor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">dataset_</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_8dataset_E" title="Link to this definition"></a><br /></dt>
+<dd><p>The source of our data. </p>
+<p>The dataset used by this index </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_13index_params_E">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_13index_params_E"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_13index_params_E"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::index_params___KDTreeSingleIndexAdaptorParams"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a7183d33ab1bac9a65765f9eca1236005"></span><a class="reference internal" href="structnanoflann_1_1KDTreeSingleIndexAdaptorParams.html#_CPPv4N9nanoflann30KDTreeSingleIndexAdaptorParamsE" title="nanoflann::KDTreeSingleIndexAdaptorParams"><span class="n"><span class="pre">KDTreeSingleIndexAdaptorParams</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">index_params_</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_13index_params_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_10treeIndex_E">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_10treeIndex_E"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_10treeIndex_E"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::treeIndex___std::vector:i:R"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1a251ac6fab7ee9b2e731d6ad15d466ec8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">treeIndex_</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_10treeIndex_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9distance_E">
+<span id="_CPPv3N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9distance_E"></span><span id="_CPPv2N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9distance_E"></span><span id="nanoflann::KDTreeSingleIndexDynamicAdaptor_::distance___Distance"></span><span class="target" id="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor___1af492fe57095790d8f24f6da96d5aa055"></span><a class="reference internal" href="#_CPPv4I00_7int32_t0EN9nanoflann32KDTreeSingleIndexDynamicAdaptor_E" title="nanoflann::KDTreeSingleIndexDynamicAdaptor_::Distance"><span class="n"><span class="pre">Distance</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distance_</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann32KDTreeSingleIndexDynamicAdaptor_9distance_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor.html" class="btn btn-neutral float-left" title="Template Class KDTreeSingleIndexDynamicAdaptor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classnanoflann_1_1KNNResultSet.html" class="btn btn-neutral float-right" title="Template Class KNNResultSet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;reactive_algorithms_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

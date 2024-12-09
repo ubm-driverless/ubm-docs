@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structTrajectory" kind="struct" language="C++" prot="public">
+    <compoundname>Trajectory</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structTrajectory_1a93fb3e66860671d5f720d36086af3999" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; geos_t &gt;</type>
+        <definition>std::vector&lt;geos_t&gt; Trajectory::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="293" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrajectory_1a45625ce16075cfe3b9682e88502ab605" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; geos_t &gt;</type>
+        <definition>std::vector&lt;geos_t&gt; Trajectory::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="294" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrajectory_1a3554e9df938cc6155ba8f042f91a7a5d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Trajectory::yaw</definition>
+        <argsstring></argsstring>
+        <name>yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="295" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structTrajectory_1a071a42897ac3ac1a770b0047db7dd9ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trajectory::add</definition>
+        <argsstring>(const geos_t &amp;x, const geos_t &amp;y, const float &amp;yaw)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const geos_t &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const geos_t &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>yaw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="297" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="297" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="structTrajectory_1af6781929c34f5d8bb55d41724700ec64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trajectory::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="303" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="303" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="structTrajectory_1ae358a29718b26745dbfb86d0af424d69" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Trajectory::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="311" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="311" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="structTrajectory_1ae6a804b677650275e305bbd1a0e53629" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trajectory::downsample</definition>
+        <argsstring>(int factor)</argsstring>
+        <name>downsample</name>
+        <param>
+          <type>int</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="325" column="10" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="325" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="structTrajectory_1aeb6134b898517acd09038dcb66ecd913" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Trajectory::Trajectory</definition>
+        <argsstring>()=default</argsstring>
+        <name>Trajectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="343" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rrt_cpp/rrt.hpp" line="292" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="292" bodyend="344"/>
+    <listofallmembers>
+      <member refid="structTrajectory_1a071a42897ac3ac1a770b0047db7dd9ef" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>add</name></member>
+      <member refid="structTrajectory_1af6781929c34f5d8bb55d41724700ec64" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>clear</name></member>
+      <member refid="structTrajectory_1ae6a804b677650275e305bbd1a0e53629" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>downsample</name></member>
+      <member refid="structTrajectory_1ae358a29718b26745dbfb86d0af424d69" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>empty</name></member>
+      <member refid="structTrajectory_1aeb6134b898517acd09038dcb66ecd913" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>Trajectory</name></member>
+      <member refid="structTrajectory_1a93fb3e66860671d5f720d36086af3999" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>x</name></member>
+      <member refid="structTrajectory_1a45625ce16075cfe3b9682e88502ab605" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>y</name></member>
+      <member refid="structTrajectory_1a3554e9df938cc6155ba8f042f91a7a5d" prot="public" virt="non-virtual"><scope>Trajectory</scope><name>yaw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

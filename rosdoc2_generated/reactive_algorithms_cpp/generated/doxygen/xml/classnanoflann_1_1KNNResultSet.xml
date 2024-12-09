@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classnanoflann_1_1KNNResultSet" kind="class" language="C++" prot="public">
+    <compoundname>nanoflann::KNNResultSet</compoundname>
+    <includes local="no">nanoflann.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename _DistanceType</type>
+      </param>
+      <param>
+        <type>typename _IndexType</type>
+        <defval>size_t</defval>
+      </param>
+      <param>
+        <type>typename _CountType</type>
+        <defval>size_t</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classnanoflann_1_1KNNResultSet_1a4fdcc122df6c9da1aad6a40cb01c7b12" prot="public" static="no">
+        <type>_DistanceType</type>
+        <definition>using nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::DistanceType =  _DistanceType</definition>
+        <argsstring></argsstring>
+        <name>DistanceType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="170" column="5" bodyfile="include/nanoflann.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1KNNResultSet_1aace9e8ad300b79d407c34fafc105e64f" prot="public" static="no">
+        <type>_IndexType</type>
+        <definition>using nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::IndexType =  _IndexType</definition>
+        <argsstring></argsstring>
+        <name>IndexType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="171" column="5" bodyfile="include/nanoflann.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnanoflann_1_1KNNResultSet_1a188956b73759bb8fa91929b513407eba" prot="public" static="no">
+        <type>_CountType</type>
+        <definition>using nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::CountType =  _CountType</definition>
+        <argsstring></argsstring>
+        <name>CountType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="172" column="5" bodyfile="include/nanoflann.hpp" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnanoflann_1_1KNNResultSet_1ae424575ff5390dafd92f0ffd6c3c69d1" prot="private" static="no" mutable="no">
+        <type>IndexType *</type>
+        <definition>IndexType* nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::indices</definition>
+        <argsstring></argsstring>
+        <name>indices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="175" column="18" bodyfile="include/nanoflann.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KNNResultSet_1a69c7c3f5a124350111384ea8cd454b43" prot="private" static="no" mutable="no">
+        <type>DistanceType *</type>
+        <definition>DistanceType* nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::dists</definition>
+        <argsstring></argsstring>
+        <name>dists</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="176" column="18" bodyfile="include/nanoflann.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KNNResultSet_1a3053e4ec1f524308e9e5a2510c980a08" prot="private" static="no" mutable="no">
+        <type>CountType</type>
+        <definition>CountType nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="177" column="19" bodyfile="include/nanoflann.hpp" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnanoflann_1_1KNNResultSet_1afea6826d287b39a9c71d671e3862c09b" prot="private" static="no" mutable="no">
+        <type>CountType</type>
+        <definition>CountType nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="178" column="19" bodyfile="include/nanoflann.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnanoflann_1_1KNNResultSet_1a919fcb695b7e1cdea402c7eb8e677ae4" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::KNNResultSet</definition>
+        <argsstring>(CountType capacity_)</argsstring>
+        <name>KNNResultSet</name>
+        <param>
+          <type>CountType</type>
+          <declname>capacity_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="181" column="14" bodyfile="include/nanoflann.hpp" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KNNResultSet_1a34d5e438b93c49aac9a915be0ab7cde9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::init</definition>
+        <argsstring>(IndexType *indices_, DistanceType *dists_)</argsstring>
+        <name>init</name>
+        <param>
+          <type>IndexType *</type>
+          <declname>indices_</declname>
+        </param>
+        <param>
+          <type>DistanceType *</type>
+          <declname>dists_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="186" column="10" bodyfile="include/nanoflann.hpp" bodystart="186" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KNNResultSet_1a58add38e4df731807f32c41b008bd1e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>CountType</type>
+        <definition>CountType nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="195" column="15" bodyfile="include/nanoflann.hpp" bodystart="195" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KNNResultSet_1a5f2720939066cbe9316949ef42e4b981" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="196" column="15" bodyfile="include/nanoflann.hpp" bodystart="196" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KNNResultSet_1af593dfcf67797eb2b65a6fd5a598c49d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::full</definition>
+        <argsstring>() const</argsstring>
+        <name>full</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="197" column="15" bodyfile="include/nanoflann.hpp" bodystart="197" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KNNResultSet_1a52a808b3fb2889ebc100354be2558703" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::addPoint</definition>
+        <argsstring>(DistanceType dist, IndexType index)</argsstring>
+        <name>addPoint</name>
+        <param>
+          <type>DistanceType</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type>IndexType</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called during search to add an element matching the criteria. <simplesect kind="return"><para>true if the search should be continued, false if the results are sufficient </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>If defined and two points have the same distance, the one with the lowest-index will be returned first.</para>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="204" column="10" bodyfile="include/nanoflann.hpp" bodystart="204" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classnanoflann_1_1KNNResultSet_1acf08622d02ee431bb04120afd76409c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>DistanceType</type>
+        <definition>DistanceType nanoflann::KNNResultSet&lt; _DistanceType, _IndexType, _CountType &gt;::worstDist</definition>
+        <argsstring>() const</argsstring>
+        <name>worstDist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="239" column="18" bodyfile="include/nanoflann.hpp" bodystart="239" bodyend="239"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Result set for KNN searches (N-closest neighbors) </para>
+    </detaileddescription>
+    <location file="include/nanoflann.hpp" line="168" column="1" bodyfile="include/nanoflann.hpp" bodystart="167" bodyend="240"/>
+    <listofallmembers>
+      <member refid="classnanoflann_1_1KNNResultSet_1a52a808b3fb2889ebc100354be2558703" prot="public" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>addPoint</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1a3053e4ec1f524308e9e5a2510c980a08" prot="private" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>capacity</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1afea6826d287b39a9c71d671e3862c09b" prot="private" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>count</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1a188956b73759bb8fa91929b513407eba" prot="public" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>CountType</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1a4fdcc122df6c9da1aad6a40cb01c7b12" prot="public" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>DistanceType</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1a69c7c3f5a124350111384ea8cd454b43" prot="private" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>dists</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1a5f2720939066cbe9316949ef42e4b981" prot="public" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>empty</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1af593dfcf67797eb2b65a6fd5a598c49d" prot="public" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>full</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1aace9e8ad300b79d407c34fafc105e64f" prot="public" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>IndexType</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1ae424575ff5390dafd92f0ffd6c3c69d1" prot="private" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>indices</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1a34d5e438b93c49aac9a915be0ab7cde9" prot="public" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>init</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1a919fcb695b7e1cdea402c7eb8e677ae4" prot="public" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>KNNResultSet</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1a58add38e4df731807f32c41b008bd1e2" prot="public" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>size</name></member>
+      <member refid="classnanoflann_1_1KNNResultSet_1acf08622d02ee431bb04120afd76409c8" prot="public" virt="non-virtual"><scope>nanoflann::KNNResultSet</scope><name>worstDist</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

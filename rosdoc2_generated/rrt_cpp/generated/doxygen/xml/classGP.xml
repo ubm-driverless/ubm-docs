@@ -1,0 +1,657 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGP" kind="class" language="C++" prot="public">
+    <compoundname>GP</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classGP_1ae1bc441af912bdced370270613af3ff0" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::strip_width</definition>
+        <argsstring></argsstring>
+        <name>strip_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="50" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a970e263ccd37f6a818a9ad8644f05f4b" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int GP::n_iterations</definition>
+        <argsstring></argsstring>
+        <name>n_iterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="51" column="16" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a2dcec4e155be02bb5c7fbbd79c97d67e" prot="public" static="yes" mutable="no">
+        <type>geos_t</type>
+        <definition>geos_t GP::eps_L2_squared</definition>
+        <argsstring></argsstring>
+        <name>eps_L2_squared</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="52" column="19" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a0ad0ad3fb3ac9d48dd31be815fe57779" prot="public" static="yes" mutable="no">
+        <type>geos_t</type>
+        <definition>geos_t GP::delta_R_squared</definition>
+        <argsstring></argsstring>
+        <name>delta_R_squared</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="53" column="19" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a6eefc3c94b904691dc78678cb39c5f7f" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int GP::max_neighbors</definition>
+        <argsstring></argsstring>
+        <name>max_neighbors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="54" column="16" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1ab23cee0059acf9b994b89f64ecb170f3" prot="public" static="yes" mutable="no">
+        <type>geos_t</type>
+        <definition>geos_t GP::eps_L2_eq</definition>
+        <argsstring></argsstring>
+        <name>eps_L2_eq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="55" column="19" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1ab598a85a697bf8b6e757f27c9cd6bc12" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double GP::simplify_tolerance</definition>
+        <argsstring></argsstring>
+        <name>simplify_tolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="56" column="19" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a7c2bfa53cd42fa20e7167eb9c31ae376" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int GP::buffer_window</definition>
+        <argsstring></argsstring>
+        <name>buffer_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="57" column="16" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a44aa4e73f193f48e1f762ad94fa76066" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int GP::mean_yaw_window</definition>
+        <argsstring></argsstring>
+        <name>mean_yaw_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="58" column="16" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a23f2f3e6fc080dc7cd3e0e465940f22d" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int GP::buffer_retries</definition>
+        <argsstring></argsstring>
+        <name>buffer_retries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="59" column="16" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a5ed3a8c69f7814ed4de4efae266aafc9" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool GP::use_rhombus_function</definition>
+        <argsstring></argsstring>
+        <name>use_rhombus_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="60" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a777a6f8cc640c418900273002b912b58" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::trapezoidal_one_fraction</definition>
+        <argsstring></argsstring>
+        <name>trapezoidal_one_fraction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="61" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a835ce8833408e6e7141b80e29b5eabc2" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool GP::use_orientation_bias</definition>
+        <argsstring></argsstring>
+        <name>use_orientation_bias</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="62" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a644411e3e38ca1fad327a520c33ee917" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::orientation_bias</definition>
+        <argsstring></argsstring>
+        <name>orientation_bias</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="63" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1afd288fccbdff28f50edbaa168c453c14" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool GP::enable_X_free_sampling</definition>
+        <argsstring></argsstring>
+        <name>enable_X_free_sampling</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="64" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1acc92c723e20fe60b34069def52626098" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int GP::X_free_interval_over_nodes</definition>
+        <argsstring></argsstring>
+        <name>X_free_interval_over_nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="65" column="16" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a2656b304bdb25e0409c21c0e3a96d478" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int GP::X_free_interval_over_iterations</definition>
+        <argsstring></argsstring>
+        <name>X_free_interval_over_iterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="66" column="16" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a648f4f6eb6075375cec536380fffe592" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::goal_region_radius</definition>
+        <argsstring></argsstring>
+        <name>goal_region_radius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="67" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1ae2d51830749df3fe2bc7b8248ff47344" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::w_e</definition>
+        <argsstring></argsstring>
+        <name>w_e</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="68" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a812f21181920800a8862de613b32b6ab" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::w_theta</definition>
+        <argsstring></argsstring>
+        <name>w_theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="69" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1ae1674c0cd67c2481ff779e99787cacc2" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::w_d</definition>
+        <argsstring></argsstring>
+        <name>w_d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="70" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a64df80ebece0ea717d0de2c6e4413385" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::w_q</definition>
+        <argsstring></argsstring>
+        <name>w_q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="71" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1ad9923e1797eeffbb42aeaec398b9362d" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="74" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1ac5e31ebee6e8cca74c03b66a57099e35" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::k_alpha</definition>
+        <argsstring></argsstring>
+        <name>k_alpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="75" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1aca8809a501b1a4f306d58e920edd6393" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::k_phi</definition>
+        <argsstring></argsstring>
+        <name>k_phi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="76" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1aebc564ec80dc727b8e8d48adc3c064af" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::k_v</definition>
+        <argsstring></argsstring>
+        <name>k_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="77" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a8dcc93e43d0aeae28f1b9952fe210aba" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::k_gamma</definition>
+        <argsstring></argsstring>
+        <name>k_gamma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="78" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a8eaf4002d4bc54996813f56752295982" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::wb</definition>
+        <argsstring></argsstring>
+        <name>wb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="79" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1ab7e27693426a42ec63f021e9f04b0441" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="80" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1ae9b7e0297e702c67870745e7bb82b1b6" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::steer_limit</definition>
+        <argsstring></argsstring>
+        <name>steer_limit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="81" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a96fbd364ecb20e173c1f5eaa545d08a0" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool GP::enable_angular_velocity_limit</definition>
+        <argsstring></argsstring>
+        <name>enable_angular_velocity_limit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="82" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1acf68ff105858c1db161b10d5515a2158" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::k_rho</definition>
+        <argsstring></argsstring>
+        <name>k_rho</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="84" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a4733578f5e0475b6cf9c9f7144db99b7" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::k_max_num_iterations</definition>
+        <argsstring></argsstring>
+        <name>k_max_num_iterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="85" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1ae1c5085789f48cdaf652841ba0ffaebd" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::yaw_tolerance</definition>
+        <argsstring></argsstring>
+        <name>yaw_tolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="86" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a33795032760d7be3986d8958e32f45df" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int GP::downsample_factor</definition>
+        <argsstring></argsstring>
+        <name>downsample_factor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="87" column="16" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1ac283cbd810e01330ab57a4c7b08252d6" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::drag_coeff</definition>
+        <argsstring></argsstring>
+        <name>drag_coeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="89" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1afa17dfc516173734782cec6e38ed16b3" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::m_veh</definition>
+        <argsstring></argsstring>
+        <name>m_veh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="90" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1a5563e918c8ad538af721e17c8ec39808" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::v_max</definition>
+        <argsstring></argsstring>
+        <name>v_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="91" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGP_1acd1c0d7af8858af0b75ae374c9a0afe5" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float GP::dyn_model_exp</definition>
+        <argsstring></argsstring>
+        <name>dyn_model_exp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="92" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGP_1a9ddb7f8b8ea592e2efa4f5cf57b0df7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GP::GP</definition>
+        <argsstring>(const GP &amp;)=delete</argsstring>
+        <name>GP</name>
+        <param>
+          <type>const <ref refid="classGP" kindref="compound">GP</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="46" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classGP_1ab9683363b3e0e247ed7effcda6a8692f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGP" kindref="compound">GP</ref> &amp;</type>
+        <definition>GP&amp; GP::operator=</definition>
+        <argsstring>(const GP &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classGP" kindref="compound">GP</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="47" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classGP_1a9e82b17837a30266535bcf20752645d6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float &amp;</type>
+        <definition>static float&amp; GP::w_max</definition>
+        <argsstring>()</argsstring>
+        <name>w_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="83" column="25" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classGP_1ae21e315bf9fef3bb29636334d92a7502" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void GP::assert_params</definition>
+        <argsstring>()</argsstring>
+        <name>assert_params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="94" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="94" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classGP_1abd7d70cd034ecc46a2cc909ae12f8c25" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classGP" kindref="compound">GP</ref> &amp;</type>
+        <definition>static GP&amp; GP::get_obj</definition>
+        <argsstring>()</argsstring>
+        <name>get_obj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="156" column="15" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="156" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGP_1a35867f0bbaa0338405cca6d1f3158076" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GP::GP</definition>
+        <argsstring>()</argsstring>
+        <name>GP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="163" column="5" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="163" bodyend="163"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rrt_cpp/rrt.hpp" line="43" column="9" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="43" bodyend="164"/>
+    <listofallmembers>
+      <member refid="classGP_1ae21e315bf9fef3bb29636334d92a7502" prot="public" virt="non-virtual"><scope>GP</scope><name>assert_params</name></member>
+      <member refid="classGP_1a23f2f3e6fc080dc7cd3e0e465940f22d" prot="public" virt="non-virtual"><scope>GP</scope><name>buffer_retries</name></member>
+      <member refid="classGP_1a7c2bfa53cd42fa20e7167eb9c31ae376" prot="public" virt="non-virtual"><scope>GP</scope><name>buffer_window</name></member>
+      <member refid="classGP_1a0ad0ad3fb3ac9d48dd31be815fe57779" prot="public" virt="non-virtual"><scope>GP</scope><name>delta_R_squared</name></member>
+      <member refid="classGP_1a33795032760d7be3986d8958e32f45df" prot="public" virt="non-virtual"><scope>GP</scope><name>downsample_factor</name></member>
+      <member refid="classGP_1ac283cbd810e01330ab57a4c7b08252d6" prot="public" virt="non-virtual"><scope>GP</scope><name>drag_coeff</name></member>
+      <member refid="classGP_1ad9923e1797eeffbb42aeaec398b9362d" prot="public" virt="non-virtual"><scope>GP</scope><name>dt</name></member>
+      <member refid="classGP_1acd1c0d7af8858af0b75ae374c9a0afe5" prot="public" virt="non-virtual"><scope>GP</scope><name>dyn_model_exp</name></member>
+      <member refid="classGP_1a96fbd364ecb20e173c1f5eaa545d08a0" prot="public" virt="non-virtual"><scope>GP</scope><name>enable_angular_velocity_limit</name></member>
+      <member refid="classGP_1afd288fccbdff28f50edbaa168c453c14" prot="public" virt="non-virtual"><scope>GP</scope><name>enable_X_free_sampling</name></member>
+      <member refid="classGP_1ab23cee0059acf9b994b89f64ecb170f3" prot="public" virt="non-virtual"><scope>GP</scope><name>eps_L2_eq</name></member>
+      <member refid="classGP_1a2dcec4e155be02bb5c7fbbd79c97d67e" prot="public" virt="non-virtual"><scope>GP</scope><name>eps_L2_squared</name></member>
+      <member refid="classGP_1abd7d70cd034ecc46a2cc909ae12f8c25" prot="public" virt="non-virtual"><scope>GP</scope><name>get_obj</name></member>
+      <member refid="classGP_1a648f4f6eb6075375cec536380fffe592" prot="public" virt="non-virtual"><scope>GP</scope><name>goal_region_radius</name></member>
+      <member refid="classGP_1a9ddb7f8b8ea592e2efa4f5cf57b0df7a" prot="public" virt="non-virtual"><scope>GP</scope><name>GP</name></member>
+      <member refid="classGP_1a35867f0bbaa0338405cca6d1f3158076" prot="private" virt="non-virtual"><scope>GP</scope><name>GP</name></member>
+      <member refid="classGP_1ac5e31ebee6e8cca74c03b66a57099e35" prot="public" virt="non-virtual"><scope>GP</scope><name>k_alpha</name></member>
+      <member refid="classGP_1a8dcc93e43d0aeae28f1b9952fe210aba" prot="public" virt="non-virtual"><scope>GP</scope><name>k_gamma</name></member>
+      <member refid="classGP_1a4733578f5e0475b6cf9c9f7144db99b7" prot="public" virt="non-virtual"><scope>GP</scope><name>k_max_num_iterations</name></member>
+      <member refid="classGP_1aca8809a501b1a4f306d58e920edd6393" prot="public" virt="non-virtual"><scope>GP</scope><name>k_phi</name></member>
+      <member refid="classGP_1acf68ff105858c1db161b10d5515a2158" prot="public" virt="non-virtual"><scope>GP</scope><name>k_rho</name></member>
+      <member refid="classGP_1aebc564ec80dc727b8e8d48adc3c064af" prot="public" virt="non-virtual"><scope>GP</scope><name>k_v</name></member>
+      <member refid="classGP_1afa17dfc516173734782cec6e38ed16b3" prot="public" virt="non-virtual"><scope>GP</scope><name>m_veh</name></member>
+      <member refid="classGP_1a6eefc3c94b904691dc78678cb39c5f7f" prot="public" virt="non-virtual"><scope>GP</scope><name>max_neighbors</name></member>
+      <member refid="classGP_1a44aa4e73f193f48e1f762ad94fa76066" prot="public" virt="non-virtual"><scope>GP</scope><name>mean_yaw_window</name></member>
+      <member refid="classGP_1a970e263ccd37f6a818a9ad8644f05f4b" prot="public" virt="non-virtual"><scope>GP</scope><name>n_iterations</name></member>
+      <member refid="classGP_1ab9683363b3e0e247ed7effcda6a8692f" prot="public" virt="non-virtual"><scope>GP</scope><name>operator=</name></member>
+      <member refid="classGP_1a644411e3e38ca1fad327a520c33ee917" prot="public" virt="non-virtual"><scope>GP</scope><name>orientation_bias</name></member>
+      <member refid="classGP_1ab598a85a697bf8b6e757f27c9cd6bc12" prot="public" virt="non-virtual"><scope>GP</scope><name>simplify_tolerance</name></member>
+      <member refid="classGP_1ab7e27693426a42ec63f021e9f04b0441" prot="public" virt="non-virtual"><scope>GP</scope><name>speed</name></member>
+      <member refid="classGP_1ae9b7e0297e702c67870745e7bb82b1b6" prot="public" virt="non-virtual"><scope>GP</scope><name>steer_limit</name></member>
+      <member refid="classGP_1ae1bc441af912bdced370270613af3ff0" prot="public" virt="non-virtual"><scope>GP</scope><name>strip_width</name></member>
+      <member refid="classGP_1a777a6f8cc640c418900273002b912b58" prot="public" virt="non-virtual"><scope>GP</scope><name>trapezoidal_one_fraction</name></member>
+      <member refid="classGP_1a835ce8833408e6e7141b80e29b5eabc2" prot="public" virt="non-virtual"><scope>GP</scope><name>use_orientation_bias</name></member>
+      <member refid="classGP_1a5ed3a8c69f7814ed4de4efae266aafc9" prot="public" virt="non-virtual"><scope>GP</scope><name>use_rhombus_function</name></member>
+      <member refid="classGP_1a5563e918c8ad538af721e17c8ec39808" prot="public" virt="non-virtual"><scope>GP</scope><name>v_max</name></member>
+      <member refid="classGP_1ae1674c0cd67c2481ff779e99787cacc2" prot="public" virt="non-virtual"><scope>GP</scope><name>w_d</name></member>
+      <member refid="classGP_1ae2d51830749df3fe2bc7b8248ff47344" prot="public" virt="non-virtual"><scope>GP</scope><name>w_e</name></member>
+      <member refid="classGP_1a9e82b17837a30266535bcf20752645d6" prot="public" virt="non-virtual"><scope>GP</scope><name>w_max</name></member>
+      <member refid="classGP_1a64df80ebece0ea717d0de2c6e4413385" prot="public" virt="non-virtual"><scope>GP</scope><name>w_q</name></member>
+      <member refid="classGP_1a812f21181920800a8862de613b32b6ab" prot="public" virt="non-virtual"><scope>GP</scope><name>w_theta</name></member>
+      <member refid="classGP_1a8eaf4002d4bc54996813f56752295982" prot="public" virt="non-virtual"><scope>GP</scope><name>wb</name></member>
+      <member refid="classGP_1a2656b304bdb25e0409c21c0e3a96d478" prot="public" virt="non-virtual"><scope>GP</scope><name>X_free_interval_over_iterations</name></member>
+      <member refid="classGP_1acc92c723e20fe60b34069def52626098" prot="public" virt="non-virtual"><scope>GP</scope><name>X_free_interval_over_nodes</name></member>
+      <member refid="classGP_1ae1c5085789f48cdaf652841ba0ffaebd" prot="public" virt="non-virtual"><scope>GP</scope><name>yaw_tolerance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

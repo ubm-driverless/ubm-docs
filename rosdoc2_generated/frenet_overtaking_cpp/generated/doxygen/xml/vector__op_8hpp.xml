@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="vector__op_8hpp" kind="file" language="C++">
+    <compoundname>vector_op.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includedby refid="raceline_8hpp" local="yes">include/raceline.hpp</includedby>
+    <includedby refid="frenet__overtaking__node_8hpp" local="yes">include/frenet_overtaking_node.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/vector_op.hpp</label>
+        <link refid="vector__op_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="vector__op_8hpp_1a478f9c32589c5d73b481c36e939f27a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; linspace</definition>
+        <argsstring>(float start, float end, int num)</argsstring>
+        <name>linspace</name>
+        <param>
+          <type>float</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>Generates a vector of linearly spaced values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns a vector of <computeroutput>num</computeroutput> evenly spaced values starting from <computeroutput>start</computeroutput> and ending at <computeroutput>end</computeroutput>. The spacing between values is calculated such that the values are evenly distributed over the specified range.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting value of the sequence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ending value of the sequence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of values to generate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;float&gt; A vector containing <computeroutput>num</computeroutput> linearly spaced values from <computeroutput>start</computeroutput> to <computeroutput>end</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector_op.hpp" line="16" column="13" declfile="include/vector_op.hpp" declline="16" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="vector__op_8hpp_1ad725afcbeef02cb588029045beaff268" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mod</definition>
+        <argsstring>(int a, int n)</argsstring>
+        <name>mod</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Computes the modulus of two integers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the remainder of the division of <computeroutput>a</computeroutput> by <computeroutput>n</computeroutput>. The result is always non-negative, even if <computeroutput>a</computeroutput> is negative.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dividend. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The divisor. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int The remainder of the division of <computeroutput>a</computeroutput> by <computeroutput>n</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector_op.hpp" line="28" column="5" declfile="include/vector_op.hpp" declline="28" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="vector__op_8hpp_1a548f490e1cc2964ec6a3099dedee3485" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>unsigned int</type>
+        <definition>unsigned int argmin</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;v)</argsstring>
+        <name>argmin</name>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Finds the index of the minimum element in a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function iterates through the given vector and returns the index of the smallest element. If there are multiple occurrences of the minimum element, the index of the first occurrence is returned.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the elements in the vector. The type T must support comparison operators. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector to search for the minimum element. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned int The index of the minimum element in the vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector_op.hpp" line="42" column="14" bodyfile="include/vector_op.hpp" bodystart="42" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="vector__op_8hpp_1a588d8ae799d233a401111c312e73364f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float rafi</definition>
+        <argsstring>(int index, float angle_increment, float fov_rad)</argsstring>
+        <name>rafi</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fov_rad</declname>
+        </param>
+        <briefdescription>
+<para>Range Angle From Index (inverse of <computeroutput>rifa</computeroutput> but returns the angle in radians) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the lidar ranges vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle increment of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fov_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field of view of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the angle corresponding to the given index [rad] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector_op.hpp" line="61" column="14" bodyfile="include/vector_op.hpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/vector_op.hpp"/>
+  </compounddef>
+</doxygen>

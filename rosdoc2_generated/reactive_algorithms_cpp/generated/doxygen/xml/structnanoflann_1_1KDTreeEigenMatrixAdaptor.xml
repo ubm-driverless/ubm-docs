@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structnanoflann_1_1KDTreeEigenMatrixAdaptor" kind="struct" language="C++" prot="public">
+    <compoundname>nanoflann::KDTreeEigenMatrixAdaptor</compoundname>
+    <includes local="no">nanoflann.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class MatrixType</type>
+      </param>
+      <param>
+        <type>int32_t</type>
+        <declname>DIM</declname>
+        <defname>DIM</defname>
+        <defval>-1</defval>
+      </param>
+      <param>
+        <type>class Distance</type>
+        <defval><ref refid="structnanoflann_1_1metric__L2" kindref="compound">nanoflann::metric_L2</ref></defval>
+      </param>
+      <param>
+        <type>bool</type>
+        <declname>row_major</declname>
+        <defname>row_major</defname>
+        <defval>true</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="user-defined">
+      <header>Interface expected by KDTreeSingleIndexAdaptor</header>
+      <memberdef kind="function" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a05b6513444ef85fee0dc67b1cf9a70c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor" kindref="compound">self_t</ref> &amp;</type>
+        <definition>const self_t&amp; nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::derived</definition>
+        <argsstring>() const</argsstring>
+        <name>derived</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2647" column="18" bodyfile="include/nanoflann.hpp" bodystart="2647" bodyend="2647"/>
+      </memberdef>
+      <memberdef kind="function" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1aef432711718fcf42884dd29d8708cc02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor" kindref="compound">self_t</ref> &amp;</type>
+        <definition>self_t&amp; nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::derived</definition>
+        <argsstring>()</argsstring>
+        <name>derived</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2648" column="18" bodyfile="include/nanoflann.hpp" bodystart="2648" bodyend="2648"/>
+      </memberdef>
+      <memberdef kind="function" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a4917a1763ea83c4ba4ed6ce6a799b5f1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Size</type>
+        <definition>Size nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::kdtree_get_point_count</definition>
+        <argsstring>() const</argsstring>
+        <name>kdtree_get_point_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2651" column="10" bodyfile="include/nanoflann.hpp" bodystart="2651" bodyend="2657"/>
+      </memberdef>
+      <memberdef kind="function" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a39bd0881011a5999cf35d1e119038dc8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>num_t</type>
+        <definition>num_t nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::kdtree_get_pt</definition>
+        <argsstring>(const IndexType idx, size_t dim) const</argsstring>
+        <name>kdtree_get_pt</name>
+        <param>
+          <type>const IndexType</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2660" column="11" bodyfile="include/nanoflann.hpp" bodystart="2660" bodyend="2666"/>
+      </memberdef>
+      <memberdef kind="function" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a7c92b544c47749c63ce228e885a4cba9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class BBOX</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::kdtree_get_bbox</definition>
+        <argsstring>(BBOX &amp;) const</argsstring>
+        <name>kdtree_get_bbox</name>
+        <param>
+          <type>BBOX &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2674" column="10" bodyfile="include/nanoflann.hpp" bodystart="2674" bodyend="2677"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1affb5885085015a7a06915d2c895dec1d" prot="public" static="no">
+        <type><ref refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor" kindref="compound">KDTreeEigenMatrixAdaptor</ref>&lt; MatrixType, DIM, Distance, row_major &gt;</type>
+        <definition>using nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::self_t =  KDTreeEigenMatrixAdaptor&lt;MatrixType, DIM, Distance, row_major&gt;</definition>
+        <argsstring></argsstring>
+        <name>self_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2578" column="5" bodyfile="include/nanoflann.hpp" bodystart="2579" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a30dd9b84ee35c67d50dbdb4c54679baf" prot="public" static="no">
+        <type>typename MatrixType::Scalar</type>
+        <definition>using nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::num_t =  typename MatrixType::Scalar</definition>
+        <argsstring></argsstring>
+        <name>num_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2580" column="5" bodyfile="include/nanoflann.hpp" bodystart="2580" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1acf4a5c6b5f552d634a1dd826894d7598" prot="public" static="no">
+        <type>typename MatrixType::Index</type>
+        <definition>using nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::IndexType =  typename MatrixType::Index</definition>
+        <argsstring></argsstring>
+        <name>IndexType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2581" column="5" bodyfile="include/nanoflann.hpp" bodystart="2581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a303401ea6a2f96ae9c41979d7c9fe92d" prot="public" static="no">
+        <type>typename Distance::template traits&lt; num_t, <ref refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor" kindref="compound">self_t</ref>, IndexType &gt;::distance_t</type>
+        <definition>using nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::metric_t =  typename Distance::template traits&lt; num_t, self_t, IndexType&gt;::distance_t</definition>
+        <argsstring></argsstring>
+        <name>metric_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2582" column="5" bodyfile="include/nanoflann.hpp" bodystart="2583" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a4f27e1c672443cbe436ffe2ba9d8cc61" prot="public" static="no">
+        <type><ref refid="classnanoflann_1_1KDTreeSingleIndexAdaptor" kindref="compound">KDTreeSingleIndexAdaptor</ref>&lt; metric_t, <ref refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor" kindref="compound">self_t</ref>, row_major ? MatrixType::ColsAtCompileTime :MatrixType::RowsAtCompileTime, IndexType &gt;</type>
+        <definition>using nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::index_t =  KDTreeSingleIndexAdaptor&lt; metric_t, self_t, row_major ? MatrixType::ColsAtCompileTime : MatrixType::RowsAtCompileTime, IndexType&gt;</definition>
+        <argsstring></argsstring>
+        <name>index_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2585" column="5" bodyfile="include/nanoflann.hpp" bodystart="2589" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1ae483cd39482dfe3ff90c68143e06d4ba" prot="public" static="no">
+        <type>typename index_t::Offset</type>
+        <definition>using nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::Offset =  typename index_t::Offset</definition>
+        <argsstring></argsstring>
+        <name>Offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The kd-tree index for the user to call its methods as usual with any other FLANN index. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2594" column="5" bodyfile="include/nanoflann.hpp" bodystart="2594" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a7bd78966dd8a05f4c69df6f5a52e2023" prot="public" static="no">
+        <type>typename index_t::Size</type>
+        <definition>using nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::Size =  typename index_t::Size</definition>
+        <argsstring></argsstring>
+        <name>Size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2595" column="5" bodyfile="include/nanoflann.hpp" bodystart="2595" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1adf8a885af6cf91c4c522f281fadc7f72" prot="public" static="no">
+        <type>typename index_t::Dimension</type>
+        <definition>using nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::Dimension =  typename index_t::Dimension</definition>
+        <argsstring></argsstring>
+        <name>Dimension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2596" column="5" bodyfile="include/nanoflann.hpp" bodystart="2596" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1ab8483ad70594e45faa8fd98e3c84dc2d" prot="public" static="no" mutable="no">
+        <type><ref refid="classnanoflann_1_1KDTreeSingleIndexAdaptor" kindref="compound">index_t</ref> *</type>
+        <definition>index_t* nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::index_</definition>
+        <argsstring></argsstring>
+        <name>index_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2591" column="13" bodyfile="include/nanoflann.hpp" bodystart="2591" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a870f0613ab81450221cff60591a81204" prot="public" static="no" mutable="no">
+        <type>const std::reference_wrapper&lt; const MatrixType &gt;</type>
+        <definition>const std::reference_wrapper&lt;const MatrixType&gt; nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::m_data_matrix</definition>
+        <argsstring></argsstring>
+        <name>m_data_matrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2625" column="34" bodyfile="include/nanoflann.hpp" bodystart="2625" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a659fac8a19c44741e3d35706f14706ef" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::KDTreeEigenMatrixAdaptor</definition>
+        <argsstring>(const Dimension dimensionality, const std::reference_wrapper&lt; const MatrixType &gt; &amp;mat, const int leaf_max_size=10)</argsstring>
+        <name>KDTreeEigenMatrixAdaptor</name>
+        <param>
+          <type>const Dimension</type>
+          <declname>dimensionality</declname>
+        </param>
+        <param>
+          <type>const std::reference_wrapper&lt; const MatrixType &gt; &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>leaf_max_size</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Constructor: takes a const ref to the matrix object with the data points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2599" column="14" bodyfile="include/nanoflann.hpp" bodystart="2599" bodyend="2617"/>
+      </memberdef>
+      <memberdef kind="function" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a8824b4223eebf63d4e26a594fadaa3e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::KDTreeEigenMatrixAdaptor</definition>
+        <argsstring>(const self_t &amp;)=delete</argsstring>
+        <name>KDTreeEigenMatrixAdaptor</name>
+        <param>
+          <type>const <ref refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor" kindref="compound">self_t</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deleted copy constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2621" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1af18c660f6de93e98ef9db9642247a5af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::~KDTreeEigenMatrixAdaptor</definition>
+        <argsstring>()</argsstring>
+        <name>~KDTreeEigenMatrixAdaptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2623" column="5" bodyfile="include/nanoflann.hpp" bodystart="2623" bodyend="2623"/>
+      </memberdef>
+      <memberdef kind="function" id="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a1f7a3b7650512181407ef4f659d24577" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;::query</definition>
+        <argsstring>(const num_t *query_point, const Size num_closest, IndexType *out_indices, num_t *out_distances) const</argsstring>
+        <name>query</name>
+        <param>
+          <type>const num_t *</type>
+          <declname>query_point</declname>
+        </param>
+        <param>
+          <type>const Size</type>
+          <declname>num_closest</declname>
+        </param>
+        <param>
+          <type>IndexType *</type>
+          <declname>out_indices</declname>
+        </param>
+        <param>
+          <type>num_t *</type>
+          <declname>out_distances</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Query for the <emphasis>num_closest</emphasis> closest points to a given point (entered as query_point[0:dim-1]). Note that this is a short-cut method for index-&gt;findNeighbors(). The user can also call index-&gt;... methods as desired.</para>
+<para><simplesect kind="note"><para>If L2 norms are used, all returned distances are actually squared distances. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="2635" column="10" bodyfile="include/nanoflann.hpp" bodystart="2635" bodyend="2642"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>An L2-metric KD-tree adaptor for working with data directly stored in an Eigen Matrix, without duplicating the data storage. You can select whether a row or column in the matrix represents a point in the state space.</para>
+<para>Example of usage: <programlisting><codeline><highlight class="normal">Eigen::Matrix&lt;num_t,Eigen::Dynamic,Eigen::Dynamic&gt;<sp/><sp/>mat;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Fill<sp/>out<sp/>&quot;mat&quot;...</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>my_kd_tree_t<sp/>=<sp/>nanoflann::KDTreeEigenMatrixAdaptor&lt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Eigen::Matrix&lt;num_t,Dynamic,Dynamic&gt;&gt;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">const<sp/>int<sp/>max_leaf<sp/>=<sp/>10;</highlight></codeline>
+<codeline><highlight class="normal">my_kd_tree_t<sp/>mat_index(mat,<sp/>max_leaf);</highlight></codeline>
+<codeline><highlight class="normal">mat_index.index-&gt;...</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>DIM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set to &gt;0, it specifies a compile-time fixed dimensionality for the points in the data set, allowing more compiler optimizations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distance metric to use: <ref refid="structnanoflann_1_1metric__L1" kindref="compound">nanoflann::metric_L1</ref>, <ref refid="structnanoflann_1_1metric__L2" kindref="compound">nanoflann::metric_L2</ref>, <ref refid="structnanoflann_1_1metric__L2__Simple" kindref="compound">nanoflann::metric_L2_Simple</ref>, etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row_major</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set to true the rows of the matrix are used as the points, if set to false the columns of the matrix are used as the points. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>nanoflann::PooledAllocator</label>
+        <link refid="classnanoflann_1_1PooledAllocator"/>
+      </node>
+      <node id="7">
+        <label>nanoflann::KDTreeSingleIndexAdaptorParams</label>
+        <link refid="structnanoflann_1_1KDTreeSingleIndexAdaptorParams"/>
+      </node>
+      <node id="2">
+        <label>nanoflann::KDTreeSingleIndexAdaptor&lt; Distance, DatasetAdaptor, DIM, IndexType &gt;</label>
+        <link refid="classnanoflann_1_1KDTreeSingleIndexAdaptor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>indexParams</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>nanoflann::KDTreeBaseClass&lt; Derived, Distance, DatasetAdaptor, DIM, IndexType &gt;::Node</label>
+        <link refid="structnanoflann_1_1KDTreeBaseClass_1_1Node"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>child1</edgelabel>
+          <edgelabel>child2</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nanoflann::KDTreeBaseClass&lt; KDTreeSingleIndexAdaptor&lt; Distance, DatasetAdaptor, -1, uint32_t &gt;, Distance, DatasetAdaptor, -1, uint32_t &gt;</label>
+        <link refid="classnanoflann_1_1KDTreeBaseClass"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>root_bbox_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>root_node_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>pool_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>nanoflann::KDTreeEigenMatrixAdaptor&lt; MatrixType, DIM, Distance, row_major &gt;</label>
+        <link refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>index_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>nanoflann::array_or_vector&lt; DIM, Interval &gt;</label>
+        <link refid="structnanoflann_1_1array__or__vector"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/nanoflann.hpp" line="2577" column="1" bodyfile="include/nanoflann.hpp" bodystart="2576" bodyend="2681"/>
+    <listofallmembers>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a05b6513444ef85fee0dc67b1cf9a70c9" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>derived</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1aef432711718fcf42884dd29d8708cc02" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>derived</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1adf8a885af6cf91c4c522f281fadc7f72" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>Dimension</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1ab8483ad70594e45faa8fd98e3c84dc2d" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>index_</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a4f27e1c672443cbe436ffe2ba9d8cc61" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>index_t</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1acf4a5c6b5f552d634a1dd826894d7598" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>IndexType</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a7c92b544c47749c63ce228e885a4cba9" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>kdtree_get_bbox</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a4917a1763ea83c4ba4ed6ce6a799b5f1" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>kdtree_get_point_count</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a39bd0881011a5999cf35d1e119038dc8" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>kdtree_get_pt</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a659fac8a19c44741e3d35706f14706ef" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>KDTreeEigenMatrixAdaptor</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a8824b4223eebf63d4e26a594fadaa3e7" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>KDTreeEigenMatrixAdaptor</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a870f0613ab81450221cff60591a81204" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>m_data_matrix</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a303401ea6a2f96ae9c41979d7c9fe92d" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>metric_t</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a30dd9b84ee35c67d50dbdb4c54679baf" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>num_t</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1ae483cd39482dfe3ff90c68143e06d4ba" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>Offset</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a1f7a3b7650512181407ef4f659d24577" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>query</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1affb5885085015a7a06915d2c895dec1d" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>self_t</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1a7bd78966dd8a05f4c69df6f5a52e2023" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>Size</name></member>
+      <member refid="structnanoflann_1_1KDTreeEigenMatrixAdaptor_1af18c660f6de93e98ef9db9642247a5af" prot="public" virt="non-virtual"><scope>nanoflann::KDTreeEigenMatrixAdaptor</scope><name>~KDTreeEigenMatrixAdaptor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

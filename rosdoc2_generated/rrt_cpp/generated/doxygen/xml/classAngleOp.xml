@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classAngleOp" kind="class" language="C++" prot="public">
+    <compoundname>AngleOp</compoundname>
+    <includes local="no">rrt.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAngleOp_1a0f506f2d09209c7528a79857ae5f7578" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AngleOp::AngleOp</definition>
+        <argsstring>()=delete</argsstring>
+        <name>AngleOp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="430" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classAngleOp_1ad052e076aaf54046fa0ca131e743a5ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AngleOp::AngleOp</definition>
+        <argsstring>(const AngleOp &amp;)=delete</argsstring>
+        <name>AngleOp</name>
+        <param>
+          <type>const <ref refid="classAngleOp" kindref="compound">AngleOp</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="431" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classAngleOp_1a79ef48931efec07b6e511473c8959c8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AngleOp::AngleOp</definition>
+        <argsstring>(AngleOp &amp;&amp;)=delete</argsstring>
+        <name>AngleOp</name>
+        <param>
+          <type><ref refid="classAngleOp" kindref="compound">AngleOp</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="432" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classAngleOp_1a5a58e1e86d3a125183c3352feb50a59c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float AngleOp::normalize_angle</definition>
+        <argsstring>(float angle)</argsstring>
+        <name>normalize_angle</name>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Normalize an angle to the range [-pi, pi). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="437" column="25" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="437" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classAngleOp_1a077a72cfafd1ffd5c34207cf2c23673a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float AngleOp::angle_diff</definition>
+        <argsstring>(float a, float b)</argsstring>
+        <name>angle_diff</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes <computeroutput>b - a</computeroutput> in the range [-pi, pi). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="448" column="25" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="448" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classAngleOp_1aea286f968aaf4a5d3b6f8e11cf17e3ed" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float AngleOp::bisect_angle</definition>
+        <argsstring>(float a, float b)</argsstring>
+        <name>bisect_angle</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds the angle bisector between two angles. The inputs can be given in any order and they don&apos;t need to be normalized. The output is normalized. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="460" column="25" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="460" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="classAngleOp_1a8ad3d4b8e50b886bed763ccc9c8b9482" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float AngleOp::weighted_circular_mean</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;angles, const std::vector&lt; float &gt; &amp;weights)</argsstring>
+        <name>weighted_circular_mean</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>weights</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the weighted circular mean of a set of angles, given their respective weights. The inputs don&apos;t need to be normalized. The output is in the range [-pi, pi). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="468" column="18" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="468" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="classAngleOp_1ab783d3c5ba3f0260be2834a34b615da7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float AngleOp::cos_angle_diff</definition>
+        <argsstring>(float a, float b)</argsstring>
+        <name>cos_angle_diff</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the cosine of the angle difference between two angles. The inputs don&apos;t need to be normalized. The order of the angles doesn&apos;t matter, since <computeroutput>cos(a - b) = cos(b - a)</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="490" column="25" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="490" bodyend="492"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class to perform operations with angles. The angles are in radians and in the range [-pi, pi). </para>
+    </detaileddescription>
+    <location file="include/rrt_cpp/rrt.hpp" line="428" column="14" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="428" bodyend="493"/>
+    <listofallmembers>
+      <member refid="classAngleOp_1a077a72cfafd1ffd5c34207cf2c23673a" prot="public" virt="non-virtual"><scope>AngleOp</scope><name>angle_diff</name></member>
+      <member refid="classAngleOp_1a0f506f2d09209c7528a79857ae5f7578" prot="public" virt="non-virtual"><scope>AngleOp</scope><name>AngleOp</name></member>
+      <member refid="classAngleOp_1ad052e076aaf54046fa0ca131e743a5ea" prot="public" virt="non-virtual"><scope>AngleOp</scope><name>AngleOp</name></member>
+      <member refid="classAngleOp_1a79ef48931efec07b6e511473c8959c8d" prot="public" virt="non-virtual"><scope>AngleOp</scope><name>AngleOp</name></member>
+      <member refid="classAngleOp_1aea286f968aaf4a5d3b6f8e11cf17e3ed" prot="public" virt="non-virtual"><scope>AngleOp</scope><name>bisect_angle</name></member>
+      <member refid="classAngleOp_1ab783d3c5ba3f0260be2834a34b615da7" prot="public" virt="non-virtual"><scope>AngleOp</scope><name>cos_angle_diff</name></member>
+      <member refid="classAngleOp_1a5a58e1e86d3a125183c3352feb50a59c" prot="public" virt="non-virtual"><scope>AngleOp</scope><name>normalize_angle</name></member>
+      <member refid="classAngleOp_1a8ad3d4b8e50b886bed763ccc9c8b9482" prot="public" virt="non-virtual"><scope>AngleOp</scope><name>weighted_circular_mean</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

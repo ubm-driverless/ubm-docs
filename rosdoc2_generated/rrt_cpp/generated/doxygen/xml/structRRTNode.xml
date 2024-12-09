@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structRRTNode" kind="struct" language="C++" prot="public">
+    <compoundname>RRTNode</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structRRTNode_1a7a3e791da24058af7bc524a7fdeb6dd1" prot="private" static="no" mutable="no">
+        <type>geos_t</type>
+        <definition>geos_t RRTNode::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="410" column="12" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRRTNode_1a3539904478560e979a250639993c35a3" prot="private" static="no" mutable="no">
+        <type>geos_t</type>
+        <definition>geos_t RRTNode::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="411" column="12" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRRTNode_1a0b9b9498cdd41b0fe23e89c214a73fe5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RRTNode::yaw</definition>
+        <argsstring></argsstring>
+        <name>yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="412" column="11" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRRTNode_1aabe4786c6b26ea7b8c170cbc8a4fde97" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RRTNode::cost</definition>
+        <argsstring></argsstring>
+        <name>cost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="413" column="11" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRRTNode_1aeb76192c34e86e81b5ad8343a4d5a6f6" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t RRTNode::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="414" column="12" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRRTNode_1a77ee064c11e724f48eaefb1982458e2b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RRTNode::closest_segment_idx</definition>
+        <argsstring></argsstring>
+        <name>closest_segment_idx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="415" column="9" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRRTNode_1a8ec1de347552bed9257db9182ee6a278" prot="private" static="no" mutable="no">
+        <type>geos_t</type>
+        <definition>geos_t RRTNode::distance_to_segment</definition>
+        <argsstring></argsstring>
+        <name>distance_to_segment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="416" column="12" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRRTNode_1a5a627c8b4e75e413177bd2fd80884aea" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RRTNode::yaw_misalignment</definition>
+        <argsstring></argsstring>
+        <name>yaw_misalignment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="417" column="11" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRRTNode_1ad69faf0cfefe40c287566472cb74c6fa" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t RRTNode::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="418" column="12" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRRTNode_1aec1d8b75205a20527c819a9b8f5511d1" prot="private" static="no" mutable="no">
+        <type>TrajectoryPtr</type>
+        <definition>TrajectoryPtr RRTNode::trajectory</definition>
+        <argsstring></argsstring>
+        <name>trajectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="419" column="19" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structRRTNode_1a0a478d4c36c62ad7d1363d18e4c054f5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool &amp;</type>
+        <definition>static bool&amp; RRTNode::set_root</definition>
+        <argsstring>()</argsstring>
+        <name>set_root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="353" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="353" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a666bbcb1160d4052a807817c64a3c691" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structRRTNode" kindref="compound">RRTNode</ref> &amp;</type>
+        <definition>static const RRTNode&amp; RRTNode::get_dummy</definition>
+        <argsstring>()</argsstring>
+        <name>get_dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="393" column="26" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="393" bodyend="396"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structRRTNode_1a52b304daf3b4aff284bac2d64408cbf6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RRTNode::RRTNode</definition>
+        <argsstring>(geos_t x, geos_t y, float yaw, size_t index, int closest_segment_idx, geos_t distance_to_segment, float yaw_misalignment)</argsstring>
+        <name>RRTNode</name>
+        <param>
+          <type>geos_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>geos_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yaw</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>closest_segment_idx</declname>
+        </param>
+        <param>
+          <type>geos_t</type>
+          <declname>distance_to_segment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yaw_misalignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="358" column="5" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="358" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a31d4e3ddc97e020c9d153132bb19529a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTNode::finalize</definition>
+        <argsstring>(const float &amp;cost, const size_t &amp;parent, TrajectoryPtr trajectory)</argsstring>
+        <name>finalize</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>cost</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>TrajectoryPtr</type>
+          <declname>trajectory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="365" column="10" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="365" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1abe428d244690c0cff88efb1b90902be6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RRTNode::set_to_root</definition>
+        <argsstring>()</argsstring>
+        <name>set_to_root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="374" column="10" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="374" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a5829eece18552314f002b73d3f6a85bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RRTNode::is_root</definition>
+        <argsstring>() const</argsstring>
+        <name>is_root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="385" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="385" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a3c906987674fea7989c14f01338f943e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RRTNode::is_final</definition>
+        <argsstring>() const</argsstring>
+        <name>is_final</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="389" column="17" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="389" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a5810201415befbe0a8d436592d79fc4a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const geos_t &amp;</type>
+        <definition>const geos_t&amp; RRTNode::get_x</definition>
+        <argsstring>() const</argsstring>
+        <name>get_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="398" column="25" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="398" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1ab6b774e46125945c92604f232dad4423" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const geos_t &amp;</type>
+        <definition>const geos_t&amp; RRTNode::get_y</definition>
+        <argsstring>() const</argsstring>
+        <name>get_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="399" column="25" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="399" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a92c8775b202163799abf78ac0f3263c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const float &amp;</type>
+        <definition>const float&amp; RRTNode::get_yaw</definition>
+        <argsstring>() const</argsstring>
+        <name>get_yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="400" column="24" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="400" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a66a6a4d7862ef9a46a2ebd19ef3641bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const float &amp;</type>
+        <definition>const float&amp; RRTNode::get_cost</definition>
+        <argsstring>() const</argsstring>
+        <name>get_cost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="401" column="24" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="401" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a216226e271923440b3c5f9c3b0041d8e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const size_t &amp;</type>
+        <definition>const size_t&amp; RRTNode::get_index</definition>
+        <argsstring>() const</argsstring>
+        <name>get_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="402" column="25" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="402" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a0cd7710d04718b67117319d2a4fb42d4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const int &amp;</type>
+        <definition>const int&amp; RRTNode::get_closest_segment_idx</definition>
+        <argsstring>() const</argsstring>
+        <name>get_closest_segment_idx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="403" column="22" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="403" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1aa8081e159d20407c45696ca849ae9b21" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const geos_t &amp;</type>
+        <definition>const geos_t&amp; RRTNode::get_distance_to_segment</definition>
+        <argsstring>() const</argsstring>
+        <name>get_distance_to_segment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="404" column="25" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="404" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a6df8e2635ee2b7d268e5d5efce43eb31" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const float &amp;</type>
+        <definition>const float&amp; RRTNode::get_yaw_misalignment</definition>
+        <argsstring>() const</argsstring>
+        <name>get_yaw_misalignment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="405" column="24" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="405" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1ab190f074a7f7d7d472b4a09bb7bd27fc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const size_t &amp;</type>
+        <definition>const size_t&amp; RRTNode::get_parent</definition>
+        <argsstring>() const</argsstring>
+        <name>get_parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="406" column="25" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="406" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="structRRTNode_1a71999715bfc95f8bcd63d8dc95c6486b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structTrajectory" kindref="compound">Trajectory</ref> &amp;</type>
+        <definition>const Trajectory&amp; RRTNode::get_trajectory</definition>
+        <argsstring>() const</argsstring>
+        <name>get_trajectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="407" column="29" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="407" bodyend="407"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structRRTNode_1af43fb028f3793956dd282b9e4390d3fc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RRTNode::RRTNode</definition>
+        <argsstring>()=default</argsstring>
+        <name>RRTNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rrt_cpp/rrt.hpp" line="421" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rrt_cpp/rrt.hpp" line="349" column="14" bodyfile="include/rrt_cpp/rrt.hpp" bodystart="349" bodyend="422"/>
+    <listofallmembers>
+      <member refid="structRRTNode_1a77ee064c11e724f48eaefb1982458e2b" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>closest_segment_idx</name></member>
+      <member refid="structRRTNode_1aabe4786c6b26ea7b8c170cbc8a4fde97" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>cost</name></member>
+      <member refid="structRRTNode_1a8ec1de347552bed9257db9182ee6a278" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>distance_to_segment</name></member>
+      <member refid="structRRTNode_1a31d4e3ddc97e020c9d153132bb19529a" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>finalize</name></member>
+      <member refid="structRRTNode_1a0cd7710d04718b67117319d2a4fb42d4" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_closest_segment_idx</name></member>
+      <member refid="structRRTNode_1a66a6a4d7862ef9a46a2ebd19ef3641bc" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_cost</name></member>
+      <member refid="structRRTNode_1aa8081e159d20407c45696ca849ae9b21" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_distance_to_segment</name></member>
+      <member refid="structRRTNode_1a666bbcb1160d4052a807817c64a3c691" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_dummy</name></member>
+      <member refid="structRRTNode_1a216226e271923440b3c5f9c3b0041d8e" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_index</name></member>
+      <member refid="structRRTNode_1ab190f074a7f7d7d472b4a09bb7bd27fc" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_parent</name></member>
+      <member refid="structRRTNode_1a71999715bfc95f8bcd63d8dc95c6486b" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_trajectory</name></member>
+      <member refid="structRRTNode_1a5810201415befbe0a8d436592d79fc4a" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_x</name></member>
+      <member refid="structRRTNode_1ab6b774e46125945c92604f232dad4423" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_y</name></member>
+      <member refid="structRRTNode_1a92c8775b202163799abf78ac0f3263c5" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_yaw</name></member>
+      <member refid="structRRTNode_1a6df8e2635ee2b7d268e5d5efce43eb31" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>get_yaw_misalignment</name></member>
+      <member refid="structRRTNode_1aeb76192c34e86e81b5ad8343a4d5a6f6" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>index</name></member>
+      <member refid="structRRTNode_1a3c906987674fea7989c14f01338f943e" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>is_final</name></member>
+      <member refid="structRRTNode_1a5829eece18552314f002b73d3f6a85bc" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>is_root</name></member>
+      <member refid="structRRTNode_1ad69faf0cfefe40c287566472cb74c6fa" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>parent</name></member>
+      <member refid="structRRTNode_1a52b304daf3b4aff284bac2d64408cbf6" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>RRTNode</name></member>
+      <member refid="structRRTNode_1af43fb028f3793956dd282b9e4390d3fc" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>RRTNode</name></member>
+      <member refid="structRRTNode_1a0a478d4c36c62ad7d1363d18e4c054f5" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>set_root</name></member>
+      <member refid="structRRTNode_1abe428d244690c0cff88efb1b90902be6" prot="public" virt="non-virtual"><scope>RRTNode</scope><name>set_to_root</name></member>
+      <member refid="structRRTNode_1aec1d8b75205a20527c819a9b8f5511d1" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>trajectory</name></member>
+      <member refid="structRRTNode_1a7a3e791da24058af7bc524a7fdeb6dd1" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>x</name></member>
+      <member refid="structRRTNode_1a3539904478560e979a250639993c35a3" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>y</name></member>
+      <member refid="structRRTNode_1a0b9b9498cdd41b0fe23e89c214a73fe5" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>yaw</name></member>
+      <member refid="structRRTNode_1a5a627c8b4e75e413177bd2fd80884aea" prot="private" virt="non-virtual"><scope>RRTNode</scope><name>yaw_misalignment</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

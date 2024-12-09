@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class PooledAllocator &mdash; reactive_algorithms_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class RadiusResultSet" href="classnanoflann_1_1RadiusResultSet.html" />
+    <link rel="prev" title="Template Class KNNResultSet" href="classnanoflann_1_1KNNResultSet.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            reactive_algorithms_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#nanoflann-c-api-documentation">nanoflann C++ API documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#defines">Defines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#directories">Directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#reactive-algorithms">Reactive Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#to-start-the-algorithm">To Start the algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#disparity-extender">Disparity extender</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#potential-field">Potential Field</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">reactive_algorithms_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class PooledAllocator</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classnanoflann_1_1PooledAllocator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-pooledallocator">
+<span id="exhale-class-classnanoflann-1-1pooledallocator"></span><h1>Class PooledAllocator<a class="headerlink" href="#class-pooledallocator" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_nanoflann.hpp.html#file-include-nanoflann-hpp"><span class="std std-ref">File nanoflann.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15PooledAllocatorE">
+<span id="_CPPv3N9nanoflann15PooledAllocatorE"></span><span id="_CPPv2N9nanoflann15PooledAllocatorE"></span><span id="nanoflann::PooledAllocator"></span><span class="target" id="classnanoflann_1_1PooledAllocator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PooledAllocator</span></span></span><a class="headerlink" href="#_CPPv4N9nanoflann15PooledAllocatorE" title="Link to this definition"></a><br /></dt>
+<dd><p>Pooled storage allocator</p>
+<p>The following routines allow for the efficient allocation of storage in small chunks from a specified pool. Rather than allowing each structure to be freed individually, an entire pool of storage is freed at once. This method has two advantages over just using <a class="reference internal" href="#classnanoflann_1_1PooledAllocator_1ae6a1cfa103b81762ab700224f1c9d801"><span class="std std-ref">malloc()</span></a> and free(). First, it is far more efficient for allocating small objects, as there is no overhead for remembering all the information needed to free each object or consolidating fragmented memory. Second, the decision about how long to keep an object is made at the time of allocation, and there is no need to track down all the objects to free them. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15PooledAllocator15PooledAllocatorEv">
+<span id="_CPPv3N9nanoflann15PooledAllocator15PooledAllocatorEv"></span><span id="_CPPv2N9nanoflann15PooledAllocator15PooledAllocatorEv"></span><span id="nanoflann::PooledAllocator::PooledAllocator"></span><span class="target" id="classnanoflann_1_1PooledAllocator_1ad193b067b17cd5015f4d5bf3e9573fc7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PooledAllocator</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15PooledAllocator15PooledAllocatorEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Default constructor. Initializes a new pool. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15PooledAllocatorD0Ev">
+<span id="_CPPv3N9nanoflann15PooledAllocatorD0Ev"></span><span id="_CPPv2N9nanoflann15PooledAllocatorD0Ev"></span><span id="nanoflann::PooledAllocator::~PooledAllocator"></span><span class="target" id="classnanoflann_1_1PooledAllocator_1a39c53213bc49d0f08fb8e4b0adc25b5e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~PooledAllocator</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15PooledAllocatorD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Destructor. Frees all the memory allocated in this pool. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15PooledAllocator8free_allEv">
+<span id="_CPPv3N9nanoflann15PooledAllocator8free_allEv"></span><span id="_CPPv2N9nanoflann15PooledAllocator8free_allEv"></span><span id="nanoflann::PooledAllocator::free_all"></span><span class="target" id="classnanoflann_1_1PooledAllocator_1a43c877d5e6004a65ee49584dbc29bcc9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">free_all</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15PooledAllocator8free_allEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Frees all allocated memory chunks </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15PooledAllocator6mallocEK6size_t">
+<span id="_CPPv3N9nanoflann15PooledAllocator6mallocEK6size_t"></span><span id="_CPPv2N9nanoflann15PooledAllocator6mallocEK6size_t"></span><span id="nanoflann::PooledAllocator::malloc__sC"></span><span class="target" id="classnanoflann_1_1PooledAllocator_1ae6a1cfa103b81762ab700224f1c9d801"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">malloc</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">req_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9nanoflann15PooledAllocator6mallocEK6size_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns a pointer to a piece of new memory of the given size in bytes allocated from the pool. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN9nanoflann15PooledAllocator8allocateEP1TK6size_t">
+<span id="_CPPv3I0EN9nanoflann15PooledAllocator8allocateEK6size_t"></span><span id="_CPPv2I0EN9nanoflann15PooledAllocator8allocateEK6size_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classnanoflann_1_1PooledAllocator_1a389b1614fd2b6fa641c009e698db8b44"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9nanoflann15PooledAllocator8allocateEP1TK6size_t" title="nanoflann::PooledAllocator::allocate::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">allocate</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN9nanoflann15PooledAllocator8allocateEP1TK6size_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Allocates (using this pool) a generic type T.</p>
+<p>Params: count = number of instances to allocate. Returns: pointer (of type T*) to memory buffer </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15PooledAllocator10usedMemoryE">
+<span id="_CPPv3N9nanoflann15PooledAllocator10usedMemoryE"></span><span id="_CPPv2N9nanoflann15PooledAllocator10usedMemoryE"></span><span id="nanoflann::PooledAllocator::usedMemory__Size"></span><span class="target" id="classnanoflann_1_1PooledAllocator_1a738180fd27be69129876271b5ac20f43"></span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">usedMemory</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15PooledAllocator10usedMemoryE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9nanoflann15PooledAllocator12wastedMemoryE">
+<span id="_CPPv3N9nanoflann15PooledAllocator12wastedMemoryE"></span><span id="_CPPv2N9nanoflann15PooledAllocator12wastedMemoryE"></span><span id="nanoflann::PooledAllocator::wastedMemory__Size"></span><span class="target" id="classnanoflann_1_1PooledAllocator_1a733a428738269c0a6d099dd975aa20a0"></span><span class="n"><span class="pre">Size</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wastedMemory</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9nanoflann15PooledAllocator12wastedMemoryE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classnanoflann_1_1KNNResultSet.html" class="btn btn-neutral float-left" title="Template Class KNNResultSet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classnanoflann_1_1RadiusResultSet.html" class="btn btn-neutral float-right" title="Template Class RadiusResultSet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;reactive_algorithms_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

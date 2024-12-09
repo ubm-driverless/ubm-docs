@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ API &mdash; reactive_algorithms_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace lidarfilter" href="namespace_lidarfilter.html" />
+    <link rel="prev" title="reactive_algorithms_cpp" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            reactive_algorithms_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nanoflann-c-api-documentation">nanoflann C++ API documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#full-c-api">Full C++ API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namespaces">Namespaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#defines">Defines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#directories">Directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#reactive-algorithms">Reactive Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#to-start-the-algorithm">To Start the algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#disparity-extender">Disparity extender</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#potential-field">Potential Field</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">reactive_algorithms_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">C++ API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="c-api">
+<h1>C++ API<a class="headerlink" href="#c-api" title="Link to this heading"></a></h1>
+<section id="nanoflann-c-api-documentation">
+<span id="page-index"></span><h2>nanoflann C++ API documentation<a class="headerlink" href="#nanoflann-c-api-documentation" title="Link to this heading"></a></h2>
+<div class="docutils container">
+<dd><p>nanoflann is a C++ header-only library for building KD-Trees, mostly optimized for 2D or 3D point clouds.</p>
+<p>nanoflann does not require compiling or installing, just an #include &lt;nanoflann.hpp&gt; in your code.</p>
+<p>See:<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/jlblancoc/nanoflann">Online README</a></p></li>
+<li><p><a class="reference external" href="https://jlblancoc.github.io/nanoflann/">C++ API documentation</a></p></li>
+</ul>
+</p>
+</dd></div>
+<section id="class-hierarchy">
+<h3>Class Hierarchy<a class="headerlink" href="#class-hierarchy" title="Link to this heading"></a></h3>
+<ul class="treeView" id="class-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li class="lastChild">Namespace <a href="namespace_nanoflann.html#namespace-nanoflann">nanoflann</a><ul><li>Template Struct <a href="structnanoflann_1_1array__or__vector.html#exhale-struct-structnanoflann-1-1array-or-vector">array_or_vector</a></li><li>Template Struct <a href="structnanoflann_1_1array__or__vector_3-1_00_01T_01_4.html#exhale-struct-structnanoflann-1-1array-or-vector-3-1-00-01T-01-4">array_or_vector&lt; -1, T &gt;</a></li><li>Template Struct <a href="structnanoflann_1_1has__assign.html#exhale-struct-structnanoflann-1-1has-assign">has_assign</a></li><li>Template Struct <a href="structnanoflann_1_1has__assign_3_01T_00_01decltype_07_07void_08_01std_1_1declval_3_01T_01_4_07_0384656df8feb37b62ef12dfcd439e93e.html#exhale-struct-structnanoflann-1-1has-assign-3-01T-00-01decltype-07-07void-08-01std-1-1declval-3-01T-01-4-07-0384656df8feb37b62ef12dfcd439e93e">has_assign&lt; T, decltype((void) std::declval&lt; T &gt;, ().assign(1, 0), 0) &gt;</a></li><li>Template Struct <a href="structnanoflann_1_1has__resize.html#exhale-struct-structnanoflann-1-1has-resize">has_resize</a></li><li>Template Struct <a href="structnanoflann_1_1has__resize_3_01T_00_01decltype_07_07void_08_01std_1_1declval_3_01T_01_4_07_08_8resize_071_08_00_010_08_4.html#exhale-struct-structnanoflann-1-1has-resize-3-01T-00-01decltype-07-07void-08-01std-1-1declval-3-01T-01-4-07-08-8resize-071-08-00-010-08-4">has_resize&lt; T, decltype((void) std::declval&lt; T &gt;, ().resize(1), 0) &gt;</a></li><li>Struct <a href="structnanoflann_1_1IndexDist__Sorter.html#exhale-struct-structnanoflann-1-1IndexDist-Sorter">IndexDist_Sorter</a></li><li>Template Struct <a href="structnanoflann_1_1KDTreeEigenMatrixAdaptor.html#exhale-struct-structnanoflann-1-1KDTreeEigenMatrixAdaptor">KDTreeEigenMatrixAdaptor</a></li><li>Struct <a href="structnanoflann_1_1KDTreeSingleIndexAdaptorParams.html#exhale-struct-structnanoflann-1-1KDTreeSingleIndexAdaptorParams">KDTreeSingleIndexAdaptorParams</a></li><li>Template Struct <a href="structnanoflann_1_1L1__Adaptor.html#exhale-struct-structnanoflann-1-1L1-Adaptor">L1_Adaptor</a></li><li>Template Struct <a href="structnanoflann_1_1L2__Adaptor.html#exhale-struct-structnanoflann-1-1L2-Adaptor">L2_Adaptor</a></li><li>Template Struct <a href="structnanoflann_1_1L2__Simple__Adaptor.html#exhale-struct-structnanoflann-1-1L2-Simple-Adaptor">L2_Simple_Adaptor</a></li><li>Struct <a href="structnanoflann_1_1Metric.html#exhale-struct-structnanoflann-1-1Metric">Metric</a></li><li>Struct <a href="structnanoflann_1_1metric__L1.html#exhale-struct-structnanoflann-1-1metric-L1">metric_L1</a><ul><li class="lastChild">Template Struct <a href="structnanoflann_1_1metric__L1_1_1traits.html#exhale-struct-structnanoflann-1-1metric-L1-1-1traits">metric_L1::traits</a></li></ul></li><li>Struct <a href="structnanoflann_1_1metric__L2.html#exhale-struct-structnanoflann-1-1metric-L2">metric_L2</a><ul><li class="lastChild">Template Struct <a href="structnanoflann_1_1metric__L2_1_1traits.html#exhale-struct-structnanoflann-1-1metric-L2-1-1traits">metric_L2::traits</a></li></ul></li><li>Struct <a href="structnanoflann_1_1metric__L2__Simple.html#exhale-struct-structnanoflann-1-1metric-L2-Simple">metric_L2_Simple</a><ul><li class="lastChild">Template Struct <a href="structnanoflann_1_1metric__L2__Simple_1_1traits.html#exhale-struct-structnanoflann-1-1metric-L2-Simple-1-1traits">metric_L2_Simple::traits</a></li></ul></li><li>Struct <a href="structnanoflann_1_1metric__SO2.html#exhale-struct-structnanoflann-1-1metric-SO2">metric_SO2</a><ul><li class="lastChild">Template Struct <a href="structnanoflann_1_1metric__SO2_1_1traits.html#exhale-struct-structnanoflann-1-1metric-SO2-1-1traits">metric_SO2::traits</a></li></ul></li><li>Struct <a href="structnanoflann_1_1metric__SO3.html#exhale-struct-structnanoflann-1-1metric-SO3">metric_SO3</a><ul><li class="lastChild">Template Struct <a href="structnanoflann_1_1metric__SO3_1_1traits.html#exhale-struct-structnanoflann-1-1metric-SO3-1-1traits">metric_SO3::traits</a></li></ul></li><li>Template Struct <a href="structnanoflann_1_1ResultItem.html#exhale-struct-structnanoflann-1-1ResultItem">ResultItem</a></li><li>Struct <a href="structnanoflann_1_1SearchParameters.html#exhale-struct-structnanoflann-1-1SearchParameters">SearchParameters</a></li><li>Template Struct <a href="structnanoflann_1_1SO2__Adaptor.html#exhale-struct-structnanoflann-1-1SO2-Adaptor">SO2_Adaptor</a></li><li>Template Struct <a href="structnanoflann_1_1SO3__Adaptor.html#exhale-struct-structnanoflann-1-1SO3-Adaptor">SO3_Adaptor</a></li><li>Template Class <a href="classnanoflann_1_1KDTreeBaseClass.html#exhale-class-classnanoflann-1-1KDTreeBaseClass">KDTreeBaseClass</a><ul><li>Struct <a href="structnanoflann_1_1KDTreeBaseClass_1_1Interval.html#exhale-struct-structnanoflann-1-1KDTreeBaseClass-1-1Interval">KDTreeBaseClass::Interval</a></li><li class="lastChild">Struct <a href="structnanoflann_1_1KDTreeBaseClass_1_1Node.html#exhale-struct-structnanoflann-1-1KDTreeBaseClass-1-1Node">KDTreeBaseClass::Node</a></li></ul></li><li>Template Class <a href="classnanoflann_1_1KDTreeSingleIndexAdaptor.html#exhale-class-classnanoflann-1-1KDTreeSingleIndexAdaptor">KDTreeSingleIndexAdaptor</a></li><li>Template Class <a href="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor.html#exhale-class-classnanoflann-1-1KDTreeSingleIndexDynamicAdaptor">KDTreeSingleIndexDynamicAdaptor</a></li><li>Template Class <a href="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor__.html#exhale-class-classnanoflann-1-1KDTreeSingleIndexDynamicAdaptor-">KDTreeSingleIndexDynamicAdaptor_</a></li><li>Template Class <a href="classnanoflann_1_1KNNResultSet.html#exhale-class-classnanoflann-1-1KNNResultSet">KNNResultSet</a></li><li>Class <a href="classnanoflann_1_1PooledAllocator.html#exhale-class-classnanoflann-1-1PooledAllocator">PooledAllocator</a></li><li>Template Class <a href="classnanoflann_1_1RadiusResultSet.html#exhale-class-classnanoflann-1-1RadiusResultSet">RadiusResultSet</a></li><li>Template Class <a href="classnanoflann_1_1RKNNResultSet.html#exhale-class-classnanoflann-1-1RKNNResultSet">RKNNResultSet</a></li><li class="lastChild">Enum <a href="enum_group__param__grp_1ga514edb9f2a1fb99ebe5b564ad45ab966.html#exhale-enum-group-param-grp-1ga514edb9f2a1fb99ebe5b564ad45ab966">KDTreeSingleIndexAdaptorFlags</a></li></ul></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView class-treeView --></section>
+<section id="file-hierarchy">
+<h3>File Hierarchy<a class="headerlink" href="#file-hierarchy" title="Link to this heading"></a></h3>
+<ul class="treeView" id="file-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li class="lastChild">Directory <a href="dir_include.html#dir-include">include</a><ul><li>File <a href="file_include_lidarfilter.hpp.html#file-include-lidarfilter.hpp">lidarfilter.hpp</a></li><li class="lastChild">File <a href="file_include_nanoflann.hpp.html#file-include-nanoflann.hpp">nanoflann.hpp</a></li></ul></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView file-treeView --></section>
+<section id="full-c-api">
+<h3>Full C++ API<a class="headerlink" href="#full-c-api" title="Link to this heading"></a></h3>
+<section id="namespaces">
+<h4>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading"></a></h4>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_lidarfilter.html">Namespace lidarfilter</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_nanoflann.html">Namespace nanoflann</a></li>
+</ul>
+</div>
+</section>
+<section id="classes-and-structs">
+<h4>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Link to this heading"></a></h4>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1array__or__vector.html">Template Struct array_or_vector</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1array__or__vector_3-1_00_01T_01_4.html">Template Struct array_or_vector&lt; -1, T &gt;</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1has__assign.html">Template Struct has_assign</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1has__assign_3_01T_00_01decltype_07_07void_08_01std_1_1declval_3_01T_01_4_07_0384656df8feb37b62ef12dfcd439e93e.html">Template Struct has_assign&lt; T, decltype((void) std::declval&lt; T &gt;, ().assign(1, 0), 0) &gt;</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1has__resize.html">Template Struct has_resize</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1has__resize_3_01T_00_01decltype_07_07void_08_01std_1_1declval_3_01T_01_4_07_08_8resize_071_08_00_010_08_4.html">Template Struct has_resize&lt; T, decltype((void) std::declval&lt; T &gt;, ().resize(1), 0) &gt;</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1IndexDist__Sorter.html">Struct IndexDist_Sorter</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1KDTreeBaseClass_1_1Interval.html">Struct KDTreeBaseClass::Interval</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1KDTreeBaseClass_1_1Node.html">Struct KDTreeBaseClass::Node</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1KDTreeEigenMatrixAdaptor.html">Template Struct KDTreeEigenMatrixAdaptor</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1KDTreeSingleIndexAdaptorParams.html">Struct KDTreeSingleIndexAdaptorParams</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1L1__Adaptor.html">Template Struct L1_Adaptor</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1L2__Adaptor.html">Template Struct L2_Adaptor</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1L2__Simple__Adaptor.html">Template Struct L2_Simple_Adaptor</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1Metric.html">Struct Metric</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1metric__L1.html">Struct metric_L1</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1metric__L1_1_1traits.html">Template Struct metric_L1::traits</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1metric__L2.html">Struct metric_L2</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1metric__L2_1_1traits.html">Template Struct metric_L2::traits</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1metric__L2__Simple.html">Struct metric_L2_Simple</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1metric__L2__Simple_1_1traits.html">Template Struct metric_L2_Simple::traits</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1metric__SO2.html">Struct metric_SO2</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1metric__SO2_1_1traits.html">Template Struct metric_SO2::traits</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1metric__SO3.html">Struct metric_SO3</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1metric__SO3_1_1traits.html">Template Struct metric_SO3::traits</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1ResultItem.html">Template Struct ResultItem</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1SearchParameters.html">Struct SearchParameters</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1SO2__Adaptor.html">Template Struct SO2_Adaptor</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structnanoflann_1_1SO3__Adaptor.html">Template Struct SO3_Adaptor</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classnanoflann_1_1KDTreeBaseClass.html">Template Class KDTreeBaseClass</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classnanoflann_1_1KDTreeSingleIndexAdaptor.html">Template Class KDTreeSingleIndexAdaptor</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor.html">Template Class KDTreeSingleIndexDynamicAdaptor</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classnanoflann_1_1KDTreeSingleIndexDynamicAdaptor__.html">Template Class KDTreeSingleIndexDynamicAdaptor_</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classnanoflann_1_1KNNResultSet.html">Template Class KNNResultSet</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classnanoflann_1_1PooledAllocator.html">Class PooledAllocator</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classnanoflann_1_1RadiusResultSet.html">Template Class RadiusResultSet</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classnanoflann_1_1RKNNResultSet.html">Template Class RKNNResultSet</a></li>
+</ul>
+</div>
+</section>
+<section id="enums">
+<h4>Enums<a class="headerlink" href="#enums" title="Link to this heading"></a></h4>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_group__param__grp_1ga514edb9f2a1fb99ebe5b564ad45ab966.html">Enum KDTreeSingleIndexAdaptorFlags</a></li>
+</ul>
+</div>
+</section>
+<section id="functions">
+<h4>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h4>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_lidarfilter_8hpp_1a3104f2ff02f65e537b8127f5ff359529.html">Function lidarfilter::mean_convolution</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_lidarfilter_8hpp_1a74339d9062f3b73574f089faacf5a967.html">Function lidarfilter::mean_convolution_box</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_lidarfilter_8hpp_1a3655bbe05cf4da6af01fbc6acfce6452.html">Function lidarfilter::medianFilter</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group__nanoflann__grp_1gada9f760672baea3da3422260fb03c8aa.html">Template Function nanoflann::assign(Container&amp;, const size_t, const T&amp;)</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_nanoflann_8hpp_1gada9f760672baea3da3422260fb03c8aa.html">Template Function nanoflann::assign(Container&amp;, const size_t, const T&amp;)</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group__loadsave__grp_1ga0e46446b869ab24cc7217bd799b5e11d.html">Template Function nanoflann::load_value(std::istream&amp;, T&amp;)</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group__loadsave__grp_1gab17a4bc99128fe5246e377f502dc7d46.html">Template Function nanoflann::load_value(std::istream&amp;, std::vector&lt;T&gt;&amp;)</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group__param__grp_1gab478857c523266285da4a1895a57b3e3.html">Function nanoflann::operator&amp;</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group__nanoflann__grp_1ga8f0721b066194bc7bb511f7344beb460.html">Template Function nanoflann::pi_const</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group__nanoflann__grp_1gaec2db17610419f390df8fce56bdc4892.html">Template Function nanoflann::resize(Container&amp;, const size_t)</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_nanoflann_8hpp_1gaec2db17610419f390df8fce56bdc4892.html">Template Function nanoflann::resize(Container&amp;, const size_t)</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group__loadsave__grp_1gafdb5ad1880fbb1decc61c337c6d25223.html">Template Function nanoflann::save_value(std::ostream&amp;, const T&amp;)</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_group__loadsave__grp_1ga6f0e9f2183a70ef551b135c81285a1f9.html">Template Function nanoflann::save_value(std::ostream&amp;, const std::vector&lt;T&gt;&amp;)</a></li>
+</ul>
+</div>
+</section>
+<section id="defines">
+<h4>Defines<a class="headerlink" href="#defines" title="Link to this heading"></a></h4>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_nanoflann_8hpp_1a7b8efca796d8e1861a432a5f6b8404a1.html">Define NANOFLANN_VERSION</a></li>
+</ul>
+</div>
+</section>
+<section id="directories">
+<h4>Directories<a class="headerlink" href="#directories" title="Link to this heading"></a></h4>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+</ul>
+</div>
+</section>
+<section id="files">
+<h4>Files<a class="headerlink" href="#files" title="Link to this heading"></a></h4>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_lidarfilter.hpp.html">File lidarfilter.hpp</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_nanoflann.hpp.html">File nanoflann.hpp</a></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="reactive_algorithms_cpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_lidarfilter.html" class="btn btn-neutral float-right" title="Namespace lidarfilter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;reactive_algorithms_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
