@@ -27,8 +27,8 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 
 ### Useful links
-https://developer.nvidia.com/downloads/embedded/secure/tools/files/jetpack-sdks/jetpack-4.4-ga/jetson_xavier_nx_developer_kit_user_guide.pdf
-https://developer.nvidia.com/embedded/jetson-linux-r3541
-https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/index.html
-https://github.com/NVIDIA/jetson-gpio
-https://jetsonhacks.com/nvidia-jetson-xavier-nx-gpio-header-pinout/
+- [Jetson Xavier NX developer kit user guide](https://developer.nvidia.com/downloads/embedded/secure/tools/files/jetpack-sdks/jetpack-4.4-ga/jetson_xavier_nx_developer_kit_user_guide.pdf)
+- [Jetson Linux board support package](https://developer.nvidia.com/embedded/jetson-linux-r3541)
+- [Jetson Linux 35.4.1 GA Developer guide](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/index.html)
+- [Jetson gpio repository](https://github.com/NVIDIA/jetson-gpio)
+- [Jetson Xavier NX pin layout](https://jetsonhacks.com/nvidia-jetson-xavier-nx-gpio-header-pinout/)
