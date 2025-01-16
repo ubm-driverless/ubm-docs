@@ -1,9 +1,9 @@
-## Guide for creating a ROS2 package
+# Guide for creating a ROS2 package
 
-### Prerequisites
+## Prerequisites
 - Having already created a ROS2 workspace
 
-### Guide
+## Guide
 - Open a terminal and `cd` into the workspace folder
 - Source ROS2
 - Execute the following command:
