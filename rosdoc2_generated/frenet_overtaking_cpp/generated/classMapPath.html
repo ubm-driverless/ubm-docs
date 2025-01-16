@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class MapPath &mdash; frenet_overtaking_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class QuarticPolynomial" href="classQuarticPolynomial.html" />
+    <link rel="prev" title="Class FrenetOvertakingNode" href="classFrenetOvertakingNode.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            frenet_overtaking_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structFrenetPath.html">Struct FrenetPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classcubic__spline__2d.html">Class cubic_spline_2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline1d.html">Class CubicSpline1d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline2d.html">Class CubicSpline2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetOptimalTrajectory.html">Class FrenetOptimalTrajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetOvertakingNode.html">Class FrenetOvertakingNode</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class MapPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomial.html">Class QuarticPolynomial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomialMiddlePose.html">Class QuarticPolynomialMiddlePose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classState.html">Class State</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSteeringController.html">Class SteeringController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThirdPolynomial.html">Class ThirdPolynomial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1a548f490e1cc2964ec6a3099dedee3485.html">Template Function argmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1a478f9c32589c5d73b481c36e939f27a1.html">Function linspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1ad725afcbeef02cb588029045beaff268.html">Function mod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1a588d8ae799d233a401111c312e73364f.html">Function rafi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking.hpp.html">File frenet_overtaking.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking_node.hpp.html">File frenet_overtaking_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_raceline.hpp.html">File raceline.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_spline_and_polynomial.hpp.html">File spline_and_polynomial.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_steering_controller.hpp.html">File steering_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vector_op.hpp.html">File vector_op.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">frenet_overtaking_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class MapPath</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classMapPath.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-mappath">
+<span id="exhale-class-classmappath"></span><h1>Class MapPath<a class="headerlink" href="#class-mappath" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_raceline.hpp.html#file-include-raceline-hpp"><span class="std std-ref">File raceline.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv47MapPath">
+<span id="_CPPv37MapPath"></span><span id="_CPPv27MapPath"></span><span id="MapPath"></span><span class="target" id="classMapPath"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MapPath</span></span></span><a class="headerlink" href="#_CPPv47MapPath" title="Link to this definition"></a><br /></dt>
+<dd><p>Represents the path that the car follows, extracted from the map. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath7MapPathEffi">
+<span id="_CPPv3N7MapPath7MapPathEffi"></span><span id="_CPPv2N7MapPath7MapPathEffi"></span><span id="MapPath::MapPath__float.float.i"></span><span class="target" id="classMapPath_1a7bdd0cbede29abe670fdd016b8a92784"></span><span class="sig-name descname"><span class="n"><span class="pre">MapPath</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">look_ahead_gain</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.4</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">min_look_ahead_distance</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.4</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tdp</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7MapPath7MapPathEffi" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor for the <a class="reference internal" href="#classMapPath"><span class="std std-ref">MapPath</span></a> class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>look_ahead_gain</strong> – Gain for look-ahead distance calculation. </p></li>
+<li><p><strong>min_look_ahead_distance</strong> – Minimum look-ahead distance. </p></li>
+<li><p><strong>tdp</strong> – Target distance point. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath10initializeERKN12f1tenth_msgs3msg8RacelineENSt6stringEiRKNSt6vectorIdEE">
+<span id="_CPPv3N7MapPath10initializeERKN12f1tenth_msgs3msg8RacelineENSt6stringEiRKNSt6vectorIdEE"></span><span id="_CPPv2N7MapPath10initializeERKN12f1tenth_msgs3msg8RacelineENSt6stringEiRKNSt6vectorIdEE"></span><span id="MapPath::initialize__f1tenth_msgs::msg::RacelineCR.ss.i.std::vector:double:CR"></span><span class="target" id="classMapPath_1a2c13be35f54a9cb5474440d85de79423"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">f1tenth_msgs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Raceline</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">raceline</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">speed_function</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">interpolation_depth</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_sector_to_speed_factor</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7MapPath10initializeERKN12f1tenth_msgs3msg8RacelineENSt6stringEiRKNSt6vectorIdEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Initializes the <a class="reference internal" href="#classMapPath"><span class="std std-ref">MapPath</span></a> object with raceline data. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raceline</strong> – Raceline data for path. </p></li>
+<li><p><strong>speed_function</strong> – Function used for speed profiling. </p></li>
+<li><p><strong>interpolation_depth</strong> – Depth of interpolation applied to speed profile. </p></li>
+<li><p><strong>sector_to_speed_factor</strong> – Map of speed factors for each sector. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath25interpolate_speed_profileERKNSt6vectorIfEERKNSt6vectorI7uint8_tEEiRKNSt3mapI7uint8_tfEEi">
+<span id="_CPPv3N7MapPath25interpolate_speed_profileERKNSt6vectorIfEERKNSt6vectorI7uint8_tEEiRKNSt3mapI7uint8_tfEEi"></span><span id="_CPPv2N7MapPath25interpolate_speed_profileERKNSt6vectorIfEERKNSt6vectorI7uint8_tEEiRKNSt3mapI7uint8_tfEEi"></span><span id="MapPath::interpolate_speed_profile__std::vector:float:CR.std::vector:uint8_t:CR.i.std::map:uint8_t.float:CR.i"></span><span class="target" id="classMapPath_1a92971cda4b2b6e7576967e3a0e0bf3cc"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interpolate_speed_profile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">speed</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sector</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_points</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sector_to_speed_factor</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">interpolation_depth</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7MapPath25interpolate_speed_profileERKNSt6vectorIfEERKNSt6vectorI7uint8_tEEiRKNSt3mapI7uint8_tfEEi" title="Link to this definition"></a><br /></dt>
+<dd><p>Interpolates the speed profile based on sectors. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>speed</strong> – Original speed profile. </p></li>
+<li><p><strong>sector</strong> – Sector assignments for points. </p></li>
+<li><p><strong>num_points</strong> – Total number of raceline points. </p></li>
+<li><p><strong>sector_to_speed_factor</strong> – Map of speed factors for each sector. </p></li>
+<li><p><strong>interpolation_depth</strong> – Depth of interpolation. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Interpolated speed profile. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath20search_nearest_pointER5State">
+<span id="_CPPv3N7MapPath20search_nearest_pointER5State"></span><span id="_CPPv2N7MapPath20search_nearest_pointER5State"></span><span id="MapPath::search_nearest_point__StateR"></span><span class="target" id="classMapPath_1aefafff9a57bbc51cd550e028e71a2274"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">search_nearest_point</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classState.html#_CPPv45State" title="State"><span class="n"><span class="pre">State</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7MapPath20search_nearest_pointER5State" title="Link to this definition"></a><br /></dt>
+<dd><p>Searches for the nearest point to the current position specified in the state. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – <code class="docutils literal notranslate"><a class="reference internal" href="classState.html#classState"><span class="std std-ref"><span class="pre">State</span></span></a></code> object representing the current position of the vehicle with <code class="docutils literal notranslate"><span class="pre">middle_x</span></code> and <code class="docutils literal notranslate"><span class="pre">middle_y</span></code>. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>std::tuple&lt;float, float, float, float&gt; A tuple containing:<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">current_x</span></code> (float): The x-coordinate of the nearest point on the path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">current_y</span></code> (float): The y-coordinate of the nearest point on the path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s[nearest_point]</span></code> (float): The path position of the nearest point.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">distance_n</span></code> (float): The normal distance between the vehicle and the path. </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath19search_target_pointER5State">
+<span id="_CPPv3N7MapPath19search_target_pointER5State"></span><span id="_CPPv2N7MapPath19search_target_pointER5State"></span><span id="MapPath::search_target_point__StateR"></span><span class="target" id="classMapPath_1aabeb8feba306b164883f306633fc20ae"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">search_target_point</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classState.html#_CPPv45State" title="State"><span class="n"><span class="pre">State</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7MapPath19search_target_pointER5State" title="Link to this definition"></a><br /></dt>
+<dd><p>Searches for the target indexes based on the car’s state. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – The car’s current state. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple with x_la, y_la, yaw_la and look-ahead distance. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath16get_target_speedEv">
+<span id="_CPPv3N7MapPath16get_target_speedEv"></span><span id="_CPPv2N7MapPath16get_target_speedEv"></span><span id="MapPath::get_target_speed"></span><span class="target" id="classMapPath_1a17cfdc0998c1341d668185c65ec7fb5c"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_target_speed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7MapPath16get_target_speedEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves the target speed based on the speed function. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple with target speed and a second value (zero for compatibility). </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath15LOOK_AHEAD_GAINE">
+<span id="_CPPv3N7MapPath15LOOK_AHEAD_GAINE"></span><span id="_CPPv2N7MapPath15LOOK_AHEAD_GAINE"></span><span id="MapPath::LOOK_AHEAD_GAIN__float"></span><span class="target" id="classMapPath_1a135601774de0d6af29938eca35471637"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LOOK_AHEAD_GAIN</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath15LOOK_AHEAD_GAINE" title="Link to this definition"></a><br /></dt>
+<dd><p>Gain for determining look-ahead distance. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath19MIN_LOOK_AHEAD_DISTE">
+<span id="_CPPv3N7MapPath19MIN_LOOK_AHEAD_DISTE"></span><span id="_CPPv2N7MapPath19MIN_LOOK_AHEAD_DISTE"></span><span id="MapPath::MIN_LOOK_AHEAD_DIST__float"></span><span class="target" id="classMapPath_1a415581a600589c35f5fdfab3876a6b80"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MIN_LOOK_AHEAD_DIST</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath19MIN_LOOK_AHEAD_DISTE" title="Link to this definition"></a><br /></dt>
+<dd><p>Minimum look-ahead distance. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath3TDPE">
+<span id="_CPPv3N7MapPath3TDPE"></span><span id="_CPPv2N7MapPath3TDPE"></span><span id="MapPath::TDP__i"></span><span class="target" id="classMapPath_1adecd5a2e2653bc9069a4de8a0b9428ed"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TDP</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath3TDPE" title="Link to this definition"></a><br /></dt>
+<dd><p>Target point distance (offset) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath6lengthE">
+<span id="_CPPv3N7MapPath6lengthE"></span><span id="_CPPv2N7MapPath6lengthE"></span><span id="MapPath::length__std::vector:float:"></span><span class="target" id="classMapPath_1a11095a5a18c830e3d7fe6cc42c61bc18"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath6lengthE" title="Link to this definition"></a><br /></dt>
+<dd><p>Length of each segment of the raceline. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath7s_valueE">
+<span id="_CPPv3N7MapPath7s_valueE"></span><span id="_CPPv2N7MapPath7s_valueE"></span><span id="MapPath::s_value__std::vector:float:"></span><span class="target" id="classMapPath_1a60c2f14a775df2a9a8ad4c2ac5bf5f33"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">s_value</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath7s_valueE" title="Link to this definition"></a><br /></dt>
+<dd><p>Cumulative length of the raceline. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath15point_distancesE">
+<span id="_CPPv3N7MapPath15point_distancesE"></span><span id="_CPPv2N7MapPath15point_distancesE"></span><span id="MapPath::point_distances__std::vector:float:"></span><span class="target" id="classMapPath_1a94c407395a325ab724e65e37d135b85d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">point_distances</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath15point_distancesE" title="Link to this definition"></a><br /></dt>
+<dd><p>Distances between consecutive points on the raceline. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath2cxE">
+<span id="_CPPv3N7MapPath2cxE"></span><span id="_CPPv2N7MapPath2cxE"></span><span id="MapPath::cx__std::vector:float:"></span><span class="target" id="classMapPath_1a8684a7a1e91c910a107cff513427ae06"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cx</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath2cxE" title="Link to this definition"></a><br /></dt>
+<dd><p>x-coordinates of the raceline points </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath2cyE">
+<span id="_CPPv3N7MapPath2cyE"></span><span id="_CPPv2N7MapPath2cyE"></span><span id="MapPath::cy__std::vector:float:"></span><span class="target" id="classMapPath_1ac70148edea8d5511c2199409fe90bcb5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cy</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath2cyE" title="Link to this definition"></a><br /></dt>
+<dd><p>y-coordinates of the raceline points </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath7headingE">
+<span id="_CPPv3N7MapPath7headingE"></span><span id="_CPPv2N7MapPath7headingE"></span><span id="MapPath::heading__std::vector:float:"></span><span class="target" id="classMapPath_1a0e9ff8a03e4a2027e9ec71d8171c6495"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">heading</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath7headingE" title="Link to this definition"></a><br /></dt>
+<dd><p>Heading angles of the raceline points. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath9curvatureE">
+<span id="_CPPv3N7MapPath9curvatureE"></span><span id="_CPPv2N7MapPath9curvatureE"></span><span id="MapPath::curvature__std::vector:float:"></span><span class="target" id="classMapPath_1a28091a3a3f94a1ed29b851995d06bb94"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">curvature</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath9curvatureE" title="Link to this definition"></a><br /></dt>
+<dd><p>Curvature at each raceline point. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath5speedE">
+<span id="_CPPv3N7MapPath5speedE"></span><span id="_CPPv2N7MapPath5speedE"></span><span id="MapPath::speed__std::vector:float:"></span><span class="target" id="classMapPath_1a1e55f451ec7f88b3fb986d8c406b7bd7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">speed</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath5speedE" title="Link to this definition"></a><br /></dt>
+<dd><p>Speed values at each raceline point. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath18interpolated_speedE">
+<span id="_CPPv3N7MapPath18interpolated_speedE"></span><span id="_CPPv2N7MapPath18interpolated_speedE"></span><span id="MapPath::interpolated_speed__std::vector:float:"></span><span class="target" id="classMapPath_1a0932b7d0029ce6991db6816f9dae6bc8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interpolated_speed</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath18interpolated_speedE" title="Link to this definition"></a><br /></dt>
+<dd><p>Interpolated speed profile based on sectors. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath6sectorE">
+<span id="_CPPv3N7MapPath6sectorE"></span><span id="_CPPv2N7MapPath6sectorE"></span><span id="MapPath::sector__std::vector:uint8_t:"></span><span class="target" id="classMapPath_1abeab1c53d6dd2f34c3ef2054d780dc5e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sector</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath6sectorE" title="Link to this definition"></a><br /></dt>
+<dd><p>Sector indices of each raceline point. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath4zoneE">
+<span id="_CPPv3N7MapPath4zoneE"></span><span id="_CPPv2N7MapPath4zoneE"></span><span id="MapPath::zone__std::vector:ss:"></span><span class="target" id="classMapPath_1a8738be3d59c8605a93fd01fa41d9d705"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">zone</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath4zoneE" title="Link to this definition"></a><br /></dt>
+<dd><p>Zone labels for each raceline point. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath22sector_to_speed_factorE">
+<span id="_CPPv3N7MapPath22sector_to_speed_factorE"></span><span id="_CPPv2N7MapPath22sector_to_speed_factorE"></span><span id="MapPath::sector_to_speed_factor__std::map:uint8_t.float:"></span><span class="target" id="classMapPath_1a9f275a75386959e1e513718925e8299b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sector_to_speed_factor</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath22sector_to_speed_factorE" title="Link to this definition"></a><br /></dt>
+<dd><p>Speed factors for each sector. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath10num_pointsE">
+<span id="_CPPv3N7MapPath10num_pointsE"></span><span id="_CPPv2N7MapPath10num_pointsE"></span><span id="MapPath::num_points__i"></span><span class="target" id="classMapPath_1a1221e3d1d196629799100134c79776a7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_points</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath10num_pointsE" title="Link to this definition"></a><br /></dt>
+<dd><p>Number of points in the raceline. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath13nearest_pointE">
+<span id="_CPPv3N7MapPath13nearest_pointE"></span><span id="_CPPv2N7MapPath13nearest_pointE"></span><span id="MapPath::nearest_point__i"></span><span class="target" id="classMapPath_1a199563410b9b9f18c2848d246d875175"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nearest_point</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath13nearest_pointE" title="Link to this definition"></a><br /></dt>
+<dd><p>Index of the nearest point to the car. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath16look_ahead_pointE">
+<span id="_CPPv3N7MapPath16look_ahead_pointE"></span><span id="_CPPv2N7MapPath16look_ahead_pointE"></span><span id="MapPath::look_ahead_point__i"></span><span class="target" id="classMapPath_1ae444c6be5d843be68d445c1e02893887"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">look_ahead_point</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath16look_ahead_pointE" title="Link to this definition"></a><br /></dt>
+<dd><p>Index of the look-ahead point on the raceline. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7MapPath14speed_functionE">
+<span id="_CPPv3N7MapPath14speed_functionE"></span><span id="_CPPv2N7MapPath14speed_functionE"></span><span id="MapPath::speed_function__ss"></span><span class="target" id="classMapPath_1aa55cb496e748965ec32d48aa2c4bb43a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">speed_function</span></span></span><a class="headerlink" href="#_CPPv4N7MapPath14speed_functionE" title="Link to this definition"></a><br /></dt>
+<dd><p>Speed function used for interpolation. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classFrenetOvertakingNode.html" class="btn btn-neutral float-left" title="Class FrenetOvertakingNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classQuarticPolynomial.html" class="btn btn-neutral float-right" title="Class QuarticPolynomial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;frenet_overtaking_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

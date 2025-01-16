@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classMapPath" kind="class" language="C++" prot="public">
+    <compoundname>MapPath</compoundname>
+    <includes local="no">raceline.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classMapPath_1a135601774de0d6af29938eca35471637" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MapPath::LOOK_AHEAD_GAIN</definition>
+        <argsstring></argsstring>
+        <name>LOOK_AHEAD_GAIN</name>
+        <briefdescription>
+<para>Gain for determining look-ahead distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="70" column="11" bodyfile="include/raceline.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a415581a600589c35f5fdfab3876a6b80" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MapPath::MIN_LOOK_AHEAD_DIST</definition>
+        <argsstring></argsstring>
+        <name>MIN_LOOK_AHEAD_DIST</name>
+        <briefdescription>
+<para>Minimum look-ahead distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="71" column="11" bodyfile="include/raceline.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1adecd5a2e2653bc9069a4de8a0b9428ed" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MapPath::TDP</definition>
+        <argsstring></argsstring>
+        <name>TDP</name>
+        <briefdescription>
+<para>Target point distance (offset) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="72" column="9" bodyfile="include/raceline.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a11095a5a18c830e3d7fe6cc42c61bc18" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; MapPath::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+<para>Length of each segment of the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="74" column="17" bodyfile="include/raceline.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a60c2f14a775df2a9a8ad4c2ac5bf5f33" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; MapPath::s_value</definition>
+        <argsstring></argsstring>
+        <name>s_value</name>
+        <briefdescription>
+<para>Cumulative length of the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="75" column="17" bodyfile="include/raceline.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a94c407395a325ab724e65e37d135b85d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; MapPath::point_distances</definition>
+        <argsstring></argsstring>
+        <name>point_distances</name>
+        <briefdescription>
+<para>Distances between consecutive points on the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="76" column="17" bodyfile="include/raceline.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a8684a7a1e91c910a107cff513427ae06" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; MapPath::cx</definition>
+        <argsstring></argsstring>
+        <name>cx</name>
+        <briefdescription>
+<para>x-coordinates of the raceline points </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="77" column="17" bodyfile="include/raceline.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1ac70148edea8d5511c2199409fe90bcb5" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; MapPath::cy</definition>
+        <argsstring></argsstring>
+        <name>cy</name>
+        <briefdescription>
+<para>y-coordinates of the raceline points </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="78" column="17" bodyfile="include/raceline.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a0e9ff8a03e4a2027e9ec71d8171c6495" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; MapPath::heading</definition>
+        <argsstring></argsstring>
+        <name>heading</name>
+        <briefdescription>
+<para>Heading angles of the raceline points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="79" column="17" bodyfile="include/raceline.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a28091a3a3f94a1ed29b851995d06bb94" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; MapPath::curvature</definition>
+        <argsstring></argsstring>
+        <name>curvature</name>
+        <briefdescription>
+<para>Curvature at each raceline point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="80" column="17" bodyfile="include/raceline.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a1e55f451ec7f88b3fb986d8c406b7bd7" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; MapPath::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <briefdescription>
+<para>Speed values at each raceline point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="81" column="17" bodyfile="include/raceline.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a0932b7d0029ce6991db6816f9dae6bc8" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; MapPath::interpolated_speed</definition>
+        <argsstring></argsstring>
+        <name>interpolated_speed</name>
+        <briefdescription>
+<para>Interpolated speed profile based on sectors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="82" column="17" bodyfile="include/raceline.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1abeab1c53d6dd2f34c3ef2054d780dc5e" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt;uint8_t&gt; MapPath::sector</definition>
+        <argsstring></argsstring>
+        <name>sector</name>
+        <briefdescription>
+<para>Sector indices of each raceline point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="83" column="17" bodyfile="include/raceline.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a8738be3d59c8605a93fd01fa41d9d705" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; MapPath::zone</definition>
+        <argsstring></argsstring>
+        <name>zone</name>
+        <briefdescription>
+<para>Zone labels for each raceline point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="84" column="17" bodyfile="include/raceline.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a9f275a75386959e1e513718925e8299b" prot="public" static="no" mutable="no">
+        <type>std::map&lt; uint8_t, float &gt;</type>
+        <definition>std::map&lt;uint8_t,float&gt; MapPath::sector_to_speed_factor</definition>
+        <argsstring></argsstring>
+        <name>sector_to_speed_factor</name>
+        <briefdescription>
+<para>Speed factors for each sector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="85" column="14" bodyfile="include/raceline.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a1221e3d1d196629799100134c79776a7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MapPath::num_points</definition>
+        <argsstring></argsstring>
+        <name>num_points</name>
+        <briefdescription>
+<para>Number of points in the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="86" column="9" bodyfile="include/raceline.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1a199563410b9b9f18c2848d246d875175" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MapPath::nearest_point</definition>
+        <argsstring></argsstring>
+        <name>nearest_point</name>
+        <briefdescription>
+<para>Index of the nearest point to the car. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="87" column="9" bodyfile="include/raceline.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1ae444c6be5d843be68d445c1e02893887" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MapPath::look_ahead_point</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point</name>
+        <briefdescription>
+<para>Index of the look-ahead point on the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="88" column="9" bodyfile="include/raceline.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMapPath_1aa55cb496e748965ec32d48aa2c4bb43a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MapPath::speed_function</definition>
+        <argsstring></argsstring>
+        <name>speed_function</name>
+        <briefdescription>
+<para>Speed function used for interpolation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="89" column="17" bodyfile="include/raceline.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMapPath_1a7bdd0cbede29abe670fdd016b8a92784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MapPath::MapPath</definition>
+        <argsstring>(float look_ahead_gain=0.4, float min_look_ahead_distance=0.4, int tdp=0)</argsstring>
+        <name>MapPath</name>
+        <param>
+          <type>float</type>
+          <declname>look_ahead_gain</declname>
+          <defval>0.4</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>min_look_ahead_distance</declname>
+          <defval>0.4</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tdp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="classMapPath" kindref="compound">MapPath</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>look_ahead_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gain for look-ahead distance calculation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_look_ahead_distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum look-ahead distance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tdp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target distance point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="97" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classMapPath_1a2c13be35f54a9cb5474440d85de79423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapPath::initialize</definition>
+        <argsstring>(const f1tenth_msgs::msg::Raceline &amp;raceline, std::string speed_function, int interpolation_depth=0, const std::vector&lt; double &gt; &amp;_sector_to_speed_factor={})</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const f1tenth_msgs::msg::Raceline &amp;</type>
+          <declname>raceline</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>speed_function</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interpolation_depth</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>_sector_to_speed_factor</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Initializes the <ref refid="classMapPath" kindref="compound">MapPath</ref> object with raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>raceline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Raceline data for path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>speed_function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function used for speed profiling. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interpolation_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Depth of interpolation applied to speed profile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sector_to_speed_factor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map of speed factors for each sector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="106" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMapPath_1a92971cda4b2b6e7576967e3a0e0bf3cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; MapPath::interpolate_speed_profile</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;speed, const std::vector&lt; uint8_t &gt; &amp;sector, int num_points, const std::map&lt; uint8_t, float &gt; &amp;sector_to_speed_factor, int interpolation_depth)</argsstring>
+        <name>interpolate_speed_profile</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>speed</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; uint8_t &gt; &amp;</type>
+          <declname>sector</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_points</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; uint8_t, float &gt; &amp;</type>
+          <declname>sector_to_speed_factor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interpolation_depth</declname>
+        </param>
+        <briefdescription>
+<para>Interpolates the speed profile based on sectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original speed profile. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sector assignments for points. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of raceline points. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sector_to_speed_factor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map of speed factors for each sector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interpolation_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Depth of interpolation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Interpolated speed profile. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="120" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classMapPath_1aefafff9a57bbc51cd550e028e71a2274" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float, float, float &gt;</type>
+        <definition>std::tuple&lt;float, float, float, float&gt; MapPath::search_nearest_point</definition>
+        <argsstring>(State &amp;state)</argsstring>
+        <name>search_nearest_point</name>
+        <param>
+          <type><ref refid="classState" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Searches for the nearest point to the current position specified in the state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classState" kindref="compound">State</ref></computeroutput> object representing the current position of the vehicle with <computeroutput>middle_x</computeroutput> and <computeroutput>middle_y</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::tuple&lt;float, float, float, float&gt; A tuple containing:<itemizedlist>
+<listitem><para><computeroutput>current_x</computeroutput> (float): The x-coordinate of the nearest point on the path.</para>
+</listitem><listitem><para><computeroutput>current_y</computeroutput> (float): The y-coordinate of the nearest point on the path.</para>
+</listitem><listitem><para><computeroutput>s[nearest_point]</computeroutput> (float): The path position of the nearest point.</para>
+</listitem><listitem><para><computeroutput>distance_n</computeroutput> (float): The normal distance between the vehicle and the path. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="135" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classMapPath_1aabeb8feba306b164883f306633fc20ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float, float, float &gt;</type>
+        <definition>std::tuple&lt;float, float, float, float&gt; MapPath::search_target_point</definition>
+        <argsstring>(State &amp;state)</argsstring>
+        <name>search_target_point</name>
+        <param>
+          <type><ref refid="classState" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Searches for the target indexes based on the car&apos;s state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The car&apos;s current state. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple with x_la, y_la, yaw_la and look-ahead distance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="142" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classMapPath_1a17cfdc0998c1341d668185c65ec7fb5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float MapPath::get_target_speed</definition>
+        <argsstring>()</argsstring>
+        <name>get_target_speed</name>
+        <briefdescription>
+<para>Retrieves the target speed based on the speed function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Tuple with target speed and a second value (zero for compatibility). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline.hpp" line="148" column="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the path that the car follows, extracted from the map. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/raceline.hpp" line="68" column="1" bodyfile="include/raceline.hpp" bodystart="67" bodyend="149"/>
+    <listofallmembers>
+      <member refid="classMapPath_1a28091a3a3f94a1ed29b851995d06bb94" prot="public" virt="non-virtual"><scope>MapPath</scope><name>curvature</name></member>
+      <member refid="classMapPath_1a8684a7a1e91c910a107cff513427ae06" prot="public" virt="non-virtual"><scope>MapPath</scope><name>cx</name></member>
+      <member refid="classMapPath_1ac70148edea8d5511c2199409fe90bcb5" prot="public" virt="non-virtual"><scope>MapPath</scope><name>cy</name></member>
+      <member refid="classMapPath_1a17cfdc0998c1341d668185c65ec7fb5c" prot="public" virt="non-virtual"><scope>MapPath</scope><name>get_target_speed</name></member>
+      <member refid="classMapPath_1a0e9ff8a03e4a2027e9ec71d8171c6495" prot="public" virt="non-virtual"><scope>MapPath</scope><name>heading</name></member>
+      <member refid="classMapPath_1a2c13be35f54a9cb5474440d85de79423" prot="public" virt="non-virtual"><scope>MapPath</scope><name>initialize</name></member>
+      <member refid="classMapPath_1a92971cda4b2b6e7576967e3a0e0bf3cc" prot="public" virt="non-virtual"><scope>MapPath</scope><name>interpolate_speed_profile</name></member>
+      <member refid="classMapPath_1a0932b7d0029ce6991db6816f9dae6bc8" prot="public" virt="non-virtual"><scope>MapPath</scope><name>interpolated_speed</name></member>
+      <member refid="classMapPath_1a11095a5a18c830e3d7fe6cc42c61bc18" prot="public" virt="non-virtual"><scope>MapPath</scope><name>length</name></member>
+      <member refid="classMapPath_1a135601774de0d6af29938eca35471637" prot="public" virt="non-virtual"><scope>MapPath</scope><name>LOOK_AHEAD_GAIN</name></member>
+      <member refid="classMapPath_1ae444c6be5d843be68d445c1e02893887" prot="public" virt="non-virtual"><scope>MapPath</scope><name>look_ahead_point</name></member>
+      <member refid="classMapPath_1a7bdd0cbede29abe670fdd016b8a92784" prot="public" virt="non-virtual"><scope>MapPath</scope><name>MapPath</name></member>
+      <member refid="classMapPath_1a415581a600589c35f5fdfab3876a6b80" prot="public" virt="non-virtual"><scope>MapPath</scope><name>MIN_LOOK_AHEAD_DIST</name></member>
+      <member refid="classMapPath_1a199563410b9b9f18c2848d246d875175" prot="public" virt="non-virtual"><scope>MapPath</scope><name>nearest_point</name></member>
+      <member refid="classMapPath_1a1221e3d1d196629799100134c79776a7" prot="public" virt="non-virtual"><scope>MapPath</scope><name>num_points</name></member>
+      <member refid="classMapPath_1a94c407395a325ab724e65e37d135b85d" prot="public" virt="non-virtual"><scope>MapPath</scope><name>point_distances</name></member>
+      <member refid="classMapPath_1a60c2f14a775df2a9a8ad4c2ac5bf5f33" prot="public" virt="non-virtual"><scope>MapPath</scope><name>s_value</name></member>
+      <member refid="classMapPath_1aefafff9a57bbc51cd550e028e71a2274" prot="public" virt="non-virtual"><scope>MapPath</scope><name>search_nearest_point</name></member>
+      <member refid="classMapPath_1aabeb8feba306b164883f306633fc20ae" prot="public" virt="non-virtual"><scope>MapPath</scope><name>search_target_point</name></member>
+      <member refid="classMapPath_1abeab1c53d6dd2f34c3ef2054d780dc5e" prot="public" virt="non-virtual"><scope>MapPath</scope><name>sector</name></member>
+      <member refid="classMapPath_1a9f275a75386959e1e513718925e8299b" prot="public" virt="non-virtual"><scope>MapPath</scope><name>sector_to_speed_factor</name></member>
+      <member refid="classMapPath_1a1e55f451ec7f88b3fb986d8c406b7bd7" prot="public" virt="non-virtual"><scope>MapPath</scope><name>speed</name></member>
+      <member refid="classMapPath_1aa55cb496e748965ec32d48aa2c4bb43a" prot="public" virt="non-virtual"><scope>MapPath</scope><name>speed_function</name></member>
+      <member refid="classMapPath_1adecd5a2e2653bc9069a4de8a0b9428ed" prot="public" virt="non-virtual"><scope>MapPath</scope><name>TDP</name></member>
+      <member refid="classMapPath_1a8738be3d59c8605a93fd01fa41d9d705" prot="public" virt="non-virtual"><scope>MapPath</scope><name>zone</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

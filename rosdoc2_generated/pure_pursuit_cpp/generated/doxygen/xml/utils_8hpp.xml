@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="utils_8hpp" kind="file" language="C++">
+    <compoundname>utils.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">array</includes>
+    <includes local="no">map</includes>
+    <includes local="no">atomic</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">future</includes>
+    <includes local="no">istream</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">unordered_set</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">algorithm</includes>
+    <includedby refid="potential__pursuit_8hpp" local="no">include/potential_pursuit.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>atomic</label>
+      </node>
+      <node id="10">
+        <label>functional</label>
+      </node>
+      <node id="13">
+        <label>limits</label>
+      </node>
+      <node id="8">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="6">
+        <label>cassert</label>
+      </node>
+      <node id="14">
+        <label>stdexcept</label>
+      </node>
+      <node id="17">
+        <label>numeric</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="15">
+        <label>unordered_set</label>
+      </node>
+      <node id="11">
+        <label>future</label>
+      </node>
+      <node id="16">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>array</label>
+      </node>
+      <node id="9">
+        <label>cstdlib</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>include/utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>istream</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="utils_8hpp_1ad725afcbeef02cb588029045beaff268" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mod</definition>
+        <argsstring>(int a, int n)</argsstring>
+        <name>mod</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Calculate the modulo of a number. The % operator in C++ is not a modulo operator, but a remainder operator. Therefore, when the dividend is negative, the result is also negative. This function calculates the modulo of a number in the correct way.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dividend </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The divisor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The modulo of the division</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="23" column="5" bodyfile="include/utils.hpp" bodystart="23" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a4e1d9dd019446a360f3a11f4f4fca4db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float calculateDistance</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;signal, unsigned short int start_index, unsigned short int end_index)</argsstring>
+        <name>calculateDistance</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type>unsigned short int</type>
+          <declname>start_index</declname>
+        </param>
+        <param>
+          <type>unsigned short int</type>
+          <declname>end_index</declname>
+        </param>
+        <briefdescription>
+<para>compute the mean of the values between the start and end indices </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>starting index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the mean of the values between the start and end indices </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="44" column="7" bodyfile="include/utils.hpp" bodystart="44" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a7961cf9f682c353bbbbee08688449363" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float calculate_mean</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;vector)</argsstring>
+        <name>calculate_mean</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="57" column="7" bodyfile="include/utils.hpp" bodystart="57" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1aa648ceb5ae3db8a6570637aa4956a306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short int</type>
+        <definition>unsigned short int findMinIndex</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;vec)</argsstring>
+        <name>findMinIndex</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="66" column="20" bodyfile="include/utils.hpp" bodystart="66" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/utils.hpp"/>
+  </compounddef>
+</doxygen>

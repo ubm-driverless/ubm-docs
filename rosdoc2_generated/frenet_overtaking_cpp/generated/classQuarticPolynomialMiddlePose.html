@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class QuarticPolynomialMiddlePose &mdash; frenet_overtaking_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class State" href="classState.html" />
+    <link rel="prev" title="Class QuarticPolynomial" href="classQuarticPolynomial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            frenet_overtaking_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structFrenetPath.html">Struct FrenetPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classcubic__spline__2d.html">Class cubic_spline_2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline1d.html">Class CubicSpline1d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline2d.html">Class CubicSpline2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetOptimalTrajectory.html">Class FrenetOptimalTrajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetOvertakingNode.html">Class FrenetOvertakingNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMapPath.html">Class MapPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomial.html">Class QuarticPolynomial</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class QuarticPolynomialMiddlePose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classState.html">Class State</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSteeringController.html">Class SteeringController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThirdPolynomial.html">Class ThirdPolynomial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1a548f490e1cc2964ec6a3099dedee3485.html">Template Function argmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1a478f9c32589c5d73b481c36e939f27a1.html">Function linspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1ad725afcbeef02cb588029045beaff268.html">Function mod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1a588d8ae799d233a401111c312e73364f.html">Function rafi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking.hpp.html">File frenet_overtaking.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking_node.hpp.html">File frenet_overtaking_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_raceline.hpp.html">File raceline.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_spline_and_polynomial.hpp.html">File spline_and_polynomial.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_steering_controller.hpp.html">File steering_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vector_op.hpp.html">File vector_op.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">frenet_overtaking_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class QuarticPolynomialMiddlePose</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classQuarticPolynomialMiddlePose.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-quarticpolynomialmiddlepose">
+<span id="exhale-class-classquarticpolynomialmiddlepose"></span><h1>Class QuarticPolynomialMiddlePose<a class="headerlink" href="#class-quarticpolynomialmiddlepose" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_spline_and_polynomial.hpp.html#file-include-spline-and-polynomial-hpp"><span class="std std-ref">File spline_and_polynomial.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv427QuarticPolynomialMiddlePose">
+<span id="_CPPv327QuarticPolynomialMiddlePose"></span><span id="_CPPv227QuarticPolynomialMiddlePose"></span><span id="QuarticPolynomialMiddlePose"></span><span class="target" id="classQuarticPolynomialMiddlePose"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QuarticPolynomialMiddlePose</span></span></span><a class="headerlink" href="#_CPPv427QuarticPolynomialMiddlePose" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N27QuarticPolynomialMiddlePose27QuarticPolynomialMiddlePoseEfffffff">
+<span id="_CPPv3N27QuarticPolynomialMiddlePose27QuarticPolynomialMiddlePoseEfffffff"></span><span id="_CPPv2N27QuarticPolynomialMiddlePose27QuarticPolynomialMiddlePoseEfffffff"></span><span id="QuarticPolynomialMiddlePose::QuarticPolynomialMiddlePose__float.float.float.float.float.float.float"></span><span class="target" id="classQuarticPolynomialMiddlePose_1a16bd18656ca566b87ddea7c702f11ede"></span><span class="sig-name descname"><span class="n"><span class="pre">QuarticPolynomialMiddlePose</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">xs</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">middle_pose</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">xe</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vxe</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">axe</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t_middle</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N27QuarticPolynomialMiddlePose27QuarticPolynomialMiddlePoseEfffffff" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor for <a class="reference internal" href="classQuarticPolynomial.html#classQuarticPolynomial"><span class="std std-ref">QuarticPolynomial</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xs</strong> – Initial position. </p></li>
+<li><p><strong>middle_pose</strong> – Middle position. </p></li>
+<li><p><strong>xe</strong> – Final position. </p></li>
+<li><p><strong>vxe</strong> – Final velocity. </p></li>
+<li><p><strong>axe</strong> – Final acceleration. </p></li>
+<li><p><strong>t_middle</strong> – Time at which the middle pose is reached. </p></li>
+<li><p><strong>time</strong> – Duration over which the polynomial is defined. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK27QuarticPolynomialMiddlePose10calc_pointEf">
+<span id="_CPPv3NK27QuarticPolynomialMiddlePose10calc_pointEf"></span><span id="_CPPv2NK27QuarticPolynomialMiddlePose10calc_pointEf"></span><span id="QuarticPolynomialMiddlePose::calc_point__floatC"></span><span class="target" id="classQuarticPolynomialMiddlePose_1ad45ecb53d76487736e20ae3b10288557"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calc_point</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK27QuarticPolynomialMiddlePose10calc_pointEf" title="Link to this definition"></a><br /></dt>
+<dd><p>Calculates the value of the polynomial at a given time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>t</strong> – Time at which to evaluate the polynomial. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value of the polynomial at time t. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK27QuarticPolynomialMiddlePose21calc_first_derivativeEf">
+<span id="_CPPv3NK27QuarticPolynomialMiddlePose21calc_first_derivativeEf"></span><span id="_CPPv2NK27QuarticPolynomialMiddlePose21calc_first_derivativeEf"></span><span id="QuarticPolynomialMiddlePose::calc_first_derivative__floatC"></span><span class="target" id="classQuarticPolynomialMiddlePose_1a523cecaafc0de40c9909fa9e8b809481"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calc_first_derivative</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK27QuarticPolynomialMiddlePose21calc_first_derivativeEf" title="Link to this definition"></a><br /></dt>
+<dd><p>Calculates the derivative of the polynomial at a given time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>t</strong> – Time at which to evaluate the polynomial. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Derivative of the polynomial at time t. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK27QuarticPolynomialMiddlePose22calc_second_derivativeEf">
+<span id="_CPPv3NK27QuarticPolynomialMiddlePose22calc_second_derivativeEf"></span><span id="_CPPv2NK27QuarticPolynomialMiddlePose22calc_second_derivativeEf"></span><span id="QuarticPolynomialMiddlePose::calc_second_derivative__floatC"></span><span class="target" id="classQuarticPolynomialMiddlePose_1a7b0a5be44f4b4143deb88e094ac9bf89"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calc_second_derivative</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK27QuarticPolynomialMiddlePose22calc_second_derivativeEf" title="Link to this definition"></a><br /></dt>
+<dd><p>Calculates the second derivative of the polynomial at a given time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>t</strong> – Time at which to evaluate the polynomial. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Second derivative of the polynomial at time t. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK27QuarticPolynomialMiddlePose21calc_third_derivativeEf">
+<span id="_CPPv3NK27QuarticPolynomialMiddlePose21calc_third_derivativeEf"></span><span id="_CPPv2NK27QuarticPolynomialMiddlePose21calc_third_derivativeEf"></span><span id="QuarticPolynomialMiddlePose::calc_third_derivative__floatC"></span><span class="target" id="classQuarticPolynomialMiddlePose_1a15cbd3371f85f014e5f6476eb8dfd5df"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calc_third_derivative</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK27QuarticPolynomialMiddlePose21calc_third_derivativeEf" title="Link to this definition"></a><br /></dt>
+<dd><p>Calculates the third derivative of the polynomial at a given time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>t</strong> – Time at which to evaluate the polynomial. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Third derivative of the polynomial at time t. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK27QuarticPolynomialMiddlePose8calc_allEf">
+<span id="_CPPv3NK27QuarticPolynomialMiddlePose8calc_allEf"></span><span id="_CPPv2NK27QuarticPolynomialMiddlePose8calc_allEf"></span><span id="QuarticPolynomialMiddlePose::calc_all__floatC"></span><span class="target" id="classQuarticPolynomialMiddlePose_1a125059b9ecb9f91668a839203d645437"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calc_all</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK27QuarticPolynomialMiddlePose8calc_allEf" title="Link to this definition"></a><br /></dt>
+<dd><p>Calculates the value, first derivative, second derivative, and third derivative of the polynomial at a given time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>t</strong> – Time at which to evaluate the polynomial. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the value, first derivative, second derivative, and third derivative of the polynomial at time t. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N27QuarticPolynomialMiddlePose3a_0E">
+<span id="_CPPv3N27QuarticPolynomialMiddlePose3a_0E"></span><span id="_CPPv2N27QuarticPolynomialMiddlePose3a_0E"></span><span id="QuarticPolynomialMiddlePose::a_0__float"></span><span class="target" id="classQuarticPolynomialMiddlePose_1a64fceb024f2b1b2667caa09f2660fa99"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">a_0</span></span></span><a class="headerlink" href="#_CPPv4N27QuarticPolynomialMiddlePose3a_0E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N27QuarticPolynomialMiddlePose3a_1E">
+<span id="_CPPv3N27QuarticPolynomialMiddlePose3a_1E"></span><span id="_CPPv2N27QuarticPolynomialMiddlePose3a_1E"></span><span id="QuarticPolynomialMiddlePose::a_1__float"></span><span class="target" id="classQuarticPolynomialMiddlePose_1ae7d2ced931185c5b3a10e0c857c54263"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">a_1</span></span></span><a class="headerlink" href="#_CPPv4N27QuarticPolynomialMiddlePose3a_1E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N27QuarticPolynomialMiddlePose3a_2E">
+<span id="_CPPv3N27QuarticPolynomialMiddlePose3a_2E"></span><span id="_CPPv2N27QuarticPolynomialMiddlePose3a_2E"></span><span id="QuarticPolynomialMiddlePose::a_2__float"></span><span class="target" id="classQuarticPolynomialMiddlePose_1a0e0f3da6f3ca3f96f96970f372553472"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">a_2</span></span></span><a class="headerlink" href="#_CPPv4N27QuarticPolynomialMiddlePose3a_2E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N27QuarticPolynomialMiddlePose3a_3E">
+<span id="_CPPv3N27QuarticPolynomialMiddlePose3a_3E"></span><span id="_CPPv2N27QuarticPolynomialMiddlePose3a_3E"></span><span id="QuarticPolynomialMiddlePose::a_3__float"></span><span class="target" id="classQuarticPolynomialMiddlePose_1a4313eeba77ab79517077b6c528f7b098"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">a_3</span></span></span><a class="headerlink" href="#_CPPv4N27QuarticPolynomialMiddlePose3a_3E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N27QuarticPolynomialMiddlePose3a_4E">
+<span id="_CPPv3N27QuarticPolynomialMiddlePose3a_4E"></span><span id="_CPPv2N27QuarticPolynomialMiddlePose3a_4E"></span><span id="QuarticPolynomialMiddlePose::a_4__float"></span><span class="target" id="classQuarticPolynomialMiddlePose_1aa7429345a1f4a81ff1c12a83b30f6250"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">a_4</span></span></span><a class="headerlink" href="#_CPPv4N27QuarticPolynomialMiddlePose3a_4E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classQuarticPolynomial.html" class="btn btn-neutral float-left" title="Class QuarticPolynomial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classState.html" class="btn btn-neutral float-right" title="Class State" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;frenet_overtaking_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

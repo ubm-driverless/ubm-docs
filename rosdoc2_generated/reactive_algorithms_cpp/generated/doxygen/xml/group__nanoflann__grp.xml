@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__nanoflann__grp" kind="group">
+    <compoundname>nanoflann_grp</compoundname>
+    <title>nanoflann C++ library for KD-trees</title>
+    <innerclass refid="structnanoflann_1_1has__resize" prot="public">nanoflann::has_resize</innerclass>
+    <innerclass refid="structnanoflann_1_1has__resize_3_01T_00_01decltype_07_07void_08_01std_1_1declval_3_01T_01_4_07_08_8resize_071_08_00_010_08_4" prot="public">nanoflann::has_resize&lt; T, decltype((void) std::declval&lt; T &gt;().resize(1), 0)&gt;</innerclass>
+    <innerclass refid="structnanoflann_1_1has__assign" prot="public">nanoflann::has_assign</innerclass>
+    <innerclass refid="structnanoflann_1_1has__assign_3_01T_00_01decltype_07_07void_08_01std_1_1declval_3_01T_01_4_07_0384656df8feb37b62ef12dfcd439e93e" prot="public">nanoflann::has_assign&lt; T, decltype((void) std::declval&lt; T &gt;().assign(1, 0), 0)&gt;</innerclass>
+    <innerclass refid="classnanoflann_1_1KDTreeBaseClass" prot="public">nanoflann::KDTreeBaseClass</innerclass>
+    <innergroup refid="group__result__sets__grp">Result set classes</innergroup>
+    <innergroup refid="group__loadsave__grp">Load/save auxiliary functions</innergroup>
+    <innergroup refid="group__metric__grp">Metric (distance) classes</innergroup>
+    <innergroup refid="group__param__grp">Parameter structs</innergroup>
+    <innergroup refid="group__memalloc__grp">Memory allocation</innergroup>
+    <innergroup refid="group__nanoflann__metaprog__grp">Auxiliary metaprogramming stuff</innergroup>
+    <innergroup refid="group__kdtrees__grp">KD-tree classes and adaptors</innergroup>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__nanoflann__grp_1ga8f0721b066194bc7bb511f7344beb460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T nanoflann::pi_const</definition>
+        <argsstring>()</argsstring>
+        <name>pi_const</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the PI constant (required to avoid MSVC missing symbols) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="87" column="3" bodyfile="include/nanoflann.hpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nanoflann__grp_1gaec2db17610419f390df8fce56bdc4892" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; has_resize&lt; Container &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt;has_resize&lt;Container&gt;::value, void&gt;::type nanoflann::resize</definition>
+        <argsstring>(Container &amp;c, const size_t nElements)</argsstring>
+        <name>resize</name>
+        <param>
+          <type>Container &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>nElements</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free function to resize a resizable object </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="122" column="40" bodyfile="include/nanoflann.hpp" bodystart="122" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nanoflann__grp_1gada9f760672baea3da3422260fb03c8aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; has_assign&lt; Container &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt;has_assign&lt;Container&gt;::value, void&gt;::type nanoflann::assign</definition>
+        <argsstring>(Container &amp;c, const size_t nElements, const T &amp;value)</argsstring>
+        <name>assign</name>
+        <param>
+          <type>Container &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>nElements</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free function to assign to a container </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nanoflann.hpp" line="144" column="40" bodyfile="include/nanoflann.hpp" bodystart="144" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>
