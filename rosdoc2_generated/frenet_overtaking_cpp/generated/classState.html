@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class State &mdash; frenet_overtaking_cpp 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class SteeringController" href="classSteeringController.html" />
+    <link rel="prev" title="Class QuarticPolynomialMiddlePose" href="classQuarticPolynomialMiddlePose.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            frenet_overtaking_cpp
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structFrenetPath.html">Struct FrenetPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classcubic__spline__2d.html">Class cubic_spline_2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline1d.html">Class CubicSpline1d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline2d.html">Class CubicSpline2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetOptimalTrajectory.html">Class FrenetOptimalTrajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetOvertakingNode.html">Class FrenetOvertakingNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMapPath.html">Class MapPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomial.html">Class QuarticPolynomial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomialMiddlePose.html">Class QuarticPolynomialMiddlePose</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class State</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSteeringController.html">Class SteeringController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThirdPolynomial.html">Class ThirdPolynomial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1a548f490e1cc2964ec6a3099dedee3485.html">Template Function argmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1a478f9c32589c5d73b481c36e939f27a1.html">Function linspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1ad725afcbeef02cb588029045beaff268.html">Function mod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vector__op_8hpp_1a588d8ae799d233a401111c312e73364f.html">Function rafi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking.hpp.html">File frenet_overtaking.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking_node.hpp.html">File frenet_overtaking_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_raceline.hpp.html">File raceline.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_spline_and_polynomial.hpp.html">File spline_and_polynomial.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_steering_controller.hpp.html">File steering_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vector_op.hpp.html">File vector_op.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">frenet_overtaking_cpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class State</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classState.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-state">
+<span id="exhale-class-classstate"></span><h1>Class State<a class="headerlink" href="#class-state" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_raceline.hpp.html#file-include-raceline-hpp"><span class="std std-ref">File raceline.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv45State">
+<span id="_CPPv35State"></span><span id="_CPPv25State"></span><span id="State"></span><span class="target" id="classState"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">State</span></span></span><a class="headerlink" href="#_CPPv45State" title="Link to this definition"></a><br /></dt>
+<dd><p>Represents the state of the car at any given point in time. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5State5StateEfffff">
+<span id="_CPPv3N5State5StateEfffff"></span><span id="_CPPv2N5State5StateEfffff"></span><span id="State::State__float.float.float.float.float"></span><span class="target" id="classState_1ae3c901db22aac53ce6a2f592d4e06f33"></span><span class="sig-name descname"><span class="n"><span class="pre">State</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">yaw</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">wb</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5State5StateEfffff" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor for the <a class="reference internal" href="#classState"><span class="std std-ref">State</span></a> class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Initial x position. </p></li>
+<li><p><strong>y</strong> – Initial y position. </p></li>
+<li><p><strong>yaw</strong> – Initial orientation of the car. </p></li>
+<li><p><strong>v</strong> – Initial velocity of the car. </p></li>
+<li><p><strong>wb</strong> – Wheelbase of the car. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5State14distance_frontEff">
+<span id="_CPPv3N5State14distance_frontEff"></span><span id="_CPPv2N5State14distance_frontEff"></span><span id="State::distance_front__float.float"></span><span class="target" id="classState_1a1f09b97db2fdb5e2138b3e8ad62f797b"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distance_front</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">other_x</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">other_y</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5State14distance_frontEff" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes the Euclidean distance from the front of the car to a specified point. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>other_x</strong> – x-coordinate of the point. </p></li>
+<li><p><strong>other_y</strong> – y-coordinate of the point. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Distance from the front to the point. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5State15distance_middleEff">
+<span id="_CPPv3N5State15distance_middleEff"></span><span id="_CPPv2N5State15distance_middleEff"></span><span id="State::distance_middle__float.float"></span><span class="target" id="classState_1a069bf57a14c411f4e597d007499535b1"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distance_middle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">other_x</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">other_y</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5State15distance_middleEff" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes the Euclidean distance from the middle of the car to a specified point. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>other_x</strong> – x-coordinate of the point. </p></li>
+<li><p><strong>other_y</strong> – y-coordinate of the point. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Distance from the middle to the point. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5State13distance_rearEff">
+<span id="_CPPv3N5State13distance_rearEff"></span><span id="_CPPv2N5State13distance_rearEff"></span><span id="State::distance_rear__float.float"></span><span class="target" id="classState_1ab54a72ac59951cc0294b8959f73ac4c1"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distance_rear</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">other_x</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">other_y</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5State13distance_rearEff" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes the Euclidean distance from the rear of the car to a specified point. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>other_x</strong> – x-coordinate of the point. </p></li>
+<li><p><strong>other_y</strong> – y-coordinate of the point. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Distance from the rear to the point. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5State7front_xE">
+<span id="_CPPv3N5State7front_xE"></span><span id="_CPPv2N5State7front_xE"></span><span id="State::front_x__float"></span><span class="target" id="classState_1a98038a1a0454c45b5834da4bc254852c"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">front_x</span></span></span><a class="headerlink" href="#_CPPv4N5State7front_xE" title="Link to this definition"></a><br /></dt>
+<dd><p>x-coordinate of the front of the wheelbase </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5State7front_yE">
+<span id="_CPPv3N5State7front_yE"></span><span id="_CPPv2N5State7front_yE"></span><span id="State::front_y__float"></span><span class="target" id="classState_1ac964932e69714cda68fb9ceff05f487f"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">front_y</span></span></span><a class="headerlink" href="#_CPPv4N5State7front_yE" title="Link to this definition"></a><br /></dt>
+<dd><p>y-coordinate of the front of the wheelbase </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5State8middle_xE">
+<span id="_CPPv3N5State8middle_xE"></span><span id="_CPPv2N5State8middle_xE"></span><span id="State::middle_x__float"></span><span class="target" id="classState_1a5a54eaae02e2a09d5977caed1923f809"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">middle_x</span></span></span><a class="headerlink" href="#_CPPv4N5State8middle_xE" title="Link to this definition"></a><br /></dt>
+<dd><p>x-coordinate of the middle of the wheelbase </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5State8middle_yE">
+<span id="_CPPv3N5State8middle_yE"></span><span id="_CPPv2N5State8middle_yE"></span><span id="State::middle_y__float"></span><span class="target" id="classState_1ad78ce8b1bfdb214416a26cce785f98d7"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">middle_y</span></span></span><a class="headerlink" href="#_CPPv4N5State8middle_yE" title="Link to this definition"></a><br /></dt>
+<dd><p>y-coordinate of the middle of the wheelbase </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5State6rear_xE">
+<span id="_CPPv3N5State6rear_xE"></span><span id="_CPPv2N5State6rear_xE"></span><span id="State::rear_x__float"></span><span class="target" id="classState_1ab148c768275986e0ecffa13c51be781b"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rear_x</span></span></span><a class="headerlink" href="#_CPPv4N5State6rear_xE" title="Link to this definition"></a><br /></dt>
+<dd><p>x-coordinate of the rear of the wheelbase </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5State6rear_yE">
+<span id="_CPPv3N5State6rear_yE"></span><span id="_CPPv2N5State6rear_yE"></span><span id="State::rear_y__float"></span><span class="target" id="classState_1aa619f4e2366749d55f16678d5d422a21"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rear_y</span></span></span><a class="headerlink" href="#_CPPv4N5State6rear_yE" title="Link to this definition"></a><br /></dt>
+<dd><p>y-coordinate of the rear of the wheelbase </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5State3yawE">
+<span id="_CPPv3N5State3yawE"></span><span id="_CPPv2N5State3yawE"></span><span id="State::yaw__float"></span><span class="target" id="classState_1acd66ed841524572b48be7e06d9dde58d"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">yaw</span></span></span><a class="headerlink" href="#_CPPv4N5State3yawE" title="Link to this definition"></a><br /></dt>
+<dd><p>Orientation of the car with respect to the x-axis. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5State1vE">
+<span id="_CPPv3N5State1vE"></span><span id="_CPPv2N5State1vE"></span><span id="State::v__float"></span><span class="target" id="classState_1a1107f282ca16f5a4fb68bcd9ee6f06d4"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">v</span></span></span><a class="headerlink" href="#_CPPv4N5State1vE" title="Link to this definition"></a><br /></dt>
+<dd><p>Scalar velocity of the car. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classQuarticPolynomialMiddlePose.html" class="btn btn-neutral float-left" title="Class QuarticPolynomialMiddlePose" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classSteeringController.html" class="btn btn-neutral float-right" title="Class SteeringController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;frenet_overtaking_cpp&gt; Contributors. License: TODO: License declaration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

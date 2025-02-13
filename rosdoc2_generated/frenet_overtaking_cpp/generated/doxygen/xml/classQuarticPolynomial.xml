@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classQuarticPolynomial" kind="class" language="C++" prot="public">
+    <compoundname>QuarticPolynomial</compoundname>
+    <includes local="no">spline_and_polynomial.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classQuarticPolynomial_1a0bf8d403e353919883d2f26a020e0f83" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float QuarticPolynomial::a_0</definition>
+        <argsstring></argsstring>
+        <name>a_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="197" column="11" bodyfile="include/spline_and_polynomial.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classQuarticPolynomial_1a58ad5b6a465bbf0e3e04b1ca300008f0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float QuarticPolynomial::a_1</definition>
+        <argsstring></argsstring>
+        <name>a_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="197" column="15" bodyfile="include/spline_and_polynomial.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classQuarticPolynomial_1a33f9dfa22606de894984ea12dbf93d89" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float QuarticPolynomial::a_2</definition>
+        <argsstring></argsstring>
+        <name>a_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="197" column="19" bodyfile="include/spline_and_polynomial.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classQuarticPolynomial_1a60c3daa1a9a947a53db1dfb54d9cebe3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float QuarticPolynomial::a_3</definition>
+        <argsstring></argsstring>
+        <name>a_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="197" column="23" bodyfile="include/spline_and_polynomial.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classQuarticPolynomial_1aeb0c4a327f1142132e4b143ff4e88d93" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float QuarticPolynomial::a_4</definition>
+        <argsstring></argsstring>
+        <name>a_4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="197" column="27" bodyfile="include/spline_and_polynomial.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQuarticPolynomial_1ac768ace5467336e48cf8fb9662f5ccae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QuarticPolynomial::QuarticPolynomial</definition>
+        <argsstring>(float xs, float vxs, float axs, float vxe, float axe, float time)</argsstring>
+        <name>QuarticPolynomial</name>
+        <param>
+          <type>float</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>vxs</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>axs</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>vxe</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>axe</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for <ref refid="classQuarticPolynomial" kindref="compound">QuarticPolynomial</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vxs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial velocity. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial acceleration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vxe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Final velocity. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Final acceleration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Duration over which the polynomial is defined. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="208" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuarticPolynomial_1a821e30c24bda0814973376472ab08ac8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float QuarticPolynomial::calc_point</definition>
+        <argsstring>(float t) const</argsstring>
+        <name>calc_point</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the value of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="216" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuarticPolynomial_1a4d83e67c9df29735fb90286052b6d1e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float QuarticPolynomial::calc_first_derivative</definition>
+        <argsstring>(float t) const</argsstring>
+        <name>calc_first_derivative</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="224" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuarticPolynomial_1ad5f83347f117af8908f7504c191ab997" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float QuarticPolynomial::calc_second_derivative</definition>
+        <argsstring>(float t) const</argsstring>
+        <name>calc_second_derivative</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the second derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Second derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="232" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuarticPolynomial_1a909a5c34496f5e747259d6b96180bb04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float QuarticPolynomial::calc_third_derivative</definition>
+        <argsstring>(float t) const</argsstring>
+        <name>calc_third_derivative</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the third derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Third derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="240" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuarticPolynomial_1a2a07ded7040ee24105da0d22ae7ea957" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::tuple&lt; float, float, float, float &gt;</type>
+        <definition>std::tuple&lt;float, float, float, float&gt; QuarticPolynomial::calc_all</definition>
+        <argsstring>(float t) const</argsstring>
+        <name>calc_all</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the value, first derivative, second derivative, and third derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tuple containing the value, first derivative, second derivative, and third derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="248" column="23" bodyfile="include/spline_and_polynomial.hpp" bodystart="248" bodyend="256"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents a quartic polynomial defined by its initial position, initial velocity, initial acceleration, final velocity, final acceleration, and time duration. </para>
+    </detaileddescription>
+    <location file="include/spline_and_polynomial.hpp" line="195" column="24" bodyfile="include/spline_and_polynomial.hpp" bodystart="195" bodyend="257"/>
+    <listofallmembers>
+      <member refid="classQuarticPolynomial_1a0bf8d403e353919883d2f26a020e0f83" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>a_0</name></member>
+      <member refid="classQuarticPolynomial_1a58ad5b6a465bbf0e3e04b1ca300008f0" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>a_1</name></member>
+      <member refid="classQuarticPolynomial_1a33f9dfa22606de894984ea12dbf93d89" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>a_2</name></member>
+      <member refid="classQuarticPolynomial_1a60c3daa1a9a947a53db1dfb54d9cebe3" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>a_3</name></member>
+      <member refid="classQuarticPolynomial_1aeb0c4a327f1142132e4b143ff4e88d93" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>a_4</name></member>
+      <member refid="classQuarticPolynomial_1a2a07ded7040ee24105da0d22ae7ea957" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>calc_all</name></member>
+      <member refid="classQuarticPolynomial_1a4d83e67c9df29735fb90286052b6d1e4" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>calc_first_derivative</name></member>
+      <member refid="classQuarticPolynomial_1a821e30c24bda0814973376472ab08ac8" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>calc_point</name></member>
+      <member refid="classQuarticPolynomial_1ad5f83347f117af8908f7504c191ab997" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>calc_second_derivative</name></member>
+      <member refid="classQuarticPolynomial_1a909a5c34496f5e747259d6b96180bb04" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>calc_third_derivative</name></member>
+      <member refid="classQuarticPolynomial_1ac768ace5467336e48cf8fb9662f5ccae" prot="public" virt="non-virtual"><scope>QuarticPolynomial</scope><name>QuarticPolynomial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

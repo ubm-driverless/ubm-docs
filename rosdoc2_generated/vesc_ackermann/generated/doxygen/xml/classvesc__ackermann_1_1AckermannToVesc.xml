@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classvesc__ackermann_1_1AckermannToVesc" kind="class" language="C++" prot="public">
+    <compoundname>vesc_ackermann::AckermannToVesc</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvesc__ackermann_1_1AckermannToVesc_1a026ea837ed3104478e761f5bff7e3bf1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::AckermannToVesc::speed_to_erpm_gain_</definition>
+        <argsstring></argsstring>
+        <name>speed_to_erpm_gain_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/ackermann_to_vesc.hpp" line="52" column="10" bodyfile="include/vesc_ackermann/ackermann_to_vesc.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1AckermannToVesc_1a2b84b4679bc8cb9b292f589918dd4a6a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::AckermannToVesc::speed_to_erpm_offset_</definition>
+        <argsstring></argsstring>
+        <name>speed_to_erpm_offset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/ackermann_to_vesc.hpp" line="52" column="30" bodyfile="include/vesc_ackermann/ackermann_to_vesc.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1AckermannToVesc_1ae21687a84240879ceddb5da8a516a5c3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::AckermannToVesc::steering_to_servo_gain_</definition>
+        <argsstring></argsstring>
+        <name>steering_to_servo_gain_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/ackermann_to_vesc.hpp" line="53" column="10" bodyfile="include/vesc_ackermann/ackermann_to_vesc.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1AckermannToVesc_1a8db405204ab4b233661724064084979b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vesc_ackermann::AckermannToVesc::steering_to_servo_offset_</definition>
+        <argsstring></argsstring>
+        <name>steering_to_servo_offset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/ackermann_to_vesc.hpp" line="53" column="34" bodyfile="include/vesc_ackermann/ackermann_to_vesc.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1AckermannToVesc_1aa35016aabf3e635023f528d320b7f0bd" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; Float64 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;Float64&gt;::SharedPtr vesc_ackermann::AckermannToVesc::erpm_pub_</definition>
+        <argsstring></argsstring>
+        <name>erpm_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>consider also providing an interpolated look-up table conversion </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/ackermann_to_vesc.hpp" line="58" column="33" bodyfile="include/vesc_ackermann/ackermann_to_vesc.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1AckermannToVesc_1a1b0db6fc936d8a0232e5746efbee446a" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; Float64 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;Float64&gt;::SharedPtr vesc_ackermann::AckermannToVesc::servo_pub_</definition>
+        <argsstring></argsstring>
+        <name>servo_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/ackermann_to_vesc.hpp" line="59" column="33" bodyfile="include/vesc_ackermann/ackermann_to_vesc.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__ackermann_1_1AckermannToVesc_1a7a34b99869f194dafcbb702661aff028" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;AckermannDriveStamped&gt;::SharedPtr vesc_ackermann::AckermannToVesc::ackermann_sub_</definition>
+        <argsstring></argsstring>
+        <name>ackermann_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/ackermann_to_vesc.hpp" line="60" column="36" bodyfile="include/vesc_ackermann/ackermann_to_vesc.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvesc__ackermann_1_1AckermannToVesc_1ac2048ab1f6bf7367a9815edf32ed0894" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vesc_ackermann::AckermannToVesc::AckermannToVesc</definition>
+        <argsstring>(const rclcpp::NodeOptions &amp;options)</argsstring>
+        <name>AckermannToVesc</name>
+        <param>
+          <type>const rclcpp::NodeOptions &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/ackermann_to_vesc.hpp" line="47" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classvesc__ackermann_1_1AckermannToVesc_1afb3d7922314bc946474c1fa9c75fed3d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_ackermann::AckermannToVesc::ackermannCmdCallback</definition>
+        <argsstring>(const AckermannDriveStamped::SharedPtr cmd)</argsstring>
+        <name>ackermannCmdCallback</name>
+        <param>
+          <type>const AckermannDriveStamped::SharedPtr</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_ackermann/ackermann_to_vesc.hpp" line="63" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+      <node id="1">
+        <label>vesc_ackermann::AckermannToVesc</label>
+        <link refid="classvesc__ackermann_1_1AckermannToVesc"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+      <node id="1">
+        <label>vesc_ackermann::AckermannToVesc</label>
+        <link refid="classvesc__ackermann_1_1AckermannToVesc"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/vesc_ackermann/ackermann_to_vesc.hpp" line="45" column="1" bodyfile="include/vesc_ackermann/ackermann_to_vesc.hpp" bodystart="44" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classvesc__ackermann_1_1AckermannToVesc_1a7a34b99869f194dafcbb702661aff028" prot="private" virt="non-virtual"><scope>vesc_ackermann::AckermannToVesc</scope><name>ackermann_sub_</name></member>
+      <member refid="classvesc__ackermann_1_1AckermannToVesc_1afb3d7922314bc946474c1fa9c75fed3d" prot="private" virt="non-virtual"><scope>vesc_ackermann::AckermannToVesc</scope><name>ackermannCmdCallback</name></member>
+      <member refid="classvesc__ackermann_1_1AckermannToVesc_1ac2048ab1f6bf7367a9815edf32ed0894" prot="public" virt="non-virtual"><scope>vesc_ackermann::AckermannToVesc</scope><name>AckermannToVesc</name></member>
+      <member refid="classvesc__ackermann_1_1AckermannToVesc_1aa35016aabf3e635023f528d320b7f0bd" prot="private" virt="non-virtual"><scope>vesc_ackermann::AckermannToVesc</scope><name>erpm_pub_</name></member>
+      <member refid="classvesc__ackermann_1_1AckermannToVesc_1a1b0db6fc936d8a0232e5746efbee446a" prot="private" virt="non-virtual"><scope>vesc_ackermann::AckermannToVesc</scope><name>servo_pub_</name></member>
+      <member refid="classvesc__ackermann_1_1AckermannToVesc_1a026ea837ed3104478e761f5bff7e3bf1" prot="private" virt="non-virtual"><scope>vesc_ackermann::AckermannToVesc</scope><name>speed_to_erpm_gain_</name></member>
+      <member refid="classvesc__ackermann_1_1AckermannToVesc_1a2b84b4679bc8cb9b292f589918dd4a6a" prot="private" virt="non-virtual"><scope>vesc_ackermann::AckermannToVesc</scope><name>speed_to_erpm_offset_</name></member>
+      <member refid="classvesc__ackermann_1_1AckermannToVesc_1ae21687a84240879ceddb5da8a516a5c3" prot="private" virt="non-virtual"><scope>vesc_ackermann::AckermannToVesc</scope><name>steering_to_servo_gain_</name></member>
+      <member refid="classvesc__ackermann_1_1AckermannToVesc_1a8db405204ab4b233661724064084979b" prot="private" virt="non-virtual"><scope>vesc_ackermann::AckermannToVesc</scope><name>steering_to_servo_offset_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

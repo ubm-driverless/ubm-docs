@@ -1,0 +1,447 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classvesc__driver_1_1VescInterface" kind="class" language="C++" prot="public">
+    <compoundname>vesc_driver::VescInterface</compoundname>
+    <includes local="no">vesc_interface.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classvesc__driver_1_1VescInterface_1ad172339b822111eb957ec7455fdeda5f" prot="public" static="no">
+        <type>std::function&lt; void(const VescPacketConstPtr &amp;)&gt;</type>
+        <definition>typedef std::function&lt;void (const VescPacketConstPtr &amp;)&gt; vesc_driver::VescInterface::PacketHandlerFunction</definition>
+        <argsstring></argsstring>
+        <name>PacketHandlerFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="52" column="25" bodyfile="include/vesc_driver/vesc_interface.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classvesc__driver_1_1VescInterface_1a186a64229a31b15bb5afb51bfb4fda8e" prot="public" static="no">
+        <type>std::function&lt; void(const std::string &amp;)&gt;</type>
+        <definition>typedef std::function&lt;void (const std::string &amp;)&gt; vesc_driver::VescInterface::ErrorHandlerFunction</definition>
+        <argsstring></argsstring>
+        <name>ErrorHandlerFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="53" column="25" bodyfile="include/vesc_driver/vesc_interface.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvesc__driver_1_1VescInterface_1adb5d999fb4068118c75041cf5fb370bb" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Impl &gt;</type>
+        <definition>std::unique_ptr&lt;Impl&gt; vesc_driver::VescInterface::impl_</definition>
+        <argsstring></argsstring>
+        <name>impl_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="131" column="19" bodyfile="include/vesc_driver/vesc_interface.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a20a780d84b412695ae36eb2917a69557" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vesc_driver::VescInterface::VescInterface</definition>
+        <argsstring>(const std::string &amp;port=std::string(), const PacketHandlerFunction &amp;packet_handler=PacketHandlerFunction(), const ErrorHandlerFunction &amp;error_handler=ErrorHandlerFunction())</argsstring>
+        <name>VescInterface</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>port</declname>
+          <defval>std::string()</defval>
+        </param>
+        <param>
+          <type>const PacketHandlerFunction &amp;</type>
+          <declname>packet_handler</declname>
+          <defval>PacketHandlerFunction()</defval>
+        </param>
+        <param>
+          <type>const ErrorHandlerFunction &amp;</type>
+          <declname>error_handler</declname>
+          <defval>ErrorHandlerFunction()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a <ref refid="classvesc__driver_1_1VescInterface" kindref="compound">VescInterface</ref> object. Opens the serial port interface to the VESC if <computeroutput>port</computeroutput> is not empty, otherwise the serial port remains closed until <ref refid="classvesc__driver_1_1VescInterface_1a58c32a177d5b3216b3c950a795a1e5c6" kindref="member">connect()</ref> is called.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the serial port, e.g. &apos;/dev/ttyUSB0&apos;. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>packet_handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function this class calls when a VESC packet is received. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error_handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function this class calls when an error is detected, such as a bad checksum.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classvesc__driver_1_1SerialException" kindref="compound">SerialException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="66" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a1a7d6b9df497f554364592e70bc2221e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vesc_driver::VescInterface::VescInterface</definition>
+        <argsstring>(const VescInterface &amp;)=delete</argsstring>
+        <name>VescInterface</name>
+        <param>
+          <type>const <ref refid="classvesc__driver_1_1VescInterface" kindref="compound">VescInterface</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete copy constructor and equals operator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="74" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1ab33394e4918f148583b8ab9e241c8af2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classvesc__driver_1_1VescInterface" kindref="compound">VescInterface</ref> &amp;</type>
+        <definition>VescInterface&amp; vesc_driver::VescInterface::operator=</definition>
+        <argsstring>(const VescInterface &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classvesc__driver_1_1VescInterface" kindref="compound">VescInterface</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="75" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1ad4b0a73949c485117a337144a4eb2f16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vesc_driver::VescInterface::~VescInterface</definition>
+        <argsstring>()</argsstring>
+        <name>~VescInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classvesc__driver_1_1VescInterface" kindref="compound">VescInterface</ref> destructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="80" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a476d955fc6ad896d7bb951eec65ebc11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::setPacketHandler</definition>
+        <argsstring>(const PacketHandlerFunction &amp;handler)</argsstring>
+        <name>setPacketHandler</name>
+        <param>
+          <type>const PacketHandlerFunction &amp;</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets / updates the function that this class calls when a VESC packet is received. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="85" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a9fd8e3f6de7db697f05ce93ca1f7a09d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::setErrorHandler</definition>
+        <argsstring>(const ErrorHandlerFunction &amp;handler)</argsstring>
+        <name>setErrorHandler</name>
+        <param>
+          <type>const ErrorHandlerFunction &amp;</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets / updates the function that this class calls when an error is detected, such as a bad checksum. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="91" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a58c32a177d5b3216b3c950a795a1e5c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::connect</definition>
+        <argsstring>(const std::string &amp;port)</argsstring>
+        <name>connect</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opens the serial port interface to the VESC.</para>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classvesc__driver_1_1SerialException" kindref="compound">SerialException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="98" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1aacaef560516f86c9e2ff9ae32f4b2da3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::disconnect</definition>
+        <argsstring>()</argsstring>
+        <name>disconnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Closes the serial port interface to the VESC. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="103" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a094456744af5da57be1e973204816f03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool vesc_driver::VescInterface::isConnected</definition>
+        <argsstring>() const</argsstring>
+        <name>isConnected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the status of the serial interface to the VESC.</para>
+<para><simplesect kind="return"><para>Returns true if the serial port is open, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="110" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1aa2ab0f4a23a699607d31683cb93ca1d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::send</definition>
+        <argsstring>(const VescPacket &amp;packet)</argsstring>
+        <name>send</name>
+        <param>
+          <type>const <ref refid="classvesc__driver_1_1VescPacket" kindref="compound">VescPacket</ref> &amp;</type>
+          <declname>packet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send a VESC packet. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="115" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a92edbd2848e384e9a807dffbf71887d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::requestFWVersion</definition>
+        <argsstring>()</argsstring>
+        <name>requestFWVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="117" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1aba338b9293a3daef0e8cb2974e555021" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::requestState</definition>
+        <argsstring>()</argsstring>
+        <name>requestState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="118" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a4c1d7ad4d2aefd929dbf58c2ac34d87a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::requestImuData</definition>
+        <argsstring>()</argsstring>
+        <name>requestImuData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="119" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a329849d94103c02738df8a4065ab748f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::setDutyCycle</definition>
+        <argsstring>(double duty_cycle)</argsstring>
+        <name>setDutyCycle</name>
+        <param>
+          <type>double</type>
+          <declname>duty_cycle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="121" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a4a8d2586c4a30ec9f0cc0a1295726f95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::setCurrent</definition>
+        <argsstring>(double current)</argsstring>
+        <name>setCurrent</name>
+        <param>
+          <type>double</type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="122" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1afa92db66d561be5ff7bfc49748c57e79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::setBrake</definition>
+        <argsstring>(double brake)</argsstring>
+        <name>setBrake</name>
+        <param>
+          <type>double</type>
+          <declname>brake</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="123" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a5ef452cc56f99c415f75bc037d3e62b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::setSpeed</definition>
+        <argsstring>(double speed)</argsstring>
+        <name>setSpeed</name>
+        <param>
+          <type>double</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="124" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a28d619d7ab146f2ca137a53b96734ce0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::setPosition</definition>
+        <argsstring>(double position)</argsstring>
+        <name>setPosition</name>
+        <param>
+          <type>double</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="125" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescInterface_1a487b178a049495d29d4993f84c6995b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescInterface::setServo</definition>
+        <argsstring>(double servo)</argsstring>
+        <name>setServo</name>
+        <param>
+          <type>double</type>
+          <declname>servo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_interface.hpp" line="126" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class providing an interface to the Vedder VESC motor controller via a serial port interface. </para>
+    </detaileddescription>
+    <location file="include/vesc_driver/vesc_interface.hpp" line="50" column="1" bodyfile="include/vesc_driver/vesc_interface.hpp" bodystart="49" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classvesc__driver_1_1VescInterface_1a58c32a177d5b3216b3c950a795a1e5c6" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>connect</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1aacaef560516f86c9e2ff9ae32f4b2da3" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>disconnect</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a186a64229a31b15bb5afb51bfb4fda8e" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>ErrorHandlerFunction</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1adb5d999fb4068118c75041cf5fb370bb" prot="private" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>impl_</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a094456744af5da57be1e973204816f03" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>isConnected</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1ab33394e4918f148583b8ab9e241c8af2" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>operator=</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1ad172339b822111eb957ec7455fdeda5f" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>PacketHandlerFunction</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a92edbd2848e384e9a807dffbf71887d0" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>requestFWVersion</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a4c1d7ad4d2aefd929dbf58c2ac34d87a" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>requestImuData</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1aba338b9293a3daef0e8cb2974e555021" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>requestState</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1aa2ab0f4a23a699607d31683cb93ca1d2" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>send</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1afa92db66d561be5ff7bfc49748c57e79" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>setBrake</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a4a8d2586c4a30ec9f0cc0a1295726f95" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>setCurrent</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a329849d94103c02738df8a4065ab748f" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>setDutyCycle</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a9fd8e3f6de7db697f05ce93ca1f7a09d" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>setErrorHandler</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a476d955fc6ad896d7bb951eec65ebc11" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>setPacketHandler</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a28d619d7ab146f2ca137a53b96734ce0" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>setPosition</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a487b178a049495d29d4993f84c6995b6" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>setServo</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a5ef452cc56f99c415f75bc037d3e62b4" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>setSpeed</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a20a780d84b412695ae36eb2917a69557" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>VescInterface</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1a1a7d6b9df497f554364592e70bc2221e" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>VescInterface</name></member>
+      <member refid="classvesc__driver_1_1VescInterface_1ad4b0a73949c485117a337144a4eb2f16" prot="public" virt="non-virtual"><scope>vesc_driver::VescInterface</scope><name>~VescInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
