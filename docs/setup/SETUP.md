@@ -1,17 +1,24 @@
 # Setup of the "ubm-f1tenth" environment
 ##  Linux/Mac
-If you're on MacOS you'd have to install tigervnc-viewer through the website, otherwise on Linux you can do:
-```bash
-sudo apt install tigervnc-viewer
+Install Foxglove studio [here](https://foxglove.dev/download) and create an
+account.
 
-```
 To remove the corrupted configs and restore the docker CLI config to default
 Run the following command:
 ```bash
 sudo rm ~/.docker/config.json
 ```
 Now clone the repository and enter its folder.
-Now we're gonna build our docker environment running the following command:
+To obtain the docker image you can pull it from our dockerhub account, first
+login with:
+```bash
+docker login -u ubmdriverless -p <redacted>
+```
+then to pull:
+```bash
+docker pull ubmdriverless/f1tenth:latest
+```
+Alternatively you can build the image yourself with:
 ```bash
 docker build -t f1tenth-ubm-sim -f Dockerfile .
 ```
@@ -27,10 +34,33 @@ In one of these terminals bring up the simulation:
 ```bash
 launch sim.py
 ```
-Now that the simulation is up, you can see it by launching TigerVNC Viewer it will be in your windows apps.
-Connect to the server:
-- **VNC Server:** `localhost:5901`
-- **Password:** `[redacted]`  
+This command will launch the simulator and open a websocket at `ws://localhost:9090`
+
+Now that the simulator is up, you can see it by connecting to
+the websocket at `localhost:9090`.
+Open Foxglove studio, log in and select `Open connection...` on
+the left panel. Then select `Rosbridge` in the popup window and
+make sure that the address is `ws://localhost:9090`, then click
+`Open`.
+
+The main window is the `3D Panel`, here you will see a 3D
+rendering of the data being published by ROS.
+To view the car click on the 3D panel, then on `Panel` in
+the left side-bar, here you can select which topics to view,
+make sure that `Display frame` is set to `map`, then scroll
+down to `Custom layers` and click on the three dots to add
+a `URDF` (this will be the 3D model of the car), in the
+URDF settings select `Topic` as source and `/ego_robot_description`
+in the `Topic` value.
+
+If you are seeing a bunch text and arrows on top of the car, those
+are the car's transforms, you can hide them in the `Transforms`
+section.
+
+Setting the `Color by` value of the `/scan` topic to `range`
+is advised.
+
+For more info on how Foxglove works refer to the [official documentation](https://docs.foxglove.dev/docs).
 
 You will see the car and the track!  
 In another one of the Visual Studio Code terminals start up the control stack:
@@ -84,10 +114,8 @@ Now you can clone the repo:
 ```bash
 git@github.com:ubm-driverless/ubm-f1tenth.git
 ```
-Install a virtual desktop agent:
-```bash
-sudo apt install tigervnc-viewer
-```
+Install Foxglove [here](https://foxglove.dev/download) and create an account.
+
 Do not close the powershell but go back to your Windows desktop, we have Docker Desktop and Visual Studio Code to install:
 https://docs.docker.com/desktop/install/windows-install/   
 https://code.visualstudio.com/download  
@@ -98,10 +126,23 @@ cd ubm-f1tenth/
 code .
 ```
 This is your development enviroment. Cool! Now to install ROS2 in a docker container, use a new terminal within Visual Studio Code. This ensures it is the correct directory and also in WSL. It's perfectly fine to run this in a new terminal if the vs code one is not working. It might be solved by rebooting.
+
+To obtain the docker image you can pull it from our dockerhub account, first
+login with:
+```bash
+docker login -u ubmdriverless -p <redacted>
+```
+then to pull:
+```bash
+docker pull ubmdriverless/f1tenth:latest
+```
+Alternatively you can build the image yourself with:
 ```bash
 docker build -t f1tenth-ubm-sim -f Dockerfile .
 ```
-This will take a long time, around ten minutes. You only have to do it once! Now start the docker container.
+This will take a long time, around 10-30 minutes. You only have to do it once! Now start the docker container.
+
+Now start the docker container.
 ```bash
 docker compose up
 ```
@@ -113,10 +154,33 @@ In one of these terminals bring up the simulation:
 ```bash
 launch sim.py
 ```
-Now that the simulation is up, you can see it by launching TigerVNC Viewer it will be in your windows apps.
-Connect to the server:
-- **VNC Server:** `localhost:5901`
-- **Password:** `[redacted]`  
+This command will launch the simulator and open a websocket at `ws://localhost:9090`
+
+Now that the simulator is up, you can see it by connecting to
+the websocket at `localhost:9090`.
+Open Foxglove studio, log in and select `Open connection...` on
+the left panel. Then select `Rosbridge` in the popup window and
+make sure that the address is `ws://localhost:9090`, then click
+`Open`.
+
+The main window is the `3D Panel`, here you will see a 3D
+rendering of the data being published by ROS.
+To view the car click on the 3D panel, then on `Panel` in
+the left side-bar, here you can select which topics to view,
+make sure that `Display frame` is set to `map`, then scroll
+down to `Custom layers` and click on the three dots to add
+a `URDF` (this will be the 3D model of the car), in the
+URDF settings select `Topic` as source and `/ego_robot_description`
+in the `Topic` value.
+
+If you are seeing a bunch text and arrows on top of the car, those
+are the car's transforms, you can hide them in the `Transforms`
+section.
+
+Setting the `Color by` value of the `/scan` topic to `range`
+is advised.
+
+For more info on how Foxglove works refer to the [official documentation](https://docs.foxglove.dev/docs).
 
 You will see the car and the track!  
 In another one of the Visual Studio Code terminals start up the control stack:
