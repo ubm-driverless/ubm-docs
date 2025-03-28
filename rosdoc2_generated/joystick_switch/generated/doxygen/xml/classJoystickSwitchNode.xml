@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classJoystickSwitchNode" kind="class" language="C++" prot="public">
+    <compoundname>JoystickSwitchNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes local="no">joystick_switch.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classJoystickSwitchNode_1a38b84ea03d01d80ae93b637d9bd4760b" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; sensor_msgs::msg::Joy &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;sensor_msgs::msg::Joy&gt;::SharedPtr JoystickSwitchNode::ego_joy_publisher_</definition>
+        <argsstring></argsstring>
+        <name>ego_joy_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joystick_switch/joystick_switch.hpp" line="40" column="35" bodyfile="include/joystick_switch/joystick_switch.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classJoystickSwitchNode_1ab18b5acb6b9c349e30f46531bbf60305" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; sensor_msgs::msg::Joy &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;sensor_msgs::msg::Joy&gt;::SharedPtr JoystickSwitchNode::opp_joy_publisher_</definition>
+        <argsstring></argsstring>
+        <name>opp_joy_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joystick_switch/joystick_switch.hpp" line="41" column="35" bodyfile="include/joystick_switch/joystick_switch.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classJoystickSwitchNode_1ad4a991913f08671f826f6a6b279d3771" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; sensor_msgs::msg::Joy &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;sensor_msgs::msg::Joy&gt;::SharedPtr JoystickSwitchNode::joy_subscription_</definition>
+        <argsstring></argsstring>
+        <name>joy_subscription_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joystick_switch/joystick_switch.hpp" line="44" column="38" bodyfile="include/joystick_switch/joystick_switch.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classJoystickSwitchNode_1ad819f445e79a40aeb40d8c29fd57f9d3" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string JoystickSwitchNode::current_topic</definition>
+        <argsstring></argsstring>
+        <name>current_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>topic where the node is currently sending commands (which car is controlling) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joystick_switch/joystick_switch.hpp" line="47" column="17" bodyfile="include/joystick_switch/joystick_switch.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classJoystickSwitchNode_1a0839c3d1757f9de81b3b6e40fe3a7e90" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JoystickSwitchNode::button_state</definition>
+        <argsstring></argsstring>
+        <name>button_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>press/release button state </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joystick_switch/joystick_switch.hpp" line="48" column="10" bodyfile="include/joystick_switch/joystick_switch.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classJoystickSwitchNode_1aa26cd575ad2a5ad06f15cda64ad9b119" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int JoystickSwitchNode::R1</definition>
+        <argsstring></argsstring>
+        <name>R1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>R1 button index in the msg-&gt;buttons array </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joystick_switch/joystick_switch.hpp" line="49" column="9" bodyfile="include/joystick_switch/joystick_switch.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classJoystickSwitchNode_1a232c4808fa4cf0fe420609abdf67fc9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JoystickSwitchNode::JoystickSwitchNode</definition>
+        <argsstring>()</argsstring>
+        <name>JoystickSwitchNode</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classJoystickSwitchNode" kindref="compound">JoystickSwitchNode</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joystick_switch/joystick_switch.hpp" line="29" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classJoystickSwitchNode_1a8901a4d7e0003b9bf1ae7584eceb7aaa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void JoystickSwitchNode::joy_callback</definition>
+        <argsstring>(const sensor_msgs::msg::Joy::SharedPtr msg)</argsstring>
+        <name>joy_callback</name>
+        <param>
+          <type>const sensor_msgs::msg::Joy::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback function to process joystick input and toggle control topics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A shared pointer to the incoming joystick message (<computeroutput>sensor_msgs::msg::Joy</computeroutput>). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joystick_switch/joystick_switch.hpp" line="37" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A ROS2 node that toggles joystick control between two topics based on a button press. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This node subscribes to joystick input and publishes the commands to either the &quot;ego_joy&quot; or &quot;opp_joy&quot; topic, switching dynamically based on user interaction. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+      <node id="1">
+        <label>JoystickSwitchNode</label>
+        <link refid="classJoystickSwitchNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+      <node id="1">
+        <label>JoystickSwitchNode</label>
+        <link refid="classJoystickSwitchNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/joystick_switch/joystick_switch.hpp" line="24" column="1" bodyfile="include/joystick_switch/joystick_switch.hpp" bodystart="23" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classJoystickSwitchNode_1a0839c3d1757f9de81b3b6e40fe3a7e90" prot="private" virt="non-virtual"><scope>JoystickSwitchNode</scope><name>button_state</name></member>
+      <member refid="classJoystickSwitchNode_1ad819f445e79a40aeb40d8c29fd57f9d3" prot="private" virt="non-virtual"><scope>JoystickSwitchNode</scope><name>current_topic</name></member>
+      <member refid="classJoystickSwitchNode_1a38b84ea03d01d80ae93b637d9bd4760b" prot="private" virt="non-virtual"><scope>JoystickSwitchNode</scope><name>ego_joy_publisher_</name></member>
+      <member refid="classJoystickSwitchNode_1a8901a4d7e0003b9bf1ae7584eceb7aaa" prot="private" virt="non-virtual"><scope>JoystickSwitchNode</scope><name>joy_callback</name></member>
+      <member refid="classJoystickSwitchNode_1ad4a991913f08671f826f6a6b279d3771" prot="private" virt="non-virtual"><scope>JoystickSwitchNode</scope><name>joy_subscription_</name></member>
+      <member refid="classJoystickSwitchNode_1a232c4808fa4cf0fe420609abdf67fc9b" prot="public" virt="non-virtual"><scope>JoystickSwitchNode</scope><name>JoystickSwitchNode</name></member>
+      <member refid="classJoystickSwitchNode_1ab18b5acb6b9c349e30f46531bbf60305" prot="private" virt="non-virtual"><scope>JoystickSwitchNode</scope><name>opp_joy_publisher_</name></member>
+      <member refid="classJoystickSwitchNode_1aa26cd575ad2a5ad06f15cda64ad9b119" prot="private" virt="non-virtual"><scope>JoystickSwitchNode</scope><name>R1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

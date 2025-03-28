@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="disparity__extender__node_8hpp" kind="file" language="C++">
+    <compoundname>disparity_extender_node.hpp</compoundname>
+    <includes refid="disparity__extender_8hpp" local="yes">disparity_extender.hpp</includes>
+    <includes refid="simple__speed_8hpp" local="yes">simple_speed.hpp</includes>
+    <includes refid="utils_8hpp" local="yes">utils.hpp</includes>
+    <includes local="no">ackermann_msgs/msg/ackermann_drive_stamped.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">geometry_msgs/msg/point.hpp</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">nav_msgs/msg/odometry.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">sensor_msgs/msg/laser_scan.hpp</includes>
+    <includes local="no">std_msgs/msg/bool.hpp</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">string</includes>
+    <includes local="no">tf2/utils.h</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">visualization_msgs/msg/marker.hpp</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>ackermann_msgs/msg/ackermann_drive_stamped.hpp</label>
+      </node>
+      <node id="14">
+        <label>limits</label>
+      </node>
+      <node id="15">
+        <label>nav_msgs/msg/odometry.hpp</label>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="11">
+        <label>simple_speed.hpp</label>
+        <link refid="simple__speed_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>numeric</label>
+      </node>
+      <node id="19">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="20">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="16">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="3">
+        <label>utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>disparity_extender.hpp</label>
+        <link refid="disparity__extender_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>std_msgs/msg/bool.hpp</label>
+      </node>
+      <node id="13">
+        <label>geometry_msgs/msg/point.hpp</label>
+      </node>
+      <node id="8">
+        <label>tuple</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>utility</label>
+      </node>
+      <node id="17">
+        <label>sensor_msgs/msg/laser_scan.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/disparity_extender_node.hpp</label>
+        <link refid="disparity__extender__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classDisparityExtenderNode" prot="public">DisparityExtenderNode</innerclass>
+    <briefdescription>
+<para>This file contains the declaration of the <ref refid="classDisparityExtenderNode" kindref="compound">DisparityExtenderNode</ref> class, which is a ROS2 node responsible for processing laser scan data to extend disparities. The node subscribes to laser scan, odometry, and status messages, and publishes drive commands and visualization markers. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The algorithm is based on the article &quot;The &quot;Disparity Extender&quot; Algorithm, and F1/Tenth&quot; available at <ulink url="https://www.nathanotterness.com/2019/04/the-disparity-extender-algorithm-and.html">https://www.nathanotterness.com/2019/04/the-disparity-extender-algorithm-and.html</ulink>. </para>
+    </detaileddescription>
+    <location file="include/disparity_extender_node.hpp"/>
+  </compounddef>
+</doxygen>

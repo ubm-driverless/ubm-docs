@@ -1,0 +1,891 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="potential__field_8hpp" kind="file" language="C++">
+    <compoundname>potential_field.hpp</compoundname>
+    <includes refid="utils_8hpp" local="yes">utils.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="potential__field__node_8hpp" local="yes">include/potential_field_node.hpp</includedby>
+    <includedby refid="potential__pursuit__node_8hpp" local="yes">include/potential_pursuit_node.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>numeric</label>
+      </node>
+      <node id="2">
+        <label>utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>tuple</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="1">
+        <label>include/potential_field.hpp</label>
+        <link refid="potential__field_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/potential_field_node.hpp</label>
+        <link refid="potential__field__node_8hpp"/>
+      </node>
+      <node id="3">
+        <label>include/potential_pursuit_node.hpp</label>
+        <link refid="potential__pursuit__node_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/potential_field.hpp</label>
+        <link refid="potential__field_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classObstacle" prot="public">Obstacle</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="potential__field_8hpp_1a71f0c0cfaeac67efc260987375b06050" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reduce_lidar_fov</definition>
+        <argsstring>(std::vector&lt; float &gt; &amp;ranges, int ranges_to_remove)</argsstring>
+        <name>reduce_lidar_fov</name>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>ranges</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ranges_to_remove</declname>
+        </param>
+        <briefdescription>
+<para>Preprocesses LiDAR data by removing a specified number of range values from the beginning and end of the vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a vector of float values representing LiDAR range data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ranges_to_remove</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of range values to remove from both the beginning and end of the vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="41" column="6" declfile="include/potential_field.hpp" declline="41" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="potential__field_8hpp_1a2d4be497bdcc23caa0ab2fd575915ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classObstacle" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/detector_cpp/detector_cpp.tag">Obstacle</ref> &gt;</type>
+        <definition>std::vector&lt;Obstacle&gt; find_obstacles</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;ranges, float obstacle_threshold_gain, float hysteresis, float inverse_res, float car_width)</argsstring>
+        <name>find_obstacles</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>ranges</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>obstacle_threshold_gain</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hysteresis</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>inverse_res</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>car_width</declname>
+        </param>
+        <briefdescription>
+<para>Identifies and returns a list of obstacles based on range data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function processes a vector of range data to detect obstacles. It uses a threshold to determine the presence of obstacles and applies hysteresis to avoid noise. The function can use either a fixed threshold or a dynamically calculated threshold based on the mean of the range data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of float values representing the range data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle_threshold_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gain factor for dynamic threshold calculation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hysteresis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hysteresis value to avoid noise in obstacle detection. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inverse_res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inverse of the proportionality constant for obstacle width calculation [1/deg]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of the car for obstacle width calculation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;Obstacle&gt; A vector of detected obstacles. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="59" column="13" declfile="include/potential_field.hpp" declline="59" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="potential__field_8hpp_1aabda3256be7b08b8e746b28d18cdd374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void calculate_obstacle_parameters</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;ranges, Obstacle &amp;obstacle, float inverse_res, float car_width)</argsstring>
+        <name>calculate_obstacle_parameters</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>ranges</declname>
+        </param>
+        <param>
+          <type><ref refid="classObstacle" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/detector_cpp/detector_cpp.tag">Obstacle</ref> &amp;</type>
+          <declname>obstacle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>inverse_res</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>car_width</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the parameters of an obstacle based on range data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function computes various parameters of an obstacle detected by find_obstacles function. These parameters include the angular width, central angular position, average distance, Gaussian spread parameter (sigma), adjusted distance (distance_tilda), and amplitude coefficient (coeff_a).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of float values representing the range data from the sensor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to an <ref refid="classObstacle" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/detector_cpp/detector_cpp.tag">Obstacle</ref> object where the calculated parameters will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inverse_res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A float value representing the inverse of the sensor&apos;s angular resolution [1/deg]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A float value representing the width of the car. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="77" column="6" declfile="include/potential_field.hpp" declline="77" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="potential__field_8hpp_1a803813ac89e8048584b04e919455f5df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; compute_obstacle_potential</definition>
+        <argsstring>(const std::vector&lt; Obstacle &gt; &amp;obstacles_list, int field_size, float field_resolution)</argsstring>
+        <name>compute_obstacle_potential</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="classObstacle" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/detector_cpp/detector_cpp.tag">Obstacle</ref> &gt; &amp;</type>
+          <declname>obstacles_list</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>field_size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>field_resolution</declname>
+        </param>
+        <briefdescription>
+<para>Computes the potential field generated by a list of obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates the potential field for a given list of obstacles. Each obstacle contributes to the potential field using a Gaussian distribution. The resulting potential field is normalized to have a maximum value of 1.0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obstacles_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of <ref refid="classObstacle" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/detector_cpp/detector_cpp.tag">Obstacle</ref> objects representing the obstacles. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>field_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the potential field (number of discrete angles). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>field_resolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resolution of the field in degrees per index. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of floats representing the computed potential field. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="94" column="13" declfile="include/potential_field.hpp" declline="94" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="potential__field_8hpp_1a60300b3e5373b56171efdb41435d35ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int max_index</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;ranges, float inverse_res, float field_resolution)</argsstring>
+        <name>max_index</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>ranges</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>inverse_res</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>field_resolution</declname>
+        </param>
+        <briefdescription>
+<para>Finds the index of the maximum value in a vector of ranges and scales it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function iterates through a vector of float values (ranges) to find the index of the maximum value. It then scales this index to find the corresponding inside the field.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of float values representing the ranges. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inverse_res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A float value representig the inverse of the ranges resolution [1/deg]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>field_resolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A float value representing the resolution of the field. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The scaled index of the maximum value in the ranges vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="109" column="5" declfile="include/potential_field.hpp" declline="109" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="potential__field_8hpp_1aad9c06f14481d9674434dfba4c96df16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void compute_attractive_potential</definition>
+        <argsstring>(std::vector&lt; float &gt; &amp;repulsive_field, int attractive_index, float attractive_power)</argsstring>
+        <name>compute_attractive_potential</name>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>repulsive_field</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>attractive_index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>attractive_power</declname>
+        </param>
+        <briefdescription>
+<para>Computes and adds the attractive potential to the repulsive field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function modifies the given repulsive field by adding an attractive potential to each element. The attractive potential is computed as a linear function of the distance to the attractive index.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>repulsive_field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a vector of floats representing the repulsive field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attractive_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer representing the index of the attractive point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attractive_power</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A float representing the strength of the attractive potential. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="124" column="6" declfile="include/potential_field.hpp" declline="124" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="potential__field_8hpp_1a3bfec49a1ed55be5be4a39ad99afea84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::pair&lt; unsigned short int, float &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;unsigned short int, float&gt; &gt; find_local_minima</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;vec, bool include_global_minima)</argsstring>
+        <name>find_local_minima</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>include_global_minima</declname>
+        </param>
+        <briefdescription>
+<para>Finds the local minima in a given vector of floats. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function iterates through the input vector and identifies the local minima, which are elements that are smaller than their immediate neighbors. Optionally, it can also include the global minimum in the result.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector of floats to search for local minima. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>include_global_minima</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean flag indicating whether to include the global minimum in the result. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of pairs, where each pair contains the index and value of a local minimum. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="139" column="13" declfile="include/potential_field.hpp" declline="139" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="potential__field_8hpp_1a977a357ef5623917ae2dbb7d71c540a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short int</type>
+        <definition>unsigned short int compute_choosen_index</definition>
+        <argsstring>(unsigned short int attractive_index, const std::vector&lt; std::pair&lt; unsigned short int, float &gt;&gt; &amp;local_minima, bool use_minima_near_attractive)</argsstring>
+        <name>compute_choosen_index</name>
+        <param>
+          <type>unsigned short int</type>
+          <declname>attractive_index</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; unsigned short int, float &gt;&gt; &amp;</type>
+          <declname>local_minima</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>use_minima_near_attractive</declname>
+        </param>
+        <briefdescription>
+<para>Computes the chosen index based on the attractive index and local minima. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function selects an index based on the given attractive index and a list of local minima. It can either choose the closest local minima to the attractive index or the global minimum based on the user&apos;s preference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attractive_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index that is considered attractive. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_minima</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of pairs where each pair consists of an index and its corresponding value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>use_minima_near_attractive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean flag indicating whether to use the closest local minima to the attractive index. If true, the closest local minima to the attractive index is chosen. If false, the global minimum is chosen. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The chosen index based on the given criteria. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="156" column="20" declfile="include/potential_field.hpp" declline="156" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="potential__field_8hpp_1a8b22fce713a12c10d65d6e211afd221f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float potential_field_steering</definition>
+        <argsstring>(std::vector&lt; float &gt; ranges, float angle_increment, float desired_fov, float field_resolution, float obstacle_threshold_gain, float hysteresis, float attractive_power, float car_width, float max_steering_angle, float steering_gain, bool include_global_minima, bool use_minima_near_attractive)</argsstring>
+        <name>potential_field_steering</name>
+        <param>
+          <type>std::vector&lt; float &gt;</type>
+          <declname>ranges</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>desired_fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>field_resolution</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>obstacle_threshold_gain</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hysteresis</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>attractive_power</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>car_width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_steering_angle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>steering_gain</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>include_global_minima</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>use_minima_near_attractive</declname>
+        </param>
+        <briefdescription>
+<para>Computes the steering angle using a potential field method based on LIDAR data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a vector of float values representing LIDAR range measurements. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angular resolution of the LIDAR in radians [rad]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desired_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle in degrees of the wanted LIDAR field of view [deg]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>field_resolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resolution of the potential field in degrees. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle_threshold_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gain factor for the obstacle detection threshold. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hysteresis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hysteresis value for obstacle detection. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attractive_power</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The power of the attractive potential field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the car in meters. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum allowable steering angle in radians. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>steering_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gain factor for the steering angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>include_global_minima</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean flag to include global minima in the potential field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>use_minima_near_attractive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean flag to use minima near the attractive potential. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The computed steering angle in radians. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="177" column="7" declfile="include/potential_field.hpp" declline="177" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="potential__field_8hpp_1aac3f04ff98d2a27e8e515906313fed04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float potential_pursuit_steering</definition>
+        <argsstring>(std::vector&lt; float &gt; ranges, float angle_increment, float desired_fov, float field_resolution, float obstacle_threshold_gain, float hysteresis, float attractive_power, float car_width, float max_steering_angle, float steering_gain, float max_distance_weight, float steering_error, bool include_global_minima, bool use_minima_near_attractive)</argsstring>
+        <name>potential_pursuit_steering</name>
+        <param>
+          <type>std::vector&lt; float &gt;</type>
+          <declname>ranges</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>desired_fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>field_resolution</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>obstacle_threshold_gain</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hysteresis</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>attractive_power</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>car_width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_steering_angle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>steering_gain</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_distance_weight</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>steering_error</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>include_global_minima</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>use_minima_near_attractive</declname>
+        </param>
+        <briefdescription>
+<para>Computes the steering angle using a potential field method based on LIDAR data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a vector of float values representing LIDAR range measurements. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angular resolution of the LIDAR in radians [rad]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desired_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle in degrees of the wanted LIDAR field of view [deg]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>field_resolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resolution of the potential field in degrees. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obstacle_threshold_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gain factor for the obstacle detection threshold. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hysteresis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hysteresis value for obstacle detection. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attractive_power</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The power of the attractive potential field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the car in meters. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum allowable steering angle in radians. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>steering_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gain factor for the steering angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_distance_weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum weight for the distance in the potential field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>steering_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error in the steering angle computation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>include_global_minima</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean flag to include global minima in the potential field. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>use_minima_near_attractive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean flag to use minima near the attractive potential. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The computed steering angle in radians. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="209" column="7" declfile="include/potential_field.hpp" declline="209" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for potential field-based reactive algorithm. The algorithm is based on the article: &quot;A Real-Time Obstacle Avoidance Method for Autonomous Vehicles Using an Obstacle-Dependent Gaussian Potential Field&quot; <ulink url="https://doi.org/10.1155/2018/5041401">https://doi.org/10.1155/2018/5041401</ulink>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/potential_field.hpp"/>
+  </compounddef>
+</doxygen>

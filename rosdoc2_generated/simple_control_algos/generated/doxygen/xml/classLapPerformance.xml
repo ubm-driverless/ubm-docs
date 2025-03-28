@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classLapPerformance" kind="class" language="C++" prot="public">
+    <compoundname>LapPerformance</compoundname>
+    <includes local="no">lap_performance.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLapPerformance_1a1f38df3d53fa68ae8665ab8b1f64f12c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LapPerformance::begin_lap</definition>
+        <argsstring></argsstring>
+        <name>begin_lap</name>
+        <briefdescription>
+<para>Flag to indicate the start of a lap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="65" column="10" bodyfile="include/lap_performance.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLapPerformance_1af4d40c5c17d904e2b1d0ff8bc964cebb" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LapPerformance::check_zone</definition>
+        <argsstring></argsstring>
+        <name>check_zone</name>
+        <briefdescription>
+<para>Flag to indicate that the car passed the check zone. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="66" column="10" bodyfile="include/lap_performance.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLapPerformance_1a037278ef41fd64baeeed68ea254e95f4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LapPerformance::max_laps_memory</definition>
+        <argsstring></argsstring>
+        <name>max_laps_memory</name>
+        <briefdescription>
+<para>Maximum number of laps to measure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="67" column="9" bodyfile="include/lap_performance.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLapPerformance_1a39a30ca6bf3c251939924a4052992809" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LapPerformance::lap_num_points</definition>
+        <argsstring></argsstring>
+        <name>lap_num_points</name>
+        <briefdescription>
+<para>Number of points in the lap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="68" column="9" bodyfile="include/lap_performance.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLapPerformance_1a2afab8f322d61eb16c386b623acbfaf8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LapPerformance::lap_count</definition>
+        <argsstring></argsstring>
+        <name>lap_count</name>
+        <briefdescription>
+<para>Number of laps completed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="69" column="9" bodyfile="include/lap_performance.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLapPerformance_1a8b712dfcd7ca6081256c551b45ff8795" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LapPerformance::new_lap_end_idx</definition>
+        <argsstring></argsstring>
+        <name>new_lap_end_idx</name>
+        <briefdescription>
+<para>Last useful index to define a new lap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="70" column="9" bodyfile="include/lap_performance.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLapPerformance_1a0631abca3029d0aceb345f5b7e873e45" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LapPerformance::check_zone_start</definition>
+        <argsstring></argsstring>
+        <name>check_zone_start</name>
+        <briefdescription>
+<para>Starting index for the checking zone. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="71" column="9" bodyfile="include/lap_performance.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLapPerformance_1a31c200382968042e666ebcdb0020a6d1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LapPerformance::check_zone_end</definition>
+        <argsstring></argsstring>
+        <name>check_zone_end</name>
+        <briefdescription>
+<para>Ending index for the checking zone. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="72" column="9" bodyfile="include/lap_performance.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLapPerformance_1a050bce2cdf6d4798b98e0709e5829f2f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; LapPerformance::lap_times</definition>
+        <argsstring></argsstring>
+        <name>lap_times</name>
+        <briefdescription>
+<para>Vector to store lap times. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="73" column="17" bodyfile="include/lap_performance.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLapPerformance_1a14313a48e42adc8bf9fdf85a2ec87bf0" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point LapPerformance::last_time</definition>
+        <argsstring></argsstring>
+        <name>last_time</name>
+        <briefdescription>
+<para>Last recorded time for PD controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="74" column="52" bodyfile="include/lap_performance.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLapPerformance_1acb41c297c34bd43bef5f076644ec32c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LapPerformance::LapPerformance</definition>
+        <argsstring>()</argsstring>
+        <name>LapPerformance</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classLapPerformance" kindref="compound">LapPerformance</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classLapPerformance_1a7077e41333b0450c5e9f674a0ffee4c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LapPerformance::initialize</definition>
+        <argsstring>(int num_points, int max_laps, float starting_strip)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>int</type>
+          <declname>num_points</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_laps</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>starting_strip</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the <ref refid="classLapPerformance" kindref="compound">LapPerformance</ref> object with the number of points in the lap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num_points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of points in the lap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_laps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of laps to measure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="45" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classLapPerformance_1a7d57b41056c5863027f6bf6641b9930c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LapPerformance::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Resets the <ref refid="classLapPerformance" kindref="compound">LapPerformance</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="50" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classLapPerformance_1a10d44db0f7df96a35f53ddde0a37837e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structLapPerformanceData" kindref="compound">LapPerformanceData</ref></type>
+        <definition>LapPerformanceData LapPerformance::update</definition>
+        <argsstring>(int index)</argsstring>
+        <name>update</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Updates the <ref refid="classLapPerformance" kindref="compound">LapPerformance</ref> object with the current index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current index in the lap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="56" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classLapPerformance_1aa3c1ae8321b4971ed0b4efb5747c7ab4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float, float &gt;</type>
+        <definition>std::tuple&lt;float, float, float&gt; LapPerformance::statistics_update</definition>
+        <argsstring>()</argsstring>
+        <name>statistics_update</name>
+        <briefdescription>
+<para>Updates the statistics for the lap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lap_performance.hpp" line="63" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class to measure lap performance. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/lap_performance.hpp" line="32" column="21" bodyfile="include/lap_performance.hpp" bodystart="32" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classLapPerformance_1a1f38df3d53fa68ae8665ab8b1f64f12c" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>begin_lap</name></member>
+      <member refid="classLapPerformance_1af4d40c5c17d904e2b1d0ff8bc964cebb" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>check_zone</name></member>
+      <member refid="classLapPerformance_1a31c200382968042e666ebcdb0020a6d1" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>check_zone_end</name></member>
+      <member refid="classLapPerformance_1a0631abca3029d0aceb345f5b7e873e45" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>check_zone_start</name></member>
+      <member refid="classLapPerformance_1a7077e41333b0450c5e9f674a0ffee4c9" prot="public" virt="non-virtual"><scope>LapPerformance</scope><name>initialize</name></member>
+      <member refid="classLapPerformance_1a2afab8f322d61eb16c386b623acbfaf8" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>lap_count</name></member>
+      <member refid="classLapPerformance_1a39a30ca6bf3c251939924a4052992809" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>lap_num_points</name></member>
+      <member refid="classLapPerformance_1a050bce2cdf6d4798b98e0709e5829f2f" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>lap_times</name></member>
+      <member refid="classLapPerformance_1acb41c297c34bd43bef5f076644ec32c8" prot="public" virt="non-virtual"><scope>LapPerformance</scope><name>LapPerformance</name></member>
+      <member refid="classLapPerformance_1a14313a48e42adc8bf9fdf85a2ec87bf0" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>last_time</name></member>
+      <member refid="classLapPerformance_1a037278ef41fd64baeeed68ea254e95f4" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>max_laps_memory</name></member>
+      <member refid="classLapPerformance_1a8b712dfcd7ca6081256c551b45ff8795" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>new_lap_end_idx</name></member>
+      <member refid="classLapPerformance_1a7d57b41056c5863027f6bf6641b9930c" prot="public" virt="non-virtual"><scope>LapPerformance</scope><name>reset</name></member>
+      <member refid="classLapPerformance_1aa3c1ae8321b4971ed0b4efb5747c7ab4" prot="private" virt="non-virtual"><scope>LapPerformance</scope><name>statistics_update</name></member>
+      <member refid="classLapPerformance_1a10d44db0f7df96a35f53ddde0a37837e" prot="public" virt="non-virtual"><scope>LapPerformance</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
