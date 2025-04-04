@@ -4,7 +4,6 @@ In this step by step tutorial I will inlustrate you how to setup all our working
 ## Hardware List
 - Jetson Xavier NX Developer Kit
 - SD card > 6 GB
-- [TO COMPLETE]
 ## Download Card Image
 1. Go to [the official NVIDIA download page](https://developer.nvidia.com/downloads)
 ![Alt text](./assets/from_0_to_working_car/001_nvidia_download_page.png "Nvidia Download Page")
@@ -14,10 +13,10 @@ In this step by step tutorial I will inlustrate you how to setup all our working
 ```Jetson Xavier NX Developer Kit SD Card Image```
 ![Alt text](./assets/from_0_to_working_car/003_jetson_nx_xavier_sd_images.png "Nvidia Jetson NX Xavier SD Images")
 4. Download the last version
-## Flesh the Image on the SD
-1. Completely format the sd card. Remove any previuosly present partiotion.
+## Flash the Image on the SD
+1. Completely format the sd card. Remove any previuosly present partition.
 ![Alt text](./assets/from_0_to_working_car/004_previously_partitions.png "Delete Previously Partitions")
-2. From [the official Balena Etcher website]() download it
+2. From [the official Balena Etcher website](https://etcher.balena.io/) download it.
 ![Alt text](./assets/from_0_to_working_car/005_download_balena_etcher.png "Balena Etcher Home Page")
 3. Run *Balena Etcher* on Linux:
 	- Unzip the downloaded file
@@ -30,8 +29,9 @@ In this step by step tutorial I will inlustrate you how to setup all our working
 	- Monitor
 	- Keyboard
 	- Mouse
-	![Alt text](./assets/from_0_to_working_car/006_jetson_with_hdmi_mouse_keyboard_attached.jpg "Screen Mouse and Keyboard Attached to the Jetson")
-2. Insert the SD card inside the Jetson
+
+![Alt text](./assets/from_0_to_working_car/006_jetson_with_hdmi_mouse_keyboard_attached.jpg "Screen Mouse and Keyboard Attached to the Jetson")
+2. Insert the SD card inside the Jetson.
 ![Alt text](./assets/from_0_to_working_car/007_sd_slot_on_jetson.jpg "Jetson SD Slot")
 3. Power on the Jetson with a *[9; 20] V* input. A green led will turn on.
 ![Alt text](./assets/from_0_to_working_car/011_jetson_on_led.jpg "Jetson turn On with a Green Led")
@@ -45,17 +45,18 @@ In this step by step tutorial I will inlustrate you how to setup all our working
 5. Add a user:
 	- username: ```ubm```
 	- computer_name: ```ubm-<name_of_the_car>```
-	- password: ```ubm12345```
+	- password: The usual one
 	- Automatic Log in setted On
-	![Alt text](./assets/from_0_to_working_car/009_ubm_account_creation.jpg "UBM User")
+
+![Alt text](./assets/from_0_to_working_car/009_ubm_account_creation.jpg "UBM User")
 6. The Jetson is ready:
 ![Alt text](./assets/from_0_to_working_car/012_jetson_is_ready.jpg "The Jetson is Ready")
 ## Let's format the SSD
-1. Search for Disk App
+1. Search for Disk App.
 ![Alt text](./assets/from_0_to_working_car/013_disk_app.png "Let's Search For The Disk App")
-2. Select the 500GB SSD and from th top right corner three dots select format
+2. Select the 500GB SSD and from th top right corner three dots select format.
 ![Alt text](./assets/from_0_to_working_car/014_format_ssd500gb.png "Let's Select the 500GB SSD")
-3. Format it leaving averything as default
+3. Format it leaving averything as default.
 ![Alt text](./assets/from_0_to_working_car/015_format_options.png "Format Options")
 ## Let's move the root to the SSD
 1. Open a Terminal
@@ -92,7 +93,7 @@ In this step by step tutorial I will inlustrate you how to setup all our working
 6. ```sudo reboot now```
 7. Check that inside */dev/sensors* there is *vesc*
 
-## Let's Install ROS2 FOxy
+## Let's Install ROS2 foxy
 
 1. ```sudo locale-gen en_US en_US.UTF-8```
 2. ```sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8```
@@ -151,10 +152,11 @@ updated cache in /home/ubm/.ros/rosdep/sources.cache
 ## Let's Create and Set-Up our Workspace
 1. ```cd $HOME```
 2. ```rm -rf Music Pictures Public Templates Videos Documents```
-3. ```mkdir Software```
-4. ```mkdir -p f1tenth_ws/src```
-5. ```cd f1tenth_ws```
-6. ``` colcon build```
+3. ```sudo usermod -aG input ubm```
+4. ```mkdir Software```
+5. ```mkdir -p f1tenth_ws/src```
+6. ```cd f1tenth_ws```
+7. ``` colcon build```
 ```
 ubm@ubm-bilbo:~/f1tenth_ws$ colcon build
                      
@@ -188,17 +190,14 @@ The key's randomart image is:
 ```
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDN7+Bvuoxp3m94JyjrbjC4HytEGS2a4Jpb3GAvC5NG+8lfm9mrLDdzY/dxlV1mpm56WNK/TLJOwCOcN/fg3PWWbqsrY+sosUtD8auAQs66QiooLDeN2fOoU6oDCLvLpLO6ozIG/ZgeG18nTqcNZR66LQJW3/gsk8w9nkSnii0/dsyF7K5X33/x8R7HecAnT6H2fI10avOH9FkF39g+7L0Ycr2Q7r22LQ/2CSazYLqSb762oExGJ/YdhYxFYmgzQ5Jb54GDdYoghv54zYGEb5ubeVuFnkAtLeGPzANdX0r8rwsn2aZEMNz01E3gr8GCccVa0xApIYUUAGD3QHuw0JALu3o0aRE3CHiFRCJb6hx23qAf872oWKHay/HdwPqw/maVNa2bdYxW70G7jsAvH3hbh0dG73Nro+WQdF38VoxUYYZ1+yTf1QetQSZ/3o/5X+7lCdbfoDygYJcVAuEm2RvTgmK0Epcyq1psEgNd0wsQzKXCeKOnoCk7V1qpWeJ1IyM= ubm@ubm-bilbo
 ```
-7. Copy the output on the *SSH and GPG keys* of the github *ubm-device* account
-	GitHub Login:
-	- username: driverless@motorsport.unibo.it
-	- password: gE#3F8%Z$3^d%3de
+7. Copy the output on the *SSH and GPG keys* of the github *ubm-device* account. Ask for the credentials.
 8. ```cd ~/```
-6. git clone git@github.com:ubm-driverless/ubm-f1tenth.git repo
+6. ```git clone git@github.com:ubm-driverless/ubm-f1tenth.git repo```
 7. ```cat ~/repo/updated_bashrc.bash >> ~/.bashrc```
-## Let's  Build f1tenth_system
+## Let's Build f1tenth_system
 1. ```ln -s /home/ubm/repo/f1tenth_system/ /home/ubm/f1tenth_ws/src/```
 2. ```cd /home/ubm/f1tenth_ws/src/```
-3. ```git clone https://github.com/f1tenth/ackermann_mux.git"
+3. ```git clone https://github.com/f1tenth/ackermann_mux.git```
 4. ```cd /home/ubm/f1tenth_ws```
 5. ```rosdep update --rosdistro="foxy"```
 6. ```rosdep install --from-paths src -i -y```
