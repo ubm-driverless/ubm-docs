@@ -6,18 +6,18 @@ In this step by step tutorial I will inlustrate you how to setup all our working
 - SD card > 6 GB
 ## Download Card Image
 1. Go to [the official NVIDIA download page](https://developer.nvidia.com/downloads)
-![Alt text](./assets/from_0_to_working_car/001_nvidia_download_page.png "Nvidia Download Page")
+![](site:/assets/setup_car_from_scratch/001_nvidia_download_page.png "Nvidia Download Page")
 2. Click On *Jetson*
-![Alt text](./assets/from_0_to_working_car/002_jetson_download_center.png "Nvidia Jetson Download Page")
+![](site:/assets/setup_car_from_scratch/002_jetson_download_center.png "Nvidia Jetson Download Page")
 3. Inside *Filter...* search for:
 ```Jetson Xavier NX Developer Kit SD Card Image```
-![Alt text](./assets/from_0_to_working_car/003_jetson_nx_xavier_sd_images.png "Nvidia Jetson NX Xavier SD Images")
+![](site:/assets/setup_car_from_scratch/003_jetson_nx_xavier_sd_images.png "Nvidia Jetson NX Xavier SD Images")
 4. Download the last version
 ## Flash the Image on the SD
 1. Completely format the sd card. Remove any previuosly present partition.
-![Alt text](./assets/from_0_to_working_car/004_previously_partitions.png "Delete Previously Partitions")
+![](site:/assets/setup_car_from_scratch/004_previously_partitions.png "Delete Previously Partitions")
 2. From [the official Balena Etcher website](https://etcher.balena.io/) download it.
-![Alt text](./assets/from_0_to_working_car/005_download_balena_etcher.png "Balena Etcher Home Page")
+![](site:/assets/setup_car_from_scratch/005_download_balena_etcher.png "Balena Etcher Home Page")
 3. Run *Balena Etcher* on Linux:
 	- Unzip the downloaded file
 	- Go inside:
@@ -30,13 +30,13 @@ In this step by step tutorial I will inlustrate you how to setup all our working
 	- Keyboard
 	- Mouse
 
-![Alt text](./assets/from_0_to_working_car/006_jetson_with_hdmi_mouse_keyboard_attached.jpg "Screen Mouse and Keyboard Attached to the Jetson")
+![](site:/assets/setup_car_from_scratch/006_jetson_with_hdmi_mouse_keyboard_attached.jpg "Screen Mouse and Keyboard Attached to the Jetson")
 2. Insert the SD card inside the Jetson.
-![Alt text](./assets/from_0_to_working_car/007_sd_slot_on_jetson.jpg "Jetson SD Slot")
+![](site:/assets/setup_car_from_scratch/007_sd_slot_on_jetson.jpg "Jetson SD Slot")
 3. Power on the Jetson with a *[9; 20] V* input. A green led will turn on.
-![Alt text](./assets/from_0_to_working_car/011_jetson_on_led.jpg "Jetson turn On with a Green Led")
+![](site:/assets/setup_car_from_scratch/011_jetson_on_led.jpg "Jetson turn On with a Green Led")
 4. The jetson should automatically select SD as boot device, if not you can force it with F11 while starting. Anyway if not probably something wrong while flashing the SD. After the first boot you will end up with:
-![Alt text](./assets/from_0_to_working_car/008_first_startup.jpg "First Boot")
+![](site:/assets/setup_car_from_scratch/008_first_startup.jpg "First Boot")
 ## Let's Set-Up The Jetson
 1. Accept all the licenses
 2. Put English as first Language
@@ -48,25 +48,25 @@ In this step by step tutorial I will inlustrate you how to setup all our working
 	- password: The usual one
 	- Automatic Log in setted On
 
-![Alt text](./assets/from_0_to_working_car/009_ubm_account_creation.jpg "UBM User")
+![](site:/assets/setup_car_from_scratch/009_ubm_account_creation.jpg "UBM User")
 6. The Jetson is ready:
-![Alt text](./assets/from_0_to_working_car/012_jetson_is_ready.jpg "The Jetson is Ready")
+![](site:/assets/setup_car_from_scratch/012_jetson_is_ready.jpg "The Jetson is Ready")
 ## Let's format the SSD
 1. Search for Disk App.
-![Alt text](./assets/from_0_to_working_car/013_disk_app.png "Let's Search For The Disk App")
+![](site:/assets/setup_car_from_scratch/013_disk_app.png "Let's Search For The Disk App")
 2. Select the 500GB SSD and from th top right corner three dots select format.
-![Alt text](./assets/from_0_to_working_car/014_format_ssd500gb.png "Let's Select the 500GB SSD")
+![](site:/assets/setup_car_from_scratch/014_format_ssd500gb.png "Let's Select the 500GB SSD")
 3. Format it leaving averything as default.
-![Alt text](./assets/from_0_to_working_car/015_format_options.png "Format Options")
+![](site:/assets/setup_car_from_scratch/015_format_options.png "Format Options")
 ## Let's move the root to the SSD
 1. Open a Terminal
 2. ```cd ~/Downloads```
 3. ```git clone https://github.com/jetsonhacks/rootOnNVMe.git```
 4. ```cd rootOnNVMe```
 5. ```./copy-rootfs-ssd.sh```
-![Alt text](./assets/from_0_to_working_car/016_copy_rootfs_command.png "Copy RootFS Command")
+![](site:/assets/setup_car_from_scratch/016_copy_rootfs_command.png "Copy RootFS Command")
 6. ```./setup-service.sh```
-![Alt text](./assets/from_0_to_working_car/017_setup_service_command.png "Setup Service Command")
+![](site:/assets/setup_car_from_scratch/017_setup_service_command.png "Setup Service Command")
 7. ```sudo reboot now```
 ## Let's Update all the Packages
 1. Open a Terminal
