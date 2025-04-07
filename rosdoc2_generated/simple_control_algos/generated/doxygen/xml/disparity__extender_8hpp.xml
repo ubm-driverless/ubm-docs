@@ -1,0 +1,621 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="disparity__extender_8hpp" kind="file" language="C++">
+    <compoundname>disparity_extender.hpp</compoundname>
+    <includes refid="utils_8hpp" local="yes">utils.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="disparity__extender__node_8hpp" local="yes">include/disparity_extender_node.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>numeric</label>
+      </node>
+      <node id="2">
+        <label>utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/disparity_extender.hpp</label>
+        <link refid="disparity__extender_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>tuple</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/disparity_extender.hpp</label>
+        <link refid="disparity__extender_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/disparity_extender_node.hpp</label>
+        <link refid="disparity__extender__node_8hpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="disparity__extender_8hpp_1a291ed5db3ed90572f2fa73268d730fc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool check_imminent_crash</definition>
+        <argsstring>(std::vector&lt; float &gt; ranges, float lidar_fov, float angle_increment, float desired_fov, float crash_distance)</argsstring>
+        <name>check_imminent_crash</name>
+        <param>
+          <type>std::vector&lt; float &gt;</type>
+          <declname>ranges</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lidar_fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>desired_fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>crash_distance</declname>
+        </param>
+        <briefdescription>
+<para>Check if the car is too close to the wall/obstacle at the sides of the car. If so, the lidar data processing will be skipped. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the lidar ranges vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lidar_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field of view of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle increment of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desired_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired field of view for processing [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>crash_distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>distance threshold to consider a crash [m] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the car is not too close to the wall/obstacle at the sides of the car; false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender.hpp" line="28" column="6" declfile="include/disparity_extender.hpp" declline="28" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="disparity__extender_8hpp_1a4ad9538c20847b48c0ceba8c62c0b69f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void find_disparities</definition>
+        <argsstring>(std::vector&lt; float &gt; ranges, std::vector&lt; float &gt; &amp;processed_ranges, float car_width, float max_range, float angle_increment, float lidar_fov, float desired_fov, float disparity_thrashold, float r_multiplier)</argsstring>
+        <name>find_disparities</name>
+        <param>
+          <type>std::vector&lt; float &gt;</type>
+          <declname>ranges</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>processed_ranges</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>car_width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_range</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lidar_fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>desired_fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>disparity_thrashold</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r_multiplier</declname>
+        </param>
+        <briefdescription>
+<para>Processes LIDAR range data to extend disparities and clip ranges. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function processes raw LIDAR range data to extend disparities and clip the ranges to a maximum value. It identifies disparities in the range data and extends them. Find the disparities such that the absolute value of the difference between two subsequent rays is greater than disparity_thrashold. For every disparity, calculate the angle <computeroutput>theta</computeroutput> corresponding to the number of lidar radius to be leveled <computeroutput>R</computeroutput>. Then, choose the minimum between the two rays that generated the disparity and level <computeroutput>R</computeroutput> rays starting from the minimum one and going in the opposite direction of the maximum one.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of raw LIDAR range data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>processed_ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a vector where the processed range data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the car. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum range value to clip the LIDAR data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angular increment between consecutive LIDAR measurements. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lidar_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field of view of the LIDAR sensor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desired_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired field of view to process. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>disparity_thrashold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threshold to identify disparities in the range data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r_multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A multiplier to extend the number of rays to cut.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the calculated angle <computeroutput>theta</computeroutput> is negative. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender.hpp" line="56" column="6" declfile="include/disparity_extender.hpp" declline="56" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="disparity__extender_8hpp_1a29c2ded4d0f27a2a43d5ad06dbf11200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float find_disparity_steering_angle</definition>
+        <argsstring>(std::vector&lt; float &gt; processed_ranges, float angle_increment, float lidar_fov, float desired_fov, float angle_eq_thr, float ray_eq_thr, bool ignore_angle_eq_thr, bool ignore_ray_eq_thr, std::string angle_priority)</argsstring>
+        <name>find_disparity_steering_angle</name>
+        <param>
+          <type>std::vector&lt; float &gt;</type>
+          <declname>processed_ranges</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lidar_fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>desired_fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_eq_thr</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ray_eq_thr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_angle_eq_thr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_ray_eq_thr</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>angle_priority</declname>
+        </param>
+        <briefdescription>
+<para>Find the steering angle that corresponds to the maximum distance in the processed ranges vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function identifies the best steering angle by analyzing the processed ranges from a LIDAR sensor. It considers multiple criteria such as angle priority, ray equality thresholds, and angle equality thresholds. The function can ignore certain thresholds based on the provided parameters.</para>
+<para>This function keeps track of the best rays by storing their indexes in the vector <computeroutput>best_indexes</computeroutput>. During the search, if a new maximum distance is found, the vector is updated and reordered. In addition, the rays that have <computeroutput>distance_from_max_ray</computeroutput> greater than <computeroutput>ray_eq_thr</computeroutput> are removed from the vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>processed_ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The processed ranges vector from the LIDAR sensor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle increment of the LIDAR in radians. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lidar_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field of view of the LIDAR in radians. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desired_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired field of view to consider in radians. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>disparity_thrashold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threshold for disparity (not used in the current implementation). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_eq_thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threshold for considering two angles as equal. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ray_eq_thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threshold for considering two rays as equal. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ignore_angle_eq_thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to ignore the angle equality threshold. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ignore_ray_eq_thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to ignore the ray equality threshold. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority direction (&quot;left&quot; or &quot;right&quot;) when choosing between equal distances. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The steering angle that corresponds to the maximum distance in the processed ranges vector in radians. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender.hpp" line="89" column="7" declfile="include/disparity_extender.hpp" declline="89" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="disparity__extender_8hpp_1a62ce1c1cbfc59821940f236e0bc3e974" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float disparity_extender_steering</definition>
+        <argsstring>(std::vector&lt; float &gt; ranges, std::vector&lt; float &gt; &amp;processed_ranges, float angle_increment, float lidar_fov, float desired_fov, float disparity_thrashold, float angle_eq_thr, float ray_eq_thr, float car_width, float max_range, float r_multiplier, float max_steering_angle, bool ignore_angle_eq_thr, bool ignore_ray_eq_thr, std::string angle_priority)</argsstring>
+        <name>disparity_extender_steering</name>
+        <param>
+          <type>std::vector&lt; float &gt;</type>
+          <declname>ranges</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>processed_ranges</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lidar_fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>desired_fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>disparity_thrashold</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_eq_thr</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ray_eq_thr</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>car_width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_range</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r_multiplier</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_steering_angle</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_angle_eq_thr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_ray_eq_thr</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>angle_priority</declname>
+        </param>
+        <briefdescription>
+<para>Computes the steering angle based on disparity extender algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates the steering angle required to avoid obstacles detected by a LIDAR sensor using the disparity extender algorithm.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of float values representing the distances measured by the LIDAR sensor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angular increment between consecutive LIDAR measurements [rad]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lidar_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field of view of the LIDAR sensor [rad]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desired_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired field of view for the disparity extender algorithm [deg]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>disparity_thrashold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threshold for detecting disparities in the LIDAR measurements. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_eq_thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threshold for angle equality check. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ray_eq_thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threshold for ray equality check. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the car. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum range of the LIDAR sensor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r_multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplier for the range values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ignore_angle_eq_thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to ignore angle equality threshold. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ignore_ray_eq_thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to ignore ray equality threshold. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority for angle selection (&quot;left&quot; or &quot;right&quot;). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The computed steering angle. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender.hpp" line="120" column="7" declfile="include/disparity_extender.hpp" declline="120" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains the declarations for the disparity extender reactive algorithm. The algorithm is based on the article &quot;The &quot;Disparity Extender&quot; Algorithm, and F1/Tenth&quot; available at <ulink url="https://www.nathanotterness.com/2019/04/the-disparity-extender-algorithm-and.html">https://www.nathanotterness.com/2019/04/the-disparity-extender-algorithm-and.html</ulink>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/disparity_extender.hpp"/>
+  </compounddef>
+</doxygen>

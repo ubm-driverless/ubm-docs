@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ros__utils_8hpp" kind="file" language="C++">
+    <compoundname>ros_utils.hpp</compoundname>
+    <includes local="yes">f1tenth_msgs/msg/lap_performance.hpp</includes>
+    <includes local="yes">f1tenth_msgs/msg/lap_performance_stamped.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/point_stamped.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/pose.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/pose_stamped.hpp</includes>
+    <includes refid="lap__performance_8hpp" local="yes">lap_performance.hpp</includes>
+    <includes local="yes">nav_msgs/msg/path.hpp</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="frenet__overtaking__node_8hpp" local="yes">include/frenet_overtaking_node.hpp</includedby>
+    <includedby refid="frenet__overtaking__node__detector_8hpp" local="yes">include/frenet_overtaking_node_detector.hpp</includedby>
+    <includedby refid="path__follower__node_8hpp" local="yes">include/path_follower_node.hpp</includedby>
+    <includedby refid="potential__pursuit__node_8hpp" local="yes">include/potential_pursuit_node.hpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>geometry_msgs/msg/pose_stamped.hpp</label>
+      </node>
+      <node id="5">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="3">
+        <label>f1tenth_msgs/msg/lap_performance_stamped.hpp</label>
+      </node>
+      <node id="9">
+        <label>cmath</label>
+      </node>
+      <node id="7">
+        <label>nav_msgs/msg/path.hpp</label>
+      </node>
+      <node id="11">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>geometry_msgs/msg/point_stamped.hpp</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>chrono</label>
+      </node>
+      <node id="2">
+        <label>f1tenth_msgs/msg/lap_performance.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/ros_utils.hpp</label>
+        <link refid="ros__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/path_follower_node.hpp</label>
+        <link refid="path__follower__node_8hpp"/>
+      </node>
+      <node id="2">
+        <label>include/frenet_overtaking_node.hpp</label>
+        <link refid="frenet__overtaking__node_8hpp"/>
+      </node>
+      <node id="4">
+        <label>include/potential_pursuit_node.hpp</label>
+        <link refid="potential__pursuit__node_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/ros_utils.hpp</label>
+        <link refid="ros__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ros__utils_8hpp_1a7ee9e16631c43895ea6520dfcb0ffcc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void publish_performance</definition>
+        <argsstring>(rclcpp::Publisher&lt; f1tenth_msgs::msg::LapPerformanceStamped &gt;::SharedPtr publisher, std_msgs::msg::Header common_header, const LapPerformanceData &amp;lap_performance)</argsstring>
+        <name>publish_performance</name>
+        <param>
+          <type>rclcpp::Publisher&lt; f1tenth_msgs::msg::LapPerformanceStamped &gt;::SharedPtr</type>
+          <declname>publisher</declname>
+        </param>
+        <param>
+          <type>std_msgs::msg::Header</type>
+          <declname>common_header</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structLapPerformanceData" kindref="compound">LapPerformanceData</ref> &amp;</type>
+          <declname>lap_performance</declname>
+        </param>
+        <briefdescription>
+<para>Publishes the lap performance data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>publisher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Publisher for the lap performance data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>common_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Common header for the lap performance data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lap_performance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lap performance data to publish </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ros_utils.hpp" line="31" column="6" declfile="include/ros_utils.hpp" declline="31" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ros__utils_8hpp_1aabea2b79177434483f92fff862200c76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void visualize_markers</definition>
+        <argsstring>(rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr publisher, std_msgs::msg::Header common_header, float point_x, float point_y)</argsstring>
+        <name>visualize_markers</name>
+        <param>
+          <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+          <declname>publisher</declname>
+        </param>
+        <param>
+          <type>std_msgs::msg::Header</type>
+          <declname>common_header</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>point_x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>point_y</declname>
+        </param>
+        <briefdescription>
+<para>Publishes visualization markers for the look-ahead point and other points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>publisher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Publisher for the visualization markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>common_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Header for the visualization markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>point_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-coordinate of the point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>point_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-coordinate of the point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ros_utils.hpp" line="42" column="6" declfile="include/ros_utils.hpp" declline="42" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ros__utils_8hpp_1ad165a92523201b5321da05eb871b4369" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void publish_raceline</definition>
+        <argsstring>(rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr publisher, std_msgs::msg::Header common_header, const std::vector&lt; float &gt; &amp;x, const std::vector&lt; float &gt; &amp;y)</argsstring>
+        <name>publish_raceline</name>
+        <param>
+          <type>rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr</type>
+          <declname>publisher</declname>
+        </param>
+        <param>
+          <type>std_msgs::msg::Header</type>
+          <declname>common_header</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ros_utils.hpp" line="47" column="6" declfile="include/ros_utils.hpp" declline="47" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains the class definition for the <ref refid="classLapPerformance" kindref="compound">LapPerformance</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to measure the performance of the lap </para>
+    </detaileddescription>
+    <location file="include/ros_utils.hpp"/>
+  </compounddef>
+</doxygen>

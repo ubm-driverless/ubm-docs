@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class VescInterface &mdash; vesc_driver 1.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=fc837d61"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class VescPacket" href="classvesc__driver_1_1VescPacket.html" />
+    <link rel="prev" title="Class VescFrame" href="classvesc__driver_1_1VescFrame.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            vesc_driver
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_vesc_driver.html">Namespace vesc_driver</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structCRC_1_1Parameters.html">Template Struct CRC::Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structCRC_1_1Table.html">Template Struct CRC::Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1adc__config.html">Struct adc_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1app__configuration.html">Struct app_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1ATTITUDE__INFO.html">Struct ATTITUDE_INFO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1balance__config.html">Struct balance_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg.html">Struct can_status_msg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__2.html">Struct can_status_msg_2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__3.html">Struct can_status_msg_3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__4.html">Struct can_status_msg_4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__5.html">Struct can_status_msg_5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1chuck__data.html">Struct chuck_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1chuk__config.html">Struct chuk_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1fault__data.html">Struct fault_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1imu__config.html">Struct imu_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__configuration.html">Struct mc_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__rpm__dep__struct.html">Struct mc_rpm_dep_struct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__values.html">Struct mc_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mote__state.html">Struct mote_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1nrf__config.html">Struct nrf_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1ppm__config.html">Struct ppm_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1setup__values.html">Struct setup_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1VescDriver_1_1CommandLimit.html">Struct VescDriver::CommandLimit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1VSerialInfo__t.html">Struct VSerialInfo_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCRC.html">Class CRC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1PacketFactoryTemplate.html">Template Class PacketFactoryTemplate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1SerialException.html">Class SerialException</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescDeviceLookup.html">Class VescDeviceLookup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescDriver.html">Class VescDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescFrame.html">Class VescFrame</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class VescInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacket.html">Class VescPacket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketFactory.html">Class VescPacketFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketFWVersion.html">Class VescPacketFWVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketImu.html">Class VescPacketImu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestFWVersion.html">Class VescPacketRequestFWVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestImu.html">Class VescPacketRequestImu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestValues.html">Class VescPacketRequestValues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetCurrent.html">Class VescPacketSetCurrent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetCurrentBrake.html">Class VescPacketSetCurrentBrake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetDuty.html">Class VescPacketSetDuty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetPos.html">Class VescPacketSetPos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetRPM.html">Class VescPacketSetRPM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetServoPos.html">Class VescPacketSetServoPos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketValues.html">Class VescPacketValues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4.html">Enum adc_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5950ddeee9212ba83433f85c93a835bd.html">Enum AHRS_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac4d298226d152810103dfa554ac55966.html">Enum app_use</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a877e9c650835fec907896e3affdf8029.html">Enum BATTERY_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2e.html">Enum CAN_BAUD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6068ce8e2b2f011583bd6e3f47867fc5.html">Enum CAN_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02.html">Enum CAN_PACKET_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394.html">Enum CAN_STATUS_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bde.html">Enum CFG_T</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a85332f8edd172e76c48306639165855e.html">Enum chuk_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5.html">Enum COMM_PACKET_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61e.html">Enum debug_sampling_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a9d554e45533d65de81725771a035420f.html">Enum disp_pos_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6e41639d201e98ebe2e5a546fb8926cb.html">Enum drv8301_oc_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a7d50e7e730bc8f2de2b905fd131f7e34.html">Enum FOC_HFI_SAMPLES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aea86ed1310f7bac5436bb1d9cfd2b5cc.html">Enum gpd_output_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a991de85646df7979b3aecc17c738b6cc.html">Enum IMU_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9bae.html">Enum LED_EXT_STATE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a94dd3adcd583aa7571b67be0fe71e4c4.html">Enum mc_comm_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6.html">Enum mc_control_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1add07239a8d01883eb907388a53df457a.html">Enum mc_fault_code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5fb601d3d3593117aa2500e92b3f3c5e.html">Enum mc_foc_cc_decoupling_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a30b7ef228cda5d4ca51fb63be2da0428.html">Enum mc_foc_observer_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a4da904a4c4a29bba71d531a12f1746ca.html">Enum mc_foc_sensor_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aba46e12afe600fb9e1bda76272285050.html">Enum mc_motor_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5429e726bd7c0770419236fd596f68fb.html">Enum mc_pwm_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac75a4404acbc7ec308267d0856f668d0.html">Enum mc_sensor_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a0f20f041589eff3006f06cdd6738587b.html">Enum mc_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0a.html">Enum MOTE_PACKET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a82bde9a7aa25e2f36bebecd29aa4b93e.html">Enum NRF_AW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aad838390066a6ba9ad9478d33500a845.html">Enum NRF_CRC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aff9921401b1c440fa36f01cba40978de.html">Enum NRF_PAIR_RES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ab4db6b6b86c3a3c1af1eb25bb47d3026.html">Enum NRF_POWER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162.html">Enum NRF_RETR_DELAY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a97e3b0a9f8e660b4e9d8dfa391e89c5d.html">Enum NRF_SPEED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266d.html">Enum out_aux_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bb.html">Enum ppm_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efa.html">Enum sensor_port_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782.html">Enum SHUTDOWN_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a9fdbfdaac84788724a24df03d5c9d59a.html">Enum temp_sensor_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ad4c8d3f7b1a2b59235117ea7feb9d095.html">Enum thr_exp_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182d.html">Enum VESC_TX_T</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#unions">Unions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unionvesc__driver_1_1eeprom__var.html">Union eeprom_var</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1ac53723d95b5c8c7d707e8e3ebcb4e143.html">Define crcpp_constexpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1af44cfa9e71356f05c42b363cf04ea9a6.html">Define crcpp_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1add273674b22f031b158220eeb560c7a0.html">Define crcpp_uint16</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a4469d365469b254f21fb50316e079094.html">Define crcpp_uint32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a3541074ba795d31a40f13e78c77c0e7c.html">Define crcpp_uint64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a28cd0a17324a479874c3bdd5387d6b04.html">Define crcpp_uint8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_vesc__packet_8hpp_1a0aa3088ffa17b0bd3a345955ab23b90c.html">Define CRCPP_USE_CPP11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_datatypes_8hpp_1a7c35c014fad56a5ea9f86b25ce3c4355.html">Define EEPROM_VARS_CUSTOM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_datatypes_8hpp_1af8f381ccb1ded44a9fbd8e559b4772b9.html">Define EEPROM_VARS_HW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_vesc__packet__factory_8hpp_1ad0eb6d8ee731f885e4106a3e89cdd6bf.html">Define REGISTER_PACKET_TYPE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1af21703f925222cf808675b9d3e3e1080.html">Typedef vesc_driver::Buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1a1f7354e69e220473c86b36eee92ab6c3.html">Typedef vesc_driver::BufferRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1ae582897e181f1a22ef7621b7eb9a3675.html">Typedef vesc_driver::BufferRangeConst</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_datatypes_8hpp_1a55e79bdc72bc3aeb000f5cbb6157f509.html">Typedef vesc_driver::systime_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1a80af512a3c68b006ee27699c794f839e.html">Typedef vesc_driver::VescPacketConstPtr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1aabad57bf0bb1f43a0e9d9579b7c07903.html">Typedef vesc_driver::VescPacketPtr</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_vesc_driver.html">Directory vesc_driver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_crc.hpp.html">File crc.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_datatypes.hpp.html">File datatypes.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_device_uuid_lookup.hpp.html">File vesc_device_uuid_lookup.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_driver.hpp.html">File vesc_driver.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_interface.hpp.html">File vesc_interface.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_packet.hpp.html">File vesc_packet.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_packet_factory.hpp.html">File vesc_packet_factory.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/CHANGELOG.html">CHANGELOG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/CHANGELOG.html#changelog-for-package-vesc-driver">Changelog for package vesc_driver</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/CHANGELOG.html#id1">1.1.0 (2020-12-12)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/CHANGELOG.html#id3">1.0.0 (2020-12-02)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vesc_driver</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class VescInterface</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classvesc__driver_1_1VescInterface.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-vescinterface">
+<span id="exhale-class-classvesc-driver-1-1vescinterface"></span><h1>Class VescInterface<a class="headerlink" href="#class-vescinterface" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_vesc_driver_vesc_interface.hpp.html#file-include-vesc-driver-vesc-interface-hpp"><span class="std std-ref">File vesc_interface.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterfaceE">
+<span id="_CPPv3N11vesc_driver13VescInterfaceE"></span><span id="_CPPv2N11vesc_driver13VescInterfaceE"></span><span id="vesc_driver::VescInterface"></span><span class="target" id="classvesc__driver_1_1VescInterface"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VescInterface</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterfaceE" title="Link to this definition"></a><br /></dt>
+<dd><p>Class providing an interface to the Vedder VESC motor controller via a serial port interface. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface21PacketHandlerFunctionE">
+<span id="_CPPv3N11vesc_driver13VescInterface21PacketHandlerFunctionE"></span><span id="_CPPv2N11vesc_driver13VescInterface21PacketHandlerFunctionE"></span><span id="vesc_driver::VescInterface::PacketHandlerFunction"></span><span class="target" id="classvesc__driver_1_1VescInterface_1ad172339b822111eb957ec7455fdeda5f"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_vesc__packet_8hpp_1a80af512a3c68b006ee27699c794f839e.html#_CPPv4N11vesc_driver18VescPacketConstPtrE" title="vesc_driver::VescPacketConstPtr"><span class="n"><span class="pre">VescPacketConstPtr</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PacketHandlerFunction</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface21PacketHandlerFunctionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface20ErrorHandlerFunctionE">
+<span id="_CPPv3N11vesc_driver13VescInterface20ErrorHandlerFunctionE"></span><span id="_CPPv2N11vesc_driver13VescInterface20ErrorHandlerFunctionE"></span><span id="vesc_driver::VescInterface::ErrorHandlerFunction"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a186a64229a31b15bb5afb51bfb4fda8e"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ErrorHandlerFunction</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface20ErrorHandlerFunctionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface13VescInterfaceERKNSt6stringERK21PacketHandlerFunctionRK20ErrorHandlerFunction">
+<span id="_CPPv3N11vesc_driver13VescInterface13VescInterfaceERKNSt6stringERK21PacketHandlerFunctionRK20ErrorHandlerFunction"></span><span id="_CPPv2N11vesc_driver13VescInterface13VescInterfaceERKNSt6stringERK21PacketHandlerFunctionRK20ErrorHandlerFunction"></span><span id="vesc_driver::VescInterface::VescInterface__ssCR.PacketHandlerFunctionCR.ErrorHandlerFunctionCR"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a20a780d84b412695ae36eb2917a69557"></span><span class="sig-name descname"><span class="n"><span class="pre">VescInterface</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">port</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11vesc_driver13VescInterface21PacketHandlerFunctionE" title="vesc_driver::VescInterface::PacketHandlerFunction"><span class="n"><span class="pre">PacketHandlerFunction</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">packet_handler</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11vesc_driver13VescInterface21PacketHandlerFunctionE" title="vesc_driver::VescInterface::PacketHandlerFunction"><span class="n"><span class="pre">PacketHandlerFunction</span></span></a><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11vesc_driver13VescInterface20ErrorHandlerFunctionE" title="vesc_driver::VescInterface::ErrorHandlerFunction"><span class="n"><span class="pre">ErrorHandlerFunction</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">error_handler</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11vesc_driver13VescInterface20ErrorHandlerFunctionE" title="vesc_driver::VescInterface::ErrorHandlerFunction"><span class="n"><span class="pre">ErrorHandlerFunction</span></span></a><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface13VescInterfaceERKNSt6stringERK21PacketHandlerFunctionRK20ErrorHandlerFunction" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates a <a class="reference internal" href="#classvesc__driver_1_1VescInterface"><span class="std std-ref">VescInterface</span></a> object. Opens the serial port interface to the VESC if <code class="docutils literal notranslate"><span class="pre">port</span></code> is not empty, otherwise the serial port remains closed until <a class="reference internal" href="#classvesc__driver_1_1VescInterface_1a58c32a177d5b3216b3c950a795a1e5c6"><span class="std std-ref">connect()</span></a> is called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>port</strong> – Address of the serial port, e.g. ‘/dev/ttyUSB0’. </p></li>
+<li><p><strong>packet_handler</strong> – Function this class calls when a VESC packet is received. </p></li>
+<li><p><strong>error_handler</strong> – Function this class calls when an error is detected, such as a bad checksum.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classvesc__driver_1_1SerialException.html#_CPPv4N11vesc_driver15SerialExceptionE" title="vesc_driver::SerialException"><span class="n">SerialException</span></a></span></span> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface13VescInterfaceERK13VescInterface">
+<span id="_CPPv3N11vesc_driver13VescInterface13VescInterfaceERK13VescInterface"></span><span id="_CPPv2N11vesc_driver13VescInterface13VescInterfaceERK13VescInterface"></span><span id="vesc_driver::VescInterface::VescInterface__VescInterfaceCR"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a1a7d6b9df497f554364592e70bc2221e"></span><span class="sig-name descname"><span class="n"><span class="pre">VescInterface</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11vesc_driver13VescInterface13VescInterfaceERK13VescInterface" title="vesc_driver::VescInterface::VescInterface"><span class="n"><span class="pre">VescInterface</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface13VescInterfaceERK13VescInterface" title="Link to this definition"></a><br /></dt>
+<dd><p>Delete copy constructor and equals operator. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterfaceaSERK13VescInterface">
+<span id="_CPPv3N11vesc_driver13VescInterfaceaSERK13VescInterface"></span><span id="_CPPv2N11vesc_driver13VescInterfaceaSERK13VescInterface"></span><span id="vesc_driver::VescInterface::assign-operator__VescInterfaceCR"></span><span class="target" id="classvesc__driver_1_1VescInterface_1ab33394e4918f148583b8ab9e241c8af2"></span><a class="reference internal" href="#_CPPv4N11vesc_driver13VescInterfaceE" title="vesc_driver::VescInterface"><span class="n"><span class="pre">VescInterface</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11vesc_driver13VescInterfaceE" title="vesc_driver::VescInterface"><span class="n"><span class="pre">VescInterface</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterfaceaSERK13VescInterface" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterfaceD0Ev">
+<span id="_CPPv3N11vesc_driver13VescInterfaceD0Ev"></span><span id="_CPPv2N11vesc_driver13VescInterfaceD0Ev"></span><span id="vesc_driver::VescInterface::~VescInterface"></span><span class="target" id="classvesc__driver_1_1VescInterface_1ad4b0a73949c485117a337144a4eb2f16"></span><span class="sig-name descname"><span class="n"><span class="pre">~VescInterface</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterfaceD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="#classvesc__driver_1_1VescInterface"><span class="std std-ref">VescInterface</span></a> destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface16setPacketHandlerERK21PacketHandlerFunction">
+<span id="_CPPv3N11vesc_driver13VescInterface16setPacketHandlerERK21PacketHandlerFunction"></span><span id="_CPPv2N11vesc_driver13VescInterface16setPacketHandlerERK21PacketHandlerFunction"></span><span id="vesc_driver::VescInterface::setPacketHandler__PacketHandlerFunctionCR"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a476d955fc6ad896d7bb951eec65ebc11"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPacketHandler</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11vesc_driver13VescInterface21PacketHandlerFunctionE" title="vesc_driver::VescInterface::PacketHandlerFunction"><span class="n"><span class="pre">PacketHandlerFunction</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface16setPacketHandlerERK21PacketHandlerFunction" title="Link to this definition"></a><br /></dt>
+<dd><p>Sets / updates the function that this class calls when a VESC packet is received. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface15setErrorHandlerERK20ErrorHandlerFunction">
+<span id="_CPPv3N11vesc_driver13VescInterface15setErrorHandlerERK20ErrorHandlerFunction"></span><span id="_CPPv2N11vesc_driver13VescInterface15setErrorHandlerERK20ErrorHandlerFunction"></span><span id="vesc_driver::VescInterface::setErrorHandler__ErrorHandlerFunctionCR"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a9fd8e3f6de7db697f05ce93ca1f7a09d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setErrorHandler</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11vesc_driver13VescInterface20ErrorHandlerFunctionE" title="vesc_driver::VescInterface::ErrorHandlerFunction"><span class="n"><span class="pre">ErrorHandlerFunction</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface15setErrorHandlerERK20ErrorHandlerFunction" title="Link to this definition"></a><br /></dt>
+<dd><p>Sets / updates the function that this class calls when an error is detected, such as a bad checksum. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface7connectERKNSt6stringE">
+<span id="_CPPv3N11vesc_driver13VescInterface7connectERKNSt6stringE"></span><span id="_CPPv2N11vesc_driver13VescInterface7connectERKNSt6stringE"></span><span id="vesc_driver::VescInterface::connect__ssCR"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a58c32a177d5b3216b3c950a795a1e5c6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface7connectERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Opens the serial port interface to the VESC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classvesc__driver_1_1SerialException.html#_CPPv4N11vesc_driver15SerialExceptionE" title="vesc_driver::SerialException"><span class="n">SerialException</span></a></span></span> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface10disconnectEv">
+<span id="_CPPv3N11vesc_driver13VescInterface10disconnectEv"></span><span id="_CPPv2N11vesc_driver13VescInterface10disconnectEv"></span><span id="vesc_driver::VescInterface::disconnect"></span><span class="target" id="classvesc__driver_1_1VescInterface_1aacaef560516f86c9e2ff9ae32f4b2da3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface10disconnectEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Closes the serial port interface to the VESC. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11vesc_driver13VescInterface11isConnectedEv">
+<span id="_CPPv3NK11vesc_driver13VescInterface11isConnectedEv"></span><span id="_CPPv2NK11vesc_driver13VescInterface11isConnectedEv"></span><span id="vesc_driver::VescInterface::isConnectedC"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a094456744af5da57be1e973204816f03"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isConnected</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11vesc_driver13VescInterface11isConnectedEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Gets the status of the serial interface to the VESC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns true if the serial port is open, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface4sendERK10VescPacket">
+<span id="_CPPv3N11vesc_driver13VescInterface4sendERK10VescPacket"></span><span id="_CPPv2N11vesc_driver13VescInterface4sendERK10VescPacket"></span><span id="vesc_driver::VescInterface::send__VescPacketCR"></span><span class="target" id="classvesc__driver_1_1VescInterface_1aa2ab0f4a23a699607d31683cb93ca1d2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classvesc__driver_1_1VescPacket.html#_CPPv4N11vesc_driver10VescPacketE" title="vesc_driver::VescPacket"><span class="n"><span class="pre">VescPacket</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">packet</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface4sendERK10VescPacket" title="Link to this definition"></a><br /></dt>
+<dd><p>Send a VESC packet. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface16requestFWVersionEv">
+<span id="_CPPv3N11vesc_driver13VescInterface16requestFWVersionEv"></span><span id="_CPPv2N11vesc_driver13VescInterface16requestFWVersionEv"></span><span id="vesc_driver::VescInterface::requestFWVersion"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a92edbd2848e384e9a807dffbf71887d0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestFWVersion</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface16requestFWVersionEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface12requestStateEv">
+<span id="_CPPv3N11vesc_driver13VescInterface12requestStateEv"></span><span id="_CPPv2N11vesc_driver13VescInterface12requestStateEv"></span><span id="vesc_driver::VescInterface::requestState"></span><span class="target" id="classvesc__driver_1_1VescInterface_1aba338b9293a3daef0e8cb2974e555021"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface12requestStateEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface14requestImuDataEv">
+<span id="_CPPv3N11vesc_driver13VescInterface14requestImuDataEv"></span><span id="_CPPv2N11vesc_driver13VescInterface14requestImuDataEv"></span><span id="vesc_driver::VescInterface::requestImuData"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a4c1d7ad4d2aefd929dbf58c2ac34d87a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestImuData</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface14requestImuDataEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface12setDutyCycleEd">
+<span id="_CPPv3N11vesc_driver13VescInterface12setDutyCycleEd"></span><span id="_CPPv2N11vesc_driver13VescInterface12setDutyCycleEd"></span><span id="vesc_driver::VescInterface::setDutyCycle__double"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a329849d94103c02738df8a4065ab748f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDutyCycle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">duty_cycle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface12setDutyCycleEd" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface10setCurrentEd">
+<span id="_CPPv3N11vesc_driver13VescInterface10setCurrentEd"></span><span id="_CPPv2N11vesc_driver13VescInterface10setCurrentEd"></span><span id="vesc_driver::VescInterface::setCurrent__double"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a4a8d2586c4a30ec9f0cc0a1295726f95"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrent</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">current</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface10setCurrentEd" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface8setBrakeEd">
+<span id="_CPPv3N11vesc_driver13VescInterface8setBrakeEd"></span><span id="_CPPv2N11vesc_driver13VescInterface8setBrakeEd"></span><span id="vesc_driver::VescInterface::setBrake__double"></span><span class="target" id="classvesc__driver_1_1VescInterface_1afa92db66d561be5ff7bfc49748c57e79"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBrake</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">brake</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface8setBrakeEd" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface8setSpeedEd">
+<span id="_CPPv3N11vesc_driver13VescInterface8setSpeedEd"></span><span id="_CPPv2N11vesc_driver13VescInterface8setSpeedEd"></span><span id="vesc_driver::VescInterface::setSpeed__double"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a5ef452cc56f99c415f75bc037d3e62b4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSpeed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">speed</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface8setSpeedEd" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface11setPositionEd">
+<span id="_CPPv3N11vesc_driver13VescInterface11setPositionEd"></span><span id="_CPPv2N11vesc_driver13VescInterface11setPositionEd"></span><span id="vesc_driver::VescInterface::setPosition__double"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a28d619d7ab146f2ca137a53b96734ce0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPosition</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface11setPositionEd" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver13VescInterface8setServoEd">
+<span id="_CPPv3N11vesc_driver13VescInterface8setServoEd"></span><span id="_CPPv2N11vesc_driver13VescInterface8setServoEd"></span><span id="vesc_driver::VescInterface::setServo__double"></span><span class="target" id="classvesc__driver_1_1VescInterface_1a487b178a049495d29d4993f84c6995b6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setServo</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">servo</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11vesc_driver13VescInterface8setServoEd" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classvesc__driver_1_1VescFrame.html" class="btn btn-neutral float-left" title="Class VescFrame" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classvesc__driver_1_1VescPacket.html" class="btn btn-neutral float-right" title="Class VescPacket" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;vesc_driver&gt; Contributors. License: BSD.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

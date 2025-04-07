@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="simple__speed_8hpp" kind="file" language="C++">
+    <compoundname>simple_speed.hpp</compoundname>
+    <includes refid="utils_8hpp" local="yes">utils.hpp</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="disparity__extender__node_8hpp" local="yes">include/disparity_extender_node.hpp</includedby>
+    <includedby refid="potential__field__node_8hpp" local="yes">include/potential_field_node.hpp</includedby>
+    <includedby refid="potential__pursuit__node_8hpp" local="yes">include/potential_pursuit_node.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="1">
+        <label>include/simple_speed.hpp</label>
+        <link refid="simple__speed_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>numeric</label>
+      </node>
+      <node id="2">
+        <label>utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>tuple</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/simple_speed.hpp</label>
+        <link refid="simple__speed_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/potential_field_node.hpp</label>
+        <link refid="potential__field__node_8hpp"/>
+      </node>
+      <node id="4">
+        <label>include/potential_pursuit_node.hpp</label>
+        <link refid="potential__pursuit__node_8hpp"/>
+      </node>
+      <node id="2">
+        <label>include/disparity_extender_node.hpp</label>
+        <link refid="disparity__extender__node_8hpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="simple__speed_8hpp_1a8666ead035190ddbcd155650aeb37176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float speed_proportional_steering</definition>
+        <argsstring>(float steering_angle, float max_steering, float max_speed, float min_speed)</argsstring>
+        <name>speed_proportional_steering</name>
+        <param>
+          <type>float</type>
+          <declname>steering_angle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_steering</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_speed</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>min_speed</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the speed of a vehicle proportional to the steering angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function computes the speed of a vehicle using a proportional control algorithm based on the steering angle. The speed decreases linearly as the steering angle increases, ensuring that the vehicle slows down when making sharper turns.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current steering angle of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_steering</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum steering angle the vehicle can achieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum speed the vehicle can achieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum speed the vehicle should maintain.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The calculated speed of the vehicle based on the steering angle. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/simple_speed.hpp" line="28" column="7" declfile="include/simple_speed.hpp" declline="28" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="simple__speed_8hpp_1ad8b9a9a94d3855969c36725c280f7d5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float speed_steer_and_fov</definition>
+        <argsstring>(float steering_angle, std::vector&lt; float &gt; ranges, float max_steering, float max_speed, float min_speed, float brake_gain, float speed_distance_gain, float front_deg, float angle_increment)</argsstring>
+        <name>speed_steer_and_fov</name>
+        <param>
+          <type>float</type>
+          <declname>steering_angle</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt;</type>
+          <declname>ranges</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_steering</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_speed</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>min_speed</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>brake_gain</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>speed_distance_gain</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>front_deg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_increment</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the speed of a vehicle based on steering angle and LIDAR front ranges. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function computes the speed by considering the steering angle and adjusting it based on the LIDAR ranges within a specified field of view (FOV). The speed is influenced by the distance to obstacles (from LIDAR data), a braking gain, and a speed-distance gain.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current steering angle of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of float values representing the distances measured by the LIDAR sensor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_steering</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum steering angle the vehicle can achieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum speed the vehicle can achieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum speed the vehicle can achieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>brake_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A gain factor that influences the braking effect based on obstacle distance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>speed_distance_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A gain factor that influences the speed based on obstacle distance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>front_deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field of view in degrees to consider in front of the vehicle [deg]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angular resolution of the LIDAR sensor [rad]. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The calculated speed of the vehicle. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/simple_speed.hpp" line="51" column="7" declfile="include/simple_speed.hpp" declline="51" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for simple speed control algorithms. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/simple_speed.hpp"/>
+  </compounddef>
+</doxygen>

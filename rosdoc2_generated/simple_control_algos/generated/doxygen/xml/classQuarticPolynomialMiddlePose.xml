@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classQuarticPolynomialMiddlePose" kind="class" language="C++" prot="public">
+    <compoundname>QuarticPolynomialMiddlePose</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classQuarticPolynomialMiddlePose_1a64fceb024f2b1b2667caa09f2660fa99" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float QuarticPolynomialMiddlePose::a_0</definition>
+        <argsstring></argsstring>
+        <name>a_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="289" column="11" bodyfile="include/spline_and_polynomial.hpp" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classQuarticPolynomialMiddlePose_1ae7d2ced931185c5b3a10e0c857c54263" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float QuarticPolynomialMiddlePose::a_1</definition>
+        <argsstring></argsstring>
+        <name>a_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="289" column="15" bodyfile="include/spline_and_polynomial.hpp" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classQuarticPolynomialMiddlePose_1a0e0f3da6f3ca3f96f96970f372553472" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float QuarticPolynomialMiddlePose::a_2</definition>
+        <argsstring></argsstring>
+        <name>a_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="289" column="19" bodyfile="include/spline_and_polynomial.hpp" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classQuarticPolynomialMiddlePose_1a4313eeba77ab79517077b6c528f7b098" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float QuarticPolynomialMiddlePose::a_3</definition>
+        <argsstring></argsstring>
+        <name>a_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="289" column="23" bodyfile="include/spline_and_polynomial.hpp" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classQuarticPolynomialMiddlePose_1aa7429345a1f4a81ff1c12a83b30f6250" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float QuarticPolynomialMiddlePose::a_4</definition>
+        <argsstring></argsstring>
+        <name>a_4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="289" column="27" bodyfile="include/spline_and_polynomial.hpp" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQuarticPolynomialMiddlePose_1a16bd18656ca566b87ddea7c702f11ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QuarticPolynomialMiddlePose::QuarticPolynomialMiddlePose</definition>
+        <argsstring>(float xs, float middle_pose, float xe, float vxe, float axe, float t_middle, float time)</argsstring>
+        <name>QuarticPolynomialMiddlePose</name>
+        <param>
+          <type>float</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>middle_pose</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>xe</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>vxe</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>axe</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t_middle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for <ref refid="classQuarticPolynomial" kindref="compound">QuarticPolynomial</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>middle_pose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Middle position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Final position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vxe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Final velocity. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Final acceleration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t_middle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which the middle pose is reached. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Duration over which the polynomial is defined. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="301" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuarticPolynomialMiddlePose_1ad45ecb53d76487736e20ae3b10288557" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float QuarticPolynomialMiddlePose::calc_point</definition>
+        <argsstring>(float t) const</argsstring>
+        <name>calc_point</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the value of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="309" column="18" bodyfile="include/spline_and_polynomial.hpp" bodystart="309" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuarticPolynomialMiddlePose_1a523cecaafc0de40c9909fa9e8b809481" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float QuarticPolynomialMiddlePose::calc_first_derivative</definition>
+        <argsstring>(float t) const</argsstring>
+        <name>calc_first_derivative</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="321" column="18" bodyfile="include/spline_and_polynomial.hpp" bodystart="321" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuarticPolynomialMiddlePose_1a7b0a5be44f4b4143deb88e094ac9bf89" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float QuarticPolynomialMiddlePose::calc_second_derivative</definition>
+        <argsstring>(float t) const</argsstring>
+        <name>calc_second_derivative</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the second derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Second derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="332" column="18" bodyfile="include/spline_and_polynomial.hpp" bodystart="332" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuarticPolynomialMiddlePose_1a15cbd3371f85f014e5f6476eb8dfd5df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float QuarticPolynomialMiddlePose::calc_third_derivative</definition>
+        <argsstring>(float t) const</argsstring>
+        <name>calc_third_derivative</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the third derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Third derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="342" column="18" bodyfile="include/spline_and_polynomial.hpp" bodystart="342" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="classQuarticPolynomialMiddlePose_1a125059b9ecb9f91668a839203d645437" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::tuple&lt; float, float, float, float &gt;</type>
+        <definition>std::tuple&lt;float, float, float, float&gt; QuarticPolynomialMiddlePose::calc_all</definition>
+        <argsstring>(float t) const</argsstring>
+        <name>calc_all</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the value, first derivative, second derivative, and third derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tuple containing the value, first derivative, second derivative, and third derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="352" column="23" bodyfile="include/spline_and_polynomial.hpp" bodystart="352" bodyend="360"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/spline_and_polynomial.hpp" line="287" column="34" bodyfile="include/spline_and_polynomial.hpp" bodystart="287" bodyend="361"/>
+    <listofallmembers>
+      <member refid="classQuarticPolynomialMiddlePose_1a64fceb024f2b1b2667caa09f2660fa99" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>a_0</name></member>
+      <member refid="classQuarticPolynomialMiddlePose_1ae7d2ced931185c5b3a10e0c857c54263" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>a_1</name></member>
+      <member refid="classQuarticPolynomialMiddlePose_1a0e0f3da6f3ca3f96f96970f372553472" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>a_2</name></member>
+      <member refid="classQuarticPolynomialMiddlePose_1a4313eeba77ab79517077b6c528f7b098" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>a_3</name></member>
+      <member refid="classQuarticPolynomialMiddlePose_1aa7429345a1f4a81ff1c12a83b30f6250" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>a_4</name></member>
+      <member refid="classQuarticPolynomialMiddlePose_1a125059b9ecb9f91668a839203d645437" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>calc_all</name></member>
+      <member refid="classQuarticPolynomialMiddlePose_1a523cecaafc0de40c9909fa9e8b809481" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>calc_first_derivative</name></member>
+      <member refid="classQuarticPolynomialMiddlePose_1ad45ecb53d76487736e20ae3b10288557" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>calc_point</name></member>
+      <member refid="classQuarticPolynomialMiddlePose_1a7b0a5be44f4b4143deb88e094ac9bf89" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>calc_second_derivative</name></member>
+      <member refid="classQuarticPolynomialMiddlePose_1a15cbd3371f85f014e5f6476eb8dfd5df" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>calc_third_derivative</name></member>
+      <member refid="classQuarticPolynomialMiddlePose_1a16bd18656ca566b87ddea7c702f11ede" prot="public" virt="non-virtual"><scope>QuarticPolynomialMiddlePose</scope><name>QuarticPolynomialMiddlePose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
