@@ -1,0 +1,862 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classOdometryNode" kind="class" language="C++" prot="public">
+    <compoundname>OdometryNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes local="no">odometry_node.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classOdometryNode_1a2e84dc08428147f3f3bc33ff28538864" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float OdometryNode::wb_</definition>
+        <argsstring></argsstring>
+        <name>wb_</name>
+        <briefdescription>
+<para>Vehicle wheelbase. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="40" column="11" bodyfile="include/odometry/odometry_node.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a6f137e4f044648c2b69468232f737785" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::reconstruction_type_</definition>
+        <argsstring></argsstring>
+        <name>reconstruction_type_</name>
+        <briefdescription>
+<para>Type of odometry reconstruction to use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="41" column="17" bodyfile="include/odometry/odometry_node.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a44915d32da272321d7841f2928a3fa88" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::drive_topic_</definition>
+        <argsstring></argsstring>
+        <name>drive_topic_</name>
+        <briefdescription>
+<para>Topic for drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="42" column="17" bodyfile="include/odometry/odometry_node.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a584c93a04cd2e18855f100208ba8a7ac" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::state_topic_</definition>
+        <argsstring></argsstring>
+        <name>state_topic_</name>
+        <briefdescription>
+<para>Topic for vehicle state data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="43" column="17" bodyfile="include/odometry/odometry_node.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1ab9021dc5d06976013a7c52fac534288d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::odom_topic_</definition>
+        <argsstring></argsstring>
+        <name>odom_topic_</name>
+        <briefdescription>
+<para>Topic for publishing odometry data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="44" column="17" bodyfile="include/odometry/odometry_node.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1afcf3594420afbff91bdfb000dd35d079" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::imu_topic_</definition>
+        <argsstring></argsstring>
+        <name>imu_topic_</name>
+        <briefdescription>
+<para>Topic for receiving IMU data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="45" column="17" bodyfile="include/odometry/odometry_node.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a2a1306ebd99cecda5e2c82e550e006b4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::reset_topic_</definition>
+        <argsstring></argsstring>
+        <name>reset_topic_</name>
+        <briefdescription>
+<para>Topic for odometry reset commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="46" column="17" bodyfile="include/odometry/odometry_node.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1aa2c69032ffcfd721e4a5727b3ab5df5e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::electrical_drive_topic_</definition>
+        <argsstring></argsstring>
+        <name>electrical_drive_topic_</name>
+        <briefdescription>
+<para>Topic for electrical drive commands (speed in erpm and steer in pwm). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="47" column="17" bodyfile="include/odometry/odometry_node.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1adf98695eaf0d9ab69e2eda23f8dc321c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::speed_to_erpm_gain_</definition>
+        <argsstring></argsstring>
+        <name>speed_to_erpm_gain_</name>
+        <briefdescription>
+<para>Gain for converting speed to ERPM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="48" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a6f72b42252670ad29437cd1a61edb2e3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::speed_to_erpm_offset_</definition>
+        <argsstring></argsstring>
+        <name>speed_to_erpm_offset_</name>
+        <briefdescription>
+<para>Offset for converting speed to ERPM (0 for this car setup). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="49" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a4462517ab786d1108f17e19a82a16817" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::steering_to_servo_gain_</definition>
+        <argsstring></argsstring>
+        <name>steering_to_servo_gain_</name>
+        <briefdescription>
+<para>Gain for converting steering angle to servo position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="50" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a1164f5ac145d758d6c7467f7be024d08" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::steering_to_servo_offset_</definition>
+        <argsstring></argsstring>
+        <name>steering_to_servo_offset_</name>
+        <briefdescription>
+<para>Offset for converting steering angle to servo position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="51" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1ad37078c440e7d9208e5a9757fd8d76d8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::odom_frame_id_</definition>
+        <argsstring></argsstring>
+        <name>odom_frame_id_</name>
+        <briefdescription>
+<para>Frame ID for odometry used in tf2 publish. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="52" column="17" bodyfile="include/odometry/odometry_node.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a2303195a5e2cf126036b0efbf26bf0dc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::base_frame_id_</definition>
+        <argsstring></argsstring>
+        <name>base_frame_id_</name>
+        <briefdescription>
+<para>Frame ID for the base link used in tf2 publish. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="53" column="17" bodyfile="include/odometry/odometry_node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a53c9e66593230951c87c2351218b2067" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ackermann_msgs::msg::AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ackermann_msgs::msg::AckermannDriveStamped&gt;::SharedPtr OdometryNode::drive_sub_</definition>
+        <argsstring></argsstring>
+        <name>drive_sub_</name>
+        <briefdescription>
+<para>Subscription to drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="56" column="38" bodyfile="include/odometry/odometry_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1acf8e161e9bd86f951602725394bad0b9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; vesc_msgs::msg::VescImuStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;vesc_msgs::msg::VescImuStamped&gt;::SharedPtr OdometryNode::imu_sub_</definition>
+        <argsstring></argsstring>
+        <name>imu_sub_</name>
+        <briefdescription>
+<para>Subscription to IMU data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="57" column="38" bodyfile="include/odometry/odometry_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a9c8d15d0d6f4d3a38d4faeecfb1cb016" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr OdometryNode::odom_reset_sub_</definition>
+        <argsstring></argsstring>
+        <name>odom_reset_sub_</name>
+        <briefdescription>
+<para>Subscription to odometry reset commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="58" column="38" bodyfile="include/odometry/odometry_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1ad35baabeb48659d5cd288f3bcd52babc" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; vesc_msgs::msg::VescStateStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;vesc_msgs::msg::VescStateStamped&gt;::SharedPtr OdometryNode::state_sub_</definition>
+        <argsstring></argsstring>
+        <name>state_sub_</name>
+        <briefdescription>
+<para>Subscription to vehicle state data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="59" column="38" bodyfile="include/odometry/odometry_node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1abef7e4f0ef97f8092dd2c055d281bd1f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Odometry&gt;::SharedPtr OdometryNode::odom_pub_</definition>
+        <argsstring></argsstring>
+        <name>odom_pub_</name>
+        <briefdescription>
+<para>Publisher for odometry data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="60" column="35" bodyfile="include/odometry/odometry_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a6648cb6cb0932a853b72c8fa3369603c" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ackermann_msgs::msg::AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ackermann_msgs::msg::AckermannDriveStamped&gt;::SharedPtr OdometryNode::electrical_drive_pub_</definition>
+        <argsstring></argsstring>
+        <name>electrical_drive_pub_</name>
+        <briefdescription>
+<para>Publisher for electrical drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="61" column="35" bodyfile="include/odometry/odometry_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a935d33935c9aaf7f03a27004058f530f" prot="private" static="no" mutable="no">
+        <type>OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>OnSetParametersCallbackHandle::SharedPtr OdometryNode::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+<para>Handle for dynamic parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="62" column="46" bodyfile="include/odometry/odometry_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1ab4fbfb837633efac62093b5376b862d6" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; tf2_ros::TransformBroadcaster &gt;</type>
+        <definition>std::shared_ptr&lt;tf2_ros::TransformBroadcaster&gt; OdometryNode::tf_pub_</definition>
+        <argsstring></argsstring>
+        <name>tf_pub_</name>
+        <briefdescription>
+<para>Transform broadcaster for publishing odometry transforms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="63" column="21" bodyfile="include/odometry/odometry_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1aba27d29137320c4044525bbe17beb2a6" prot="private" static="no" mutable="no">
+        <type>nav_msgs::msg::Odometry</type>
+        <definition>nav_msgs::msg::Odometry OdometryNode::odom</definition>
+        <argsstring></argsstring>
+        <name>odom</name>
+        <briefdescription>
+<para><ref refid="classOdometry" kindref="compound">Odometry</ref> message to track vehicle pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="66" column="29" bodyfile="include/odometry/odometry_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a425fbbebdff3be8ab735f237a2cfa640" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::speed_erpm</definition>
+        <argsstring></argsstring>
+        <name>speed_erpm</name>
+        <briefdescription>
+<para>Feedback speed in ERPM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="67" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a50e977524776b9c647cba2bbfa8baec4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::steering_angle</definition>
+        <argsstring></argsstring>
+        <name>steering_angle</name>
+        <briefdescription>
+<para>Input steering angle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="68" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1ab2203f14e74f167771906661171cccd7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::drive_speed</definition>
+        <argsstring></argsstring>
+        <name>drive_speed</name>
+        <briefdescription>
+<para>Input drive speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="69" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a5571209f6a5640d15f338022e3906810" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::yaw_rate</definition>
+        <argsstring></argsstring>
+        <name>yaw_rate</name>
+        <briefdescription>
+<para>Angular velocity along the Z-axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="70" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a0f1bcb29b6ab67b8333907e0f886b513" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::acceleration_x</definition>
+        <argsstring></argsstring>
+        <name>acceleration_x</name>
+        <briefdescription>
+<para>Acceleration along the X-axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="71" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a002311e9644642dd76238fdf4df54f39" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::acceleration_y</definition>
+        <argsstring></argsstring>
+        <name>acceleration_y</name>
+        <briefdescription>
+<para>Acceleration along the Y-axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="72" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1af392c05ea18474b576b427d7700a40e6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::yaw</definition>
+        <argsstring></argsstring>
+        <name>yaw</name>
+        <briefdescription>
+<para>Yaw angle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="73" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a84886ce160ad1409f482cd0e8e0a05f8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <briefdescription>
+<para>Time step for integration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="74" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a4317e05ebb65477fc2ce9b2f14d0dc3c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::last_time</definition>
+        <argsstring></argsstring>
+        <name>last_time</name>
+        <briefdescription>
+<para>Time of the last update. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="75" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1ac15ee4d636dc01620568c78d1037ef78" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::erpm_speed</definition>
+        <argsstring></argsstring>
+        <name>erpm_speed</name>
+        <briefdescription>
+<para>Speed in ERPM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="76" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1aab4914dd02d4eda9aec30b6c91ef608a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::pwm_steering</definition>
+        <argsstring></argsstring>
+        <name>pwm_steering</name>
+        <briefdescription>
+<para>Steering angle in PWM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="77" column="12" bodyfile="include/odometry/odometry_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a19a8edb239e45b3b494f6a087081732a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OdometryNode::imu_received</definition>
+        <argsstring></argsstring>
+        <name>imu_received</name>
+        <briefdescription>
+<para>Flag to indicate if IMU data has been received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="80" column="10" bodyfile="include/odometry/odometry_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1aae2586738e0333365fbaca60acf5ac86" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OdometryNode::speed_received</definition>
+        <argsstring></argsstring>
+        <name>speed_received</name>
+        <briefdescription>
+<para>Flag to indicate if vehicle speed data has been received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="81" column="10" bodyfile="include/odometry/odometry_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a41e025d5e87d5bc07538be2b37365103" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OdometryNode::steering_received</definition>
+        <argsstring></argsstring>
+        <name>steering_received</name>
+        <briefdescription>
+<para>Flag to indicate if steering data has been received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="82" column="10" bodyfile="include/odometry/odometry_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a4587f0425ad75de2b94176a6bc649524" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OdometryNode::first_time</definition>
+        <argsstring></argsstring>
+        <name>first_time</name>
+        <briefdescription>
+<para>Flag to indicate if this is the first time processing data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="83" column="10" bodyfile="include/odometry/odometry_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a1d09d6b500fa0076d6f1b3f6949953e5" prot="private" static="no" mutable="no">
+        <type><ref refid="structOdometryState" kindref="compound">OdometryState</ref></type>
+        <definition>OdometryState OdometryNode::current_state</definition>
+        <argsstring></argsstring>
+        <name>current_state</name>
+        <briefdescription>
+<para>Current state of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="86" column="19" bodyfile="include/odometry/odometry_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classOdometryNode_1a76ed703f462b2388384bf14f6e84ca6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OdometryNode::OdometryNode</definition>
+        <argsstring>()</argsstring>
+        <name>OdometryNode</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classOdometryNode" kindref="compound">OdometryNode</ref> class. Initializes parameters, publishers, and subscribers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="36" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classOdometryNode_1affcd9328f7adca1c272b8b08cc85a686" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult OdometryNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Callback for handling dynamic parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of the parameter update operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="94" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometryNode_1a0c7a05eade68ed3235665ff1e090b213" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::imu_callback</definition>
+        <argsstring>(const vesc_msgs::msg::VescImuStamped::SharedPtr imu_msg)</argsstring>
+        <name>imu_callback</name>
+        <param>
+          <type>const vesc_msgs::msg::VescImuStamped::SharedPtr</type>
+          <declname>imu_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing IMU data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>imu_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message containing IMU data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="101" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometryNode_1a72fc185daa9653c1b3edcfef212a48d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::state_callback</definition>
+        <argsstring>(const vesc_msgs::msg::VescStateStamped::SharedPtr state_msg)</argsstring>
+        <name>state_callback</name>
+        <param>
+          <type>const vesc_msgs::msg::VescStateStamped::SharedPtr</type>
+          <declname>state_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing vehicle state data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message containing vehicle state data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="108" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometryNode_1ae756a007f75ad2a1b577443fa9304e1e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::drive_callback</definition>
+        <argsstring>(const ackermann_msgs::msg::AckermannDriveStamped::SharedPtr drive_msg)</argsstring>
+        <name>drive_callback</name>
+        <param>
+          <type>const ackermann_msgs::msg::AckermannDriveStamped::SharedPtr</type>
+          <declname>drive_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drive_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message containing drive commands. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="115" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometryNode_1aafbce24a748ff33e2250e42b2b93d879" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::publish_odometry</definition>
+        <argsstring>(OdometryState odom)</argsstring>
+        <name>publish_odometry</name>
+        <param>
+          <type><ref refid="structOdometryState" kindref="compound">OdometryState</ref></type>
+          <declname>odom</declname>
+        </param>
+        <briefdescription>
+<para>Publishes computed odometry data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound">Odometry</ref> message to publish. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="122" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometryNode_1aa5611a5914943109ffbc159653be620b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::publish_electrical_drive</definition>
+        <argsstring>(double erpm_speed, double pwm_steering)</argsstring>
+        <name>publish_electrical_drive</name>
+        <param>
+          <type>double</type>
+          <declname>erpm_speed</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>pwm_steering</declname>
+        </param>
+        <briefdescription>
+<para>Publishes electrical drive commands (speed in ERPM and steer in PWM). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>erpm_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Speed in ERPM. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwm_steering</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Steering angle in PWM. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="130" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometryNode_1a44858317a177bb812c52412e34695a85" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::reset_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr reset_msg)</argsstring>
+        <name>reset_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>reset_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing odometry reset commands. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether to reset odometry. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry_node.hpp" line="137" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS2 node for odometry reconstruction. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classOdometryNode" kindref="compound">OdometryNode</ref> class subscribes to drive, IMU, and vehicle state data, processing the information to compute and publish vehicle odometry. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>OdometryNode</label>
+        <link refid="classOdometryNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>OdometryNode</label>
+        <link refid="classOdometryNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/odometry/odometry_node.hpp" line="31" column="39" bodyfile="include/odometry/odometry_node.hpp" bodystart="31" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classOdometryNode_1a0f1bcb29b6ab67b8333907e0f886b513" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>acceleration_x</name></member>
+      <member refid="classOdometryNode_1a002311e9644642dd76238fdf4df54f39" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>acceleration_y</name></member>
+      <member refid="classOdometryNode_1a2303195a5e2cf126036b0efbf26bf0dc" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>base_frame_id_</name></member>
+      <member refid="classOdometryNode_1a1d09d6b500fa0076d6f1b3f6949953e5" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>current_state</name></member>
+      <member refid="classOdometryNode_1ae756a007f75ad2a1b577443fa9304e1e" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>drive_callback</name></member>
+      <member refid="classOdometryNode_1ab2203f14e74f167771906661171cccd7" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>drive_speed</name></member>
+      <member refid="classOdometryNode_1a53c9e66593230951c87c2351218b2067" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>drive_sub_</name></member>
+      <member refid="classOdometryNode_1a44915d32da272321d7841f2928a3fa88" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>drive_topic_</name></member>
+      <member refid="classOdometryNode_1a84886ce160ad1409f482cd0e8e0a05f8" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>dt</name></member>
+      <member refid="classOdometryNode_1a6648cb6cb0932a853b72c8fa3369603c" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>electrical_drive_pub_</name></member>
+      <member refid="classOdometryNode_1aa2c69032ffcfd721e4a5727b3ab5df5e" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>electrical_drive_topic_</name></member>
+      <member refid="classOdometryNode_1ac15ee4d636dc01620568c78d1037ef78" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>erpm_speed</name></member>
+      <member refid="classOdometryNode_1a4587f0425ad75de2b94176a6bc649524" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>first_time</name></member>
+      <member refid="classOdometryNode_1a0c7a05eade68ed3235665ff1e090b213" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>imu_callback</name></member>
+      <member refid="classOdometryNode_1a19a8edb239e45b3b494f6a087081732a" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>imu_received</name></member>
+      <member refid="classOdometryNode_1acf8e161e9bd86f951602725394bad0b9" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>imu_sub_</name></member>
+      <member refid="classOdometryNode_1afcf3594420afbff91bdfb000dd35d079" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>imu_topic_</name></member>
+      <member refid="classOdometryNode_1a4317e05ebb65477fc2ce9b2f14d0dc3c" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>last_time</name></member>
+      <member refid="classOdometryNode_1aba27d29137320c4044525bbe17beb2a6" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>odom</name></member>
+      <member refid="classOdometryNode_1ad37078c440e7d9208e5a9757fd8d76d8" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>odom_frame_id_</name></member>
+      <member refid="classOdometryNode_1abef7e4f0ef97f8092dd2c055d281bd1f" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>odom_pub_</name></member>
+      <member refid="classOdometryNode_1a9c8d15d0d6f4d3a38d4faeecfb1cb016" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>odom_reset_sub_</name></member>
+      <member refid="classOdometryNode_1ab9021dc5d06976013a7c52fac534288d" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>odom_topic_</name></member>
+      <member refid="classOdometryNode_1a76ed703f462b2388384bf14f6e84ca6c" prot="public" virt="non-virtual"><scope>OdometryNode</scope><name>OdometryNode</name></member>
+      <member refid="classOdometryNode_1affcd9328f7adca1c272b8b08cc85a686" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>params_callback</name></member>
+      <member refid="classOdometryNode_1a935d33935c9aaf7f03a27004058f530f" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>params_callback_handle_</name></member>
+      <member refid="classOdometryNode_1aa5611a5914943109ffbc159653be620b" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>publish_electrical_drive</name></member>
+      <member refid="classOdometryNode_1aafbce24a748ff33e2250e42b2b93d879" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>publish_odometry</name></member>
+      <member refid="classOdometryNode_1aab4914dd02d4eda9aec30b6c91ef608a" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>pwm_steering</name></member>
+      <member refid="classOdometryNode_1a6f137e4f044648c2b69468232f737785" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>reconstruction_type_</name></member>
+      <member refid="classOdometryNode_1a44858317a177bb812c52412e34695a85" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>reset_callback</name></member>
+      <member refid="classOdometryNode_1a2a1306ebd99cecda5e2c82e550e006b4" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>reset_topic_</name></member>
+      <member refid="classOdometryNode_1a425fbbebdff3be8ab735f237a2cfa640" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>speed_erpm</name></member>
+      <member refid="classOdometryNode_1aae2586738e0333365fbaca60acf5ac86" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>speed_received</name></member>
+      <member refid="classOdometryNode_1adf98695eaf0d9ab69e2eda23f8dc321c" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>speed_to_erpm_gain_</name></member>
+      <member refid="classOdometryNode_1a6f72b42252670ad29437cd1a61edb2e3" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>speed_to_erpm_offset_</name></member>
+      <member refid="classOdometryNode_1a72fc185daa9653c1b3edcfef212a48d8" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>state_callback</name></member>
+      <member refid="classOdometryNode_1ad35baabeb48659d5cd288f3bcd52babc" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>state_sub_</name></member>
+      <member refid="classOdometryNode_1a584c93a04cd2e18855f100208ba8a7ac" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>state_topic_</name></member>
+      <member refid="classOdometryNode_1a50e977524776b9c647cba2bbfa8baec4" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>steering_angle</name></member>
+      <member refid="classOdometryNode_1a41e025d5e87d5bc07538be2b37365103" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>steering_received</name></member>
+      <member refid="classOdometryNode_1a4462517ab786d1108f17e19a82a16817" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>steering_to_servo_gain_</name></member>
+      <member refid="classOdometryNode_1a1164f5ac145d758d6c7467f7be024d08" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>steering_to_servo_offset_</name></member>
+      <member refid="classOdometryNode_1ab4fbfb837633efac62093b5376b862d6" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>tf_pub_</name></member>
+      <member refid="classOdometryNode_1a2e84dc08428147f3f3bc33ff28538864" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>wb_</name></member>
+      <member refid="classOdometryNode_1af392c05ea18474b576b427d7700a40e6" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>yaw</name></member>
+      <member refid="classOdometryNode_1a5571209f6a5640d15f338022e3906810" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>yaw_rate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

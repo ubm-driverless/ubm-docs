@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classLidarFilterNode" kind="class" language="C++" prot="public">
+    <compoundname>LidarFilterNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes local="no">lidar_filter_node.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLidarFilterNode_1a60a9e81bda54169b022efdc33cbbf4b4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float LidarFilterNode::max_range_</definition>
+        <argsstring></argsstring>
+        <name>max_range_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum allowable range for LiDAR data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="31" column="11" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLidarFilterNode_1a3dc8e4c5c5a9cc996c3064a0f4855fcb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float LidarFilterNode::min_range_</definition>
+        <argsstring></argsstring>
+        <name>min_range_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum allowable range for LiDAR data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="32" column="11" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLidarFilterNode_1aed12ca087e161a68aa6d283935284606" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LidarFilterNode::mean_filter_size_</definition>
+        <argsstring></argsstring>
+        <name>mean_filter_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size of the mean filter kernel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="33" column="9" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLidarFilterNode_1a3c5741958eb826bc7468648dbcacb2e6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LidarFilterNode::num_mean_filters_</definition>
+        <argsstring></argsstring>
+        <name>num_mean_filters_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of times the mean filter is applied. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="34" column="9" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLidarFilterNode_1a8e9dbb100155dda4cf42f582d515cac4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LidarFilterNode::median_filter_window_</definition>
+        <argsstring></argsstring>
+        <name>median_filter_window_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size of the median filter window. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="35" column="9" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLidarFilterNode_1a67dadc3d3fdaa4a9c90777380a602810" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LidarFilterNode::enable_median_filter_</definition>
+        <argsstring></argsstring>
+        <name>enable_median_filter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag to enable or disable median filtering. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="36" column="10" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLidarFilterNode_1a0b8c2176f05e1bf7818b1fb26ff3e6ba" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LidarFilterNode::enable_outliers_filter_</definition>
+        <argsstring></argsstring>
+        <name>enable_outliers_filter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag to enable or disable outliers filtering. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="37" column="10" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLidarFilterNode_1a56ba8e931ce9039f0ba61d9dc9d97625" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string LidarFilterNode::car_name_</definition>
+        <argsstring></argsstring>
+        <name>car_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name of the car, used for reference purposes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="38" column="17" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLidarFilterNode_1a76ab41c1a06cf0b88a29c4d7d9e69f33" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; sensor_msgs::msg::LaserScan &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;sensor_msgs::msg::LaserScan&gt;::SharedPtr LidarFilterNode::lidar_subscription_</definition>
+        <argsstring></argsstring>
+        <name>lidar_subscription_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subscriber for raw LiDAR scans. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="41" column="38" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLidarFilterNode_1aad1a846522c441712ca9e52fdbd524d1" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; sensor_msgs::msg::LaserScan &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;sensor_msgs::msg::LaserScan&gt;::SharedPtr LidarFilterNode::preprocessed_lidar_publisher_</definition>
+        <argsstring></argsstring>
+        <name>preprocessed_lidar_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for preprocessed LiDAR scans. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="42" column="35" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLidarFilterNode_1a1fa9ab7188a409227f7c3574155fbcc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LidarFilterNode::LidarFilterNode</definition>
+        <argsstring>()</argsstring>
+        <name>LidarFilterNode</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classLidarFilterNode" kindref="compound">LidarFilterNode</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the node, sets up parameters, and creates subscribers and publishers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="27" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classLidarFilterNode_1a8d82715638b87d4064bcf96a96f91b25" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LidarFilterNode::initialize_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_parameters</name>
+        <briefdescription>
+<para>Initialize ROS parameters for the node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameters are declared and retrieved from the ROS parameter server. These include filter settings, range limits, and topic names. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="50" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classLidarFilterNode_1ab468810f021509a8209b1e7f1e9ec3b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LidarFilterNode::initialize_ros_communication</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_ros_communication</name>
+        <briefdescription>
+<para>Set up ROS subscribers and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a subscription to the raw LiDAR scan topic and a publisher for the processed LiDAR scan topic. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classLidarFilterNode_1a00c288f6300fbcf2d9b00ea59120ddcc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LidarFilterNode::process_scan</definition>
+        <argsstring>(const sensor_msgs::msg::LaserScan::SharedPtr msg)</argsstring>
+        <name>process_scan</name>
+        <param>
+          <type>const sensor_msgs::msg::LaserScan::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback function to process incoming LiDAR scans. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is triggered when a new scan message is received. It applies preprocessing techniques such as filtering and range clamping to the scan data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the received LiDAR scan message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="68" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classLidarFilterNode_1a5e959137dc79b9786effd43c32c0b6b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LidarFilterNode::filter_and_clamp_ranges</definition>
+        <argsstring>(std::vector&lt; float &gt; &amp;ranges)</argsstring>
+        <name>filter_and_clamp_ranges</name>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>ranges</declname>
+        </param>
+        <briefdescription>
+<para>Filters and clamps LiDAR range data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of LiDAR ranges to be processed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="74" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classLidarFilterNode_1a245c971e888403c8ac78cad21bfa8232" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LidarFilterNode::publish_preprocessed_scan</definition>
+        <argsstring>(const sensor_msgs::msg::LaserScan::SharedPtr &amp;original_msg, std::vector&lt; float &gt; &amp;ranges)</argsstring>
+        <name>publish_preprocessed_scan</name>
+        <param>
+          <type>const sensor_msgs::msg::LaserScan::SharedPtr &amp;</type>
+          <declname>original_msg</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>ranges</declname>
+        </param>
+        <briefdescription>
+<para>Publish the preprocessed LiDAR scan message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new LaserScan message from the original message with the processed range data, then publishes it to the configured topic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>original_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the original scan message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of processed LiDAR ranges. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter_node.hpp" line="86" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS2 node to preprocess LiDAR data by applying filters and range clamping. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This node subscribes to a raw LiDAR scan topic, processes the data by applying outlier filtering, median filtering, and mean filtering, and republishes the filtered scan data. It provides configurable parameters for filter settings and range clamping. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Node</label>
+      </node>
+      <node id="1">
+        <label>LidarFilterNode</label>
+        <link refid="classLidarFilterNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Node</label>
+      </node>
+      <node id="1">
+        <label>LidarFilterNode</label>
+        <link refid="classLidarFilterNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/lidar_filter/lidar_filter_node.hpp" line="20" column="42" bodyfile="include/lidar_filter/lidar_filter_node.hpp" bodystart="20" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classLidarFilterNode_1a56ba8e931ce9039f0ba61d9dc9d97625" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>car_name_</name></member>
+      <member refid="classLidarFilterNode_1a67dadc3d3fdaa4a9c90777380a602810" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>enable_median_filter_</name></member>
+      <member refid="classLidarFilterNode_1a0b8c2176f05e1bf7818b1fb26ff3e6ba" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>enable_outliers_filter_</name></member>
+      <member refid="classLidarFilterNode_1a5e959137dc79b9786effd43c32c0b6b7" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>filter_and_clamp_ranges</name></member>
+      <member refid="classLidarFilterNode_1a8d82715638b87d4064bcf96a96f91b25" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>initialize_parameters</name></member>
+      <member refid="classLidarFilterNode_1ab468810f021509a8209b1e7f1e9ec3b5" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>initialize_ros_communication</name></member>
+      <member refid="classLidarFilterNode_1a76ab41c1a06cf0b88a29c4d7d9e69f33" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>lidar_subscription_</name></member>
+      <member refid="classLidarFilterNode_1a1fa9ab7188a409227f7c3574155fbcc1" prot="public" virt="non-virtual"><scope>LidarFilterNode</scope><name>LidarFilterNode</name></member>
+      <member refid="classLidarFilterNode_1a60a9e81bda54169b022efdc33cbbf4b4" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>max_range_</name></member>
+      <member refid="classLidarFilterNode_1aed12ca087e161a68aa6d283935284606" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>mean_filter_size_</name></member>
+      <member refid="classLidarFilterNode_1a8e9dbb100155dda4cf42f582d515cac4" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>median_filter_window_</name></member>
+      <member refid="classLidarFilterNode_1a3dc8e4c5c5a9cc996c3064a0f4855fcb" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>min_range_</name></member>
+      <member refid="classLidarFilterNode_1a3c5741958eb826bc7468648dbcacb2e6" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>num_mean_filters_</name></member>
+      <member refid="classLidarFilterNode_1aad1a846522c441712ca9e52fdbd524d1" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>preprocessed_lidar_publisher_</name></member>
+      <member refid="classLidarFilterNode_1a00c288f6300fbcf2d9b00ea59120ddcc" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>process_scan</name></member>
+      <member refid="classLidarFilterNode_1a245c971e888403c8ac78cad21bfa8232" prot="private" virt="non-virtual"><scope>LidarFilterNode</scope><name>publish_preprocessed_scan</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

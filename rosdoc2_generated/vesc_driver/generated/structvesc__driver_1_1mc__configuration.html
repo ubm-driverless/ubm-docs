@@ -1,0 +1,940 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struct mc_configuration &mdash; vesc_driver 1.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=fc837d61"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct mc_rpm_dep_struct" href="structvesc__driver_1_1mc__rpm__dep__struct.html" />
+    <link rel="prev" title="Struct imu_config" href="structvesc__driver_1_1imu__config.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            vesc_driver
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_vesc_driver.html">Namespace vesc_driver</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structCRC_1_1Parameters.html">Template Struct CRC::Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structCRC_1_1Table.html">Template Struct CRC::Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1adc__config.html">Struct adc_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1app__configuration.html">Struct app_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1ATTITUDE__INFO.html">Struct ATTITUDE_INFO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1balance__config.html">Struct balance_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg.html">Struct can_status_msg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__2.html">Struct can_status_msg_2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__3.html">Struct can_status_msg_3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__4.html">Struct can_status_msg_4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__5.html">Struct can_status_msg_5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1chuck__data.html">Struct chuck_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1chuk__config.html">Struct chuk_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1fault__data.html">Struct fault_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1imu__config.html">Struct imu_config</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Struct mc_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__rpm__dep__struct.html">Struct mc_rpm_dep_struct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__values.html">Struct mc_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mote__state.html">Struct mote_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1nrf__config.html">Struct nrf_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1ppm__config.html">Struct ppm_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1setup__values.html">Struct setup_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1VescDriver_1_1CommandLimit.html">Struct VescDriver::CommandLimit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1VSerialInfo__t.html">Struct VSerialInfo_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCRC.html">Class CRC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1PacketFactoryTemplate.html">Template Class PacketFactoryTemplate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1SerialException.html">Class SerialException</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescDeviceLookup.html">Class VescDeviceLookup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescDriver.html">Class VescDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescFrame.html">Class VescFrame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescInterface.html">Class VescInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacket.html">Class VescPacket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketFactory.html">Class VescPacketFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketFWVersion.html">Class VescPacketFWVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketImu.html">Class VescPacketImu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestFWVersion.html">Class VescPacketRequestFWVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestImu.html">Class VescPacketRequestImu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestValues.html">Class VescPacketRequestValues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetCurrent.html">Class VescPacketSetCurrent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetCurrentBrake.html">Class VescPacketSetCurrentBrake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetDuty.html">Class VescPacketSetDuty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetPos.html">Class VescPacketSetPos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetRPM.html">Class VescPacketSetRPM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetServoPos.html">Class VescPacketSetServoPos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketValues.html">Class VescPacketValues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4.html">Enum adc_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5950ddeee9212ba83433f85c93a835bd.html">Enum AHRS_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac4d298226d152810103dfa554ac55966.html">Enum app_use</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a877e9c650835fec907896e3affdf8029.html">Enum BATTERY_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2e.html">Enum CAN_BAUD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6068ce8e2b2f011583bd6e3f47867fc5.html">Enum CAN_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02.html">Enum CAN_PACKET_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394.html">Enum CAN_STATUS_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bde.html">Enum CFG_T</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a85332f8edd172e76c48306639165855e.html">Enum chuk_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5.html">Enum COMM_PACKET_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61e.html">Enum debug_sampling_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a9d554e45533d65de81725771a035420f.html">Enum disp_pos_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6e41639d201e98ebe2e5a546fb8926cb.html">Enum drv8301_oc_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a7d50e7e730bc8f2de2b905fd131f7e34.html">Enum FOC_HFI_SAMPLES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aea86ed1310f7bac5436bb1d9cfd2b5cc.html">Enum gpd_output_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a991de85646df7979b3aecc17c738b6cc.html">Enum IMU_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9bae.html">Enum LED_EXT_STATE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a94dd3adcd583aa7571b67be0fe71e4c4.html">Enum mc_comm_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6.html">Enum mc_control_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1add07239a8d01883eb907388a53df457a.html">Enum mc_fault_code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5fb601d3d3593117aa2500e92b3f3c5e.html">Enum mc_foc_cc_decoupling_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a30b7ef228cda5d4ca51fb63be2da0428.html">Enum mc_foc_observer_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a4da904a4c4a29bba71d531a12f1746ca.html">Enum mc_foc_sensor_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aba46e12afe600fb9e1bda76272285050.html">Enum mc_motor_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5429e726bd7c0770419236fd596f68fb.html">Enum mc_pwm_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac75a4404acbc7ec308267d0856f668d0.html">Enum mc_sensor_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a0f20f041589eff3006f06cdd6738587b.html">Enum mc_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0a.html">Enum MOTE_PACKET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a82bde9a7aa25e2f36bebecd29aa4b93e.html">Enum NRF_AW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aad838390066a6ba9ad9478d33500a845.html">Enum NRF_CRC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aff9921401b1c440fa36f01cba40978de.html">Enum NRF_PAIR_RES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ab4db6b6b86c3a3c1af1eb25bb47d3026.html">Enum NRF_POWER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162.html">Enum NRF_RETR_DELAY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a97e3b0a9f8e660b4e9d8dfa391e89c5d.html">Enum NRF_SPEED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266d.html">Enum out_aux_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bb.html">Enum ppm_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efa.html">Enum sensor_port_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782.html">Enum SHUTDOWN_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a9fdbfdaac84788724a24df03d5c9d59a.html">Enum temp_sensor_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ad4c8d3f7b1a2b59235117ea7feb9d095.html">Enum thr_exp_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182d.html">Enum VESC_TX_T</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#unions">Unions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unionvesc__driver_1_1eeprom__var.html">Union eeprom_var</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1ac53723d95b5c8c7d707e8e3ebcb4e143.html">Define crcpp_constexpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1af44cfa9e71356f05c42b363cf04ea9a6.html">Define crcpp_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1add273674b22f031b158220eeb560c7a0.html">Define crcpp_uint16</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a4469d365469b254f21fb50316e079094.html">Define crcpp_uint32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a3541074ba795d31a40f13e78c77c0e7c.html">Define crcpp_uint64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a28cd0a17324a479874c3bdd5387d6b04.html">Define crcpp_uint8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_vesc__packet_8hpp_1a0aa3088ffa17b0bd3a345955ab23b90c.html">Define CRCPP_USE_CPP11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_datatypes_8hpp_1a7c35c014fad56a5ea9f86b25ce3c4355.html">Define EEPROM_VARS_CUSTOM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_datatypes_8hpp_1af8f381ccb1ded44a9fbd8e559b4772b9.html">Define EEPROM_VARS_HW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_vesc__packet__factory_8hpp_1ad0eb6d8ee731f885e4106a3e89cdd6bf.html">Define REGISTER_PACKET_TYPE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1af21703f925222cf808675b9d3e3e1080.html">Typedef vesc_driver::Buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1a1f7354e69e220473c86b36eee92ab6c3.html">Typedef vesc_driver::BufferRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1ae582897e181f1a22ef7621b7eb9a3675.html">Typedef vesc_driver::BufferRangeConst</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_datatypes_8hpp_1a55e79bdc72bc3aeb000f5cbb6157f509.html">Typedef vesc_driver::systime_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1a80af512a3c68b006ee27699c794f839e.html">Typedef vesc_driver::VescPacketConstPtr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1aabad57bf0bb1f43a0e9d9579b7c07903.html">Typedef vesc_driver::VescPacketPtr</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_vesc_driver.html">Directory vesc_driver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_crc.hpp.html">File crc.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_datatypes.hpp.html">File datatypes.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_device_uuid_lookup.hpp.html">File vesc_device_uuid_lookup.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_driver.hpp.html">File vesc_driver.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_interface.hpp.html">File vesc_interface.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_packet.hpp.html">File vesc_packet.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_packet_factory.hpp.html">File vesc_packet_factory.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/CHANGELOG.html">CHANGELOG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/CHANGELOG.html#changelog-for-package-vesc-driver">Changelog for package vesc_driver</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/CHANGELOG.html#id1">1.1.0 (2020-12-12)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/CHANGELOG.html#id3">1.0.0 (2020-12-02)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vesc_driver</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Struct mc_configuration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/structvesc__driver_1_1mc__configuration.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-mc-configuration">
+<span id="exhale-struct-structvesc-driver-1-1mc-configuration"></span><h1>Struct mc_configuration<a class="headerlink" href="#struct-mc-configuration" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_vesc_driver_datatypes.hpp.html#file-include-vesc-driver-datatypes-hpp"><span class="std std-ref">File datatypes.hpp</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configurationE">
+<span id="_CPPv3N11vesc_driver16mc_configurationE"></span><span id="_CPPv2N11vesc_driver16mc_configurationE"></span><span id="vesc_driver::mc_configuration"></span><span class="target" id="structvesc__driver_1_1mc__configuration"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mc_configuration</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configurationE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration8pwm_modeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration8pwm_modeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration8pwm_modeE"></span><span id="vesc_driver::mc_configuration::pwm_mode__mc_pwm_mode"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a530ca445ecc8fb2ebf7aaafbc2e25b01"></span><a class="reference internal" href="enum_datatypes_8hpp_1a5429e726bd7c0770419236fd596f68fb.html#_CPPv4N11vesc_driver11mc_pwm_modeE" title="vesc_driver::mc_pwm_mode"><span class="n"><span class="pre">mc_pwm_mode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pwm_mode</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration8pwm_modeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration9comm_modeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration9comm_modeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration9comm_modeE"></span><span id="vesc_driver::mc_configuration::comm_mode__mc_comm_mode"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aeebb22b288ec2906ad1eddf204666579"></span><a class="reference internal" href="enum_datatypes_8hpp_1a94dd3adcd583aa7571b67be0fe71e4c4.html#_CPPv4N11vesc_driver12mc_comm_modeE" title="vesc_driver::mc_comm_mode"><span class="n"><span class="pre">mc_comm_mode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">comm_mode</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration9comm_modeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration10motor_typeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration10motor_typeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration10motor_typeE"></span><span id="vesc_driver::mc_configuration::motor_type__mc_motor_type"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ae203adfdc5f27fc8521189c10f7b90c1"></span><a class="reference internal" href="enum_datatypes_8hpp_1aba46e12afe600fb9e1bda76272285050.html#_CPPv4N11vesc_driver13mc_motor_typeE" title="vesc_driver::mc_motor_type"><span class="n"><span class="pre">mc_motor_type</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motor_type</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration10motor_typeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration11sensor_modeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration11sensor_modeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration11sensor_modeE"></span><span id="vesc_driver::mc_configuration::sensor_mode__mc_sensor_mode"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1afb376ad49ec2c3c121b2f1a040f9df2c"></span><a class="reference internal" href="enum_datatypes_8hpp_1ac75a4404acbc7ec308267d0856f668d0.html#_CPPv4N11vesc_driver14mc_sensor_modeE" title="vesc_driver::mc_sensor_mode"><span class="n"><span class="pre">mc_sensor_mode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sensor_mode</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration11sensor_modeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration13l_current_maxE">
+<span id="_CPPv3N11vesc_driver16mc_configuration13l_current_maxE"></span><span id="_CPPv2N11vesc_driver16mc_configuration13l_current_maxE"></span><span id="vesc_driver::mc_configuration::l_current_max__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a6f97eed86ee1e99c506051a0d809b85a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_current_max</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration13l_current_maxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration13l_current_minE">
+<span id="_CPPv3N11vesc_driver16mc_configuration13l_current_minE"></span><span id="_CPPv2N11vesc_driver16mc_configuration13l_current_minE"></span><span id="vesc_driver::mc_configuration::l_current_min__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a2c1a57f3eb0072b3cedf3ccb5cbfb82e"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_current_min</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration13l_current_minE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16l_in_current_maxE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16l_in_current_maxE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16l_in_current_maxE"></span><span id="vesc_driver::mc_configuration::l_in_current_max__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a735bdbd95c0bf7e36342e52d74e2caf7"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_in_current_max</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16l_in_current_maxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16l_in_current_minE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16l_in_current_minE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16l_in_current_minE"></span><span id="vesc_driver::mc_configuration::l_in_current_min__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ae7af9d1a8547c5a6bc7bcf5664092db5"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_in_current_min</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16l_in_current_minE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17l_abs_current_maxE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17l_abs_current_maxE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17l_abs_current_maxE"></span><span id="vesc_driver::mc_configuration::l_abs_current_max__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a8234997ee0def0f9858c930d119f00da"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_abs_current_max</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17l_abs_current_maxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration10l_min_erpmE">
+<span id="_CPPv3N11vesc_driver16mc_configuration10l_min_erpmE"></span><span id="_CPPv2N11vesc_driver16mc_configuration10l_min_erpmE"></span><span id="vesc_driver::mc_configuration::l_min_erpm__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1af7da10b54c619e3dc51c97e6a1ea5926"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_min_erpm</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration10l_min_erpmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration10l_max_erpmE">
+<span id="_CPPv3N11vesc_driver16mc_configuration10l_max_erpmE"></span><span id="_CPPv2N11vesc_driver16mc_configuration10l_max_erpmE"></span><span id="vesc_driver::mc_configuration::l_max_erpm__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aa9774a931fed11f4eead48b96786bd70"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_max_erpm</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration10l_max_erpmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration12l_erpm_startE">
+<span id="_CPPv3N11vesc_driver16mc_configuration12l_erpm_startE"></span><span id="_CPPv2N11vesc_driver16mc_configuration12l_erpm_startE"></span><span id="vesc_driver::mc_configuration::l_erpm_start__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a61ffdf925537695aa20d07dc7b5ae079"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_erpm_start</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration12l_erpm_startE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17l_max_erpm_fbrakeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17l_max_erpm_fbrakeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17l_max_erpm_fbrakeE"></span><span id="vesc_driver::mc_configuration::l_max_erpm_fbrake__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1acb023c08c65ef9f994449becd87509d2"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_max_erpm_fbrake</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17l_max_erpm_fbrakeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration20l_max_erpm_fbrake_ccE">
+<span id="_CPPv3N11vesc_driver16mc_configuration20l_max_erpm_fbrake_ccE"></span><span id="_CPPv2N11vesc_driver16mc_configuration20l_max_erpm_fbrake_ccE"></span><span id="vesc_driver::mc_configuration::l_max_erpm_fbrake_cc__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aff9f2ee6b55736d82e9a7c54a59470cc"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_max_erpm_fbrake_cc</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration20l_max_erpm_fbrake_ccE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration9l_min_vinE">
+<span id="_CPPv3N11vesc_driver16mc_configuration9l_min_vinE"></span><span id="_CPPv2N11vesc_driver16mc_configuration9l_min_vinE"></span><span id="vesc_driver::mc_configuration::l_min_vin__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a1db8f70b3183e47276801287ea33a811"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_min_vin</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration9l_min_vinE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration9l_max_vinE">
+<span id="_CPPv3N11vesc_driver16mc_configuration9l_max_vinE"></span><span id="_CPPv2N11vesc_driver16mc_configuration9l_max_vinE"></span><span id="vesc_driver::mc_configuration::l_max_vin__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a36aed1d58e3444aa085bea743a19357f"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_max_vin</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration9l_max_vinE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration19l_battery_cut_startE">
+<span id="_CPPv3N11vesc_driver16mc_configuration19l_battery_cut_startE"></span><span id="_CPPv2N11vesc_driver16mc_configuration19l_battery_cut_startE"></span><span id="vesc_driver::mc_configuration::l_battery_cut_start__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ad85175cf72b71695de263ede5e97bb61"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_battery_cut_start</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration19l_battery_cut_startE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17l_battery_cut_endE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17l_battery_cut_endE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17l_battery_cut_endE"></span><span id="vesc_driver::mc_configuration::l_battery_cut_end__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aeef747d0c8d000662f2620c8e85b79cc"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_battery_cut_end</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17l_battery_cut_endE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration18l_slow_abs_currentE">
+<span id="_CPPv3N11vesc_driver16mc_configuration18l_slow_abs_currentE"></span><span id="_CPPv2N11vesc_driver16mc_configuration18l_slow_abs_currentE"></span><span id="vesc_driver::mc_configuration::l_slow_abs_current__b"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a4314cd992b694bc5ca0331c2886a28b5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_slow_abs_current</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration18l_slow_abs_currentE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16l_temp_fet_startE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16l_temp_fet_startE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16l_temp_fet_startE"></span><span id="vesc_driver::mc_configuration::l_temp_fet_start__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a054696d44070bd84ba5ff95300b51a8f"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_temp_fet_start</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16l_temp_fet_startE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14l_temp_fet_endE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14l_temp_fet_endE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14l_temp_fet_endE"></span><span id="vesc_driver::mc_configuration::l_temp_fet_end__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a726f936136f65ed52ced27d256ca3c3a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_temp_fet_end</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14l_temp_fet_endE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration18l_temp_motor_startE">
+<span id="_CPPv3N11vesc_driver16mc_configuration18l_temp_motor_startE"></span><span id="_CPPv2N11vesc_driver16mc_configuration18l_temp_motor_startE"></span><span id="vesc_driver::mc_configuration::l_temp_motor_start__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ab5b2da118d212eb51210ce1f5e46ec5e"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_temp_motor_start</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration18l_temp_motor_startE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16l_temp_motor_endE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16l_temp_motor_endE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16l_temp_motor_endE"></span><span id="vesc_driver::mc_configuration::l_temp_motor_end__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1acd760baefc7f5c36d46df0e3572131c2"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_temp_motor_end</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16l_temp_motor_endE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16l_temp_accel_decE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16l_temp_accel_decE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16l_temp_accel_decE"></span><span id="vesc_driver::mc_configuration::l_temp_accel_dec__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1af6fda9fb75e8ab2edda4cacca19e1bae"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_temp_accel_dec</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16l_temp_accel_decE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration10l_min_dutyE">
+<span id="_CPPv3N11vesc_driver16mc_configuration10l_min_dutyE"></span><span id="_CPPv2N11vesc_driver16mc_configuration10l_min_dutyE"></span><span id="vesc_driver::mc_configuration::l_min_duty__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a9e20fedf4ddac6288e27d7faee6bcc61"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_min_duty</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration10l_min_dutyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration10l_max_dutyE">
+<span id="_CPPv3N11vesc_driver16mc_configuration10l_max_dutyE"></span><span id="_CPPv2N11vesc_driver16mc_configuration10l_max_dutyE"></span><span id="vesc_driver::mc_configuration::l_max_duty__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ac87b3e1149beeb341dced236b7998615"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_max_duty</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration10l_max_dutyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration10l_watt_maxE">
+<span id="_CPPv3N11vesc_driver16mc_configuration10l_watt_maxE"></span><span id="_CPPv2N11vesc_driver16mc_configuration10l_watt_maxE"></span><span id="vesc_driver::mc_configuration::l_watt_max__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a81db827374116cb2271f47c8f47ac9e5"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_watt_max</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration10l_watt_maxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration10l_watt_minE">
+<span id="_CPPv3N11vesc_driver16mc_configuration10l_watt_minE"></span><span id="_CPPv2N11vesc_driver16mc_configuration10l_watt_minE"></span><span id="vesc_driver::mc_configuration::l_watt_min__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a73e8dabed95925ba6e54852fa00bceb5"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_watt_min</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration10l_watt_minE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration19l_current_max_scaleE">
+<span id="_CPPv3N11vesc_driver16mc_configuration19l_current_max_scaleE"></span><span id="_CPPv2N11vesc_driver16mc_configuration19l_current_max_scaleE"></span><span id="vesc_driver::mc_configuration::l_current_max_scale__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a868fbc383a6a2688ba44f531bbf4dfa7"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_current_max_scale</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration19l_current_max_scaleE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration19l_current_min_scaleE">
+<span id="_CPPv3N11vesc_driver16mc_configuration19l_current_min_scaleE"></span><span id="_CPPv2N11vesc_driver16mc_configuration19l_current_min_scaleE"></span><span id="vesc_driver::mc_configuration::l_current_min_scale__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1abcf4663ec2fc2cddd5818394cf9a54ea"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_current_min_scale</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration19l_current_min_scaleE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration12l_duty_startE">
+<span id="_CPPv3N11vesc_driver16mc_configuration12l_duty_startE"></span><span id="_CPPv2N11vesc_driver16mc_configuration12l_duty_startE"></span><span id="vesc_driver::mc_configuration::l_duty_start__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aaa87d3a00566955af32c120b7c0a7b58"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_duty_start</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration12l_duty_startE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14lo_current_maxE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14lo_current_maxE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14lo_current_maxE"></span><span id="vesc_driver::mc_configuration::lo_current_max__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a2ceae09d9c2367af82d2eeaeb21994de"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lo_current_max</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14lo_current_maxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14lo_current_minE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14lo_current_minE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14lo_current_minE"></span><span id="vesc_driver::mc_configuration::lo_current_min__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a52d0a3bc02009456980dc38244121926"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lo_current_min</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14lo_current_minE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17lo_in_current_maxE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17lo_in_current_maxE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17lo_in_current_maxE"></span><span id="vesc_driver::mc_configuration::lo_in_current_max__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a0eed52668f7c0a5ac2d0a688b3f48d20"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lo_in_current_max</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17lo_in_current_maxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17lo_in_current_minE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17lo_in_current_minE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17lo_in_current_minE"></span><span id="vesc_driver::mc_configuration::lo_in_current_min__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ac6f7f93f95fdf7e7bf60e5c9174d73cb"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lo_in_current_min</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17lo_in_current_minE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration24lo_current_motor_max_nowE">
+<span id="_CPPv3N11vesc_driver16mc_configuration24lo_current_motor_max_nowE"></span><span id="_CPPv2N11vesc_driver16mc_configuration24lo_current_motor_max_nowE"></span><span id="vesc_driver::mc_configuration::lo_current_motor_max_now__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a0f6a45c53bd0995345c3b287114cf026"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lo_current_motor_max_now</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration24lo_current_motor_max_nowE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration24lo_current_motor_min_nowE">
+<span id="_CPPv3N11vesc_driver16mc_configuration24lo_current_motor_min_nowE"></span><span id="_CPPv2N11vesc_driver16mc_configuration24lo_current_motor_min_nowE"></span><span id="vesc_driver::mc_configuration::lo_current_motor_min_now__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ae828e4ea2ea0bb787c3df3dfd12ae862"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lo_current_motor_min_now</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration24lo_current_motor_min_nowE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration11sl_min_erpmE">
+<span id="_CPPv3N11vesc_driver16mc_configuration11sl_min_erpmE"></span><span id="_CPPv2N11vesc_driver16mc_configuration11sl_min_erpmE"></span><span id="vesc_driver::mc_configuration::sl_min_erpm__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ae1b37fd76c4f982ef21ffc60e69be728"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sl_min_erpm</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration11sl_min_erpmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration27sl_min_erpm_cycle_int_limitE">
+<span id="_CPPv3N11vesc_driver16mc_configuration27sl_min_erpm_cycle_int_limitE"></span><span id="_CPPv2N11vesc_driver16mc_configuration27sl_min_erpm_cycle_int_limitE"></span><span id="vesc_driver::mc_configuration::sl_min_erpm_cycle_int_limit__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a0abf29078b9f4a9e090f46d2ff8031e3"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sl_min_erpm_cycle_int_limit</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration27sl_min_erpm_cycle_int_limitE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration35sl_max_fullbreak_current_dir_changeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration35sl_max_fullbreak_current_dir_changeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration35sl_max_fullbreak_current_dir_changeE"></span><span id="vesc_driver::mc_configuration::sl_max_fullbreak_current_dir_change__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1af69f676f86f6d991c93fe2175aa639e6"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sl_max_fullbreak_current_dir_change</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration35sl_max_fullbreak_current_dir_changeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration18sl_cycle_int_limitE">
+<span id="_CPPv3N11vesc_driver16mc_configuration18sl_cycle_int_limitE"></span><span id="_CPPv2N11vesc_driver16mc_configuration18sl_cycle_int_limitE"></span><span id="vesc_driver::mc_configuration::sl_cycle_int_limit__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a459f1d1abc37291b9d9e8f6a19137104"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sl_cycle_int_limit</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration18sl_cycle_int_limitE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration22sl_phase_advance_at_brE">
+<span id="_CPPv3N11vesc_driver16mc_configuration22sl_phase_advance_at_brE"></span><span id="_CPPv2N11vesc_driver16mc_configuration22sl_phase_advance_at_brE"></span><span id="vesc_driver::mc_configuration::sl_phase_advance_at_br__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a88981a95eace58233e73230e6e8cf8c0"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sl_phase_advance_at_br</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration22sl_phase_advance_at_brE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration19sl_cycle_int_rpm_brE">
+<span id="_CPPv3N11vesc_driver16mc_configuration19sl_cycle_int_rpm_brE"></span><span id="_CPPv2N11vesc_driver16mc_configuration19sl_cycle_int_rpm_brE"></span><span id="vesc_driver::mc_configuration::sl_cycle_int_rpm_br__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a4978ae5d75aed241ca868dc93439813b"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sl_cycle_int_rpm_br</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration19sl_cycle_int_rpm_brE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration18sl_bemf_coupling_kE">
+<span id="_CPPv3N11vesc_driver16mc_configuration18sl_bemf_coupling_kE"></span><span id="_CPPv2N11vesc_driver16mc_configuration18sl_bemf_coupling_kE"></span><span id="vesc_driver::mc_configuration::sl_bemf_coupling_k__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ae881626b8c3cdbb2003207cba2c23583"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sl_bemf_coupling_k</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration18sl_bemf_coupling_kE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration10hall_tableE">
+<span id="_CPPv3N11vesc_driver16mc_configuration10hall_tableE"></span><span id="_CPPv2N11vesc_driver16mc_configuration10hall_tableE"></span><span id="vesc_driver::mc_configuration::hall_table__int8_tA"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a002e929a35567830fc2af292c9847486"></span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hall_table</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">8</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration10hall_tableE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration12hall_sl_erpmE">
+<span id="_CPPv3N11vesc_driver16mc_configuration12hall_sl_erpmE"></span><span id="_CPPv2N11vesc_driver16mc_configuration12hall_sl_erpmE"></span><span id="vesc_driver::mc_configuration::hall_sl_erpm__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a1d01737b6588e47abbf0db9e10ebc958"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hall_sl_erpm</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration12hall_sl_erpmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14foc_current_kpE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14foc_current_kpE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14foc_current_kpE"></span><span id="vesc_driver::mc_configuration::foc_current_kp__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a236d71c797f58eab96b810a400887417"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_current_kp</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14foc_current_kpE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14foc_current_kiE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14foc_current_kiE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14foc_current_kiE"></span><span id="vesc_driver::mc_configuration::foc_current_ki__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a0529ad0853bb15575418321343c433ad"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_current_ki</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14foc_current_kiE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration8foc_f_swE">
+<span id="_CPPv3N11vesc_driver16mc_configuration8foc_f_swE"></span><span id="_CPPv2N11vesc_driver16mc_configuration8foc_f_swE"></span><span id="vesc_driver::mc_configuration::foc_f_sw__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a16d5e6f50b185aef5b724569232e6e84"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_f_sw</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration8foc_f_swE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration9foc_dt_usE">
+<span id="_CPPv3N11vesc_driver16mc_configuration9foc_dt_usE"></span><span id="_CPPv2N11vesc_driver16mc_configuration9foc_dt_usE"></span><span id="vesc_driver::mc_configuration::foc_dt_us__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ad091fc2dc8962bdfc49db42ccdc3fd66"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_dt_us</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration9foc_dt_usE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration18foc_encoder_offsetE">
+<span id="_CPPv3N11vesc_driver16mc_configuration18foc_encoder_offsetE"></span><span id="_CPPv2N11vesc_driver16mc_configuration18foc_encoder_offsetE"></span><span id="vesc_driver::mc_configuration::foc_encoder_offset__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a4aca4a0495a79234a500b2f9d663e08a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_encoder_offset</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration18foc_encoder_offsetE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration20foc_encoder_invertedE">
+<span id="_CPPv3N11vesc_driver16mc_configuration20foc_encoder_invertedE"></span><span id="_CPPv2N11vesc_driver16mc_configuration20foc_encoder_invertedE"></span><span id="vesc_driver::mc_configuration::foc_encoder_inverted__b"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a7c16fe7ee0ed45717a188985499a12c2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_encoder_inverted</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration20foc_encoder_invertedE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17foc_encoder_ratioE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17foc_encoder_ratioE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17foc_encoder_ratioE"></span><span id="vesc_driver::mc_configuration::foc_encoder_ratio__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a0f9ce8b9f38bcab8b31b2015a798c1a9"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_encoder_ratio</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17foc_encoder_ratioE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration22foc_encoder_sin_offsetE">
+<span id="_CPPv3N11vesc_driver16mc_configuration22foc_encoder_sin_offsetE"></span><span id="_CPPv2N11vesc_driver16mc_configuration22foc_encoder_sin_offsetE"></span><span id="vesc_driver::mc_configuration::foc_encoder_sin_offset__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a195d15c268faba88812b14db4f1773d3"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_encoder_sin_offset</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration22foc_encoder_sin_offsetE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration20foc_encoder_sin_gainE">
+<span id="_CPPv3N11vesc_driver16mc_configuration20foc_encoder_sin_gainE"></span><span id="_CPPv2N11vesc_driver16mc_configuration20foc_encoder_sin_gainE"></span><span id="vesc_driver::mc_configuration::foc_encoder_sin_gain__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a36b61f5b0d528cc3c79242620655ee38"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_encoder_sin_gain</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration20foc_encoder_sin_gainE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration22foc_encoder_cos_offsetE">
+<span id="_CPPv3N11vesc_driver16mc_configuration22foc_encoder_cos_offsetE"></span><span id="_CPPv2N11vesc_driver16mc_configuration22foc_encoder_cos_offsetE"></span><span id="vesc_driver::mc_configuration::foc_encoder_cos_offset__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a312e7c1e6fba59d6c3b76242850d660c"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_encoder_cos_offset</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration22foc_encoder_cos_offsetE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration20foc_encoder_cos_gainE">
+<span id="_CPPv3N11vesc_driver16mc_configuration20foc_encoder_cos_gainE"></span><span id="_CPPv2N11vesc_driver16mc_configuration20foc_encoder_cos_gainE"></span><span id="vesc_driver::mc_configuration::foc_encoder_cos_gain__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a9b5f8833aa316f3349e184e8553595be"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_encoder_cos_gain</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration20foc_encoder_cos_gainE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration34foc_encoder_sincos_filter_constantE">
+<span id="_CPPv3N11vesc_driver16mc_configuration34foc_encoder_sincos_filter_constantE"></span><span id="_CPPv2N11vesc_driver16mc_configuration34foc_encoder_sincos_filter_constantE"></span><span id="vesc_driver::mc_configuration::foc_encoder_sincos_filter_constant__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aca2e989cf78c9c467f3c9ec3fe025913"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_encoder_sincos_filter_constant</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration34foc_encoder_sincos_filter_constantE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration11foc_motor_lE">
+<span id="_CPPv3N11vesc_driver16mc_configuration11foc_motor_lE"></span><span id="_CPPv2N11vesc_driver16mc_configuration11foc_motor_lE"></span><span id="vesc_driver::mc_configuration::foc_motor_l__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a1dc4c93949b94bb4a91423e091bd8267"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_motor_l</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration11foc_motor_lE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration11foc_motor_rE">
+<span id="_CPPv3N11vesc_driver16mc_configuration11foc_motor_rE"></span><span id="_CPPv2N11vesc_driver16mc_configuration11foc_motor_rE"></span><span id="vesc_driver::mc_configuration::foc_motor_r__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1acc187e8c02cda318734b12c01af15887"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_motor_r</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration11foc_motor_rE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration22foc_motor_flux_linkageE">
+<span id="_CPPv3N11vesc_driver16mc_configuration22foc_motor_flux_linkageE"></span><span id="_CPPv2N11vesc_driver16mc_configuration22foc_motor_flux_linkageE"></span><span id="vesc_driver::mc_configuration::foc_motor_flux_linkage__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1acb6667274787bd43efd00eab4bf2cc72"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_motor_flux_linkage</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration22foc_motor_flux_linkageE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17foc_observer_gainE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17foc_observer_gainE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17foc_observer_gainE"></span><span id="vesc_driver::mc_configuration::foc_observer_gain__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1adbfbe416c26cfcabd7525fba67fcd131"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_observer_gain</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17foc_observer_gainE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration22foc_observer_gain_slowE">
+<span id="_CPPv3N11vesc_driver16mc_configuration22foc_observer_gain_slowE"></span><span id="_CPPv2N11vesc_driver16mc_configuration22foc_observer_gain_slowE"></span><span id="vesc_driver::mc_configuration::foc_observer_gain_slow__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a89422ece81fb5311bd1b41ca0b65e1a6"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_observer_gain_slow</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration22foc_observer_gain_slowE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration10foc_pll_kpE">
+<span id="_CPPv3N11vesc_driver16mc_configuration10foc_pll_kpE"></span><span id="_CPPv2N11vesc_driver16mc_configuration10foc_pll_kpE"></span><span id="vesc_driver::mc_configuration::foc_pll_kp__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a1f9bddb3f538252e5d2c100f9ef80e79"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_pll_kp</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration10foc_pll_kpE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration10foc_pll_kiE">
+<span id="_CPPv3N11vesc_driver16mc_configuration10foc_pll_kiE"></span><span id="_CPPv2N11vesc_driver16mc_configuration10foc_pll_kiE"></span><span id="vesc_driver::mc_configuration::foc_pll_ki__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a53e82dd5854ea86cd4b076451d8c9f72"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_pll_ki</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration10foc_pll_kiE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration20foc_duty_dowmramp_kpE">
+<span id="_CPPv3N11vesc_driver16mc_configuration20foc_duty_dowmramp_kpE"></span><span id="_CPPv2N11vesc_driver16mc_configuration20foc_duty_dowmramp_kpE"></span><span id="vesc_driver::mc_configuration::foc_duty_dowmramp_kp__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ada760f81c69285f67576ecf2f1633221"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_duty_dowmramp_kp</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration20foc_duty_dowmramp_kpE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration20foc_duty_dowmramp_kiE">
+<span id="_CPPv3N11vesc_driver16mc_configuration20foc_duty_dowmramp_kiE"></span><span id="_CPPv2N11vesc_driver16mc_configuration20foc_duty_dowmramp_kiE"></span><span id="vesc_driver::mc_configuration::foc_duty_dowmramp_ki__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a2c0a19dd0e5d3925819c0b8395774994"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_duty_dowmramp_ki</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration20foc_duty_dowmramp_kiE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16foc_openloop_rpmE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16foc_openloop_rpmE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16foc_openloop_rpmE"></span><span id="vesc_driver::mc_configuration::foc_openloop_rpm__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a2ebee0445ec0097204857daa58812e67"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_openloop_rpm</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16foc_openloop_rpmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration20foc_sl_openloop_hystE">
+<span id="_CPPv3N11vesc_driver16mc_configuration20foc_sl_openloop_hystE"></span><span id="_CPPv2N11vesc_driver16mc_configuration20foc_sl_openloop_hystE"></span><span id="vesc_driver::mc_configuration::foc_sl_openloop_hyst__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aae4f358e0344761d82f1d15df05a1632"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_sl_openloop_hyst</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration20foc_sl_openloop_hystE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration20foc_sl_openloop_timeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration20foc_sl_openloop_timeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration20foc_sl_openloop_timeE"></span><span id="vesc_driver::mc_configuration::foc_sl_openloop_time__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a26e92c0466bd481ea9b0e9de41175aee"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_sl_openloop_time</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration20foc_sl_openloop_timeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration21foc_sl_d_current_dutyE">
+<span id="_CPPv3N11vesc_driver16mc_configuration21foc_sl_d_current_dutyE"></span><span id="_CPPv2N11vesc_driver16mc_configuration21foc_sl_d_current_dutyE"></span><span id="vesc_driver::mc_configuration::foc_sl_d_current_duty__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a0b9b45653507de0bfd2c4d4e7aa85263"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_sl_d_current_duty</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration21foc_sl_d_current_dutyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration23foc_sl_d_current_factorE">
+<span id="_CPPv3N11vesc_driver16mc_configuration23foc_sl_d_current_factorE"></span><span id="_CPPv2N11vesc_driver16mc_configuration23foc_sl_d_current_factorE"></span><span id="vesc_driver::mc_configuration::foc_sl_d_current_factor__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a62376ca5388f44726f6eaa7a33043d2c"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_sl_d_current_factor</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration23foc_sl_d_current_factorE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration15foc_sensor_modeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration15foc_sensor_modeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration15foc_sensor_modeE"></span><span id="vesc_driver::mc_configuration::foc_sensor_mode__mc_foc_sensor_mode"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a85cefb4ef7e9f0cba83d50f7ac8e2640"></span><a class="reference internal" href="enum_datatypes_8hpp_1a4da904a4c4a29bba71d531a12f1746ca.html#_CPPv4N11vesc_driver18mc_foc_sensor_modeE" title="vesc_driver::mc_foc_sensor_mode"><span class="n"><span class="pre">mc_foc_sensor_mode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_sensor_mode</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration15foc_sensor_modeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14foc_hall_tableE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14foc_hall_tableE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14foc_hall_tableE"></span><span id="vesc_driver::mc_configuration::foc_hall_table__uint8_tA"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a83487645ce4e6f3f7f6b464ec851ee45"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_hall_table</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">8</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14foc_hall_tableE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration11foc_sl_erpmE">
+<span id="_CPPv3N11vesc_driver16mc_configuration11foc_sl_erpmE"></span><span id="_CPPv2N11vesc_driver16mc_configuration11foc_sl_erpmE"></span><span id="vesc_driver::mc_configuration::foc_sl_erpm__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a90e4a69be1abd0e280146eefb3ba6569"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_sl_erpm</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration11foc_sl_erpmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16foc_sample_v0_v7E">
+<span id="_CPPv3N11vesc_driver16mc_configuration16foc_sample_v0_v7E"></span><span id="_CPPv2N11vesc_driver16mc_configuration16foc_sample_v0_v7E"></span><span id="vesc_driver::mc_configuration::foc_sample_v0_v7__b"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a80e21dd78f3f8d22d828420ae292726b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_sample_v0_v7</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16foc_sample_v0_v7E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration23foc_sample_high_currentE">
+<span id="_CPPv3N11vesc_driver16mc_configuration23foc_sample_high_currentE"></span><span id="_CPPv2N11vesc_driver16mc_configuration23foc_sample_high_currentE"></span><span id="vesc_driver::mc_configuration::foc_sample_high_current__b"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a2c34a4525a847c14477964a7df02db8f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_sample_high_current</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration23foc_sample_high_currentE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration12foc_sat_compE">
+<span id="_CPPv3N11vesc_driver16mc_configuration12foc_sat_compE"></span><span id="_CPPv2N11vesc_driver16mc_configuration12foc_sat_compE"></span><span id="vesc_driver::mc_configuration::foc_sat_comp__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a9212ce7684e94e8e813726f941659108"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_sat_comp</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration12foc_sat_compE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration13foc_temp_compE">
+<span id="_CPPv3N11vesc_driver16mc_configuration13foc_temp_compE"></span><span id="_CPPv2N11vesc_driver16mc_configuration13foc_temp_compE"></span><span id="vesc_driver::mc_configuration::foc_temp_comp__b"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a71eac378304d805897f189b0957fe87d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_temp_comp</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration13foc_temp_compE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration23foc_temp_comp_base_tempE">
+<span id="_CPPv3N11vesc_driver16mc_configuration23foc_temp_comp_base_tempE"></span><span id="_CPPv2N11vesc_driver16mc_configuration23foc_temp_comp_base_tempE"></span><span id="vesc_driver::mc_configuration::foc_temp_comp_base_temp__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a3f4ce1b77ace304242cf2cf5a0db5c4b"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_temp_comp_base_temp</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration23foc_temp_comp_base_tempE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration24foc_current_filter_constE">
+<span id="_CPPv3N11vesc_driver16mc_configuration24foc_current_filter_constE"></span><span id="_CPPv2N11vesc_driver16mc_configuration24foc_current_filter_constE"></span><span id="vesc_driver::mc_configuration::foc_current_filter_const__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a755dff2c0883499b4f91baa74184c4bf"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_current_filter_const</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration24foc_current_filter_constE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17foc_cc_decouplingE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17foc_cc_decouplingE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17foc_cc_decouplingE"></span><span id="vesc_driver::mc_configuration::foc_cc_decoupling__mc_foc_cc_decoupling_mode"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a8dcccffc7ffe9a03502ed2096aaae6e8"></span><a class="reference internal" href="enum_datatypes_8hpp_1a5fb601d3d3593117aa2500e92b3f3c5e.html#_CPPv4N11vesc_driver25mc_foc_cc_decoupling_modeE" title="vesc_driver::mc_foc_cc_decoupling_mode"><span class="n"><span class="pre">mc_foc_cc_decoupling_mode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_cc_decoupling</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17foc_cc_decouplingE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17foc_observer_typeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17foc_observer_typeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17foc_observer_typeE"></span><span id="vesc_driver::mc_configuration::foc_observer_type__mc_foc_observer_type"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a3932b2b247f21fc2ae2f9ab3429b9cb0"></span><a class="reference internal" href="enum_datatypes_8hpp_1a30b7ef228cda5d4ca51fb63be2da0428.html#_CPPv4N11vesc_driver20mc_foc_observer_typeE" title="vesc_driver::mc_foc_observer_type"><span class="n"><span class="pre">mc_foc_observer_type</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_observer_type</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17foc_observer_typeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration21foc_hfi_voltage_startE">
+<span id="_CPPv3N11vesc_driver16mc_configuration21foc_hfi_voltage_startE"></span><span id="_CPPv2N11vesc_driver16mc_configuration21foc_hfi_voltage_startE"></span><span id="vesc_driver::mc_configuration::foc_hfi_voltage_start__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aafbf30c68b0b172abd476ce2d6c5c79e"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_hfi_voltage_start</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration21foc_hfi_voltage_startE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration19foc_hfi_voltage_runE">
+<span id="_CPPv3N11vesc_driver16mc_configuration19foc_hfi_voltage_runE"></span><span id="_CPPv2N11vesc_driver16mc_configuration19foc_hfi_voltage_runE"></span><span id="vesc_driver::mc_configuration::foc_hfi_voltage_run__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a41fd67adc1bf39293eedbb5a2feddfef"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_hfi_voltage_run</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration19foc_hfi_voltage_runE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration19foc_hfi_voltage_maxE">
+<span id="_CPPv3N11vesc_driver16mc_configuration19foc_hfi_voltage_maxE"></span><span id="_CPPv2N11vesc_driver16mc_configuration19foc_hfi_voltage_maxE"></span><span id="vesc_driver::mc_configuration::foc_hfi_voltage_max__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ab8a3b524ef52ec43395e82175ea00cb1"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_hfi_voltage_max</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration19foc_hfi_voltage_maxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration15foc_sl_erpm_hfiE">
+<span id="_CPPv3N11vesc_driver16mc_configuration15foc_sl_erpm_hfiE"></span><span id="_CPPv2N11vesc_driver16mc_configuration15foc_sl_erpm_hfiE"></span><span id="vesc_driver::mc_configuration::foc_sl_erpm_hfi__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aa0164d96c00c699b4bcf34ebf7c5fdb1"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_sl_erpm_hfi</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration15foc_sl_erpm_hfiE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration21foc_hfi_start_samplesE">
+<span id="_CPPv3N11vesc_driver16mc_configuration21foc_hfi_start_samplesE"></span><span id="_CPPv2N11vesc_driver16mc_configuration21foc_hfi_start_samplesE"></span><span id="vesc_driver::mc_configuration::foc_hfi_start_samples__uint16_t"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aee491894a64e2b0d4fa85c3830fe4d31"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_hfi_start_samples</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration21foc_hfi_start_samplesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration19foc_hfi_obs_ovr_secE">
+<span id="_CPPv3N11vesc_driver16mc_configuration19foc_hfi_obs_ovr_secE"></span><span id="_CPPv2N11vesc_driver16mc_configuration19foc_hfi_obs_ovr_secE"></span><span id="vesc_driver::mc_configuration::foc_hfi_obs_ovr_sec__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1abfd2461a964432c775edfdf1e6232134"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_hfi_obs_ovr_sec</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration19foc_hfi_obs_ovr_secE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration15foc_hfi_samplesE">
+<span id="_CPPv3N11vesc_driver16mc_configuration15foc_hfi_samplesE"></span><span id="_CPPv2N11vesc_driver16mc_configuration15foc_hfi_samplesE"></span><span id="vesc_driver::mc_configuration::foc_hfi_samples__FOC_HFI_SAMPLES"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a95592cbfe7bc110a1a92a12d72af6c97"></span><a class="reference internal" href="enum_datatypes_8hpp_1a7d50e7e730bc8f2de2b905fd131f7e34.html#_CPPv4N11vesc_driver15FOC_HFI_SAMPLESE" title="vesc_driver::FOC_HFI_SAMPLES"><span class="n"><span class="pre">FOC_HFI_SAMPLES</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">foc_hfi_samples</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration15foc_hfi_samplesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration22gpd_buffer_notify_leftE">
+<span id="_CPPv3N11vesc_driver16mc_configuration22gpd_buffer_notify_leftE"></span><span id="_CPPv2N11vesc_driver16mc_configuration22gpd_buffer_notify_leftE"></span><span id="vesc_driver::mc_configuration::gpd_buffer_notify_left__i"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aed0981dd8bd93141241927648570e3ac"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gpd_buffer_notify_left</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration22gpd_buffer_notify_leftE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration19gpd_buffer_interpolE">
+<span id="_CPPv3N11vesc_driver16mc_configuration19gpd_buffer_interpolE"></span><span id="_CPPv2N11vesc_driver16mc_configuration19gpd_buffer_interpolE"></span><span id="vesc_driver::mc_configuration::gpd_buffer_interpol__i"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a2b410e99f9400c26da16b3d2e63649f1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gpd_buffer_interpol</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration19gpd_buffer_interpolE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration24gpd_current_filter_constE">
+<span id="_CPPv3N11vesc_driver16mc_configuration24gpd_current_filter_constE"></span><span id="_CPPv2N11vesc_driver16mc_configuration24gpd_current_filter_constE"></span><span id="vesc_driver::mc_configuration::gpd_current_filter_const__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1afa680b0f9e02cbb98f4072fb4a9222f5"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gpd_current_filter_const</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration24gpd_current_filter_constE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14gpd_current_kpE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14gpd_current_kpE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14gpd_current_kpE"></span><span id="vesc_driver::mc_configuration::gpd_current_kp__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1afa3953285a1944fe72980787debd3e76"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gpd_current_kp</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14gpd_current_kpE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14gpd_current_kiE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14gpd_current_kiE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14gpd_current_kiE"></span><span id="vesc_driver::mc_configuration::gpd_current_ki__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a17fc4dafb433d929396999e475701564"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gpd_current_ki</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14gpd_current_kiE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration8s_pid_kpE">
+<span id="_CPPv3N11vesc_driver16mc_configuration8s_pid_kpE"></span><span id="_CPPv2N11vesc_driver16mc_configuration8s_pid_kpE"></span><span id="vesc_driver::mc_configuration::s_pid_kp__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a217ec683361ead5e6a1cce471f40c6ff"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">s_pid_kp</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration8s_pid_kpE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration8s_pid_kiE">
+<span id="_CPPv3N11vesc_driver16mc_configuration8s_pid_kiE"></span><span id="_CPPv2N11vesc_driver16mc_configuration8s_pid_kiE"></span><span id="vesc_driver::mc_configuration::s_pid_ki__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ac73297101d12a057b6bb1c840e2c332d"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">s_pid_ki</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration8s_pid_kiE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration8s_pid_kdE">
+<span id="_CPPv3N11vesc_driver16mc_configuration8s_pid_kdE"></span><span id="_CPPv2N11vesc_driver16mc_configuration8s_pid_kdE"></span><span id="vesc_driver::mc_configuration::s_pid_kd__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a4db066065fd682c06df089fc8dd20317"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">s_pid_kd</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration8s_pid_kdE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration15s_pid_kd_filterE">
+<span id="_CPPv3N11vesc_driver16mc_configuration15s_pid_kd_filterE"></span><span id="_CPPv2N11vesc_driver16mc_configuration15s_pid_kd_filterE"></span><span id="vesc_driver::mc_configuration::s_pid_kd_filter__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1acb6b2c6e9334356ede6256f51336cb8e"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">s_pid_kd_filter</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration15s_pid_kd_filterE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14s_pid_min_erpmE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14s_pid_min_erpmE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14s_pid_min_erpmE"></span><span id="vesc_driver::mc_configuration::s_pid_min_erpm__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ab3dad29157c5c0fbcb47baec4a3d956f"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">s_pid_min_erpm</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14s_pid_min_erpmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration19s_pid_allow_brakingE">
+<span id="_CPPv3N11vesc_driver16mc_configuration19s_pid_allow_brakingE"></span><span id="_CPPv2N11vesc_driver16mc_configuration19s_pid_allow_brakingE"></span><span id="vesc_driver::mc_configuration::s_pid_allow_braking__b"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a3a3ae3252b60f4e41fdb045799a95c66"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">s_pid_allow_braking</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration19s_pid_allow_brakingE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration8p_pid_kpE">
+<span id="_CPPv3N11vesc_driver16mc_configuration8p_pid_kpE"></span><span id="_CPPv2N11vesc_driver16mc_configuration8p_pid_kpE"></span><span id="vesc_driver::mc_configuration::p_pid_kp__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a0f458a88a87b34e45278c94c338ab069"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">p_pid_kp</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration8p_pid_kpE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration8p_pid_kiE">
+<span id="_CPPv3N11vesc_driver16mc_configuration8p_pid_kiE"></span><span id="_CPPv2N11vesc_driver16mc_configuration8p_pid_kiE"></span><span id="vesc_driver::mc_configuration::p_pid_ki__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a00d6fd8e30a5bff1aba51ef7220186b8"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">p_pid_ki</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration8p_pid_kiE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration8p_pid_kdE">
+<span id="_CPPv3N11vesc_driver16mc_configuration8p_pid_kdE"></span><span id="_CPPv2N11vesc_driver16mc_configuration8p_pid_kdE"></span><span id="vesc_driver::mc_configuration::p_pid_kd__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a0f118921fac6ba0c5051d0b354890f96"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">p_pid_kd</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration8p_pid_kdE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration15p_pid_kd_filterE">
+<span id="_CPPv3N11vesc_driver16mc_configuration15p_pid_kd_filterE"></span><span id="_CPPv2N11vesc_driver16mc_configuration15p_pid_kd_filterE"></span><span id="vesc_driver::mc_configuration::p_pid_kd_filter__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a27b72aa916f9af4f96d5f07d3af90df8"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">p_pid_kd_filter</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration15p_pid_kd_filterE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration13p_pid_ang_divE">
+<span id="_CPPv3N11vesc_driver16mc_configuration13p_pid_ang_divE"></span><span id="_CPPv2N11vesc_driver16mc_configuration13p_pid_ang_divE"></span><span id="vesc_driver::mc_configuration::p_pid_ang_div__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a22990be062e2f3af3c3e815589859d09"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">p_pid_ang_div</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration13p_pid_ang_divE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration21cc_startup_boost_dutyE">
+<span id="_CPPv3N11vesc_driver16mc_configuration21cc_startup_boost_dutyE"></span><span id="_CPPv2N11vesc_driver16mc_configuration21cc_startup_boost_dutyE"></span><span id="vesc_driver::mc_configuration::cc_startup_boost_duty__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ad1177dbc0b928343c837f13eec64ca06"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cc_startup_boost_duty</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration21cc_startup_boost_dutyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14cc_min_currentE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14cc_min_currentE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14cc_min_currentE"></span><span id="vesc_driver::mc_configuration::cc_min_current__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a7f4976e2050304762249a7bdcc86d61f"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cc_min_current</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14cc_min_currentE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration7cc_gainE">
+<span id="_CPPv3N11vesc_driver16mc_configuration7cc_gainE"></span><span id="_CPPv2N11vesc_driver16mc_configuration7cc_gainE"></span><span id="vesc_driver::mc_configuration::cc_gain__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a7cd98af331bb048cc3b6fb5db344f533"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cc_gain</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration7cc_gainE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16cc_ramp_step_maxE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16cc_ramp_step_maxE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16cc_ramp_step_maxE"></span><span id="vesc_driver::mc_configuration::cc_ramp_step_max__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a2fe156d313602c62d4d01bccc99eef93"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cc_ramp_step_max</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16cc_ramp_step_maxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration20m_fault_stop_time_msE">
+<span id="_CPPv3N11vesc_driver16mc_configuration20m_fault_stop_time_msE"></span><span id="_CPPv2N11vesc_driver16mc_configuration20m_fault_stop_time_msE"></span><span id="vesc_driver::mc_configuration::m_fault_stop_time_ms__int32_t"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1afa93981fcc6cca7026d759900f64355b"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_fault_stop_time_ms</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration20m_fault_stop_time_msE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16m_duty_ramp_stepE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16m_duty_ramp_stepE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16m_duty_ramp_stepE"></span><span id="vesc_driver::mc_configuration::m_duty_ramp_step__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ace4673a05e33df35b97e345262094467"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_duty_ramp_step</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16m_duty_ramp_stepE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration22m_current_backoff_gainE">
+<span id="_CPPv3N11vesc_driver16mc_configuration22m_current_backoff_gainE"></span><span id="_CPPv2N11vesc_driver16mc_configuration22m_current_backoff_gainE"></span><span id="vesc_driver::mc_configuration::m_current_backoff_gain__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a34b567a01f9983689e992e06080678c1"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_current_backoff_gain</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration22m_current_backoff_gainE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16m_encoder_countsE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16m_encoder_countsE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16m_encoder_countsE"></span><span id="vesc_driver::mc_configuration::m_encoder_counts__uint32_t"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a4673d5d83ba65068010c7dfa8ee12198"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_encoder_counts</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16m_encoder_countsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration18m_sensor_port_modeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration18m_sensor_port_modeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration18m_sensor_port_modeE"></span><span id="vesc_driver::mc_configuration::m_sensor_port_mode__sensor_port_mode"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a49334e52a12941dd26c9f09c249ddfd4"></span><a class="reference internal" href="enum_datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efa.html#_CPPv4N11vesc_driver16sensor_port_modeE" title="vesc_driver::sensor_port_mode"><span class="n"><span class="pre">sensor_port_mode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_sensor_port_mode</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration18m_sensor_port_modeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration18m_invert_directionE">
+<span id="_CPPv3N11vesc_driver16mc_configuration18m_invert_directionE"></span><span id="_CPPv2N11vesc_driver16mc_configuration18m_invert_directionE"></span><span id="vesc_driver::mc_configuration::m_invert_direction__b"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a72767ac8b6a7d87bd8953e1c3f3a5cc7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_invert_direction</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration18m_invert_directionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17m_drv8301_oc_modeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17m_drv8301_oc_modeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17m_drv8301_oc_modeE"></span><span id="vesc_driver::mc_configuration::m_drv8301_oc_mode__drv8301_oc_mode"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a6097593a2c786b7eec3295bb81f7374d"></span><a class="reference internal" href="enum_datatypes_8hpp_1a6e41639d201e98ebe2e5a546fb8926cb.html#_CPPv4N11vesc_driver15drv8301_oc_modeE" title="vesc_driver::drv8301_oc_mode"><span class="n"><span class="pre">drv8301_oc_mode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_drv8301_oc_mode</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17m_drv8301_oc_modeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16m_drv8301_oc_adjE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16m_drv8301_oc_adjE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16m_drv8301_oc_adjE"></span><span id="vesc_driver::mc_configuration::m_drv8301_oc_adj__i"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1acad2180795b5242cf44307ba96d23d19"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_drv8301_oc_adj</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16m_drv8301_oc_adjE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration15m_bldc_f_sw_minE">
+<span id="_CPPv3N11vesc_driver16mc_configuration15m_bldc_f_sw_minE"></span><span id="_CPPv2N11vesc_driver16mc_configuration15m_bldc_f_sw_minE"></span><span id="vesc_driver::mc_configuration::m_bldc_f_sw_min__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1abbc29833e5622087bd4fe8792c0afda3"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_bldc_f_sw_min</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration15m_bldc_f_sw_minE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration15m_bldc_f_sw_maxE">
+<span id="_CPPv3N11vesc_driver16mc_configuration15m_bldc_f_sw_maxE"></span><span id="_CPPv2N11vesc_driver16mc_configuration15m_bldc_f_sw_maxE"></span><span id="vesc_driver::mc_configuration::m_bldc_f_sw_max__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a0a0af67cb3939fc51657ecf3fe7280b9"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_bldc_f_sw_max</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration15m_bldc_f_sw_maxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration9m_dc_f_swE">
+<span id="_CPPv3N11vesc_driver16mc_configuration9m_dc_f_swE"></span><span id="_CPPv2N11vesc_driver16mc_configuration9m_dc_f_swE"></span><span id="vesc_driver::mc_configuration::m_dc_f_sw__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ae865e3e9fb5a2f39b9469060bc5720da"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_dc_f_sw</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration9m_dc_f_swE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16m_ntc_motor_betaE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16m_ntc_motor_betaE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16m_ntc_motor_betaE"></span><span id="vesc_driver::mc_configuration::m_ntc_motor_beta__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1af05760a9af8e17103a5451ae4482f139"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_ntc_motor_beta</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16m_ntc_motor_betaE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14m_out_aux_modeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14m_out_aux_modeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14m_out_aux_modeE"></span><span id="vesc_driver::mc_configuration::m_out_aux_mode__out_aux_mode"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1aaf8b2bb7e80aaec64c700053a4d51c05"></span><a class="reference internal" href="enum_datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266d.html#_CPPv4N11vesc_driver12out_aux_modeE" title="vesc_driver::out_aux_mode"><span class="n"><span class="pre">out_aux_mode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_out_aux_mode</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14m_out_aux_modeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration22m_motor_temp_sens_typeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration22m_motor_temp_sens_typeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration22m_motor_temp_sens_typeE"></span><span id="vesc_driver::mc_configuration::m_motor_temp_sens_type__temp_sensor_type"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a07de02153ccbab24819eb6e07d615aff"></span><a class="reference internal" href="enum_datatypes_8hpp_1a9fdbfdaac84788724a24df03d5c9d59a.html#_CPPv4N11vesc_driver16temp_sensor_typeE" title="vesc_driver::temp_sensor_type"><span class="n"><span class="pre">temp_sensor_type</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_motor_temp_sens_type</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration22m_motor_temp_sens_typeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17m_ptc_motor_coeffE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17m_ptc_motor_coeffE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17m_ptc_motor_coeffE"></span><span id="vesc_driver::mc_configuration::m_ptc_motor_coeff__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1adaeca61840ea5c7537c940c32aca4003"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_ptc_motor_coeff</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17m_ptc_motor_coeffE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration14si_motor_polesE">
+<span id="_CPPv3N11vesc_driver16mc_configuration14si_motor_polesE"></span><span id="_CPPv2N11vesc_driver16mc_configuration14si_motor_polesE"></span><span id="vesc_driver::mc_configuration::si_motor_poles__uint8_t"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1afa4b7e7c73a4d971bcde3c8a71d848f4"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">si_motor_poles</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration14si_motor_polesE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration13si_gear_ratioE">
+<span id="_CPPv3N11vesc_driver16mc_configuration13si_gear_ratioE"></span><span id="_CPPv2N11vesc_driver16mc_configuration13si_gear_ratioE"></span><span id="vesc_driver::mc_configuration::si_gear_ratio__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a4c014e94c3578b67a429bf9f324ad936"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">si_gear_ratio</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration13si_gear_ratioE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration17si_wheel_diameterE">
+<span id="_CPPv3N11vesc_driver16mc_configuration17si_wheel_diameterE"></span><span id="_CPPv2N11vesc_driver16mc_configuration17si_wheel_diameterE"></span><span id="vesc_driver::mc_configuration::si_wheel_diameter__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a50d6679530925850668739c296bb596e"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">si_wheel_diameter</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration17si_wheel_diameterE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration15si_battery_typeE">
+<span id="_CPPv3N11vesc_driver16mc_configuration15si_battery_typeE"></span><span id="_CPPv2N11vesc_driver16mc_configuration15si_battery_typeE"></span><span id="vesc_driver::mc_configuration::si_battery_type__BATTERY_TYPE"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ad77f0acd2ba20495fa8fa0f5f1d43229"></span><a class="reference internal" href="enum_datatypes_8hpp_1a877e9c650835fec907896e3affdf8029.html#_CPPv4N11vesc_driver12BATTERY_TYPEE" title="vesc_driver::BATTERY_TYPE"><span class="n"><span class="pre">BATTERY_TYPE</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">si_battery_type</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration15si_battery_typeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration16si_battery_cellsE">
+<span id="_CPPv3N11vesc_driver16mc_configuration16si_battery_cellsE"></span><span id="_CPPv2N11vesc_driver16mc_configuration16si_battery_cellsE"></span><span id="vesc_driver::mc_configuration::si_battery_cells__i"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1a921a077b020ce5d190234ad232eef41d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">si_battery_cells</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration16si_battery_cellsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver16mc_configuration13si_battery_ahE">
+<span id="_CPPv3N11vesc_driver16mc_configuration13si_battery_ahE"></span><span id="_CPPv2N11vesc_driver16mc_configuration13si_battery_ahE"></span><span id="vesc_driver::mc_configuration::si_battery_ah__float"></span><span class="target" id="structvesc__driver_1_1mc__configuration_1ace6648a788bbf7967e9a2a9326916d23"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">si_battery_ah</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver16mc_configuration13si_battery_ahE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structvesc__driver_1_1imu__config.html" class="btn btn-neutral float-left" title="Struct imu_config" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structvesc__driver_1_1mc__rpm__dep__struct.html" class="btn btn-neutral float-right" title="Struct mc_rpm_dep_struct" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;vesc_driver&gt; Contributors. License: BSD.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

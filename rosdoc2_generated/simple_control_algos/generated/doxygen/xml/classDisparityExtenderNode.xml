@@ -1,0 +1,745 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classDisparityExtenderNode" kind="class" language="C++" prot="public">
+    <compoundname>DisparityExtenderNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes local="no">disparity_extender_node.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a13e435320ae5e0c1abe256dcacbefce1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DisparityExtenderNode::send_drive_msg_</definition>
+        <argsstring></argsstring>
+        <name>send_drive_msg_</name>
+        <briefdescription>
+<para>Flag to enable/disable sending drive messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="47" column="10" bodyfile="include/disparity_extender_node.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a7980850c032a18476325bd15a0f3562f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DisparityExtenderNode::visualize_markers_</definition>
+        <argsstring></argsstring>
+        <name>visualize_markers_</name>
+        <briefdescription>
+<para>Flag to enable/disable visualization of markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="48" column="10" bodyfile="include/disparity_extender_node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1ab8af6361122b32a6b2e2f6deea46739c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DisparityExtenderNode::ignore_ray_eq_thr_</definition>
+        <argsstring></argsstring>
+        <name>ignore_ray_eq_thr_</name>
+        <briefdescription>
+<para>Flag to enable/disable ignoring ray equality threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="49" column="10" bodyfile="include/disparity_extender_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1afd6db0ee3743a579cc75569da530a3ac" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DisparityExtenderNode::ignore_angle_eq_thr_</definition>
+        <argsstring></argsstring>
+        <name>ignore_angle_eq_thr_</name>
+        <briefdescription>
+<para>Flag to enable/disable ignoring angle equality threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="50" column="10" bodyfile="include/disparity_extender_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a0ff99f0e5b6eed4c490c94b5d8d7a805" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::ray_max_length_</definition>
+        <argsstring></argsstring>
+        <name>ray_max_length_</name>
+        <briefdescription>
+<para>Maximum length of the LIDAR rays. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="51" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a29b6e2fd0f582bf09a6b5cff0519cdb4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::car_width_</definition>
+        <argsstring></argsstring>
+        <name>car_width_</name>
+        <briefdescription>
+<para>Width of the car. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="52" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a3938006c9d4ec398a66e148676693e79" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::desired_fov_</definition>
+        <argsstring></argsstring>
+        <name>desired_fov_</name>
+        <briefdescription>
+<para>Desired field of view for the LIDAR [deg]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="53" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1ad0672749f0e567a53d5f274616548527" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::disparity_threshold_</definition>
+        <argsstring></argsstring>
+        <name>disparity_threshold_</name>
+        <briefdescription>
+<para>Threshold for disparity in LIDAR readings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="54" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a6952cefe60c5c76696ec60df69292581" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::r_multiplier_</definition>
+        <argsstring></argsstring>
+        <name>r_multiplier_</name>
+        <briefdescription>
+<para>Multiplier for ray lengths. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="55" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a146070e384b96f1886d3da6a3ba3c1e3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::ray_eq_thr_</definition>
+        <argsstring></argsstring>
+        <name>ray_eq_thr_</name>
+        <briefdescription>
+<para>Threshold for ray equality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="56" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a632ce25cd0bd3ea65310b10c48c8c04b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::angle_eq_thr_</definition>
+        <argsstring></argsstring>
+        <name>angle_eq_thr_</name>
+        <briefdescription>
+<para>Threshold for angle equality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="57" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1af26c6f4f25e528fd813fb37e563f87e7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::crash_distance_</definition>
+        <argsstring></argsstring>
+        <name>crash_distance_</name>
+        <briefdescription>
+<para>Distance threshold for crash detection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="58" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a69b93ef3ee3661b06cf92fba8957f9de" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::max_speed_</definition>
+        <argsstring></argsstring>
+        <name>max_speed_</name>
+        <briefdescription>
+<para>Maximum speed of the car. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="59" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a7eee6d859b25619e1d36655057210e52" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::min_speed_</definition>
+        <argsstring></argsstring>
+        <name>min_speed_</name>
+        <briefdescription>
+<para>Minimum speed of the car. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="60" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a98e0726c01caada2be705d607e347225" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::max_steer_</definition>
+        <argsstring></argsstring>
+        <name>max_steer_</name>
+        <briefdescription>
+<para>Maximum steering angle of the car. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="61" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1aa04b990ddfeacc74f37faabd203bf19e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DisparityExtenderNode::angle_priority_</definition>
+        <argsstring></argsstring>
+        <name>angle_priority_</name>
+        <briefdescription>
+<para>Priority of angles for steering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="62" column="17" bodyfile="include/disparity_extender_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a9ca0b2d6b64c39331f8226c7d0205920" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DisparityExtenderNode::odom_topic_</definition>
+        <argsstring></argsstring>
+        <name>odom_topic_</name>
+        <briefdescription>
+<para>Topic name for odometry messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="63" column="17" bodyfile="include/disparity_extender_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a9425b5f8a20428f25f36eeff6e4e9518" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DisparityExtenderNode::drive_topic_</definition>
+        <argsstring></argsstring>
+        <name>drive_topic_</name>
+        <briefdescription>
+<para>Topic name for drive messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="64" column="17" bodyfile="include/disparity_extender_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a2943ba2739b9daad25c0e8d0a9b3ffc1" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DisparityExtenderNode::status_topic_</definition>
+        <argsstring></argsstring>
+        <name>status_topic_</name>
+        <briefdescription>
+<para>Topic name for status messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="65" column="17" bodyfile="include/disparity_extender_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a3b4cb1a5f3dd8a4dd6baf91c742c0230" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DisparityExtenderNode::scan_topic_</definition>
+        <argsstring></argsstring>
+        <name>scan_topic_</name>
+        <briefdescription>
+<para>Topic name for laser scan messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="66" column="17" bodyfile="include/disparity_extender_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1adb4faf732351d139601f0f57e08f7478" prot="private" static="no" mutable="no">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; DisparityExtenderNode::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+<para>Current position of the car (x, y). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="69" column="15" bodyfile="include/disparity_extender_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a48dacf69318ec9891c1a0716dca71175" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::current_speed</definition>
+        <argsstring></argsstring>
+        <name>current_speed</name>
+        <briefdescription>
+<para>Current speed of the car. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="70" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1aa70a89f31b26f6352f4d1f4c0df2bbcf" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DisparityExtenderNode::current_yaw</definition>
+        <argsstring></argsstring>
+        <name>current_yaw</name>
+        <briefdescription>
+<para>Current yaw angle of the car. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="71" column="11" bodyfile="include/disparity_extender_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1ab1d7aa9067a1c971a2111e622477fe13" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DisparityExtenderNode::allow_processing</definition>
+        <argsstring></argsstring>
+        <name>allow_processing</name>
+        <briefdescription>
+<para>Flag to enable/disable processing of scan data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="72" column="10" bodyfile="include/disparity_extender_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a544182ff98e6e7f3fdbeb1d219ec534f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; sensor_msgs::msg::LaserScan &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;sensor_msgs::msg::LaserScan&gt;::SharedPtr DisparityExtenderNode::scan_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>scan_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for LaserScan messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="75" column="38" bodyfile="include/disparity_extender_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1aab70c4aa7fae957e5866cdddf7eab36f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr DisparityExtenderNode::odom_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>odom_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for <ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="76" column="38" bodyfile="include/disparity_extender_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1aefe9f1dc7a3ceaac4a5577957d29cf11" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr DisparityExtenderNode::status_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>status_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for status messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="77" column="38" bodyfile="include/disparity_extender_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1aea9c86975d6ab5c1c57b8bb5b6926d66" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ackermann_msgs::msg::AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ackermann_msgs::msg::AckermannDriveStamped&gt;::SharedPtr DisparityExtenderNode::drive_publisher_</definition>
+        <argsstring></argsstring>
+        <name>drive_publisher_</name>
+        <briefdescription>
+<para>Publisher for drive messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="78" column="35" bodyfile="include/disparity_extender_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1ae50dcad9588389af397c3fa8f70305e7" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; visualization_msgs::msg::Marker &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;visualization_msgs::msg::Marker&gt;::SharedPtr DisparityExtenderNode::processed_ranges_publisher_</definition>
+        <argsstring></argsstring>
+        <name>processed_ranges_publisher_</name>
+        <briefdescription>
+<para>Publisher for processed ranges markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="79" column="35" bodyfile="include/disparity_extender_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a6e81626022faf94ac89d919e9d1e02ad" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; visualization_msgs::msg::Marker &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;visualization_msgs::msg::Marker&gt;::SharedPtr DisparityExtenderNode::chosen_range_publisher_</definition>
+        <argsstring></argsstring>
+        <name>chosen_range_publisher_</name>
+        <briefdescription>
+<para>Publisher for chosen range markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="80" column="35" bodyfile="include/disparity_extender_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDisparityExtenderNode_1a2c1d060d43257df2a242e1e345529d32" prot="private" static="no" mutable="no">
+        <type>OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>OnSetParametersCallbackHandle::SharedPtr DisparityExtenderNode::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+<para>Handle for dynamic parameter callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="81" column="46" bodyfile="include/disparity_extender_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDisparityExtenderNode_1a3645d7b3db939bc0b2d99f7cf23dd1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DisparityExtenderNode::DisparityExtenderNode</definition>
+        <argsstring>()</argsstring>
+        <name>DisparityExtenderNode</name>
+        <briefdescription>
+<para>Construct a new Disparity Extender Node object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="43" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classDisparityExtenderNode_1a58d90c49adc4dc78ddbd4facd035b009" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DisparityExtenderNode::odom_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr odom_msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>odom_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback function to handle odometry messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the <ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="87" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDisparityExtenderNode_1afc500f64a3da6c97c1d4edab2f7d661e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DisparityExtenderNode::status_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr status_msg)</argsstring>
+        <name>status_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>status_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback function to handle control status messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the Bool message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="93" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDisparityExtenderNode_1a93d50d20ad4359d7cc8b69b75dc08185" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DisparityExtenderNode::scan_callback</definition>
+        <argsstring>(const sensor_msgs::msg::LaserScan::SharedPtr scan_msg)</argsstring>
+        <name>scan_callback</name>
+        <param>
+          <type>const sensor_msgs::msg::LaserScan::SharedPtr</type>
+          <declname>scan_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback function to handle LaserScan messages and process scan data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scan_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the LaserScan message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="99" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDisparityExtenderNode_1a3e36393bf64b064fb2ebdd2fd621c2b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult DisparityExtenderNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Callback for dynamic parameter changes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SetParametersResult indicating success or failure of updates. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="106" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classDisparityExtenderNode_1a1af76bb098b3573030cc6cc61cd643df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DisparityExtenderNode::visualize_marker</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;processed_ranges, const float &amp;angle_increment, const float &amp;lidar_fov, const int &amp;rgb, const rclcpp::Publisher&lt; visualization_msgs::msg::Marker &gt;::SharedPtr &amp;publisher, float target_steering_angle=std::numeric_limits&lt; float &gt;::quiet_NaN(), const std::vector&lt; int &gt; &amp;rays_indexes={})</argsstring>
+        <name>visualize_marker</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>processed_ranges</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>lidar_fov</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>rgb</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Publisher&lt; visualization_msgs::msg::Marker &gt;::SharedPtr &amp;</type>
+          <declname>publisher</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>target_steering_angle</declname>
+          <defval>std::numeric_limits&lt; float &gt;::quiet_NaN()</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>rays_indexes</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Visualize processed scan data as markers in RViz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>processed_ranges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Processed laser scan ranges. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Increment of laser scan angles. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lidar_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Field of view of the LIDAR. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rgb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color of the marker in RGB format. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>publisher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Publisher to send the marker. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target_steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional target steering angle for sphere visualization. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rays_indexes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional list of ray indexes to highlight. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/disparity_extender_node.hpp" line="118" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS2 Node for extending laser scan disparities for autonomous vehicle control. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Node</label>
+      </node>
+      <node id="1">
+        <label>DisparityExtenderNode</label>
+        <link refid="classDisparityExtenderNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Node</label>
+      </node>
+      <node id="1">
+        <label>DisparityExtenderNode</label>
+        <link refid="classDisparityExtenderNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/disparity_extender_node.hpp" line="38" column="48" bodyfile="include/disparity_extender_node.hpp" bodystart="38" bodyend="125"/>
+    <listofallmembers>
+      <member refid="classDisparityExtenderNode_1ab1d7aa9067a1c971a2111e622477fe13" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>allow_processing</name></member>
+      <member refid="classDisparityExtenderNode_1a632ce25cd0bd3ea65310b10c48c8c04b" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>angle_eq_thr_</name></member>
+      <member refid="classDisparityExtenderNode_1aa04b990ddfeacc74f37faabd203bf19e" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>angle_priority_</name></member>
+      <member refid="classDisparityExtenderNode_1a29b6e2fd0f582bf09a6b5cff0519cdb4" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>car_width_</name></member>
+      <member refid="classDisparityExtenderNode_1a6e81626022faf94ac89d919e9d1e02ad" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>chosen_range_publisher_</name></member>
+      <member refid="classDisparityExtenderNode_1af26c6f4f25e528fd813fb37e563f87e7" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>crash_distance_</name></member>
+      <member refid="classDisparityExtenderNode_1adb4faf732351d139601f0f57e08f7478" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>current_pose</name></member>
+      <member refid="classDisparityExtenderNode_1a48dacf69318ec9891c1a0716dca71175" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>current_speed</name></member>
+      <member refid="classDisparityExtenderNode_1aa70a89f31b26f6352f4d1f4c0df2bbcf" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>current_yaw</name></member>
+      <member refid="classDisparityExtenderNode_1a3938006c9d4ec398a66e148676693e79" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>desired_fov_</name></member>
+      <member refid="classDisparityExtenderNode_1ad0672749f0e567a53d5f274616548527" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>disparity_threshold_</name></member>
+      <member refid="classDisparityExtenderNode_1a3645d7b3db939bc0b2d99f7cf23dd1e7" prot="public" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>DisparityExtenderNode</name></member>
+      <member refid="classDisparityExtenderNode_1aea9c86975d6ab5c1c57b8bb5b6926d66" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>drive_publisher_</name></member>
+      <member refid="classDisparityExtenderNode_1a9425b5f8a20428f25f36eeff6e4e9518" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>drive_topic_</name></member>
+      <member refid="classDisparityExtenderNode_1afd6db0ee3743a579cc75569da530a3ac" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>ignore_angle_eq_thr_</name></member>
+      <member refid="classDisparityExtenderNode_1ab8af6361122b32a6b2e2f6deea46739c" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>ignore_ray_eq_thr_</name></member>
+      <member refid="classDisparityExtenderNode_1a69b93ef3ee3661b06cf92fba8957f9de" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>max_speed_</name></member>
+      <member refid="classDisparityExtenderNode_1a98e0726c01caada2be705d607e347225" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>max_steer_</name></member>
+      <member refid="classDisparityExtenderNode_1a7eee6d859b25619e1d36655057210e52" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>min_speed_</name></member>
+      <member refid="classDisparityExtenderNode_1a58d90c49adc4dc78ddbd4facd035b009" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>odom_callback</name></member>
+      <member refid="classDisparityExtenderNode_1aab70c4aa7fae957e5866cdddf7eab36f" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>odom_subscriber_</name></member>
+      <member refid="classDisparityExtenderNode_1a9ca0b2d6b64c39331f8226c7d0205920" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>odom_topic_</name></member>
+      <member refid="classDisparityExtenderNode_1a3e36393bf64b064fb2ebdd2fd621c2b0" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>params_callback</name></member>
+      <member refid="classDisparityExtenderNode_1a2c1d060d43257df2a242e1e345529d32" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>params_callback_handle_</name></member>
+      <member refid="classDisparityExtenderNode_1ae50dcad9588389af397c3fa8f70305e7" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>processed_ranges_publisher_</name></member>
+      <member refid="classDisparityExtenderNode_1a6952cefe60c5c76696ec60df69292581" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>r_multiplier_</name></member>
+      <member refid="classDisparityExtenderNode_1a146070e384b96f1886d3da6a3ba3c1e3" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>ray_eq_thr_</name></member>
+      <member refid="classDisparityExtenderNode_1a0ff99f0e5b6eed4c490c94b5d8d7a805" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>ray_max_length_</name></member>
+      <member refid="classDisparityExtenderNode_1a93d50d20ad4359d7cc8b69b75dc08185" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>scan_callback</name></member>
+      <member refid="classDisparityExtenderNode_1a544182ff98e6e7f3fdbeb1d219ec534f" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>scan_subscriber_</name></member>
+      <member refid="classDisparityExtenderNode_1a3b4cb1a5f3dd8a4dd6baf91c742c0230" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>scan_topic_</name></member>
+      <member refid="classDisparityExtenderNode_1a13e435320ae5e0c1abe256dcacbefce1" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>send_drive_msg_</name></member>
+      <member refid="classDisparityExtenderNode_1afc500f64a3da6c97c1d4edab2f7d661e" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>status_callback</name></member>
+      <member refid="classDisparityExtenderNode_1aefe9f1dc7a3ceaac4a5577957d29cf11" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>status_subscriber_</name></member>
+      <member refid="classDisparityExtenderNode_1a2943ba2739b9daad25c0e8d0a9b3ffc1" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>status_topic_</name></member>
+      <member refid="classDisparityExtenderNode_1a1af76bb098b3573030cc6cc61cd643df" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>visualize_marker</name></member>
+      <member refid="classDisparityExtenderNode_1a7980850c032a18476325bd15a0f3562f" prot="private" virt="non-virtual"><scope>DisparityExtenderNode</scope><name>visualize_markers_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

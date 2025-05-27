@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="utils_8hpp" kind="file" language="C++">
+    <compoundname>utils.hpp</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="disparity__extender_8hpp" local="yes">include/disparity_extender.hpp</includedby>
+    <includedby refid="simple__speed_8hpp" local="yes">include/simple_speed.hpp</includedby>
+    <includedby refid="disparity__extender__node_8hpp" local="yes">include/disparity_extender_node.hpp</includedby>
+    <includedby refid="frenet__overtaking_8hpp" local="yes">include/frenet_overtaking.hpp</includedby>
+    <includedby refid="steering__controller_8hpp" local="yes">include/steering_controller.hpp</includedby>
+    <includedby refid="frenet__map__based__node_8hpp" local="yes">include/frenet_map_based_node.hpp</includedby>
+    <includedby refid="frenet__overtaking__node_8hpp" local="yes">include/frenet_overtaking_node.hpp</includedby>
+    <includedby refid="frenet__overtaking__node__detector_8hpp" local="yes">include/frenet_overtaking_node_detector.hpp</includedby>
+    <includedby refid="path__follower__node_8hpp" local="yes">include/path_follower_node.hpp</includedby>
+    <includedby refid="potential__field_8hpp" local="yes">include/potential_field.hpp</includedby>
+    <includedby refid="potential__pursuit__node_8hpp" local="yes">include/potential_pursuit_node.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="4">
+        <label>numeric</label>
+      </node>
+      <node id="1">
+        <label>include/utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>tuple</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>utility</label>
+      </node>
+      <node id="2">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>include/path_follower_node.hpp</label>
+        <link refid="path__follower__node_8hpp"/>
+      </node>
+      <node id="4">
+        <label>include/simple_speed.hpp</label>
+        <link refid="simple__speed_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/potential_field_node.hpp</label>
+        <link refid="potential__field__node_8hpp"/>
+      </node>
+      <node id="8">
+        <label>include/frenet_overtaking_node.hpp</label>
+        <link refid="frenet__overtaking__node_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/disparity_extender.hpp</label>
+        <link refid="disparity__extender_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/frenet_overtaking.hpp</label>
+        <link refid="frenet__overtaking_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/potential_pursuit_node.hpp</label>
+        <link refid="potential__pursuit__node_8hpp"/>
+      </node>
+      <node id="3">
+        <label>include/disparity_extender_node.hpp</label>
+        <link refid="disparity__extender__node_8hpp"/>
+      </node>
+      <node id="10">
+        <label>include/potential_field.hpp</label>
+        <link refid="potential__field_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="utils_8hpp_1a7961cf9f682c353bbbbee08688449363" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float calculate_mean</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;vector)</argsstring>
+        <name>calculate_mean</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the mean of the elements in a given vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a vector of floats as input and returns the mean (average) of its elements. If the vector is empty, the behavior is undefined.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A constant reference to a vector of floats whose mean is to be calculated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The mean of the elements in the vector as a float. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="28" column="7" declfile="include/utils.hpp" declline="28" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a7c87b3820a510fe8ba3d31de23d1368d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float calculate_mean_in_range</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;vector, int start, int end)</argsstring>
+        <name>calculate_mean_in_range</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the mean of elements in a specified range of a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function computes the mean (average) of the elements in the given vector from the index <computeroutput>start</computeroutput> to the index <computeroutput>end</computeroutput> (inclusive).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector containing the elements. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting index of the range (inclusive). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ending index of the range (inclusive). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The mean of the elements in the specified range. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the start or end indices are out of the vector&apos;s bounds. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the start index is greater than the end index. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="43" column="7" declfile="include/utils.hpp" declline="43" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a49e610728a5471f56fc020d2b6ee6e9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float, float &gt;</type>
+        <definition>std::tuple&lt;float, float, float&gt; get_rgb</definition>
+        <argsstring>(int rgb)</argsstring>
+        <name>get_rgb</name>
+        <param>
+          <type>int</type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+<para>Converts an integer RGB value to its individual red, green, and blue components. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes an integer representing an RGB color and extracts the red, green, and blue components as floating-point values in the range [0.0, 1.0].</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rgb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer representing the RGB color. The format is 0xRRGGBB. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tuple containing the red, green, and blue components as floats. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="54" column="12" declfile="include/utils.hpp" declline="54" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a88dbb5d572b05732c37a6ab53f130fab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rifa</definition>
+        <argsstring>(float angle_degrees, float angle_increment, float fov_rad)</argsstring>
+        <name>rifa</name>
+        <param>
+          <type>float</type>
+          <declname>angle_degrees</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fov_rad</declname>
+        </param>
+        <briefdescription>
+<para>Range Index From Angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle_degrees</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle in degrees (it must be in the range [-<computeroutput>fov_deg</computeroutput>/2, <computeroutput>fov_deg</computeroutput>/2], where <computeroutput>fov_deg</computeroutput> = <computeroutput>fov_rad</computeroutput> * 180 / pi) [deg] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle increment of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fov_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field of view of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the index of the lidar ranges vector corresponding to the given angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="64" column="5" declfile="include/utils.hpp" declline="64" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a588d8ae799d233a401111c312e73364f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float rafi</definition>
+        <argsstring>(int index, float angle_increment, float fov_rad)</argsstring>
+        <name>rafi</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fov_rad</declname>
+        </param>
+        <briefdescription>
+<para>Range Angle From Index (inverse of <computeroutput>rifa</computeroutput> but returns the angle in radians) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the lidar ranges vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle increment of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fov_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field of view of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the angle corresponding to the given index [rad] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="73" column="7" declfile="include/utils.hpp" declline="73" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a478f9c32589c5d73b481c36e939f27a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; linspace</definition>
+        <argsstring>(float start, float end, int num)</argsstring>
+        <name>linspace</name>
+        <param>
+          <type>float</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>Generates a vector of linearly spaced values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns a vector of <computeroutput>num</computeroutput> evenly spaced values starting from <computeroutput>start</computeroutput> and ending at <computeroutput>end</computeroutput>. The spacing between values is calculated such that the values are evenly distributed over the specified range.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting value of the sequence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ending value of the sequence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of values to generate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;float&gt; A vector containing <computeroutput>num</computeroutput> linearly spaced values from <computeroutput>start</computeroutput> to <computeroutput>end</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="87" column="13" declfile="include/utils.hpp" declline="87" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a548f490e1cc2964ec6a3099dedee3485" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>unsigned int</type>
+        <definition>unsigned int argmin</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;v)</argsstring>
+        <name>argmin</name>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Finds the index of the minimum element in a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function iterates through the given vector and returns the index of the smallest element. If there are multiple occurrences of the minimum element, the index of the first occurrence is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the elements in the vector. The type T must support comparison operators. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector to search for the minimum element. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned int The index of the minimum element in the vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="101" column="14" bodyfile="include/utils.hpp" bodystart="101" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a056a3290e38efc55bcdee6c5655237c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float heading_error</definition>
+        <argsstring>(float yaw_desired, float yaw_current)</argsstring>
+        <name>heading_error</name>
+        <param>
+          <type>float</type>
+          <declname>yaw_desired</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yaw_current</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the heading error between the current and desired yaw angles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function computes the heading error between the desired and current yaw angles.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>yaw_desired</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired yaw angle (in radians) based on the look-ahead point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yawc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current yaw angle (in radians). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The heading error (in radians), normalized to be within the range of -π to π. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.hpp" line="122" column="7" declfile="include/utils.hpp" declline="122" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility functions for mathematical calculations and basic operations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/utils.hpp"/>
+  </compounddef>
+</doxygen>

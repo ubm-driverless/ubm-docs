@@ -1,0 +1,990 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classPathFollowerNode" kind="class" language="C++" prot="public">
+    <compoundname>PathFollowerNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes local="no">path_follower_node.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPathFollowerNode_1a3da06760f36925f314cd75b06973876d" prot="private" static="no" mutable="no">
+        <type>rclcpp::Clock</type>
+        <definition>rclcpp::Clock PathFollowerNode::default_clock_</definition>
+        <argsstring></argsstring>
+        <name>default_clock_</name>
+        <briefdescription>
+<para>Default clock for throttled log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="53" column="19" bodyfile="include/path_follower_node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a30363c06c654abcdca6aae88503feaec" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PathFollowerNode::send_drive_msg_</definition>
+        <argsstring></argsstring>
+        <name>send_drive_msg_</name>
+        <briefdescription>
+<para>Whether to publish drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="54" column="10" bodyfile="include/path_follower_node.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a3c51e53d4bf3c6dad3a6c3869616bd5e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PathFollowerNode::visualize_markers_</definition>
+        <argsstring></argsstring>
+        <name>visualize_markers_</name>
+        <briefdescription>
+<para>Whether to publish visualization markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="55" column="10" bodyfile="include/path_follower_node.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1ae75377e8babc190e3ef75ba3d0668051" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PathFollowerNode::enable_stanley_</definition>
+        <argsstring></argsstring>
+        <name>enable_stanley_</name>
+        <briefdescription>
+<para>Whether to use Stanley controller (true) or PD controller (false). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="56" column="10" bodyfile="include/path_follower_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1ab27a4cd8a4e002a0014cda5916aa954e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PathFollowerNode::enable_feedforward_</definition>
+        <argsstring></argsstring>
+        <name>enable_feedforward_</name>
+        <briefdescription>
+<para>Whether to use feedforward action for steering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="57" column="10" bodyfile="include/path_follower_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a8c023d44af77f9d34cbb37e943c4aec3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PathFollowerNode::ff_path_based_only_</definition>
+        <argsstring></argsstring>
+        <name>ff_path_based_only_</name>
+        <briefdescription>
+<para>Whether to use path-based only feedforward action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="58" column="10" bodyfile="include/path_follower_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a9d89113724424ce69d2e27cc61160515" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PathFollowerNode::disable_print_timeout_</definition>
+        <argsstring></argsstring>
+        <name>disable_print_timeout_</name>
+        <briefdescription>
+<para>Timeout for disabling log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="59" column="9" bodyfile="include/path_follower_node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1abe378a423e86cb138a723a626d7ccf43" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PathFollowerNode::tdp_</definition>
+        <argsstring></argsstring>
+        <name>tdp_</name>
+        <briefdescription>
+<para>Time delay penalty for the path planner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="60" column="9" bodyfile="include/path_follower_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1ab608ad2305aabf809ddce62f4ecd8042" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PathFollowerNode::delay_ff_action_</definition>
+        <argsstring></argsstring>
+        <name>delay_ff_action_</name>
+        <briefdescription>
+<para>Delay for feedforward action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="61" column="9" bodyfile="include/path_follower_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1adfad56368e12e0a0427c046c81260a53" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::wb_</definition>
+        <argsstring></argsstring>
+        <name>wb_</name>
+        <briefdescription>
+<para>Vehicle wheelbase length (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="62" column="11" bodyfile="include/path_follower_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a4e4dfc12f8e5b6fe044c0101ec4ba437" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::kk_s_</definition>
+        <argsstring></argsstring>
+        <name>kk_s_</name>
+        <briefdescription>
+<para>PD controller proportional gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="63" column="11" bodyfile="include/path_follower_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a1cae2e73710a97bc2610db8d0d574977" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::kd_s_</definition>
+        <argsstring></argsstring>
+        <name>kd_s_</name>
+        <briefdescription>
+<para>PD controller derivative gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="64" column="11" bodyfile="include/path_follower_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a3f4aea4739d5f0fb8064b5259928e249" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::k_stanley_</definition>
+        <argsstring></argsstring>
+        <name>k_stanley_</name>
+        <briefdescription>
+<para>Stanley controller gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="65" column="11" bodyfile="include/path_follower_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a8cd7236392826543e9dad8ed2036c8c5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::look_ahead_gain_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_gain_</name>
+        <briefdescription>
+<para>Gain for calculating look-ahead distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="66" column="11" bodyfile="include/path_follower_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a74717d1ee2578cc3f38755612c4f8b97" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::min_look_ahead_dist_</definition>
+        <argsstring></argsstring>
+        <name>min_look_ahead_dist_</name>
+        <briefdescription>
+<para>Minimum look-ahead distance (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="67" column="11" bodyfile="include/path_follower_node.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a3b4234f66f07ae10149d8b8f6367c5d9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::max_steer_</definition>
+        <argsstring></argsstring>
+        <name>max_steer_</name>
+        <briefdescription>
+<para>Maximum steering angle (radians). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="68" column="11" bodyfile="include/path_follower_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a99301da18159a0173b256810642a4d7a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::scale_speed_</definition>
+        <argsstring></argsstring>
+        <name>scale_speed_</name>
+        <briefdescription>
+<para>scaling factor to target speed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="69" column="11" bodyfile="include/path_follower_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1aceae536bb3119ff7a6c338340c076969" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::beta_ff_gain_</definition>
+        <argsstring></argsstring>
+        <name>beta_ff_gain_</name>
+        <briefdescription>
+<para>Gain for feedforward action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="70" column="11" bodyfile="include/path_follower_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a4735dc592c6bb1c97aecb2cdd94e9c7b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::averaging_ff_gain_</definition>
+        <argsstring></argsstring>
+        <name>averaging_ff_gain_</name>
+        <briefdescription>
+<para>Average the new steering angle with the previous one. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="71" column="11" bodyfile="include/path_follower_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a530bdd6c4a6d6476a9689e2ce14a8e3d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::max_lap_statistics_</definition>
+        <argsstring></argsstring>
+        <name>max_lap_statistics_</name>
+        <briefdescription>
+<para>maximum number of lap statistics to store. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="72" column="11" bodyfile="include/path_follower_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a8af8a655090957aff517c3f0c2583922" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::starting_strip_</definition>
+        <argsstring></argsstring>
+        <name>starting_strip_</name>
+        <briefdescription>
+<para>Starting strip for the lap performance tracker in percentage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="73" column="11" bodyfile="include/path_follower_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a2463905031bf7a5123042f394a41a4ce" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PathFollowerNode::look_ahead_point_topic_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the look-ahead point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="75" column="17" bodyfile="include/path_follower_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a06899e125d0710c812f296eb49e5ab15" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PathFollowerNode::car_nearest_point_topic_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the nearest point on the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="76" column="17" bodyfile="include/path_follower_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1af5f7d70762e0fca4e44c025c7a267328" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PathFollowerNode::status_topic_</definition>
+        <argsstring></argsstring>
+        <name>status_topic_</name>
+        <briefdescription>
+<para>Topic for control status messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="77" column="17" bodyfile="include/path_follower_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a51e165215a16b2b58b6fff3f95efb7f8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PathFollowerNode::odom_topic_</definition>
+        <argsstring></argsstring>
+        <name>odom_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to odometry messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="78" column="17" bodyfile="include/path_follower_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a43dab28723e666db0c4e3bc579c2e7f8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PathFollowerNode::pose_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to pose messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="79" column="17" bodyfile="include/path_follower_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1aa79bf0f10eea76642c5047eeac9f0a79" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PathFollowerNode::drive_topic_</definition>
+        <argsstring></argsstring>
+        <name>drive_topic_</name>
+        <briefdescription>
+<para>Topic for publishing drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="80" column="17" bodyfile="include/path_follower_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1aa2da4d78eb93dac6f8a711ebfe71ff1b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PathFollowerNode::reset_lap_statistics_topic_</definition>
+        <argsstring></argsstring>
+        <name>reset_lap_statistics_topic_</name>
+        <briefdescription>
+<para>Topic for resetting lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="81" column="17" bodyfile="include/path_follower_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1aea496ecd78fc0dfad209674cba5da84c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PathFollowerNode::raceline_file_</definition>
+        <argsstring></argsstring>
+        <name>raceline_file_</name>
+        <briefdescription>
+<para>File containing the raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="82" column="17" bodyfile="include/path_follower_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a8cfee469a4e0056532815bfb575ce1d1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PathFollowerNode::path_obtained</definition>
+        <argsstring></argsstring>
+        <name>path_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the raceline path has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="85" column="10" bodyfile="include/path_follower_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a440e805405f8fe2a9c7bfb7f2a73ff17" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PathFollowerNode::speed_obtained</definition>
+        <argsstring></argsstring>
+        <name>speed_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current speed has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="86" column="10" bodyfile="include/path_follower_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a9b9f2b1ee7ecc151d478c6cad1e170ff" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PathFollowerNode::pose_obtained</definition>
+        <argsstring></argsstring>
+        <name>pose_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current pose has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="87" column="10" bodyfile="include/path_follower_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1ad3c97ab87c72ba50088b67fcf2272a51" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PathFollowerNode::allow_processing</definition>
+        <argsstring></argsstring>
+        <name>allow_processing</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the pure pursuit algorithm is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="88" column="10" bodyfile="include/path_follower_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1ae3ececb2d6dd46e40d97775c3ecdde75" prot="private" static="no" mutable="no">
+        <type><ref refid="classSteeringController" kindref="compound">SteeringController</ref></type>
+        <definition>SteeringController PathFollowerNode::steering_controller</definition>
+        <argsstring></argsstring>
+        <name>steering_controller</name>
+        <briefdescription>
+<para>PD steering controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="91" column="24" bodyfile="include/path_follower_node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a49e5b644c0ea2a9f03dfc6f9fc1cc597" prot="private" static="no" mutable="no">
+        <type><ref refid="classFeedForwardAction" kindref="compound">FeedForwardAction</ref></type>
+        <definition>FeedForwardAction PathFollowerNode::feedforward_action</definition>
+        <argsstring></argsstring>
+        <name>feedforward_action</name>
+        <briefdescription>
+<para>Feedforward action for steering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="92" column="23" bodyfile="include/path_follower_node.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1aa21de2f420e3098ab4a8e155e940b865" prot="private" static="no" mutable="no">
+        <type>Raceline</type>
+        <definition>Raceline PathFollowerNode::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+<para>Object representing the raceline path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="93" column="14" bodyfile="include/path_follower_node.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a47ae5d5bf0fcd9c5eeeb7c4df50f564d" prot="private" static="no" mutable="no">
+        <type><ref refid="classLapPerformance" kindref="compound">LapPerformance</ref></type>
+        <definition>LapPerformance PathFollowerNode::lap_performance</definition>
+        <argsstring></argsstring>
+        <name>lap_performance</name>
+        <briefdescription>
+<para>Object for measuring lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="94" column="20" bodyfile="include/path_follower_node.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a0f4ada152c3e0b409450797ef2e7a41b" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose PathFollowerNode::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+<para>Current pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="97" column="30" bodyfile="include/path_follower_node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1acbb2bb154baf463ae6dd56744df35ba4" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose PathFollowerNode::odom_pose</definition>
+        <argsstring></argsstring>
+        <name>odom_pose</name>
+        <briefdescription>
+<para>Current odometry pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="98" column="30" bodyfile="include/path_follower_node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1af8d9bbc937c8dbcf1b934b95fe6f6847" prot="private" static="no" mutable="no">
+        <type>std_msgs::msg::Header</type>
+        <definition>std_msgs::msg::Header PathFollowerNode::common_header</definition>
+        <argsstring></argsstring>
+        <name>common_header</name>
+        <briefdescription>
+<para>Common header for visualization messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="99" column="27" bodyfile="include/path_follower_node.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a733d89b8e7ff9ef0bf07a9badddceb90" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PathFollowerNode::current_speed</definition>
+        <argsstring></argsstring>
+        <name>current_speed</name>
+        <briefdescription>
+<para>Current speed of the vehicle (m/s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="100" column="11" bodyfile="include/path_follower_node.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a25b69bbb350a8bfeddb6cdae2724fa71" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr PathFollowerNode::odom_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>odom_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for odometry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="103" column="38" bodyfile="include/path_follower_node.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1abc7276005d4432b9181f1b4ddd2b9b04" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr PathFollowerNode::pose_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>pose_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="104" column="38" bodyfile="include/path_follower_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1ad255ea9f74b68c41c7602b83afbe9ac0" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr PathFollowerNode::status_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>status_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pure pursuit status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="105" column="38" bodyfile="include/path_follower_node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a735c9a2b209e1e17939fa5f98e58d571" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr PathFollowerNode::reset_lap_statistics_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>reset_lap_statistics_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for resetting lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="106" column="38" bodyfile="include/path_follower_node.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a05c82be7625289a6a7d11a843e6a7d6f" prot="private" static="no" mutable="no">
+        <type>OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>OnSetParametersCallbackHandle::SharedPtr PathFollowerNode::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+<para>Handle for dynamic parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="107" column="46" bodyfile="include/path_follower_node.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a9bf03d676c53ec79ca478b528a5a52d1" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ackermann_msgs::msg::AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ackermann_msgs::msg::AckermannDriveStamped&gt;::SharedPtr PathFollowerNode::drive_publisher_</definition>
+        <argsstring></argsstring>
+        <name>drive_publisher_</name>
+        <briefdescription>
+<para>Publisher for control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="110" column="35" bodyfile="include/path_follower_node.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1ac71ba0aac11d24ba4917aa9abe419bc6" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr PathFollowerNode::look_ahead_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for look-ahead point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="111" column="35" bodyfile="include/path_follower_node.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a08004086a81899d42fe0df2bdfdb122c" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr PathFollowerNode::car_nearest_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for nearest point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="112" column="35" bodyfile="include/path_follower_node.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a74bb9dccde4570f67ace891c3ab955ee" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Path&gt;::SharedPtr PathFollowerNode::raceline_publisher_</definition>
+        <argsstring></argsstring>
+        <name>raceline_publisher_</name>
+        <briefdescription>
+<para>Publisher for the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="113" column="35" bodyfile="include/path_follower_node.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPathFollowerNode_1a2725d57b9608189b35ab399ec0fe340d" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; f1tenth_msgs::msg::LapPerformanceStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;f1tenth_msgs::msg::LapPerformanceStamped&gt;::SharedPtr PathFollowerNode::lap_performance_publisher_</definition>
+        <argsstring></argsstring>
+        <name>lap_performance_publisher_</name>
+        <briefdescription>
+<para>Publisher for lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="114" column="35" bodyfile="include/path_follower_node.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPathFollowerNode_1ac66031afec0eeb574374cb9af7e1953e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PathFollowerNode::PathFollowerNode</definition>
+        <argsstring>()</argsstring>
+        <name>PathFollowerNode</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classPathFollowerNode" kindref="compound">PathFollowerNode</ref>. Initializes parameters, subscriptions, and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="49" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPathFollowerNode_1a36a9d4fdfb1ecdc3f6b8000cc4bc1570" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult PathFollowerNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Handles parameter updates dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of parameter update operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="123" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classPathFollowerNode_1a9a45a9fc76fac5bd8c9599072e2227a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PathFollowerNode::status_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr status_msg)</argsstring>
+        <name>status_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>status_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle status updates for enabling/disabling pure pursuit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether pure pursuit is enabled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="129" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classPathFollowerNode_1ab7a5207dee25f5da292f678cde1b5551" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PathFollowerNode::odom_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr odom_msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>odom_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle odometry updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message containing the current speed and pose. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="135" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classPathFollowerNode_1a02b98329119a68af24e02ffff6e2c3d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PathFollowerNode::pose_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr pose_msg)</argsstring>
+        <name>pose_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>pose_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle pose updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message containing the current pose of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="141" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classPathFollowerNode_1a157c932aace8305981ed7f2bc807647b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PathFollowerNode::reset_lap_statistics_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr reset_msg)</argsstring>
+        <name>reset_lap_statistics_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>reset_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to reset lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether to reset lap statistics. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="147" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classPathFollowerNode_1af860a906772e51e54e8c0dafc8ddbf8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PathFollowerNode::control_loop</definition>
+        <argsstring>()</argsstring>
+        <name>control_loop</name>
+        <briefdescription>
+<para>Main control loop for the Pure Pursuit algorithm. Calculates target steering and speed, and sends control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/path_follower_node.hpp" line="153" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS2 node that implements the Pure Pursuit algorithm for controlling a vehicle along a raceline. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PathFollowerNode</label>
+        <link refid="classPathFollowerNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PathFollowerNode</label>
+        <link refid="classPathFollowerNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/path_follower_node.hpp" line="43" column="1" bodyfile="include/path_follower_node.hpp" bodystart="42" bodyend="154"/>
+    <listofallmembers>
+      <member refid="classPathFollowerNode_1ad3c97ab87c72ba50088b67fcf2272a51" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>allow_processing</name></member>
+      <member refid="classPathFollowerNode_1a4735dc592c6bb1c97aecb2cdd94e9c7b" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>averaging_ff_gain_</name></member>
+      <member refid="classPathFollowerNode_1aceae536bb3119ff7a6c338340c076969" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>beta_ff_gain_</name></member>
+      <member refid="classPathFollowerNode_1a08004086a81899d42fe0df2bdfdb122c" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>car_nearest_point_publisher_</name></member>
+      <member refid="classPathFollowerNode_1a06899e125d0710c812f296eb49e5ab15" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>car_nearest_point_topic_</name></member>
+      <member refid="classPathFollowerNode_1af8d9bbc937c8dbcf1b934b95fe6f6847" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>common_header</name></member>
+      <member refid="classPathFollowerNode_1af860a906772e51e54e8c0dafc8ddbf8c" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>control_loop</name></member>
+      <member refid="classPathFollowerNode_1a0f4ada152c3e0b409450797ef2e7a41b" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>current_pose</name></member>
+      <member refid="classPathFollowerNode_1a733d89b8e7ff9ef0bf07a9badddceb90" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>current_speed</name></member>
+      <member refid="classPathFollowerNode_1a3da06760f36925f314cd75b06973876d" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>default_clock_</name></member>
+      <member refid="classPathFollowerNode_1ab608ad2305aabf809ddce62f4ecd8042" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>delay_ff_action_</name></member>
+      <member refid="classPathFollowerNode_1a9d89113724424ce69d2e27cc61160515" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>disable_print_timeout_</name></member>
+      <member refid="classPathFollowerNode_1a9bf03d676c53ec79ca478b528a5a52d1" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>drive_publisher_</name></member>
+      <member refid="classPathFollowerNode_1aa79bf0f10eea76642c5047eeac9f0a79" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>drive_topic_</name></member>
+      <member refid="classPathFollowerNode_1ab27a4cd8a4e002a0014cda5916aa954e" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>enable_feedforward_</name></member>
+      <member refid="classPathFollowerNode_1ae75377e8babc190e3ef75ba3d0668051" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>enable_stanley_</name></member>
+      <member refid="classPathFollowerNode_1a49e5b644c0ea2a9f03dfc6f9fc1cc597" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>feedforward_action</name></member>
+      <member refid="classPathFollowerNode_1a8c023d44af77f9d34cbb37e943c4aec3" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>ff_path_based_only_</name></member>
+      <member refid="classPathFollowerNode_1a3f4aea4739d5f0fb8064b5259928e249" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>k_stanley_</name></member>
+      <member refid="classPathFollowerNode_1a1cae2e73710a97bc2610db8d0d574977" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>kd_s_</name></member>
+      <member refid="classPathFollowerNode_1a4e4dfc12f8e5b6fe044c0101ec4ba437" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>kk_s_</name></member>
+      <member refid="classPathFollowerNode_1a47ae5d5bf0fcd9c5eeeb7c4df50f564d" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>lap_performance</name></member>
+      <member refid="classPathFollowerNode_1a2725d57b9608189b35ab399ec0fe340d" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>lap_performance_publisher_</name></member>
+      <member refid="classPathFollowerNode_1a8cd7236392826543e9dad8ed2036c8c5" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>look_ahead_gain_</name></member>
+      <member refid="classPathFollowerNode_1ac71ba0aac11d24ba4917aa9abe419bc6" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>look_ahead_point_publisher_</name></member>
+      <member refid="classPathFollowerNode_1a2463905031bf7a5123042f394a41a4ce" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>look_ahead_point_topic_</name></member>
+      <member refid="classPathFollowerNode_1a530bdd6c4a6d6476a9689e2ce14a8e3d" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>max_lap_statistics_</name></member>
+      <member refid="classPathFollowerNode_1a3b4234f66f07ae10149d8b8f6367c5d9" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>max_steer_</name></member>
+      <member refid="classPathFollowerNode_1a74717d1ee2578cc3f38755612c4f8b97" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>min_look_ahead_dist_</name></member>
+      <member refid="classPathFollowerNode_1ab7a5207dee25f5da292f678cde1b5551" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>odom_callback</name></member>
+      <member refid="classPathFollowerNode_1acbb2bb154baf463ae6dd56744df35ba4" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>odom_pose</name></member>
+      <member refid="classPathFollowerNode_1a25b69bbb350a8bfeddb6cdae2724fa71" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>odom_subscriber_</name></member>
+      <member refid="classPathFollowerNode_1a51e165215a16b2b58b6fff3f95efb7f8" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>odom_topic_</name></member>
+      <member refid="classPathFollowerNode_1a36a9d4fdfb1ecdc3f6b8000cc4bc1570" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>params_callback</name></member>
+      <member refid="classPathFollowerNode_1a05c82be7625289a6a7d11a843e6a7d6f" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>params_callback_handle_</name></member>
+      <member refid="classPathFollowerNode_1aa21de2f420e3098ab4a8e155e940b865" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>path</name></member>
+      <member refid="classPathFollowerNode_1a8cfee469a4e0056532815bfb575ce1d1" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>path_obtained</name></member>
+      <member refid="classPathFollowerNode_1ac66031afec0eeb574374cb9af7e1953e" prot="public" virt="non-virtual"><scope>PathFollowerNode</scope><name>PathFollowerNode</name></member>
+      <member refid="classPathFollowerNode_1a02b98329119a68af24e02ffff6e2c3d9" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>pose_callback</name></member>
+      <member refid="classPathFollowerNode_1a9b9f2b1ee7ecc151d478c6cad1e170ff" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>pose_obtained</name></member>
+      <member refid="classPathFollowerNode_1abc7276005d4432b9181f1b4ddd2b9b04" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>pose_subscriber_</name></member>
+      <member refid="classPathFollowerNode_1a43dab28723e666db0c4e3bc579c2e7f8" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>pose_topic_</name></member>
+      <member refid="classPathFollowerNode_1aea496ecd78fc0dfad209674cba5da84c" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>raceline_file_</name></member>
+      <member refid="classPathFollowerNode_1a74bb9dccde4570f67ace891c3ab955ee" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>raceline_publisher_</name></member>
+      <member refid="classPathFollowerNode_1a157c932aace8305981ed7f2bc807647b" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>reset_lap_statistics_callback</name></member>
+      <member refid="classPathFollowerNode_1a735c9a2b209e1e17939fa5f98e58d571" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>reset_lap_statistics_subscriber_</name></member>
+      <member refid="classPathFollowerNode_1aa2da4d78eb93dac6f8a711ebfe71ff1b" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>reset_lap_statistics_topic_</name></member>
+      <member refid="classPathFollowerNode_1a99301da18159a0173b256810642a4d7a" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>scale_speed_</name></member>
+      <member refid="classPathFollowerNode_1a30363c06c654abcdca6aae88503feaec" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>send_drive_msg_</name></member>
+      <member refid="classPathFollowerNode_1a440e805405f8fe2a9c7bfb7f2a73ff17" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>speed_obtained</name></member>
+      <member refid="classPathFollowerNode_1a8af8a655090957aff517c3f0c2583922" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>starting_strip_</name></member>
+      <member refid="classPathFollowerNode_1a9a45a9fc76fac5bd8c9599072e2227a5" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>status_callback</name></member>
+      <member refid="classPathFollowerNode_1ad255ea9f74b68c41c7602b83afbe9ac0" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>status_subscriber_</name></member>
+      <member refid="classPathFollowerNode_1af5f7d70762e0fca4e44c025c7a267328" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>status_topic_</name></member>
+      <member refid="classPathFollowerNode_1ae3ececb2d6dd46e40d97775c3ecdde75" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>steering_controller</name></member>
+      <member refid="classPathFollowerNode_1abe378a423e86cb138a723a626d7ccf43" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>tdp_</name></member>
+      <member refid="classPathFollowerNode_1a3c51e53d4bf3c6dad3a6c3869616bd5e" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>visualize_markers_</name></member>
+      <member refid="classPathFollowerNode_1adfad56368e12e0a0427c046c81260a53" prot="private" virt="non-virtual"><scope>PathFollowerNode</scope><name>wb_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

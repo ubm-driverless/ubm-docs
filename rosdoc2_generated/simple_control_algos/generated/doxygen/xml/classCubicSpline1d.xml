@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classCubicSpline1d" kind="class" language="C++" prot="public">
+    <compoundname>CubicSpline1d</compoundname>
+    <includes local="no">spline_and_polynomial.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCubicSpline1d_1aeaf3de4fc33a220da85b63d9f04138a5" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; CubicSpline1d::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="54" column="17" bodyfile="include/spline_and_polynomial.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCubicSpline1d_1a3499e2ffebfc4d4faaf24361893cdead" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; CubicSpline1d::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="54" column="19" bodyfile="include/spline_and_polynomial.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCubicSpline1d_1afab62994b0ead963760ee90cff61c234" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; CubicSpline1d::a_0</definition>
+        <argsstring></argsstring>
+        <name>a_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="54" column="21" bodyfile="include/spline_and_polynomial.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCubicSpline1d_1a17ed6088562d063b3144a81b89ad1ff3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; CubicSpline1d::a_1</definition>
+        <argsstring></argsstring>
+        <name>a_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="54" column="25" bodyfile="include/spline_and_polynomial.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCubicSpline1d_1a3de6abe7fb869ee84a90a736bd728f94" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; CubicSpline1d::a_3</definition>
+        <argsstring></argsstring>
+        <name>a_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="54" column="29" bodyfile="include/spline_and_polynomial.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCubicSpline1d_1a75e76e7186781b1d8506d5b4c3a48c45" prot="private" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec CubicSpline1d::a_2</definition>
+        <argsstring></argsstring>
+        <name>a_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="55" column="15" bodyfile="include/spline_and_polynomial.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCubicSpline1d_1a1b874b278c676659b505501712ba66b2" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CubicSpline1d::lenght_x</definition>
+        <argsstring></argsstring>
+        <name>lenght_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="56" column="12" bodyfile="include/spline_and_polynomial.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCubicSpline1d_1a026fb1cd65a4ff63002ea25a15e097cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CubicSpline1d::CubicSpline1d</definition>
+        <argsstring>()</argsstring>
+        <name>CubicSpline1d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor for <ref refid="classCubicSpline1d" kindref="compound">CubicSpline1d</ref>. Initializes an empty 1D spline. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="23" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline1d_1a6431a7dcf6d4c3c1d593b8066a123219" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CubicSpline1d::initialize</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;x, const std::vector&lt; float &gt; &amp;y)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the 1D spline with the given x and y coordinates. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of x coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of y coordinates. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline1d_1a03800bf80f6ca8e9d29a9ec4635a2856" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float, float &gt;</type>
+        <definition>std::tuple&lt;float, float, float&gt; CubicSpline1d::get_pos_and_derivatives</definition>
+        <argsstring>(const float &amp;x)</argsstring>
+        <name>get_pos_and_derivatives</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the interpolated position and derivatives at a given x. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x position at which to evaluate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple containing (position, first derivative, second derivative). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="37" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline1d_1a77d5bf1c84e32021aa0ad851d53d043a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float &gt;</type>
+        <definition>std::tuple&lt;float, float&gt; CubicSpline1d::get_derivatives</definition>
+        <argsstring>(const float &amp;x)</argsstring>
+        <name>get_derivatives</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the first and second derivatives at a given x. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x position at which to evaluate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple containing (first derivative, second derivative). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="44" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline1d_1af8aa3d420b826369eddadf6a0396fb09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CubicSpline1d::calc_position</definition>
+        <argsstring>(const float &amp;x)</argsstring>
+        <name>calc_position</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the interpolated position at a given x. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x position at which to evaluate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interpolated y position. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="51" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classCubicSpline1d_1aecaa4cf7256aa9c6bf5883ada8f8e2e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t CubicSpline1d::search_index</definition>
+        <argsstring>(const float &amp;x)</argsstring>
+        <name>search_index</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="58" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline1d_1abf50ded1b76ddc2cf4b5b41e08f89b8f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::mat</type>
+        <definition>arma::mat CubicSpline1d::calc_a</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;delta_x)</argsstring>
+        <name>calc_a</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>delta_x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="59" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline1d_1a95ae5b6a4d66a14feed9fb10a71eb8d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::vec</type>
+        <definition>arma::vec CubicSpline1d::calc_b</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;delta_x, const std::vector&lt; float &gt; &amp;a)</argsstring>
+        <name>calc_b</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>delta_x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="60" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class for computing a one-dimensional cubic spline interpolation. Creates a smooth curve through a series of points (x, y) and provides methods to evaluate positions, first derivatives, and second derivatives along the spline. </para>
+    </detaileddescription>
+    <location file="include/spline_and_polynomial.hpp" line="16" column="20" bodyfile="include/spline_and_polynomial.hpp" bodystart="16" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classCubicSpline1d_1afab62994b0ead963760ee90cff61c234" prot="private" virt="non-virtual"><scope>CubicSpline1d</scope><name>a_0</name></member>
+      <member refid="classCubicSpline1d_1a17ed6088562d063b3144a81b89ad1ff3" prot="private" virt="non-virtual"><scope>CubicSpline1d</scope><name>a_1</name></member>
+      <member refid="classCubicSpline1d_1a75e76e7186781b1d8506d5b4c3a48c45" prot="private" virt="non-virtual"><scope>CubicSpline1d</scope><name>a_2</name></member>
+      <member refid="classCubicSpline1d_1a3de6abe7fb869ee84a90a736bd728f94" prot="private" virt="non-virtual"><scope>CubicSpline1d</scope><name>a_3</name></member>
+      <member refid="classCubicSpline1d_1abf50ded1b76ddc2cf4b5b41e08f89b8f" prot="private" virt="non-virtual"><scope>CubicSpline1d</scope><name>calc_a</name></member>
+      <member refid="classCubicSpline1d_1a95ae5b6a4d66a14feed9fb10a71eb8d2" prot="private" virt="non-virtual"><scope>CubicSpline1d</scope><name>calc_b</name></member>
+      <member refid="classCubicSpline1d_1af8aa3d420b826369eddadf6a0396fb09" prot="public" virt="non-virtual"><scope>CubicSpline1d</scope><name>calc_position</name></member>
+      <member refid="classCubicSpline1d_1a026fb1cd65a4ff63002ea25a15e097cb" prot="public" virt="non-virtual"><scope>CubicSpline1d</scope><name>CubicSpline1d</name></member>
+      <member refid="classCubicSpline1d_1a77d5bf1c84e32021aa0ad851d53d043a" prot="public" virt="non-virtual"><scope>CubicSpline1d</scope><name>get_derivatives</name></member>
+      <member refid="classCubicSpline1d_1a03800bf80f6ca8e9d29a9ec4635a2856" prot="public" virt="non-virtual"><scope>CubicSpline1d</scope><name>get_pos_and_derivatives</name></member>
+      <member refid="classCubicSpline1d_1a6431a7dcf6d4c3c1d593b8066a123219" prot="public" virt="non-virtual"><scope>CubicSpline1d</scope><name>initialize</name></member>
+      <member refid="classCubicSpline1d_1a1b874b278c676659b505501712ba66b2" prot="private" virt="non-virtual"><scope>CubicSpline1d</scope><name>lenght_x</name></member>
+      <member refid="classCubicSpline1d_1aecaa4cf7256aa9c6bf5883ada8f8e2e8" prot="private" virt="non-virtual"><scope>CubicSpline1d</scope><name>search_index</name></member>
+      <member refid="classCubicSpline1d_1aeaf3de4fc33a220da85b63d9f04138a5" prot="private" virt="non-virtual"><scope>CubicSpline1d</scope><name>x</name></member>
+      <member refid="classCubicSpline1d_1a3499e2ffebfc4d4faaf24361893cdead" prot="private" virt="non-virtual"><scope>CubicSpline1d</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,738 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enum COMM_PACKET_ID &mdash; vesc_driver 1.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=fc837d61"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Enum debug_sampling_mode" href="enum_datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61e.html" />
+    <link rel="prev" title="Enum chuk_control_type" href="enum_datatypes_8hpp_1a85332f8edd172e76c48306639165855e.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            vesc_driver
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_vesc_driver.html">Namespace vesc_driver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structCRC_1_1Parameters.html">Template Struct CRC::Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structCRC_1_1Table.html">Template Struct CRC::Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1adc__config.html">Struct adc_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1app__configuration.html">Struct app_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1ATTITUDE__INFO.html">Struct ATTITUDE_INFO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1balance__config.html">Struct balance_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg.html">Struct can_status_msg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__2.html">Struct can_status_msg_2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__3.html">Struct can_status_msg_3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__4.html">Struct can_status_msg_4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__5.html">Struct can_status_msg_5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1chuck__data.html">Struct chuck_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1chuk__config.html">Struct chuk_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1fault__data.html">Struct fault_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1imu__config.html">Struct imu_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__configuration.html">Struct mc_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__rpm__dep__struct.html">Struct mc_rpm_dep_struct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__values.html">Struct mc_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mote__state.html">Struct mote_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1nrf__config.html">Struct nrf_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1ppm__config.html">Struct ppm_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1setup__values.html">Struct setup_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1VescDriver_1_1CommandLimit.html">Struct VescDriver::CommandLimit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1VSerialInfo__t.html">Struct VSerialInfo_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCRC.html">Class CRC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1PacketFactoryTemplate.html">Template Class PacketFactoryTemplate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1SerialException.html">Class SerialException</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescDeviceLookup.html">Class VescDeviceLookup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescDriver.html">Class VescDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescFrame.html">Class VescFrame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescInterface.html">Class VescInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacket.html">Class VescPacket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketFactory.html">Class VescPacketFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketFWVersion.html">Class VescPacketFWVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketImu.html">Class VescPacketImu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestFWVersion.html">Class VescPacketRequestFWVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestImu.html">Class VescPacketRequestImu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestValues.html">Class VescPacketRequestValues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetCurrent.html">Class VescPacketSetCurrent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetCurrentBrake.html">Class VescPacketSetCurrentBrake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetDuty.html">Class VescPacketSetDuty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetPos.html">Class VescPacketSetPos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetRPM.html">Class VescPacketSetRPM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetServoPos.html">Class VescPacketSetServoPos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketValues.html">Class VescPacketValues</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#enums">Enums</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4.html">Enum adc_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5950ddeee9212ba83433f85c93a835bd.html">Enum AHRS_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac4d298226d152810103dfa554ac55966.html">Enum app_use</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a877e9c650835fec907896e3affdf8029.html">Enum BATTERY_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2e.html">Enum CAN_BAUD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6068ce8e2b2f011583bd6e3f47867fc5.html">Enum CAN_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02.html">Enum CAN_PACKET_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394.html">Enum CAN_STATUS_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bde.html">Enum CFG_T</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a85332f8edd172e76c48306639165855e.html">Enum chuk_control_type</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Enum COMM_PACKET_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61e.html">Enum debug_sampling_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a9d554e45533d65de81725771a035420f.html">Enum disp_pos_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6e41639d201e98ebe2e5a546fb8926cb.html">Enum drv8301_oc_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a7d50e7e730bc8f2de2b905fd131f7e34.html">Enum FOC_HFI_SAMPLES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aea86ed1310f7bac5436bb1d9cfd2b5cc.html">Enum gpd_output_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a991de85646df7979b3aecc17c738b6cc.html">Enum IMU_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9bae.html">Enum LED_EXT_STATE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a94dd3adcd583aa7571b67be0fe71e4c4.html">Enum mc_comm_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6.html">Enum mc_control_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1add07239a8d01883eb907388a53df457a.html">Enum mc_fault_code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5fb601d3d3593117aa2500e92b3f3c5e.html">Enum mc_foc_cc_decoupling_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a30b7ef228cda5d4ca51fb63be2da0428.html">Enum mc_foc_observer_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a4da904a4c4a29bba71d531a12f1746ca.html">Enum mc_foc_sensor_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aba46e12afe600fb9e1bda76272285050.html">Enum mc_motor_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5429e726bd7c0770419236fd596f68fb.html">Enum mc_pwm_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac75a4404acbc7ec308267d0856f668d0.html">Enum mc_sensor_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a0f20f041589eff3006f06cdd6738587b.html">Enum mc_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0a.html">Enum MOTE_PACKET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a82bde9a7aa25e2f36bebecd29aa4b93e.html">Enum NRF_AW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aad838390066a6ba9ad9478d33500a845.html">Enum NRF_CRC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aff9921401b1c440fa36f01cba40978de.html">Enum NRF_PAIR_RES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ab4db6b6b86c3a3c1af1eb25bb47d3026.html">Enum NRF_POWER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162.html">Enum NRF_RETR_DELAY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a97e3b0a9f8e660b4e9d8dfa391e89c5d.html">Enum NRF_SPEED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266d.html">Enum out_aux_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bb.html">Enum ppm_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efa.html">Enum sensor_port_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782.html">Enum SHUTDOWN_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a9fdbfdaac84788724a24df03d5c9d59a.html">Enum temp_sensor_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ad4c8d3f7b1a2b59235117ea7feb9d095.html">Enum thr_exp_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182d.html">Enum VESC_TX_T</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#unions">Unions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unionvesc__driver_1_1eeprom__var.html">Union eeprom_var</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1ac53723d95b5c8c7d707e8e3ebcb4e143.html">Define crcpp_constexpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1af44cfa9e71356f05c42b363cf04ea9a6.html">Define crcpp_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1add273674b22f031b158220eeb560c7a0.html">Define crcpp_uint16</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a4469d365469b254f21fb50316e079094.html">Define crcpp_uint32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a3541074ba795d31a40f13e78c77c0e7c.html">Define crcpp_uint64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a28cd0a17324a479874c3bdd5387d6b04.html">Define crcpp_uint8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_vesc__packet_8hpp_1a0aa3088ffa17b0bd3a345955ab23b90c.html">Define CRCPP_USE_CPP11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_datatypes_8hpp_1a7c35c014fad56a5ea9f86b25ce3c4355.html">Define EEPROM_VARS_CUSTOM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_datatypes_8hpp_1af8f381ccb1ded44a9fbd8e559b4772b9.html">Define EEPROM_VARS_HW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_vesc__packet__factory_8hpp_1ad0eb6d8ee731f885e4106a3e89cdd6bf.html">Define REGISTER_PACKET_TYPE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1af21703f925222cf808675b9d3e3e1080.html">Typedef vesc_driver::Buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1a1f7354e69e220473c86b36eee92ab6c3.html">Typedef vesc_driver::BufferRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1ae582897e181f1a22ef7621b7eb9a3675.html">Typedef vesc_driver::BufferRangeConst</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_datatypes_8hpp_1a55e79bdc72bc3aeb000f5cbb6157f509.html">Typedef vesc_driver::systime_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1a80af512a3c68b006ee27699c794f839e.html">Typedef vesc_driver::VescPacketConstPtr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1aabad57bf0bb1f43a0e9d9579b7c07903.html">Typedef vesc_driver::VescPacketPtr</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_vesc_driver.html">Directory vesc_driver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_crc.hpp.html">File crc.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_datatypes.hpp.html">File datatypes.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_device_uuid_lookup.hpp.html">File vesc_device_uuid_lookup.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_driver.hpp.html">File vesc_driver.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_interface.hpp.html">File vesc_interface.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_packet.hpp.html">File vesc_packet.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_packet_factory.hpp.html">File vesc_packet_factory.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/CHANGELOG.html">CHANGELOG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/CHANGELOG.html#changelog-for-package-vesc-driver">Changelog for package vesc_driver</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/CHANGELOG.html#id1">1.1.0 (2020-12-12)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/CHANGELOG.html#id3">1.0.0 (2020-12-02)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vesc_driver</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Enum COMM_PACKET_ID</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/enum_datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enum-comm-packet-id">
+<span id="exhale-enum-datatypes-8hpp-1ab01ba5995142dfcab715099771ded7f5"></span><h1>Enum COMM_PACKET_ID<a class="headerlink" href="#enum-comm-packet-id" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_vesc_driver_datatypes.hpp.html#file-include-vesc-driver-datatypes-hpp"><span class="std std-ref">File datatypes.hpp</span></a></p></li>
+</ul>
+<section id="enum-documentation">
+<h2>Enum Documentation<a class="headerlink" href="#enum-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_IDE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_IDE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_IDE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">vesc_driver</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">COMM_PACKET_ID</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_IDE" title="Link to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_FW_VERSIONE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID15COMM_FW_VERSIONE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID15COMM_FW_VERSIONE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ac23e4faa3a428e360e66914b655b030f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_FW_VERSION</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_FW_VERSIONE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_JUMP_TO_BOOTLOADERE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID23COMM_JUMP_TO_BOOTLOADERE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID23COMM_JUMP_TO_BOOTLOADERE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aee66f03c5cc376250c31cac690a1e1a1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_JUMP_TO_BOOTLOADER</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_JUMP_TO_BOOTLOADERE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID18COMM_ERASE_NEW_APPE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID18COMM_ERASE_NEW_APPE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID18COMM_ERASE_NEW_APPE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5abca5cc182df3f8b35e1b006979deb424"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_ERASE_NEW_APP</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID18COMM_ERASE_NEW_APPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_WRITE_NEW_APP_DATAE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID23COMM_WRITE_NEW_APP_DATAE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID23COMM_WRITE_NEW_APP_DATAE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a92f7d57b4fc4634b9280056cf1a39185"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_WRITE_NEW_APP_DATA</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_WRITE_NEW_APP_DATAE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_GET_VALUESE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID15COMM_GET_VALUESE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID15COMM_GET_VALUESE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a32f9836d4ced768379429fd7b1b710e2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_VALUES</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_GET_VALUESE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID13COMM_SET_DUTYE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID13COMM_SET_DUTYE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID13COMM_SET_DUTYE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a540eb3663c9dd64a1cab1a07dff1fb09"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_DUTY</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID13COMM_SET_DUTYE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_SET_CURRENTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID16COMM_SET_CURRENTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID16COMM_SET_CURRENTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aabfdafcad2b98a648c865ba33414a7a5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_CURRENT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_SET_CURRENTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_SET_CURRENT_BRAKEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID22COMM_SET_CURRENT_BRAKEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID22COMM_SET_CURRENT_BRAKEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a070db874bed7ee7ee9fa80fb762a3da5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_CURRENT_BRAKE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_SET_CURRENT_BRAKEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID12COMM_SET_RPME">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID12COMM_SET_RPME"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID12COMM_SET_RPME"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a1104ed47f501da5fc540dec2bf35e642"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_RPM</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID12COMM_SET_RPME" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID12COMM_SET_POSE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID12COMM_SET_POSE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID12COMM_SET_POSE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5afe54113d7b4e8518101630cd7263a875"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_POS</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID12COMM_SET_POSE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID18COMM_SET_HANDBRAKEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID18COMM_SET_HANDBRAKEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID18COMM_SET_HANDBRAKEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aaf139cf11c1284801d4d710de543bc4d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_HANDBRAKE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID18COMM_SET_HANDBRAKEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_SET_DETECTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID15COMM_SET_DETECTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID15COMM_SET_DETECTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ad1529642f1ee586d053172935928ea02"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_DETECT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_SET_DETECTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID18COMM_SET_SERVO_POSE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID18COMM_SET_SERVO_POSE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID18COMM_SET_SERVO_POSE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aaf5c4a0e9028880be064a4e8f11132e6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_SERVO_POS</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID18COMM_SET_SERVO_POSE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_SET_MCCONFE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID15COMM_SET_MCCONFE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID15COMM_SET_MCCONFE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a5e3dbde26ab58f52ad2e570596740f8a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_MCCONF</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_SET_MCCONFE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_GET_MCCONFE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID15COMM_GET_MCCONFE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID15COMM_GET_MCCONFE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5abccb8c723afa67381e7051342298202e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_MCCONF</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_GET_MCCONFE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_GET_MCCONF_DEFAULTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID23COMM_GET_MCCONF_DEFAULTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID23COMM_GET_MCCONF_DEFAULTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5af7952d53524e42d9e47e5ef445690bbf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_MCCONF_DEFAULT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_GET_MCCONF_DEFAULTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_SET_APPCONFE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID16COMM_SET_APPCONFE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID16COMM_SET_APPCONFE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ac06c0e72a7aa26d1315033ce06eb176d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_APPCONF</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_SET_APPCONFE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_GET_APPCONFE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID16COMM_GET_APPCONFE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID16COMM_GET_APPCONFE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a3f221231899969e84bbfc7c140cb917c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_APPCONF</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_GET_APPCONFE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_GET_APPCONF_DEFAULTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID24COMM_GET_APPCONF_DEFAULTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID24COMM_GET_APPCONF_DEFAULTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a8b4f7cc2dfbcb4c6622eafc6f24e6e55"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_APPCONF_DEFAULT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_GET_APPCONF_DEFAULTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_SAMPLE_PRINTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID17COMM_SAMPLE_PRINTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID17COMM_SAMPLE_PRINTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a0ea19b904615b464137b4bd265513100"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SAMPLE_PRINT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_SAMPLE_PRINTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_TERMINAL_CMDE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID17COMM_TERMINAL_CMDE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID17COMM_TERMINAL_CMDE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a5a75eeef3baf0a64d0e1171a7fad7dcf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_TERMINAL_CMD</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_TERMINAL_CMDE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID10COMM_PRINTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID10COMM_PRINTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID10COMM_PRINTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a30aa4b9a8d0237dae5d0e9fd449ee614"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_PRINT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID10COMM_PRINTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_ROTOR_POSITIONE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID19COMM_ROTOR_POSITIONE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID19COMM_ROTOR_POSITIONE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a2fe9121b6f0018587eb8762e997fd261"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_ROTOR_POSITION</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_ROTOR_POSITIONE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_EXPERIMENT_SAMPLEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID22COMM_EXPERIMENT_SAMPLEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID22COMM_EXPERIMENT_SAMPLEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aca94312bba6f0024256c7d3f8610c3e4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_EXPERIMENT_SAMPLE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_EXPERIMENT_SAMPLEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_DETECT_MOTOR_PARAME">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID23COMM_DETECT_MOTOR_PARAME"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID23COMM_DETECT_MOTOR_PARAME"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ac3dc691fbbd37308de130abf60a649ff"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_DETECT_MOTOR_PARAM</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_DETECT_MOTOR_PARAME" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID21COMM_DETECT_MOTOR_R_LE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID21COMM_DETECT_MOTOR_R_LE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID21COMM_DETECT_MOTOR_R_LE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a02170581e204cf1c999f062daa4b3db7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_DETECT_MOTOR_R_L</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID21COMM_DETECT_MOTOR_R_LE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID30COMM_DETECT_MOTOR_FLUX_LINKAGEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID30COMM_DETECT_MOTOR_FLUX_LINKAGEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID30COMM_DETECT_MOTOR_FLUX_LINKAGEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a2b7970563c414e018d71ebdde6a405fe"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_DETECT_MOTOR_FLUX_LINKAGE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID30COMM_DETECT_MOTOR_FLUX_LINKAGEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_DETECT_ENCODERE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID19COMM_DETECT_ENCODERE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID19COMM_DETECT_ENCODERE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5affaed12071380839721a6f711882131e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_DETECT_ENCODER</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_DETECT_ENCODERE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_DETECT_HALL_FOCE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID20COMM_DETECT_HALL_FOCE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID20COMM_DETECT_HALL_FOCE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a090e01c8078f1c2bc34fdccca9c61527"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_DETECT_HALL_FOC</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_DETECT_HALL_FOCE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID11COMM_REBOOTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID11COMM_REBOOTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID11COMM_REBOOTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a1cb0bbd189955df386b81a53621a0d13"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_REBOOT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID11COMM_REBOOTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID10COMM_ALIVEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID10COMM_ALIVEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID10COMM_ALIVEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a61599f6ad9fa5246c20a279da397e277"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_ALIVE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID10COMM_ALIVEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_GET_DECODED_PPME">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID20COMM_GET_DECODED_PPME"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID20COMM_GET_DECODED_PPME"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aa511496d74c1845ca51df28f858f883a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_DECODED_PPM</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_GET_DECODED_PPME" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_GET_DECODED_ADCE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID20COMM_GET_DECODED_ADCE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID20COMM_GET_DECODED_ADCE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a7bccb73686f5b9625157b63445c761d2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_DECODED_ADC</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_GET_DECODED_ADCE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID21COMM_GET_DECODED_CHUKE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID21COMM_GET_DECODED_CHUKE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID21COMM_GET_DECODED_CHUKE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a3620ff01ff952d593e661d97a4c0d897"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_DECODED_CHUK</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID21COMM_GET_DECODED_CHUKE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_FORWARD_CANE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID16COMM_FORWARD_CANE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID16COMM_FORWARD_CANE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a267e1d8d74a71e150e105cfdbcc0eb51"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_FORWARD_CAN</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_FORWARD_CANE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_SET_CHUCK_DATAE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID19COMM_SET_CHUCK_DATAE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID19COMM_SET_CHUCK_DATAE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a4b96647cb35aeb16323923fd2f7deecc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_CHUCK_DATA</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_SET_CHUCK_DATAE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_CUSTOM_APP_DATAE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID20COMM_CUSTOM_APP_DATAE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID20COMM_CUSTOM_APP_DATAE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a67a5a30a4253db12da244dc6ff85943e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_CUSTOM_APP_DATA</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_CUSTOM_APP_DATAE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_NRF_START_PAIRINGE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID22COMM_NRF_START_PAIRINGE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID22COMM_NRF_START_PAIRINGE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ac0f6f9733140c7d950c14f5560f8c8c1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_NRF_START_PAIRING</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_NRF_START_PAIRINGE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_GPD_SET_FSWE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID16COMM_GPD_SET_FSWE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID16COMM_GPD_SET_FSWE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a909f6064d3b75828b4d3f3735c10c868"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GPD_SET_FSW</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_GPD_SET_FSWE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_GPD_BUFFER_NOTIFYE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID22COMM_GPD_BUFFER_NOTIFYE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID22COMM_GPD_BUFFER_NOTIFYE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ab61c0f85c9c7b0da1de559071d717e78"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GPD_BUFFER_NOTIFY</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_GPD_BUFFER_NOTIFYE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID25COMM_GPD_BUFFER_SIZE_LEFTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID25COMM_GPD_BUFFER_SIZE_LEFTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID25COMM_GPD_BUFFER_SIZE_LEFTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ab53ad789091dc794b404f26b5ddd709c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GPD_BUFFER_SIZE_LEFT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID25COMM_GPD_BUFFER_SIZE_LEFTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_GPD_FILL_BUFFERE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID20COMM_GPD_FILL_BUFFERE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID20COMM_GPD_FILL_BUFFERE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a62c0bbedd11876183b8b346677e293ff"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GPD_FILL_BUFFER</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_GPD_FILL_BUFFERE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_GPD_OUTPUT_SAMPLEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID22COMM_GPD_OUTPUT_SAMPLEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID22COMM_GPD_OUTPUT_SAMPLEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a2c06e28a50b2a67ac6e124f0d5b107e7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GPD_OUTPUT_SAMPLE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_GPD_OUTPUT_SAMPLEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_GPD_SET_MODEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID17COMM_GPD_SET_MODEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID17COMM_GPD_SET_MODEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a7c1713ec54ef5d2af9ef4c5707c94235"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GPD_SET_MODE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_GPD_SET_MODEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID25COMM_GPD_FILL_BUFFER_INT8E">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID25COMM_GPD_FILL_BUFFER_INT8E"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID25COMM_GPD_FILL_BUFFER_INT8E"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a827619459784643d565048a7f315341f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GPD_FILL_BUFFER_INT8</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID25COMM_GPD_FILL_BUFFER_INT8E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID26COMM_GPD_FILL_BUFFER_INT16E">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID26COMM_GPD_FILL_BUFFER_INT16E"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID26COMM_GPD_FILL_BUFFER_INT16E"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a8d5a88ceb822315fa40467cafe34e799"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GPD_FILL_BUFFER_INT16</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID26COMM_GPD_FILL_BUFFER_INT16E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID29COMM_GPD_SET_BUFFER_INT_SCALEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID29COMM_GPD_SET_BUFFER_INT_SCALEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID29COMM_GPD_SET_BUFFER_INT_SCALEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a4327bc44668fdc589af5ad0c10112639"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GPD_SET_BUFFER_INT_SCALE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID29COMM_GPD_SET_BUFFER_INT_SCALEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID21COMM_GET_VALUES_SETUPE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID21COMM_GET_VALUES_SETUPE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID21COMM_GET_VALUES_SETUPE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5abc3e4de7dc33a073aff7bdd372c3ff4e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_VALUES_SETUP</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID21COMM_GET_VALUES_SETUPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_SET_MCCONF_TEMPE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID20COMM_SET_MCCONF_TEMPE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID20COMM_SET_MCCONF_TEMPE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a828b95feff04f87aaa8b3e6dcec50cb1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_MCCONF_TEMP</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_SET_MCCONF_TEMPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID26COMM_SET_MCCONF_TEMP_SETUPE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID26COMM_SET_MCCONF_TEMP_SETUPE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID26COMM_SET_MCCONF_TEMP_SETUPE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aa0972fbaf08fe5fde0ab6820b2db1ecd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_MCCONF_TEMP_SETUP</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID26COMM_SET_MCCONF_TEMP_SETUPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID25COMM_GET_VALUES_SELECTIVEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID25COMM_GET_VALUES_SELECTIVEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID25COMM_GET_VALUES_SELECTIVEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aae0c18da365317d4818e7ce4bcdafd25"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_VALUES_SELECTIVE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID25COMM_GET_VALUES_SELECTIVEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID31COMM_GET_VALUES_SETUP_SELECTIVEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID31COMM_GET_VALUES_SETUP_SELECTIVEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID31COMM_GET_VALUES_SETUP_SELECTIVEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a30e42257caddf22c64f544a8e478b9c2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_VALUES_SETUP_SELECTIVE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID31COMM_GET_VALUES_SETUP_SELECTIVEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_EXT_NRF_PRESENTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID20COMM_EXT_NRF_PRESENTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID20COMM_EXT_NRF_PRESENTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ae213568473dbb497416e8aabf9d89566"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_EXT_NRF_PRESENT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_EXT_NRF_PRESENTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID28COMM_EXT_NRF_ESB_SET_CH_ADDRE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID28COMM_EXT_NRF_ESB_SET_CH_ADDRE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID28COMM_EXT_NRF_ESB_SET_CH_ADDRE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a8da496568ce7034be9c632a56f7178b6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_EXT_NRF_ESB_SET_CH_ADDR</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID28COMM_EXT_NRF_ESB_SET_CH_ADDRE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID26COMM_EXT_NRF_ESB_SEND_DATAE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID26COMM_EXT_NRF_ESB_SEND_DATAE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID26COMM_EXT_NRF_ESB_SEND_DATAE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ab21957cbb93127f26c93b61d4863844f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_EXT_NRF_ESB_SEND_DATA</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID26COMM_EXT_NRF_ESB_SEND_DATAE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_EXT_NRF_ESB_RX_DATAE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID24COMM_EXT_NRF_ESB_RX_DATAE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID24COMM_EXT_NRF_ESB_RX_DATAE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a127fd7bbbe563194b92f1e9f5fe78f3b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_EXT_NRF_ESB_RX_DATA</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_EXT_NRF_ESB_RX_DATAE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_EXT_NRF_SET_ENABLEDE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID24COMM_EXT_NRF_SET_ENABLEDE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID24COMM_EXT_NRF_SET_ENABLEDE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a3a1f1153d10a5556cf360dab561af0ec"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_EXT_NRF_SET_ENABLED</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_EXT_NRF_SET_ENABLEDE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID39COMM_DETECT_MOTOR_FLUX_LINKAGE_OPENLOOPE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID39COMM_DETECT_MOTOR_FLUX_LINKAGE_OPENLOOPE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID39COMM_DETECT_MOTOR_FLUX_LINKAGE_OPENLOOPE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a89972a50861cc4fdda27278dc1857aca"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_DETECT_MOTOR_FLUX_LINKAGE_OPENLOOP</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID39COMM_DETECT_MOTOR_FLUX_LINKAGE_OPENLOOPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID25COMM_DETECT_APPLY_ALL_FOCE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID25COMM_DETECT_APPLY_ALL_FOCE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID25COMM_DETECT_APPLY_ALL_FOCE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a147e6b81b636e83ab390aea732b0590e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_DETECT_APPLY_ALL_FOC</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID25COMM_DETECT_APPLY_ALL_FOCE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID31COMM_JUMP_TO_BOOTLOADER_ALL_CANE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID31COMM_JUMP_TO_BOOTLOADER_ALL_CANE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID31COMM_JUMP_TO_BOOTLOADER_ALL_CANE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5afafb7f24e220ed0aaae2d0754d9ed411"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_JUMP_TO_BOOTLOADER_ALL_CAN</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID31COMM_JUMP_TO_BOOTLOADER_ALL_CANE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID26COMM_ERASE_NEW_APP_ALL_CANE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID26COMM_ERASE_NEW_APP_ALL_CANE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID26COMM_ERASE_NEW_APP_ALL_CANE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a704862193ef0817d4642a12f1ca59672"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_ERASE_NEW_APP_ALL_CAN</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID26COMM_ERASE_NEW_APP_ALL_CANE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID31COMM_WRITE_NEW_APP_DATA_ALL_CANE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID31COMM_WRITE_NEW_APP_DATA_ALL_CANE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID31COMM_WRITE_NEW_APP_DATA_ALL_CANE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a571d1294e3cbb3e517e121fda919510f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_WRITE_NEW_APP_DATA_ALL_CAN</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID31COMM_WRITE_NEW_APP_DATA_ALL_CANE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID13COMM_PING_CANE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID13COMM_PING_CANE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID13COMM_PING_CANE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a67f0e26d9237fc2a43e751ba7539b940"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_PING_CAN</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID13COMM_PING_CANE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_APP_DISABLE_OUTPUTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID23COMM_APP_DISABLE_OUTPUTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID23COMM_APP_DISABLE_OUTPUTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a366e6f7e6f28d3b422f33842535641eb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_APP_DISABLE_OUTPUT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_APP_DISABLE_OUTPUTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_TERMINAL_CMD_SYNCE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID22COMM_TERMINAL_CMD_SYNCE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID22COMM_TERMINAL_CMD_SYNCE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ab973b9875dda24dea5008c9f0f69b72d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_TERMINAL_CMD_SYNC</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_TERMINAL_CMD_SYNCE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_GET_IMU_DATAE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID17COMM_GET_IMU_DATAE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID17COMM_GET_IMU_DATAE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aca9a1fde329d75a1ae3555e793e74de2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_IMU_DATA</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_GET_IMU_DATAE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_BM_CONNECTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID15COMM_BM_CONNECTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID15COMM_BM_CONNECTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a7bfc816e4a4143d6352481540dad97c0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_BM_CONNECT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID15COMM_BM_CONNECTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_BM_ERASE_FLASH_ALLE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID23COMM_BM_ERASE_FLASH_ALLE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID23COMM_BM_ERASE_FLASH_ALLE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aebf280a797fcfcfd5dd37ddc744ac960"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_BM_ERASE_FLASH_ALL</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_BM_ERASE_FLASH_ALLE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_BM_WRITE_FLASHE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID19COMM_BM_WRITE_FLASHE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID19COMM_BM_WRITE_FLASHE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a2d01f06548b6b8676b2941d28177423d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_BM_WRITE_FLASH</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_BM_WRITE_FLASHE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID14COMM_BM_REBOOTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID14COMM_BM_REBOOTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID14COMM_BM_REBOOTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a324191dcf5086ef2455f55f2ec5bd64a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_BM_REBOOT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID14COMM_BM_REBOOTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID18COMM_BM_DISCONNECTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID18COMM_BM_DISCONNECTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID18COMM_BM_DISCONNECTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aec00710f9dc435803a97f8683b7d1ef9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_BM_DISCONNECT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID18COMM_BM_DISCONNECTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_BM_MAP_PINS_DEFAULTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID24COMM_BM_MAP_PINS_DEFAULTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID24COMM_BM_MAP_PINS_DEFAULTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ace1dca13bb81894e42da4816d5b421ce"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_BM_MAP_PINS_DEFAULT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_BM_MAP_PINS_DEFAULTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_BM_MAP_PINS_NRF5XE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID22COMM_BM_MAP_PINS_NRF5XE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID22COMM_BM_MAP_PINS_NRF5XE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5af7ced95025461d19ddff12718b15e0ab"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_BM_MAP_PINS_NRF5X</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID22COMM_BM_MAP_PINS_NRF5XE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID21COMM_ERASE_BOOTLOADERE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID21COMM_ERASE_BOOTLOADERE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID21COMM_ERASE_BOOTLOADERE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5afe1d0b8b2727d28cf12e74dd965a5599"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_ERASE_BOOTLOADER</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID21COMM_ERASE_BOOTLOADERE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID29COMM_ERASE_BOOTLOADER_ALL_CANE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID29COMM_ERASE_BOOTLOADER_ALL_CANE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID29COMM_ERASE_BOOTLOADER_ALL_CANE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a6118ce5f3babf5213928360ed2dea979"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_ERASE_BOOTLOADER_ALL_CAN</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID29COMM_ERASE_BOOTLOADER_ALL_CANE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID14COMM_PLOT_INITE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID14COMM_PLOT_INITE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID14COMM_PLOT_INITE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a6b663c36db26ea6dfa6e344b9cb63f9b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_PLOT_INIT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID14COMM_PLOT_INITE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID14COMM_PLOT_DATAE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID14COMM_PLOT_DATAE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID14COMM_PLOT_DATAE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aef36be6605bce904fb1b80638c65c5a5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_PLOT_DATA</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID14COMM_PLOT_DATAE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_PLOT_ADD_GRAPHE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID19COMM_PLOT_ADD_GRAPHE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID19COMM_PLOT_ADD_GRAPHE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a52b5f1f7818946da6c54636a8315d669"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_PLOT_ADD_GRAPH</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_PLOT_ADD_GRAPHE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_PLOT_SET_GRAPHE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID19COMM_PLOT_SET_GRAPHE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID19COMM_PLOT_SET_GRAPHE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a8ab33052a361cf5f925779fb74a61cea"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_PLOT_SET_GRAPH</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID19COMM_PLOT_SET_GRAPHE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_GET_DECODED_BALANCEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID24COMM_GET_DECODED_BALANCEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID24COMM_GET_DECODED_BALANCEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a4cab8eee9e031a135c1cdeb5ff4cdd6c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_DECODED_BALANCE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_GET_DECODED_BALANCEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_BM_MEM_READE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID16COMM_BM_MEM_READE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID16COMM_BM_MEM_READE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5acc97b4fb2d7fb20f838de7a60159e4d6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_BM_MEM_READ</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_BM_MEM_READE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID27COMM_WRITE_NEW_APP_DATA_LZOE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID27COMM_WRITE_NEW_APP_DATA_LZOE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID27COMM_WRITE_NEW_APP_DATA_LZOE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a33930af2688007aced262a6d89f56a9e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_WRITE_NEW_APP_DATA_LZO</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID27COMM_WRITE_NEW_APP_DATA_LZOE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID35COMM_WRITE_NEW_APP_DATA_ALL_CAN_LZOE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID35COMM_WRITE_NEW_APP_DATA_ALL_CAN_LZOE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID35COMM_WRITE_NEW_APP_DATA_ALL_CAN_LZOE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aa95bdcf96921c40654df82ca55a4cebb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_WRITE_NEW_APP_DATA_ALL_CAN_LZO</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID35COMM_WRITE_NEW_APP_DATA_ALL_CAN_LZOE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_BM_WRITE_FLASH_LZOE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID23COMM_BM_WRITE_FLASH_LZOE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID23COMM_BM_WRITE_FLASH_LZOE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a4227cb27435a40d950f9bfb527c000c4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_BM_WRITE_FLASH_LZO</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID23COMM_BM_WRITE_FLASH_LZOE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_SET_CURRENT_RELE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID20COMM_SET_CURRENT_RELE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID20COMM_SET_CURRENT_RELE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ab4181a8d3db0907b647e5e3346b12e85"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_CURRENT_REL</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_SET_CURRENT_RELE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID18COMM_CAN_FWD_FRAMEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID18COMM_CAN_FWD_FRAMEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID18COMM_CAN_FWD_FRAMEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a4b1594613a8dc5c330d21bad275aa22e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_CAN_FWD_FRAME</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID18COMM_CAN_FWD_FRAMEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_SET_BATTERY_CUTE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID20COMM_SET_BATTERY_CUTE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID20COMM_SET_BATTERY_CUTE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a52f886a62231e5703745bfec77e9b2bd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_BATTERY_CUT</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID20COMM_SET_BATTERY_CUTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_SET_BLE_NAMEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID17COMM_SET_BLE_NAMEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID17COMM_SET_BLE_NAMEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a0417c87efe2c28108bf5435ecb37de83"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_BLE_NAME</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_SET_BLE_NAMEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_SET_BLE_PINE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID16COMM_SET_BLE_PINE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID16COMM_SET_BLE_PINE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ac4fb7203856c1bb73c239e75166c4253"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_BLE_PIN</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID16COMM_SET_BLE_PINE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_SET_CAN_MODEE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID17COMM_SET_CAN_MODEE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID17COMM_SET_CAN_MODEE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a1fc25ca649ca5547fa261f5b1b3fb663"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_SET_CAN_MODE</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID17COMM_SET_CAN_MODEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_GET_IMU_CALIBRATIONE">
+<span id="_CPPv3N11vesc_driver14COMM_PACKET_ID24COMM_GET_IMU_CALIBRATIONE"></span><span id="_CPPv2N11vesc_driver14COMM_PACKET_ID24COMM_GET_IMU_CALIBRATIONE"></span><span class="target" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5af8ce79b34d6d706190bb1b04c5258b1c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COMM_GET_IMU_CALIBRATION</span></span></span><a class="headerlink" href="#_CPPv4N11vesc_driver14COMM_PACKET_ID24COMM_GET_IMU_CALIBRATIONE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enum_datatypes_8hpp_1a85332f8edd172e76c48306639165855e.html" class="btn btn-neutral float-left" title="Enum chuk_control_type" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61e.html" class="btn btn-neutral float-right" title="Enum debug_sampling_mode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;vesc_driver&gt; Contributors. License: BSD.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

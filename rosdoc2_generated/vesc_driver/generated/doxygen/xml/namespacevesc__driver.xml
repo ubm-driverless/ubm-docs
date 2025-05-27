@@ -1,0 +1,3207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacevesc__driver" kind="namespace" language="C++">
+    <compoundname>vesc_driver</compoundname>
+    <innerclass refid="structvesc__driver_1_1adc__config" prot="public">vesc_driver::adc_config</innerclass>
+    <innerclass refid="structvesc__driver_1_1app__configuration" prot="public">vesc_driver::app_configuration</innerclass>
+    <innerclass refid="structvesc__driver_1_1ATTITUDE__INFO" prot="public">vesc_driver::ATTITUDE_INFO</innerclass>
+    <innerclass refid="structvesc__driver_1_1balance__config" prot="public">vesc_driver::balance_config</innerclass>
+    <innerclass refid="structvesc__driver_1_1can__status__msg" prot="public">vesc_driver::can_status_msg</innerclass>
+    <innerclass refid="structvesc__driver_1_1can__status__msg__2" prot="public">vesc_driver::can_status_msg_2</innerclass>
+    <innerclass refid="structvesc__driver_1_1can__status__msg__3" prot="public">vesc_driver::can_status_msg_3</innerclass>
+    <innerclass refid="structvesc__driver_1_1can__status__msg__4" prot="public">vesc_driver::can_status_msg_4</innerclass>
+    <innerclass refid="structvesc__driver_1_1can__status__msg__5" prot="public">vesc_driver::can_status_msg_5</innerclass>
+    <innerclass refid="structvesc__driver_1_1chuck__data" prot="public">vesc_driver::chuck_data</innerclass>
+    <innerclass refid="structvesc__driver_1_1chuk__config" prot="public">vesc_driver::chuk_config</innerclass>
+    <innerclass refid="unionvesc__driver_1_1eeprom__var" prot="public">vesc_driver::eeprom_var</innerclass>
+    <innerclass refid="structvesc__driver_1_1fault__data" prot="public">vesc_driver::fault_data</innerclass>
+    <innerclass refid="structvesc__driver_1_1imu__config" prot="public">vesc_driver::imu_config</innerclass>
+    <innerclass refid="structvesc__driver_1_1mc__configuration" prot="public">vesc_driver::mc_configuration</innerclass>
+    <innerclass refid="structvesc__driver_1_1mc__rpm__dep__struct" prot="public">vesc_driver::mc_rpm_dep_struct</innerclass>
+    <innerclass refid="structvesc__driver_1_1mc__values" prot="public">vesc_driver::mc_values</innerclass>
+    <innerclass refid="structvesc__driver_1_1mote__state" prot="public">vesc_driver::mote_state</innerclass>
+    <innerclass refid="structvesc__driver_1_1nrf__config" prot="public">vesc_driver::nrf_config</innerclass>
+    <innerclass refid="classvesc__driver_1_1PacketFactoryTemplate" prot="public">vesc_driver::PacketFactoryTemplate</innerclass>
+    <innerclass refid="structvesc__driver_1_1ppm__config" prot="public">vesc_driver::ppm_config</innerclass>
+    <innerclass refid="classvesc__driver_1_1SerialException" prot="public">vesc_driver::SerialException</innerclass>
+    <innerclass refid="structvesc__driver_1_1setup__values" prot="public">vesc_driver::setup_values</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescDeviceLookup" prot="public">vesc_driver::VescDeviceLookup</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescDriver" prot="public">vesc_driver::VescDriver</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescFrame" prot="public">vesc_driver::VescFrame</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescInterface" prot="public">vesc_driver::VescInterface</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacket" prot="public">vesc_driver::VescPacket</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketFactory" prot="public">vesc_driver::VescPacketFactory</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketFWVersion" prot="public">vesc_driver::VescPacketFWVersion</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketImu" prot="public">vesc_driver::VescPacketImu</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketRequestFWVersion" prot="public">vesc_driver::VescPacketRequestFWVersion</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketRequestImu" prot="public">vesc_driver::VescPacketRequestImu</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketRequestValues" prot="public">vesc_driver::VescPacketRequestValues</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketSetCurrent" prot="public">vesc_driver::VescPacketSetCurrent</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketSetCurrentBrake" prot="public">vesc_driver::VescPacketSetCurrentBrake</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketSetDuty" prot="public">vesc_driver::VescPacketSetDuty</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketSetPos" prot="public">vesc_driver::VescPacketSetPos</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketSetRPM" prot="public">vesc_driver::VescPacketSetRPM</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketSetServoPos" prot="public">vesc_driver::VescPacketSetServoPos</innerclass>
+    <innerclass refid="classvesc__driver_1_1VescPacketValues" prot="public">vesc_driver::VescPacketValues</innerclass>
+    <innerclass refid="structvesc__driver_1_1VSerialInfo__t" prot="public">vesc_driver::VSerialInfo_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bde" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CFG_T</name>
+        <enumvalue id="datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bdea643620ca596f047d05d89a3ef4bf05f2" prot="public">
+          <name>CFG_T_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bdea11626cf8e5fd797ce5cc2dc5b93681cd" prot="public">
+          <name>CFG_T_DOUBLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bdea3b03a0575ba1e8b93b6b552650ba8408" prot="public">
+          <name>CFG_T_INT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bdea6e16660105bfd7a376b9e3c8b3fb8fa4" prot="public">
+          <name>CFG_T_QSTRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bdea1097ab975d872b1aa700265ed055f066" prot="public">
+          <name>CFG_T_ENUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bdeab272fcba9f8e982acd2870a1b99dc355" prot="public">
+          <name>CFG_T_BOOL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="67" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="66" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>VESC_TX_T</name>
+        <enumvalue id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182da1fa4d919c527b426fec896f445e0ca32" prot="public">
+          <name>VESC_TX_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182daefc98d7d160b3b5ebd0ca69ecebbd0ab" prot="public">
+          <name>VESC_TX_UINT8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182da7472b5f8c621a6d5e85a9e08047ecc73" prot="public">
+          <name>VESC_TX_INT8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182da7009321cfe9168c7abb0d66d91d89745" prot="public">
+          <name>VESC_TX_UINT16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182da2d559aa5dd7a55b179a44afad8aa228a" prot="public">
+          <name>VESC_TX_INT16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182da90b50b22fa832e17c87d5e4224be221a" prot="public">
+          <name>VESC_TX_UINT32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182dadf03b163d1e987908f74d3abcfa0df81" prot="public">
+          <name>VESC_TX_INT32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182da2d29217523fdd37dcb8d6757fa093140" prot="public">
+          <name>VESC_TX_DOUBLE16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182dabbffe0d8c6679ef56ce163b21b4d0294" prot="public">
+          <name>VESC_TX_DOUBLE32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182dad04e847f48a48ed12ff48a76dd336df1" prot="public">
+          <name>VESC_TX_DOUBLE32_AUTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="78" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="77" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a0f20f041589eff3006f06cdd6738587b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mc_state</name>
+        <enumvalue id="datatypes_8hpp_1a0f20f041589eff3006f06cdd6738587ba9c0f3d1baa8ed8c505cb449180ad7930" prot="public">
+          <name>MC_STATE_OFF</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a0f20f041589eff3006f06cdd6738587bae036aec3975e863041f256e0e05c92d3" prot="public">
+          <name>MC_STATE_DETECTING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a0f20f041589eff3006f06cdd6738587ba92636e775d4d4ca9e089d223144e243d" prot="public">
+          <name>MC_STATE_RUNNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a0f20f041589eff3006f06cdd6738587bae1457d2937a0d62a76e6fc772dd0a427" prot="public">
+          <name>MC_STATE_FULL_BRAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="96" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="95" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a5429e726bd7c0770419236fd596f68fb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mc_pwm_mode</name>
+        <enumvalue id="datatypes_8hpp_1a5429e726bd7c0770419236fd596f68fba08d4773e74800eb63a62ba8365ec645c" prot="public">
+          <name>PWM_MODE_NONSYNCHRONOUS_HISW</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a5429e726bd7c0770419236fd596f68fbadbcaa1d4015bd3999f4829647ceca183" prot="public">
+          <name>PWM_MODE_SYNCHRONOUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a5429e726bd7c0770419236fd596f68fba456c757db428a8d698949717138d512b" prot="public">
+          <name>PWM_MODE_BIPOLAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="104" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="103" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a94dd3adcd583aa7571b67be0fe71e4c4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mc_comm_mode</name>
+        <enumvalue id="datatypes_8hpp_1a94dd3adcd583aa7571b67be0fe71e4c4aa776c9b7fc106cf281525acc759db711" prot="public">
+          <name>COMM_MODE_INTEGRATE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a94dd3adcd583aa7571b67be0fe71e4c4a887ad29e450b3bb2d43339ee7d093858" prot="public">
+          <name>COMM_MODE_DELAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="111" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="110" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1ac75a4404acbc7ec308267d0856f668d0" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mc_sensor_mode</name>
+        <enumvalue id="datatypes_8hpp_1ac75a4404acbc7ec308267d0856f668d0a84f2059287a8908f0fc1e84431ffb065" prot="public">
+          <name>SENSOR_MODE_SENSORLESS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac75a4404acbc7ec308267d0856f668d0a3fd6ced3c157695a3dbaecceb1642a55" prot="public">
+          <name>SENSOR_MODE_SENSORED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac75a4404acbc7ec308267d0856f668d0a90f5ad69346c395a982d3284d82e0423" prot="public">
+          <name>SENSOR_MODE_HYBRID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="117" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="116" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a4da904a4c4a29bba71d531a12f1746ca" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mc_foc_sensor_mode</name>
+        <enumvalue id="datatypes_8hpp_1a4da904a4c4a29bba71d531a12f1746caa79668f6aba11bf1df2fee422da546ff8" prot="public">
+          <name>FOC_SENSOR_MODE_SENSORLESS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a4da904a4c4a29bba71d531a12f1746caa397461880b97c8f6a62d6b6f89194953" prot="public">
+          <name>FOC_SENSOR_MODE_ENCODER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a4da904a4c4a29bba71d531a12f1746caacc90c5c947d1031cbe18a1b9408868e4" prot="public">
+          <name>FOC_SENSOR_MODE_HALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a4da904a4c4a29bba71d531a12f1746caa58faca08c98beb862172645222a25c06" prot="public">
+          <name>FOC_SENSOR_MODE_HFI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="124" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="123" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>out_aux_mode</name>
+        <enumvalue id="datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266da9b3bf002d794640aa92152bac92e0bb5" prot="public">
+          <name>OUT_AUX_MODE_OFF</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266dad0257b6196358bb89d928053e2e4b166" prot="public">
+          <name>OUT_AUX_MODE_ON_AFTER_2S</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266da0a2da6a68c8d23619398c3d7d36c91be" prot="public">
+          <name>OUT_AUX_MODE_ON_AFTER_5S</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266daad303e0d74520df71a506d36a12f2753" prot="public">
+          <name>OUT_AUX_MODE_ON_AFTER_10S</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266da2e9984151303c55506c8f4bf56270603" prot="public">
+          <name>OUT_AUX_MODE_UNUSED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="133" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="132" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a9fdbfdaac84788724a24df03d5c9d59a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>temp_sensor_type</name>
+        <enumvalue id="datatypes_8hpp_1a9fdbfdaac84788724a24df03d5c9d59aaf1149607f18348ffe9c617dfb6ac385d" prot="public">
+          <name>TEMP_SENSOR_NTC_10K_25C</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a9fdbfdaac84788724a24df03d5c9d59aa03c5e4ec7ad1fcbf13e1db30b21895f5" prot="public">
+          <name>TEMP_SENSOR_PTC_1K_100C</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a9fdbfdaac84788724a24df03d5c9d59aa7a79eabe565f6d43449cd347bc805dc1" prot="public">
+          <name>TEMP_SENSOR_KTY83_122</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="143" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="142" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1aea86ed1310f7bac5436bb1d9cfd2b5cc" prot="public" static="no" strong="no">
+        <type></type>
+        <name>gpd_output_mode</name>
+        <enumvalue id="datatypes_8hpp_1aea86ed1310f7bac5436bb1d9cfd2b5cca96f78478f2b6180b2d276caaa6640e22" prot="public">
+          <name>GPD_OUTPUT_MODE_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aea86ed1310f7bac5436bb1d9cfd2b5cca60aadd7cd42590d510433d13c2b09e05" prot="public">
+          <name>GPD_OUTPUT_MODE_MODULATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aea86ed1310f7bac5436bb1d9cfd2b5cca301405683f74704c108a0f48c2bc404f" prot="public">
+          <name>GPD_OUTPUT_MODE_VOLTAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aea86ed1310f7bac5436bb1d9cfd2b5ccaac4f44e37c756ed96c398d7b6945060b" prot="public">
+          <name>GPD_OUTPUT_MODE_CURRENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="151" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="150" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1aba46e12afe600fb9e1bda76272285050" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mc_motor_type</name>
+        <enumvalue id="datatypes_8hpp_1aba46e12afe600fb9e1bda76272285050a0e6997e3352127f10a026a85f235bc84" prot="public">
+          <name>MOTOR_TYPE_BLDC</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aba46e12afe600fb9e1bda76272285050acff32e5023992227226ca1a1325d49e3" prot="public">
+          <name>MOTOR_TYPE_DC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aba46e12afe600fb9e1bda76272285050a9caa59a7085e0bba7e987530ca5cc24d" prot="public">
+          <name>MOTOR_TYPE_FOC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aba46e12afe600fb9e1bda76272285050a4e5170509867e7484d60787f77a7667a" prot="public">
+          <name>MOTOR_TYPE_GPD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="159" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="158" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a5fb601d3d3593117aa2500e92b3f3c5e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mc_foc_cc_decoupling_mode</name>
+        <enumvalue id="datatypes_8hpp_1a5fb601d3d3593117aa2500e92b3f3c5eaa6dfafba43f5c2bcc2962f82c6e8479f" prot="public">
+          <name>FOC_CC_DECOUPLING_DISABLED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a5fb601d3d3593117aa2500e92b3f3c5eab739e68b10c2e35f4dbacc0c6569fc49" prot="public">
+          <name>FOC_CC_DECOUPLING_CROSS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a5fb601d3d3593117aa2500e92b3f3c5eab3f7a446639d1bbeab61b5786b0680d7" prot="public">
+          <name>FOC_CC_DECOUPLING_BEMF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a5fb601d3d3593117aa2500e92b3f3c5eace889e18c16285c3e162be013667b50c" prot="public">
+          <name>FOC_CC_DECOUPLING_CROSS_BEMF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="168" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="167" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a30b7ef228cda5d4ca51fb63be2da0428" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mc_foc_observer_type</name>
+        <enumvalue id="datatypes_8hpp_1a30b7ef228cda5d4ca51fb63be2da0428ab541878ecefcbc3a71fe759e9ea2ae6c" prot="public">
+          <name>FOC_OBSERVER_ORTEGA_ORIGINAL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a30b7ef228cda5d4ca51fb63be2da0428aefa563c6ddf176454f1a176842ba2c60" prot="public">
+          <name>FOC_OBSERVER_ORTEGA_ITERATIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="176" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="175" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1add07239a8d01883eb907388a53df457a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mc_fault_code</name>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aadc87d227803a0b0574b314ea83f7da61" prot="public">
+          <name>FAULT_CODE_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aad4ce6155cac8fa0d58b9b6c36a74373f" prot="public">
+          <name>FAULT_CODE_OVER_VOLTAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa468c5f73e6ade7a43f683ce886287fec" prot="public">
+          <name>FAULT_CODE_UNDER_VOLTAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa014161fd76d1f0bbf11c6848f411d61a" prot="public">
+          <name>FAULT_CODE_DRV</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa9a9a2f84a584a79a2f24ca644e0de6e7" prot="public">
+          <name>FAULT_CODE_ABS_OVER_CURRENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa474a79998f52c433fe88818b7c27d7a1" prot="public">
+          <name>FAULT_CODE_OVER_TEMP_FET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa6cc6d666cef07815d7b25428e87b8030" prot="public">
+          <name>FAULT_CODE_OVER_TEMP_MOTOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa926cba645d3541d6873dc3f0cbc4970d" prot="public">
+          <name>FAULT_CODE_GATE_DRIVER_OVER_VOLTAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa6026d4a52506f6ca78cddc80439697b1" prot="public">
+          <name>FAULT_CODE_GATE_DRIVER_UNDER_VOLTAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa663b88346b798207e11828597a1c4435" prot="public">
+          <name>FAULT_CODE_MCU_UNDER_VOLTAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa5ce536d1f7ef58227601e89a5d5a8432" prot="public">
+          <name>FAULT_CODE_BOOTING_FROM_WATCHDOG_RESET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa86c1c35d0a3ea192aeaea0e71bdcd94e" prot="public">
+          <name>FAULT_CODE_ENCODER_SPI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa2c11061c8f6af7ce5a52b0f0d65d59da" prot="public">
+          <name>FAULT_CODE_ENCODER_SINCOS_BELOW_MIN_AMPLITUDE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa223cbec50a90e18301cfc1a92120051d" prot="public">
+          <name>FAULT_CODE_ENCODER_SINCOS_ABOVE_MAX_AMPLITUDE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa2ed15203bbd0297f103f6dd3a6c8fe80" prot="public">
+          <name>FAULT_CODE_FLASH_CORRUPTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aab8384b1272cd1dd4448bc68d7627027c" prot="public">
+          <name>FAULT_CODE_HIGH_OFFSET_CURRENT_SENSOR_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa1d92548c7b2eec458bcd5c92537a1d7c" prot="public">
+          <name>FAULT_CODE_HIGH_OFFSET_CURRENT_SENSOR_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aab115dc62fedd95c2fa0158238d1c6f38" prot="public">
+          <name>FAULT_CODE_HIGH_OFFSET_CURRENT_SENSOR_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa2f4ed41dbb7e02290e29b5bd9019aff0" prot="public">
+          <name>FAULT_CODE_UNBALANCED_CURRENTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aaf71969efcd1190c4e8cfd775a0df5330" prot="public">
+          <name>FAULT_CODE_BRK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa5bbdb0e270ab398a3d54d836d1314ac3" prot="public">
+          <name>FAULT_CODE_RESOLVER_LOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aac0198c47933c5fd33c439c841090c281" prot="public">
+          <name>FAULT_CODE_RESOLVER_DOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add07239a8d01883eb907388a53df457aa549c62f161c8b91e5fdd62dcbae15850" prot="public">
+          <name>FAULT_CODE_RESOLVER_LOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="182" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="181" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mc_control_mode</name>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6afc7ba732e56b5dc6566c2ecccc963ef1" prot="public">
+          <name>CONTROL_MODE_DUTY</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6a1cccfbf04aa508ba089efa6dec6f35de" prot="public">
+          <name>CONTROL_MODE_SPEED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6a37f65f3763b62a8f114c570528d18cb7" prot="public">
+          <name>CONTROL_MODE_CURRENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6ad19328ef071335ad4da7a839878435e4" prot="public">
+          <name>CONTROL_MODE_CURRENT_BRAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6a031146c9873a19f1c5fb0b401825330d" prot="public">
+          <name>CONTROL_MODE_POS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6a981bb70b98816bb24ffd32953078f150" prot="public">
+          <name>CONTROL_MODE_HANDBRAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6aed36f0f9c00c6c36d175901e1b8b5d46" prot="public">
+          <name>CONTROL_MODE_OPENLOOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6ab335d21053ad44388a72fdabf9cb6b4c" prot="public">
+          <name>CONTROL_MODE_OPENLOOP_PHASE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6a06603192fb6a8aaa2d477e45d8f2f643" prot="public">
+          <name>CONTROL_MODE_OPENLOOP_DUTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6a1d0d478fcc2e8fac4d6fedd2dd293307" prot="public">
+          <name>CONTROL_MODE_OPENLOOP_DUTY_PHASE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6a2884e362d077ddbdce6f2eef091dfceb" prot="public">
+          <name>CONTROL_MODE_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="209" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="208" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a9d554e45533d65de81725771a035420f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>disp_pos_mode</name>
+        <enumvalue id="datatypes_8hpp_1a9d554e45533d65de81725771a035420fa4511692c94782347bd35bc0938cafef7" prot="public">
+          <name>DISP_POS_MODE_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a9d554e45533d65de81725771a035420fa73626d48c17dd014d90f288e1d86b9e3" prot="public">
+          <name>DISP_POS_MODE_INDUCTANCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a9d554e45533d65de81725771a035420fad22f6a9936de036a816d8dd641820aa7" prot="public">
+          <name>DISP_POS_MODE_OBSERVER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a9d554e45533d65de81725771a035420fac7a88bd0bde473b354eaa07be701cec0" prot="public">
+          <name>DISP_POS_MODE_ENCODER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a9d554e45533d65de81725771a035420faaafb074ea7097fd0d7b1018d84faea5c" prot="public">
+          <name>DISP_POS_MODE_PID_POS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a9d554e45533d65de81725771a035420fa400a0ab980211d67ff60a1496b400777" prot="public">
+          <name>DISP_POS_MODE_PID_POS_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a9d554e45533d65de81725771a035420fa7d88c89784cd274a35f424c06aa8ae96" prot="public">
+          <name>DISP_POS_MODE_ENCODER_OBSERVER_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="224" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="223" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efa" prot="public" static="no" strong="no">
+        <type></type>
+        <name>sensor_port_mode</name>
+        <enumvalue id="datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efaa4f2fc10ff03bfde288ad174e8100504a" prot="public">
+          <name>SENSOR_PORT_MODE_HALL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efaa245d836307f815dc511674da8cc03b04" prot="public">
+          <name>SENSOR_PORT_MODE_ABI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efaa234cacc1f113f2a82f5745669f42ddc4" prot="public">
+          <name>SENSOR_PORT_MODE_AS5047_SPI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efaa479279a7604c43482608e0b77af8eb24" prot="public">
+          <name>SENSOR_PORT_MODE_AD2S1205</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efaa297413fa9d5c21464f5303cc9a5d95ed" prot="public">
+          <name>SENSOR_PORT_MODE_SINCOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efaa7f6b186787ddd652d8545cb5d1cf9942" prot="public">
+          <name>SENSOR_PORT_MODE_TS5700N8501</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efaa6f2dca687ed5a08474a59c4facf4996d" prot="public">
+          <name>SENSOR_PORT_MODE_TS5700N8501_MULTITURN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="235" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="234" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a6e41639d201e98ebe2e5a546fb8926cb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>drv8301_oc_mode</name>
+        <enumvalue id="datatypes_8hpp_1a6e41639d201e98ebe2e5a546fb8926cba3c89dc896e816bb83b0176147a4b77e7" prot="public">
+          <name>DRV8301_OC_LIMIT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6e41639d201e98ebe2e5a546fb8926cba19e336888e69f939c5cc226483e7a234" prot="public">
+          <name>DRV8301_OC_LATCH_SHUTDOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6e41639d201e98ebe2e5a546fb8926cba064941b61bb6393a22a475a4dd4c0068" prot="public">
+          <name>DRV8301_OC_REPORT_ONLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6e41639d201e98ebe2e5a546fb8926cbaaf7b9fda6f0d0fbb07416a01c917c496" prot="public">
+          <name>DRV8301_OC_DISABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="257" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="256" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>debug_sampling_mode</name>
+        <enumvalue id="datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61ea9f55af835b42717a17576985fb337256" prot="public">
+          <name>DEBUG_SAMPLING_OFF</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61eacf1d002102c9d14a95b90bf6a49014c4" prot="public">
+          <name>DEBUG_SAMPLING_NOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61ea7ca1f60f8e20e32ad85a90747829c2d2" prot="public">
+          <name>DEBUG_SAMPLING_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61ea4b7685f4ca307f90f61d5ee13cd151ed" prot="public">
+          <name>DEBUG_SAMPLING_TRIGGER_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61ea60ac9250eea1c9ffc0b3bef6f68d842e" prot="public">
+          <name>DEBUG_SAMPLING_TRIGGER_FAULT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61eaded84e39ff917f049dc5ec9326bfb3b4" prot="public">
+          <name>DEBUG_SAMPLING_TRIGGER_START_NOSEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61ea62feeb1fbe4f3e2cfff3f1a4aa53c1ee" prot="public">
+          <name>DEBUG_SAMPLING_TRIGGER_FAULT_NOSEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61ea72572cb1219ffdf6921570dbe447b4b1" prot="public">
+          <name>DEBUG_SAMPLING_SEND_LAST_SAMPLES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="265" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="264" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CAN_BAUD</name>
+        <enumvalue id="datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2ead096e3b41066199304172a84831dff3a" prot="public">
+          <name>CAN_BAUD_125K</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2ea3ab7cf7ec046de3e29b3585a9958c666" prot="public">
+          <name>CAN_BAUD_250K</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2ea2d1fb9e43fa357efb9b977d0bf918903" prot="public">
+          <name>CAN_BAUD_500K</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2ea2ac443f744959988f5c652419e843a85" prot="public">
+          <name>CAN_BAUD_1M</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2ea70b433d0d644985b68b0a78774e6f9c7" prot="public">
+          <name>CAN_BAUD_10K</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2eace590eaee523bbd89801a4569f83cd7d" prot="public">
+          <name>CAN_BAUD_20K</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2ea3eb9dc887bedd5e15445201e53e68292" prot="public">
+          <name>CAN_BAUD_50K</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2ead7356e454b0593469a0f15bfa881f62e" prot="public">
+          <name>CAN_BAUD_75K</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="277" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="276" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a877e9c650835fec907896e3affdf8029" prot="public" static="no" strong="no">
+        <type></type>
+        <name>BATTERY_TYPE</name>
+        <enumvalue id="datatypes_8hpp_1a877e9c650835fec907896e3affdf8029a84b90ffb3810abaff139f5da7df65cc7" prot="public">
+          <name>BATTERY_TYPE_LIION_3_0__4_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a877e9c650835fec907896e3affdf8029a9fb0a5bb1a1be4766023fbd6574dac5b" prot="public">
+          <name>BATTERY_TYPE_LIIRON_2_6__3_6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a877e9c650835fec907896e3affdf8029a6cec22e6ad23df83bb7648756c099867" prot="public">
+          <name>BATTERY_TYPE_LEAD_ACID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="289" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="288" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a7d50e7e730bc8f2de2b905fd131f7e34" prot="public" static="no" strong="no">
+        <type></type>
+        <name>FOC_HFI_SAMPLES</name>
+        <enumvalue id="datatypes_8hpp_1a7d50e7e730bc8f2de2b905fd131f7e34a32c8ccbf98902f3142a15b986c7c61f6" prot="public">
+          <name>HFI_SAMPLES_8</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a7d50e7e730bc8f2de2b905fd131f7e34a5c1eda70943a22c65e70ffb4fcf05046" prot="public">
+          <name>HFI_SAMPLES_16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a7d50e7e730bc8f2de2b905fd131f7e34a250234aa508867309f0bfaf77f0004b5" prot="public">
+          <name>HFI_SAMPLES_32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="296" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="295" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966" prot="public" static="no" strong="no">
+        <type></type>
+        <name>app_use</name>
+        <enumvalue id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966a58f6d0d3c4872f0a74d1796422138786" prot="public">
+          <name>APP_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966ad03a2b0045239901af007a3c032c1cdf" prot="public">
+          <name>APP_PPM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966a86a12208f3e99da9d23b1e8cddba7cef" prot="public">
+          <name>APP_ADC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966a8637d88c201e294a864dee11deb15fe4" prot="public">
+          <name>APP_UART</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966a705b986a4026bfefcf4248eeb758997b" prot="public">
+          <name>APP_PPM_UART</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966a2a737e50e1aca376ca5e43dc2ceed590" prot="public">
+          <name>APP_ADC_UART</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966ae5e4d81890e9ff28b24373b9b8227b9b" prot="public">
+          <name>APP_NUNCHUK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966a8ae00f7f60ce0b906aa96c129c7ef42d" prot="public">
+          <name>APP_NRF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966aa2b786556c2c076a64f6538a35d04575" prot="public">
+          <name>APP_CUSTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac4d298226d152810103dfa554ac55966a640d5de85fcde1d78ce8533db49fdaf3" prot="public">
+          <name>APP_BALANCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="451" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="450" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1ad4c8d3f7b1a2b59235117ea7feb9d095" prot="public" static="no" strong="no">
+        <type></type>
+        <name>thr_exp_mode</name>
+        <enumvalue id="datatypes_8hpp_1ad4c8d3f7b1a2b59235117ea7feb9d095aa06d7abd777248ddb5cdb8df9da6b1e1" prot="public">
+          <name>THR_EXP_EXPO</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ad4c8d3f7b1a2b59235117ea7feb9d095a2a2078d61246904e514c2382df1353fd" prot="public">
+          <name>THR_EXP_NATURAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ad4c8d3f7b1a2b59235117ea7feb9d095a23214d6f40995f24b5b94e86e7a695b3" prot="public">
+          <name>THR_EXP_POLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="466" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="465" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ppm_control_type</name>
+        <enumvalue id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bbae7c66614c9277d506c7a9812dcc7c45b" prot="public">
+          <name>PPM_CTRL_TYPE_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bba7371b66e9c236e7327c2f5d86a83037b" prot="public">
+          <name>PPM_CTRL_TYPE_CURRENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bba6a1119135093c393646565df809d0c00" prot="public">
+          <name>PPM_CTRL_TYPE_CURRENT_NOREV</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bba2efcf7974d1022464bbb324289ee255b" prot="public">
+          <name>PPM_CTRL_TYPE_CURRENT_NOREV_BRAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bbad7501d9b74e5c19c4b08d9fd042bb0fc" prot="public">
+          <name>PPM_CTRL_TYPE_DUTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bba4a9f8c8923a5b0ca7d1b0f3b2bed32a9" prot="public">
+          <name>PPM_CTRL_TYPE_DUTY_NOREV</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bbaaeb75157ddf4eaf496cde2c3151488a6" prot="public">
+          <name>PPM_CTRL_TYPE_PID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bba32d28177ab5e0da2d7084dc6143fc266" prot="public">
+          <name>PPM_CTRL_TYPE_PID_NOREV</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bba11c8d50fb360361f21f3efd1eb316fdb" prot="public">
+          <name>PPM_CTRL_TYPE_CURRENT_BRAKE_REV_HYST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bbafc45396210262b36ea60a25135378309" prot="public">
+          <name>PPM_CTRL_TYPE_CURRENT_SMART_REV</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="474" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="473" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>adc_control_type</name>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4a60264698443c2cc4b698368bd5f74453" prot="public">
+          <name>ADC_CTRL_TYPE_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4af150ebd1443a9957991a949925cf4635" prot="public">
+          <name>ADC_CTRL_TYPE_CURRENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4a8941e9943b702c14622d3e3c925c2344" prot="public">
+          <name>ADC_CTRL_TYPE_CURRENT_REV_CENTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4a6805ad11147172273f4255126174220f" prot="public">
+          <name>ADC_CTRL_TYPE_CURRENT_REV_BUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4a1096a569cb8969b26c0fef7dbe5a1c2e" prot="public">
+          <name>ADC_CTRL_TYPE_CURRENT_REV_BUTTON_BRAKE_ADC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4a19112782f4410b3e4eb86e233d133632" prot="public">
+          <name>ADC_CTRL_TYPE_CURRENT_REV_BUTTON_BRAKE_CENTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4a9fa40e7dda4a4cb0432eaaf05e6b95f9" prot="public">
+          <name>ADC_CTRL_TYPE_CURRENT_NOREV_BRAKE_CENTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4a315daad3bd5a43e1f5ae2ae2d230a4e8" prot="public">
+          <name>ADC_CTRL_TYPE_CURRENT_NOREV_BRAKE_BUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4a0d7bc2cd7fb8f4312977da12d7e63fa8" prot="public">
+          <name>ADC_CTRL_TYPE_CURRENT_NOREV_BRAKE_ADC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4ae473296556400347011784408fc7ed98" prot="public">
+          <name>ADC_CTRL_TYPE_DUTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4afb94dea3aec1ce1edcc9841ca6dfaf0d" prot="public">
+          <name>ADC_CTRL_TYPE_DUTY_REV_CENTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4aeddc45940a102e65b5617a11009a3774" prot="public">
+          <name>ADC_CTRL_TYPE_DUTY_REV_BUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4aed280e5e9d342a2c0647aceba21bd325" prot="public">
+          <name>ADC_CTRL_TYPE_PID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4a91e4157f92979def5a7d196c6b82501a" prot="public">
+          <name>ADC_CTRL_TYPE_PID_REV_CENTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4a0c9f85c7048d0a4079f410f0bd22a09d" prot="public">
+          <name>ADC_CTRL_TYPE_PID_REV_BUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="512" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="511" bodyend="528"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a85332f8edd172e76c48306639165855e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>chuk_control_type</name>
+        <enumvalue id="datatypes_8hpp_1a85332f8edd172e76c48306639165855ea3a2dbe2db81762a8aab3bf8a732e9da9" prot="public">
+          <name>CHUK_CTRL_TYPE_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a85332f8edd172e76c48306639165855eaff53633ff8f51b8cc15ad2a7354f7056" prot="public">
+          <name>CHUK_CTRL_TYPE_CURRENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a85332f8edd172e76c48306639165855eaf4f9e02effc4210c9c5afcbe96129ad1" prot="public">
+          <name>CHUK_CTRL_TYPE_CURRENT_NOREV</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="558" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="557" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a97e3b0a9f8e660b4e9d8dfa391e89c5d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>NRF_SPEED</name>
+        <enumvalue id="datatypes_8hpp_1a97e3b0a9f8e660b4e9d8dfa391e89c5da76598cbd4e8e179c133b4c522c3f39fe" prot="public">
+          <name>NRF_SPEED_250K</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a97e3b0a9f8e660b4e9d8dfa391e89c5daf9778ff82ac405f4aafaf98ddcb7d4fc" prot="public">
+          <name>NRF_SPEED_1M</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a97e3b0a9f8e660b4e9d8dfa391e89c5da034e5658dc10595b2fcd4cef4fa4bda8" prot="public">
+          <name>NRF_SPEED_2M</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="584" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="583" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1ab4db6b6b86c3a3c1af1eb25bb47d3026" prot="public" static="no" strong="no">
+        <type></type>
+        <name>NRF_POWER</name>
+        <enumvalue id="datatypes_8hpp_1ab4db6b6b86c3a3c1af1eb25bb47d3026afa5985988e661369a7ae2962f8e53135" prot="public">
+          <name>NRF_POWER_M18DBM</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab4db6b6b86c3a3c1af1eb25bb47d3026a8da00f0913e3762c43572464c39eebe0" prot="public">
+          <name>NRF_POWER_M12DBM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab4db6b6b86c3a3c1af1eb25bb47d3026ad01b4e2d6f8092c597d74af6e92b9ae6" prot="public">
+          <name>NRF_POWER_M6DBM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab4db6b6b86c3a3c1af1eb25bb47d3026aac4eb2bc82d92d0f35da784c7d1880d9" prot="public">
+          <name>NRF_POWER_0DBM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab4db6b6b86c3a3c1af1eb25bb47d3026ab0d3e7f3852129df157192bf3b9d77a3" prot="public">
+          <name>NRF_POWER_OFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="591" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="590" bodyend="597"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a82bde9a7aa25e2f36bebecd29aa4b93e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>NRF_AW</name>
+        <enumvalue id="datatypes_8hpp_1a82bde9a7aa25e2f36bebecd29aa4b93ea1917f1866dbb28694136ee8fd4be77ba" prot="public">
+          <name>NRF_AW_3</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a82bde9a7aa25e2f36bebecd29aa4b93eaaeabfc6a68002f5ff147b63f404ac1da" prot="public">
+          <name>NRF_AW_4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a82bde9a7aa25e2f36bebecd29aa4b93ea310776cdfa98167b9c130e91b3dc13c3" prot="public">
+          <name>NRF_AW_5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="600" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="599" bodyend="604"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1aad838390066a6ba9ad9478d33500a845" prot="public" static="no" strong="no">
+        <type></type>
+        <name>NRF_CRC</name>
+        <enumvalue id="datatypes_8hpp_1aad838390066a6ba9ad9478d33500a845a97102e9df4a34747f942aacbab37ccf0" prot="public">
+          <name>NRF_CRC_DISABLED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aad838390066a6ba9ad9478d33500a845a1ad2ede641551437fe2e73db1b590589" prot="public">
+          <name>NRF_CRC_1B</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aad838390066a6ba9ad9478d33500a845a9c16e151d6bd2b3f2843415a6108b877" prot="public">
+          <name>NRF_CRC_2B</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="607" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="606" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162" prot="public" static="no" strong="no">
+        <type></type>
+        <name>NRF_RETR_DELAY</name>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a426d8ae86d3f01c74b353bb9335d0380" prot="public">
+          <name>NRF_RETR_DELAY_250US</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162ab39a3825490d8305f3c7adb1b93d3a81" prot="public">
+          <name>NRF_RETR_DELAY_500US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a3c93a010c21899d659d337188264f04f" prot="public">
+          <name>NRF_RETR_DELAY_750US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162afc401248b400c8d8aab50565e464248e" prot="public">
+          <name>NRF_RETR_DELAY_1000US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a8a69f10097cda320a57145c6eff6ace9" prot="public">
+          <name>NRF_RETR_DELAY_1250US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a7df87b3a33d32c5c9115b416b6c588b4" prot="public">
+          <name>NRF_RETR_DELAY_1500US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162afe339ba2f87b4999b3b2c5ac48154dfd" prot="public">
+          <name>NRF_RETR_DELAY_1750US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a0842fb5366da7506e42f583656c6f708" prot="public">
+          <name>NRF_RETR_DELAY_2000US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a21184fa023101004e83979535346bf1a" prot="public">
+          <name>NRF_RETR_DELAY_2250US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a27088101e3de2d2c68c5fc0f07c668a7" prot="public">
+          <name>NRF_RETR_DELAY_2500US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a8614afa6d122e7276f41ace7b9b65c3a" prot="public">
+          <name>NRF_RETR_DELAY_2750US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a45fe53c5e76d720975b6404f942fb985" prot="public">
+          <name>NRF_RETR_DELAY_3000US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a7d279cdd068176ff2313e7dcf0026e2d" prot="public">
+          <name>NRF_RETR_DELAY_3250US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162a47feaae1ed4ed648b5e810e1d779b072" prot="public">
+          <name>NRF_RETR_DELAY_3500US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162aaac4bf07ae1ec0033d2ab4aec72f9969" prot="public">
+          <name>NRF_RETR_DELAY_3750US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162aacf4aead2358d58b14982c1f2014a421" prot="public">
+          <name>NRF_RETR_DELAY_4000US</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="614" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="613" bodyend="631"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CAN_STATUS_MODE</name>
+        <enumvalue id="datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394a2e4814d8be237e4c1a795b832dea6045" prot="public">
+          <name>CAN_STATUS_DISABLED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394a132ba7971c9384d9782ad30028e508f2" prot="public">
+          <name>CAN_STATUS_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394af88b5209a40b38f605fa796fa7029d03" prot="public">
+          <name>CAN_STATUS_1_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394aaf0120468311a693cd5712c764d4e1b1" prot="public">
+          <name>CAN_STATUS_1_2_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394a37904f166de79e1121f790b7d3fb9398" prot="public">
+          <name>CAN_STATUS_1_2_3_4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394acb595de4aab366027d5cf10ecb83a6f3" prot="public">
+          <name>CAN_STATUS_1_2_3_4_5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="685" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="684" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782" prot="public" static="no" strong="no">
+        <type></type>
+        <name>SHUTDOWN_MODE</name>
+        <enumvalue id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782a52ca8618926a9fed2311a67e642668cd" prot="public">
+          <name>SHUTDOWN_MODE_ALWAYS_OFF</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782a1b840d2755aca5793172a74c0ded0b30" prot="public">
+          <name>SHUTDOWN_MODE_ALWAYS_ON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782a21b41fe703cf77a6536b7869faf915ef" prot="public">
+          <name>SHUTDOWN_MODE_TOGGLE_BUTTON_ONLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782afcbd55e1fa8666b29b449e3f6f28c2c5" prot="public">
+          <name>SHUTDOWN_MODE_OFF_AFTER_10S</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782ab35269c526ba420be96321455c18931c" prot="public">
+          <name>SHUTDOWN_MODE_OFF_AFTER_1M</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782acbbcb2739419b7593690cf4d943274a3" prot="public">
+          <name>SHUTDOWN_MODE_OFF_AFTER_5M</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782abc070bec6fa9ef0fe2e260f3d8b3799d" prot="public">
+          <name>SHUTDOWN_MODE_OFF_AFTER_10M</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782a47b153903e107403dff97189b5c8e836" prot="public">
+          <name>SHUTDOWN_MODE_OFF_AFTER_30M</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782af66fde9d2a6d6339f8f035f5433e2b83" prot="public">
+          <name>SHUTDOWN_MODE_OFF_AFTER_1H</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782a7698a981347ebedf00489c620e802bf2" prot="public">
+          <name>SHUTDOWN_MODE_OFF_AFTER_5H</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="695" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="694" bodyend="706"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a991de85646df7979b3aecc17c738b6cc" prot="public" static="no" strong="no">
+        <type></type>
+        <name>IMU_TYPE</name>
+        <enumvalue id="datatypes_8hpp_1a991de85646df7979b3aecc17c738b6cca9165a8050803360d0ee4e9ce220e0001" prot="public">
+          <name>IMU_TYPE_OFF</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a991de85646df7979b3aecc17c738b6ccae9fe8b021d37ec664d46e517c0403c56" prot="public">
+          <name>IMU_TYPE_INTERNAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a991de85646df7979b3aecc17c738b6ccad8be75c42fa1ae3c60fb8a5c441bc743" prot="public">
+          <name>IMU_TYPE_EXTERNAL_MPU9X50</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a991de85646df7979b3aecc17c738b6ccae1bb2f2cfd1f29e2e257da07d200237a" prot="public">
+          <name>IMU_TYPE_EXTERNAL_ICM20948</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a991de85646df7979b3aecc17c738b6cca386dcde2f4a1094ab7cfa6dbca8b76ad" prot="public">
+          <name>IMU_TYPE_EXTERNAL_BMI160</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="709" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="708" bodyend="715"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a5950ddeee9212ba83433f85c93a835bd" prot="public" static="no" strong="no">
+        <type></type>
+        <name>AHRS_MODE</name>
+        <enumvalue id="datatypes_8hpp_1a5950ddeee9212ba83433f85c93a835bda9d71682f49d1da082540b1623fd6cee2" prot="public">
+          <name>AHRS_MODE_MADGWICK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a5950ddeee9212ba83433f85c93a835bda7129e6d41b3c08553cd7329ec51f82c2" prot="public">
+          <name>AHRS_MODE_MAHONY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="718" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="717" bodyend="721"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a6068ce8e2b2f011583bd6e3f47867fc5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CAN_MODE</name>
+        <enumvalue id="datatypes_8hpp_1a6068ce8e2b2f011583bd6e3f47867fc5adb313cd40bddc7d84ecd7571467c4c89" prot="public">
+          <name>CAN_MODE_VESC</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6068ce8e2b2f011583bd6e3f47867fc5afda1a329c7a65cf595978dffffacdb8a" prot="public">
+          <name>CAN_MODE_UAVCAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a6068ce8e2b2f011583bd6e3f47867fc5ab7dc400613092e20cd8952c6c8631e49" prot="public">
+          <name>CAN_MODE_COMM_BRIDGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="742" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="741" bodyend="746"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>COMM_PACKET_ID</name>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ac23e4faa3a428e360e66914b655b030f" prot="public">
+          <name>COMM_FW_VERSION</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aee66f03c5cc376250c31cac690a1e1a1" prot="public">
+          <name>COMM_JUMP_TO_BOOTLOADER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5abca5cc182df3f8b35e1b006979deb424" prot="public">
+          <name>COMM_ERASE_NEW_APP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a92f7d57b4fc4634b9280056cf1a39185" prot="public">
+          <name>COMM_WRITE_NEW_APP_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a32f9836d4ced768379429fd7b1b710e2" prot="public">
+          <name>COMM_GET_VALUES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a540eb3663c9dd64a1cab1a07dff1fb09" prot="public">
+          <name>COMM_SET_DUTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aabfdafcad2b98a648c865ba33414a7a5" prot="public">
+          <name>COMM_SET_CURRENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a070db874bed7ee7ee9fa80fb762a3da5" prot="public">
+          <name>COMM_SET_CURRENT_BRAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a1104ed47f501da5fc540dec2bf35e642" prot="public">
+          <name>COMM_SET_RPM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5afe54113d7b4e8518101630cd7263a875" prot="public">
+          <name>COMM_SET_POS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aaf139cf11c1284801d4d710de543bc4d" prot="public">
+          <name>COMM_SET_HANDBRAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ad1529642f1ee586d053172935928ea02" prot="public">
+          <name>COMM_SET_DETECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aaf5c4a0e9028880be064a4e8f11132e6" prot="public">
+          <name>COMM_SET_SERVO_POS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a5e3dbde26ab58f52ad2e570596740f8a" prot="public">
+          <name>COMM_SET_MCCONF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5abccb8c723afa67381e7051342298202e" prot="public">
+          <name>COMM_GET_MCCONF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5af7952d53524e42d9e47e5ef445690bbf" prot="public">
+          <name>COMM_GET_MCCONF_DEFAULT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ac06c0e72a7aa26d1315033ce06eb176d" prot="public">
+          <name>COMM_SET_APPCONF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a3f221231899969e84bbfc7c140cb917c" prot="public">
+          <name>COMM_GET_APPCONF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a8b4f7cc2dfbcb4c6622eafc6f24e6e55" prot="public">
+          <name>COMM_GET_APPCONF_DEFAULT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a0ea19b904615b464137b4bd265513100" prot="public">
+          <name>COMM_SAMPLE_PRINT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a5a75eeef3baf0a64d0e1171a7fad7dcf" prot="public">
+          <name>COMM_TERMINAL_CMD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a30aa4b9a8d0237dae5d0e9fd449ee614" prot="public">
+          <name>COMM_PRINT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a2fe9121b6f0018587eb8762e997fd261" prot="public">
+          <name>COMM_ROTOR_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aca94312bba6f0024256c7d3f8610c3e4" prot="public">
+          <name>COMM_EXPERIMENT_SAMPLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ac3dc691fbbd37308de130abf60a649ff" prot="public">
+          <name>COMM_DETECT_MOTOR_PARAM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a02170581e204cf1c999f062daa4b3db7" prot="public">
+          <name>COMM_DETECT_MOTOR_R_L</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a2b7970563c414e018d71ebdde6a405fe" prot="public">
+          <name>COMM_DETECT_MOTOR_FLUX_LINKAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5affaed12071380839721a6f711882131e" prot="public">
+          <name>COMM_DETECT_ENCODER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a090e01c8078f1c2bc34fdccca9c61527" prot="public">
+          <name>COMM_DETECT_HALL_FOC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a1cb0bbd189955df386b81a53621a0d13" prot="public">
+          <name>COMM_REBOOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a61599f6ad9fa5246c20a279da397e277" prot="public">
+          <name>COMM_ALIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aa511496d74c1845ca51df28f858f883a" prot="public">
+          <name>COMM_GET_DECODED_PPM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a7bccb73686f5b9625157b63445c761d2" prot="public">
+          <name>COMM_GET_DECODED_ADC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a3620ff01ff952d593e661d97a4c0d897" prot="public">
+          <name>COMM_GET_DECODED_CHUK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a267e1d8d74a71e150e105cfdbcc0eb51" prot="public">
+          <name>COMM_FORWARD_CAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a4b96647cb35aeb16323923fd2f7deecc" prot="public">
+          <name>COMM_SET_CHUCK_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a67a5a30a4253db12da244dc6ff85943e" prot="public">
+          <name>COMM_CUSTOM_APP_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ac0f6f9733140c7d950c14f5560f8c8c1" prot="public">
+          <name>COMM_NRF_START_PAIRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a909f6064d3b75828b4d3f3735c10c868" prot="public">
+          <name>COMM_GPD_SET_FSW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ab61c0f85c9c7b0da1de559071d717e78" prot="public">
+          <name>COMM_GPD_BUFFER_NOTIFY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ab53ad789091dc794b404f26b5ddd709c" prot="public">
+          <name>COMM_GPD_BUFFER_SIZE_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a62c0bbedd11876183b8b346677e293ff" prot="public">
+          <name>COMM_GPD_FILL_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a2c06e28a50b2a67ac6e124f0d5b107e7" prot="public">
+          <name>COMM_GPD_OUTPUT_SAMPLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a7c1713ec54ef5d2af9ef4c5707c94235" prot="public">
+          <name>COMM_GPD_SET_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a827619459784643d565048a7f315341f" prot="public">
+          <name>COMM_GPD_FILL_BUFFER_INT8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a8d5a88ceb822315fa40467cafe34e799" prot="public">
+          <name>COMM_GPD_FILL_BUFFER_INT16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a4327bc44668fdc589af5ad0c10112639" prot="public">
+          <name>COMM_GPD_SET_BUFFER_INT_SCALE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5abc3e4de7dc33a073aff7bdd372c3ff4e" prot="public">
+          <name>COMM_GET_VALUES_SETUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a828b95feff04f87aaa8b3e6dcec50cb1" prot="public">
+          <name>COMM_SET_MCCONF_TEMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aa0972fbaf08fe5fde0ab6820b2db1ecd" prot="public">
+          <name>COMM_SET_MCCONF_TEMP_SETUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aae0c18da365317d4818e7ce4bcdafd25" prot="public">
+          <name>COMM_GET_VALUES_SELECTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a30e42257caddf22c64f544a8e478b9c2" prot="public">
+          <name>COMM_GET_VALUES_SETUP_SELECTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ae213568473dbb497416e8aabf9d89566" prot="public">
+          <name>COMM_EXT_NRF_PRESENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a8da496568ce7034be9c632a56f7178b6" prot="public">
+          <name>COMM_EXT_NRF_ESB_SET_CH_ADDR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ab21957cbb93127f26c93b61d4863844f" prot="public">
+          <name>COMM_EXT_NRF_ESB_SEND_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a127fd7bbbe563194b92f1e9f5fe78f3b" prot="public">
+          <name>COMM_EXT_NRF_ESB_RX_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a3a1f1153d10a5556cf360dab561af0ec" prot="public">
+          <name>COMM_EXT_NRF_SET_ENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a89972a50861cc4fdda27278dc1857aca" prot="public">
+          <name>COMM_DETECT_MOTOR_FLUX_LINKAGE_OPENLOOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a147e6b81b636e83ab390aea732b0590e" prot="public">
+          <name>COMM_DETECT_APPLY_ALL_FOC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5afafb7f24e220ed0aaae2d0754d9ed411" prot="public">
+          <name>COMM_JUMP_TO_BOOTLOADER_ALL_CAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a704862193ef0817d4642a12f1ca59672" prot="public">
+          <name>COMM_ERASE_NEW_APP_ALL_CAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a571d1294e3cbb3e517e121fda919510f" prot="public">
+          <name>COMM_WRITE_NEW_APP_DATA_ALL_CAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a67f0e26d9237fc2a43e751ba7539b940" prot="public">
+          <name>COMM_PING_CAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a366e6f7e6f28d3b422f33842535641eb" prot="public">
+          <name>COMM_APP_DISABLE_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ab973b9875dda24dea5008c9f0f69b72d" prot="public">
+          <name>COMM_TERMINAL_CMD_SYNC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aca9a1fde329d75a1ae3555e793e74de2" prot="public">
+          <name>COMM_GET_IMU_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a7bfc816e4a4143d6352481540dad97c0" prot="public">
+          <name>COMM_BM_CONNECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aebf280a797fcfcfd5dd37ddc744ac960" prot="public">
+          <name>COMM_BM_ERASE_FLASH_ALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a2d01f06548b6b8676b2941d28177423d" prot="public">
+          <name>COMM_BM_WRITE_FLASH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a324191dcf5086ef2455f55f2ec5bd64a" prot="public">
+          <name>COMM_BM_REBOOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aec00710f9dc435803a97f8683b7d1ef9" prot="public">
+          <name>COMM_BM_DISCONNECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ace1dca13bb81894e42da4816d5b421ce" prot="public">
+          <name>COMM_BM_MAP_PINS_DEFAULT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5af7ced95025461d19ddff12718b15e0ab" prot="public">
+          <name>COMM_BM_MAP_PINS_NRF5X</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5afe1d0b8b2727d28cf12e74dd965a5599" prot="public">
+          <name>COMM_ERASE_BOOTLOADER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a6118ce5f3babf5213928360ed2dea979" prot="public">
+          <name>COMM_ERASE_BOOTLOADER_ALL_CAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a6b663c36db26ea6dfa6e344b9cb63f9b" prot="public">
+          <name>COMM_PLOT_INIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aef36be6605bce904fb1b80638c65c5a5" prot="public">
+          <name>COMM_PLOT_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a52b5f1f7818946da6c54636a8315d669" prot="public">
+          <name>COMM_PLOT_ADD_GRAPH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a8ab33052a361cf5f925779fb74a61cea" prot="public">
+          <name>COMM_PLOT_SET_GRAPH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a4cab8eee9e031a135c1cdeb5ff4cdd6c" prot="public">
+          <name>COMM_GET_DECODED_BALANCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5acc97b4fb2d7fb20f838de7a60159e4d6" prot="public">
+          <name>COMM_BM_MEM_READ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a33930af2688007aced262a6d89f56a9e" prot="public">
+          <name>COMM_WRITE_NEW_APP_DATA_LZO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5aa95bdcf96921c40654df82ca55a4cebb" prot="public">
+          <name>COMM_WRITE_NEW_APP_DATA_ALL_CAN_LZO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a4227cb27435a40d950f9bfb527c000c4" prot="public">
+          <name>COMM_BM_WRITE_FLASH_LZO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ab4181a8d3db0907b647e5e3346b12e85" prot="public">
+          <name>COMM_SET_CURRENT_REL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a4b1594613a8dc5c330d21bad275aa22e" prot="public">
+          <name>COMM_CAN_FWD_FRAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a52f886a62231e5703745bfec77e9b2bd" prot="public">
+          <name>COMM_SET_BATTERY_CUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a0417c87efe2c28108bf5435ecb37de83" prot="public">
+          <name>COMM_SET_BLE_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5ac4fb7203856c1bb73c239e75166c4253" prot="public">
+          <name>COMM_SET_BLE_PIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5a1fc25ca649ca5547fa261f5b1b3fb663" prot="public">
+          <name>COMM_SET_CAN_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5af8ce79b34d6d706190bb1b04c5258b1c" prot="public">
+          <name>COMM_GET_IMU_CALIBRATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="792" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="791" bodyend="884"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CAN_PACKET_ID</name>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a3be14cde278f483c6e0b14d16a8baf5c" prot="public">
+          <name>CAN_PACKET_SET_DUTY</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02aff33d65a8456ec4a8c13789442a6b4e4" prot="public">
+          <name>CAN_PACKET_SET_CURRENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a9df833c9a64f0b24e217eb9e84bf81be" prot="public">
+          <name>CAN_PACKET_SET_CURRENT_BRAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a8f88067b973f4d81d6da9818baa623c6" prot="public">
+          <name>CAN_PACKET_SET_RPM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02aad713270b4576ac34f63a37c8e361864" prot="public">
+          <name>CAN_PACKET_SET_POS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02ae54abb0b2984030b735085a9279b70b3" prot="public">
+          <name>CAN_PACKET_FILL_RX_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02aca108d7f3ec71d284108ec95355034f1" prot="public">
+          <name>CAN_PACKET_FILL_RX_BUFFER_LONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a780dc6aa0b42398a7579a9d13b5b64c3" prot="public">
+          <name>CAN_PACKET_PROCESS_RX_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a08d1ce2ab108ea7b5c85b60fc632e4c0" prot="public">
+          <name>CAN_PACKET_PROCESS_SHORT_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a95d1d8d0d4cefe548500d9ec240d0b53" prot="public">
+          <name>CAN_PACKET_STATUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a9768dccc223bb57b664db92a39c51c2a" prot="public">
+          <name>CAN_PACKET_SET_CURRENT_REL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a51b6f027b6c87e1d6f86fecca1a98bd0" prot="public">
+          <name>CAN_PACKET_SET_CURRENT_BRAKE_REL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02aced05ca3defafec9040dad46a9fe4bb5" prot="public">
+          <name>CAN_PACKET_SET_CURRENT_HANDBRAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a69bcf9bbdd416ed8b5e448cf5d31493a" prot="public">
+          <name>CAN_PACKET_SET_CURRENT_HANDBRAKE_REL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a308284cdab3b3a259109ffc3aebd3e4b" prot="public">
+          <name>CAN_PACKET_STATUS_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a15c8c37b4d44f17f7ac3204a71f1d1c5" prot="public">
+          <name>CAN_PACKET_STATUS_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a13cc53d5c552952bd3ef7c7ce5becf3b" prot="public">
+          <name>CAN_PACKET_STATUS_4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a4e9c59c357c34ff2dc052c65d6bf11e6" prot="public">
+          <name>CAN_PACKET_PING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a0dbe6c73fa3d75a243714b457ef96ab2" prot="public">
+          <name>CAN_PACKET_PONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a627ef75310a7d181b49e49fba9f5b464" prot="public">
+          <name>CAN_PACKET_DETECT_APPLY_ALL_FOC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a171affb04381463253c2fb1df2bb6ff4" prot="public">
+          <name>CAN_PACKET_DETECT_APPLY_ALL_FOC_RES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02ac41eb2897f72caf607b94c0f01e1e2b1" prot="public">
+          <name>CAN_PACKET_CONF_CURRENT_LIMITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a0a50d159733dab074890a4023abf23e1" prot="public">
+          <name>CAN_PACKET_CONF_STORE_CURRENT_LIMITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a6bdde2672cf661a149faac0233355b91" prot="public">
+          <name>CAN_PACKET_CONF_CURRENT_LIMITS_IN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a910d689ec4781ea36d7a9ee6b8a47fdf" prot="public">
+          <name>CAN_PACKET_CONF_STORE_CURRENT_LIMITS_IN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a1bb9c0e60728375a50c6705fca246bf6" prot="public">
+          <name>CAN_PACKET_CONF_FOC_ERPMS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a6141083028dbceead75a892d081594af" prot="public">
+          <name>CAN_PACKET_CONF_STORE_FOC_ERPMS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02ae5ef485f570339b62c75eba4923191e9" prot="public">
+          <name>CAN_PACKET_STATUS_5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02aab8fdc9bba613224ba248bef70eebd1d" prot="public">
+          <name>CAN_PACKET_POLL_TS5700N8501_STATUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02ad9e9f634a723fe602ecaa3d03df8a676" prot="public">
+          <name>CAN_PACKET_CONF_BATTERY_CUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a0041fce853f1abcd13cb39ef5ee2b9b0" prot="public">
+          <name>CAN_PACKET_CONF_STORE_BATTERY_CUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02a3054d1574298e994d9efa2556b568a8c" prot="public">
+          <name>CAN_PACKET_SHUTDOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="888" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="887" bodyend="921"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9bae" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LED_EXT_STATE</name>
+        <enumvalue id="datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9baeaed6b03c7e5a1427df3cd76cabbfb2d22" prot="public">
+          <name>LED_EXT_OFF</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9baead18d360f56b86863b08164731f509dfe" prot="public">
+          <name>LED_EXT_NORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9baea7f914655315896d74f74474a0191682a" prot="public">
+          <name>LED_EXT_BRAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9baeadcc6599f285f8c2bbaf77dd01f4dcb10" prot="public">
+          <name>LED_EXT_TURN_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9baea1eed82eb192af5d543c3b8e9e4d2bbe8" prot="public">
+          <name>LED_EXT_TURN_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9baeaa5cc02fe07f18e2a9648684924579165" prot="public">
+          <name>LED_EXT_BRAKE_TURN_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9baea053ed66c5d0454a0544e18cbe3934d28" prot="public">
+          <name>LED_EXT_BRAKE_TURN_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9baead23d99eb6d3a3c7e7f624e37528b45fd" prot="public">
+          <name>LED_EXT_BATT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="946" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="945" bodyend="955"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>MOTE_PACKET</name>
+        <enumvalue id="datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0aac610f8fe18d8bcf74765993a3be2905f" prot="public">
+          <name>MOTE_PACKET_BATT_LEVEL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0aa1a33d92c64bc40c35f7fd8bbf37528a5" prot="public">
+          <name>MOTE_PACKET_BUTTONS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0aab059114cb47b7131d4f173cae9c1c52e" prot="public">
+          <name>MOTE_PACKET_ALIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0aacceea84aeb01247d3bebfed0f7813c54" prot="public">
+          <name>MOTE_PACKET_FILL_RX_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0aab8645dcc91395211ee83cc7244173200" prot="public">
+          <name>MOTE_PACKET_FILL_RX_BUFFER_LONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0aaa9bd3fa75b20aacf8ee9a175ff902e39" prot="public">
+          <name>MOTE_PACKET_PROCESS_RX_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0aa8c5ada9e86f4c16c6e6cad7d2d6a3c41" prot="public">
+          <name>MOTE_PACKET_PROCESS_SHORT_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0aa727322d517c8a095b90743a3c6f455bb" prot="public">
+          <name>MOTE_PACKET_PAIRING_INFO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="1026" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="1025" bodyend="1035"/>
+      </memberdef>
+      <memberdef kind="enum" id="datatypes_8hpp_1aff9921401b1c440fa36f01cba40978de" prot="public" static="no" strong="no">
+        <type></type>
+        <name>NRF_PAIR_RES</name>
+        <enumvalue id="datatypes_8hpp_1aff9921401b1c440fa36f01cba40978deada2638d0b1e7687f66d3e8431789e482" prot="public">
+          <name>NRF_PAIR_STARTED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aff9921401b1c440fa36f01cba40978dea3e259b95e2b4a287f8705665a7b85320" prot="public">
+          <name>NRF_PAIR_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="datatypes_8hpp_1aff9921401b1c440fa36f01cba40978deafade465df5e5e80b4e1baaced635c172" prot="public">
+          <name>NRF_PAIR_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="1065" column="1" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="1064" bodyend="1069"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="datatypes_8hpp_1a55e79bdc72bc3aeb000f5cbb6157f509" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t vesc_driver::systime_t</definition>
+        <argsstring></argsstring>
+        <name>systime_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/datatypes.hpp" line="92" column="18" bodyfile="include/vesc_driver/datatypes.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="vesc__packet_8hpp_1af21703f925222cf808675b9d3e3e1080" prot="public" static="no">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>typedef std::vector&lt;uint8_t&gt; vesc_driver::Buffer</definition>
+        <argsstring></argsstring>
+        <name>Buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_packet.hpp" line="46" column="21" bodyfile="include/vesc_driver/vesc_packet.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="vesc__packet_8hpp_1a1f7354e69e220473c86b36eee92ab6c3" prot="public" static="no">
+        <type>std::pair&lt; Buffer::iterator, Buffer::iterator &gt;</type>
+        <definition>typedef std::pair&lt;Buffer::iterator, Buffer::iterator&gt; vesc_driver::BufferRange</definition>
+        <argsstring></argsstring>
+        <name>BufferRange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_packet.hpp" line="47" column="19" bodyfile="include/vesc_driver/vesc_packet.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="vesc__packet_8hpp_1ae582897e181f1a22ef7621b7eb9a3675" prot="public" static="no">
+        <type>std::pair&lt; Buffer::const_iterator, Buffer::const_iterator &gt;</type>
+        <definition>typedef std::pair&lt;Buffer::const_iterator, Buffer::const_iterator&gt; vesc_driver::BufferRangeConst</definition>
+        <argsstring></argsstring>
+        <name>BufferRangeConst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_packet.hpp" line="48" column="19" bodyfile="include/vesc_driver/vesc_packet.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="vesc__packet_8hpp_1aabad57bf0bb1f43a0e9d9579b7c07903" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classvesc__driver_1_1VescPacket" kindref="compound">VescPacket</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;VescPacket&gt; vesc_driver::VescPacketPtr</definition>
+        <argsstring></argsstring>
+        <name>VescPacketPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_packet.hpp" line="111" column="25" bodyfile="include/vesc_driver/vesc_packet.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="vesc__packet_8hpp_1a80af512a3c68b006ee27699c794f839e" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classvesc__driver_1_1VescPacket" kindref="compound">VescPacket</ref> const  &gt;</type>
+        <definition>typedef std::shared_ptr&lt;VescPacket const&gt; vesc_driver::VescPacketConstPtr</definition>
+        <argsstring></argsstring>
+        <name>VescPacketConstPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_packet.hpp" line="112" column="25" bodyfile="include/vesc_driver/vesc_packet.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/vesc_driver/datatypes.hpp" line="58" column="1"/>
+  </compounddef>
+</doxygen>

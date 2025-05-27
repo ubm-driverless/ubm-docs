@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="lidar__filter_8hpp" kind="file" language="C++">
+    <compoundname>lidar_filter.hpp</compoundname>
+    <includes local="no">rclcpp/logging.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstdlib</includes>
+    <includedby refid="lidar__filter__node_8hpp" local="yes">include/lidar_filter/lidar_filter_node.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="1">
+        <label>include/lidar_filter/lidar_filter.hpp</label>
+        <link refid="lidar__filter_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>cstdlib</label>
+      </node>
+      <node id="6">
+        <label>algorithm</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacelidar__filter">lidar_filter</innernamespace>
+    <briefdescription>
+<para>Header file for lidar signal filtering utilities. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This header file defines several utilities for processing and filtering lidar data. It includes methods to apply basic signal processing operations such as linear spacing, mean and median convolutions, and outlier removal. These functions are designed to work with 1D arrays of floats representing lidar signal data. The filters aim to smooth the data, remove noise, and handle outliers, making the lidar data more reliable for further processing.</para>
+<para>The filtering operations include:<itemizedlist>
+<listitem><para>Linearly spaced values generation with <computeroutput>central_linspace</computeroutput></para>
+</listitem><listitem><para>Mean convolution for smoothing with <computeroutput>mean_convolution</computeroutput> and <computeroutput>mean_convolution_box</computeroutput></para>
+</listitem><listitem><para>Median filtering for noise reduction with <computeroutput>median_filter</computeroutput></para>
+</listitem><listitem><para>Outlier removal with <computeroutput>outliers_filtering</computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="include/lidar_filter/lidar_filter.hpp"/>
+  </compounddef>
+</doxygen>

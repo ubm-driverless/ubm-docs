@@ -1,0 +1,2542 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ubm-driverless.github.io/ubm-docs/guides/F1TENTH_HARDWARE/">
+      
+      
+        <link rel="prev" href="../ADD_DOCUMENTATION/">
+      
+      
+        <link rel="next" href="../FOXGLOVE/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>F1Tenth Hardware Documentation - UBM Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CSource+Code+Pro+:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Source Code Pro "}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#f1tenth-hardware-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="UBM Documentation" class="md-header__button md-logo" aria-label="UBM Documentation" data-md-component="logo">
+      
+  <img src="../../assets/UBM-Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UBM Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              F1Tenth Hardware Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="red"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ubm-driverless" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ubm-driverless
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../PYTHON_PACKAGES/ai_controller/ai_controller/" class="md-tabs__link">
+          
+  
+  
+  Python Packages
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../CPP_PACKAGES" class="md-tabs__link">
+        
+  
+  
+    
+  
+  C++ Packages
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UBM Documentation" class="md-nav__button md-logo" aria-label="UBM Documentation" data-md-component="logo">
+      
+  <img src="../../assets/UBM-Logo.png" alt="logo">
+
+    </a>
+    UBM Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ubm-driverless" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ubm-driverless
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/DOCS_GENERATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation Generation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/SETUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup of the "ubm-f1tenth" environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ADD_DOCUMENTATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Add Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    F1Tenth Hardware Documentation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    F1Tenth Hardware Documentation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disclaimer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Warning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screwdriver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screwdriver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battery-charging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery charging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#car-power-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Car power connections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-battery-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative battery connection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#car-signal-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Car signal connections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wheels-and-tire-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      WHEELS AND TIRE PARAMETERS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camber-angle-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      CAMBER ANGLE TUNING
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CAMBER ANGLE TUNING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camber" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camber
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toe-angle-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      TOE ANGLE TUNING
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lidar-positioning-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      LiDAR positioning problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-dismount-the-car" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to dismount the car
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to dismount the car">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-moving-on-detach-the-battery" class="md-nav__link">
+    <span class="md-ellipsis">
+      BEFORE MOVING ON DETACH THE BATTERY
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transmission-system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transmission system overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transmission system overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#removing-the-front-suspension-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing the front suspension module
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-the-rear-suspension-module-slipper-clutch-assembly-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing the rear suspension module (Slipper clutch assembly removal)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slipper-clutch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slipper clutch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Slipper clutch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-the-slipper-clutch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjusting the Slipper Clutch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#front-diferential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front diferential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FOXGLOVE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Foxglove
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IMAGE_PARSER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Use image_parser.py
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../INSTALL_CPP_DEPENDENCIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to install GEOS and nanoflann and FLANN for C++
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JETSON_INFO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Philly's Jetson Xavier NX info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LINTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MODEM_INTERNET_CONNECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to connect to router to the internet using USB tethering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RACELINE_ENV/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raceline virtual environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS_PACKAGE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide for creating a ROS2 package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SETUP_CAR_FROM_SCRATCH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    From 0 to Working Car
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Run real world car
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            Run real world car
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/1_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checklists
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/2_BRINGUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bringup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/3_MAPPING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mapping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/4_RACELINE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raceline &amp; Speed Profile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/5_RUN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/6_SHUTDOWN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shutdown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/TROUBLESHOOTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Packages
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python Packages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ai_controller
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            ai_controller
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/ai_controller/ai_controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ai_controller
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/ai_controller/ai_launch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ai_launch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/ai_controller/ai_logger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ai_logger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    data_collection
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            data_collection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/data_collection/data_collection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    data_collection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    detector
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            detector
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/detector/detector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    detector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/detector/frenet_converter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    frenet_converter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ekf_py
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            ekf_py
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/ekf_py/ekf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ekf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/ekf_py/utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    utils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    f1tenth_gym_ros
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            f1tenth_gym_ros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/f1tenth_gym_ros/gym_bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gym_bridge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    particle_filter
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            particle_filter
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/particle_filter/particle_filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    particle_filter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/particle_filter/utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    utils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    recorder
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            recorder
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/recorder/recorder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    recorder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CPP_PACKAGES" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disclaimer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Warning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screwdriver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screwdriver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battery-charging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery charging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#car-power-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Car power connections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-battery-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative battery connection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#car-signal-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Car signal connections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wheels-and-tire-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      WHEELS AND TIRE PARAMETERS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camber-angle-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      CAMBER ANGLE TUNING
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CAMBER ANGLE TUNING">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camber" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camber
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toe-angle-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      TOE ANGLE TUNING
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lidar-positioning-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      LiDAR positioning problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-dismount-the-car" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to dismount the car
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to dismount the car">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-moving-on-detach-the-battery" class="md-nav__link">
+    <span class="md-ellipsis">
+      BEFORE MOVING ON DETACH THE BATTERY
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transmission-system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transmission system overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transmission system overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#removing-the-front-suspension-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing the front suspension module
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-the-rear-suspension-module-slipper-clutch-assembly-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing the rear suspension module (Slipper clutch assembly removal)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slipper-clutch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slipper clutch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Slipper clutch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-the-slipper-clutch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjusting the Slipper Clutch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#front-diferential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front diferential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="f1tenth-hardware-documentation">F1Tenth Hardware Documentation</h1>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>This document is intended to serve as a simple guideline for new members, not as a comprehensive documentation of the entire car's</p>
+<p>hardware. Therefore, only the most important details will be </p>
+<p>presented, and it will not include instructions on how to perform a</p>
+<p>complete teardown of the car.</p>
+<p>Some basic information will be provided for those who have never used a screwdriver or connected a cable. These instructions will neither be complete nor fully accurate; they are merely intended to ofer suggestions to people with no prior practical experience. </p>
+<h2 id="warning">Warning</h2>
+<p>This document is a work in progress. If you fnd any errors, or if you believe something is missing or unclear, please report them. </p>
+<h2 id="basic-guidelines">Basic guidelines</h2>
+<h3 id="screwdriver">Screwdriver</h3>
+<p>Make sure to use the correct screwdriver for the job. The main types of screwdrivers, along with their corresponding screws and symbols, are shown in the fgure below. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/01.jpg" /></p>
+<p>If you don't use the right tool, you can damage the screw and, less often, the screwdriver. For example, a slotted screwdriver can be used on a Phillips screw, but it is not the correct tool, and you may damage both. Similarly, you could attempt to use a Torx screwdriver on a hexagon screw, but in this case, only the corners of the screwdriver will make contact with the screw, potentially causing damage to both. Once again, be sure to use the correct tool. </p>
+<p>Pay attention also to the size of the screwdriver. Always try to use the largest screwdriver that fts properly into the screw (it must not be too large). In this way the contact surface between tool and screw will be maximized. </p>
+<p>Try to apply the right amount of force (never tight the screw too much)and AVOID SLIPPING between the screw and the screwdriver. Due to wear and to slipping, the screw becomes stripped. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/02.jpg" /></p>
+<p>In this case, it will be very dificult to unscrew it… In case this happens there are several techniques to remove the screw, but the best thing is to avoid damage and to not use screws that are already damaged. Pay attention please. </p>
+<h3 id="battery-charging">Battery charging</h3>
+<p>Here will be considered one of the two battery charger that the team currently have. It is better than the other because it shows the voltage of the battery. </p>
+<p>1) Connect the AC cable to the battery charger. The direction does not matter. Then connect the AC cable to the power greed. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/03.jpg" /></p>
+<p>2) At this point the battery charger will emit a sound and the display will turn on. This program should be displayed. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/04.jpg" /></p>
+<p>The battery that the team has are LiPo, 3 Cell, 11.1V, 5000mAh, 50C. The settings you see are for this type of battery and the charging current is set to 3.0A just to be keep the battery safe. In theory, is possible to increase this value but the suggestion is to keep those settings. </p>
+<p>3) Connect frstly the power cable (yellow one) and the balancing cable (the white one). </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/05.jpg" /></p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/06.jpg" /></p>
+<p>As you see, both have a particular form, and it will be hard to connect them wrong. Just pay attention to the white cable: it needs to go on the right of the connector with the black cable on the right and the red on the left. The rightest pin of the charger bust been left empty: that is needed for a 4 Cell battery. </p>
+<p>4) Now press the start button and keep it pressed until the charger check the battery and ask for a confrmation. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/07.jpg" /></p>
+<p>Then, press again the start button until the charger makes a sound. The charging process will start. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/08.jpg" /></p>
+<p>5) When the charging process will be completed the charger will make a long sound to indicate that the battery is full. At this point you can press stop ad simply detach the battery. If you need to stop the charging earlier, use the stop button and then detach the battery. </p>
+<p>Warnings: The voltage level of the battery should not go below to 10.5V - 10.0V let’s say (to keep the battery very safe). This because LiPo battery got damaged if they are discharged too much. </p>
+<p>Moreover, in any case, the car will stop working if the battery voltage will drop under 9.0V (it will be shown why this happens next). For this reason, check the battery voltage frequently by using the right ROS2 topic, through a multi-meter or using the LED we built for this purpose (if it is present and connected). </p>
+<h3 id="car-power-connections">Car power connections</h3>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/09.jpg" /></p>
+<p>1) Power connector of the battery. It will supply the Vesc and, consequently, the motor and the Vesc but not the Jetson. This connection is just an adapter. To disconnect the battery, use this instead of the connection 2 or 3. This because it is simpler and those connectors are ambiguous, in particular the number two, and can happen to connect it in the wrong way. </p>
+<p>2) Just an adapter. Pay attention to the polarity</p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/10.jpg" /></p>
+<p>3) Another adapter. The yellow part is the connector of the Vesc</p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/11.jpg" /></p>
+<p>4) Connection to the motor. It does not matter in which order you connect the three cables. The only “bad” thing that can happen is that the motor (and so the wheel) will start to spin in the wrong direction. To correct this behaviour just fip two of them randomly. This will change the direction of rotation of the magnetic feld of the motor, and it will run in the correct way (you should study electric motor by the way. Beautiful subject if you don’t need to do an exam on it) </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/12.jpg" /></p>
+<p>5) Connector for the servo. It goes in “PPM”.</p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/13.jpg" /></p>
+<p>6) Servo connection, just an adapter. It has a specifc form so there isn’t the risk to attach it in a wrong way </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/14.jpg" /></p>
+<p>7) Connector of the battery for the power supply of the Jetson and the LiDAR. It goes to an adapter. The adapter is connected to the power supply board through 8 </p>
+<p>8) Connector of the adapter to the power board.</p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/15.jpg" /></p>
+<p>9) And 11) are displayed below. PAY ATTENTION. On the right we have the connector for the Jetson. The red cable goes to 12V and the black cable to GND. On the left we have the power supply of the LiDAR. Brown cable to 12V and blue cable to GND. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/16.jpg" /></p>
+<p>10) Just the connector of the power supply board to the Jetson.</p>
+<h3 id="alternative-battery-connection">Alternative battery connection</h3>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/17.jpg" /></p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/18.jpg" /></p>
+<p>Take in the connection 7) the cable that goes to the power supply board and attach it to 13). Then, in connection 2) the right connector in the photo needs to be attached to 14). Finally, the left connector of the connection 2) needs to be connected to 12). </p>
+<p>In this way you can connect the battery just with one cable (the yellow one of the battery). </p>
+<p><strong>Problem</strong>: this connector is damaged, don’t use it. A cable does not make contact in a good manner. </p>
+<p>Power supply green board </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/19.jpg" /></p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/20.jpg" /></p>
+<p>The power supply board can be seen, in frst approximation, as one DC/DC converter and one voltage regulator that are connected to the battery when the switch is turned on. If the switch is on, also the LED turns on. </p>
+<p>The 12V DC-DC converter is the one that supply both LiDAR and </p>
+<p>Jetson. It is a switching regulator that keeps the voltage constant at </p>
+<p>12V if the input voltage (battery voltage) it is between 9V and 36V. For this reason, the car turns of if the voltage of the battery is under 9V. </p>
+<p>It can provide a maximum power output of 30W, they are suficient for </p>
+<p>our Jetson and the LiDAR but pay attention if you need to connect </p>
+<p>other things. In any case, a heat sink placed on it would be nice.</p>
+<p>The voltage regulator is a dissipative component to regulate the voltage, in this case at 8V. From datasheet it can provide a maximum current of 1A (so 8W is the maximum power). We are not using it but pay attention </p>
+<h2 id="car-signal-connections">Car signal connections</h2>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/21.jpg" /></p>
+<p>1) Micro-Usb connection to the Vesc</p>
+<p>2) Usb-A connection to the Jetson for the Vesc</p>
+<p>3) Rj45 connection for the LiDAR</p>
+<p>4) Antennas connection</p>
+<p>Tires specifcation and tuning</p>
+<h2 id="wheels-and-tire-parameters">WHEELS AND TIRE PARAMETERS</h2>
+<p>• 12mm hex (VERY IMPORTANT, it is the dimension of the nut of our car to which we need connect the wheel) </p>
+<p>• Original ofset parameter not found (It is not important as long as the wheel does not interfere with suspension/steering mechanism) </p>
+<p>• Original tire dimensions: 4.3” x 1.7″ (109 mm x 43 mm)</p>
+<p>• Changing tire diameter could lead to an increase/decrease of the speed / non-optimal gear ratio. Larger tires increase the fnal gearing (top speed and load are increased) and smaller tires reduce it (better acceleration and fnal gearing is reduced). The better acceleration is caused by a larger force applied on the foor, that means that we are more prone to slipping. Moreover, if we decrease the tire diameter it’s important to check that the base of the car does not touch the foor. </p>
+<p>In every case if we change the tire diameter, we need to check the Vesc confguration and monitor the condition of the motor (in particular if we increase the diameter and so the load). There is also the option of changing motor gearing but it’s dangerous in my opinion. All the four wheels need to have the same tire dimension, otherwise the smaller tire will slip continuously </p>
+<p>• Changing the tire width it’s ok as long as that does not interfere with suspension/steering mechanism </p>
+<p>• Original wheel Diameter: 2.2” (56 mm) (outer) 3.0” (76 mm) (inner)) (not really important if we don’t replace only the tire and</p>
+<p>we WON'T do that, otherwise we need to buy the exact type of tire and also the glue to substitute it </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/22.jpg" /></p>
+<p>To dismount the wheels just unscrew these nuts.</p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/23.jpg" /></p>
+<h2 id="camber-angle-tuning">CAMBER ANGLE TUNING</h2>
+<h3 id="camber">Camber</h3>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/24.jpg" /></p>
+<p>This operation is possible on all the four wheels. If they are brought outward vertically so negative camber (“legs wide”) we have more grip and more friction. An angle between 0.5° and 1.5° is good. Negative camber improves handling by keeping the tire perpendicular to the road as the car rolls; ensuring that the tire's contact patch is evenly loaded.Without adequate negative camber the tire would load the outer portion of the tire and produce less grip. Adding too much negative camber will reduce the peak tire grip during straight-line acceleration and braking.</p>
+<!-- Use a wrench here This angle will be modified  -->
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/25.jpg" /></p>
+<h3 id="toe-angle-tuning">TOE ANGLE TUNING</h3>
+<p>That is only for front wheels. Toe is the measure of how far inward or outward the leading edge of the tire is facing, when viewed from the top. It has a large efect on how the car reacts to steering inputs as well as on tire wear. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/26.jpg" /></p>
+<p>Toe-in is when the leading part of the tire is turned inwards towards the centre of the car. This makes the tires want to push inward, which acts to improve straight line stability of the car as its traveling down the road, particularly at high speed. </p>
+<p>Toe-out is when the leading part of the tire is turned outwards away from the centre of the car. This makes the tires want to separate from each other. This improves turn-in response considerably, but at the cost of tire wear. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/27.jpg" /></p>
+<h2 id="lidar-positioning-problem">LiDAR positioning problem</h2>
+<p>To work correctly, the LiDAR must be positioned with the scan plane parallel to the ground. That is quite intuitive: if the LiDAR scan plane points up-word, it will not see the tubes and the opponent after a certain distance. If it points down-word, it will see the foor. It also must be positioned at the right height for obvious reasons. </p>
+<p>What is not intuitive is that during accelerations, breaking and turns, due to the suspension system the angle of the plane on which the LiDAR is mounted is modifed. This causes a loss of the wanted alignment of the LiDAR plane with a subsequent wrong measurement. </p>
+<p>To solve this problem efectively, it is necessary to rearrange the chassis and change the suspension system. For the moment what has been done is to fx the suspension system using cable ties. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/28.jpg" /></p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/29.jpg" /></p>
+<h2 id="how-to-dismount-the-car">How to dismount the car</h2>
+<p>In this version only the main passages will be shown. To mount the car back again try to use this passages backword following what you need. Most of the passages are not in a precise order. </p>
+<h3 id="before-moving-on-detach-the-battery">BEFORE MOVING ON DETACH THE BATTERY</h3>
+<p>1) Remove the cover and the LEDs connection. Pay attention during this since the pins of the Nvidia Jetson are not so robust. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/30.jpg" /></p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/31.jpg" /></p>
+<p>2) Detach the Vesc USB cable</p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/32.jpg" /></p>
+<p>3) Dismount the antennas by rotating them. Pay attention to the “gold” connection and to the cable connected to them. Hold the nut at the side of the cable while you are dismounting the antenna to avoid twisting the cable. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/33.jpg" />
+<img alt="" src="/ubm-docs/assets/hardware-imgs/34.jpg" /></p>
+<p>Then, turn the other gold nut while you hold the same nut as before. For this is better to a wrench. </p>
+<p>4) Dismount the battery cable of the Jetson power supply board.Just pull but be careful. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/35.jpg" /></p>
+<p>5) Detach the power cable of the Jetson. The Jetson has classical connector while to detach the cable from the power supply boars a screwdriver is needed (orange circle). When you attach back this cable, PAY ATTENTION TO THE POLARITY! So, you need to connect the red cable to 12V and the black cable to GND</p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/36.jpg" /></p>
+<p>6) Detach the LiDAR power supply cable. When you attach back this cable, PAY ATTENTION TO THE POLARITY! You need to connect the brown cable to 12V and the blue cable to GND. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/37.jpg" /></p>
+<p>7) Dismount the antenna holder by unscrew the two screws indicated in red. To be sure, hold the other side of the spacers with a hand, indicated in blue while unscrew. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/38.jpg" /></p>
+<p>8) Dismount the green power supply board by unscrew the two indicated screws. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/39.jpg" /></p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/40.jpg" /></p>
+<p>9) Detach the servo power cable. You simply need to pull it but be careful. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/41.jpg" /></p>
+<p>10) Detach the three cables of the motor that are connected to the Vesc. You don’t need to remember the order or how they are attached to the Vesc. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/42.jpg" /></p>
+<p>11) Detach the rj45 cable of the LiDAR form the Jetson</p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/43.jpg" /></p>
+<p>12) Dismount the Jetson. BE CAREFUL, YOU WILL HAVE AROUND 600 EUROS in your hand with a shipping time of 6 month, IF YOU BREAK IT, THEN YOU ARE DEAD. You need to unscrew these four screws. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/44.jpg" /></p>
+<p>While you are doing this, as usual, hold the spacers to be sure.</p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/45.jpg" /></p>
+<p>13) Now we need to detach the antenna from the Jetson. PAY ATTENTION. REALLY. ATTENTION PLEASE. Put the Jetson on fat plane in an upside-down position. Use a small fat screwdriver to detach the antenna connector. Put the tip under the cable and carefully arise the tip untill the cable is detached. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/46.jpg" /></p>
+<p>14) Detach the plan from the car. There are three (should be four)screws. The two on the front have a washer. Don’t lose them, they are needed to distribute the force of the screw on higher area and to not damage the black plate. The screw in the back is not really attached, however at this moment there is a small piece of plastic used as a spacer. Don’t lose it. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/47.jpg" /></p>
+<p>15) By put the plane upside down we can see the screw to dismount the LiDAR (Red) and the Vesc (Green) from the plane.</p>
+<p>We can see also the screws for the spacer of the Jetson (Orange)and the screw for the spacers of the green power board (Blue). It is suggested to dismount them only if needed. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/48.jpg" /></p>
+<p>16) To dismount the wheels just unscrew these nuts.</p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/23.jpg" /></p>
+<h2 id="transmission-system-overview">Transmission system overview</h2>
+<p>Almost all the information that are reported here are being taken directly from the documentation of the Traxxas Slash 4x4. </p>
+<p>To recap, the motor has a pinion that is connected to the spur gear of the clutch (yes there is a clutch system). The clutch is connected to a transmission bar that gives power to both front and rear wheels. Both front and rear wheels are equipped with a diferential system. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/50.jpg" /></p>
+<h3 id="removing-the-front-suspension-module">Removing the front suspension module</h3>
+<ol>
+<li>
+<p>Remove the two 4x12 button-head cap screws from the front of the chassis. </p>
+</li>
+<li>
+<p>Remove the two 4x10 button-head cap screws from the top of the chassis. </p>
+</li>
+<li>
+<p>Remove the 3x15 button-head cap screw from the steering link under the chassis. </p>
+</li>
+<li>
+<p>Pull the front suspension assembly away from the chassis.</p>
+</li>
+</ol>
+<h2 id="removing-the-rear-suspension-module-slipper-clutch-assembly-removal">Removing the rear suspension module (Slipper clutch assembly removal)</h2>
+<ol>
+<li>
+<p>Remove the two 4x12 button-head cap screws from the top of the chassis. </p>
+</li>
+<li>
+<p>Remove the two 4x12 button-head cap screws from the bottom of the chassis. </p>
+</li>
+<li>
+<p>Pull the rear suspension assembly away from the chassis.</p>
+</li>
+<li>
+<p>The slipper clutch assembly can now be removed. </p>
+</li>
+</ol>
+<h2 id="slipper-clutch">Slipper clutch</h2>
+<p>Under normal use, the friction material in the slipper clutch should wear very slowly. If the thickness of any one of the slipper clutch pads is 1.8mm or less, the friction disc should be replaced. </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/51.jpg" /></p>
+<h3 id="adjusting-the-slipper-clutch">Adjusting the Slipper Clutch</h3>
+<p>The model is equipped with an adjustable slipper clutch which is built into the large spur gear. The purpose of the slipper clutch is to regulate the amount of power sent to the wheels to prevent tire spin. When it slips, the slipper clutch makes a high-pitch, whining noise. To adjust the slipper, use the included wrench to hold the adjusting nut and roll the model forward to tighten and reverse to loosen. Place the model </p>
+<p>on a high-traction surface, such as carpet. Adjust the slipper so that you can hear it slip for approximately two feet from a standing, full throttle start. (Learn more about adjusting the slipper clutch in the sidebar.) </p>
+<p>To achieve a good starting point for the slipper clutch in this model, remove the slipper gear assembly from your model and tighten the </p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/52.jpg" /></p>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/53.jpg" /></p>
+<p>slipper clutch adjusting nut clockwise until the slipper clutch</p>
+<p>adjusting spring fully collapses (do not over tighten), and then turn the slipper clutch nut counterclockwise one full turn. </p>
+<p>Do not run your model with the slipper clutch adjusting spring fully </p>
+<p>compressed. The minimum recommended slipper clutch setting is</p>
+<p>1/2 turn counterclockwise from fully compressed.</p>
+<h2 id="front-diferential">Front diferential</h2>
+<ol>
+<li>
+<p>Remove the two 3x15mm button-head screws that secure the top bumper mount to the diferential (dif) case. </p>
+</li>
+<li>
+<p>Turn the chassis over and remove the three 4x10mm countersunk screws that hold bumper/skid plate to the bulkhead. The two rear screws do not need to be removed.</p>
+</li>
+<li>
+<p>Slide bumper assembly of of the chassis.</p>
+</li>
+<li>
+<p>Remove 3x15mm button-head screw from dif tie bar.</p>
+</li>
+<li>
+<p>Slide tie bar of truck. </p>
+</li>
+<li>
+<p>Remove two 3x15mm button-head screws from dif cover. Do not remove the two screws that secure the shock tower. </p>
+</li>
+<li>
+<p>Use a 1.5mm hex wrench to remove the two screw pins that hold the driveshaft yokes to the diferential output shafts. Remove the diferential cover and slide the diferential out of the front of the case. </p>
+</li>
+<li>
+<p>To reinstall the diferential, reverse the steps.</p>
+</li>
+</ol>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/54.jpg" /></p>
+<p>Rear diferential </p>
+<ol>
+<li>
+<p>Remove the two 3x20mm button-head screws that secure the top bumper mount to dif case. </p>
+</li>
+<li>
+<p>Turn the chassis over and remove the two 3x12mm countersunk crews that hold the bumper/skid plate to the bulkhead. The two front screws do not need to be removed. </p>
+</li>
+<li>
+<p>Remove the 3x20mm button-head screw from the bumper mount and tie bar. </p>
+</li>
+<li>
+<p>Slide bumper assembly of of the chassis. </p>
+</li>
+<li>
+<p>Remove the tie bar from the chassis.</p>
+</li>
+<li>
+<p>Remove the two 3x15mm button-head screws from diferential cover. Do not remove the two screws that secure the shock tower.</p>
+</li>
+<li>
+<p>Remove the diferential cover and slide the diferential out of the front of the case. </p>
+</li>
+<li>
+<p>To reinstall the diferential, reverse the steps.</p>
+</li>
+</ol>
+<p><img alt="" src="/ubm-docs/assets/hardware-imgs/55.jpg" /></p>
+<h2 id="other-considerations">Other considerations</h2>
+<p>The diferential is flled with some fuid. In the manual is possible to fnd the procedure to substitute it: </p>
+<p>Reflling the diferential: </p>
+<ol>
+<li>
+<p>Remove the four 2.5x10mm screws from the diferential case and carefully pull the dif case halves apart. Work over a towel to collect any fuid that drips from the diferential. </p>
+</li>
+<li>
+<p>Drain the fuid from the diferential. You may wish to remove the spider gears from the diferential to make this easier. </p>
+</li>
+<li>
+<p>Place the spider gears back into the dif case (if you removed them). Fill the dif case with fuid until the spider gears are submerged halfway. </p>
+</li>
+<li>
+<p>Rejoin the dif case halves, using care to align the screw holes. Be sure the rubber gasket is in place, or the diferential may leak.</p>
+</li>
+<li>
+<p>Install the 2.5x10mm screws and tighten securely.</p>
+</li>
+</ol>
+<h2 id="useful-links">Useful links</h2>
+<p><a href="https://traxxas.com/sites/default/files/68086OM-N-EN-R00.pdf">Slash 4x4 official documentation</a></p>
+<p><a href="https://traxxas.com/news/slash-tire-guide">Traxxas slash tire guide</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 © UniBo Motorsport
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

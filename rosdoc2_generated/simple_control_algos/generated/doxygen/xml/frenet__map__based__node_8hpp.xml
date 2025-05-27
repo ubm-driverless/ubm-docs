@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="frenet__map__based__node_8hpp" kind="file" language="C++">
+    <compoundname>frenet_map_based_node.hpp</compoundname>
+    <includes local="yes">ackermann_msgs/msg/ackermann_drive_stamped.hpp</includes>
+    <includes local="yes">f1tenth_msgs/msg/lap_performance.hpp</includes>
+    <includes local="yes">f1tenth_msgs/msg/lap_performance_stamped.hpp</includes>
+    <includes local="yes">f1tenth_msgs/msg/raceline_stamped.hpp</includes>
+    <includes refid="frenet__overtaking_8hpp" local="yes">frenet_overtaking.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/point_stamped.hpp</includes>
+    <includes refid="lap__performance_8hpp" local="yes">lap_performance.hpp</includes>
+    <includes local="yes">map_utils.hpp</includes>
+    <includes local="yes">nav_msgs/msg/odometry.hpp</includes>
+    <includes local="yes">nav_msgs/msg/path.hpp</includes>
+    <includes local="yes">raceline_utils.hpp</includes>
+    <includes local="yes">rclcpp/rclcpp.hpp</includes>
+    <includes refid="ros__utils_8hpp" local="yes">ros_utils.hpp</includes>
+    <includes local="yes">sensor_msgs/msg/laser_scan.hpp</includes>
+    <includes refid="spline__and__polynomial_8hpp" local="yes">spline_and_polynomial.hpp</includes>
+    <includes local="yes">std_msgs/msg/bool.hpp</includes>
+    <includes refid="steering__controller_8hpp" local="yes">steering_controller.hpp</includes>
+    <includes local="yes">tf2/LinearMath/Quaternion.h</includes>
+    <includes local="yes">tf2/utils.h</includes>
+    <includes local="yes">tf2_geometry_msgs/tf2_geometry_msgs.h</includes>
+    <includes refid="utils_8hpp" local="yes">utils.hpp</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">visualization_msgs/msg/marker_array.hpp</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>ackermann_msgs/msg/ackermann_drive_stamped.hpp</label>
+      </node>
+      <node id="17">
+        <label>limits</label>
+      </node>
+      <node id="25">
+        <label>geometry_msgs/msg/pose_stamped.hpp</label>
+      </node>
+      <node id="19">
+        <label>nav_msgs/msg/odometry.hpp</label>
+      </node>
+      <node id="24">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="34">
+        <label>sensor_msgs/point_cloud2_iterator.hpp</label>
+      </node>
+      <node id="4">
+        <label>f1tenth_msgs/msg/lap_performance_stamped.hpp</label>
+      </node>
+      <node id="10">
+        <label>cmath</label>
+      </node>
+      <node id="12">
+        <label>stdexcept</label>
+      </node>
+      <node id="11">
+        <label>numeric</label>
+      </node>
+      <node id="20">
+        <label>nav_msgs/msg/path.hpp</label>
+      </node>
+      <node id="38">
+        <label>string</label>
+      </node>
+      <node id="30">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="28">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="22">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="26">
+        <label>sensor_msgs/msg/point_cloud2.hpp</label>
+      </node>
+      <node id="16">
+        <label>armadillo</label>
+      </node>
+      <node id="29">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.h</label>
+      </node>
+      <node id="8">
+        <label>utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>raceline_utils.hpp</label>
+      </node>
+      <node id="36">
+        <label>std_msgs/msg/bool.hpp</label>
+      </node>
+      <node id="13">
+        <label>tuple</label>
+      </node>
+      <node id="15">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>frenet_overtaking.hpp</label>
+        <link refid="frenet__overtaking_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>utility</label>
+      </node>
+      <node id="35">
+        <label>sensor_msgs/msg/laser_scan.hpp</label>
+      </node>
+      <node id="18">
+        <label>geometry_msgs/msg/point_stamped.hpp</label>
+      </node>
+      <node id="7">
+        <label>map_utils.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/frenet_map_based_node.hpp</label>
+        <link refid="frenet__map__based__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>iostream</label>
+      </node>
+      <node id="27">
+        <label>tf2/LinearMath/Quaternion.h</label>
+      </node>
+      <node id="31">
+        <label>visualization_msgs/msg/marker_array.hpp</label>
+      </node>
+      <node id="32">
+        <label>chrono</label>
+      </node>
+      <node id="9">
+        <label>algorithm</label>
+      </node>
+      <node id="3">
+        <label>f1tenth_msgs/msg/lap_performance.hpp</label>
+      </node>
+      <node id="5">
+        <label>f1tenth_msgs/msg/raceline_stamped.hpp</label>
+      </node>
+      <node id="23">
+        <label>ros_utils.hpp</label>
+        <link refid="ros__utils_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classFrenetMapBasedNode" prot="public">FrenetMapBasedNode</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/frenet_map_based_node.hpp"/>
+  </compounddef>
+</doxygen>

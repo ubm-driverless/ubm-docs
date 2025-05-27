@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="steering__controller_8hpp" kind="file" language="C++">
+    <compoundname>steering_controller.hpp</compoundname>
+    <includes refid="utils_8hpp" local="yes">utils.hpp</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="frenet__map__based__node_8hpp" local="yes">include/frenet_map_based_node.hpp</includedby>
+    <includedby refid="frenet__overtaking__node_8hpp" local="yes">include/frenet_overtaking_node.hpp</includedby>
+    <includedby refid="frenet__overtaking__node__detector_8hpp" local="yes">include/frenet_overtaking_node_detector.hpp</includedby>
+    <includedby refid="path__follower__node_8hpp" local="yes">include/path_follower_node.hpp</includedby>
+    <includedby refid="potential__pursuit__node_8hpp" local="yes">include/potential_pursuit_node.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>numeric</label>
+      </node>
+      <node id="2">
+        <label>utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/steering_controller.hpp</label>
+        <link refid="steering__controller_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>tuple</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="10">
+        <label>chrono</label>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/path_follower_node.hpp</label>
+        <link refid="path__follower__node_8hpp"/>
+      </node>
+      <node id="2">
+        <label>include/frenet_overtaking_node.hpp</label>
+        <link refid="frenet__overtaking__node_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/steering_controller.hpp</label>
+        <link refid="steering__controller_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/potential_pursuit_node.hpp</label>
+        <link refid="potential__pursuit__node_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSteeringController" prot="public">SteeringController</innerclass>
+    <innerclass refid="classFeedForwardAction" prot="public">FeedForwardAction</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/steering_controller.hpp"/>
+  </compounddef>
+</doxygen>

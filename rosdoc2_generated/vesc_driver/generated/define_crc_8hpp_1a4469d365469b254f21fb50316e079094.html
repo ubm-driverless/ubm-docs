@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Define crcpp_uint32 &mdash; vesc_driver 1.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=fc837d61"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Define crcpp_uint64" href="define_crc_8hpp_1a3541074ba795d31a40f13e78c77c0e7c.html" />
+    <link rel="prev" title="Define crcpp_uint16" href="define_crc_8hpp_1add273674b22f031b158220eeb560c7a0.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            vesc_driver
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_vesc_driver.html">Namespace vesc_driver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structCRC_1_1Parameters.html">Template Struct CRC::Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structCRC_1_1Table.html">Template Struct CRC::Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1adc__config.html">Struct adc_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1app__configuration.html">Struct app_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1ATTITUDE__INFO.html">Struct ATTITUDE_INFO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1balance__config.html">Struct balance_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg.html">Struct can_status_msg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__2.html">Struct can_status_msg_2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__3.html">Struct can_status_msg_3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__4.html">Struct can_status_msg_4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1can__status__msg__5.html">Struct can_status_msg_5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1chuck__data.html">Struct chuck_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1chuk__config.html">Struct chuk_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1fault__data.html">Struct fault_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1imu__config.html">Struct imu_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__configuration.html">Struct mc_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__rpm__dep__struct.html">Struct mc_rpm_dep_struct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mc__values.html">Struct mc_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1mote__state.html">Struct mote_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1nrf__config.html">Struct nrf_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1ppm__config.html">Struct ppm_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1setup__values.html">Struct setup_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1VescDriver_1_1CommandLimit.html">Struct VescDriver::CommandLimit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structvesc__driver_1_1VSerialInfo__t.html">Struct VSerialInfo_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCRC.html">Class CRC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1PacketFactoryTemplate.html">Template Class PacketFactoryTemplate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1SerialException.html">Class SerialException</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescDeviceLookup.html">Class VescDeviceLookup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescDriver.html">Class VescDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescFrame.html">Class VescFrame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescInterface.html">Class VescInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacket.html">Class VescPacket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketFactory.html">Class VescPacketFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketFWVersion.html">Class VescPacketFWVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketImu.html">Class VescPacketImu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestFWVersion.html">Class VescPacketRequestFWVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestImu.html">Class VescPacketRequestImu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketRequestValues.html">Class VescPacketRequestValues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetCurrent.html">Class VescPacketSetCurrent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetCurrentBrake.html">Class VescPacketSetCurrentBrake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetDuty.html">Class VescPacketSetDuty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetPos.html">Class VescPacketSetPos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetRPM.html">Class VescPacketSetRPM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketSetServoPos.html">Class VescPacketSetServoPos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classvesc__driver_1_1VescPacketValues.html">Class VescPacketValues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1add1a267dbe0606a4a5150790bbe798b4.html">Enum adc_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5950ddeee9212ba83433f85c93a835bd.html">Enum AHRS_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac4d298226d152810103dfa554ac55966.html">Enum app_use</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a877e9c650835fec907896e3affdf8029.html">Enum BATTERY_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aa991d9a05289d7476677983d5a146b2e.html">Enum CAN_BAUD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6068ce8e2b2f011583bd6e3f47867fc5.html">Enum CAN_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1af7272a187a805a6bd564b2724ecffd02.html">Enum CAN_PACKET_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1624ce9de9b0dc968c80571d257ab394.html">Enum CAN_STATUS_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1afb2f2ed7ee15ad6eacaffb8e57c37bde.html">Enum CFG_T</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a85332f8edd172e76c48306639165855e.html">Enum chuk_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ab01ba5995142dfcab715099771ded7f5.html">Enum COMM_PACKET_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a2c83038b231f9b703deeb8711076a61e.html">Enum debug_sampling_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a9d554e45533d65de81725771a035420f.html">Enum disp_pos_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6e41639d201e98ebe2e5a546fb8926cb.html">Enum drv8301_oc_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a7d50e7e730bc8f2de2b905fd131f7e34.html">Enum FOC_HFI_SAMPLES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aea86ed1310f7bac5436bb1d9cfd2b5cc.html">Enum gpd_output_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a991de85646df7979b3aecc17c738b6cc.html">Enum IMU_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a7ce9ae0daf4d7cf50bbd6777024c9bae.html">Enum LED_EXT_STATE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a94dd3adcd583aa7571b67be0fe71e4c4.html">Enum mc_comm_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a6c98ce6b6c87dd93a1715b3441279fa6.html">Enum mc_control_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1add07239a8d01883eb907388a53df457a.html">Enum mc_fault_code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5fb601d3d3593117aa2500e92b3f3c5e.html">Enum mc_foc_cc_decoupling_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a30b7ef228cda5d4ca51fb63be2da0428.html">Enum mc_foc_observer_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a4da904a4c4a29bba71d531a12f1746ca.html">Enum mc_foc_sensor_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aba46e12afe600fb9e1bda76272285050.html">Enum mc_motor_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a5429e726bd7c0770419236fd596f68fb.html">Enum mc_pwm_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac75a4404acbc7ec308267d0856f668d0.html">Enum mc_sensor_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a0f20f041589eff3006f06cdd6738587b.html">Enum mc_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ad4530aa490e35a0dc7e748651990ae0a.html">Enum MOTE_PACKET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a82bde9a7aa25e2f36bebecd29aa4b93e.html">Enum NRF_AW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aad838390066a6ba9ad9478d33500a845.html">Enum NRF_CRC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1aff9921401b1c440fa36f01cba40978de.html">Enum NRF_PAIR_RES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ab4db6b6b86c3a3c1af1eb25bb47d3026.html">Enum NRF_POWER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1049e1d55623c3d867213d9abb0cd162.html">Enum NRF_RETR_DELAY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a97e3b0a9f8e660b4e9d8dfa391e89c5d.html">Enum NRF_SPEED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a1dcc118b4b0a645df25329965c6b266d.html">Enum out_aux_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a29e7bbe1ed87588b27129faee65f27bb.html">Enum ppm_control_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ae575b7037749e6a22efebbcbf4149efa.html">Enum sensor_port_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac96a5d2f30f55748c1373b512aa3f782.html">Enum SHUTDOWN_MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1a9fdbfdaac84788724a24df03d5c9d59a.html">Enum temp_sensor_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ad4c8d3f7b1a2b59235117ea7feb9d095.html">Enum thr_exp_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_datatypes_8hpp_1ac54aeb3082d9dfadcdf110732889182d.html">Enum VESC_TX_T</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#unions">Unions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unionvesc__driver_1_1eeprom__var.html">Union eeprom_var</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#defines">Defines</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1ac53723d95b5c8c7d707e8e3ebcb4e143.html">Define crcpp_constexpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1af44cfa9e71356f05c42b363cf04ea9a6.html">Define crcpp_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1add273674b22f031b158220eeb560c7a0.html">Define crcpp_uint16</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Define crcpp_uint32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a3541074ba795d31a40f13e78c77c0e7c.html">Define crcpp_uint64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_crc_8hpp_1a28cd0a17324a479874c3bdd5387d6b04.html">Define crcpp_uint8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_vesc__packet_8hpp_1a0aa3088ffa17b0bd3a345955ab23b90c.html">Define CRCPP_USE_CPP11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_datatypes_8hpp_1a7c35c014fad56a5ea9f86b25ce3c4355.html">Define EEPROM_VARS_CUSTOM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_datatypes_8hpp_1af8f381ccb1ded44a9fbd8e559b4772b9.html">Define EEPROM_VARS_HW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_vesc__packet__factory_8hpp_1ad0eb6d8ee731f885e4106a3e89cdd6bf.html">Define REGISTER_PACKET_TYPE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1af21703f925222cf808675b9d3e3e1080.html">Typedef vesc_driver::Buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1a1f7354e69e220473c86b36eee92ab6c3.html">Typedef vesc_driver::BufferRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1ae582897e181f1a22ef7621b7eb9a3675.html">Typedef vesc_driver::BufferRangeConst</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_datatypes_8hpp_1a55e79bdc72bc3aeb000f5cbb6157f509.html">Typedef vesc_driver::systime_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1a80af512a3c68b006ee27699c794f839e.html">Typedef vesc_driver::VescPacketConstPtr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_vesc__packet_8hpp_1aabad57bf0bb1f43a0e9d9579b7c07903.html">Typedef vesc_driver::VescPacketPtr</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_vesc_driver.html">Directory vesc_driver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_crc.hpp.html">File crc.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_datatypes.hpp.html">File datatypes.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_device_uuid_lookup.hpp.html">File vesc_device_uuid_lookup.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_driver.hpp.html">File vesc_driver.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_interface.hpp.html">File vesc_interface.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_packet.hpp.html">File vesc_packet.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vesc_driver_vesc_packet_factory.hpp.html">File vesc_packet_factory.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/CHANGELOG.html">CHANGELOG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/CHANGELOG.html#changelog-for-package-vesc-driver">Changelog for package vesc_driver</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/CHANGELOG.html#id1">1.1.0 (2020-12-12)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/CHANGELOG.html#id3">1.0.0 (2020-12-02)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vesc_driver</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Define crcpp_uint32</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/define_crc_8hpp_1a4469d365469b254f21fb50316e079094.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="define-crcpp-uint32">
+<span id="exhale-define-crc-8hpp-1a4469d365469b254f21fb50316e079094"></span><h1>Define crcpp_uint32<a class="headerlink" href="#define-crcpp-uint32" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_vesc_driver_crc.hpp.html#file-include-vesc-driver-crc-hpp"><span class="std std-ref">File crc.hpp</span></a></p></li>
+</ul>
+<section id="define-documentation">
+<h2>Define Documentation<a class="headerlink" href="#define-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.crcpp_uint32">
+<span class="target" id="crc_8hpp_1a4469d365469b254f21fb50316e079094"></span><span class="sig-name descname"><span class="n"><span class="pre">crcpp_uint32</span></span></span><a class="headerlink" href="#c.crcpp_uint32" title="Link to this definition"></a><br /></dt>
+<dd><p>Unsigned 32-bit integer definition, used primarily for parameter definitions. </p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="define_crc_8hpp_1add273674b22f031b158220eeb560c7a0.html" class="btn btn-neutral float-left" title="Define crcpp_uint16" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="define_crc_8hpp_1a3541074ba795d31a40f13e78c77c0e7c.html" class="btn btn-neutral float-right" title="Define crcpp_uint64" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;vesc_driver&gt; Contributors. License: BSD.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

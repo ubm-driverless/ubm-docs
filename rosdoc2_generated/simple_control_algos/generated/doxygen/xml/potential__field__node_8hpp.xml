@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="potential__field__node_8hpp" kind="file" language="C++">
+    <compoundname>potential_field_node.hpp</compoundname>
+    <includes refid="potential__field_8hpp" local="yes">potential_field.hpp</includes>
+    <includes local="yes">rclcpp/logging.hpp</includes>
+    <includes refid="simple__speed_8hpp" local="yes">simple_speed.hpp</includes>
+    <includes local="no">ackermann_msgs/msg/ackermann_drive_stamped.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">sensor_msgs/msg/laser_scan.hpp</includes>
+    <includes local="no">std_msgs/msg/bool.hpp</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>ackermann_msgs/msg/ackermann_drive_stamped.hpp</label>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="12">
+        <label>simple_speed.hpp</label>
+        <link refid="simple__speed_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>numeric</label>
+      </node>
+      <node id="11">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/potential_field_node.hpp</label>
+        <link refid="potential__field__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="3">
+        <label>utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>std_msgs/msg/bool.hpp</label>
+      </node>
+      <node id="8">
+        <label>tuple</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>utility</label>
+      </node>
+      <node id="15">
+        <label>sensor_msgs/msg/laser_scan.hpp</label>
+      </node>
+      <node id="2">
+        <label>potential_field.hpp</label>
+        <link refid="potential__field_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classPotentialFieldNode" prot="public">PotentialFieldNode</innerclass>
+    <briefdescription>
+<para>Defines the <ref refid="classPotentialFieldNode" kindref="compound">PotentialFieldNode</ref> class that creates a reactive algorithm based on potential fields. The algorithm is based on the article: &quot;A Real-Time Obstacle
+Avoidance Method for Autonomous Vehicles Using an Obstacle-Dependent Gaussian Potential Field&quot; <ulink url="https://doi.org/10.1155/2018/5041401">https://doi.org/10.1155/2018/5041401</ulink>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/potential_field_node.hpp"/>
+  </compounddef>
+</doxygen>

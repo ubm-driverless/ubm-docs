@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classFeedForwardAction" kind="class" language="C++" prot="public">
+    <compoundname>FeedForwardAction</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFeedForwardAction_1ab0802790fe68e73bd12440cde0207e3f" prot="private" static="no" mutable="no">
+        <type>const bool *</type>
+        <definition>const bool* FeedForwardAction::path_based_only_ptr</definition>
+        <argsstring></argsstring>
+        <name>path_based_only_ptr</name>
+        <briefdescription>
+<para>pointer to path-based only flag </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="134" column="16" bodyfile="include/steering_controller.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFeedForwardAction_1a8bf6b70e7a1a3ded04aadac20aa7fdd9" prot="private" static="no" mutable="no">
+        <type>const int *</type>
+        <definition>const int* FeedForwardAction::delay_ff_action_ptr</definition>
+        <argsstring></argsstring>
+        <name>delay_ff_action_ptr</name>
+        <briefdescription>
+<para>pointer to delay for feedforward action </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="135" column="15" bodyfile="include/steering_controller.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFeedForwardAction_1a1bc95236d70a7249f57d4881bc72910a" prot="private" static="no" mutable="no">
+        <type>const int *</type>
+        <definition>const int* FeedForwardAction::num_points_ptr</definition>
+        <argsstring></argsstring>
+        <name>num_points_ptr</name>
+        <briefdescription>
+<para>pointer to number of points in the path </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="136" column="15" bodyfile="include/steering_controller.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFeedForwardAction_1a4985cc6ca95887cc4d0738e0edf7dc1f" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FeedForwardAction::wb_ptr</definition>
+        <argsstring></argsstring>
+        <name>wb_ptr</name>
+        <briefdescription>
+<para>pointer to wheelbase of the vehicle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="137" column="17" bodyfile="include/steering_controller.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFeedForwardAction_1a69b85cb739d1dfc23a72ee68ca1d9548" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FeedForwardAction::max_steer_ptr</definition>
+        <argsstring></argsstring>
+        <name>max_steer_ptr</name>
+        <briefdescription>
+<para>pointer to maximum allowable steering angle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="138" column="17" bodyfile="include/steering_controller.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFeedForwardAction_1a021182bc0dc09aadfb6d9955c9f23d9b" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FeedForwardAction::beta_ff_gain_ptr</definition>
+        <argsstring></argsstring>
+        <name>beta_ff_gain_ptr</name>
+        <briefdescription>
+<para>pointer to gain for feedforward action </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="139" column="17" bodyfile="include/steering_controller.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFeedForwardAction_1a59c586e85972bef63ca84c6c3609a572" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FeedForwardAction::averaging_ff_gain_ptr</definition>
+        <argsstring></argsstring>
+        <name>averaging_ff_gain_ptr</name>
+        <briefdescription>
+<para>Average the new steering angle with the previous one. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="140" column="17" bodyfile="include/steering_controller.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFeedForwardAction_1a61109879b1fe0c774805da4681abfc13" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; FeedForwardAction::path_curvature_copy</definition>
+        <argsstring></argsstring>
+        <name>path_curvature_copy</name>
+        <briefdescription>
+<para>Copy of the path curvature to avoid altering the original. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="141" column="17" bodyfile="include/steering_controller.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFeedForwardAction_1a787eb274104cccc6b9a780f7b441af10" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; FeedForwardAction::feedforward_values</definition>
+        <argsstring></argsstring>
+        <name>feedforward_values</name>
+        <briefdescription>
+<para>Buffer to store previous steering angles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="142" column="17" bodyfile="include/steering_controller.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFeedForwardAction_1adeab82e1948821eb6eada778488fa8a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FeedForwardAction::FeedForwardAction</definition>
+        <argsstring>()</argsstring>
+        <name>FeedForwardAction</name>
+        <briefdescription>
+<para>Constructor for the feedforward action class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="101" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classFeedForwardAction_1ab3a4d69c1a39102b039156e2fa8f3310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FeedForwardAction::initialize</definition>
+        <argsstring>(const bool &amp;path_based_only, const int &amp;num_points, const int &amp;delay_ff_action, const float &amp;wheelbase, const float &amp;max_steer, const float &amp;beta_ff_gain, const float &amp;averaging_ff_gain, const std::vector&lt; float &gt; &amp;path_curvature)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>path_based_only</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>num_points</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>delay_ff_action</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>wheelbase</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>max_steer</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>beta_ff_gain</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>averaging_ff_gain</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>path_curvature</declname>
+        </param>
+        <briefdescription>
+<para>set the parameters for the steering controller </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num_points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of points in the path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_steer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum steering angle (in radians) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>beta_ff_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gain for the feedforward action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>averaging_ff_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Average ff action [0,1]. 0 means no averaging (take new value only) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path_curvature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Curvature of the path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="113" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFeedForwardAction_1ab94b8875b79a4ed2bd8d6d0a4af57c03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FeedForwardAction::feedforward_action</definition>
+        <argsstring>(int nearest_index, float current_steering_angle)</argsstring>
+        <name>feedforward_action</name>
+        <param>
+          <type>int</type>
+          <declname>nearest_index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>current_steering_angle</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the feedforward action for steering control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nearest_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the nearest point in the path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current_steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current steering angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/steering_controller.hpp" line="129" column="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/steering_controller.hpp" line="95" column="24" bodyfile="include/steering_controller.hpp" bodystart="95" bodyend="143"/>
+    <listofallmembers>
+      <member refid="classFeedForwardAction_1a59c586e85972bef63ca84c6c3609a572" prot="private" virt="non-virtual"><scope>FeedForwardAction</scope><name>averaging_ff_gain_ptr</name></member>
+      <member refid="classFeedForwardAction_1a021182bc0dc09aadfb6d9955c9f23d9b" prot="private" virt="non-virtual"><scope>FeedForwardAction</scope><name>beta_ff_gain_ptr</name></member>
+      <member refid="classFeedForwardAction_1a8bf6b70e7a1a3ded04aadac20aa7fdd9" prot="private" virt="non-virtual"><scope>FeedForwardAction</scope><name>delay_ff_action_ptr</name></member>
+      <member refid="classFeedForwardAction_1ab94b8875b79a4ed2bd8d6d0a4af57c03" prot="public" virt="non-virtual"><scope>FeedForwardAction</scope><name>feedforward_action</name></member>
+      <member refid="classFeedForwardAction_1a787eb274104cccc6b9a780f7b441af10" prot="private" virt="non-virtual"><scope>FeedForwardAction</scope><name>feedforward_values</name></member>
+      <member refid="classFeedForwardAction_1adeab82e1948821eb6eada778488fa8a8" prot="public" virt="non-virtual"><scope>FeedForwardAction</scope><name>FeedForwardAction</name></member>
+      <member refid="classFeedForwardAction_1ab3a4d69c1a39102b039156e2fa8f3310" prot="public" virt="non-virtual"><scope>FeedForwardAction</scope><name>initialize</name></member>
+      <member refid="classFeedForwardAction_1a69b85cb739d1dfc23a72ee68ca1d9548" prot="private" virt="non-virtual"><scope>FeedForwardAction</scope><name>max_steer_ptr</name></member>
+      <member refid="classFeedForwardAction_1a1bc95236d70a7249f57d4881bc72910a" prot="private" virt="non-virtual"><scope>FeedForwardAction</scope><name>num_points_ptr</name></member>
+      <member refid="classFeedForwardAction_1ab0802790fe68e73bd12440cde0207e3f" prot="private" virt="non-virtual"><scope>FeedForwardAction</scope><name>path_based_only_ptr</name></member>
+      <member refid="classFeedForwardAction_1a61109879b1fe0c774805da4681abfc13" prot="private" virt="non-virtual"><scope>FeedForwardAction</scope><name>path_curvature_copy</name></member>
+      <member refid="classFeedForwardAction_1a4985cc6ca95887cc4d0738e0edf7dc1f" prot="private" virt="non-virtual"><scope>FeedForwardAction</scope><name>wb_ptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,73 @@
+
+.. _file_include_odometry_odometry_node.hpp:
+
+File odometry_node.hpp
+======================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_odometry>` (``include/odometry``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Defines the :ref:`exhale_class_classOdometryNode` class for vehicle odometry reconstruction. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/odometry/odometry_node.hpp``)
+---------------------------------------------------
+
+
+
+
+Detailed Description
+--------------------
+
+The :ref:`exhale_class_classOdometryNode` class processes data from IMU and vehicle state sensors, applying a chosen reconstruction method. It publishes the computed odometry on a ROS2 topic. 
+
+
+
+
+Includes
+--------
+
+
+- ``ackermann_msgs/msg/ackermann_drive_stamped.hpp``
+
+- ``geometry_msgs/msg/transform_stamped.hpp``
+
+- ``nav_msgs/msg/odometry.hpp``
+
+- ``odometry/odometry.hpp`` (:ref:`file_include_odometry_odometry.hpp`)
+
+- ``rclcpp/logging.hpp``
+
+- ``rclcpp/rclcpp.hpp``
+
+- ``std_msgs/msg/bool.hpp``
+
+- ``tf2/utils.h``
+
+- ``tf2_ros/transform_broadcaster.h``
+
+- ``vector``
+
+- ``vesc_msgs/msg/vesc_imu_stamped.hpp``
+
+- ``vesc_msgs/msg/vesc_state_stamped.hpp``
+
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classOdometryNode`
+

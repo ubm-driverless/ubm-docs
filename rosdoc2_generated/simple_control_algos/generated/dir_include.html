@@ -1,0 +1,233 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directory include &mdash; simple_control_algos 1.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=fc837d61"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="File disparity_extender.hpp" href="file_include_disparity_extender.hpp.html" />
+    <link rel="prev" title="Function visualize_markers" href="function_ros__utils_8hpp_1a81265f88837c5951afcce3413be9ed09.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            simple_control_algos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structFrenetPath.html">Struct FrenetPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structLapPerformanceData.html">Struct LapPerformanceData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classcubic__spline__2d.html">Class cubic_spline_2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline1d.html">Class CubicSpline1d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline2d.html">Class CubicSpline2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classDisparityExtenderNode.html">Class DisparityExtenderNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFeedForwardAction.html">Class FeedForwardAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetMapBasedNode.html">Class FrenetMapBasedNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetOptimalTrajectory.html">Class FrenetOptimalTrajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetOvertakingNode.html">Class FrenetOvertakingNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classLapPerformance.html">Class LapPerformance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPathFollowerNode.html">Class PathFollowerNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPotentialFieldNode.html">Class PotentialFieldNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPotentialPursuitNode.html">Class PotentialPursuitNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomial.html">Class QuarticPolynomial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomialMiddlePose.html">Class QuarticPolynomialMiddlePose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSteeringController.html">Class SteeringController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThirdPolynomial.html">Class ThirdPolynomial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a548f490e1cc2964ec6a3099dedee3485.html">Template Function argmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a7961cf9f682c353bbbbee08688449363.html">Function calculate_mean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a7c87b3820a510fe8ba3d31de23d1368d.html">Function calculate_mean_in_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1aabda3256be7b08b8e746b28d18cdd374.html">Function calculate_obstacle_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_disparity__extender_8hpp_1a291ed5db3ed90572f2fa73268d730fc3.html">Function check_imminent_crash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1aad9c06f14481d9674434dfba4c96df16.html">Function compute_attractive_potential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a977a357ef5623917ae2dbb7d71c540a5.html">Function compute_choosen_index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a803813ac89e8048584b04e919455f5df.html">Function compute_obstacle_potential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_disparity__extender_8hpp_1a62ce1c1cbfc59821940f236e0bc3e974.html">Function disparity_extender_steering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_disparity__extender_8hpp_1a4ad9538c20847b48c0ceba8c62c0b69f.html">Function find_disparities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_disparity__extender_8hpp_1a29c2ded4d0f27a2a43d5ad06dbf11200.html">Function find_disparity_steering_angle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a3bfec49a1ed55be5be4a39ad99afea84.html">Function find_local_minima</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a2d4be497bdcc23caa0ab2fd575915ba0.html">Function find_obstacles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a49e610728a5471f56fc020d2b6ee6e9b.html">Function get_rgb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a056a3290e38efc55bcdee6c5655237c7.html">Function heading_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a478f9c32589c5d73b481c36e939f27a1.html">Function linspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a60300b3e5373b56171efdb41435d35ee.html">Function max_index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a8b22fce713a12c10d65d6e211afd221f.html">Function potential_field_steering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1aac3f04ff98d2a27e8e515906313fed04.html">Function potential_pursuit_steering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1ac6279e31fb4c59cdfe219f3f092ad0ae.html">Function publish_performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a7eba2453e99da10af2d521c211d1984c.html">Function publish_points_as_marker_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a8936e6a359cea43e0e3ff73cc416f6fb.html">Function publish_points_as_pointcloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1abec49d66b6a81df1e7269db9bc18fbb7.html">Function publish_raceline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a588d8ae799d233a401111c312e73364f.html">Function rafi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a71f0c0cfaeac67efc260987375b06050.html">Function reduce_lidar_fov</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a88dbb5d572b05732c37a6ab53f130fab.html">Function rifa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_simple__speed_8hpp_1a8666ead035190ddbcd155650aeb37176.html">Function speed_proportional_steering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_simple__speed_8hpp_1ad8b9a9a94d3855969c36725c280f7d5b.html">Function speed_steer_and_fov</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a81265f88837c5951afcce3413be9ed09.html">Function visualize_markers</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#directories">Directories</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Directory include</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_disparity_extender.hpp.html">File disparity_extender.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_disparity_extender_node.hpp.html">File disparity_extender_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_map_based_node.hpp.html">File frenet_map_based_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking.hpp.html">File frenet_overtaking.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking_node.hpp.html">File frenet_overtaking_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking_node_detector.hpp.html">File frenet_overtaking_node_detector.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_lap_performance.hpp.html">File lap_performance.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_path_follower_node.hpp.html">File path_follower_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_potential_field.hpp.html">File potential_field.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_potential_field_node.hpp.html">File potential_field_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_potential_pursuit_node.hpp.html">File potential_pursuit_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_ros_utils.hpp.html">File ros_utils.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_simple_speed.hpp.html">File simple_speed.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_spline_and_polynomial.hpp.html">File spline_and_polynomial.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_steering_controller.hpp.html">File steering_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils.hpp.html">File utils.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/LICENSE.html">LICENSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#simple-control-algorithms">Simple Control Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#reactive-algorithms-nodes-overview">Reactive Algorithms Nodes Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#libraries">Libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">simple_control_algos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Directory include</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/dir_include.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="directory-include">
+<span id="dir-include"></span><h1>Directory include<a class="headerlink" href="#directory-include" title="Link to this heading"></a></h1>
+<p><em>Directory path:</em> <code class="docutils literal notranslate"><span class="pre">include</span></code></p>
+<section id="files">
+<h2>Files<a class="headerlink" href="#files" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file_include_disparity_extender.hpp.html#file-include-disparity-extender-hpp"><span class="std std-ref">File disparity_extender.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_disparity_extender_node.hpp.html#file-include-disparity-extender-node-hpp"><span class="std std-ref">File disparity_extender_node.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_frenet_map_based_node.hpp.html#file-include-frenet-map-based-node-hpp"><span class="std std-ref">File frenet_map_based_node.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_frenet_overtaking.hpp.html#file-include-frenet-overtaking-hpp"><span class="std std-ref">File frenet_overtaking.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_frenet_overtaking_node.hpp.html#file-include-frenet-overtaking-node-hpp"><span class="std std-ref">File frenet_overtaking_node.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_frenet_overtaking_node_detector.hpp.html#file-include-frenet-overtaking-node-detector-hpp"><span class="std std-ref">File frenet_overtaking_node_detector.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_lap_performance.hpp.html#file-include-lap-performance-hpp"><span class="std std-ref">File lap_performance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_path_follower_node.hpp.html#file-include-path-follower-node-hpp"><span class="std std-ref">File path_follower_node.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_potential_field.hpp.html#file-include-potential-field-hpp"><span class="std std-ref">File potential_field.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_potential_field_node.hpp.html#file-include-potential-field-node-hpp"><span class="std std-ref">File potential_field_node.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_potential_pursuit_node.hpp.html#file-include-potential-pursuit-node-hpp"><span class="std std-ref">File potential_pursuit_node.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_ros_utils.hpp.html#file-include-ros-utils-hpp"><span class="std std-ref">File ros_utils.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_simple_speed.hpp.html#file-include-simple-speed-hpp"><span class="std std-ref">File simple_speed.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_spline_and_polynomial.hpp.html#file-include-spline-and-polynomial-hpp"><span class="std std-ref">File spline_and_polynomial.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_steering_controller.hpp.html#file-include-steering-controller-hpp"><span class="std std-ref">File steering_controller.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_utils.hpp.html#file-include-utils-hpp"><span class="std std-ref">File utils.hpp</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="function_ros__utils_8hpp_1a81265f88837c5951afcce3413be9ed09.html" class="btn btn-neutral float-left" title="Function visualize_markers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="file_include_disparity_extender.hpp.html" class="btn btn-neutral float-right" title="File disparity_extender.hpp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;simple_control_algos&gt; Contributors. License: MIT Lincense.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

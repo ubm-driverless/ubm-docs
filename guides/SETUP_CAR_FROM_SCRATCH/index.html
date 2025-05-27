@@ -1,0 +1,2406 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ubm-driverless.github.io/ubm-docs/guides/SETUP_CAR_FROM_SCRATCH/">
+      
+      
+        <link rel="prev" href="../ROS_PACKAGE/">
+      
+      
+        <link rel="next" href="../run_real_world_car/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>From 0 to Working Car - UBM Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CSource+Code+Pro+:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Source Code Pro "}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#from-0-to-working-car" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="UBM Documentation" class="md-header__button md-logo" aria-label="UBM Documentation" data-md-component="logo">
+      
+  <img src="../../assets/UBM-Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UBM Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              From 0 to Working Car
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="red"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ubm-driverless" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ubm-driverless
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../PYTHON_PACKAGES/ai_controller/ai_controller/" class="md-tabs__link">
+          
+  
+  
+  Python Packages
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../CPP_PACKAGES" class="md-tabs__link">
+        
+  
+  
+    
+  
+  C++ Packages
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UBM Documentation" class="md-nav__button md-logo" aria-label="UBM Documentation" data-md-component="logo">
+      
+  <img src="../../assets/UBM-Logo.png" alt="logo">
+
+    </a>
+    UBM Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ubm-driverless" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ubm-driverless
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/DOCS_GENERATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation Generation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/SETUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup of the "ubm-f1tenth" environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ADD_DOCUMENTATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Add Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../F1TENTH_HARDWARE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    F1Tenth Hardware Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FOXGLOVE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Foxglove
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IMAGE_PARSER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Use image_parser.py
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../INSTALL_CPP_DEPENDENCIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to install GEOS and nanoflann and FLANN for C++
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JETSON_INFO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Philly's Jetson Xavier NX info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LINTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MODEM_INTERNET_CONNECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to connect to router to the internet using USB tethering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RACELINE_ENV/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raceline virtual environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS_PACKAGE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide for creating a ROS2 package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    From 0 to Working Car
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    From 0 to Working Car
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-card-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Card Image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-the-image-on-the-sd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flash the Image on the SD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-run-the-jetson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's run the Jetson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-set-up-the-jetson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Set-Up The Jetson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-format-the-ssd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's format the SSD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-move-the-root-to-the-ssd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's move the root to the SSD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-update-all-the-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Update all the Packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-create-a-swapfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's create a Swapfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-install-some-basic-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Install some Basic Software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-add-udev-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's add udev rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-install-ros2-foxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Install ROS2 foxy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-create-and-set-up-our-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Create and Set-Up our Workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-build-f1tenth_system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Build f1tenth_system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-install-vnc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Install Vnc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-install-jetsongpio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Install JetsonGPIO
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-install-sick_scan_xd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Install sick_scan_xd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-build-sick_scan_xd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Build sick_scan_xd
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Run real world car
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            Run real world car
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/1_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checklists
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/2_BRINGUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bringup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/3_MAPPING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mapping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/4_RACELINE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raceline &amp; Speed Profile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/5_RUN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/6_SHUTDOWN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shutdown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_real_world_car/TROUBLESHOOTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Packages
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python Packages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ai_controller
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            ai_controller
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/ai_controller/ai_controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ai_controller
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/ai_controller/ai_launch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ai_launch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/ai_controller/ai_logger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ai_logger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    data_collection
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            data_collection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/data_collection/data_collection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    data_collection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    detector
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            detector
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/detector/detector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    detector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/detector/frenet_converter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    frenet_converter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ekf_py
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            ekf_py
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/ekf_py/ekf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ekf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/ekf_py/utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    utils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    f1tenth_gym_ros
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            f1tenth_gym_ros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/f1tenth_gym_ros/gym_bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gym_bridge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    particle_filter
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            particle_filter
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/particle_filter/particle_filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    particle_filter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/particle_filter/utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    utils
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    recorder
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            recorder
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PYTHON_PACKAGES/recorder/recorder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    recorder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CPP_PACKAGES" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-card-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Card Image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-the-image-on-the-sd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flash the Image on the SD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-run-the-jetson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's run the Jetson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-set-up-the-jetson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Set-Up The Jetson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-format-the-ssd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's format the SSD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-move-the-root-to-the-ssd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's move the root to the SSD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-update-all-the-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Update all the Packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-create-a-swapfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's create a Swapfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-install-some-basic-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Install some Basic Software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-add-udev-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's add udev rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-install-ros2-foxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Install ROS2 foxy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-create-and-set-up-our-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Create and Set-Up our Workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-build-f1tenth_system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Build f1tenth_system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-install-vnc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Install Vnc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-install-jetsongpio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Install JetsonGPIO
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-install-sick_scan_xd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Install sick_scan_xd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-build-sick_scan_xd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Build sick_scan_xd
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="from-0-to-working-car">From 0 to Working Car</h1>
+<p>In this step by step tutorial I will inlustrate you how to setup all our working environment.</p>
+<h2 id="hardware-list">Hardware List</h2>
+<ul>
+<li>Jetson Xavier NX Developer Kit</li>
+<li>SD card &gt; 6 GB</li>
+</ul>
+<h2 id="download-card-image">Download Card Image</h2>
+<ol>
+<li>Go to <a href="https://developer.nvidia.com/downloads">the official NVIDIA download page</a>
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/001_nvidia_download_page.png" title="Nvidia Download Page" /></li>
+<li>Click On <em>Jetson</em>
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/002_jetson_download_center.png" title="Nvidia Jetson Download Page" /></li>
+<li>Inside <em>Filter...</em> search for:
+<code>Jetson Xavier NX Developer Kit SD Card Image</code>
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/003_jetson_nx_xavier_sd_images.png" title="Nvidia Jetson NX Xavier SD Images" /></li>
+<li>Download the last version</li>
+</ol>
+<h2 id="flash-the-image-on-the-sd">Flash the Image on the SD</h2>
+<ol>
+<li>Completely format the sd card. Remove any previuosly present partition.
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/004_previously_partitions.png" title="Delete Previously Partitions" /></li>
+<li>From <a href="https://etcher.balena.io/">the official Balena Etcher website</a> download it.
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/005_download_balena_etcher.png" title="Balena Etcher Home Page" /></li>
+<li>Run <em>Balena Etcher</em> on Linux:<ul>
+<li>Unzip the downloaded file</li>
+<li>Go inside:
+    <code>balenaEtcher-linux-x64-*.**.**/balenaEtcher-linux-x64</code></li>
+<li>Double click on <code>balena-etcher</code> runnable</li>
+</ul>
+</li>
+<li>Select the previuosly downloaded image and the wanted SD card and run it</li>
+</ol>
+<h2 id="lets-run-the-jetson">Let's run the Jetson</h2>
+<ol>
+<li>Attach to the jetson:<ul>
+<li>Monitor</li>
+<li>Keyboard</li>
+<li>Mouse</li>
+</ul>
+</li>
+</ol>
+<p><img alt="" src="/ubm-docs/assets/setup_car_from_scratch/006_jetson_with_hdmi_mouse_keyboard_attached.jpg" title="Screen Mouse and Keyboard Attached to the Jetson" />
+2. Insert the SD card inside the Jetson.
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/007_sd_slot_on_jetson.jpg" title="Jetson SD Slot" />
+3. Power on the Jetson with a <em>[9; 20] V</em> input. A green led will turn on.
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/011_jetson_on_led.jpg" title="Jetson turn On with a Green Led" />
+4. The jetson should automatically select SD as boot device, if not you can force it with F11 while starting. Anyway if not probably something wrong while flashing the SD. After the first boot you will end up with:
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/008_first_startup.jpg" title="First Boot" /></p>
+<h2 id="lets-set-up-the-jetson">Let's Set-Up The Jetson</h2>
+<ol>
+<li>Accept all the licenses</li>
+<li>Put English as first Language</li>
+<li>Italian as keyboard layout</li>
+<li>Rome as time zone</li>
+<li>Add a user:<ul>
+<li>username: <code>ubm</code></li>
+<li>computer_name: <code>ubm-&lt;name_of_the_car&gt;</code></li>
+<li>password: The usual one</li>
+<li>Automatic Log in setted On</li>
+</ul>
+</li>
+</ol>
+<p><img alt="" src="/ubm-docs/assets/setup_car_from_scratch/009_ubm_account_creation.jpg" title="UBM User" />
+6. The Jetson is ready:
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/012_jetson_is_ready.jpg" title="The Jetson is Ready" /></p>
+<h2 id="lets-format-the-ssd">Let's format the SSD</h2>
+<ol>
+<li>Search for Disk App.
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/013_disk_app.png" title="Let's Search For The Disk App" /></li>
+<li>Select the 500GB SSD and from th top right corner three dots select format.
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/014_format_ssd500gb.png" title="Let's Select the 500GB SSD" /></li>
+<li>Format it leaving averything as default.
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/015_format_options.png" title="Format Options" /></li>
+</ol>
+<h2 id="lets-move-the-root-to-the-ssd">Let's move the root to the SSD</h2>
+<ol>
+<li>Open a Terminal</li>
+<li><code>cd ~/Downloads</code></li>
+<li><code>git clone https://github.com/jetsonhacks/rootOnNVMe.git</code></li>
+<li><code>cd rootOnNVMe</code></li>
+<li><code>./copy-rootfs-ssd.sh</code>
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/016_copy_rootfs_command.png" title="Copy RootFS Command" /></li>
+<li><code>./setup-service.sh</code>
+<img alt="" src="/ubm-docs/assets/setup_car_from_scratch/017_setup_service_command.png" title="Setup Service Command" /></li>
+<li><code>sudo reboot now</code></li>
+</ol>
+<h2 id="lets-update-all-the-packages">Let's Update all the Packages</h2>
+<ol>
+<li>Open a Terminal</li>
+<li><code>sudo apt update</code></li>
+<li><code>sudo apt upgrade</code></li>
+<li><code>sudo reboot now</code></li>
+</ol>
+<h2 id="lets-create-a-swapfile">Let's create a Swapfile</h2>
+<ol>
+<li><code>sudo fallocate -l 4G /var/swapfile</code></li>
+<li><code>sudo chmod 600 /var/swapfile</code></li>
+<li><code>sudo mkswap /var/swapfile</code></li>
+<li><code>sudo swapon /var/swapfile</code></li>
+<li><code>sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" &gt;&gt; /etc/fstab'</code></li>
+</ol>
+<h2 id="lets-install-some-basic-software">Let's Install some Basic Software</h2>
+<ol>
+<li><code>sudo apt install nano python3.8-full python3-pip tree</code></li>
+<li><code>sudo pip3 install -U jetson-stats</code></li>
+<li><code>sudo reboot now</code></li>
+<li>Now if you run <code>jtop</code>:</li>
+</ol>
+<h2 id="lets-add-udev-rules">Let's add udev rules</h2>
+<ol>
+<li><code>sudo -s</code></li>
+<li><code>echo 'KERNEL=="ttyACM[0-9]*", ACTION=="add", ATTRS{idVendor}=="15d1", MODE="0666", GROUP="dialout", SYMLINK+="sensors/hokuyo"' &gt;&gt; /etc/udev/rules.d/99-hokuyo.rules</code></li>
+<li><code>echo 'KERNEL=="ttyACM[0-9]*", ACTION=="add", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", MODE="0666", GROUP="dialout", SYMLINK+="sensors/vesc"' &gt;&gt; /etc/udev/rules.d/99-vesc.rules</code></li>
+<li><code>sudo udevadm control --reload-rules</code></li>
+<li><code>sudo udevadm trigger</code></li>
+<li><code>sudo reboot now</code></li>
+<li>Check that inside <em>/dev/sensors</em> there is <em>vesc</em></li>
+</ol>
+<h2 id="lets-install-ros2-foxy">Let's Install ROS2 foxy</h2>
+<ol>
+<li><code>sudo locale-gen en_US en_US.UTF-8</code></li>
+<li><code>sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8</code></li>
+<li><code>export LANG=en_US.UTF-8</code></li>
+<li><code>sudo apt update &amp;&amp; sudo apt install curl -y</code></li>
+<li><code>sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg</code></li>
+<li><code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release &amp;&amp; echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null</code></li>
+<li><code>sudo apt update</code></li>
+<li><code>sudo apt upgrade</code></li>
+<li><code>sudo apt install ros-foxy-desktop python3-argcomplete</code></li>
+<li><code>sudo apt install ros-dev-tools</code>
+Let's try if ros2 is working:</li>
+<li><code>source /opt/ros/foxy/setup.bash</code></li>
+<li><code>ros2 run demo_nodes_cpp talker</code>
+Expected Output:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ubm@ubm-bilbo:~$ ros2 run demo_nodes_cpp talker
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[INFO] [1732365939.572103752] [talker]: Publishing: &#39;Hello World: 1&#39;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[INFO] [1732365940.571954330] [talker]: Publishing: &#39;Hello World: 2&#39;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[INFO] [1732365941.571874272] [talker]: Publishing: &#39;Hello World: 3&#39;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>[INFO] [1732365942.571906233] [talker]: Publishing: &#39;Hello World: 4&#39;
+</code></pre></div></li>
+<li><code>sudo apt install python3-colcon-common-extensions</code></li>
+<li><code>sudo apt install python3-bloom python3-rosdep fakeroot debhelper dh-python</code></li>
+<li><code>sudo rosdep init</code></li>
+<li><code>rosdep update</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>reading in sources list data from /etc/ros/rosdep/sources.list.d
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Hit https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Query rosdistro index https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Skip end-of-life distro &quot;ardent&quot;
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Skip end-of-life distro &quot;bouncy&quot;
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Skip end-of-life distro &quot;crystal&quot;
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Skip end-of-life distro &quot;dashing&quot;
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Skip end-of-life distro &quot;eloquent&quot;
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>Skip end-of-life distro &quot;foxy&quot;
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>Skip end-of-life distro &quot;galactic&quot;
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>Skip end-of-life distro &quot;groovy&quot;
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>Add distro &quot;humble&quot;
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>Skip end-of-life distro &quot;hydro&quot;
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>Skip end-of-life distro &quot;indigo&quot;
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>Add distro &quot;iron&quot;
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>Skip end-of-life distro &quot;jade&quot;
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>Add distro &quot;jazzy&quot;
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>Skip end-of-life distro &quot;kinetic&quot;
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>Skip end-of-life distro &quot;lunar&quot;
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>Skip end-of-life distro &quot;melodic&quot;
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>Add distro &quot;noetic&quot;
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>Add distro &quot;rolling&quot;
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>updated cache in /home/ubm/.ros/rosdep/sources.cache
+</code></pre></div></li>
+</ol>
+<h2 id="lets-create-and-set-up-our-workspace">Let's Create and Set-Up our Workspace</h2>
+<ol>
+<li><code>cd $HOME</code></li>
+<li><code>rm -rf Music Pictures Public Templates Videos Documents</code></li>
+<li><code>sudo usermod -aG input ubm</code></li>
+<li><code>mkdir Software</code></li>
+<li><code>mkdir -p f1tenth_ws/src</code></li>
+<li><code>cd f1tenth_ws</code></li>
+<li><code>colcon build</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ubm@ubm-bilbo:~/f1tenth_ws$ colcon build
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Summary: 0 packages finished [1.11s]
+</code></pre></div></li>
+<li><code>ssh-keygen</code>
+Just press enter and leave everything as default
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Generating public/private rsa key pair.
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Enter file in which to save the key (/home/ubm/.ssh/id_rsa): 
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Enter passphrase (empty for no passphrase): 
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Enter same passphrase again: 
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Your identification has been saved in /home/ubm/.ssh/id_rsa
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Your public key has been saved in /home/ubm/.ssh/id_rsa.pub
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>The key fingerprint is:
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>SHA256:sdmSu2w/krGwt23PJB9jO0bYyATguRf+6u1x7d+Xq3U ubm@ubm-bilbo
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>The key&#39;s randomart image is:
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>+---[RSA 3072]----+
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>|      ..         |
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>|     . ..        |
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>|      o o.       |
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>|       o B.      |
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>|      . So.+     |
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>|      ...++ o.   |
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>|       o.++.* ..E|
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>|      ..*=oOo=..+|
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>|       +**=+=ooo=|
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>+----[SHA256]-----+
+</code></pre></div></li>
+<li><code>cat ~/.ssh/id_rsa.pub</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDN7+Bvuoxp3m94JyjrbjC4HytEGS2a4Jpb3GAvC5NG+8lfm9mrLDdzY/dxlV1mpm56WNK/TLJOwCOcN/fg3PWWbqsrY+sosUtD8auAQs66QiooLDeN2fOoU6oDCLvLpLO6ozIG/ZgeG18nTqcNZR66LQJW3/gsk8w9nkSnii0/dsyF7K5X33/x8R7HecAnT6H2fI10avOH9FkF39g+7L0Ycr2Q7r22LQ/2CSazYLqSb762oExGJ/YdhYxFYmgzQ5Jb54GDdYoghv54zYGEb5ubeVuFnkAtLeGPzANdX0r8rwsn2aZEMNz01E3gr8GCccVa0xApIYUUAGD3QHuw0JALu3o0aRE3CHiFRCJb6hx23qAf872oWKHay/HdwPqw/maVNa2bdYxW70G7jsAvH3hbh0dG73Nro+WQdF38VoxUYYZ1+yTf1QetQSZ/3o/5X+7lCdbfoDygYJcVAuEm2RvTgmK0Epcyq1psEgNd0wsQzKXCeKOnoCk7V1qpWeJ1IyM= ubm@ubm-bilbo
+</code></pre></div></li>
+<li>Copy the output on the <em>SSH and GPG keys</em> of the github <em>ubm-device</em> account. Ask for the credentials.</li>
+<li><code>cd ~/</code></li>
+<li><code>git clone git@github.com:ubm-driverless/ubm-f1tenth.git repo</code></li>
+<li><code>cat ~/repo/updated_bashrc.bash &gt;&gt; ~/.bashrc</code></li>
+</ol>
+<h2 id="lets-build-f1tenth_system">Let's Build f1tenth_system</h2>
+<ol>
+<li><code>ln -s /home/ubm/repo/f1tenth_system/ /home/ubm/f1tenth_ws/src/</code></li>
+<li><code>cd /home/ubm/f1tenth_ws/src/</code></li>
+<li><code>git clone https://github.com/f1tenth/ackermann_mux.git</code></li>
+<li><code>cd /home/ubm/f1tenth_ws</code></li>
+<li><code>rosdep update --rosdistro="foxy"</code></li>
+<li><code>rosdep install --from-paths src -i -y</code></li>
+<li><code>colcon build</code></li>
+</ol>
+<h2 id="lets-install-vnc">Let's Install Vnc</h2>
+<ol>
+<li><code>sudo apt install Xvfb x11vnc lxsession</code></li>
+<li><code>sudo nano /etc/systemd/system/vnc.service</code></li>
+<li>Write inside the file:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[Unit]
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Description=Start Xvfb, LXDE, and x11vnc server
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>After=network.target graphical.target
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Wants=network.target graphical.target
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>[Service]
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Type=forking
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Environment=DISPLAY=:99
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>ExecStart=/bin/bash -c &quot;Xvfb :99 -screen 0 1024x768x24 &amp; echo $! &gt; /tmp/xvfb.pid; lxsession &amp; echo $! &gt; /tmp/lxsession.pid; x11vnc -display :99 -forever -nopw -xkb &amp; echo $! &gt; /tmp/x11vnc.pid&quot;
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>ExecStop=/bin/bash -c &quot;kill -9 $(cat /tmp/xvfb.pid) $(cat /tmp/lxsession.pid) $(cat /tmp/x11vnc.pid)&quot;
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>PIDFile=/tmp/xvfb.pid
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>Restart=always
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>User=ubm
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>WorkingDirectory=/home/ubm
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>TimeoutStopSec=10
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>[Install]
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>WantedBy=multi-user.target
+</code></pre></div></li>
+<li>
+<p><code>sudo systemctl daemon-reload</code></p>
+</li>
+<li>
+<p><code>sudo systemctl start vnc.service</code></p>
+</li>
+</ol>
+<h2 id="lets-install-jetsongpio">Let's Install JetsonGPIO</h2>
+<ol>
+<li><code>cd /home/ubm</code></li>
+<li><code>git clone https://github.com/pjueon/JetsonGPIO</code></li>
+<li><code>cd JetsonGPIO</code></li>
+<li><code>mkdir build &amp;&amp; cd build</code></li>
+<li><code>cmake ..</code></li>
+<li><code>sudo cmake --build . --target install</code></li>
+</ol>
+<h2 id="lets-install-sick_scan_xd">Let's Install sick_scan_xd</h2>
+<ol>
+<li><code>cd $HOME</code></li>
+<li><code>cd Software</code></li>
+<li><code>git clone https://github.com/SICKAG/libsick_ldmrs.git</code></li>
+<li><code>git clone -b master https://github.com/SICKAG/sick_scan_xd.git</code></li>
+<li><code>source /opt/ros/foxy/setup.bash</code></li>
+<li><code>ln -s /home/ubm/Software/libsick_ldmrs/ /home/ubm/f1tenth_ws/src/</code></li>
+<li><code>ln -s /home/ubm/Software/sick_scan_xd /home/ubm/f1tenth_ws/src/</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ubm@ubm-bilbo:~$ ls -l /home/ubm/f1tenth_ws/src/
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>total 0
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>lrwxrwxrwx 1 ubm ubm 33 nov 23 14:17 libsick_ldmrs -&gt; /home/ubm/Software/libsick_ldmrs/
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>lrwxrwxrwx 1 ubm ubm 31 nov 23 14:18 sick_scan_xd -&gt; /home/ubm/Software/sick_scan_xd
+</code></pre></div></li>
+</ol>
+<h2 id="lets-build-sick_scan_xd">Let's Build sick_scan_xd</h2>
+<ol>
+<li><code>cd ~/f1tenth_ws</code></li>
+<li><code>sudo apt install ros-foxy-diagnostic-updater</code></li>
+<li><code>src</code></li>
+<li><code>colcon build --packages-select libsick_ldmrs --event-handlers console_direct+</code></li>
+<li><code>src</code></li>
+<li><code>colcon build --packages-select sick_scan_xd --cmake-args " -DROS_VERSION=2" --event-handlers console_direct+</code></li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 © UniBo Motorsport
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

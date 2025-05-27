@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classCubicSpline2d" kind="class" language="C++" prot="public">
+    <compoundname>CubicSpline2d</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classCubicSpline2d_1a70120fcaef7a54fa99c9251ae03a4e97" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; CubicSpline2d::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <briefdescription>
+<para>Length parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="70" column="17" bodyfile="include/spline_and_polynomial.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCubicSpline2d_1a8216abd688863245b207a734f641cc09" prot="private" static="no" mutable="no">
+        <type><ref refid="classCubicSpline1d" kindref="compound">CubicSpline1d</ref></type>
+        <definition>CubicSpline1d CubicSpline2d::sx</definition>
+        <argsstring></argsstring>
+        <name>sx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="114" column="19" bodyfile="include/spline_and_polynomial.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCubicSpline2d_1acae4807ec573ea0c5e592281944556fb" prot="private" static="no" mutable="no">
+        <type><ref refid="classCubicSpline1d" kindref="compound">CubicSpline1d</ref></type>
+        <definition>CubicSpline1d CubicSpline2d::sy</definition>
+        <argsstring></argsstring>
+        <name>sy</name>
+        <briefdescription>
+<para>1D splines for x and y. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="114" column="22" bodyfile="include/spline_and_polynomial.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCubicSpline2d_1a9b4101279dab750c07f9eb0f4b004fd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CubicSpline2d::CubicSpline2d</definition>
+        <argsstring>()</argsstring>
+        <name>CubicSpline2d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor for <ref refid="classCubicSpline2d" kindref="compound">CubicSpline2d</ref>. Initializes an empty 2D spline. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="76" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline2d_1a1cc21ba7a0bf4f709b1a40f1396164ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CubicSpline2d::initialize</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;x, const std::vector&lt; float &gt; &amp;y)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the 2D spline with the given x and y coordinates. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of x coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of y coordinates. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="83" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline2d_1af5094f4d70f9885e6167e1063f52ddec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; CubicSpline2d::calc_position</definition>
+        <argsstring>(const float &amp;s)</argsstring>
+        <name>calc_position</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the (x, y) position at a given s along the spline. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arc length parameter. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pair of (x, y) position. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="91" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline2d_1a0e158aa00dff04336eaf6b0bf2850cb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float &gt;</type>
+        <definition>std::tuple&lt;float, float&gt; CubicSpline2d::calc_curvature_and_yaw</definition>
+        <argsstring>(const float &amp;s)</argsstring>
+        <name>calc_curvature_and_yaw</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates curvature and yaw (heading angle) at a given s. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arc length parameter. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple of (curvature, yaw angle). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="98" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline2d_1ab82f5e532219d5f7fb5d12b3ec647fee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float, float, float &gt;</type>
+        <definition>std::tuple&lt;float, float, float, float&gt; CubicSpline2d::calc_position_curvature_yaw</definition>
+        <argsstring>(const float &amp;s)</argsstring>
+        <name>calc_position_curvature_yaw</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates (x, y) position, curvature, and yaw angle at a given s. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arc length parameter. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple of (x, y, curvature, yaw). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="105" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classCubicSpline2d_1aeb2a38c920a75a387c8f8ade0e23fa10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; CubicSpline2d::get_s</definition>
+        <argsstring>() const</argsstring>
+        <name>get_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the computed arc lengths (s values) for the input points. <simplesect kind="return"><para>Vector of arc lengths. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="111" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classCubicSpline2d_1afb31194f4a979f6a0adc05b7349a84e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; CubicSpline2d::calc_s</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;x, const std::vector&lt; float &gt; &amp;y)</argsstring>
+        <name>calc_s</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the arc length parameter s for the input points. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of x coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of y coordinates. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of arc lengths. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="122" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/spline_and_polynomial.hpp" line="68" column="20" bodyfile="include/spline_and_polynomial.hpp" bodystart="68" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classCubicSpline2d_1a0e158aa00dff04336eaf6b0bf2850cb3" prot="public" virt="non-virtual"><scope>CubicSpline2d</scope><name>calc_curvature_and_yaw</name></member>
+      <member refid="classCubicSpline2d_1af5094f4d70f9885e6167e1063f52ddec" prot="public" virt="non-virtual"><scope>CubicSpline2d</scope><name>calc_position</name></member>
+      <member refid="classCubicSpline2d_1ab82f5e532219d5f7fb5d12b3ec647fee" prot="public" virt="non-virtual"><scope>CubicSpline2d</scope><name>calc_position_curvature_yaw</name></member>
+      <member refid="classCubicSpline2d_1afb31194f4a979f6a0adc05b7349a84e0" prot="private" virt="non-virtual"><scope>CubicSpline2d</scope><name>calc_s</name></member>
+      <member refid="classCubicSpline2d_1a9b4101279dab750c07f9eb0f4b004fd9" prot="public" virt="non-virtual"><scope>CubicSpline2d</scope><name>CubicSpline2d</name></member>
+      <member refid="classCubicSpline2d_1aeb2a38c920a75a387c8f8ade0e23fa10" prot="public" virt="non-virtual"><scope>CubicSpline2d</scope><name>get_s</name></member>
+      <member refid="classCubicSpline2d_1a1cc21ba7a0bf4f709b1a40f1396164ba" prot="public" virt="non-virtual"><scope>CubicSpline2d</scope><name>initialize</name></member>
+      <member refid="classCubicSpline2d_1a70120fcaef7a54fa99c9251ae03a4e97" prot="public" virt="non-virtual"><scope>CubicSpline2d</scope><name>s</name></member>
+      <member refid="classCubicSpline2d_1a8216abd688863245b207a734f641cc09" prot="private" virt="non-virtual"><scope>CubicSpline2d</scope><name>sx</name></member>
+      <member refid="classCubicSpline2d_1acae4807ec573ea0c5e592281944556fb" prot="private" virt="non-virtual"><scope>CubicSpline2d</scope><name>sy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

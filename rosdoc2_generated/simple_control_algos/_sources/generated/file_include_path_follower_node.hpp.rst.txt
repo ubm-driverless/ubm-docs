@@ -1,0 +1,91 @@
+
+.. _file_include_path_follower_node.hpp:
+
+File path_follower_node.hpp
+===========================
+
+|exhale_lsh| :ref:`Parent directory <dir_include>` (``include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+ROS2 node that implements the Pure Pursuit algorithm for controlling a vehicle along a raceline. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/path_follower_node.hpp``)
+-----------------------------------------------
+
+
+
+
+Detailed Description
+--------------------
+
+The :ref:`exhale_class_classPathFollowerNode` class is a ROS2 node that subscribes to odometry and pose messages, and publishes Ackermann drive commands to control a vehicle along a raceline. The node implements a PD cpntroller for steering or the stanley controller, and uses feedforward action for steering control. The node also supports dynamic parameter updates for tuning the controller gains and other parameters. 
+
+
+
+
+Includes
+--------
+
+
+- ``ackermann_msgs/msg/ackermann_drive_stamped.hpp``
+
+- ``cmath``
+
+- ``f1tenth_msgs/msg/lap_performance.hpp``
+
+- ``f1tenth_msgs/msg/lap_performance_stamped.hpp``
+
+- ``f1tenth_msgs/msg/raceline_stamped.hpp``
+
+- ``geometry_msgs/msg/point_stamped.hpp``
+
+- ``lap_performance.hpp`` (:ref:`file_include_lap_performance.hpp`)
+
+- ``memory``
+
+- ``nav_msgs/msg/odometry.hpp``
+
+- ``nav_msgs/msg/path.hpp``
+
+- ``raceline_utils.hpp``
+
+- ``rclcpp/rclcpp.hpp``
+
+- ``ros_utils.hpp`` (:ref:`file_include_ros_utils.hpp`)
+
+- ``std_msgs/msg/bool.hpp``
+
+- ``steering_controller.hpp`` (:ref:`file_include_steering_controller.hpp`)
+
+- ``string``
+
+- ``tf2/LinearMath/Quaternion.h``
+
+- ``tf2/utils.h``
+
+- ``tf2_geometry_msgs/tf2_geometry_msgs.h``
+
+- ``utils.hpp`` (:ref:`file_include_ros_utils.hpp`)
+
+- ``vector``
+
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classPathFollowerNode`
+

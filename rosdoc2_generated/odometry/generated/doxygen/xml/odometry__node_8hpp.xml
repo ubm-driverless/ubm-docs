@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="odometry__node_8hpp" kind="file" language="C++">
+    <compoundname>odometry_node.hpp</compoundname>
+    <includes refid="odometry_8hpp" local="yes">odometry/odometry.hpp</includes>
+    <includes local="no">ackermann_msgs/msg/ackermann_drive_stamped.hpp</includes>
+    <includes local="no">geometry_msgs/msg/transform_stamped.hpp</includes>
+    <includes local="no">nav_msgs/msg/odometry.hpp</includes>
+    <includes local="no">rclcpp/logging.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">std_msgs/msg/bool.hpp</includes>
+    <includes local="no">tf2/utils.h</includes>
+    <includes local="no">tf2_ros/transform_broadcaster.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">vesc_msgs/msg/vesc_imu_stamped.hpp</includes>
+    <includes local="no">vesc_msgs/msg/vesc_state_stamped.hpp</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>ackermann_msgs/msg/ackermann_drive_stamped.hpp</label>
+      </node>
+      <node id="7">
+        <label>nav_msgs/msg/odometry.hpp</label>
+      </node>
+      <node id="6">
+        <label>geometry_msgs/msg/transform_stamped.hpp</label>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="8">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="11">
+        <label>tf2/utils.h</label>
+      </node>
+      <node id="9">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="15">
+        <label>vesc_msgs/msg/vesc_state_stamped.hpp</label>
+      </node>
+      <node id="3">
+        <label>armadillo</label>
+      </node>
+      <node id="14">
+        <label>vesc_msgs/msg/vesc_imu_stamped.hpp</label>
+      </node>
+      <node id="10">
+        <label>std_msgs/msg/bool.hpp</label>
+      </node>
+      <node id="2">
+        <label>odometry/odometry.hpp</label>
+        <link refid="odometry_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>include/odometry/odometry_node.hpp</label>
+        <link refid="odometry__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>tf2_ros/transform_broadcaster.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classOdometryNode" prot="public">OdometryNode</innerclass>
+    <briefdescription>
+<para>Defines the <ref refid="classOdometryNode" kindref="compound">OdometryNode</ref> class for vehicle odometry reconstruction. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classOdometryNode" kindref="compound">OdometryNode</ref> class processes data from IMU and vehicle state sensors, applying a chosen reconstruction method. It publishes the computed odometry on a ROS2 topic. </para>
+    </detaileddescription>
+    <location file="include/odometry/odometry_node.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,946 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classPotentialPursuitNode" kind="class" language="C++" prot="public">
+    <compoundname>PotentialPursuitNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes local="no">potential_pursuit_node.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPotentialPursuitNode_1abea744e7f79aa7208adab4a2f777ad15" prot="private" static="no" mutable="no">
+        <type>rclcpp::Clock</type>
+        <definition>rclcpp::Clock PotentialPursuitNode::default_clock_</definition>
+        <argsstring></argsstring>
+        <name>default_clock_</name>
+        <briefdescription>
+<para>Default clock for throttled log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="49" column="19" bodyfile="include/potential_pursuit_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1abda6150f5ef2f8634bdf59fc9ea46b65" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotentialPursuitNode::send_drive_msg_</definition>
+        <argsstring></argsstring>
+        <name>send_drive_msg_</name>
+        <briefdescription>
+<para>Whether to publish drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="50" column="10" bodyfile="include/potential_pursuit_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a4e30be6593b87ced78cc5d008991b87f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotentialPursuitNode::visualize_markers_</definition>
+        <argsstring></argsstring>
+        <name>visualize_markers_</name>
+        <briefdescription>
+<para>Whether to publish visualization markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="51" column="10" bodyfile="include/potential_pursuit_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ac3c139cf940db359b8e0e237960a9ce9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotentialPursuitNode::include_global_minima_</definition>
+        <argsstring></argsstring>
+        <name>include_global_minima_</name>
+        <briefdescription>
+<para>Whether to include global minima in calculations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="52" column="10" bodyfile="include/potential_pursuit_node.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a13569edb362b5dcd1011edef8fe3700c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotentialPursuitNode::use_minima_near_attractive_</definition>
+        <argsstring></argsstring>
+        <name>use_minima_near_attractive_</name>
+        <briefdescription>
+<para>Whether to consider minima near the attractive point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="53" column="10" bodyfile="include/potential_pursuit_node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1acaf511f7e0910c6a3c90bb478a612877" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotentialPursuitNode::use_speed_distance_gains_</definition>
+        <argsstring></argsstring>
+        <name>use_speed_distance_gains_</name>
+        <briefdescription>
+<para>Enable speed adjustment based on distance and steering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="54" column="10" bodyfile="include/potential_pursuit_node.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a5bcbb8ec9b4b900261c1944c6d1be258" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PotentialPursuitNode::disable_print_timeout_</definition>
+        <argsstring></argsstring>
+        <name>disable_print_timeout_</name>
+        <briefdescription>
+<para>Timeout for disabling log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="55" column="9" bodyfile="include/potential_pursuit_node.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a78c9bcd83371af995745c50655edbeb6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PotentialPursuitNode::tdp_</definition>
+        <argsstring></argsstring>
+        <name>tdp_</name>
+        <briefdescription>
+<para>Time delay penalty for the path planner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="56" column="9" bodyfile="include/potential_pursuit_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ab20150a57eac1100268ef290a90c6cc6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::wb_</definition>
+        <argsstring></argsstring>
+        <name>wb_</name>
+        <briefdescription>
+<para>Vehicle wheelbase length (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="57" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ac62e795c4f084b707ac1b6b028f0a342" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::look_ahead_gain_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_gain_</name>
+        <briefdescription>
+<para>Gain for calculating look-ahead distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="58" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1acd442fa65c91bea098480d0d7ee21cd9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::min_look_ahead_dist_</definition>
+        <argsstring></argsstring>
+        <name>min_look_ahead_dist_</name>
+        <briefdescription>
+<para>Minimum look-ahead distance (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="59" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a0a04344d26caa05e998ebeebf3167cd2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::car_width_</definition>
+        <argsstring></argsstring>
+        <name>car_width_</name>
+        <briefdescription>
+<para>Width of the car. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="60" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ab0593c4039d702da517acf8a509490a8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::desired_fov_</definition>
+        <argsstring></argsstring>
+        <name>desired_fov_</name>
+        <briefdescription>
+<para>Desired field of view of the LiDAR [deg]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="61" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1aba3f91d27b74bc44a8f15d9c12f88bdf" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::hysteresis_</definition>
+        <argsstring></argsstring>
+        <name>hysteresis_</name>
+        <briefdescription>
+<para>Hysteresis value for obstacle threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="62" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1aa72fb80f4199a071b4e99d4b8263c1a1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::field_resolution_</definition>
+        <argsstring></argsstring>
+        <name>field_resolution_</name>
+        <briefdescription>
+<para>Resolution for the potential field. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="63" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a677b80b0b30c9274eb8eea3b361f3d1d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::attractive_power_</definition>
+        <argsstring></argsstring>
+        <name>attractive_power_</name>
+        <briefdescription>
+<para>Scaling factor for attractive potential. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="64" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1adca5d3ef1f8011ca38e9a074f02d7f9a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::max_distance_weight_</definition>
+        <argsstring></argsstring>
+        <name>max_distance_weight_</name>
+        <briefdescription>
+<para>Maximum weight for averaging the target steering with attractive index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="65" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1af4c3c77d2455ea5a100fb7b11f73ace8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::steering_gain_</definition>
+        <argsstring></argsstring>
+        <name>steering_gain_</name>
+        <briefdescription>
+<para>Gain factor for steering calculations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="66" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1af06680c45e4ab130bb951600843185a1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::max_speed_</definition>
+        <argsstring></argsstring>
+        <name>max_speed_</name>
+        <briefdescription>
+<para>Maximum speed of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="67" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a3ff2c5be90f94acd8218879bbea1ae54" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::min_speed_</definition>
+        <argsstring></argsstring>
+        <name>min_speed_</name>
+        <briefdescription>
+<para>Minimum speed of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="68" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a49b8dc2f19e9ff5193820373faa57329" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::max_steer_</definition>
+        <argsstring></argsstring>
+        <name>max_steer_</name>
+        <briefdescription>
+<para>Maximum steering angle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="69" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a6ec33a7f712a44b0e136d327b8556d2e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::obstacle_threshold_gain_</definition>
+        <argsstring></argsstring>
+        <name>obstacle_threshold_gain_</name>
+        <briefdescription>
+<para>Gain factor for obstacle threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="70" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ad6f64592f556037638758ba04f4c8ece" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::front_deg_</definition>
+        <argsstring></argsstring>
+        <name>front_deg_</name>
+        <briefdescription>
+<para>Angle in front of the car for speed adjustment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="71" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ab9025ac12410a35fda5ab4093d6b688e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::brake_gain_</definition>
+        <argsstring></argsstring>
+        <name>brake_gain_</name>
+        <briefdescription>
+<para>Gain factor for braking force. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="72" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a7f72c5d41f7122c5db60c2ca164716bc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::speed_distance_gain_</definition>
+        <argsstring></argsstring>
+        <name>speed_distance_gain_</name>
+        <briefdescription>
+<para>Gain factor for speed adjustment based on distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="73" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a66f3eccc20932ffbc4cd566fb4e950e8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PotentialPursuitNode::status_topic_</definition>
+        <argsstring></argsstring>
+        <name>status_topic_</name>
+        <briefdescription>
+<para>Topic for control status messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="74" column="17" bodyfile="include/potential_pursuit_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a814d9ac67c9e01dafe61849c6e98c8b0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PotentialPursuitNode::odom_topic_</definition>
+        <argsstring></argsstring>
+        <name>odom_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to odometry messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="75" column="17" bodyfile="include/potential_pursuit_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a5c52ed7cbfa8a14e3f143c60eeef752d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PotentialPursuitNode::pose_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to pose messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="76" column="17" bodyfile="include/potential_pursuit_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a6023fb87c9619cf2cfe589f1ee4dc2ff" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PotentialPursuitNode::drive_topic_</definition>
+        <argsstring></argsstring>
+        <name>drive_topic_</name>
+        <briefdescription>
+<para>Topic for publishing drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="77" column="17" bodyfile="include/potential_pursuit_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a9d1cddceb16e96d652eb260583c264e5" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PotentialPursuitNode::scan_topic_</definition>
+        <argsstring></argsstring>
+        <name>scan_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to laser scan data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="78" column="17" bodyfile="include/potential_pursuit_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ae0e19f562c78c64efc0b493b7058db70" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PotentialPursuitNode::raceline_file_</definition>
+        <argsstring></argsstring>
+        <name>raceline_file_</name>
+        <briefdescription>
+<para>File containing the raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="79" column="17" bodyfile="include/potential_pursuit_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a98df1a1c9aa0c5adbcc0dd6e6390b8a9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotentialPursuitNode::path_obtained</definition>
+        <argsstring></argsstring>
+        <name>path_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the raceline path has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="82" column="10" bodyfile="include/potential_pursuit_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a9b8ce42f880452ab81ad1a51571b17d3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotentialPursuitNode::speed_obtained</definition>
+        <argsstring></argsstring>
+        <name>speed_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current speed has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="83" column="10" bodyfile="include/potential_pursuit_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a5b966108ddc527618fc7f9f665bb84fc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotentialPursuitNode::pose_obtained</definition>
+        <argsstring></argsstring>
+        <name>pose_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current pose has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="84" column="10" bodyfile="include/potential_pursuit_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1afff05747141f5dd7519e212753c53d5c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PotentialPursuitNode::allow_processing</definition>
+        <argsstring></argsstring>
+        <name>allow_processing</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the pure pursuit algorithm is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="85" column="10" bodyfile="include/potential_pursuit_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a1a956c94697412c202700d158388fcb8" prot="private" static="no" mutable="no">
+        <type>Raceline</type>
+        <definition>Raceline PotentialPursuitNode::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+<para>Object representing the raceline path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="88" column="14" bodyfile="include/potential_pursuit_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a0d8edd87874425d187640eae7d76e10a" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose PotentialPursuitNode::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+<para>Current pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="91" column="30" bodyfile="include/potential_pursuit_node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ae23cb34d523ec9529d2d26a89a5cdc04" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose PotentialPursuitNode::odom_pose</definition>
+        <argsstring></argsstring>
+        <name>odom_pose</name>
+        <briefdescription>
+<para>Current odometry pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="92" column="30" bodyfile="include/potential_pursuit_node.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ac29d39a4a81042ab891be6f5735d5d3e" prot="private" static="no" mutable="no">
+        <type>std_msgs::msg::Header</type>
+        <definition>std_msgs::msg::Header PotentialPursuitNode::common_header</definition>
+        <argsstring></argsstring>
+        <name>common_header</name>
+        <briefdescription>
+<para>Common header for visualization messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="93" column="27" bodyfile="include/potential_pursuit_node.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a3eb4abf08c06770493af2a7abb25a287" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PotentialPursuitNode::current_speed</definition>
+        <argsstring></argsstring>
+        <name>current_speed</name>
+        <briefdescription>
+<para>Current speed of the vehicle (m/s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="94" column="11" bodyfile="include/potential_pursuit_node.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a58a08558cf9e15c659fb84ed110f8396" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr PotentialPursuitNode::odom_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>odom_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for odometry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="97" column="38" bodyfile="include/potential_pursuit_node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ac8c2733fd62eac7335f80bee36f07a9e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr PotentialPursuitNode::pose_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>pose_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="98" column="38" bodyfile="include/potential_pursuit_node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1af01e506acc2a2d8b710d03e7dc91ff49" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr PotentialPursuitNode::status_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>status_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pure pursuit status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="99" column="38" bodyfile="include/potential_pursuit_node.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1af55b785286fb93641a07b50dc1c0f167" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; sensor_msgs::msg::LaserScan &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;sensor_msgs::msg::LaserScan&gt;::SharedPtr PotentialPursuitNode::scan_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>scan_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for laser scan data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="100" column="38" bodyfile="include/potential_pursuit_node.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a9acf22f0cd03a44635e63798c4d988b4" prot="private" static="no" mutable="no">
+        <type>OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>OnSetParametersCallbackHandle::SharedPtr PotentialPursuitNode::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+<para>Handle for dynamic parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="101" column="46" bodyfile="include/potential_pursuit_node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a1ca26bf0d9dc28b6c60a9fa9a70047d3" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ackermann_msgs::msg::AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ackermann_msgs::msg::AckermannDriveStamped&gt;::SharedPtr PotentialPursuitNode::drive_publisher_</definition>
+        <argsstring></argsstring>
+        <name>drive_publisher_</name>
+        <briefdescription>
+<para>Publisher for drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="103" column="35" bodyfile="include/potential_pursuit_node.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1aabc701d1c46c11e0fb47922069f42df5" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr PotentialPursuitNode::look_ahead_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for look-ahead point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="104" column="35" bodyfile="include/potential_pursuit_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1ac17a629fc8da41aeaecaf11de1a82ae8" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr PotentialPursuitNode::car_nearest_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for nearest point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="105" column="35" bodyfile="include/potential_pursuit_node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPotentialPursuitNode_1a9d7419ab51395d854addccb44a7fa52e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Path&gt;::SharedPtr PotentialPursuitNode::raceline_publisher_</definition>
+        <argsstring></argsstring>
+        <name>raceline_publisher_</name>
+        <briefdescription>
+<para>Publisher for the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="106" column="35" bodyfile="include/potential_pursuit_node.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPotentialPursuitNode_1aa4546e8767896e2d49ecf20c1196032e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PotentialPursuitNode::PotentialPursuitNode</definition>
+        <argsstring>()</argsstring>
+        <name>PotentialPursuitNode</name>
+        <briefdescription>
+<para>Constructs the <ref refid="classPotentialPursuitNode" kindref="compound">PotentialPursuitNode</ref> object and initializes parameters, publishers, and subscribers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="45" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPotentialPursuitNode_1a67571c63e158b0fb033d17a8e3ced768" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult PotentialPursuitNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Handles parameter updates dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of parameter update operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="115" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classPotentialPursuitNode_1a5060526582fdeb4e1985353372cca4ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotentialPursuitNode::status_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr status_msg)</argsstring>
+        <name>status_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>status_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for the control status subscriber. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether to enable or disable processing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="122" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classPotentialPursuitNode_1a3f0bd0f9b50fc2f56cc2e50bbe9c4bb6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotentialPursuitNode::odom_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr odom_msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>odom_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle odometry updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message containing the current speed and pose. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="128" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classPotentialPursuitNode_1a4dae0d9de21b39256f3139aaf268496d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotentialPursuitNode::pose_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr pose_msg)</argsstring>
+        <name>pose_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>pose_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle pose updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message containing the current pose of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="134" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classPotentialPursuitNode_1aedb22f9fa24d020bf5b50f20d15aece2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PotentialPursuitNode::scan_callback</definition>
+        <argsstring>(const sensor_msgs::msg::LaserScan::SharedPtr scan_msg)</argsstring>
+        <name>scan_callback</name>
+        <param>
+          <type>const sensor_msgs::msg::LaserScan::SharedPtr</type>
+          <declname>scan_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback for processing incoming LaserScan messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scan_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LaserScan message containing obstacle data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_pursuit_node.hpp" line="141" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implements a potential field-based controller for autonomous navigation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classPotentialPursuitNode" kindref="compound">PotentialPursuitNode</ref> class subscribes to sensor data, processes the laser scan input using potential fields, and publishes Ackermann drive commands. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+      <node id="1">
+        <label>PotentialPursuitNode</label>
+        <link refid="classPotentialPursuitNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+      <node id="1">
+        <label>PotentialPursuitNode</label>
+        <link refid="classPotentialPursuitNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/potential_pursuit_node.hpp" line="40" column="47" bodyfile="include/potential_pursuit_node.hpp" bodystart="40" bodyend="143"/>
+    <listofallmembers>
+      <member refid="classPotentialPursuitNode_1afff05747141f5dd7519e212753c53d5c" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>allow_processing</name></member>
+      <member refid="classPotentialPursuitNode_1a677b80b0b30c9274eb8eea3b361f3d1d" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>attractive_power_</name></member>
+      <member refid="classPotentialPursuitNode_1ab9025ac12410a35fda5ab4093d6b688e" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>brake_gain_</name></member>
+      <member refid="classPotentialPursuitNode_1ac17a629fc8da41aeaecaf11de1a82ae8" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>car_nearest_point_publisher_</name></member>
+      <member refid="classPotentialPursuitNode_1a0a04344d26caa05e998ebeebf3167cd2" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>car_width_</name></member>
+      <member refid="classPotentialPursuitNode_1ac29d39a4a81042ab891be6f5735d5d3e" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>common_header</name></member>
+      <member refid="classPotentialPursuitNode_1a0d8edd87874425d187640eae7d76e10a" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>current_pose</name></member>
+      <member refid="classPotentialPursuitNode_1a3eb4abf08c06770493af2a7abb25a287" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>current_speed</name></member>
+      <member refid="classPotentialPursuitNode_1abea744e7f79aa7208adab4a2f777ad15" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>default_clock_</name></member>
+      <member refid="classPotentialPursuitNode_1ab0593c4039d702da517acf8a509490a8" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>desired_fov_</name></member>
+      <member refid="classPotentialPursuitNode_1a5bcbb8ec9b4b900261c1944c6d1be258" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>disable_print_timeout_</name></member>
+      <member refid="classPotentialPursuitNode_1a1ca26bf0d9dc28b6c60a9fa9a70047d3" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>drive_publisher_</name></member>
+      <member refid="classPotentialPursuitNode_1a6023fb87c9619cf2cfe589f1ee4dc2ff" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>drive_topic_</name></member>
+      <member refid="classPotentialPursuitNode_1aa72fb80f4199a071b4e99d4b8263c1a1" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>field_resolution_</name></member>
+      <member refid="classPotentialPursuitNode_1ad6f64592f556037638758ba04f4c8ece" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>front_deg_</name></member>
+      <member refid="classPotentialPursuitNode_1aba3f91d27b74bc44a8f15d9c12f88bdf" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>hysteresis_</name></member>
+      <member refid="classPotentialPursuitNode_1ac3c139cf940db359b8e0e237960a9ce9" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>include_global_minima_</name></member>
+      <member refid="classPotentialPursuitNode_1ac62e795c4f084b707ac1b6b028f0a342" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>look_ahead_gain_</name></member>
+      <member refid="classPotentialPursuitNode_1aabc701d1c46c11e0fb47922069f42df5" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>look_ahead_point_publisher_</name></member>
+      <member refid="classPotentialPursuitNode_1adca5d3ef1f8011ca38e9a074f02d7f9a" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>max_distance_weight_</name></member>
+      <member refid="classPotentialPursuitNode_1af06680c45e4ab130bb951600843185a1" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>max_speed_</name></member>
+      <member refid="classPotentialPursuitNode_1a49b8dc2f19e9ff5193820373faa57329" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>max_steer_</name></member>
+      <member refid="classPotentialPursuitNode_1acd442fa65c91bea098480d0d7ee21cd9" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>min_look_ahead_dist_</name></member>
+      <member refid="classPotentialPursuitNode_1a3ff2c5be90f94acd8218879bbea1ae54" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>min_speed_</name></member>
+      <member refid="classPotentialPursuitNode_1a6ec33a7f712a44b0e136d327b8556d2e" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>obstacle_threshold_gain_</name></member>
+      <member refid="classPotentialPursuitNode_1a3f0bd0f9b50fc2f56cc2e50bbe9c4bb6" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>odom_callback</name></member>
+      <member refid="classPotentialPursuitNode_1ae23cb34d523ec9529d2d26a89a5cdc04" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>odom_pose</name></member>
+      <member refid="classPotentialPursuitNode_1a58a08558cf9e15c659fb84ed110f8396" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>odom_subscriber_</name></member>
+      <member refid="classPotentialPursuitNode_1a814d9ac67c9e01dafe61849c6e98c8b0" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>odom_topic_</name></member>
+      <member refid="classPotentialPursuitNode_1a67571c63e158b0fb033d17a8e3ced768" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>params_callback</name></member>
+      <member refid="classPotentialPursuitNode_1a9acf22f0cd03a44635e63798c4d988b4" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>params_callback_handle_</name></member>
+      <member refid="classPotentialPursuitNode_1a1a956c94697412c202700d158388fcb8" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>path</name></member>
+      <member refid="classPotentialPursuitNode_1a98df1a1c9aa0c5adbcc0dd6e6390b8a9" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>path_obtained</name></member>
+      <member refid="classPotentialPursuitNode_1a4dae0d9de21b39256f3139aaf268496d" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>pose_callback</name></member>
+      <member refid="classPotentialPursuitNode_1a5b966108ddc527618fc7f9f665bb84fc" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>pose_obtained</name></member>
+      <member refid="classPotentialPursuitNode_1ac8c2733fd62eac7335f80bee36f07a9e" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>pose_subscriber_</name></member>
+      <member refid="classPotentialPursuitNode_1a5c52ed7cbfa8a14e3f143c60eeef752d" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>pose_topic_</name></member>
+      <member refid="classPotentialPursuitNode_1aa4546e8767896e2d49ecf20c1196032e" prot="public" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>PotentialPursuitNode</name></member>
+      <member refid="classPotentialPursuitNode_1ae0e19f562c78c64efc0b493b7058db70" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>raceline_file_</name></member>
+      <member refid="classPotentialPursuitNode_1a9d7419ab51395d854addccb44a7fa52e" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>raceline_publisher_</name></member>
+      <member refid="classPotentialPursuitNode_1aedb22f9fa24d020bf5b50f20d15aece2" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>scan_callback</name></member>
+      <member refid="classPotentialPursuitNode_1af55b785286fb93641a07b50dc1c0f167" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>scan_subscriber_</name></member>
+      <member refid="classPotentialPursuitNode_1a9d1cddceb16e96d652eb260583c264e5" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>scan_topic_</name></member>
+      <member refid="classPotentialPursuitNode_1abda6150f5ef2f8634bdf59fc9ea46b65" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>send_drive_msg_</name></member>
+      <member refid="classPotentialPursuitNode_1a7f72c5d41f7122c5db60c2ca164716bc" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>speed_distance_gain_</name></member>
+      <member refid="classPotentialPursuitNode_1a9b8ce42f880452ab81ad1a51571b17d3" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>speed_obtained</name></member>
+      <member refid="classPotentialPursuitNode_1a5060526582fdeb4e1985353372cca4ec" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>status_callback</name></member>
+      <member refid="classPotentialPursuitNode_1af01e506acc2a2d8b710d03e7dc91ff49" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>status_subscriber_</name></member>
+      <member refid="classPotentialPursuitNode_1a66f3eccc20932ffbc4cd566fb4e950e8" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>status_topic_</name></member>
+      <member refid="classPotentialPursuitNode_1af4c3c77d2455ea5a100fb7b11f73ace8" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>steering_gain_</name></member>
+      <member refid="classPotentialPursuitNode_1a78c9bcd83371af995745c50655edbeb6" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>tdp_</name></member>
+      <member refid="classPotentialPursuitNode_1a13569edb362b5dcd1011edef8fe3700c" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>use_minima_near_attractive_</name></member>
+      <member refid="classPotentialPursuitNode_1acaf511f7e0910c6a3c90bb478a612877" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>use_speed_distance_gains_</name></member>
+      <member refid="classPotentialPursuitNode_1a4e30be6593b87ced78cc5d008991b87f" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>visualize_markers_</name></member>
+      <member refid="classPotentialPursuitNode_1ab20150a57eac1100268ef290a90c6cc6" prot="private" virt="non-virtual"><scope>PotentialPursuitNode</scope><name>wb_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

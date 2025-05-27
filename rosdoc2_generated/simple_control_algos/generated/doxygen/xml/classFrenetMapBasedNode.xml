@@ -1,0 +1,1553 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classFrenetMapBasedNode" kind="class" language="C++" prot="public">
+    <compoundname>FrenetMapBasedNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a4cc16192abdd559e5f1db7e8032b05c0" prot="private" static="no" mutable="no">
+        <type>rclcpp::Clock</type>
+        <definition>rclcpp::Clock FrenetMapBasedNode::default_clock_</definition>
+        <argsstring></argsstring>
+        <name>default_clock_</name>
+        <briefdescription>
+<para>default clock for throttled log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="60" column="19" bodyfile="include/frenet_map_based_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1aa3127a42dc066846a9e6f746958df9d8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetMapBasedNode::send_drive_msg_</definition>
+        <argsstring></argsstring>
+        <name>send_drive_msg_</name>
+        <briefdescription>
+<para>whether to send drive messages to the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="61" column="10" bodyfile="include/frenet_map_based_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ad9d9a9c59d59876ea223e56ed6ff0954" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetMapBasedNode::visualize_markers_</definition>
+        <argsstring></argsstring>
+        <name>visualize_markers_</name>
+        <briefdescription>
+<para>whether to publish visualization markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="62" column="10" bodyfile="include/frenet_map_based_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1af94dda5f17ba0088164b988fbac48e22" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetMapBasedNode::use_basic_frenet_</definition>
+        <argsstring></argsstring>
+        <name>use_basic_frenet_</name>
+        <briefdescription>
+<para>whether to use basic Frenet path planning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="63" column="10" bodyfile="include/frenet_map_based_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a18aabccd58ffc05f66696c0495f99c7c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FrenetMapBasedNode::disable_print_timeout_</definition>
+        <argsstring></argsstring>
+        <name>disable_print_timeout_</name>
+        <briefdescription>
+<para>timeout for throttled log messages (milliseconds). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="65" column="9" bodyfile="include/frenet_map_based_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a1a5a57bed9802202887392bae1c49f5b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FrenetMapBasedNode::tdp_</definition>
+        <argsstring></argsstring>
+        <name>tdp_</name>
+        <briefdescription>
+<para>time delay penalty for the path planner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="66" column="9" bodyfile="include/frenet_map_based_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a181aa967be259b5b85dd4c4590f8db12" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FrenetMapBasedNode::lidar_downsample_factor_</definition>
+        <argsstring></argsstring>
+        <name>lidar_downsample_factor_</name>
+        <briefdescription>
+<para>factor for downsampling lidar scans. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="68" column="9" bodyfile="include/frenet_map_based_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1aeda37ec1191037c4693971aabd3128b2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FrenetMapBasedNode::erosion_size_</definition>
+        <argsstring></argsstring>
+        <name>erosion_size_</name>
+        <briefdescription>
+<para>size of the erosion kernel for map processing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="69" column="9" bodyfile="include/frenet_map_based_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a9fdd3c1b413516f9828f98b50b6ce5c7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::map_resolution_</definition>
+        <argsstring></argsstring>
+        <name>map_resolution_</name>
+        <briefdescription>
+<para>resolution of the map (m/pixel). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="70" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a4aec783a1cdcde8bc9363510e8c79ccb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::hysteresis_time_</definition>
+        <argsstring></argsstring>
+        <name>hysteresis_time_</name>
+        <briefdescription>
+<para>time for hysteresis in seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="71" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1af7850a0f97e8a8e4ffe3f530da4177a4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::wb_</definition>
+        <argsstring></argsstring>
+        <name>wb_</name>
+        <briefdescription>
+<para>vehicle wheelbase length (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="73" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a1112ca92590b10ad5745ceb25b470a07" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::kk_s_</definition>
+        <argsstring></argsstring>
+        <name>kk_s_</name>
+        <briefdescription>
+<para>pd controller proportional gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="74" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a8033d88d92d375876bab8ebf04037296" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::kd_s_</definition>
+        <argsstring></argsstring>
+        <name>kd_s_</name>
+        <briefdescription>
+<para>pd controller derivative gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="75" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a455c001adfd4601ce26a15e5b9b3358a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::look_ahead_gain_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_gain_</name>
+        <briefdescription>
+<para>gain for calculating look-ahead distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="76" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1afdd1ac945256275968f1ec536e31ff8a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::min_look_ahead_dist_</definition>
+        <argsstring></argsstring>
+        <name>min_look_ahead_dist_</name>
+        <briefdescription>
+<para>minimum look-ahead distance (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="77" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1aa658cbfdbaede3f7769dde7f3a3c1552" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::max_steer_</definition>
+        <argsstring></argsstring>
+        <name>max_steer_</name>
+        <briefdescription>
+<para>maximum steering angle (radians). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="78" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a48e6138641657da7af252378da9c615a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::max_road_width_</definition>
+        <argsstring></argsstring>
+        <name>max_road_width_</name>
+        <briefdescription>
+<para>maximum allowable road width (m). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="80" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1aac8316f14515c38304889cd39d556175" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::delta_road_width_</definition>
+        <argsstring></argsstring>
+        <name>delta_road_width_</name>
+        <briefdescription>
+<para>lateral step size for road width sampling (m). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="81" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a08b1ebb1a629705caac6ea2eb37f0777" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::path_point_distance_</definition>
+        <argsstring></argsstring>
+        <name>path_point_distance_</name>
+        <briefdescription>
+<para>time step for trajectory calculation (s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="82" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ac324400355663f02bdc039963a577058" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::max_path_lenght_</definition>
+        <argsstring></argsstring>
+        <name>max_path_lenght_</name>
+        <briefdescription>
+<para>maximum prediction time (s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="83" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1afeadfefb1b5e6c68acb2fddbc6463cc2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::min_path_lenght_</definition>
+        <argsstring></argsstring>
+        <name>min_path_lenght_</name>
+        <briefdescription>
+<para>minimum prediction time (s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="84" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a3056a5ef7b46a97944a516cbf811ead1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::delta_path_lenght_</definition>
+        <argsstring></argsstring>
+        <name>delta_path_lenght_</name>
+        <briefdescription>
+<para>longitudinal speed sampling step size (m/s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="85" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a937b6628fa7f7cb1d1de61684806cfe9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::path_fov_</definition>
+        <argsstring></argsstring>
+        <name>path_fov_</name>
+        <briefdescription>
+<para>field of view for path planning (degrees). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="86" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a3e46ce4f04fbe032f807658dec936d68" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::robot_radius_</definition>
+        <argsstring></argsstring>
+        <name>robot_radius_</name>
+        <briefdescription>
+<para>robot radius for collision checking (m). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="87" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a7e77c9717c94878d86cdc853f60f2a87" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::k_jerk_</definition>
+        <argsstring></argsstring>
+        <name>k_jerk_</name>
+        <briefdescription>
+<para>weight factor for jerk cost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="88" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a39e5e744ff514190d81d71dc654657b7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::k_lenght_</definition>
+        <argsstring></argsstring>
+        <name>k_lenght_</name>
+        <briefdescription>
+<para>weight factor for time cost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="89" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a8e633d8132b1f2521d5a29b122fe248a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::k_distance_</definition>
+        <argsstring></argsstring>
+        <name>k_distance_</name>
+        <briefdescription>
+<para>weight factor for distance cost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="90" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a2673c15ebd256ba6f41fbb6a1e5a8cc7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::desired_fov_</definition>
+        <argsstring></argsstring>
+        <name>desired_fov_</name>
+        <briefdescription>
+<para>field of view for lidar scan (degrees). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="91" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a61217ac31aa234ef1853c4006529c122" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::speed_decay_factor_</definition>
+        <argsstring></argsstring>
+        <name>speed_decay_factor_</name>
+        <briefdescription>
+<para>factor for reducing speed when no path is found. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="92" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ab327078eb3c0d9bdfd815ca7034fba97" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::min_speed_reduction_gain_</definition>
+        <argsstring></argsstring>
+        <name>min_speed_reduction_gain_</name>
+        <briefdescription>
+<para>minimum speed reduction factor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="93" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1af4df12df907c06e222213719c058f225" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::decay_last_d_factor_</definition>
+        <argsstring></argsstring>
+        <name>decay_last_d_factor_</name>
+        <briefdescription>
+<para>weight factor for the last lateral displacement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="94" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a3dca587343de4ba3c6cef811b64296f9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::weight_last_d_</definition>
+        <argsstring></argsstring>
+        <name>weight_last_d_</name>
+        <briefdescription>
+<para>weight factor for the last lateral displacement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="95" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a8b56696a25eb71086a912b466c51311d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::max_lap_statistics_</definition>
+        <argsstring></argsstring>
+        <name>max_lap_statistics_</name>
+        <briefdescription>
+<para>maximum number of lap statistics to store. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="96" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1aeafcc05c19b7cf2a8390dddc43b2d5bc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::starting_strip_</definition>
+        <argsstring></argsstring>
+        <name>starting_strip_</name>
+        <briefdescription>
+<para>Starting strip for the lap performance tracker in percentage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="97" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ab503dbb747af7957c000ceffc93ea146" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::look_ahead_point_topic_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the look-ahead point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="99" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ab710beee10898fbb5a7d68497abf1b0f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::car_nearest_point_topic_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the nearest point on the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="100" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1acdcaa8232ec804ecdba76e0fc1210743" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::frenet_path_topic_</definition>
+        <argsstring></argsstring>
+        <name>frenet_path_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the Frenet path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="101" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a843083ef96941c689712962174358257" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::status_topic_</definition>
+        <argsstring></argsstring>
+        <name>status_topic_</name>
+        <briefdescription>
+<para>Topic for control status messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="102" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a253ea61cacc0b0f12f6031bdba3ecd80" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::scan_topic_</definition>
+        <argsstring></argsstring>
+        <name>scan_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to laser scan data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="103" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a0da82e9ec08c93e71ba5c2c013002549" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::odom_topic_</definition>
+        <argsstring></argsstring>
+        <name>odom_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to odometry messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="104" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1aae8497aacab6c1302860cb55f9f50265" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::pose_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to pose messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="105" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1aeafce74c24177a5974f34ad1f72ab7c0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::drive_topic_</definition>
+        <argsstring></argsstring>
+        <name>drive_topic_</name>
+        <briefdescription>
+<para>Topic for publishing drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="106" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a32cf08a45070a3baac69251a5af52658" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::reset_lap_statistics_topic_</definition>
+        <argsstring></argsstring>
+        <name>reset_lap_statistics_topic_</name>
+        <briefdescription>
+<para>Topic for resetting lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="107" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a02096be8f1610927e9f688da47edd597" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::raceline_file_</definition>
+        <argsstring></argsstring>
+        <name>raceline_file_</name>
+        <briefdescription>
+<para>File containing the raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="108" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a52e55d7ca2f3d5111a5e203f4da8e597" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::map_filepath_</definition>
+        <argsstring></argsstring>
+        <name>map_filepath_</name>
+        <briefdescription>
+<para>Path to the raceline map file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="109" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a58a755e27814dd61d6cd5a275e72fa0f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::map_yamlpath_</definition>
+        <argsstring></argsstring>
+        <name>map_yamlpath_</name>
+        <briefdescription>
+<para>Path to the raceline map YAML file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="110" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a18531e12f4c2305667b23b9cc1a53425" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetMapBasedNode::path_obtained</definition>
+        <argsstring></argsstring>
+        <name>path_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the raceline path has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="113" column="10" bodyfile="include/frenet_map_based_node.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a1e3c487d3dec03d42a365de5d3abccc7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetMapBasedNode::speed_obtained</definition>
+        <argsstring></argsstring>
+        <name>speed_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current speed has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="114" column="10" bodyfile="include/frenet_map_based_node.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a63e893b0228d5a85b337078c9dc53bce" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetMapBasedNode::pose_obtained</definition>
+        <argsstring></argsstring>
+        <name>pose_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current pose has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="115" column="10" bodyfile="include/frenet_map_based_node.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a765c23212ef409934c45f6d56fd23f93" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetMapBasedNode::lidar_obtained</definition>
+        <argsstring></argsstring>
+        <name>lidar_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the lidar scan has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="116" column="10" bodyfile="include/frenet_map_based_node.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a967b17f587fadcec30a58504283cf39b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetMapBasedNode::allow_processing</definition>
+        <argsstring></argsstring>
+        <name>allow_processing</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the pure pursuit algorithm is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="117" column="10" bodyfile="include/frenet_map_based_node.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ad31b27bdada3664717b9e52a31500163" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; float, float &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;float, float&gt; &gt; FrenetMapBasedNode::lidar_coordinates</definition>
+        <argsstring></argsstring>
+        <name>lidar_coordinates</name>
+        <briefdescription>
+<para>Detected obstacles points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="120" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ae428b72784ac409f30809dcddaebc3b4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; float, float &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;float, float&gt; &gt; FrenetMapBasedNode::obstacles_coordinates</definition>
+        <argsstring></argsstring>
+        <name>obstacles_coordinates</name>
+        <briefdescription>
+<para>Detected obstacles points in the map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="121" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1aeb5ec546565eadee19a2c0eabe80664b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; float, float &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;float, float&gt; &gt; FrenetMapBasedNode::border_coordinates</definition>
+        <argsstring></argsstring>
+        <name>border_coordinates</name>
+        <briefdescription>
+<para>Coordinates of the map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="122" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a92dc1e802ff34c8079b2fb4f28ee3a9c" prot="private" static="no" mutable="no">
+        <type>Map</type>
+        <definition>Map FrenetMapBasedNode::map_object</definition>
+        <argsstring></argsstring>
+        <name>map_object</name>
+        <briefdescription>
+<para>Map object for detecting obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="124" column="9" bodyfile="include/frenet_map_based_node.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a5f8a219bdcca8355d7de860ab0a1acdc" prot="private" static="no" mutable="no">
+        <type>Raceline</type>
+        <definition>Raceline FrenetMapBasedNode::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+<para>Object representing the raceline path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="125" column="14" bodyfile="include/frenet_map_based_node.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a69aa2a19bb20c26553d78eeb1b41d78a" prot="private" static="no" mutable="no">
+        <type><ref refid="classSteeringController" kindref="compound">SteeringController</ref></type>
+        <definition>SteeringController FrenetMapBasedNode::steering_controller</definition>
+        <argsstring></argsstring>
+        <name>steering_controller</name>
+        <briefdescription>
+<para>PD steering controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="126" column="24" bodyfile="include/frenet_map_based_node.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ae76c6617aa6a759c6198875c7020bcfd" prot="private" static="no" mutable="no">
+        <type><ref refid="classCubicSpline2d" kindref="compound">CubicSpline2d</ref></type>
+        <definition>CubicSpline2d FrenetMapBasedNode::csp_reference</definition>
+        <argsstring></argsstring>
+        <name>csp_reference</name>
+        <briefdescription>
+<para>Cubic spline representing the reference path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="127" column="19" bodyfile="include/frenet_map_based_node.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1add9351d626d1b6b9cfc561f3ef41be6c" prot="private" static="no" mutable="no">
+        <type><ref refid="classFrenetOptimalTrajectory" kindref="compound">FrenetOptimalTrajectory</ref></type>
+        <definition>FrenetOptimalTrajectory FrenetMapBasedNode::frenet_path</definition>
+        <argsstring></argsstring>
+        <name>frenet_path</name>
+        <briefdescription>
+<para>Frenet optimal trajectory planner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="128" column="29" bodyfile="include/frenet_map_based_node.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ac509250563baebcec9eb6613e3a7096c" prot="private" static="no" mutable="no">
+        <type><ref refid="classLapPerformance" kindref="compound">LapPerformance</ref></type>
+        <definition>LapPerformance FrenetMapBasedNode::lap_performance</definition>
+        <argsstring></argsstring>
+        <name>lap_performance</name>
+        <briefdescription>
+<para>Object for measuring lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="129" column="20" bodyfile="include/frenet_map_based_node.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a02ff37eb39d39950e014f830176ae1aa" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose FrenetMapBasedNode::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+<para>Current pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="132" column="30" bodyfile="include/frenet_map_based_node.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a593001ffef214093efdbff9abff85491" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose FrenetMapBasedNode::odom_pose</definition>
+        <argsstring></argsstring>
+        <name>odom_pose</name>
+        <briefdescription>
+<para>Current odometry pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="133" column="30" bodyfile="include/frenet_map_based_node.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ab9d5e813b317f73ff5e31bceb9299025" prot="private" static="no" mutable="no">
+        <type>std_msgs::msg::Header</type>
+        <definition>std_msgs::msg::Header FrenetMapBasedNode::common_header</definition>
+        <argsstring></argsstring>
+        <name>common_header</name>
+        <briefdescription>
+<para>Common header for visualization messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="134" column="27" bodyfile="include/frenet_map_based_node.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a8d27fd65579e7fab7d601c1bf70125e4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetMapBasedNode::current_speed</definition>
+        <argsstring></argsstring>
+        <name>current_speed</name>
+        <briefdescription>
+<para>Current speed of the vehicle (m/s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="135" column="11" bodyfile="include/frenet_map_based_node.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a2eff937f4f6f49f74271444fec8493bb" prot="private" static="no" mutable="no">
+        <type>nav_msgs::msg::OccupancyGrid</type>
+        <definition>nav_msgs::msg::OccupancyGrid FrenetMapBasedNode::map</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <briefdescription>
+<para>Occupancy grid map for the vehicle&apos;s environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="137" column="34" bodyfile="include/frenet_map_based_node.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a3859bd19d20d9b01093794a8c77be0ad" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetMapBasedNode::current_algorithm</definition>
+        <argsstring></argsstring>
+        <name>current_algorithm</name>
+        <briefdescription>
+<para>Current algorithm being used for control. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="138" column="17" bodyfile="include/frenet_map_based_node.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a5dfd0141c747628809ec46b1ba7abecd" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetMapBasedNode::switch_countdown</definition>
+        <argsstring></argsstring>
+        <name>switch_countdown</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Flag to indicate if we are doing the countdown to switch algorithms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="139" column="10" bodyfile="include/frenet_map_based_node.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a51f2be8fc59003f0e8d22eb59bc308b9" prot="private" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point FrenetMapBasedNode::countdown_time</definition>
+        <argsstring></argsstring>
+        <name>countdown_time</name>
+        <briefdescription>
+<para>Start time for the countdown. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="140" column="43" bodyfile="include/frenet_map_based_node.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a360bc210b3f5deff4dc720206e886999" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr FrenetMapBasedNode::odom_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>odom_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for odometry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="143" column="38" bodyfile="include/frenet_map_based_node.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a1cd29685dedca44aee5ba94c408904cc" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr FrenetMapBasedNode::pose_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>pose_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="144" column="38" bodyfile="include/frenet_map_based_node.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a4b2a3ebff22e6e34683dd0ff79451ab3" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; f1tenth_msgs::msg::RacelineStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;f1tenth_msgs::msg::RacelineStamped&gt;::SharedPtr FrenetMapBasedNode::raceline_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>raceline_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="145" column="38" bodyfile="include/frenet_map_based_node.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1af0073373652fc0baa5164c48b6bedaba" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr FrenetMapBasedNode::status_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>status_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pure pursuit status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="146" column="38" bodyfile="include/frenet_map_based_node.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1ac7f7db8ef378af5fa6310a893d8f3053" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr FrenetMapBasedNode::reset_lap_statistics_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>reset_lap_statistics_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for resetting lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="147" column="38" bodyfile="include/frenet_map_based_node.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1abc49894d08f81371e15076b92bedc452" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; sensor_msgs::msg::LaserScan &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;sensor_msgs::msg::LaserScan&gt;::SharedPtr FrenetMapBasedNode::scan_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>scan_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for lidar scan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="148" column="38" bodyfile="include/frenet_map_based_node.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a9ba782e47ba8147d3ea4738790664147" prot="private" static="no" mutable="no">
+        <type>OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>OnSetParametersCallbackHandle::SharedPtr FrenetMapBasedNode::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+<para>Handle for dynamic parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="149" column="46" bodyfile="include/frenet_map_based_node.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a3dbc974ece223cd2d7637339e67959f9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ackermann_msgs::msg::AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ackermann_msgs::msg::AckermannDriveStamped&gt;::SharedPtr FrenetMapBasedNode::drive_publisher_</definition>
+        <argsstring></argsstring>
+        <name>drive_publisher_</name>
+        <briefdescription>
+<para>Publisher for control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="152" column="35" bodyfile="include/frenet_map_based_node.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a07c8b27a919754ffc9354e52384b7191" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr FrenetMapBasedNode::look_ahead_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for look-ahead point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="153" column="35" bodyfile="include/frenet_map_based_node.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a9f1a05ab8e34950504774ea4e61e91a0" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr FrenetMapBasedNode::car_nearest_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for nearest point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="154" column="35" bodyfile="include/frenet_map_based_node.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a6eb591d404c6f2afa05e3638893697b5" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr FrenetMapBasedNode::frenet_path_publisher_</definition>
+        <argsstring></argsstring>
+        <name>frenet_path_publisher_</name>
+        <briefdescription>
+<para>Publisher for the Frenet path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="155" column="35" bodyfile="include/frenet_map_based_node.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a50b1ec8a16a2d598a7d63c90847607a3" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Path&gt;::SharedPtr FrenetMapBasedNode::raceline_publisher_</definition>
+        <argsstring></argsstring>
+        <name>raceline_publisher_</name>
+        <briefdescription>
+<para>Publisher for the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="156" column="35" bodyfile="include/frenet_map_based_node.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a7c813e3a30e25ad9ecb62104a92e2666" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; f1tenth_msgs::msg::LapPerformanceStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;f1tenth_msgs::msg::LapPerformanceStamped&gt;::SharedPtr FrenetMapBasedNode::lap_performance_publisher_</definition>
+        <argsstring></argsstring>
+        <name>lap_performance_publisher_</name>
+        <briefdescription>
+<para>Publisher for lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="157" column="35" bodyfile="include/frenet_map_based_node.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetMapBasedNode_1a6cf955521a8bcfb1814d042182b06e77" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::OccupancyGrid &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::OccupancyGrid&gt;::SharedPtr FrenetMapBasedNode::map_publisher_</definition>
+        <argsstring></argsstring>
+        <name>map_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="158" column="35" bodyfile="include/frenet_map_based_node.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFrenetMapBasedNode_1a3db1ed9bcef5d5c70a5b0a79674655f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FrenetMapBasedNode::FrenetMapBasedNode</definition>
+        <argsstring>()</argsstring>
+        <name>FrenetMapBasedNode</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classFrenetOvertakingNode" kindref="compound">FrenetOvertakingNode</ref>. Initializes parameters, subscriptions, and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="56" column="6"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classFrenetMapBasedNode_1a20d7899093068aac1d775a8bd63a4f3a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult FrenetMapBasedNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Handles parameter updates dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of parameter update operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="167" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetMapBasedNode_1aeda85f24a8a3eb77941c0c7b01dfb0c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetMapBasedNode::status_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr status_msg)</argsstring>
+        <name>status_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>status_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle status updates for enabling/disabling pure pursuit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether pure pursuit is enabled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="173" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetMapBasedNode_1a5718428d053ad077cd4987ef49e94774" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetMapBasedNode::odom_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr odom_msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>odom_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle odometry updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message containing the current speed and pose. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="179" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetMapBasedNode_1a49c5554110f7424fbd87f04fc21dbea5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetMapBasedNode::pose_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr pose_msg)</argsstring>
+        <name>pose_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>pose_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle pose updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message containing the current pose of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="185" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetMapBasedNode_1a79329f77f5aac70cfba0c94e2a0a11e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetMapBasedNode::scan_callback</definition>
+        <argsstring>(const sensor_msgs::msg::LaserScan::SharedPtr scan_msg)</argsstring>
+        <name>scan_callback</name>
+        <param>
+          <type>const sensor_msgs::msg::LaserScan::SharedPtr</type>
+          <declname>scan_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle scan updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scan_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LaserScan message containing the lidar scan data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="191" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetMapBasedNode_1a02ce9e8921f14f6adf80c84fee3f5160" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetMapBasedNode::reset_lap_statistics_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr reset_msg)</argsstring>
+        <name>reset_lap_statistics_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>reset_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to reset lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether to reset lap statistics. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="197" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetMapBasedNode_1aed11085db78be22dbf07af0a9f8f687d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetMapBasedNode::switch_algorithm</definition>
+        <argsstring>(const int &amp;obstacle_size)</argsstring>
+        <name>switch_algorithm</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>obstacle_size</declname>
+        </param>
+        <briefdescription>
+<para>Switches between Frenet Path and Pure Pursuit algorithms based on obstacle detection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obstacle_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of detected obstacles. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="203" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetMapBasedNode_1ac320ff5518543edc6704355b6cf5a3f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetMapBasedNode::visualize_best_path</definition>
+        <argsstring>(std_msgs::msg::Header common_header, const FrenetPath &amp;best_path)</argsstring>
+        <name>visualize_best_path</name>
+        <param>
+          <type>std_msgs::msg::Header</type>
+          <declname>common_header</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &amp;</type>
+          <declname>best_path</declname>
+        </param>
+        <briefdescription>
+<para>Visualizes the best path using markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>common_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Common header for the visualization messages. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>best_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Best Frenet path to visualize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="210" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetMapBasedNode_1a455bf9b1b35171a5d2ee8cc834ad08fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetMapBasedNode::control_loop</definition>
+        <argsstring>()</argsstring>
+        <name>control_loop</name>
+        <briefdescription>
+<para>Main control loop for the Pure Pursuit algorithm. Calculates target steering and speed, and sends control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_map_based_node.hpp" line="216" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FrenetMapBasedNode</label>
+        <link refid="classFrenetMapBasedNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FrenetMapBasedNode</label>
+        <link refid="classFrenetMapBasedNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/frenet_map_based_node.hpp" line="50" column="1" bodyfile="include/frenet_map_based_node.hpp" bodystart="49" bodyend="217"/>
+    <listofallmembers>
+      <member refid="classFrenetMapBasedNode_1a967b17f587fadcec30a58504283cf39b" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>allow_processing</name></member>
+      <member refid="classFrenetMapBasedNode_1aeb5ec546565eadee19a2c0eabe80664b" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>border_coordinates</name></member>
+      <member refid="classFrenetMapBasedNode_1a9f1a05ab8e34950504774ea4e61e91a0" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>car_nearest_point_publisher_</name></member>
+      <member refid="classFrenetMapBasedNode_1ab710beee10898fbb5a7d68497abf1b0f" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>car_nearest_point_topic_</name></member>
+      <member refid="classFrenetMapBasedNode_1ab9d5e813b317f73ff5e31bceb9299025" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>common_header</name></member>
+      <member refid="classFrenetMapBasedNode_1a455bf9b1b35171a5d2ee8cc834ad08fe" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>control_loop</name></member>
+      <member refid="classFrenetMapBasedNode_1a51f2be8fc59003f0e8d22eb59bc308b9" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>countdown_time</name></member>
+      <member refid="classFrenetMapBasedNode_1ae76c6617aa6a759c6198875c7020bcfd" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>csp_reference</name></member>
+      <member refid="classFrenetMapBasedNode_1a3859bd19d20d9b01093794a8c77be0ad" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>current_algorithm</name></member>
+      <member refid="classFrenetMapBasedNode_1a02ff37eb39d39950e014f830176ae1aa" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>current_pose</name></member>
+      <member refid="classFrenetMapBasedNode_1a8d27fd65579e7fab7d601c1bf70125e4" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>current_speed</name></member>
+      <member refid="classFrenetMapBasedNode_1af4df12df907c06e222213719c058f225" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>decay_last_d_factor_</name></member>
+      <member refid="classFrenetMapBasedNode_1a4cc16192abdd559e5f1db7e8032b05c0" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>default_clock_</name></member>
+      <member refid="classFrenetMapBasedNode_1a3056a5ef7b46a97944a516cbf811ead1" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>delta_path_lenght_</name></member>
+      <member refid="classFrenetMapBasedNode_1aac8316f14515c38304889cd39d556175" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>delta_road_width_</name></member>
+      <member refid="classFrenetMapBasedNode_1a2673c15ebd256ba6f41fbb6a1e5a8cc7" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>desired_fov_</name></member>
+      <member refid="classFrenetMapBasedNode_1a18aabccd58ffc05f66696c0495f99c7c" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>disable_print_timeout_</name></member>
+      <member refid="classFrenetMapBasedNode_1a3dbc974ece223cd2d7637339e67959f9" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>drive_publisher_</name></member>
+      <member refid="classFrenetMapBasedNode_1aeafce74c24177a5974f34ad1f72ab7c0" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>drive_topic_</name></member>
+      <member refid="classFrenetMapBasedNode_1aeda37ec1191037c4693971aabd3128b2" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>erosion_size_</name></member>
+      <member refid="classFrenetMapBasedNode_1add9351d626d1b6b9cfc561f3ef41be6c" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>frenet_path</name></member>
+      <member refid="classFrenetMapBasedNode_1a6eb591d404c6f2afa05e3638893697b5" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>frenet_path_publisher_</name></member>
+      <member refid="classFrenetMapBasedNode_1acdcaa8232ec804ecdba76e0fc1210743" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>frenet_path_topic_</name></member>
+      <member refid="classFrenetMapBasedNode_1a3db1ed9bcef5d5c70a5b0a79674655f6" prot="public" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>FrenetMapBasedNode</name></member>
+      <member refid="classFrenetMapBasedNode_1a4aec783a1cdcde8bc9363510e8c79ccb" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>hysteresis_time_</name></member>
+      <member refid="classFrenetMapBasedNode_1a8e633d8132b1f2521d5a29b122fe248a" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>k_distance_</name></member>
+      <member refid="classFrenetMapBasedNode_1a7e77c9717c94878d86cdc853f60f2a87" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>k_jerk_</name></member>
+      <member refid="classFrenetMapBasedNode_1a39e5e744ff514190d81d71dc654657b7" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>k_lenght_</name></member>
+      <member refid="classFrenetMapBasedNode_1a8033d88d92d375876bab8ebf04037296" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>kd_s_</name></member>
+      <member refid="classFrenetMapBasedNode_1a1112ca92590b10ad5745ceb25b470a07" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>kk_s_</name></member>
+      <member refid="classFrenetMapBasedNode_1ac509250563baebcec9eb6613e3a7096c" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>lap_performance</name></member>
+      <member refid="classFrenetMapBasedNode_1a7c813e3a30e25ad9ecb62104a92e2666" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>lap_performance_publisher_</name></member>
+      <member refid="classFrenetMapBasedNode_1ad31b27bdada3664717b9e52a31500163" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>lidar_coordinates</name></member>
+      <member refid="classFrenetMapBasedNode_1a181aa967be259b5b85dd4c4590f8db12" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>lidar_downsample_factor_</name></member>
+      <member refid="classFrenetMapBasedNode_1a765c23212ef409934c45f6d56fd23f93" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>lidar_obtained</name></member>
+      <member refid="classFrenetMapBasedNode_1a455c001adfd4601ce26a15e5b9b3358a" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>look_ahead_gain_</name></member>
+      <member refid="classFrenetMapBasedNode_1a07c8b27a919754ffc9354e52384b7191" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>look_ahead_point_publisher_</name></member>
+      <member refid="classFrenetMapBasedNode_1ab503dbb747af7957c000ceffc93ea146" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>look_ahead_point_topic_</name></member>
+      <member refid="classFrenetMapBasedNode_1a2eff937f4f6f49f74271444fec8493bb" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>map</name></member>
+      <member refid="classFrenetMapBasedNode_1a52e55d7ca2f3d5111a5e203f4da8e597" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>map_filepath_</name></member>
+      <member refid="classFrenetMapBasedNode_1a92dc1e802ff34c8079b2fb4f28ee3a9c" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>map_object</name></member>
+      <member refid="classFrenetMapBasedNode_1a6cf955521a8bcfb1814d042182b06e77" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>map_publisher_</name></member>
+      <member refid="classFrenetMapBasedNode_1a9fdd3c1b413516f9828f98b50b6ce5c7" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>map_resolution_</name></member>
+      <member refid="classFrenetMapBasedNode_1a58a755e27814dd61d6cd5a275e72fa0f" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>map_yamlpath_</name></member>
+      <member refid="classFrenetMapBasedNode_1a8b56696a25eb71086a912b466c51311d" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>max_lap_statistics_</name></member>
+      <member refid="classFrenetMapBasedNode_1ac324400355663f02bdc039963a577058" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>max_path_lenght_</name></member>
+      <member refid="classFrenetMapBasedNode_1a48e6138641657da7af252378da9c615a" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>max_road_width_</name></member>
+      <member refid="classFrenetMapBasedNode_1aa658cbfdbaede3f7769dde7f3a3c1552" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>max_steer_</name></member>
+      <member refid="classFrenetMapBasedNode_1afdd1ac945256275968f1ec536e31ff8a" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>min_look_ahead_dist_</name></member>
+      <member refid="classFrenetMapBasedNode_1afeadfefb1b5e6c68acb2fddbc6463cc2" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>min_path_lenght_</name></member>
+      <member refid="classFrenetMapBasedNode_1ab327078eb3c0d9bdfd815ca7034fba97" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>min_speed_reduction_gain_</name></member>
+      <member refid="classFrenetMapBasedNode_1ae428b72784ac409f30809dcddaebc3b4" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>obstacles_coordinates</name></member>
+      <member refid="classFrenetMapBasedNode_1a5718428d053ad077cd4987ef49e94774" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>odom_callback</name></member>
+      <member refid="classFrenetMapBasedNode_1a593001ffef214093efdbff9abff85491" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>odom_pose</name></member>
+      <member refid="classFrenetMapBasedNode_1a360bc210b3f5deff4dc720206e886999" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>odom_subscriber_</name></member>
+      <member refid="classFrenetMapBasedNode_1a0da82e9ec08c93e71ba5c2c013002549" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>odom_topic_</name></member>
+      <member refid="classFrenetMapBasedNode_1a20d7899093068aac1d775a8bd63a4f3a" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>params_callback</name></member>
+      <member refid="classFrenetMapBasedNode_1a9ba782e47ba8147d3ea4738790664147" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>params_callback_handle_</name></member>
+      <member refid="classFrenetMapBasedNode_1a5f8a219bdcca8355d7de860ab0a1acdc" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>path</name></member>
+      <member refid="classFrenetMapBasedNode_1a937b6628fa7f7cb1d1de61684806cfe9" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>path_fov_</name></member>
+      <member refid="classFrenetMapBasedNode_1a18531e12f4c2305667b23b9cc1a53425" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>path_obtained</name></member>
+      <member refid="classFrenetMapBasedNode_1a08b1ebb1a629705caac6ea2eb37f0777" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>path_point_distance_</name></member>
+      <member refid="classFrenetMapBasedNode_1a49c5554110f7424fbd87f04fc21dbea5" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>pose_callback</name></member>
+      <member refid="classFrenetMapBasedNode_1a63e893b0228d5a85b337078c9dc53bce" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>pose_obtained</name></member>
+      <member refid="classFrenetMapBasedNode_1a1cd29685dedca44aee5ba94c408904cc" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>pose_subscriber_</name></member>
+      <member refid="classFrenetMapBasedNode_1aae8497aacab6c1302860cb55f9f50265" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>pose_topic_</name></member>
+      <member refid="classFrenetMapBasedNode_1a02096be8f1610927e9f688da47edd597" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>raceline_file_</name></member>
+      <member refid="classFrenetMapBasedNode_1a50b1ec8a16a2d598a7d63c90847607a3" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>raceline_publisher_</name></member>
+      <member refid="classFrenetMapBasedNode_1a4b2a3ebff22e6e34683dd0ff79451ab3" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>raceline_subscriber_</name></member>
+      <member refid="classFrenetMapBasedNode_1a02ce9e8921f14f6adf80c84fee3f5160" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>reset_lap_statistics_callback</name></member>
+      <member refid="classFrenetMapBasedNode_1ac7f7db8ef378af5fa6310a893d8f3053" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>reset_lap_statistics_subscriber_</name></member>
+      <member refid="classFrenetMapBasedNode_1a32cf08a45070a3baac69251a5af52658" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>reset_lap_statistics_topic_</name></member>
+      <member refid="classFrenetMapBasedNode_1a3e46ce4f04fbe032f807658dec936d68" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>robot_radius_</name></member>
+      <member refid="classFrenetMapBasedNode_1a79329f77f5aac70cfba0c94e2a0a11e6" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>scan_callback</name></member>
+      <member refid="classFrenetMapBasedNode_1abc49894d08f81371e15076b92bedc452" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>scan_subscriber_</name></member>
+      <member refid="classFrenetMapBasedNode_1a253ea61cacc0b0f12f6031bdba3ecd80" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>scan_topic_</name></member>
+      <member refid="classFrenetMapBasedNode_1aa3127a42dc066846a9e6f746958df9d8" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>send_drive_msg_</name></member>
+      <member refid="classFrenetMapBasedNode_1a61217ac31aa234ef1853c4006529c122" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>speed_decay_factor_</name></member>
+      <member refid="classFrenetMapBasedNode_1a1e3c487d3dec03d42a365de5d3abccc7" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>speed_obtained</name></member>
+      <member refid="classFrenetMapBasedNode_1aeafcc05c19b7cf2a8390dddc43b2d5bc" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>starting_strip_</name></member>
+      <member refid="classFrenetMapBasedNode_1aeda85f24a8a3eb77941c0c7b01dfb0c7" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>status_callback</name></member>
+      <member refid="classFrenetMapBasedNode_1af0073373652fc0baa5164c48b6bedaba" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>status_subscriber_</name></member>
+      <member refid="classFrenetMapBasedNode_1a843083ef96941c689712962174358257" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>status_topic_</name></member>
+      <member refid="classFrenetMapBasedNode_1a69aa2a19bb20c26553d78eeb1b41d78a" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>steering_controller</name></member>
+      <member refid="classFrenetMapBasedNode_1aed11085db78be22dbf07af0a9f8f687d" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>switch_algorithm</name></member>
+      <member refid="classFrenetMapBasedNode_1a5dfd0141c747628809ec46b1ba7abecd" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>switch_countdown</name></member>
+      <member refid="classFrenetMapBasedNode_1a1a5a57bed9802202887392bae1c49f5b" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>tdp_</name></member>
+      <member refid="classFrenetMapBasedNode_1af94dda5f17ba0088164b988fbac48e22" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>use_basic_frenet_</name></member>
+      <member refid="classFrenetMapBasedNode_1ac320ff5518543edc6704355b6cf5a3f0" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>visualize_best_path</name></member>
+      <member refid="classFrenetMapBasedNode_1ad9d9a9c59d59876ea223e56ed6ff0954" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>visualize_markers_</name></member>
+      <member refid="classFrenetMapBasedNode_1af7850a0f97e8a8e4ffe3f530da4177a4" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>wb_</name></member>
+      <member refid="classFrenetMapBasedNode_1a3dca587343de4ba3c6cef811b64296f9" prot="private" virt="non-virtual"><scope>FrenetMapBasedNode</scope><name>weight_last_d_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="joystick__switch_8hpp" kind="file" language="C++">
+    <compoundname>joystick_switch.hpp</compoundname>
+    <includes local="yes">rclcpp/rclcpp.hpp</includes>
+    <includes local="yes">sensor_msgs/msg/joy.hpp</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>sensor_msgs/msg/joy.hpp</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/joystick_switch/joystick_switch.hpp</label>
+        <link refid="joystick__switch_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classJoystickSwitchNode" prot="public">JoystickSwitchNode</innerclass>
+    <briefdescription>
+<para>This header file defines the <ref refid="classJoystickSwitchNode" kindref="compound">JoystickSwitchNode</ref> class, which implements a ROS2 node for switching joystick control between the ego vehicle and the opponent vehicle. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides functionality for subscribing to joystick input, toggling between control topics based on a button press, and publishing the joystick commands to the appropriate topic. </para>
+    </detaileddescription>
+    <location file="include/joystick_switch/joystick_switch.hpp"/>
+  </compounddef>
+</doxygen>

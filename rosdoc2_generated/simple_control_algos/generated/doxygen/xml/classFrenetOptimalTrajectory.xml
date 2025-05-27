@@ -1,0 +1,1163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classFrenetOptimalTrajectory" kind="class" language="C++" prot="public">
+    <compoundname>FrenetOptimalTrajectory</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1af399b1e7226459f5e3996762bbf30973" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::max_road_width_ptr</definition>
+        <argsstring></argsstring>
+        <name>max_road_width_ptr</name>
+        <briefdescription>
+<para>pointer to the maximum allowable lateral road width </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="155" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1ac4fbf48853e668cab9c989657c5d6d5a" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::delta_road_width_ptr</definition>
+        <argsstring></argsstring>
+        <name>delta_road_width_ptr</name>
+        <briefdescription>
+<para>pointer to the lateral step size for width sampling </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="156" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1ad2c0506a9baef7f94baec9ae2895ab6f" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::path_point_distance_ptr</definition>
+        <argsstring></argsstring>
+        <name>path_point_distance_ptr</name>
+        <briefdescription>
+<para>pointer to the time step for trajectory calculation </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="157" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1a99fb2f5f456359e3d51c3870a9113ba5" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::max_path_lenght_ptr</definition>
+        <argsstring></argsstring>
+        <name>max_path_lenght_ptr</name>
+        <briefdescription>
+<para>pointer to the maximum prediction time </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="158" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1a9fe89249068f124168555540ca7c8414" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::min_path_lenght_ptr</definition>
+        <argsstring></argsstring>
+        <name>min_path_lenght_ptr</name>
+        <briefdescription>
+<para>pointer to the minimum prediction time </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="159" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1a89730abe1d0e740beaba534b6e1fc4bc" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::delta_path_lenght_ptr</definition>
+        <argsstring></argsstring>
+        <name>delta_path_lenght_ptr</name>
+        <briefdescription>
+<para>pointer to the longitudinal speed sampling step size </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="160" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1ae68c32c73353e5db12df2bdf6615e787" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::path_fov_ptr</definition>
+        <argsstring></argsstring>
+        <name>path_fov_ptr</name>
+        <briefdescription>
+<para>pointer to the field of view for path planning </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="161" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1a215faa96669a7915d329f404f3ce367a" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::robot_radius_ptr</definition>
+        <argsstring></argsstring>
+        <name>robot_radius_ptr</name>
+        <briefdescription>
+<para>pointer to the robot radius for collision checking </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="162" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1a771e91a86561d0655044dec126ca58c3" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::k_jerk_ptr</definition>
+        <argsstring></argsstring>
+        <name>k_jerk_ptr</name>
+        <briefdescription>
+<para>pointer to the weight factor for jerk cost </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="165" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1af02c2d19c4b359b4dcdb2226483fdcf1" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::k_lenght_ptr</definition>
+        <argsstring></argsstring>
+        <name>k_lenght_ptr</name>
+        <briefdescription>
+<para>pointer to the weight factor for time cost </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="166" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1a317a9717cfbf2e67127870d31dfab07a" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::k_distance_ptr</definition>
+        <argsstring></argsstring>
+        <name>k_distance_ptr</name>
+        <briefdescription>
+<para>pointer to the weight factor for distance cost </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="167" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1ae30b5a44d4e8be6415745a5445f54b56" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::min_look_ahead_ptr</definition>
+        <argsstring></argsstring>
+        <name>min_look_ahead_ptr</name>
+        <briefdescription>
+<para>pointer to the proportional gain to speed to compute look-ahead </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="170" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1a753eaf96b75264fcc392e382384dc051" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::look_ahead_gain_ptr</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_gain_ptr</name>
+        <briefdescription>
+<para>pointer to the fixed look ahead distance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="171" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1a6994273665822d6de587cad76e23cc03" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::speed_decay_factor_ptr</definition>
+        <argsstring></argsstring>
+        <name>speed_decay_factor_ptr</name>
+        <briefdescription>
+<para>pointer to the speed reduction for path not found </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="174" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1aeab6dfd2e5bd15a16e07fdd24ed8a1fb" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::min_speed_reduction_gain_ptr</definition>
+        <argsstring></argsstring>
+        <name>min_speed_reduction_gain_ptr</name>
+        <briefdescription>
+<para>pointer to the minimum speed reduction gain for path not found </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="175" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1af865b29e30817ff2e56c372451709960" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::decay_last_d_factor_ptr</definition>
+        <argsstring></argsstring>
+        <name>decay_last_d_factor_ptr</name>
+        <briefdescription>
+<para>pointer to the weight factor for the last lateral displacement </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="178" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1aa58f7509402657a31eaecfffad43b651" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* FrenetOptimalTrajectory::weight_last_d_ptr</definition>
+        <argsstring></argsstring>
+        <name>weight_last_d_ptr</name>
+        <briefdescription>
+<para>pointer to the weight factor for the last lateral displacement </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="179" column="17" bodyfile="include/frenet_overtaking.hpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1a704443198bf1b1524ba9a0f3e4253e5e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOptimalTrajectory::d_weight</definition>
+        <argsstring></argsstring>
+        <name>d_weight</name>
+        <briefdescription>
+<para>weight factor for lateral cost </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="182" column="11" bodyfile="include/frenet_overtaking.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOptimalTrajectory_1ac94ddbd212e26f845888824033e7831a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOptimalTrajectory::speed_reduction_gain</definition>
+        <argsstring></argsstring>
+        <name>speed_reduction_gain</name>
+        <briefdescription>
+<para>Speed reduction factor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="183" column="11" bodyfile="include/frenet_overtaking.hpp" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1ac538350177a7a0b3acfa1f53f97239ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FrenetOptimalTrajectory::FrenetOptimalTrajectory</definition>
+        <argsstring>()</argsstring>
+        <name>FrenetOptimalTrajectory</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classFrenetOptimalTrajectory" kindref="compound">FrenetOptimalTrajectory</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="41" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1aa6cbb7d1268133ad062430c1e0e77334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOptimalTrajectory::initialize</definition>
+        <argsstring>(const float &amp;max_road_width, const float &amp;delta_road_width, const float &amp;path_point_distance, const float &amp;max_path_lenght, const float &amp;min_path_lenght, const float &amp;delta_path_lenght, const float &amp;path_fov, const float &amp;robot_radius, const float &amp;k_jerk, const float &amp;k_lenght, const float &amp;k_distance, const float &amp;min_look_ahead, const float &amp;look_ahead_gain, const float &amp;speed_decay_factor, const float &amp;min_speed_reduction_gain, const float &amp;decay_last_d_factor, const float &amp;weight_last_d)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>max_road_width</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>delta_road_width</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>path_point_distance</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>max_path_lenght</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>min_path_lenght</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>delta_path_lenght</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>path_fov</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>robot_radius</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>k_jerk</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>k_lenght</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>k_distance</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>min_look_ahead</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>look_ahead_gain</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>speed_decay_factor</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>min_speed_reduction_gain</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>decay_last_d_factor</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>weight_last_d</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="classFrenetOptimalTrajectory" kindref="compound">FrenetOptimalTrajectory</ref> class. Initializes parameters for calculating the optimal trajectory in Frenet coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_road_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum width of the road for lateral movement. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta_road_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lateral step size for road width sampling. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path_point_distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time step for trajectory generation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_path_lenght</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum prediction time. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_path_lenght</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum prediction time. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta_path_lenght</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Longitudinal speed step size for sampling. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Field of view for path planning. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>robot_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Radius of the robot for collision checking. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k_jerk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight factor for jerk cost. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k_lenght</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight factor for time cost. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k_distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight factor for distance cost. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_look_ahead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum look-ahead distance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>look_ahead_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Proportional gain to speed for look-ahead. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>speed_decay_factor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Speed decay factor for path not found. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_speed_reduction_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum speed reduction gain for path not found. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>decay_last_d_factor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight factor for the last lateral displacement. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>weight_last_d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight factor for the last lateral displacement. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desired_path_fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired field of view for the path in degrees. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1a73852b57b7cb27b2057bb39c20fab623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref>, float, float &gt;</type>
+        <definition>std::tuple&lt;FrenetPath, float, float&gt; FrenetOptimalTrajectory::plan</definition>
+        <argsstring>(CubicSpline2d &amp;csp, const float &amp;s_start, const float &amp;c_speed, const float &amp;current_d, const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;ob)</argsstring>
+        <name>plan</name>
+        <param>
+          <type><ref refid="classCubicSpline2d" kindref="compound">CubicSpline2d</ref> &amp;</type>
+          <declname>csp</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>s_start</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>c_speed</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>current_d</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;</type>
+          <declname>ob</declname>
+        </param>
+        <briefdescription>
+<para>Plans the optimal Frenet path for overtaking. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>csp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CubicSpline instance representing the reference path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial longitudinal position on the path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current speed of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current_d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial lateral displacement from the reference path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of obstacles as pair (x, y) in global coordinates of lidar points</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple containing the optimal Frenet path and x and y position of target point. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="95" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1a81b51c30cbe420a6aa6b850f741437f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref>, float, float &gt;</type>
+        <definition>std::tuple&lt;FrenetPath, float, float&gt; FrenetOptimalTrajectory::plan_map_based</definition>
+        <argsstring>(CubicSpline2d &amp;csp, const Map &amp;map_object, const float &amp;s_start, const float &amp;c_speed, const float &amp;current_d, const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;ob)</argsstring>
+        <name>plan_map_based</name>
+        <param>
+          <type><ref refid="classCubicSpline2d" kindref="compound">CubicSpline2d</ref> &amp;</type>
+          <declname>csp</declname>
+        </param>
+        <param>
+          <type>const Map &amp;</type>
+          <declname>map_object</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>s_start</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>c_speed</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>current_d</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;</type>
+          <declname>ob</declname>
+        </param>
+        <briefdescription>
+<para>Plans the optimal Frenet path for overtaking. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>csp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CubicSpline instance representing the reference path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map_object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map object for detecting walls and obstacles. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial longitudinal position on the path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current speed of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current_d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial lateral displacement from the reference path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of obstacles as pair (x, y) in global coordinates of obstacles</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple containing the optimal Frenet path and x and y position of target point. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="113" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1a08565dfe4343274bf9cb6d1c46f16d26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref>, float, float &gt;</type>
+        <definition>std::tuple&lt;FrenetPath, float, float&gt; FrenetOptimalTrajectory::plan_detector</definition>
+        <argsstring>(CubicSpline2d &amp;csp, const float &amp;s_start, const float &amp;c_speed, const float &amp;current_d, const std::vector&lt; float &gt; &amp;right_border, const std::vector&lt; float &gt; &amp;left_border, const std::vector&lt; float &gt; &amp;s_spline, const std::vector&lt; std::tuple&lt; float, float, float &gt;&gt; &amp;ob)</argsstring>
+        <name>plan_detector</name>
+        <param>
+          <type><ref refid="classCubicSpline2d" kindref="compound">CubicSpline2d</ref> &amp;</type>
+          <declname>csp</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>s_start</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>c_speed</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>current_d</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>right_border</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>left_border</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>s_spline</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::tuple&lt; float, float, float &gt;&gt; &amp;</type>
+          <declname>ob</declname>
+        </param>
+        <briefdescription>
+<para>Plans the optimal Frenet path for overtaking considering the road borders and the detected obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>csp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CubicSpline instance representing the reference path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial longitudinal position on the path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current speed of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current_d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial lateral displacement from the reference path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_border</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right border of the road. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left_border</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left border of the road. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s_spline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Longitudinal positions of the reference path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of obstacles as tuples (x, y, radius) in global coordinates. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="133" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1ac70f789e1575bc87770d5411ab711aef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float FrenetOptimalTrajectory::get_speed_reduction_gain</definition>
+        <argsstring>() const</argsstring>
+        <name>get_speed_reduction_gain</name>
+        <briefdescription>
+<para>Returns the speed reduction gain for the path not found. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Speed reduction gain. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="147" column="18" bodyfile="include/frenet_overtaking.hpp" bodystart="147" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1ae5a5134c5e166f135dee1ebdd4071a59" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOptimalTrajectory::calc_frenet_paths</definition>
+        <argsstring>(const float &amp;current_d, const float &amp;s_start, std::vector&lt; FrenetPath &gt; &amp;fplist)</argsstring>
+        <name>calc_frenet_paths</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>current_d</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>s_start</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &gt; &amp;</type>
+          <declname>fplist</declname>
+        </param>
+        <briefdescription>
+<para>Calculate Frenet paths for lateral and longitudinal motion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current_d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial lateral displacement from the reference path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial longitudinal position on the path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fplist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of Frenet paths. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="192" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1a26fc4eddfaa284c1d3b68211d2a093ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structFrenetPath" kindref="compound">FrenetPath</ref></type>
+        <definition>FrenetPath FrenetOptimalTrajectory::calc_global_paths</definition>
+        <argsstring>(std::vector&lt; FrenetPath &gt; &amp;fplist, CubicSpline2d &amp;csp)</argsstring>
+        <name>calc_global_paths</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &gt; &amp;</type>
+          <declname>fplist</declname>
+        </param>
+        <param>
+          <type><ref refid="classCubicSpline2d" kindref="compound">CubicSpline2d</ref> &amp;</type>
+          <declname>csp</declname>
+        </param>
+        <briefdescription>
+<para>Calculate global paths in Frenet coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fplist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of Frenet paths, it will be modified to contain the global paths. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>csp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CubicSpline instance representing the reference path.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Frenet paths with lowest cost. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="202" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1aea43d3e6bd697ba7d0aac4496a160b38" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structFrenetPath" kindref="compound">FrenetPath</ref></type>
+        <definition>FrenetPath FrenetOptimalTrajectory::check_paths</definition>
+        <argsstring>(std::vector&lt; FrenetPath &gt; &amp;fplist, const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;ob) const</argsstring>
+        <name>check_paths</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &gt; &amp;</type>
+          <declname>fplist</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;</type>
+          <declname>ob</declname>
+        </param>
+        <briefdescription>
+<para>Check the Frenet paths for collision with obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fplist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of Frenet paths. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of obstacles as pair (x, y) in global coordinates.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Best Frenet path without collision. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="212" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1afbca1a333f2bcbdbad29eaccdc067ab5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; std::vector&lt; <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &gt;, <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &gt;</type>
+        <definition>std::tuple&lt;std::vector&lt;FrenetPath&gt;, FrenetPath&gt; FrenetOptimalTrajectory::check_path_borders</definition>
+        <argsstring>(std::vector&lt; FrenetPath &gt; &amp;fplist, const std::vector&lt; float &gt; &amp;right_border, const std::vector&lt; float &gt; &amp;left_border, const std::vector&lt; float &gt; &amp;s_spline) const</argsstring>
+        <name>check_path_borders</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &gt; &amp;</type>
+          <declname>fplist</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>right_border</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>left_border</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>s_spline</declname>
+        </param>
+        <briefdescription>
+<para>Check the Frenet paths for collision with road borders. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fplist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of Frenet paths. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_border</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right border of the road. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left_border</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left border of the road. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s_spline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Longitudinal positions of the reference path.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple containing the list of Frenet paths and the best path. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="224" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1a79fe5970c7dce3a0e6809af26689df72" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structFrenetPath" kindref="compound">FrenetPath</ref></type>
+        <definition>FrenetPath FrenetOptimalTrajectory::check_obstacles</definition>
+        <argsstring>(std::vector&lt; FrenetPath &gt; &amp;fplist, const std::vector&lt; std::tuple&lt; float, float, float &gt;&gt; &amp;ob) const</argsstring>
+        <name>check_obstacles</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &gt; &amp;</type>
+          <declname>fplist</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::tuple&lt; float, float, float &gt;&gt; &amp;</type>
+          <declname>ob</declname>
+        </param>
+        <briefdescription>
+<para>Check the Frenet paths for collision with detected obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fplist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of Frenet paths. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of obstacles as tuples (x, y, radius) in global coordinates.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Best Frenet path without collision. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="237" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOptimalTrajectory_1a91ef3be57e3b449e4b3d26930154c2a5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOptimalTrajectory::check_paths_map</definition>
+        <argsstring>(std::vector&lt; FrenetPath &gt; &amp;fplist, const Map &amp;map_object, const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;ob, FrenetPath &amp;best_path_collision_free) const</argsstring>
+        <name>check_paths_map</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &gt; &amp;</type>
+          <declname>fplist</declname>
+        </param>
+        <param>
+          <type>const Map &amp;</type>
+          <declname>map_object</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;</type>
+          <declname>ob</declname>
+        </param>
+        <param>
+          <type><ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &amp;</type>
+          <declname>best_path_collision_free</declname>
+        </param>
+        <briefdescription>
+<para>Check the Frenet paths for collision with map obstacles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fplist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of Frenet paths. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map_object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map object for detecting walls and obstacles. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of obstacles as tuples (x, y) in global coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>best_path_collision_free</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Best path without collision. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking.hpp" line="248" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/frenet_overtaking.hpp" line="35" column="30" bodyfile="include/frenet_overtaking.hpp" bodystart="35" bodyend="253"/>
+    <listofallmembers>
+      <member refid="classFrenetOptimalTrajectory_1ae5a5134c5e166f135dee1ebdd4071a59" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>calc_frenet_paths</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a26fc4eddfaa284c1d3b68211d2a093ed" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>calc_global_paths</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a79fe5970c7dce3a0e6809af26689df72" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>check_obstacles</name></member>
+      <member refid="classFrenetOptimalTrajectory_1afbca1a333f2bcbdbad29eaccdc067ab5" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>check_path_borders</name></member>
+      <member refid="classFrenetOptimalTrajectory_1aea43d3e6bd697ba7d0aac4496a160b38" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>check_paths</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a91ef3be57e3b449e4b3d26930154c2a5" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>check_paths_map</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a704443198bf1b1524ba9a0f3e4253e5e" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>d_weight</name></member>
+      <member refid="classFrenetOptimalTrajectory_1af865b29e30817ff2e56c372451709960" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>decay_last_d_factor_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a89730abe1d0e740beaba534b6e1fc4bc" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>delta_path_lenght_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1ac4fbf48853e668cab9c989657c5d6d5a" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>delta_road_width_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1ac538350177a7a0b3acfa1f53f97239ea" prot="public" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>FrenetOptimalTrajectory</name></member>
+      <member refid="classFrenetOptimalTrajectory_1ac70f789e1575bc87770d5411ab711aef" prot="public" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>get_speed_reduction_gain</name></member>
+      <member refid="classFrenetOptimalTrajectory_1aa6cbb7d1268133ad062430c1e0e77334" prot="public" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>initialize</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a317a9717cfbf2e67127870d31dfab07a" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>k_distance_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a771e91a86561d0655044dec126ca58c3" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>k_jerk_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1af02c2d19c4b359b4dcdb2226483fdcf1" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>k_lenght_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a753eaf96b75264fcc392e382384dc051" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>look_ahead_gain_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a99fb2f5f456359e3d51c3870a9113ba5" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>max_path_lenght_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1af399b1e7226459f5e3996762bbf30973" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>max_road_width_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1ae30b5a44d4e8be6415745a5445f54b56" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>min_look_ahead_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a9fe89249068f124168555540ca7c8414" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>min_path_lenght_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1aeab6dfd2e5bd15a16e07fdd24ed8a1fb" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>min_speed_reduction_gain_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1ae68c32c73353e5db12df2bdf6615e787" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>path_fov_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1ad2c0506a9baef7f94baec9ae2895ab6f" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>path_point_distance_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a73852b57b7cb27b2057bb39c20fab623" prot="public" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>plan</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a08565dfe4343274bf9cb6d1c46f16d26" prot="public" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>plan_detector</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a81b51c30cbe420a6aa6b850f741437f6" prot="public" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>plan_map_based</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a215faa96669a7915d329f404f3ce367a" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>robot_radius_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1a6994273665822d6de587cad76e23cc03" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>speed_decay_factor_ptr</name></member>
+      <member refid="classFrenetOptimalTrajectory_1ac94ddbd212e26f845888824033e7831a" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>speed_reduction_gain</name></member>
+      <member refid="classFrenetOptimalTrajectory_1aa58f7509402657a31eaecfffad43b651" prot="private" virt="non-virtual"><scope>FrenetOptimalTrajectory</scope><name>weight_last_d_ptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

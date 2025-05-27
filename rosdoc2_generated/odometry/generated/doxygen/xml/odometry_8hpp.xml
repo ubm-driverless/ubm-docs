@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="odometry_8hpp" kind="file" language="C++">
+    <compoundname>odometry.hpp</compoundname>
+    <includes local="no">armadillo</includes>
+    <includes local="no">cmath</includes>
+    <includedby refid="odometry__node_8hpp" local="yes">include/odometry/odometry_node.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="2">
+        <label>armadillo</label>
+      </node>
+      <node id="1">
+        <label>include/odometry/odometry.hpp</label>
+        <link refid="odometry_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/odometry/odometry.hpp</label>
+        <link refid="odometry_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/odometry/odometry_node.hpp</label>
+        <link refid="odometry__node_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structOdometryState" prot="public">OdometryState</innerclass>
+    <innerclass refid="classOdometry" prot="public">Odometry</innerclass>
+    <briefdescription>
+<para>Defines the <ref refid="classOdometry" kindref="compound">Odometry</ref> class that provides different odometry reconstruction methods. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class offers implementations for:<itemizedlist>
+<listitem><para>Euler integration</para>
+</listitem><listitem><para>Runge-Kutta 2nd and 4th order integration</para>
+</listitem><listitem><para>Kalman filtering for sensor fusion (TBD)</para>
+</listitem></itemizedlist>
+</para>
+<para>The class is independent of ROS and can be used with any framework. </para>
+    </detaileddescription>
+    <location file="include/odometry/odometry.hpp"/>
+  </compounddef>
+</doxygen>

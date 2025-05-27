@@ -1,0 +1,1625 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classFrenetOvertakingNode" kind="class" language="C++" prot="public">
+    <compoundname>FrenetOvertakingNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes local="no">frenet_overtaking_node_detector.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a9c4868c8e42721e988afb7a7a2efe113" prot="private" static="no" mutable="no">
+        <type>rclcpp::Clock</type>
+        <definition>rclcpp::Clock FrenetOvertakingNode::default_clock_</definition>
+        <argsstring></argsstring>
+        <name>default_clock_</name>
+        <briefdescription>
+<para>default clock for throttled log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="60" column="19" bodyfile="include/frenet_overtaking_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a1d9351cb9cd0b5a8a5d3a3032c03b5b1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetOvertakingNode::send_drive_msg_</definition>
+        <argsstring></argsstring>
+        <name>send_drive_msg_</name>
+        <briefdescription>
+<para>whether to send drive messages to the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="61" column="10" bodyfile="include/frenet_overtaking_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a8c862190172a4e0f87a8afc3e911347c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetOvertakingNode::visualize_markers_</definition>
+        <argsstring></argsstring>
+        <name>visualize_markers_</name>
+        <briefdescription>
+<para>whether to publish visualization markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="62" column="10" bodyfile="include/frenet_overtaking_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a252f39b4326463a64e49fc701654e6f0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FrenetOvertakingNode::disable_print_timeout_</definition>
+        <argsstring></argsstring>
+        <name>disable_print_timeout_</name>
+        <briefdescription>
+<para>timeout for throttled log messages (milliseconds). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="63" column="9" bodyfile="include/frenet_overtaking_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a28ec76aa0ba4afc6e41d8bba4c6e7b6f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FrenetOvertakingNode::tdp_</definition>
+        <argsstring></argsstring>
+        <name>tdp_</name>
+        <briefdescription>
+<para>time delay penalty for the path planner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="64" column="9" bodyfile="include/frenet_overtaking_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a656874fa95bd74c5332caaab69ab9073" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FrenetOvertakingNode::lidar_downsample_factor_</definition>
+        <argsstring></argsstring>
+        <name>lidar_downsample_factor_</name>
+        <briefdescription>
+<para>factor for downsampling lidar scans. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="65" column="9" bodyfile="include/frenet_overtaking_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a69c4f738b627e22cf6d91ed6bf44c503" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::wb_</definition>
+        <argsstring></argsstring>
+        <name>wb_</name>
+        <briefdescription>
+<para>vehicle wheelbase length (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="66" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ab451e2ec258be1f46c32ef9f651bdd1d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::kk_s_</definition>
+        <argsstring></argsstring>
+        <name>kk_s_</name>
+        <briefdescription>
+<para>pd controller proportional gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="67" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a806829ab14c5599de0e4425575706ed7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::kd_s_</definition>
+        <argsstring></argsstring>
+        <name>kd_s_</name>
+        <briefdescription>
+<para>pd controller derivative gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="68" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1afde501a5b129a155635c9be9137a893a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::look_ahead_gain_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_gain_</name>
+        <briefdescription>
+<para>gain for calculating look-ahead distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="69" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ac0a38f675df1bbf6b96c371bc1b327af" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::min_look_ahead_dist_</definition>
+        <argsstring></argsstring>
+        <name>min_look_ahead_dist_</name>
+        <briefdescription>
+<para>minimum look-ahead distance (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="70" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1af071e59fef9bd51a5b904516f55e6497" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::max_steer_</definition>
+        <argsstring></argsstring>
+        <name>max_steer_</name>
+        <briefdescription>
+<para>maximum steering angle (radians). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="71" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a3eac4653a6ddf7165ded1e5307d5e599" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::max_road_width_</definition>
+        <argsstring></argsstring>
+        <name>max_road_width_</name>
+        <briefdescription>
+<para>maximum allowable road width (m). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="73" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1adfe5dc4aa14dbd30cbdf94b1263eacb8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::delta_road_width_</definition>
+        <argsstring></argsstring>
+        <name>delta_road_width_</name>
+        <briefdescription>
+<para>lateral step size for road width sampling (m). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="74" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ae4ab900d40a5c26d13fc39b713b16675" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::path_point_distance_</definition>
+        <argsstring></argsstring>
+        <name>path_point_distance_</name>
+        <briefdescription>
+<para>time step for trajectory calculation (s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="75" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1aab4e3d7e4a49605fbdb8618b83aa4fc9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::max_path_lenght_</definition>
+        <argsstring></argsstring>
+        <name>max_path_lenght_</name>
+        <briefdescription>
+<para>maximum prediction time (s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="76" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1acc402089bdd866fc312e81a95a1c03f5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::min_path_lenght_</definition>
+        <argsstring></argsstring>
+        <name>min_path_lenght_</name>
+        <briefdescription>
+<para>minimum prediction time (s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="77" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a43b5f2bf499f681f4f664e8028f6b12a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::delta_path_lenght_</definition>
+        <argsstring></argsstring>
+        <name>delta_path_lenght_</name>
+        <briefdescription>
+<para>longitudinal speed sampling step size (m/s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="78" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1aef19e6d4492801b072ca87e672364201" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::path_fov_</definition>
+        <argsstring></argsstring>
+        <name>path_fov_</name>
+        <briefdescription>
+<para>field of view for path planning (degrees). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>field of view for path (degrees). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="79" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ae66e0f256b240125ba6ee0a315fd9367" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::robot_radius_</definition>
+        <argsstring></argsstring>
+        <name>robot_radius_</name>
+        <briefdescription>
+<para>robot radius for collision checking (m). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="80" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a5d8d8d0fdce89dfc1f4586125eef9e0d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::k_jerk_</definition>
+        <argsstring></argsstring>
+        <name>k_jerk_</name>
+        <briefdescription>
+<para>weight factor for jerk cost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="81" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a5b2d22d76131b311ac41b3eda5e362f8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::k_lenght_</definition>
+        <argsstring></argsstring>
+        <name>k_lenght_</name>
+        <briefdescription>
+<para>weight factor for time cost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="82" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a6ad86b5ab1a54bc3320752a0d10cf130" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::k_distance_</definition>
+        <argsstring></argsstring>
+        <name>k_distance_</name>
+        <briefdescription>
+<para>weight factor for distance cost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="83" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a22b4483a008291f631d0d40cf71b5a8b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::desired_fov_</definition>
+        <argsstring></argsstring>
+        <name>desired_fov_</name>
+        <briefdescription>
+<para>field of view for lidar scan (degrees). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="84" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a18d39135a0aecf093a2a883f6acb6ee3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::speed_decay_factor_</definition>
+        <argsstring></argsstring>
+        <name>speed_decay_factor_</name>
+        <briefdescription>
+<para>factor for reducing speed when no path is found. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="85" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1aef91e56fce172259eb456eaf688aaecb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::min_speed_reduction_gain_</definition>
+        <argsstring></argsstring>
+        <name>min_speed_reduction_gain_</name>
+        <briefdescription>
+<para>minimum speed reduction factor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="86" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1aa2cc2dd46c9362c52978ce70f8d3168c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::decay_last_d_factor_</definition>
+        <argsstring></argsstring>
+        <name>decay_last_d_factor_</name>
+        <briefdescription>
+<para>weight factor for the last lateral displacement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="87" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ad67ea6cad9a5997036a3065e578b730b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::weight_last_d_</definition>
+        <argsstring></argsstring>
+        <name>weight_last_d_</name>
+        <briefdescription>
+<para>weight factor for the last lateral displacement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="88" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a41ebc824e95b39c4aff23d90d3e41f80" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::max_lap_statistics_</definition>
+        <argsstring></argsstring>
+        <name>max_lap_statistics_</name>
+        <briefdescription>
+<para>maximum number of lap statistics to store. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="89" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a0b9356d1f6bc2fed25e7e422e317aedb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::starting_strip_</definition>
+        <argsstring></argsstring>
+        <name>starting_strip_</name>
+        <briefdescription>
+<para>Starting strip for the lap performance tracker in percentage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="90" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a0f57cd3ae3f50623e229116bcc884783" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::look_ahead_point_topic_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the look-ahead point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="92" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a043cab75641eaca6514e50cfb1b60c52" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::car_nearest_point_topic_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the nearest point on the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="93" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a931b02016ce2700aa9188b060c61feb2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::frenet_path_topic_</definition>
+        <argsstring></argsstring>
+        <name>frenet_path_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the Frenet path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="94" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1aabb13ff1bf79cceaccbcb239bba059ef" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::status_topic_</definition>
+        <argsstring></argsstring>
+        <name>status_topic_</name>
+        <briefdescription>
+<para>Topic for control status messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="95" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a7aac3ceaa0aa5b6ec8e9b71b58b61115" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::scan_topic_</definition>
+        <argsstring></argsstring>
+        <name>scan_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to laser scan data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="96" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a28ba79aa0b472eb4a434745cf870a420" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::odom_topic_</definition>
+        <argsstring></argsstring>
+        <name>odom_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to odometry messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="97" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ad2c9da98afe02885444ba363b982b84b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::pose_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to pose messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="98" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ae3da9eaa52f3adac722c0a20519971ef" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::drive_topic_</definition>
+        <argsstring></argsstring>
+        <name>drive_topic_</name>
+        <briefdescription>
+<para>Topic for publishing drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="99" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1af3233806da18a1dbf6bc584785ba292a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::reset_lap_statistics_topic_</definition>
+        <argsstring></argsstring>
+        <name>reset_lap_statistics_topic_</name>
+        <briefdescription>
+<para>Topic for resetting lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="100" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1afe61e6c18f3c037478a4388c7809512b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::raceline_file_</definition>
+        <argsstring></argsstring>
+        <name>raceline_file_</name>
+        <briefdescription>
+<para>File containing the raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="101" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a8c6c1a1e5fe764300074bc7584cedd70" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetOvertakingNode::path_obtained</definition>
+        <argsstring></argsstring>
+        <name>path_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the raceline path has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="104" column="10" bodyfile="include/frenet_overtaking_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a5075281a870bc6beb1d78a7198b70f94" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetOvertakingNode::speed_obtained</definition>
+        <argsstring></argsstring>
+        <name>speed_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current speed has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="105" column="10" bodyfile="include/frenet_overtaking_node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a5119a3f3c6075e55aff77850cda7708c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetOvertakingNode::pose_obtained</definition>
+        <argsstring></argsstring>
+        <name>pose_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current pose has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="106" column="10" bodyfile="include/frenet_overtaking_node.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a54ce47cab09e37b391c0c5f397fd5397" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetOvertakingNode::lidar_obtained</definition>
+        <argsstring></argsstring>
+        <name>lidar_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the lidar scan has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="107" column="10" bodyfile="include/frenet_overtaking_node.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a4c5be720839ab3d814d3337532a34e50" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FrenetOvertakingNode::allow_processing</definition>
+        <argsstring></argsstring>
+        <name>allow_processing</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the pure pursuit algorithm is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="108" column="10" bodyfile="include/frenet_overtaking_node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ace41faeefc18d8a93b2f3405d94a5873" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; float, float &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;float, float&gt; &gt; FrenetOvertakingNode::obstacles</definition>
+        <argsstring></argsstring>
+        <name>obstacles</name>
+        <briefdescription>
+<para>Detected obstacles points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="111" column="17" bodyfile="include/frenet_overtaking_node.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a54abe88a294919531ddb231042c8df07" prot="private" static="no" mutable="no">
+        <type>Raceline</type>
+        <definition>Raceline FrenetOvertakingNode::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+<para>Object representing the raceline path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="112" column="14" bodyfile="include/frenet_overtaking_node.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1aa81545c389912f22a099e508c612e6c4" prot="private" static="no" mutable="no">
+        <type><ref refid="classSteeringController" kindref="compound">SteeringController</ref></type>
+        <definition>SteeringController FrenetOvertakingNode::steering_controller</definition>
+        <argsstring></argsstring>
+        <name>steering_controller</name>
+        <briefdescription>
+<para>PD steering controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="113" column="24" bodyfile="include/frenet_overtaking_node.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a200b9f034155baf4e88c13e5918ae62a" prot="private" static="no" mutable="no">
+        <type><ref refid="classCubicSpline2d" kindref="compound">CubicSpline2d</ref></type>
+        <definition>CubicSpline2d FrenetOvertakingNode::csp_reference</definition>
+        <argsstring></argsstring>
+        <name>csp_reference</name>
+        <briefdescription>
+<para>Cubic spline representing the reference path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="114" column="19" bodyfile="include/frenet_overtaking_node.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a09357e2ea5b6c6eb058e6c22aa56db86" prot="private" static="no" mutable="no">
+        <type><ref refid="classFrenetOptimalTrajectory" kindref="compound">FrenetOptimalTrajectory</ref></type>
+        <definition>FrenetOptimalTrajectory FrenetOvertakingNode::frenet_path</definition>
+        <argsstring></argsstring>
+        <name>frenet_path</name>
+        <briefdescription>
+<para>Frenet optimal trajectory planner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="115" column="29" bodyfile="include/frenet_overtaking_node.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a78112826fd47fffbe64f1cd5484135ca" prot="private" static="no" mutable="no">
+        <type><ref refid="classLapPerformance" kindref="compound">LapPerformance</ref></type>
+        <definition>LapPerformance FrenetOvertakingNode::lap_performance</definition>
+        <argsstring></argsstring>
+        <name>lap_performance</name>
+        <briefdescription>
+<para>Object for measuring lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="116" column="20" bodyfile="include/frenet_overtaking_node.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a4ddef7e8633c2aad1021f9e7c9b9cf7c" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose FrenetOvertakingNode::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+<para>Current pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="119" column="30" bodyfile="include/frenet_overtaking_node.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ad879182d1c0027ef9dbaa7bd0fc2ced1" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose FrenetOvertakingNode::odom_pose</definition>
+        <argsstring></argsstring>
+        <name>odom_pose</name>
+        <briefdescription>
+<para>Current odometry pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="120" column="30" bodyfile="include/frenet_overtaking_node.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ac9136ecb95873edc17043fdf5ffb0228" prot="private" static="no" mutable="no">
+        <type>std_msgs::msg::Header</type>
+        <definition>std_msgs::msg::Header FrenetOvertakingNode::common_header</definition>
+        <argsstring></argsstring>
+        <name>common_header</name>
+        <briefdescription>
+<para>Common header for visualization messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="121" column="27" bodyfile="include/frenet_overtaking_node.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a2732d25dbec2d63b3018022918141881" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FrenetOvertakingNode::current_speed</definition>
+        <argsstring></argsstring>
+        <name>current_speed</name>
+        <briefdescription>
+<para>Current speed of the vehicle (m/s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="122" column="11" bodyfile="include/frenet_overtaking_node.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a8cf0b687b36f0673730ea74d1ddbbd7f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr FrenetOvertakingNode::odom_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>odom_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for odometry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="125" column="38" bodyfile="include/frenet_overtaking_node.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a13e0bc0d2583c4011cc24585f7912507" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr FrenetOvertakingNode::pose_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>pose_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="126" column="38" bodyfile="include/frenet_overtaking_node.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a3b0bf366bb5296cbea30a32c90bca572" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; f1tenth_msgs::msg::RacelineStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt; f1tenth_msgs::msg::RacelineStamped &gt;::SharedPtr FrenetOvertakingNode::raceline_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>raceline_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="127" column="38" bodyfile="include/frenet_overtaking_node.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a22fc25d8d8981f63de7c5fc7d2989ec1" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr FrenetOvertakingNode::status_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>status_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pure pursuit status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="128" column="38" bodyfile="include/frenet_overtaking_node.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a0635d79487b41ac895425e8520eb452c" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr FrenetOvertakingNode::reset_lap_statistics_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>reset_lap_statistics_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for resetting lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="129" column="38" bodyfile="include/frenet_overtaking_node.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a0c068b2d1b2d0cc43baa1b222ff9fce5" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; sensor_msgs::msg::LaserScan &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;sensor_msgs::msg::LaserScan&gt;::SharedPtr FrenetOvertakingNode::scan_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>scan_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for lidar scan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="130" column="38" bodyfile="include/frenet_overtaking_node.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a76c6f543cb631b5a5a32721d12339bad" prot="private" static="no" mutable="no">
+        <type>OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>OnSetParametersCallbackHandle::SharedPtr FrenetOvertakingNode::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+<para>Handle for dynamic parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="131" column="46" bodyfile="include/frenet_overtaking_node.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a2de00a16a216c76eb5b3ec95bd54a194" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ackermann_msgs::msg::AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt; ackermann_msgs::msg::AckermannDriveStamped &gt;::SharedPtr FrenetOvertakingNode::drive_publisher_</definition>
+        <argsstring></argsstring>
+        <name>drive_publisher_</name>
+        <briefdescription>
+<para>Publisher for control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="134" column="35" bodyfile="include/frenet_overtaking_node.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a4cd18d8c1463c3b4ce103fdedf4169af" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr FrenetOvertakingNode::look_ahead_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for look-ahead point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="135" column="35" bodyfile="include/frenet_overtaking_node.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ae5c00b3aececd30878a7c64f6411ae59" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr FrenetOvertakingNode::car_nearest_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for nearest point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="136" column="35" bodyfile="include/frenet_overtaking_node.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ab7b9781cd0dfd219b2388874cac79735" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr FrenetOvertakingNode::frenet_path_publisher_</definition>
+        <argsstring></argsstring>
+        <name>frenet_path_publisher_</name>
+        <briefdescription>
+<para>Publisher for the Frenet path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="137" column="35" bodyfile="include/frenet_overtaking_node.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a7d15071f406c4dba62269251a31b2c81" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr FrenetOvertakingNode::raceline_publisher_</definition>
+        <argsstring></argsstring>
+        <name>raceline_publisher_</name>
+        <briefdescription>
+<para>Publisher for the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="138" column="35" bodyfile="include/frenet_overtaking_node.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a4e81d17ab02351e6514c251f80caae87" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; f1tenth_msgs::msg::LapPerformanceStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt; f1tenth_msgs::msg::LapPerformanceStamped &gt;::SharedPtr FrenetOvertakingNode::lap_performance_publisher_</definition>
+        <argsstring></argsstring>
+        <name>lap_performance_publisher_</name>
+        <briefdescription>
+<para>Publisher for lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="139" column="35" bodyfile="include/frenet_overtaking_node.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a469e07cc2a43233b59ea3cdc0065ae90" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FrenetOvertakingNode::detector_topic_</definition>
+        <argsstring></argsstring>
+        <name>detector_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to detector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="94" column="17" bodyfile="include/frenet_overtaking_node_detector.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ad2c7a2dac4ec43f4fa511f2ac546bf96" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::tuple&lt; float, float, float &gt; &gt;</type>
+        <definition>std::vector&lt;std::tuple&lt;float, float, float&gt; &gt; FrenetOvertakingNode::detected_obstacles</definition>
+        <argsstring></argsstring>
+        <name>detected_obstacles</name>
+        <briefdescription>
+<para>Detected obstacles points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="107" column="17" bodyfile="include/frenet_overtaking_node_detector.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ad131d90d3a5d5cfe0be0a4b9ab696442" prot="private" static="no" mutable="no">
+        <type>RacelineData</type>
+        <definition>RacelineData FrenetOvertakingNode::raceline_data</definition>
+        <argsstring></argsstring>
+        <name>raceline_data</name>
+        <briefdescription>
+<para>Data for the raceline path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="109" column="18" bodyfile="include/frenet_overtaking_node_detector.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1ac949f7124b0ebbd057214c0157db5994" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; f1tenth_msgs::msg::ObstacleArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;f1tenth_msgs::msg::ObstacleArray&gt;::SharedPtr FrenetOvertakingNode::detector_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>detector_subscriber_</name>
+        <briefdescription>
+<para>Subscriber to detector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="126" column="38" bodyfile="include/frenet_overtaking_node_detector.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a7d231585ca7cec136df74c9c20b06e9e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Path&gt;::SharedPtr FrenetOvertakingNode::right_border_</definition>
+        <argsstring></argsstring>
+        <name>right_border_</name>
+        <briefdescription>
+<para>Publisher for the right border. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="135" column="35" bodyfile="include/frenet_overtaking_node_detector.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFrenetOvertakingNode_1a6e3647757db9696b84312e8e9cbb6ab9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Path&gt;::SharedPtr FrenetOvertakingNode::left_border_</definition>
+        <argsstring></argsstring>
+        <name>left_border_</name>
+        <briefdescription>
+<para>Publisher for the left border. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="136" column="35" bodyfile="include/frenet_overtaking_node_detector.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFrenetOvertakingNode_1a29920d662148aee56a66dcd60dcfa16a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FrenetOvertakingNode::FrenetOvertakingNode</definition>
+        <argsstring>()</argsstring>
+        <name>FrenetOvertakingNode</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classFrenetOvertakingNode" kindref="compound">FrenetOvertakingNode</ref>. Initializes parameters, subscriptions, and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="56" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1a29920d662148aee56a66dcd60dcfa16a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FrenetOvertakingNode::FrenetOvertakingNode</definition>
+        <argsstring>()</argsstring>
+        <name>FrenetOvertakingNode</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classFrenetOvertakingNode" kindref="compound">FrenetOvertakingNode</ref>. Initializes parameters, subscriptions, and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="57" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classFrenetOvertakingNode_1aa53fe5d39ff82e6731babacf45b26358" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult FrenetOvertakingNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Handles parameter updates dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of parameter update operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="148" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1ae3370e35f4c77f012483b2febd235bb1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::status_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr status_msg)</argsstring>
+        <name>status_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>status_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle status updates for enabling/disabling pure pursuit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether pure pursuit is enabled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="154" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1a395ff48de82f1268c987331c0668c966" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::odom_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr odom_msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>odom_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle odometry updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message containing the current speed and pose. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="160" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1a25ec6cc7e85f0112fd02dab5452ab650" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::pose_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr pose_msg)</argsstring>
+        <name>pose_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>pose_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle pose updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message containing the current pose of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="166" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1a0ec9c66d9905ec91f688003f37b11b40" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::scan_callback</definition>
+        <argsstring>(const sensor_msgs::msg::LaserScan::SharedPtr scan_msg)</argsstring>
+        <name>scan_callback</name>
+        <param>
+          <type>const sensor_msgs::msg::LaserScan::SharedPtr</type>
+          <declname>scan_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle scan updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scan_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LaserScan message containing the lidar scan data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="172" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1ae78ac686e38edb5e3d79c9ab22b43ee7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::reset_lap_statistics_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr reset_msg)</argsstring>
+        <name>reset_lap_statistics_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>reset_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to reset lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether to reset lap statistics. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="178" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1a5cc74a821faa2585e0ce946683bbb33d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::visualize_best_path</definition>
+        <argsstring>(std_msgs::msg::Header common_header, const FrenetPath &amp;best_path)</argsstring>
+        <name>visualize_best_path</name>
+        <param>
+          <type>std_msgs::msg::Header</type>
+          <declname>common_header</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &amp;</type>
+          <declname>best_path</declname>
+        </param>
+        <briefdescription>
+<para>Visualizes the best path using markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>common_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Common header for the visualization messages. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>best_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Best Frenet path to visualize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="185" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1acdc361eed2c2e64e3779077a7776e3dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::control_loop</definition>
+        <argsstring>()</argsstring>
+        <name>control_loop</name>
+        <briefdescription>
+<para>Main control loop for the Pure Pursuit algorithm. Calculates target steering and speed, and sends control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node.hpp" line="191" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1aa53fe5d39ff82e6731babacf45b26358" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult FrenetOvertakingNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Handles parameter updates dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of parameter update operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="146" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1ae3370e35f4c77f012483b2febd235bb1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::status_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr status_msg)</argsstring>
+        <name>status_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>status_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle status updates for enabling/disabling pure pursuit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether pure pursuit is enabled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="152" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1a395ff48de82f1268c987331c0668c966" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::odom_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr odom_msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>odom_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle odometry updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message containing the current speed and pose. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="158" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1a25ec6cc7e85f0112fd02dab5452ab650" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::pose_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr pose_msg)</argsstring>
+        <name>pose_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>pose_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle pose updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classOdometry" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/odometry/odometry.tag">Odometry</ref> message containing the current pose of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="164" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1ad4f4c8b3bdad1ea3f6e70477809e8fb1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::detector_callback</definition>
+        <argsstring>(const f1tenth_msgs::msg::ObstacleArray::SharedPtr detecor_msg)</argsstring>
+        <name>detector_callback</name>
+        <param>
+          <type>const f1tenth_msgs::msg::ObstacleArray::SharedPtr</type>
+          <declname>detecor_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle scan updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scan_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LaserScan message containing the lidar scan data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="170" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1a5cc74a821faa2585e0ce946683bbb33d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::visualize_best_path</definition>
+        <argsstring>(std_msgs::msg::Header common_header, const FrenetPath &amp;best_path)</argsstring>
+        <name>visualize_best_path</name>
+        <param>
+          <type>std_msgs::msg::Header</type>
+          <declname>common_header</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structFrenetPath" kindref="compound">FrenetPath</ref> &amp;</type>
+          <declname>best_path</declname>
+        </param>
+        <briefdescription>
+<para>Visualizes the best path using markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>common_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Common header for the visualization messages. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>best_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Best Frenet path to visualize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="177" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classFrenetOvertakingNode_1acdc361eed2c2e64e3779077a7776e3dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FrenetOvertakingNode::control_loop</definition>
+        <argsstring>()</argsstring>
+        <name>control_loop</name>
+        <briefdescription>
+<para>Main control loop for the Pure Pursuit algorithm. Calculates target steering and speed, and sends control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_overtaking_node_detector.hpp" line="183" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS2 node that implements the Pure Pursuit algorithm for controlling a vehicle along a raceline. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FrenetOvertakingNode</label>
+        <link refid="classFrenetOvertakingNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FrenetOvertakingNode</label>
+        <link refid="classFrenetOvertakingNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/frenet_overtaking_node.hpp" line="50" column="1" bodyfile="include/frenet_overtaking_node.hpp" bodystart="49" bodyend="192"/>
+    <listofallmembers>
+      <member refid="classFrenetOvertakingNode_1a4c5be720839ab3d814d3337532a34e50" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>allow_processing</name></member>
+      <member refid="classFrenetOvertakingNode_1ae5c00b3aececd30878a7c64f6411ae59" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>car_nearest_point_publisher_</name></member>
+      <member refid="classFrenetOvertakingNode_1a043cab75641eaca6514e50cfb1b60c52" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>car_nearest_point_topic_</name></member>
+      <member refid="classFrenetOvertakingNode_1ac9136ecb95873edc17043fdf5ffb0228" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>common_header</name></member>
+      <member refid="classFrenetOvertakingNode_1acdc361eed2c2e64e3779077a7776e3dc" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>control_loop</name></member>
+      <member refid="classFrenetOvertakingNode_1acdc361eed2c2e64e3779077a7776e3dc" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>control_loop</name></member>
+      <member refid="classFrenetOvertakingNode_1a200b9f034155baf4e88c13e5918ae62a" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>csp_reference</name></member>
+      <member refid="classFrenetOvertakingNode_1a4ddef7e8633c2aad1021f9e7c9b9cf7c" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>current_pose</name></member>
+      <member refid="classFrenetOvertakingNode_1a2732d25dbec2d63b3018022918141881" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>current_speed</name></member>
+      <member refid="classFrenetOvertakingNode_1aa2cc2dd46c9362c52978ce70f8d3168c" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>decay_last_d_factor_</name></member>
+      <member refid="classFrenetOvertakingNode_1a9c4868c8e42721e988afb7a7a2efe113" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>default_clock_</name></member>
+      <member refid="classFrenetOvertakingNode_1a43b5f2bf499f681f4f664e8028f6b12a" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>delta_path_lenght_</name></member>
+      <member refid="classFrenetOvertakingNode_1adfe5dc4aa14dbd30cbdf94b1263eacb8" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>delta_road_width_</name></member>
+      <member refid="classFrenetOvertakingNode_1a22b4483a008291f631d0d40cf71b5a8b" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>desired_fov_</name></member>
+      <member refid="classFrenetOvertakingNode_1ad2c7a2dac4ec43f4fa511f2ac546bf96" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>detected_obstacles</name></member>
+      <member refid="classFrenetOvertakingNode_1ad4f4c8b3bdad1ea3f6e70477809e8fb1" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>detector_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1ac949f7124b0ebbd057214c0157db5994" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>detector_subscriber_</name></member>
+      <member refid="classFrenetOvertakingNode_1a469e07cc2a43233b59ea3cdc0065ae90" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>detector_topic_</name></member>
+      <member refid="classFrenetOvertakingNode_1a252f39b4326463a64e49fc701654e6f0" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>disable_print_timeout_</name></member>
+      <member refid="classFrenetOvertakingNode_1a2de00a16a216c76eb5b3ec95bd54a194" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>drive_publisher_</name></member>
+      <member refid="classFrenetOvertakingNode_1ae3da9eaa52f3adac722c0a20519971ef" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>drive_topic_</name></member>
+      <member refid="classFrenetOvertakingNode_1a09357e2ea5b6c6eb058e6c22aa56db86" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>frenet_path</name></member>
+      <member refid="classFrenetOvertakingNode_1ab7b9781cd0dfd219b2388874cac79735" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>frenet_path_publisher_</name></member>
+      <member refid="classFrenetOvertakingNode_1a931b02016ce2700aa9188b060c61feb2" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>frenet_path_topic_</name></member>
+      <member refid="classFrenetOvertakingNode_1a29920d662148aee56a66dcd60dcfa16a" prot="public" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>FrenetOvertakingNode</name></member>
+      <member refid="classFrenetOvertakingNode_1a29920d662148aee56a66dcd60dcfa16a" prot="public" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>FrenetOvertakingNode</name></member>
+      <member refid="classFrenetOvertakingNode_1a6ad86b5ab1a54bc3320752a0d10cf130" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>k_distance_</name></member>
+      <member refid="classFrenetOvertakingNode_1a5d8d8d0fdce89dfc1f4586125eef9e0d" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>k_jerk_</name></member>
+      <member refid="classFrenetOvertakingNode_1a5b2d22d76131b311ac41b3eda5e362f8" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>k_lenght_</name></member>
+      <member refid="classFrenetOvertakingNode_1a806829ab14c5599de0e4425575706ed7" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>kd_s_</name></member>
+      <member refid="classFrenetOvertakingNode_1ab451e2ec258be1f46c32ef9f651bdd1d" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>kk_s_</name></member>
+      <member refid="classFrenetOvertakingNode_1a78112826fd47fffbe64f1cd5484135ca" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>lap_performance</name></member>
+      <member refid="classFrenetOvertakingNode_1a4e81d17ab02351e6514c251f80caae87" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>lap_performance_publisher_</name></member>
+      <member refid="classFrenetOvertakingNode_1a6e3647757db9696b84312e8e9cbb6ab9" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>left_border_</name></member>
+      <member refid="classFrenetOvertakingNode_1a656874fa95bd74c5332caaab69ab9073" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>lidar_downsample_factor_</name></member>
+      <member refid="classFrenetOvertakingNode_1a54ce47cab09e37b391c0c5f397fd5397" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>lidar_obtained</name></member>
+      <member refid="classFrenetOvertakingNode_1afde501a5b129a155635c9be9137a893a" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>look_ahead_gain_</name></member>
+      <member refid="classFrenetOvertakingNode_1a4cd18d8c1463c3b4ce103fdedf4169af" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>look_ahead_point_publisher_</name></member>
+      <member refid="classFrenetOvertakingNode_1a0f57cd3ae3f50623e229116bcc884783" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>look_ahead_point_topic_</name></member>
+      <member refid="classFrenetOvertakingNode_1a41ebc824e95b39c4aff23d90d3e41f80" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>max_lap_statistics_</name></member>
+      <member refid="classFrenetOvertakingNode_1aab4e3d7e4a49605fbdb8618b83aa4fc9" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>max_path_lenght_</name></member>
+      <member refid="classFrenetOvertakingNode_1a3eac4653a6ddf7165ded1e5307d5e599" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>max_road_width_</name></member>
+      <member refid="classFrenetOvertakingNode_1af071e59fef9bd51a5b904516f55e6497" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>max_steer_</name></member>
+      <member refid="classFrenetOvertakingNode_1ac0a38f675df1bbf6b96c371bc1b327af" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>min_look_ahead_dist_</name></member>
+      <member refid="classFrenetOvertakingNode_1acc402089bdd866fc312e81a95a1c03f5" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>min_path_lenght_</name></member>
+      <member refid="classFrenetOvertakingNode_1aef91e56fce172259eb456eaf688aaecb" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>min_speed_reduction_gain_</name></member>
+      <member refid="classFrenetOvertakingNode_1ace41faeefc18d8a93b2f3405d94a5873" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>obstacles</name></member>
+      <member refid="classFrenetOvertakingNode_1a395ff48de82f1268c987331c0668c966" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>odom_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1a395ff48de82f1268c987331c0668c966" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>odom_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1ad879182d1c0027ef9dbaa7bd0fc2ced1" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>odom_pose</name></member>
+      <member refid="classFrenetOvertakingNode_1a8cf0b687b36f0673730ea74d1ddbbd7f" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>odom_subscriber_</name></member>
+      <member refid="classFrenetOvertakingNode_1a28ba79aa0b472eb4a434745cf870a420" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>odom_topic_</name></member>
+      <member refid="classFrenetOvertakingNode_1aa53fe5d39ff82e6731babacf45b26358" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>params_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1aa53fe5d39ff82e6731babacf45b26358" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>params_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1a76c6f543cb631b5a5a32721d12339bad" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>params_callback_handle_</name></member>
+      <member refid="classFrenetOvertakingNode_1a54abe88a294919531ddb231042c8df07" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>path</name></member>
+      <member refid="classFrenetOvertakingNode_1aef19e6d4492801b072ca87e672364201" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>path_fov_</name></member>
+      <member refid="classFrenetOvertakingNode_1a8c6c1a1e5fe764300074bc7584cedd70" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>path_obtained</name></member>
+      <member refid="classFrenetOvertakingNode_1ae4ab900d40a5c26d13fc39b713b16675" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>path_point_distance_</name></member>
+      <member refid="classFrenetOvertakingNode_1a25ec6cc7e85f0112fd02dab5452ab650" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>pose_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1a25ec6cc7e85f0112fd02dab5452ab650" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>pose_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1a5119a3f3c6075e55aff77850cda7708c" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>pose_obtained</name></member>
+      <member refid="classFrenetOvertakingNode_1a13e0bc0d2583c4011cc24585f7912507" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>pose_subscriber_</name></member>
+      <member refid="classFrenetOvertakingNode_1ad2c9da98afe02885444ba363b982b84b" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>pose_topic_</name></member>
+      <member refid="classFrenetOvertakingNode_1ad131d90d3a5d5cfe0be0a4b9ab696442" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>raceline_data</name></member>
+      <member refid="classFrenetOvertakingNode_1afe61e6c18f3c037478a4388c7809512b" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>raceline_file_</name></member>
+      <member refid="classFrenetOvertakingNode_1a7d15071f406c4dba62269251a31b2c81" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>raceline_publisher_</name></member>
+      <member refid="classFrenetOvertakingNode_1a3b0bf366bb5296cbea30a32c90bca572" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>raceline_subscriber_</name></member>
+      <member refid="classFrenetOvertakingNode_1ae78ac686e38edb5e3d79c9ab22b43ee7" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>reset_lap_statistics_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1a0635d79487b41ac895425e8520eb452c" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>reset_lap_statistics_subscriber_</name></member>
+      <member refid="classFrenetOvertakingNode_1af3233806da18a1dbf6bc584785ba292a" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>reset_lap_statistics_topic_</name></member>
+      <member refid="classFrenetOvertakingNode_1a7d231585ca7cec136df74c9c20b06e9e" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>right_border_</name></member>
+      <member refid="classFrenetOvertakingNode_1ae66e0f256b240125ba6ee0a315fd9367" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>robot_radius_</name></member>
+      <member refid="classFrenetOvertakingNode_1a0ec9c66d9905ec91f688003f37b11b40" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>scan_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1a0c068b2d1b2d0cc43baa1b222ff9fce5" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>scan_subscriber_</name></member>
+      <member refid="classFrenetOvertakingNode_1a7aac3ceaa0aa5b6ec8e9b71b58b61115" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>scan_topic_</name></member>
+      <member refid="classFrenetOvertakingNode_1a1d9351cb9cd0b5a8a5d3a3032c03b5b1" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>send_drive_msg_</name></member>
+      <member refid="classFrenetOvertakingNode_1a18d39135a0aecf093a2a883f6acb6ee3" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>speed_decay_factor_</name></member>
+      <member refid="classFrenetOvertakingNode_1a5075281a870bc6beb1d78a7198b70f94" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>speed_obtained</name></member>
+      <member refid="classFrenetOvertakingNode_1a0b9356d1f6bc2fed25e7e422e317aedb" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>starting_strip_</name></member>
+      <member refid="classFrenetOvertakingNode_1ae3370e35f4c77f012483b2febd235bb1" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>status_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1ae3370e35f4c77f012483b2febd235bb1" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>status_callback</name></member>
+      <member refid="classFrenetOvertakingNode_1a22fc25d8d8981f63de7c5fc7d2989ec1" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>status_subscriber_</name></member>
+      <member refid="classFrenetOvertakingNode_1aabb13ff1bf79cceaccbcb239bba059ef" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>status_topic_</name></member>
+      <member refid="classFrenetOvertakingNode_1aa81545c389912f22a099e508c612e6c4" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>steering_controller</name></member>
+      <member refid="classFrenetOvertakingNode_1a28ec76aa0ba4afc6e41d8bba4c6e7b6f" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>tdp_</name></member>
+      <member refid="classFrenetOvertakingNode_1a5cc74a821faa2585e0ce946683bbb33d" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>visualize_best_path</name></member>
+      <member refid="classFrenetOvertakingNode_1a5cc74a821faa2585e0ce946683bbb33d" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>visualize_best_path</name></member>
+      <member refid="classFrenetOvertakingNode_1a8c862190172a4e0f87a8afc3e911347c" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>visualize_markers_</name></member>
+      <member refid="classFrenetOvertakingNode_1a69c4f738b627e22cf6d91ed6bf44c503" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>wb_</name></member>
+      <member refid="classFrenetOvertakingNode_1ad67ea6cad9a5997036a3065e578b730b" prot="private" virt="non-virtual"><scope>FrenetOvertakingNode</scope><name>weight_last_d_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
