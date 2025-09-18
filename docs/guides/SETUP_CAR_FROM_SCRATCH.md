@@ -205,7 +205,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDN7+Bvuoxp3m94JyjrbjC4HytEGS2a4Jpb3GAvC5NG
 
 
 ## Let's Install Vnc
-1. ```sudo apt install Xvfb x11vnc lxsession```
+1. ```sudo apt install xvfb x11vnc lxsession```
 2. ```sudo nano /etc/systemd/system/vnc.service```
 3. Write inside the file:
 ```
