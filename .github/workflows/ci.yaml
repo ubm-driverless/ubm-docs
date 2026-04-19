@@ -77,6 +77,8 @@ jobs:
           # Build C++ packages docs with rosdoc2
           echo "Building docs of C++ packages..."
           source /home/ubm/rosdoc2/bin/activate
+          # rosdoc2 pulls sphinx which requires docutils < 0.22.
+          python -m pip install "docutils>=0.20,<0.22"
           source /opt/ros/foxy/setup.bash
           echo "# C++ Packages" > "$CPP_PACKAGES_MD"
           echo "" >> "$CPP_PACKAGES_MD"
