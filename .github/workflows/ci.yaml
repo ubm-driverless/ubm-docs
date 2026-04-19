@@ -22,9 +22,6 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -118,9 +115,11 @@ jobs:
           cp -r "${{ steps.generate_docs.outputs.rosdoc2_output }}" ./site/
 
       - name: Configure Git for Deployment
+        if: github.ref == 'refs/heads/main'
         run: |
           git config --global --add safe.directory /__w/ubm-docs/ubm-docs
   
       - name: Deploy with ghp-import
+        if: github.ref == 'refs/heads/main'
         run: |
           ghp-import --no-jekyll --push --force site
