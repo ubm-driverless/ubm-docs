@@ -51,14 +51,14 @@ jobs:
       - name: Install tools
         run: |
           mkdir -p .pip-cache
-          pip install --cache-dir .pip-cache --upgrade pip
-          pip install --cache-dir .pip-cache -r requirements.txt
+          python3 -m pip install --cache-dir .pip-cache --upgrade pip
+          python3 -m pip install --cache-dir .pip-cache -r requirements.txt
 
       - name: Clone configured repos
         run: |
           mkdir -p /root/.ssh
           ssh-keyscan -H github.com >> /root/.ssh/known_hosts
-          python - <<'PY'
+          python3 - <<'PY'
           from pathlib import Path
           import subprocess
 
@@ -105,7 +105,7 @@ jobs:
           echo "Building docs of C++ packages..."
           source /home/ubm/rosdoc2/bin/activate
           # rosdoc2 pulls sphinx which requires docutils < 0.22.
-          python -m pip install "docutils>=0.20,<0.22"
+          python3 -m pip install "docutils>=0.20,<0.22"
           source /opt/ros/foxy/setup.bash
           find "$REPOS_ROOT" -type f -iname "package.xml" -print0 | while IFS= read -r -d '' f; do
             package_dir="${f%/package.xml}"
@@ -132,7 +132,7 @@ jobs:
 
       - name: Generate repository pages
         run: |
-          python scripts/gen_repository_pages.py
+          python3 scripts/gen_repository_pages.py
 
       - name: Build documentation
         run: |
