@@ -22,9 +22,6 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -51,7 +48,7 @@ jobs:
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
-          path: ~/.cache/pip
+          path: .pip-cache
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
@@ -80,6 +77,8 @@ jobs:
           # Build C++ packages docs with rosdoc2
           echo "Building docs of C++ packages..."
           source /home/ubm/rosdoc2/bin/activate
+          # rosdoc2 pulls sphinx which requires docutils < 0.22.
+          python -m pip install "docutils>=0.20,<0.22"
           source /opt/ros/foxy/setup.bash
           echo "# C++ Packages" > "$CPP_PACKAGES_MD"
           echo "" >> "$CPP_PACKAGES_MD"
@@ -89,7 +88,7 @@ jobs:
             package_doc_path="$ROSDOC2_OUTPUT/$package_name/index.html"
             if grep -q "rosdoc2" "$f"; then
               echo "Building $package_name with rosdoc2"
-              rosdoc2 build -p "$package_dir" -o "$ROSDOC2_OUTPUT/" > /dev/null 2>&1
+              rosdoc2 build -p "$package_dir" -o "$ROSDOC2_OUTPUT/"
               if [ -f "$package_doc_path" ]; then
                 echo "- [$package_name](../$ROSDOC2_OUTPUT/$package_name/)" >> "$CPP_PACKAGES_MD"
               fi
@@ -118,9 +117,11 @@ jobs:
           cp -r "${{ steps.generate_docs.outputs.rosdoc2_output }}" ./site/
 
       - name: Configure Git for Deployment
+        if: github.ref == 'refs/heads/main'
         run: |
           git config --global --add safe.directory /__w/ubm-docs/ubm-docs
   
       - name: Deploy with ghp-import
+        if: github.ref == 'refs/heads/main'
         run: |
           ghp-import --no-jekyll --push --force site
