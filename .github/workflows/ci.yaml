@@ -127,7 +127,9 @@ jobs:
             package_name="${package_dir##*/}"
             if grep -q "rosdoc2" "$f"; then
               echo "Building $repo_name/$package_name with rosdoc2"
-              rosdoc2 build -p "$package_dir" -o "$ROSDOC2_OUTPUT/$repo_name/"
+              if ! rosdoc2 build -p "$package_dir" -o "$ROSDOC2_OUTPUT/$repo_name/"; then
+                echo "[WARN] rosdoc2 failed for $repo_name/$package_name. Skipping package."
+              fi
             fi
           done
           deactivate
