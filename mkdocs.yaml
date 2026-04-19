@@ -9,8 +9,7 @@ site_url: https://ubm-driverless.github.io/ubm-docs/
 nav:
   - Setup: setup/
   - Guides: guides/
-  - Python Packages: PYTHON_PACKAGES/
-  - C++ Packages: CPP_PACKAGES/
+  - Repositories: repositories.md
 # - NAME_OF_THE_SECTION: FOLDER_NAME_INSIDE_DOCS/ # To set up another entry
 
   
@@ -50,6 +49,7 @@ plugins:
   - gen-files:
       scripts:
         - scripts/gen_ref_pages.py
+        - scripts/gen_repository_pages.py
   - literate-nav:
       nav_file: SUMMARY.md
   - section-index
