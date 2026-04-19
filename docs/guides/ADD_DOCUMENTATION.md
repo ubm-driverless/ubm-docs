@@ -36,7 +36,6 @@ To contribute new documentation to the website, follow these steps:
 
         ```bash
         python -m venv venv
-        pip install -r requirements.txt
         ```
 
     2. Enable the virtual environment (for bash shell)
@@ -44,12 +43,18 @@ To contribute new documentation to the website, follow these steps:
         ```bash
         source ./venv/bin/activate
         ```
+    
+    4. Install the requirements.
+
+        ```bash
+        pip install -r requirements.txt
+        ```
 
     3. Modify the `PYTHONPATH` environment variable for the current terminal session and serve locally the website with mkdocs
 
         ```bash
         export PYTHONPATH="$PYTHONPATH:$(pwd)/src"
-        mkdocs serve
+        python3 -m mkdocs serve
         ```
 
 !!! tip
