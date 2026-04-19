@@ -83,7 +83,9 @@ jobs:
 
               subprocess.run(["git", "clone", remote, str(target)], check=True)
               if ref:
-                  subprocess.run(["git", "-C", str(target), "checkout", ref], check=True)
+                checkout = subprocess.run(["git", "-C", str(target), "checkout", ref], check=False)
+                if checkout.returncode != 0:
+                  print(f"[WARN] Ref '{ref}' not found for {owner}/{name}. Using repository default branch.")
           PY
 
       - name: Generate docs
