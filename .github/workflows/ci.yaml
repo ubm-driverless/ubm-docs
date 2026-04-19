@@ -55,11 +55,14 @@ jobs:
           python3 -m pip install --cache-dir .pip-cache -r requirements.txt
 
       - name: Clone configured repos
+        env:
+          ORG_READ_TOKEN: ${{ secrets.ACTION_TOKEN }}
         run: |
           mkdir -p /root/.ssh
           ssh-keyscan -H github.com >> /root/.ssh/known_hosts
           python3 - <<'PY'
           from pathlib import Path
+          import os
           import subprocess
 
           import yaml
@@ -79,9 +82,17 @@ jobs:
               name = repository["name"]
               ref = repository.get("ref")
               target = repos_root / name
-              remote = f"git@github.com:{owner}/{name}.git"
+              token = os.environ.get("ORG_READ_TOKEN", "").strip()
+              if token:
+                remote = f"https://x-access-token:{token}@github.com/{owner}/{name}.git"
+              else:
+                remote = f"git@github.com:{owner}/{name}.git"
 
-              subprocess.run(["git", "clone", remote, str(target)], check=True)
+              clone = subprocess.run(["git", "clone", remote, str(target)], check=False)
+              if clone.returncode != 0:
+                print(f"[WARN] Could not clone {owner}/{name}. Skipping this repository.")
+                continue
+
               if ref:
                 checkout = subprocess.run(["git", "-C", str(target), "checkout", ref], check=False)
                 if checkout.returncode != 0:
