@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This guide explains how documentation generation is configured and works in the `ubm-f1tenth` repository.
+This guide explains how documentation generation is configured and works across the repositories listed in `repositories.yaml`.
 
 ## Overview
 
@@ -16,29 +16,35 @@ The whole process is automatized with the use of GitHub Actions.
 
 ### Deployment with GitHub Actions
 
-The CI/CD workflow automates the process of building and deploying documentation to GitHub Pages. The key steps in `.github/workflows/ci.yml` are:
+The CI/CD workflow automates the process of building and deploying documentation to GitHub Pages. The key steps in `.github/workflows/ci.yaml` are:
 
-1. **Clone ubm-f1tenth Repository**
+1. **Clone configured repositories**
+    - The workflow reads `repositories.yaml` and clones each listed repository into `./repos/`.
+    - Add or remove repositories from that file to control which repositories are documented.
 
-2. **Generate C++ Documentation**:
-    - Uses rosdoc2 to generate documentation for C++ packages found in the repository.
-    - The script searches for package.xml files in the ubm-f1tenth directory and identifies packages that use rosdoc2.
-    - For each identified package, it runs rosdoc2 build to generate HTML documentation, which is stored in a specified output directory.
-    - A markdown file (CPP_PACKAGES.md) is created listing the packages with links to their generated documentation.
+2. **Generate repository pages**:
+    - `scripts/gen_repository_pages.py` creates a page for each repository listed in `repositories.yaml`.
+    - Each repository page contains two subsections: one for Python packages and one for C++ packages.
+    - The C++ subsection links to the rosdoc2 output generated for that repository.
 
-3. **Move Python packages to src**:
-    - Copies Python packages found within the repository into the `src/` folder to prepare them for MkDocs documentation generation. This is done by checking for the presence of ament_python in each package.xml file.
+3. **Generate C++ Documentation**:
+    - Uses rosdoc2 to generate documentation for C++ packages found in the configured repositories.
+    - The script searches for package.xml files under `./repos/` and identifies packages that use rosdoc2.
+    - For each identified package, it runs rosdoc2 build to generate HTML documentation, which is stored under a repository-specific output directory.
 
-4. **Build Documentation**:
+4. **Move Python packages to src**:
+    - Copies Python packages found within the configured repositories into the `src/` folder to prepare them for MkDocs documentation generation. This is done by checking for the presence of ament_python in each package.xml file.
+
+5. **Build Documentation**:
     - Runs MkDocs to generate static documentation from the source files.
     - All the configs are set in the `mkdocs.yaml` file.
     - `mkdocs build` clears the content of the `site/` directory, builds the content inside the `docs/` directory and processes with mkdocstrings the source code present in `src/` directory. The output will be in the `site` directory.
     - Custom navigation is generated dynamically based on Python module structure by the `gen_ref_pages.py` present in the script/ folder.
 
-5. **Add Additional Files to Site**:
+6. **Add Additional Files to Site**:
     - Copies the generated C++ documentation to the `site` directory for deployment.
 
-6. **Deploy with ghp-import**:
+7. **Deploy with ghp-import**:
     - Deploys the content of `site/` to GitHub Pages using the `ghp-import` tool.
 
     !!! danger

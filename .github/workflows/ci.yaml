@@ -40,11 +40,6 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.PRIVATE_SSH_KEY }}
 
-      - name: Clone private repo
-        run: |
-          ssh-keyscan -H github.com >> /root/.ssh/known_hosts
-          git clone git@github.com:ubm-driverless/ubm-f1tenth.git
-
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
@@ -59,6 +54,38 @@ jobs:
           pip install --cache-dir .pip-cache --upgrade pip
           pip install --cache-dir .pip-cache -r requirements.txt
 
+      - name: Clone configured repos
+        run: |
+          mkdir -p /root/.ssh
+          ssh-keyscan -H github.com >> /root/.ssh/known_hosts
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+
+          import yaml
+
+          config_path = Path("repositories.yaml")
+          config = yaml.safe_load(config_path.read_text()) or {}
+          repositories = config.get("repositories", [])
+
+          if not repositories:
+              raise SystemExit("No repositories configured in repositories.yaml")
+
+          repos_root = Path("repos")
+          repos_root.mkdir(exist_ok=True)
+
+          for repository in repositories:
+              owner = repository.get("owner", "ubm-driverless")
+              name = repository["name"]
+              ref = repository.get("ref")
+              target = repos_root / name
+              remote = f"git@github.com:{owner}/{name}.git"
+
+              subprocess.run(["git", "clone", remote, str(target)], check=True)
+              if ref:
+                  subprocess.run(["git", "-C", str(target), "checkout", ref], check=True)
+          PY
+
       - name: Generate docs
         id: generate_docs
         run: |
@@ -70,8 +97,8 @@ jobs:
           # Configurable Paths (mkdocs.yml needs to be updated accordingly)
           ROSDOC2_OUTPUT="./rosdoc2_generated"
           SRC_FOLDER="./src"
+          REPOS_ROOT="./repos"
           mkdir -p "$ROSDOC2_OUTPUT" "$SRC_FOLDER"
-          CPP_PACKAGES_MD="./docs/CPP_PACKAGES.md"
           echo "rosdoc2_output=$ROSDOC2_OUTPUT" >> $GITHUB_OUTPUT
 
           # Build C++ packages docs with rosdoc2
@@ -80,25 +107,21 @@ jobs:
           # rosdoc2 pulls sphinx which requires docutils < 0.22.
           python -m pip install "docutils>=0.20,<0.22"
           source /opt/ros/foxy/setup.bash
-          echo "# C++ Packages" > "$CPP_PACKAGES_MD"
-          echo "" >> "$CPP_PACKAGES_MD"
-          for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
+          find "$REPOS_ROOT" -type f -iname "package.xml" -print0 | while IFS= read -r -d '' f; do
             package_dir="${f%/package.xml}"
+            repo_dir="${package_dir#${REPOS_ROOT}/}"
+            repo_name="${repo_dir%%/*}"
             package_name="${package_dir##*/}"
-            package_doc_path="$ROSDOC2_OUTPUT/$package_name/index.html"
             if grep -q "rosdoc2" "$f"; then
-              echo "Building $package_name with rosdoc2"
-              rosdoc2 build -p "$package_dir" -o "$ROSDOC2_OUTPUT/"
-              if [ -f "$package_doc_path" ]; then
-                echo "- [$package_name](../$ROSDOC2_OUTPUT/$package_name/)" >> "$CPP_PACKAGES_MD"
-              fi
+              echo "Building $repo_name/$package_name with rosdoc2"
+              rosdoc2 build -p "$package_dir" -o "$ROSDOC2_OUTPUT/$repo_name/"
             fi
           done
           deactivate
            
           # Preparing Python packages for mkdocs
           echo "Preparing Python packages for mkdocs..."
-          for f in $(find ./ubm-f1tenth -type f -iname "package.xml"); do
+          find "$REPOS_ROOT" -type f -iname "package.xml" -print0 | while IFS= read -r -d '' f; do
             package_dir="${f%/package.xml}"
             package_name="${package_dir##*/}"
             if grep -q "ament_python" "$f"; then
@@ -106,6 +129,10 @@ jobs:
               cp -r "$package_dir/$package_name" "$SRC_FOLDER/$package_name"
             fi
           done
+
+      - name: Generate repository pages
+        run: |
+          python scripts/gen_repository_pages.py
 
       - name: Build documentation
         run: |

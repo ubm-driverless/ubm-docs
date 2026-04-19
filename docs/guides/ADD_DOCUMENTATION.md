@@ -38,10 +38,22 @@ To contribute new documentation to the website, follow these steps:
         python -m venv venv
         ```
 
-    2. Enable the virtual environment (for bash shell)
+    2. Enable the virtual environment
 
         ```bash
         source ./venv/bin/activate
+        ```
+
+        Windows PowerShell:
+
+        ```powershell
+        .\venv\Scripts\Activate.ps1
+        ```
+
+        Windows cmd:
+
+        ```bat
+        venv\Scripts\activate.bat
         ```
     
     4. Install the requirements.
@@ -50,11 +62,30 @@ To contribute new documentation to the website, follow these steps:
         pip install -r requirements.txt
         ```
 
-    3. Modify the `PYTHONPATH` environment variable for the current terminal session and serve locally the website with mkdocs
+    3. Run the local helper script to prepare generated docs content and start the preview
 
         ```bash
-        export PYTHONPATH="$PYTHONPATH:$(pwd)/src"
-        python3 -m mkdocs serve
+        python scripts/local_docs.py serve
+        ```
+
+    4. (Optional) Generate a static build locally
+
+        ```bash
+        python scripts/local_docs.py build
+        ```
+
+    5. (Optional) Generate C++ rosdoc2 output locally and include it in the static site
+
+        ```bash
+        python scripts/local_docs.py build-cpp
+        ```
+
+        Note: this command requires Docker Desktop (or another running Docker daemon).
+
+    6. (Optional) Serve the built static site including rosdoc2 output (recommended to test C++ links)
+
+        ```bash
+        python scripts/local_docs.py serve-cpp
         ```
 
 !!! tip
