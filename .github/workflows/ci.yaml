@@ -61,8 +61,7 @@ jobs:
         env:
           ORG_READ_TOKEN: ${{ secrets.ACTION_TOKEN }}
         run: |
-          mkdir -p /root/.ssh
-          ssh-keyscan -H github.com >> /root/.ssh/known_hosts
+          git config --global url."https://x-access-token:${ORG_READ_TOKEN}@github.com/".insteadOf "git@github.com:"
           python3 - <<'PY'
           from pathlib import Path
           import os
@@ -86,7 +85,12 @@ jobs:
               ref = repository.get("ref")
               target = repos_root / name
               token = os.environ.get("ORG_READ_TOKEN", "").strip()
-              remote = f"git@github.com:{owner}/{name}.git"
+              
+              # Usa il formato HTTPS per il clone principale
+              if token:
+                remote = f"https://x-access-token:{token}@github.com/{owner}/{name}.git"
+              else:
+                remote = f"https://github.com/{owner}/{name}.git"
 
               clone = subprocess.run(["git", "clone", "--recurse-submodules", remote, str(target)], check=False)
               if clone.returncode != 0:
