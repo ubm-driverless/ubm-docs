@@ -61,8 +61,7 @@ jobs:
         env:
           ORG_READ_TOKEN: ${{ secrets.ACTION_TOKEN }}
         run: |
-          mkdir -p /root/.ssh
-          ssh-keyscan -H github.com >> /root/.ssh/known_hosts
+          git config --global url."https://x-access-token:${ORG_READ_TOKEN}@github.com/".insteadOf "git@github.com:"
           python3 - <<'PY'
           from pathlib import Path
           import os
@@ -80,13 +79,22 @@ jobs:
           repos_root = Path("repos")
           repos_root.mkdir(exist_ok=True)
 
+          all_excluded_packages = []
+
           for repository in repositories:
               owner = repository.get("owner", "ubm-driverless")
               name = repository["name"]
               ref = repository.get("ref")
               target = repos_root / name
               token = os.environ.get("ORG_READ_TOKEN", "").strip()
-              remote = f"git@github.com:{owner}/{name}.git"
+
+              excluded = repository.get("exclude_packages", [])
+              all_excluded_packages.extend(excluded)
+
+              if token:
+                remote = f"https://x-access-token:{token}@github.com/{owner}/{name}.git"
+              else:
+                remote = f"https://github.com/{owner}/{name}.git"
 
               clone = subprocess.run(["git", "clone", "--recurse-submodules", remote, str(target)], check=False)
               if clone.returncode != 0:
@@ -97,6 +105,11 @@ jobs:
                 checkout = subprocess.run(["git", "-C", str(target), "checkout", ref], check=False)
                 if checkout.returncode != 0:
                   print(f"[WARN] Ref '{ref}' not found for {owner}/{name}. Using repository default branch.")
+
+              if all_excluded_packages:
+                env_file = os.environ.get("GITHUB_ENV")
+                with open(env_file, "a") as f:
+                    f.write(f"EXCLUDE_PACKAGES={' '.join(all_excluded_packages)}\n")
           PY
 
       - name: Generate docs
@@ -140,8 +153,12 @@ jobs:
             package_dir="${f%/package.xml}"
             package_name="${package_dir##*/}"
             if grep -q "ament_python" "$f"; then
-              echo "Copying $package_name to $SRC_FOLDER"
-              cp -r "$package_dir/$package_name" "$SRC_FOLDER/$package_name"
+              if [[ ! " $EXCLUDE_PACKAGES " =~ " $package_name " ]]; then
+                echo "Copying $package_name to $SRC_FOLDER"
+                cp -r "$package_dir/$package_name" "$SRC_FOLDER/$package_name"
+              else
+                echo "[SKIP] Ignoring $package_name as requested in repositories.yaml"
+              fi
             fi
           done
 
