@@ -79,6 +79,8 @@ jobs:
           repos_root = Path("repos")
           repos_root.mkdir(exist_ok=True)
 
+          all_excluded_packages = []
+
           for repository in repositories:
               owner = repository.get("owner", "ubm-driverless")
               name = repository["name"]
