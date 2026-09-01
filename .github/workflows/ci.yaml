@@ -86,12 +86,9 @@ jobs:
               ref = repository.get("ref")
               target = repos_root / name
               token = os.environ.get("ORG_READ_TOKEN", "").strip()
-              if token:
-                remote = f"https://x-access-token:{token}@github.com/{owner}/{name}.git"
-              else:
-                remote = f"git@github.com:{owner}/{name}.git"
+              remote = f"git@github.com:{owner}/{name}.git"
 
-              clone = subprocess.run(["git", "clone", remote, str(target)], check=False)
+              clone = subprocess.run(["git", "clone", "--recurse-submodules", remote, str(target)], check=False)
               if clone.returncode != 0:
                 print(f"[WARN] Could not clone {owner}/{name}. Skipping this repository.")
                 continue
