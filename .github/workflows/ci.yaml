@@ -85,8 +85,10 @@ jobs:
               ref = repository.get("ref")
               target = repos_root / name
               token = os.environ.get("ORG_READ_TOKEN", "").strip()
-              
-              # Usa il formato HTTPS per il clone principale
+
+              excluded = repository.get("exclude_packages", [])
+              all_excluded_packages.extend(excluded)
+
               if token:
                 remote = f"https://x-access-token:{token}@github.com/{owner}/{name}.git"
               else:
@@ -101,6 +103,11 @@ jobs:
                 checkout = subprocess.run(["git", "-C", str(target), "checkout", ref], check=False)
                 if checkout.returncode != 0:
                   print(f"[WARN] Ref '{ref}' not found for {owner}/{name}. Using repository default branch.")
+
+              if all_excluded_packages:
+                env_file = os.environ.get("GITHUB_ENV")
+                with open(env_file, "a") as f:
+                    f.write(f"EXCLUDE_PACKAGES={' '.join(all_excluded_packages)}\n")
           PY
 
       - name: Generate docs
@@ -144,8 +151,12 @@ jobs:
             package_dir="${f%/package.xml}"
             package_name="${package_dir##*/}"
             if grep -q "ament_python" "$f"; then
-              echo "Copying $package_name to $SRC_FOLDER"
-              cp -r "$package_dir/$package_name" "$SRC_FOLDER/$package_name"
+              if [[ ! " $EXCLUDE_PACKAGES " =~ " $package_name " ]]; then
+                echo "Copying $package_name to $SRC_FOLDER"
+                cp -r "$package_dir/$package_name" "$SRC_FOLDER/$package_name"
+              else
+                echo "[SKIP] Ignoring $package_name as requested in repositories.yaml"
+              fi
             fi
           done
 
