@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class KDNode &mdash; delaunay_path_planning 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class KDTData" href="classKDTData.html" />
+    <link rel="prev" title="Template Class Failsafe" href="classFailsafe.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            delaunay_path_planning
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_std.html">Namespace std</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structLogger_1_1Task.html">Struct Logger::Task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structParams_1_1Main.html">Struct Params::Main</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structParams_1_1Visualization.html">Struct Params::Visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structParams_1_1WayComputer.html">Struct Params::WayComputer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structParams_1_1WayComputer_1_1Search.html">Struct WayComputer::Search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structParams_1_1WayComputer_1_1Trace.html">Struct WayComputer::Trace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structstd_1_1hash_3_01Edge_01_4.html">Template Struct hash&lt; Edge &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structstd_1_1hash_3_01Triangle_01_4.html">Template Struct hash&lt; Triangle &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structTrace_1_1Connection.html">Struct Trace::Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCircle.html">Class Circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classcNode.html">Class cNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classcomparer.html">Class comparer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classDelaunayPlanner.html">Class DelaunayPlanner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classDelaunayPlannerNode.html">Class DelaunayPlannerNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classDelaunayTri.html">Class DelaunayTri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classEdge.html">Class Edge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFailsafe.html">Template Class Failsafe</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class KDNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classKDTData.html">Template Class KDTData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classKDTree.html">Class KDTree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classLogger.html">Class Logger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classParams.html">Class Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPoint.html">Class Point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTrace.html">Class Trace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTraceBuffer.html">Class TraceBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTraceWithBuffer.html">Class TraceWithBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTriangle.html">Class Triangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classVector.html">Class Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classVisualization.html">Class Visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classWayComputer.html">Class WayComputer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_KDTree_8hpp_1a9de82da48538536f6bbf6ddf44277e08.html">Function dist(const Point&amp;, const Point&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_KDTree_8hpp_1a2ef9933373b5d16ac094d441bc621419.html">Function dist(const KDNodePtr&amp;, const KDNodePtr&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_KDTree_8hpp_1aab801d0fe972606a2b594b0796e68ae7.html">Function dist2(const Point&amp;, const Point&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_KDTree_8hpp_1a88aaadba7a0a8e0bd52e2380d116833c.html">Function dist2(const KDNodePtr&amp;, const KDNodePtr&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_KDTree_8hpp_1a4dac0c91f372c2406062b6a03aba177a.html">Function NewKDNodePtr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_KDTree_8hpp_1a84e25d849d9a5093a58961746e72712d.html">Function sort_on_idx</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="variable_constants_8hpp_1a53b1dd65b593ae0971a3d16073e44bad.html">Variable CAR_HASNT_MOVED_START_RADIUS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_constants_8hpp_1a2560be515eb6295f164cb2897f21ab0a.html">Variable HASH_SHIFT_NUM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_constants_8hpp_1ad494329bee2902da03f43a0dad726215.html">Variable MIN_FAILSAFE_WAY_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_constants_8hpp_1ab0286703dce27a45639c18be64dea23a.html">Variable MIN_LOOP_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_constants_8hpp_1a873778234c49de3bb62a226ea796fda4.html">Variable SAME_MIDPOINT_DIST_THRESHOLD</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_definitions_8hpp_1a26bb88b1de8a1e8eef8651f1e9368883.html">Typedef EdgeSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_definitions_8hpp_1aec7f7bc213ec7717d548321ad41c9ac7.html">Typedef HeurInd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_KDTree_8hpp_1abf2e15e844088c8d93c30088fc07defb.html">Typedef indexArr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_KDTree_8hpp_1adfaebd549c963997541614e0427e6d00.html">Typedef KDNodePtr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_KDTree_8hpp_1a9afe6e3c1cecd37e54785c8b004075e3.html">Typedef pointIndex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_KDTree_8hpp_1ab8753fea3054d0b0f4136f82522a19ee.html">Typedef pointIndexArr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_KDTree_8hpp_1aeb34c58dd74e141b98afce46c9c53db9.html">Typedef pointIndexV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_KDTree_8hpp_1ab22afbda3c0a3862918b98bff1a86fdf.html">Typedef pointVec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_definitions_8hpp_1a7b3c228b7d3dc0d7ff3532fc2f3db710.html">Typedef Tracklimits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_definitions_8hpp_1a3d52158136e186e3457f54700a800c59.html">Typedef TriangleSet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_delaunay_path_planning.html">Directory delaunay_path_planning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_modules.html">Directory modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_structures.html">Directory structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_utils.html">Directory utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_structures_Circle.hpp.html">File Circle.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_constants.hpp.html">File constants.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_definitions.hpp.html">File definitions.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_delaunay_path_planning_delaunay_planner_node.hpp.html">File delaunay_planner_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_modules_DelaunayTri.hpp.html">File DelaunayTri.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_structures_Edge.hpp.html">File Edge.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_Failsafe.hpp.html">File Failsafe.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_KDTree.hpp.html">File KDTree.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_Logger.hpp.html">File Logger.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_structures_Node.hpp.html">File Node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_Params.hpp.html">File Params.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_structures_Point.hpp.html">File Point.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_structures_Trace.hpp.html">File Trace.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_structures_TraceBuffer.hpp.html">File TraceBuffer.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_structures_Triangle.hpp.html">File Triangle.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_structures_Vector.hpp.html">File Vector.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_modules_Visualization.hpp.html">File Visualization.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_modules_WayComputer.hpp.html">File WayComputer.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/LICENSE.html">LICENSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">delaunay_path_planning</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class KDNode</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classKDNode.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-kdnode">
+<span id="exhale-class-classkdnode"></span><h1>Class KDNode<a class="headerlink" href="#class-kdnode" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_utils_KDTree.hpp.html#file-include-utils-kdtree-hpp"><span class="std std-ref">File KDTree.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv46KDNode">
+<span id="_CPPv36KDNode"></span><span id="_CPPv26KDNode"></span><span id="KDNode"></span><span class="target" id="classKDNode"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KDNode</span></span></span><a class="headerlink" href="#_CPPv46KDNode" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNode9KDNodePtrE">
+<span id="_CPPv3N6KDNode9KDNodePtrE"></span><span id="_CPPv2N6KDNode9KDNodePtrE"></span><span class="target" id="classKDNode_1a0a1564eda174f7eb816cf6b9a512e770"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KDNodePtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv46KDNode" title="KDNode"><span class="n"><span class="pre">KDNode</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N6KDNode9KDNodePtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNode6KDNodeEv">
+<span id="_CPPv3N6KDNode6KDNodeEv"></span><span id="_CPPv2N6KDNode6KDNodeEv"></span><span id="KDNode::KDNode"></span><span class="target" id="classKDNode_1a9a21d6cc46310516e0d931c481f17572"></span><span class="sig-name descname"><span class="n"><span class="pre">KDNode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6KDNode6KDNodeEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNode6KDNodeERK5PointRK6size_tRK9KDNodePtrRK9KDNodePtr">
+<span id="_CPPv3N6KDNode6KDNodeERK5PointRK6size_tRK9KDNodePtrRK9KDNodePtr"></span><span id="_CPPv2N6KDNode6KDNodeERK5PointRK6size_tRK9KDNodePtrRK9KDNodePtr"></span><span id="KDNode::KDNode__PointCR.sCR.KDNodePtrCR.KDNodePtrCR"></span><span class="target" id="classKDNode_1ab46b2145765d713a3310104d8d89981d"></span><span class="sig-name descname"><span class="n"><span class="pre">KDNode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classPoint.html#_CPPv45Point" title="Point"><span class="n"><span class="pre">Point</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6KDNode9KDNodePtrE" title="KDNode::KDNodePtr"><span class="n"><span class="pre">KDNodePtr</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6KDNode9KDNodePtrE" title="KDNode::KDNodePtr"><span class="n"><span class="pre">KDNodePtr</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6KDNode6KDNodeERK5PointRK6size_tRK9KDNodePtrRK9KDNodePtr" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNode6KDNodeERK10pointIndexRK9KDNodePtrRK9KDNodePtr">
+<span id="_CPPv3N6KDNode6KDNodeERK10pointIndexRK9KDNodePtrRK9KDNodePtr"></span><span id="_CPPv2N6KDNode6KDNodeERK10pointIndexRK9KDNodePtrRK9KDNodePtr"></span><span id="KDNode::KDNode__pointIndexCR.KDNodePtrCR.KDNodePtrCR"></span><span class="target" id="classKDNode_1aa7b6781848d25cc501d5930d304e0325"></span><span class="sig-name descname"><span class="n"><span class="pre">KDNode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_KDTree_8hpp_1a9afe6e3c1cecd37e54785c8b004075e3.html#_CPPv410pointIndex" title="pointIndex"><span class="n"><span class="pre">pointIndex</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6KDNode9KDNodePtrE" title="KDNode::KDNodePtr"><span class="n"><span class="pre">KDNodePtr</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6KDNode9KDNodePtrE" title="KDNode::KDNodePtr"><span class="n"><span class="pre">KDNodePtr</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6KDNode6KDNodeERK10pointIndexRK9KDNodePtrRK9KDNodePtr" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNodeD0Ev">
+<span id="_CPPv3N6KDNodeD0Ev"></span><span id="_CPPv2N6KDNodeD0Ev"></span><span id="KDNode::~KDNode"></span><span class="target" id="classKDNode_1aaf6897b4bd312715a7af295243c9f3ab"></span><span class="sig-name descname"><span class="n"><span class="pre">~KDNode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6KDNodeD0Ev" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNode5coordERK6size_t">
+<span id="_CPPv3N6KDNode5coordERK6size_t"></span><span id="_CPPv2N6KDNode5coordERK6size_t"></span><span id="KDNode::coord__sCR"></span><span class="target" id="classKDNode_1a4a4b65450d5bf16d8c320c3c8b46e122"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">coord</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6KDNode5coordERK6size_t" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6KDNodecvbEv">
+<span id="_CPPv3NK6KDNodecvbEv"></span><span id="_CPPv2NK6KDNodecvbEv"></span><span id="KDNode::castto-b-operatorC"></span><span class="target" id="classKDNode_1a4ae3252758100660991b291ccb5f56b1"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6KDNodecvbEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNodecv6size_tEv">
+<span id="_CPPv3N6KDNodecv6size_tEv"></span><span id="_CPPv2N6KDNodecv6size_tEv"></span><span id="KDNode::castto-s-operator"></span><span class="target" id="classKDNode_1a8cf101718a042813ac493b26f17bb29c"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6KDNodecv6size_tEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNodecv10pointIndexEv">
+<span id="_CPPv3N6KDNodecv10pointIndexEv"></span><span id="_CPPv2N6KDNodecv10pointIndexEv"></span><span id="KDNode::castto-pointIndex-operator"></span><span class="target" id="classKDNode_1a610c59eef703b2c4d49d0d842d719704"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><a class="reference internal" href="typedef_KDTree_8hpp_1a9afe6e3c1cecd37e54785c8b004075e3.html#_CPPv410pointIndex" title="pointIndex"><span class="n"><span class="pre">pointIndex</span></span></a></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6KDNodecv10pointIndexEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNode5indexE">
+<span id="_CPPv3N6KDNode5indexE"></span><span id="_CPPv2N6KDNode5indexE"></span><span id="KDNode::index__KDTData:s:"></span><span class="target" id="classKDNode_1a6c440b64b71189b1dcda99509cd12ca4"></span><a class="reference internal" href="classKDTData.html#_CPPv4I0E7KDTData" title="KDTData"><span class="n"><span class="pre">KDTData</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">index</span></span></span><a class="headerlink" href="#_CPPv4N6KDNode5indexE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNode1xE">
+<span id="_CPPv3N6KDNode1xE"></span><span id="_CPPv2N6KDNode1xE"></span><span id="KDNode::x__KDTData:Point:"></span><span class="target" id="classKDNode_1ac304098716119d81890e4acb1c337e5d"></span><a class="reference internal" href="classKDTData.html#_CPPv4I0E7KDTData" title="KDTData"><span class="n"><span class="pre">KDTData</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classPoint.html#_CPPv45Point" title="Point"><span class="n"><span class="pre">Point</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><a class="headerlink" href="#_CPPv4N6KDNode1xE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNode4leftE">
+<span id="_CPPv3N6KDNode4leftE"></span><span id="_CPPv2N6KDNode4leftE"></span><span id="KDNode::left__KDNodePtr"></span><span class="target" id="classKDNode_1a3febb8b552a08597bbb0ac9bca723f39"></span><a class="reference internal" href="#_CPPv4N6KDNode9KDNodePtrE" title="KDNode::KDNodePtr"><span class="n"><span class="pre">KDNodePtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">left</span></span></span><a class="headerlink" href="#_CPPv4N6KDNode4leftE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6KDNode5rightE">
+<span id="_CPPv3N6KDNode5rightE"></span><span id="_CPPv2N6KDNode5rightE"></span><span id="KDNode::right__KDNodePtr"></span><span class="target" id="classKDNode_1a8c848a410242bf7d3e3bb21b0631852e"></span><a class="reference internal" href="#_CPPv4N6KDNode9KDNodePtrE" title="KDNode::KDNodePtr"><span class="n"><span class="pre">KDNodePtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">right</span></span></span><a class="headerlink" href="#_CPPv4N6KDNode5rightE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classFailsafe.html" class="btn btn-neutral float-left" title="Template Class Failsafe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classKDTData.html" class="btn btn-neutral float-right" title="Template Class KDTData" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;delaunay_path_planning&gt; Contributors. License: Apache-2.0.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

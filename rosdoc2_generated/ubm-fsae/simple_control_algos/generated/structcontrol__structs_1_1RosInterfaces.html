@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struct RosInterfaces &mdash; simple_control_algos 1.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=fc837d61"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct SpeedProfileParameters" href="structcontrol__structs_1_1SpeedProfileParameters.html" />
+    <link rel="prev" title="Struct PathFollowerParameters" href="structcontrol__structs_1_1PathFollowerParameters.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            simple_control_algos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_control_structs.html">Namespace control_structs</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1ControlState.html">Struct ControlState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1DummyControllerParameters.html">Struct DummyControllerParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1NodeConfig.html">Struct NodeConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1PathFollowerParameters.html">Struct PathFollowerParameters</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Struct RosInterfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1SpeedProfileParameters.html">Struct SpeedProfileParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structDummyController_1_1ProfilingTimers.html">Struct DummyController::ProfilingTimers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structLapPerformanceData.html">Struct LapPerformanceData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structSpeedProfileGenerator_1_1RawSample.html">Struct SpeedProfileGenerator::RawSample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classAccelerationController.html">Class AccelerationController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classControlNode.html">Class ControlNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classcubic__spline__2d.html">Class cubic_spline_2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline1d.html">Class CubicSpline1d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline2d.html">Class CubicSpline2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classDummyController.html">Class DummyController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classEbsController.html">Class EbsController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFeedForwardAction.html">Class FeedForwardAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classLapPerformance.html">Class LapPerformance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMissionController.html">Class MissionController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPathFollowerNode.html">Class PathFollowerNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomial.html">Class QuarticPolynomial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomialMiddlePose.html">Class QuarticPolynomialMiddlePose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSkidpadController.html">Class SkidpadController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSpeedGenerator.html">Class SpeedGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSpeedProfileGenerator.html">Class SpeedProfileGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSteeringController.html">Class SteeringController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThirdPolynomial.html">Class ThirdPolynomial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTorqueController.html">Class TorqueController</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a548f490e1cc2964ec6a3099dedee3485.html">Template Function argmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a7961cf9f682c353bbbbee08688449363.html">Function calculate_mean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a7c87b3820a510fe8ba3d31de23d1368d.html">Function calculate_mean_in_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a49e610728a5471f56fc020d2b6ee6e9b.html">Function get_rgb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1ab868f789f6ce2325022257f61de9c9f8.html">Function heading_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a478f9c32589c5d73b481c36e939f27a1.html">Function linspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a1c302fecbc320694c92b7363cd0d7f35.html">Function publish_performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1abe1b1b997bef9846de6c15b8c8d5fa0f.html">Function publish_points_as_marker_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a19d41a1984d9db4166ff1979918e1a7a.html">Function publish_points_as_pointcloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a2eb198870d55f9cb7c26e1f60b9a1979.html">Function publish_raceline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a588d8ae799d233a401111c312e73364f.html">Function rafi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a88dbb5d572b05732c37a6ab53f130fab.html">Function rifa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_simple__speed_8hpp_1a8666ead035190ddbcd155650aeb37176.html">Function speed_proportional_steering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_simple__speed_8hpp_1ad8b9a9a94d3855969c36725c280f7d5b.html">Function speed_steer_and_fov</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1acdd4d10e13db0d62aa9bf84a812c7895.html">Function visualize_markers(const rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr&amp;, const ubm_interfaces::msg::CustomHeader&amp;, float, float)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1ad8bece350207dd4e9535a9776f902abc.html">Function visualize_markers(const rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr&amp;, const ubm_interfaces::msg::CustomHeader&amp;, float, float)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_interfaces.html">Directory interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_utils.html">Directory utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_acceleration_controller.hpp.html">File acceleration_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_control_node.hpp.html">File control_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_ControlStructDataType.hpp.html">File ControlStructDataType.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_dummy_controller.hpp.html">File dummy_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_ebs_controller.hpp.html">File ebs_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_lap_performance.hpp.html">File lap_performance.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_interfaces_mission_controller.hpp.html">File mission_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_path_follower_node.hpp.html">File path_follower_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_ros_utils.hpp.html">File ros_utils.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_simple_speed.hpp.html">File simple_speed.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_skidpad_controller.hpp.html">File skidpad_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_interfaces_speed_generator.hpp.html">File speed_generator.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_speed_profile_generator.hpp.html">File speed_profile_generator.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_speed_sae_controller.hpp.html">File speed_sae_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_spline_and_polynomial.hpp.html">File spline_and_polynomial.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_steering_controller.hpp.html">File steering_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_utils.hpp.html">File utils.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/LICENSE.html">LICENSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#simple-control-algorithms">Simple Control Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#reactive-algorithms-nodes-overview">Reactive Algorithms Nodes Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#libraries">Libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">simple_control_algos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Struct RosInterfaces</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/structcontrol__structs_1_1RosInterfaces.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-rosinterfaces">
+<span id="exhale-struct-structcontrol-structs-1-1rosinterfaces"></span><h1>Struct RosInterfaces<a class="headerlink" href="#struct-rosinterfaces" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_ControlStructDataType.hpp.html#file-include-controlstructdatatype-hpp"><span class="std std-ref">File ControlStructDataType.hpp</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfacesE">
+<span id="_CPPv3N15control_structs13RosInterfacesE"></span><span id="_CPPv2N15control_structs13RosInterfacesE"></span><span id="control_structs::RosInterfaces"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RosInterfaces</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfacesE" title="Link to this definition"></a><br /></dt>
+<dd><p>ROS interfaces (pub/sub/service/timer) and header base. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces14default_clock_E">
+<span id="_CPPv3N15control_structs13RosInterfaces14default_clock_E"></span><span id="_CPPv2N15control_structs13RosInterfaces14default_clock_E"></span><span id="control_structs::RosInterfaces::default_clock___rclcpp::Clock"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1af1f93bc5f9fd5dfaadd2b8f322991efd"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Clock</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">default_clock_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces14default_clock_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Default clock for throttled log messages. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces16odom_subscriber_E">
+<span id="_CPPv3N15control_structs13RosInterfaces16odom_subscriber_E"></span><span id="_CPPv2N15control_structs13RosInterfaces16odom_subscriber_E"></span><span id="control_structs::RosInterfaces::odom_subscriber___rclcpp::Subscription:nav_msgs::msg::Odometry:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1a639f593f4b21c36cb6f0520656cc271f"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Subscription</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">nav_msgs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Odometry</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">odom_subscriber_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces16odom_subscriber_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Subscriber for odometry. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces25start_control_subscriber_E">
+<span id="_CPPv3N15control_structs13RosInterfaces25start_control_subscriber_E"></span><span id="_CPPv2N15control_structs13RosInterfaces25start_control_subscriber_E"></span><span id="control_structs::RosInterfaces::start_control_subscriber___rclcpp::Subscription:ubm_interfaces::msg::CustomBool:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1ab90f829241c81630b4a829e1f454a81a"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Subscription</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CustomBool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start_control_subscriber_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces25start_control_subscriber_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Subscriber for start control messages. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces23path_limits_subscriber_E">
+<span id="_CPPv3N15control_structs13RosInterfaces23path_limits_subscriber_E"></span><span id="_CPPv2N15control_structs13RosInterfaces23path_limits_subscriber_E"></span><span id="control_structs::RosInterfaces::path_limits_subscriber___rclcpp::Subscription:ubm_interfaces::msg::PathLimits:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1aa528cb81bd6a3165d955141f508a9a2e"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Subscription</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PathLimits</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">path_limits_subscriber_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces23path_limits_subscriber_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Subscriber for path limits. used in skidpad and ebs. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces17is_ready_service_E">
+<span id="_CPPv3N15control_structs13RosInterfaces17is_ready_service_E"></span><span id="_CPPv2N15control_structs13RosInterfaces17is_ready_service_E"></span><span id="control_structs::RosInterfaces::is_ready_service___rclcpp::Service:ubm_interfaces::srv::IsReady:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1a7a652bf1b4cd675f9243b11e768b2062"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Service</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">srv</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">IsReady</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_ready_service_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces17is_ready_service_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Service for readiness check. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces23params_callback_handle_E">
+<span id="_CPPv3N15control_structs13RosInterfaces23params_callback_handle_E"></span><span id="_CPPv2N15control_structs13RosInterfaces23params_callback_handle_E"></span><span id="control_structs::RosInterfaces::params_callback_handle___rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1a47396bcdcb5e50c37534cfd5d343acec"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">node_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OnSetParametersCallbackHandle</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">params_callback_handle_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces23params_callback_handle_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Handle for dynamic parameter updates. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces16drive_publisher_E">
+<span id="_CPPv3N15control_structs13RosInterfaces16drive_publisher_E"></span><span id="_CPPv2N15control_structs13RosInterfaces16drive_publisher_E"></span><span id="control_structs::RosInterfaces::drive_publisher___rclcpp::Publisher:ubm_interfaces::msg::Control:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1a0056eceacec1201d68a0eda0d584feca"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Publisher</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Control</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drive_publisher_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces16drive_publisher_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Publisher for control commands. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces27look_ahead_point_publisher_E">
+<span id="_CPPv3N15control_structs13RosInterfaces27look_ahead_point_publisher_E"></span><span id="_CPPv2N15control_structs13RosInterfaces27look_ahead_point_publisher_E"></span><span id="control_structs::RosInterfaces::look_ahead_point_publisher___rclcpp::Publisher:geometry_msgs::msg::PoseStamped:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1a4a518fbdd48b447fe2454c96fe8195ff"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Publisher</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">geometry_msgs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PoseStamped</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">look_ahead_point_publisher_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces27look_ahead_point_publisher_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Publisher for look-ahead point visualization. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces28car_nearest_point_publisher_E">
+<span id="_CPPv3N15control_structs13RosInterfaces28car_nearest_point_publisher_E"></span><span id="_CPPv2N15control_structs13RosInterfaces28car_nearest_point_publisher_E"></span><span id="control_structs::RosInterfaces::car_nearest_point_publisher___rclcpp::Publisher:geometry_msgs::msg::PoseStamped:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1ab8ca64b2c68a4aec87b6bab68ea1ecda"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Publisher</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">geometry_msgs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PoseStamped</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">car_nearest_point_publisher_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces28car_nearest_point_publisher_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Publisher for nearest point visualization. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces27status_emergency_publisher_E">
+<span id="_CPPv3N15control_structs13RosInterfaces27status_emergency_publisher_E"></span><span id="_CPPv2N15control_structs13RosInterfaces27status_emergency_publisher_E"></span><span id="control_structs::RosInterfaces::status_emergency_publisher___rclcpp::Publisher:ubm_interfaces::msg::Emergency:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1abf0175404993e5a7a6b328d11ce67d23"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Publisher</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Emergency</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">status_emergency_publisher_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces27status_emergency_publisher_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Publisher for emergency status messages. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces22status_info_publisher_E">
+<span id="_CPPv3N15control_structs13RosInterfaces22status_info_publisher_E"></span><span id="_CPPv2N15control_structs13RosInterfaces22status_info_publisher_E"></span><span id="control_structs::RosInterfaces::status_info_publisher___rclcpp::Publisher:ubm_interfaces::msg::Info:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1a7d5ea591ecbabbd736e3d52025a36225"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Publisher</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Info</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">status_info_publisher_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces22status_info_publisher_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Publisher for info status messages. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces27mission_finished_publisher_E">
+<span id="_CPPv3N15control_structs13RosInterfaces27mission_finished_publisher_E"></span><span id="_CPPv2N15control_structs13RosInterfaces27mission_finished_publisher_E"></span><span id="control_structs::RosInterfaces::mission_finished_publisher___rclcpp::Publisher:ubm_interfaces::msg::MissionFinished:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1a5400b3fbae34f5dd3beea5ca3a8b5f87"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Publisher</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MissionFinished</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mission_finished_publisher_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces27mission_finished_publisher_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Publisher for mission finished messages. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces23steering_pid_publisher_E">
+<span id="_CPPv3N15control_structs13RosInterfaces23steering_pid_publisher_E"></span><span id="_CPPv2N15control_structs13RosInterfaces23steering_pid_publisher_E"></span><span id="control_structs::RosInterfaces::steering_pid_publisher___rclcpp::Publisher:ubm_interfaces::msg::PIDControlOutput:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1abb3e3309c4176bbca90262a6a8daefae"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Publisher</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PIDControlOutput</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">steering_pid_publisher_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces23steering_pid_publisher_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Publisher for steering PID output aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces21torque_pid_publisher_E">
+<span id="_CPPv3N15control_structs13RosInterfaces21torque_pid_publisher_E"></span><span id="_CPPv2N15control_structs13RosInterfaces21torque_pid_publisher_E"></span><span id="control_structs::RosInterfaces::torque_pid_publisher___rclcpp::Publisher:ubm_interfaces::msg::PIDControlOutput:::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1a92887a8ccab9a5cf1a3f1763fa2b9546"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Publisher</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PIDControlOutput</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">torque_pid_publisher_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces21torque_pid_publisher_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Publisher for torque PID output aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces15watchdog_timer_E">
+<span id="_CPPv3N15control_structs13RosInterfaces15watchdog_timer_E"></span><span id="_CPPv2N15control_structs13RosInterfaces15watchdog_timer_E"></span><span id="control_structs::RosInterfaces::watchdog_timer___rclcpp::TimerBase::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1ac5bc44d29dbd8775b2c69e62582087c9"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">TimerBase</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">watchdog_timer_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces15watchdog_timer_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces14control_timer_E">
+<span id="_CPPv3N15control_structs13RosInterfaces14control_timer_E"></span><span id="_CPPv2N15control_structs13RosInterfaces14control_timer_E"></span><span id="control_structs::RosInterfaces::control_timer___rclcpp::TimerBase::SharedPtr"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1a000382edc919a9ab8fc36ee1433d98df"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">TimerBase</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SharedPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">control_timer_</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces14control_timer_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Timer for control loop execution. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15control_structs13RosInterfaces13common_headerE">
+<span id="_CPPv3N15control_structs13RosInterfaces13common_headerE"></span><span id="_CPPv2N15control_structs13RosInterfaces13common_headerE"></span><span id="control_structs::RosInterfaces::common_header__ubm_interfaces::msg::CustomHeader"></span><span class="target" id="structcontrol__structs_1_1RosInterfaces_1a603a5485d97c2d5daad23e78e646b7dc"></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CustomHeader</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">common_header</span></span></span><a class="headerlink" href="#_CPPv4N15control_structs13RosInterfaces13common_headerE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structcontrol__structs_1_1PathFollowerParameters.html" class="btn btn-neutral float-left" title="Struct PathFollowerParameters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structcontrol__structs_1_1SpeedProfileParameters.html" class="btn btn-neutral float-right" title="Struct SpeedProfileParameters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;simple_control_algos&gt; Contributors. License: MIT Lincense.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

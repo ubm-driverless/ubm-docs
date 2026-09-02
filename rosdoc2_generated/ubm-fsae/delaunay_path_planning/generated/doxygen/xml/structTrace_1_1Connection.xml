@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structTrace_1_1Connection" kind="struct" language="C++" prot="private">
+    <compoundname>Trace::Connection</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structTrace_1_1Connection_1a865251bbe9f04e07d908130742f72cef" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classEdge" kindref="compound">Edge</ref></type>
+        <definition>const Edge Trace::Connection::edge</definition>
+        <argsstring></argsstring>
+        <name>edge</name>
+        <briefdescription>
+<para>A pointer to the <ref refid="classEdge" kindref="compound">Edge</ref> it represents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="39" column="16" bodyfile="include/structures/Trace.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrace_1_1Connection_1a3478a56aa0369302e3903402e0eaa72c" prot="public" static="no" mutable="no">
+        <type>const std::shared_ptr&lt; Connection &gt;</type>
+        <definition>const std::shared_ptr&lt;Connection&gt; Trace::Connection::before</definition>
+        <argsstring></argsstring>
+        <name>before</name>
+        <briefdescription>
+<para>A shared pointer to the Connection that goes before this. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="44" column="27" bodyfile="include/structures/Trace.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrace_1_1Connection_1ae8ec48b7a6f0d63bc88f9ae02e42946b" prot="public" static="no" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t Trace::Connection::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Size of the <ref refid="classTrace" kindref="compound">Trace</ref>, i.e. how long (number of midpoints) is the Connection chain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="49" column="18" bodyfile="include/structures/Trace.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrace_1_1Connection_1acd7e73cfa353d868b26f2967f77a5798" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Trace::Connection::len</definition>
+        <argsstring></argsstring>
+        <name>len</name>
+        <briefdescription>
+<para>Length of the <ref refid="classTrace" kindref="compound">Trace</ref>, i.e. cumulative distance between midpoints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="54" column="18" bodyfile="include/structures/Trace.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrace_1_1Connection_1a52986cea27037c7692ac271f3ed0f8db" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Trace::Connection::heur</definition>
+        <argsstring></argsstring>
+        <name>heur</name>
+        <briefdescription>
+<para>The heuristic of this append. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="59" column="18" bodyfile="include/structures/Trace.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrace_1_1Connection_1a9fbc069630b639beb6a137c12b2204de" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Trace::Connection::sumHeur</definition>
+        <argsstring></argsstring>
+        <name>sumHeur</name>
+        <briefdescription>
+<para>The sum of heuristics of the Connection chain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="64" column="18" bodyfile="include/structures/Trace.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrace_1_1Connection_1a4f3da75df9384e0e7f939614adc2d6b2" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Trace::Connection::avgTrackWidth</definition>
+        <argsstring></argsstring>
+        <name>avgTrackWidth</name>
+        <briefdescription>
+<para>The average track width of all the <ref refid="classTrace" kindref="compound">Trace</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="69" column="18" bodyfile="include/structures/Trace.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrace_1_1Connection_1a32582360b11d0263d42dab895d91dbed" prot="public" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool Trace::Connection::loopClosed</definition>
+        <argsstring></argsstring>
+        <name>loopClosed</name>
+        <briefdescription>
+<para>Whether or not the <ref refid="classTrace" kindref="compound">Trace</ref> has closed the loop (and thus it contains (or may contain) repeated <ref refid="classEdge" kindref="compound">Edge(s)</ref>). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="75" column="16" bodyfile="include/structures/Trace.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrace_1_1Connection_1a2ca9e35768748eeda9f4399c7870fb92" prot="public" static="no" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t Trace::Connection::connectionsSinceLoopClosed</definition>
+        <argsstring></argsstring>
+        <name>connectionsSinceLoopClosed</name>
+        <briefdescription>
+<para>Number of Connections since the loop was closed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="80" column="20" bodyfile="include/structures/Trace.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structTrace_1_1Connection_1adce95d68c1b19206d9668b66a81fdc83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Trace::Connection::Connection</definition>
+        <argsstring>(const Edge &amp;edge, const double &amp;heur, const bool &amp;loopClosed, std::shared_ptr&lt; Connection &gt; before)</argsstring>
+        <name>Connection</name>
+        <param>
+          <type>const <ref refid="classEdge" kindref="compound">Edge</ref> &amp;</type>
+          <declname>edge</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>heur</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>loopClosed</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; Connection &gt;</type>
+          <declname>before</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Connection object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">heur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">loopClosed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">before</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="90" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structTrace_1_1Connection_1a5a3852ef6fbfd0c73cfdbfa16f42d266" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Trace::Connection::containsEdge</definition>
+        <argsstring>(const Edge &amp;_edge) const</argsstring>
+        <name>containsEdge</name>
+        <param>
+          <type>const <ref refid="classEdge" kindref="compound">Edge</ref> &amp;</type>
+          <declname>_edge</declname>
+        </param>
+        <briefdescription>
+<para>Returns if there is <emphasis>_edge</emphasis> in the Connection chain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">_edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="97" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structTrace_1_1Connection_1a83f9a525610fa39a993393ba5c8d69fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Connection &amp;conn)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const Connection &amp;</type>
+          <declname>conn</declname>
+        </param>
+        <briefdescription>
+<para>Cout operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">conn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Trace.hpp" line="105" column="12" bodyfile="include/structures/Trace.hpp" bodystart="105" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inner class of <ref refid="classTrace" kindref="compound">Trace</ref>, contains information about last append and a pointer to the Connection before. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Edge</label>
+        <link refid="classEdge"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>n0</edgelabel>
+          <edgelabel>n1</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cNode</label>
+        <link refid="classcNode"/>
+      </node>
+      <node id="1">
+        <label>Trace::Connection</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>edge</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/structures/Trace.hpp" line="35" column="19" bodyfile="include/structures/Trace.hpp" bodystart="35" bodyend="111"/>
+    <listofallmembers>
+      <member refid="structTrace_1_1Connection_1a4f3da75df9384e0e7f939614adc2d6b2" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>avgTrackWidth</name></member>
+      <member refid="structTrace_1_1Connection_1a3478a56aa0369302e3903402e0eaa72c" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>before</name></member>
+      <member refid="structTrace_1_1Connection_1adce95d68c1b19206d9668b66a81fdc83" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>Connection</name></member>
+      <member refid="structTrace_1_1Connection_1a2ca9e35768748eeda9f4399c7870fb92" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>connectionsSinceLoopClosed</name></member>
+      <member refid="structTrace_1_1Connection_1a5a3852ef6fbfd0c73cfdbfa16f42d266" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>containsEdge</name></member>
+      <member refid="structTrace_1_1Connection_1a865251bbe9f04e07d908130742f72cef" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>edge</name></member>
+      <member refid="structTrace_1_1Connection_1a52986cea27037c7692ac271f3ed0f8db" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>heur</name></member>
+      <member refid="structTrace_1_1Connection_1acd7e73cfa353d868b26f2967f77a5798" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>len</name></member>
+      <member refid="structTrace_1_1Connection_1a32582360b11d0263d42dab895d91dbed" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>loopClosed</name></member>
+      <member refid="structTrace_1_1Connection_1a83f9a525610fa39a993393ba5c8d69fd" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>operator&lt;&lt;</name></member>
+      <member refid="structTrace_1_1Connection_1ae8ec48b7a6f0d63bc88f9ae02e42946b" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>size</name></member>
+      <member refid="structTrace_1_1Connection_1a9fbc069630b639beb6a137c12b2204de" prot="public" virt="non-virtual"><scope>Trace::Connection</scope><name>sumHeur</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

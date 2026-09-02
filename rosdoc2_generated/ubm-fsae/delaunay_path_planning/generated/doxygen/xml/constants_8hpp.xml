@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="constants_8hpp" kind="file" language="C++">
+    <compoundname>constants.hpp</compoundname>
+    <includes local="no">cstdint</includes>
+    <includedby refid="WayComputer_8hpp" local="yes">include/modules/WayComputer.hpp</includedby>
+    <includedby refid="Edge_8hpp" local="yes">include/structures/Edge.hpp</includedby>
+    <includedby refid="Node_8hpp" local="yes">include/structures/Node.hpp</includedby>
+    <includedby refid="Failsafe_8hpp" local="yes">include/utils/Failsafe.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="1">
+        <label>include/utils/constants.hpp</label>
+        <link refid="constants_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>include/structures/TraceBuffer.hpp</label>
+        <link refid="TraceBuffer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>include/structures/Node.hpp</label>
+        <link refid="Node_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/modules/WayComputer.hpp</label>
+        <link refid="WayComputer_8hpp"/>
+      </node>
+      <node id="3">
+        <label>include/structures/Edge.hpp</label>
+        <link refid="Edge_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/modules/DelaunayTri.hpp</label>
+        <link refid="DelaunayTri_8hpp"/>
+      </node>
+      <node id="10">
+        <label>include/structures/Circle.hpp</label>
+        <link refid="Circle_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/utils/constants.hpp</label>
+        <link refid="constants_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/structures/Trace.hpp</label>
+        <link refid="Trace_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>include/utils/Failsafe.hpp</label>
+        <link refid="Failsafe_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/structures/Triangle.hpp</label>
+        <link refid="Triangle_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>include/utils/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="constants_8hpp_1a2560be515eb6295f164cb2897f21ab0a" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr uint32_t</type>
+        <definition>constexpr uint32_t HASH_SHIFT_NUM</definition>
+        <argsstring></argsstring>
+        <name>HASH_SHIFT_NUM</name>
+        <initializer>= 21</initializer>
+        <briefdescription>
+<para>This number is the shifting number that will be used when computing hashes for objects whose hash is defined by more than one element. Given that the object whose hash has more elements is the triangle (3), this number has been adjuested accordingly, i.e. 21*3 == 63, 63 &lt; 64 bits. It also means that the biggest cone ID MUST be less than 2^HASH_SHIFT_NUM-3. The last &quot;3&quot; is because of the super triangle. We must be able to create it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/constants.hpp" line="23" column="20" bodyfile="include/utils/constants.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="constants_8hpp_1ab0286703dce27a45639c18be64dea23a" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr uint32_t</type>
+        <definition>constexpr uint32_t MIN_LOOP_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MIN_LOOP_SIZE</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+<para>Minimum number of midpoints required to be able to make a loop closure. No loop will be closed if its size is less than <emphasis>MIN_LOOP_SIZE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/constants.hpp" line="30" column="20" bodyfile="include/utils/constants.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="constants_8hpp_1a873778234c49de3bb62a226ea796fda4" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double SAME_MIDPOINT_DIST_THRESHOLD</definition>
+        <argsstring></argsstring>
+        <name>SAME_MIDPOINT_DIST_THRESHOLD</name>
+        <initializer>= 0.2</initializer>
+        <briefdescription>
+<para>If two midpoints have a distance (between each other) of less than <emphasis>SAME_MIDPOINT_DIST_THRESHOLD</emphasis> meters, it will be considered to be the same point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/constants.hpp" line="37" column="18" bodyfile="include/utils/constants.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="constants_8hpp_1ad494329bee2902da03f43a0dad726215" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr uint32_t</type>
+        <definition>constexpr uint32_t MIN_FAILSAFE_WAY_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MIN_FAILSAFE_WAY_SIZE</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>Minimum number of midpoints ahead of the car so that a failsafe is not triggered. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>If set to 1: the failsafe will be activated only when the car does not have any midpoints ahead.</para>
+</listitem><listitem><para>If set to 2: the failsafe will be activated when the car has still one midpoint ahead. This option may be preferrable.</para>
+</listitem><listitem><para>Any bigger value will trigger the failsafe sooner. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/constants.hpp" line="48" column="20" bodyfile="include/utils/constants.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="constants_8hpp_1a53b1dd65b593ae0971a3d16073e44bad" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double CAR_HASNT_MOVED_START_RADIUS</definition>
+        <argsstring></argsstring>
+        <name>CAR_HASNT_MOVED_START_RADIUS</name>
+        <initializer>= 0.3</initializer>
+        <briefdescription>
+<para>When the car is in start position, we want the path to recalculate not from car&apos;s closest midpoint but from 0 (empty <ref refid="classTrace" kindref="compound">Trace</ref>). To do this we need to know if the car is in a starting position. We will recalculate path from scratch (see <ref refid="classTrace_1a938a138ddd37dff4e25f2608713827a0" kindref="member">Trace::trimByLocal()</ref>) basically if car&apos;s outside a radius from (0,0). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/constants.hpp" line="57" column="18" bodyfile="include/utils/constants.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains the constants used throughout the project. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Oriol Gorriz (<ulink url="mailto:origovi2000@gmail.com">origovi2000@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-05-01</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2022 BCN eMotorsport </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/utils/constants.hpp"/>
+  </compounddef>
+</doxygen>

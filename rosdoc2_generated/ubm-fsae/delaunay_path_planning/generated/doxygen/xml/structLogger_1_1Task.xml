@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structLogger_1_1Task" kind="struct" language="C++" prot="public">
+    <compoundname>Logger::Task</compoundname>
+    <includes local="no">Logger.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structLogger_1_1Task_1abd7fb344c7026f98e4e56da28532383a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Logger::Task::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <briefdescription>
+<para>True if the timer is running. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="35" column="10" bodyfile="include/utils/Logger.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLogger_1_1Task_1a5a651eb03905eb62e613ffd2c882f534" prot="public" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point Logger::Task::start_time</definition>
+        <argsstring></argsstring>
+        <name>start_time</name>
+        <briefdescription>
+<para>Start time of the task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="36" column="43" bodyfile="include/utils/Logger.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLogger_1_1Task_1acadfeb3562b8626e3c855f70480d74ca" prot="public" static="no" mutable="no">
+        <type>std::chrono::duration&lt; double &gt;</type>
+        <definition>std::chrono::duration&lt;double&gt; Logger::Task::last_duration</definition>
+        <argsstring></argsstring>
+        <name>last_duration</name>
+        <briefdescription>
+<para>Duration of the last run. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="37" column="27" bodyfile="include/utils/Logger.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLogger_1_1Task_1a868ecd3770703ad19d9c759d231e3437" prot="public" static="no" mutable="no">
+        <type>std::chrono::duration&lt; double &gt;</type>
+        <definition>std::chrono::duration&lt;double&gt; Logger::Task::max_duration</definition>
+        <argsstring></argsstring>
+        <name>max_duration</name>
+        <briefdescription>
+<para>Maximum duration recorded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="38" column="27" bodyfile="include/utils/Logger.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLogger_1_1Task_1a6c2a0c161be055f465368d1c909fa4d9" prot="public" static="no" mutable="no">
+        <type>std::chrono::duration&lt; double &gt;</type>
+        <definition>std::chrono::duration&lt;double&gt; Logger::Task::total_time_active</definition>
+        <argsstring></argsstring>
+        <name>total_time_active</name>
+        <briefdescription>
+<para>Total accumulated time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="39" column="27" bodyfile="include/utils/Logger.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLogger_1_1Task_1ae12b6074f5b48576019314e3884d5319" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Logger::Task::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+<para>Number of times the task was timed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="40" column="9" bodyfile="include/utils/Logger.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structLogger_1_1Task_1aaa96b73e48ff20d218e65427e5b1cc8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Logger::Task::Task</definition>
+        <argsstring>(std::chrono::steady_clock::time_point start)</argsstring>
+        <name>Task</name>
+        <param>
+          <type>std::chrono::steady_clock::time_point</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="structLogger_1_1Task" kindref="compound">Task</ref> object and start timing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start time point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="46" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structLogger_1_1Task_1a1102095b3c5080eac8539a6c34dff9d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logger::Task::activate</definition>
+        <argsstring>(std::chrono::steady_clock::time_point now)</argsstring>
+        <name>activate</name>
+        <param>
+          <type>std::chrono::steady_clock::time_point</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+<para>Activate (start) the timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>now</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current time point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structLogger_1_1Task_1a838ef8ad38b882fbdcb2d1b16b39fb6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::chrono::duration&lt; double &gt;</type>
+        <definition>std::chrono::duration&lt;double&gt; Logger::Task::stop</definition>
+        <argsstring>(std::chrono::steady_clock::time_point now)</argsstring>
+        <name>stop</name>
+        <param>
+          <type>std::chrono::steady_clock::time_point</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+<para>Stop the timer and update statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>now</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current time point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Duration of this run. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="59" column="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Stores timing metrics for a named code section. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/utils/Logger.hpp" line="34" column="13" bodyfile="include/utils/Logger.hpp" bodystart="34" bodyend="60"/>
+    <listofallmembers>
+      <member refid="structLogger_1_1Task_1a1102095b3c5080eac8539a6c34dff9d1" prot="public" virt="non-virtual"><scope>Logger::Task</scope><name>activate</name></member>
+      <member refid="structLogger_1_1Task_1abd7fb344c7026f98e4e56da28532383a" prot="public" virt="non-virtual"><scope>Logger::Task</scope><name>active</name></member>
+      <member refid="structLogger_1_1Task_1ae12b6074f5b48576019314e3884d5319" prot="public" virt="non-virtual"><scope>Logger::Task</scope><name>count</name></member>
+      <member refid="structLogger_1_1Task_1acadfeb3562b8626e3c855f70480d74ca" prot="public" virt="non-virtual"><scope>Logger::Task</scope><name>last_duration</name></member>
+      <member refid="structLogger_1_1Task_1a868ecd3770703ad19d9c759d231e3437" prot="public" virt="non-virtual"><scope>Logger::Task</scope><name>max_duration</name></member>
+      <member refid="structLogger_1_1Task_1a5a651eb03905eb62e613ffd2c882f534" prot="public" virt="non-virtual"><scope>Logger::Task</scope><name>start_time</name></member>
+      <member refid="structLogger_1_1Task_1a838ef8ad38b882fbdcb2d1b16b39fb6c" prot="public" virt="non-virtual"><scope>Logger::Task</scope><name>stop</name></member>
+      <member refid="structLogger_1_1Task_1aaa96b73e48ff20d218e65427e5b1cc8e" prot="public" virt="non-virtual"><scope>Logger::Task</scope><name>Task</name></member>
+      <member refid="structLogger_1_1Task_1a6c2a0c161be055f465368d1c909fa4d9" prot="public" virt="non-virtual"><scope>Logger::Task</scope><name>total_time_active</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

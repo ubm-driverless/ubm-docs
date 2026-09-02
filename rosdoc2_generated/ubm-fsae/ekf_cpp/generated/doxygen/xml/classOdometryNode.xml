@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classOdometryNode" kind="class" language="C++" prot="public">
+    <compoundname>OdometryNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classOdometryNode_1a11a259a301c841996fbe20158a49a2d7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OdometryNode::watchdog_period_</definition>
+        <argsstring></argsstring>
+        <name>watchdog_period_</name>
+        <briefdescription>
+<para>Watchdog period in milliseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="55" column="9" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1af129f114dd01ad1e834f887a29a917f8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::gps_velocity_threshold_</definition>
+        <argsstring></argsstring>
+        <name>gps_velocity_threshold_</name>
+        <briefdescription>
+<para>Threshold for GPS velocity to determine if the vehicle is moving. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="56" column="12" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1abae599e8597102ecd73633bb66d3542a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::encoder_rpm_threshold_</definition>
+        <argsstring></argsstring>
+        <name>encoder_rpm_threshold_</name>
+        <briefdescription>
+<para>Threshold for encoder RPM to determine if the vehicle is moving. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="57" column="12" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1ab22caf16eacfbb2ea366886cd2fb8e1c" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point OdometryNode::current_time</definition>
+        <argsstring></argsstring>
+        <name>current_time</name>
+        <briefdescription>
+<para>Current time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="60" column="52" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a46801158d0146a72bb38794f87f940d5" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point OdometryNode::last_time</definition>
+        <argsstring></argsstring>
+        <name>last_time</name>
+        <briefdescription>
+<para>Last time the sensor data was received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="61" column="52" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a000a89f6faf0ee064dfc1f487b9dd8b4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OdometryNode::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <briefdescription>
+<para>Flag indicating if the filter has been initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="64" column="10" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1af630b88c92b65617e3e4d770fe87a51d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool OdometryNode::data_received</definition>
+        <argsstring></argsstring>
+        <name>data_received</name>
+        <briefdescription>
+<para>Flag to check if data has been received, initialized to true to avoid immediate shutdown. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="65" column="10" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a5745b483d8e598316151c40d0f5284f5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OdometryNode::iteration_count</definition>
+        <argsstring></argsstring>
+        <name>iteration_count</name>
+        <briefdescription>
+<para>Counter for the number of iterations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="68" column="9" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a148cc7214e2cf5bd204d513e9d946c9c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="69" column="12" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1af5b8e9c77c0d1facdfb05212f5f59739" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="69" column="14" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a5cff1083cebfea62cd6ec8a53e4023d2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <briefdescription>
+<para>State variables for the EKF (x, y position and heading angle) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="69" column="16" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1aa7649d187405b48d1664af92ffc198b9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::vx</definition>
+        <argsstring></argsstring>
+        <name>vx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="70" column="12" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a5571209f6a5640d15f338022e3906810" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::yaw_rate</definition>
+        <argsstring></argsstring>
+        <name>yaw_rate</name>
+        <briefdescription>
+<para>Linear velocity in m/s. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="70" column="15" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a84886ce160ad1409f482cd0e8e0a05f8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryNode::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <briefdescription>
+<para>Time step in seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="71" column="12" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a4bd96d2df9904ba6effdeafdd5d42c06" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::sensor_topic_</definition>
+        <argsstring></argsstring>
+        <name>sensor_topic_</name>
+        <briefdescription>
+<para>Topic for sensor subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="74" column="17" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a39e9e807bc27005f3da7f68b0f5aa73f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::pose_visualization_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_visualization_topic_</name>
+        <briefdescription>
+<para>Topic for Pose visualization publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="75" column="17" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a53798a399087bd7072ed1f5d448e2bf9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::pose_publisher_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_publisher_topic_</name>
+        <briefdescription>
+<para>Topic for Odometry publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="76" column="17" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a02b9d1c8709b856012ebb668782cf4c2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::status_topic_</definition>
+        <argsstring></argsstring>
+        <name>status_topic_</name>
+        <briefdescription>
+<para>Topic for status publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="77" column="17" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1aa87b8b92c131040a28e92f76825e1d1d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OdometryNode::is_ready_service_name_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_name_</name>
+        <briefdescription>
+<para>Service name for readiness check. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="78" column="17" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a8539e5733c9602f9ddfc10056ec37557" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::VCUData &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::VCUData&gt;::SharedPtr OdometryNode::sensor_sub_</definition>
+        <argsstring></argsstring>
+        <name>sensor_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subscriber for VCU message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="81" column="38" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a23e91bc4818adad20304bbfa55cd68b1" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PoseStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr OdometryNode::pose_visualization_publisher_</definition>
+        <argsstring></argsstring>
+        <name>pose_visualization_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for visualization on FoxGlove. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="82" column="35" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1afa30060028105c4065aa10cdcf59be37" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Odometry&gt;::SharedPtr OdometryNode::pose_publisher_</definition>
+        <argsstring></argsstring>
+        <name>pose_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for Odometry estimate Timer for watchdog functionality. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="83" column="35" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1aeb6bb812ff0d3877f6e7716d584d1013" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::Emergency &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::Emergency&gt;::SharedPtr OdometryNode::status_emergency_publisher_</definition>
+        <argsstring></argsstring>
+        <name>status_emergency_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for emergency status messages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="84" column="35" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1a564ddd4d8b055d0e60525cd0add83ed9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; ubm_interfaces::srv::IsReady &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;ubm_interfaces::srv::IsReady&gt;::SharedPtr OdometryNode::is_ready_service_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="85" column="33" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOdometryNode_1ae1a70afea47c54a6c155f2bccdf3b9fe" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr OdometryNode::watchdog_timer_</definition>
+        <argsstring></argsstring>
+        <name>watchdog_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="86" column="34" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classOdometryNode_1a76ed703f462b2388384bf14f6e84ca6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OdometryNode::OdometryNode</definition>
+        <argsstring>()</argsstring>
+        <name>OdometryNode</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classOdometryNode" kindref="compound">OdometryNode</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the node, sets up parameters, and creates subscribers and publishers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="50" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classOdometryNode_1ac84cf39f26a5b3b01a17a92628f4444b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::initialize_ros_communication</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_ros_communication</name>
+        <briefdescription>
+<para>Set up ROS subscribers and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a subscription to the raw VCU data and publishers for Odometry and visualization topics. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="94" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometryNode_1ac8183a5bf6edb9f7bbbad14de27340bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::get_sensor_data</definition>
+        <argsstring>(const ubm_interfaces::msg::VCUData::SharedPtr sensor_msg)</argsstring>
+        <name>get_sensor_data</name>
+        <param>
+          <type>const ubm_interfaces::msg::VCUData::SharedPtr</type>
+          <declname>sensor_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback function to process incoming VCU messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is triggered when a new VCU message is received. It processes the data so as to obtain a measurement that can be used by the EKF. The method also handles the initialization of the filter</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensor_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the received VCU message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="104" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometryNode_1af131601ae074dbb1674bfed74fe5f3b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::publish_odometry</definition>
+        <argsstring>()</argsstring>
+        <name>publish_odometry</name>
+        <briefdescription>
+<para>Publishes the current odometry estimate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method publishes the current state (x, y, theta) as an Odometry message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="111" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometryNode_1ab88b6fb8b311a6cea6eecb87d6b78d15" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::watchdog_callback</definition>
+        <argsstring>()</argsstring>
+        <name>watchdog_callback</name>
+        <briefdescription>
+<para>Watchdog callback to check if data has been received. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called periodically to check if data has been received. If no data is received for a certain period, it shuts down the node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="118" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometryNode_1ae7a60587e0f095a6c98f49477128c11e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OdometryNode::handle_service</definition>
+        <argsstring>(const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt; request, std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt; response)</argsstring>
+        <name>handle_service</name>
+        <param>
+          <type>const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+<para>Handle the readiness service request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the service request to check if the node is ready.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The service request. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The service response. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/odometry_node.hpp" line="128" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>OdometryNode</label>
+        <link refid="classOdometryNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>OdometryNode</label>
+        <link refid="classOdometryNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/ekf_cpp/odometry_node.hpp" line="43" column="39" bodyfile="include/ekf_cpp/odometry_node.hpp" bodystart="43" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classOdometryNode_1ab22caf16eacfbb2ea366886cd2fb8e1c" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>current_time</name></member>
+      <member refid="classOdometryNode_1af630b88c92b65617e3e4d770fe87a51d" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>data_received</name></member>
+      <member refid="classOdometryNode_1a84886ce160ad1409f482cd0e8e0a05f8" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>dt</name></member>
+      <member refid="classOdometryNode_1abae599e8597102ecd73633bb66d3542a" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>encoder_rpm_threshold_</name></member>
+      <member refid="classOdometryNode_1ac8183a5bf6edb9f7bbbad14de27340bf" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>get_sensor_data</name></member>
+      <member refid="classOdometryNode_1af129f114dd01ad1e834f887a29a917f8" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>gps_velocity_threshold_</name></member>
+      <member refid="classOdometryNode_1ae7a60587e0f095a6c98f49477128c11e" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>handle_service</name></member>
+      <member refid="classOdometryNode_1ac84cf39f26a5b3b01a17a92628f4444b" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>initialize_ros_communication</name></member>
+      <member refid="classOdometryNode_1a000a89f6faf0ee064dfc1f487b9dd8b4" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>initialized</name></member>
+      <member refid="classOdometryNode_1a564ddd4d8b055d0e60525cd0add83ed9" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>is_ready_service_</name></member>
+      <member refid="classOdometryNode_1aa87b8b92c131040a28e92f76825e1d1d" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>is_ready_service_name_</name></member>
+      <member refid="classOdometryNode_1a5745b483d8e598316151c40d0f5284f5" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>iteration_count</name></member>
+      <member refid="classOdometryNode_1a46801158d0146a72bb38794f87f940d5" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>last_time</name></member>
+      <member refid="classOdometryNode_1a76ed703f462b2388384bf14f6e84ca6c" prot="public" virt="non-virtual"><scope>OdometryNode</scope><name>OdometryNode</name></member>
+      <member refid="classOdometryNode_1afa30060028105c4065aa10cdcf59be37" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>pose_publisher_</name></member>
+      <member refid="classOdometryNode_1a53798a399087bd7072ed1f5d448e2bf9" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>pose_publisher_topic_</name></member>
+      <member refid="classOdometryNode_1a23e91bc4818adad20304bbfa55cd68b1" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>pose_visualization_publisher_</name></member>
+      <member refid="classOdometryNode_1a39e9e807bc27005f3da7f68b0f5aa73f" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>pose_visualization_topic_</name></member>
+      <member refid="classOdometryNode_1af131601ae074dbb1674bfed74fe5f3b0" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>publish_odometry</name></member>
+      <member refid="classOdometryNode_1a8539e5733c9602f9ddfc10056ec37557" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>sensor_sub_</name></member>
+      <member refid="classOdometryNode_1a4bd96d2df9904ba6effdeafdd5d42c06" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>sensor_topic_</name></member>
+      <member refid="classOdometryNode_1aeb6bb812ff0d3877f6e7716d584d1013" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>status_emergency_publisher_</name></member>
+      <member refid="classOdometryNode_1a02b9d1c8709b856012ebb668782cf4c2" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>status_topic_</name></member>
+      <member refid="classOdometryNode_1a5cff1083cebfea62cd6ec8a53e4023d2" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>theta</name></member>
+      <member refid="classOdometryNode_1aa7649d187405b48d1664af92ffc198b9" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>vx</name></member>
+      <member refid="classOdometryNode_1ab88b6fb8b311a6cea6eecb87d6b78d15" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>watchdog_callback</name></member>
+      <member refid="classOdometryNode_1a11a259a301c841996fbe20158a49a2d7" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>watchdog_period_</name></member>
+      <member refid="classOdometryNode_1ae1a70afea47c54a6c155f2bccdf3b9fe" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>watchdog_timer_</name></member>
+      <member refid="classOdometryNode_1a148cc7214e2cf5bd204d513e9d946c9c" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>x</name></member>
+      <member refid="classOdometryNode_1af5b8e9c77c0d1facdfb05212f5f59739" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>y</name></member>
+      <member refid="classOdometryNode_1a5571209f6a5640d15f338022e3906810" prot="private" virt="non-virtual"><scope>OdometryNode</scope><name>yaw_rate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

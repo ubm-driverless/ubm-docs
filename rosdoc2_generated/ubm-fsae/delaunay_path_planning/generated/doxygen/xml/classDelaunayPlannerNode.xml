@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classDelaunayPlannerNode" kind="class" language="C++" prot="public">
+    <compoundname>DelaunayPlannerNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a8c3492ab23da965f028cfd82a0a16226" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DelaunayPlannerNode::cones_topic_</definition>
+        <argsstring></argsstring>
+        <name>cones_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to cone messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="43" column="17" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1ae74139d012b773668ff8bac9a1a4c8f8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DelaunayPlannerNode::pose_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to pose messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="44" column="17" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a4d9742a8ecef149d297aca6754472d77" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DelaunayPlannerNode::reactive_raceline_topic_</definition>
+        <argsstring></argsstring>
+        <name>reactive_raceline_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the reactive raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="45" column="17" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a7d8f6416d39c2ef10a726f34f7a1e4dd" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::LandmarkArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::LandmarkArray&gt;::SharedPtr DelaunayPlannerNode::cones_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>cones_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="48" column="38" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1ace3cb680c4cb6ab679fdf20ac7173a85" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr DelaunayPlannerNode::pose_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>pose_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="49" column="38" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a1cad3908383cd8de120d27f736ef890f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::PathLimits &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::PathLimits&gt;::SharedPtr DelaunayPlannerNode::full_reactive_raceline_publisher_</definition>
+        <argsstring></argsstring>
+        <name>full_reactive_raceline_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="50" column="35" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a38da3f8e1806edec1ec2408920f09dbe" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::PathLimits &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::PathLimits&gt;::SharedPtr DelaunayPlannerNode::partial_reactive_raceline_publisher_</definition>
+        <argsstring></argsstring>
+        <name>partial_reactive_raceline_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="51" column="35" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a0046f63f0ad1d2b8b7a9b2b63c09629b" prot="private" static="no" mutable="no">
+        <type>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr DelaunayPlannerNode::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="52" column="71" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a33e3654479c9c7e88338d403f5a000dd" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; ubm_interfaces::srv::IsReady &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;ubm_interfaces::srv::IsReady&gt;::SharedPtr DelaunayPlannerNode::is_ready_service_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="53" column="33" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1aea99c7331a53c73dd210354e4c116fce" prot="private" static="no" mutable="no">
+        <type><ref refid="classWayComputer" kindref="compound">WayComputer</ref> *</type>
+        <definition>WayComputer* DelaunayPlannerNode::wayComputer</definition>
+        <argsstring></argsstring>
+        <name>wayComputer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="56" column="17" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a0b68206bf7121b36e7a874bfef21a2d0" prot="private" static="no" mutable="no">
+        <type><ref refid="classDelaunayTri" kindref="compound">DelaunayTri</ref> *</type>
+        <definition>DelaunayTri* DelaunayPlannerNode::delaunayTri</definition>
+        <argsstring></argsstring>
+        <name>delaunayTri</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="57" column="17" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1ab2f0749148dfb1c896614362db26fa94" prot="private" static="no" mutable="no">
+        <type><ref refid="classParams" kindref="compound">Params</ref> *</type>
+        <definition>Params* DelaunayPlannerNode::params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="58" column="12" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a55d7d31cb7cec81a6cb6fdfd1711cd78" prot="private" static="no" mutable="no">
+        <type><ref refid="definitions_8hpp_1a3d52158136e186e3457f54700a800c59" kindref="member">TriangleSet</ref></type>
+        <definition>TriangleSet DelaunayPlannerNode::triangles</definition>
+        <argsstring></argsstring>
+        <name>triangles</name>
+        <briefdescription>
+<para>Set of triangles representing the Delaunay triangulation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="61" column="17" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a2d6c7597baab769ed5d4e7b4ee8248fe" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint DelaunayPlannerNode::mission</definition>
+        <argsstring></argsstring>
+        <name>mission</name>
+        <briefdescription>
+<para>Current mission identifier. (Currently unused) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="64" column="10" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a9236201bc33268f7f30fe91d323a894c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DelaunayPlannerNode::is_loop_closed</definition>
+        <argsstring></argsstring>
+        <name>is_loop_closed</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Flag to indicate if a loop closure has been detected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="65" column="10" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDelaunayPlannerNode_1a43b4256b1277b24e87374e4e78098e66" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DelaunayPlannerNode::first_loop_closure</definition>
+        <argsstring></argsstring>
+        <name>first_loop_closure</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="66" column="10" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDelaunayPlannerNode_1ac14803bfd9a7349cb49e42fea405e663" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DelaunayPlannerNode::DelaunayPlannerNode</definition>
+        <argsstring>()</argsstring>
+        <name>DelaunayPlannerNode</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classDelaunayPlanner" kindref="compound">DelaunayPlanner</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the ROS node and sets up parameters and communication. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="39" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classDelaunayPlannerNode_1aa0dd3bbf8468e56114adb8ed7e20dffb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult DelaunayPlannerNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Handles parameter updates dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classVector" kindref="compound">Vector</ref> of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of parameter update operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="74" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classDelaunayPlannerNode_1a7acf0be9402ac4ef47b4a36f03e39cf2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelaunayPlannerNode::cones_callback</definition>
+        <argsstring>(const ubm_interfaces::msg::LandmarkArray::SharedPtr cones_msg)</argsstring>
+        <name>cones_callback</name>
+        <param>
+          <type>const ubm_interfaces::msg::LandmarkArray::SharedPtr</type>
+          <declname>cones_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle cones updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cones message containing the detected cones. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="81" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDelaunayPlannerNode_1ac9004a0d39bf69cf897352e797870642" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelaunayPlannerNode::pose_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr pose_msg)</argsstring>
+        <name>pose_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>pose_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle pose updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odometry message containing the current pose of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="88" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDelaunayPlannerNode_1a049e34feab100625dfad982aa58878f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelaunayPlannerNode::handle_service</definition>
+        <argsstring>(const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt; request, std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt; response)</argsstring>
+        <name>handle_service</name>
+        <param>
+          <type>const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+<para>Handle the readiness service request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the service request to check if the node is ready.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The service request. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The service response. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="98" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+      <node id="1">
+        <label>DelaunayPlannerNode</label>
+        <link refid="classDelaunayPlannerNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+      <node id="1">
+        <label>DelaunayPlannerNode</label>
+        <link refid="classDelaunayPlannerNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/delaunay_path_planning/delaunay_planner_node.hpp" line="32" column="46" bodyfile="include/delaunay_path_planning/delaunay_planner_node.hpp" bodystart="32" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classDelaunayPlannerNode_1a7acf0be9402ac4ef47b4a36f03e39cf2" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>cones_callback</name></member>
+      <member refid="classDelaunayPlannerNode_1a7d8f6416d39c2ef10a726f34f7a1e4dd" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>cones_subscriber_</name></member>
+      <member refid="classDelaunayPlannerNode_1a8c3492ab23da965f028cfd82a0a16226" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>cones_topic_</name></member>
+      <member refid="classDelaunayPlannerNode_1ac14803bfd9a7349cb49e42fea405e663" prot="public" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>DelaunayPlannerNode</name></member>
+      <member refid="classDelaunayPlannerNode_1a0b68206bf7121b36e7a874bfef21a2d0" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>delaunayTri</name></member>
+      <member refid="classDelaunayPlannerNode_1a43b4256b1277b24e87374e4e78098e66" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>first_loop_closure</name></member>
+      <member refid="classDelaunayPlannerNode_1a1cad3908383cd8de120d27f736ef890f" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>full_reactive_raceline_publisher_</name></member>
+      <member refid="classDelaunayPlannerNode_1a049e34feab100625dfad982aa58878f6" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>handle_service</name></member>
+      <member refid="classDelaunayPlannerNode_1a9236201bc33268f7f30fe91d323a894c" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>is_loop_closed</name></member>
+      <member refid="classDelaunayPlannerNode_1a33e3654479c9c7e88338d403f5a000dd" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>is_ready_service_</name></member>
+      <member refid="classDelaunayPlannerNode_1a2d6c7597baab769ed5d4e7b4ee8248fe" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>mission</name></member>
+      <member refid="classDelaunayPlannerNode_1ab2f0749148dfb1c896614362db26fa94" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>params</name></member>
+      <member refid="classDelaunayPlannerNode_1aa0dd3bbf8468e56114adb8ed7e20dffb" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>params_callback</name></member>
+      <member refid="classDelaunayPlannerNode_1a0046f63f0ad1d2b8b7a9b2b63c09629b" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>params_callback_handle_</name></member>
+      <member refid="classDelaunayPlannerNode_1a38da3f8e1806edec1ec2408920f09dbe" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>partial_reactive_raceline_publisher_</name></member>
+      <member refid="classDelaunayPlannerNode_1ac9004a0d39bf69cf897352e797870642" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>pose_callback</name></member>
+      <member refid="classDelaunayPlannerNode_1ace3cb680c4cb6ab679fdf20ac7173a85" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>pose_subscriber_</name></member>
+      <member refid="classDelaunayPlannerNode_1ae74139d012b773668ff8bac9a1a4c8f8" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>pose_topic_</name></member>
+      <member refid="classDelaunayPlannerNode_1a4d9742a8ecef149d297aca6754472d77" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>reactive_raceline_topic_</name></member>
+      <member refid="classDelaunayPlannerNode_1a55d7d31cb7cec81a6cb6fdfd1711cd78" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>triangles</name></member>
+      <member refid="classDelaunayPlannerNode_1aea99c7331a53c73dd210354e4c116fce" prot="private" virt="non-virtual"><scope>DelaunayPlannerNode</scope><name>wayComputer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

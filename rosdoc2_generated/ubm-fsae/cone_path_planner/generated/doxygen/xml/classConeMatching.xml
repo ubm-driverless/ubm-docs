@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classConeMatching" kind="class" language="C++" prot="public">
+    <compoundname>ConeMatching</compoundname>
+    <includes local="no">cone_matching.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classConeMatching_1acf76db36509fa71a359690474ec3d1a3" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* ConeMatching::min_track_width_ptr</definition>
+        <argsstring></argsstring>
+        <name>min_track_width_ptr</name>
+        <briefdescription>
+<para>Pointer to the min_track_width_ parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_matching.hpp" line="73" column="17" bodyfile="include/cone_path_planner/cone_matching.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConeMatching_1aeeca7474216435e5ab21d7802b1ed65b" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* ConeMatching::max_search_range_ptr</definition>
+        <argsstring></argsstring>
+        <name>max_search_range_ptr</name>
+        <briefdescription>
+<para>Pointer to the max_search_range_ parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_matching.hpp" line="74" column="17" bodyfile="include/cone_path_planner/cone_matching.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConeMatching_1ada4c647983f21f860e3fe2e8845a4214" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* ConeMatching::max_search_angle_ptr</definition>
+        <argsstring></argsstring>
+        <name>max_search_angle_ptr</name>
+        <briefdescription>
+<para>Pointer to the max_search_angle_ parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_matching.hpp" line="75" column="17" bodyfile="include/cone_path_planner/cone_matching.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classConeMatching_1a14d880e663a67211c127bb3eceabb6c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConeMatching::ConeMatching</definition>
+        <argsstring>()</argsstring>
+        <name>ConeMatching</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classConeMatching" kindref="compound">ConeMatching</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_matching.hpp" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classConeMatching_1a3aa7b8b9c527044f69983bec638eab03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConeMatching::initialize</definition>
+        <argsstring>(const float &amp;min_track_width, const float &amp;max_search_range, const float &amp;max_search_angle)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>min_track_width</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>max_search_range</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>max_search_angle</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the cone matching system with sorted cones and SLAM position and direction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min_track_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum track width. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_search_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum search range for matching cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_search_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum search angle for matching cones. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_matching.hpp" line="31" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classConeMatching_1ad566023731f803950e7c58a700e00818" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; std::vector&lt; std::vector&lt; float &gt; &gt;, std::vector&lt; std::vector&lt; float &gt; &gt;, std::vector&lt; int &gt;, std::vector&lt; int &gt;, std::vector&lt; int &gt;, std::vector&lt; int &gt; &gt;</type>
+        <definition>std::tuple&lt; std::vector&lt;std::vector&lt;float&gt; &gt;, std::vector&lt;std::vector&lt;float&gt; &gt;, std::vector&lt;int&gt;, std::vector&lt;int&gt;, std::vector&lt;int&gt;, std::vector&lt;int&gt; &gt; ConeMatching::run_cone_matching</definition>
+        <argsstring>(const std::array&lt; float, 2 &gt; car_position, const std::array&lt; float, 2 &gt; car_direction, const std::vector&lt; std::array&lt; float, 2 &gt;&gt; cones, std::vector&lt; int &gt; left_configuration, std::vector&lt; int &gt; right_configuration)</argsstring>
+        <name>run_cone_matching</name>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_position</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_direction</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::array&lt; float, 2 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>left_configuration</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>right_configuration</declname>
+        </param>
+        <briefdescription>
+<para>Runs the cone matching algorithm for both sides and returns the matched virtual cones and their indices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method calculates virtual cones for both the left and right sides of the track, then matches cones on the left side to cones on the right side and vice versa. It returns the cones along with match indices for each side.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>car_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cones_by_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones sorted by type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of left cone configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of right cone configurations. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tuple containing:<itemizedlist>
+<listitem><para>Left cones with virtual cones included.</para>
+</listitem><listitem><para>Right cones with virtual cones included.</para>
+</listitem><listitem><para>Match indices for left to right matching.</para>
+</listitem><listitem><para>Match indices for right to left matching.</para>
+</listitem><listitem><para>Virtual mask for left cones.</para>
+</listitem><listitem><para>Virtual mask for right cones. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_matching.hpp" line="63" column="2"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for matching cones on both sides of the track. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is responsible for finding virtual cones on both sides of the track based on a set of given parameters (such as track width and maximum search parameters). The matching process considers cones on both sides of the track, calculates virtual cones where necessary, and returns matching results in terms of cone positions and match indices. </para>
+    </detaileddescription>
+    <location file="include/cone_path_planner/cone_matching.hpp" line="17" column="19" bodyfile="include/cone_path_planner/cone_matching.hpp" bodystart="17" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classConeMatching_1a14d880e663a67211c127bb3eceabb6c1" prot="public" virt="non-virtual"><scope>ConeMatching</scope><name>ConeMatching</name></member>
+      <member refid="classConeMatching_1a3aa7b8b9c527044f69983bec638eab03" prot="public" virt="non-virtual"><scope>ConeMatching</scope><name>initialize</name></member>
+      <member refid="classConeMatching_1ada4c647983f21f860e3fe2e8845a4214" prot="private" virt="non-virtual"><scope>ConeMatching</scope><name>max_search_angle_ptr</name></member>
+      <member refid="classConeMatching_1aeeca7474216435e5ab21d7802b1ed65b" prot="private" virt="non-virtual"><scope>ConeMatching</scope><name>max_search_range_ptr</name></member>
+      <member refid="classConeMatching_1acf76db36509fa71a359690474ec3d1a3" prot="private" virt="non-virtual"><scope>ConeMatching</scope><name>min_track_width_ptr</name></member>
+      <member refid="classConeMatching_1ad566023731f803950e7c58a700e00818" prot="public" virt="non-virtual"><scope>ConeMatching</scope><name>run_cone_matching</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

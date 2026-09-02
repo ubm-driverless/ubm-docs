@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="socket_8hpp" kind="file" language="C++">
+    <compoundname>socket.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/socket.h</includes>
+    <includes local="no">netinet/in.h</includes>
+    <includes local="no">netdb.h</includes>
+    <includes local="no">arpa/inet.h</includes>
+    <includes local="no">sys/wait.h</includes>
+    <includes local="no">signal.h</includes>
+    <includes local="no">poll.h</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">random</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">rclcpp/logging.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/custom_int32.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/custom_header.hpp</includes>
+    <includes local="no">ubm_interfaces/msg/control.hpp</includes>
+    <incdepgraph>
+      <node id="21">
+        <label>ubm_interfaces/msg/custom_header.hpp</label>
+      </node>
+      <node id="9">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="11">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="16">
+        <label>limits</label>
+      </node>
+      <node id="1">
+        <label>include/joy_tcp_communication/socket.hpp</label>
+        <link refid="socket_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>errno.h</label>
+      </node>
+      <node id="15">
+        <label>stdexcept</label>
+      </node>
+      <node id="14">
+        <label>poll.h</label>
+      </node>
+      <node id="22">
+        <label>ubm_interfaces/msg/control.hpp</label>
+      </node>
+      <node id="19">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="18">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="10">
+        <label>netdb.h</label>
+      </node>
+      <node id="17">
+        <label>random</label>
+      </node>
+      <node id="7">
+        <label>sys/types.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="4">
+        <label>unistd.h</label>
+      </node>
+      <node id="13">
+        <label>signal.h</label>
+      </node>
+      <node id="12">
+        <label>sys/wait.h</label>
+      </node>
+      <node id="20">
+        <label>ubm_interfaces/msg/custom_int32.hpp</label>
+      </node>
+      <node id="8">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="socket_8hpp_1a4754ca299b65a2ed77bc84d67b7cdad2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_listener_socket</definition>
+        <argsstring>(const char *port, int timeout_ms)</argsstring>
+        <name>get_listener_socket</name>
+        <param>
+          <type>const char *</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout_ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joy_tcp_communication/socket.hpp" line="28" column="5" bodyfile="include/joy_tcp_communication/socket.hpp" bodystart="28" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="socket_8hpp_1a44c7425dbcf78e8abef233c114626846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int set_socket_scs_timeout</definition>
+        <argsstring>(int sockfd, int timeout_ms)</argsstring>
+        <name>set_socket_scs_timeout</name>
+        <param>
+          <type>int</type>
+          <declname>sockfd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout_ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joy_tcp_communication/socket.hpp" line="83" column="5" bodyfile="include/joy_tcp_communication/socket.hpp" bodystart="83" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="socket_8hpp_1a294867ba9d7ff47e39d421134d8e12ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* get_in_addr</definition>
+        <argsstring>(struct sockaddr *sa)</argsstring>
+        <name>get_in_addr</name>
+        <param>
+          <type>struct sockaddr *</type>
+          <declname>sa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joy_tcp_communication/socket.hpp" line="99" column="6" bodyfile="include/joy_tcp_communication/socket.hpp" bodystart="99" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="socket_8hpp_1aa5cf7b2f0402743015383f01919c96b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sendall</definition>
+        <argsstring>(int s, void *buf, int len)</argsstring>
+        <name>sendall</name>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joy_tcp_communication/socket.hpp" line="107" column="5" bodyfile="include/joy_tcp_communication/socket.hpp" bodystart="107" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="socket_8hpp_1ab3e1c6fa3dad0543b8d453a563d90c0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int recvall</definition>
+        <argsstring>(int s, void *buf, int len)</argsstring>
+        <name>recvall</name>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joy_tcp_communication/socket.hpp" line="126" column="5" bodyfile="include/joy_tcp_communication/socket.hpp" bodystart="126" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="socket_8hpp_1a251dfa6b00da7da73210a3ebdc0af58a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mrecvall</definition>
+        <argsstring>(int s, void *buf, int len, int num_messages)</argsstring>
+        <name>mrecvall</name>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_messages</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joy_tcp_communication/socket.hpp" line="145" column="5" bodyfile="include/joy_tcp_communication/socket.hpp" bodystart="145" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="socket_8hpp_1a294dda4935e55e6d7c072cc7f54e31d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int receive_data_from_joy</definition>
+        <argsstring>(int sockfd, int tcp_msg_queue_len)</argsstring>
+        <name>receive_data_from_joy</name>
+        <param>
+          <type>int</type>
+          <declname>sockfd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tcp_msg_queue_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/joy_tcp_communication/socket.hpp" line="165" column="5" bodyfile="include/joy_tcp_communication/socket.hpp" bodystart="165" bodyend="220"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/joy_tcp_communication/socket.hpp"/>
+  </compounddef>
+</doxygen>

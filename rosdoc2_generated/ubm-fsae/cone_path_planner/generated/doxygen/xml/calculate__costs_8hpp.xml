@@ -1,0 +1,590 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="calculate__costs_8hpp" kind="file" language="C++">
+    <compoundname>calculate_costs.hpp</compoundname>
+    <includes local="no">armadillo</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">vector</includes>
+    <includes refid="costs__utils_8hpp" local="yes">cone_path_planner/costs_utils.hpp</includes>
+    <includes refid="cone__matching_8hpp" local="yes">cone_path_planner/cone_matching.hpp</includes>
+    <includes refid="matching__utils_8hpp" local="yes">cone_path_planner/matching_utils.hpp</includes>
+    <includes refid="arma__conversions_8hpp" local="yes">cone_path_planner/arma_conversions.hpp</includes>
+    <includes refid="utils_8hpp" local="yes">cone_path_planner/utils.hpp</includes>
+    <includes refid="nearby__cone__search_8hpp" local="yes">cone_path_planner/nearby_cone_search.hpp</includes>
+    <includedby refid="cone__sorting_8hpp" local="yes">include/cone_path_planner/cone_sorting.hpp</includedby>
+    <includedby refid="nearby__cone__search_8hpp" local="yes">include/cone_path_planner/nearby_cone_search.hpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>limits</label>
+      </node>
+      <node id="6">
+        <label>cone_path_planner/costs_utils.hpp</label>
+        <link refid="costs__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/calculate_costs.hpp</label>
+        <link refid="calculate__costs_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>armadillo</label>
+      </node>
+      <node id="10">
+        <label>cone_path_planner/cone_common_types.hpp</label>
+        <link refid="cone__common__types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tuple</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>array</label>
+      </node>
+      <node id="8">
+        <label>unordered_map</label>
+      </node>
+      <node id="7">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="calculate__costs_8hpp_1ac281d88f622d5f38138a8fad88162efa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec calculate_cost</definition>
+        <argsstring>(const std::vector&lt; std::array&lt; float, 3 &gt;&gt; &amp;points, const std::vector&lt; std::vector&lt; int &gt;&gt; &amp;configurations, ConeType cone_type, const std::array&lt; float, 2 &gt; &amp;vehicle_position, const std::array&lt; float, 2 &gt; &amp;vehicle_direction, bool return_individual_costs)</argsstring>
+        <name>calculate_cost</name>
+        <param>
+          <type>const std::vector&lt; std::array&lt; float, 3 &gt;&gt; &amp;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt;&gt; &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; float, 2 &gt; &amp;</type>
+          <declname>vehicle_position</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; float, 2 &gt; &amp;</type>
+          <declname>vehicle_direction</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>return_individual_costs</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the total or individual costs for each cone configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone positions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone index configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cones (LEFT or RIGHT). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vehicle_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current vehicle position (not used currently). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vehicle_direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current vehicle direction. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>return_individual_costs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, returns individual cost components; otherwise, returns the total cost. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Arma vector of floats containing either the total costs or individual costs. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_costs.hpp" line="34" column="13" declfile="include/cone_path_planner/calculate_costs.hpp" declline="34" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__costs_8hpp_1afa7fb04b1b861d62bb407089d3d9d525" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fmat</type>
+        <definition>arma::fmat calc_angle_cost_for_configuration</definition>
+        <argsstring>(const arma::mat &amp;points_xy, const arma::imat &amp;configurations, ConeType cone_type)</argsstring>
+        <name>calc_angle_cost_for_configuration</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>points_xy</declname>
+        </param>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the cost related to angles between cones for each configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points_xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone 2D coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone index configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cones (LEFT or RIGHT). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of angle costs for each configuration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_costs.hpp" line="50" column="13" declfile="include/cone_path_planner/calculate_costs.hpp" declline="50" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__costs_8hpp_1add94f442c07531308faabac90c3952d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::mat</type>
+        <definition>arma::mat calc_angle_to_next</definition>
+        <argsstring>(const arma::mat &amp;points_xy, const arma::imat &amp;configurations)</argsstring>
+        <name>calc_angle_to_next</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>points_xy</declname>
+        </param>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <briefdescription>
+<para>Computes angles between sequences of three consecutive cones. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points_xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone 2D coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone index configurations. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Matrix of angles for each configuration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_costs.hpp" line="62" column="12" declfile="include/cone_path_planner/calculate_costs.hpp" declline="62" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__costs_8hpp_1afbd59df9b1495b853a9d1fb8d71c98cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec calc_distance_cost</definition>
+        <argsstring>(const arma::mat &amp;points_xy, const arma::imat &amp;configurations, double threshold_distance)</argsstring>
+        <name>calc_distance_cost</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>points_xy</declname>
+        </param>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>threshold_distance</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the cost based on exceeding a threshold distance between consecutive cones. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points_xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone 2D coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone index configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum acceptable distance between consecutive cones. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of distance costs for each configuration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_costs.hpp" line="74" column="13" declfile="include/cone_path_planner/calculate_costs.hpp" declline="74" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__costs_8hpp_1a4d03e83c147c5138c5d612f2d857926a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec calc_number_of_cones_cost</definition>
+        <argsstring>(const arma::imat &amp;configurations)</argsstring>
+        <name>calc_number_of_cones_cost</name>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <briefdescription>
+<para>Calculates a cost inversely proportional to the number of cones in each configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone index configurations. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of costs based on the number of cones. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_costs.hpp" line="85" column="13" declfile="include/cone_path_planner/calculate_costs.hpp" declline="85" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__costs_8hpp_1a33781df33b8442575ed1bdf644370758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec calc_initial_direction_cost</definition>
+        <argsstring>(const arma::mat &amp;points_xy, const arma::imat &amp;configurations, const arma::fvec &amp;vehicle_direction)</argsstring>
+        <name>calc_initial_direction_cost</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>points_xy</declname>
+        </param>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>vehicle_direction</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the cost based on the deviation of the initial direction from the vehicle&apos;s heading. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points_xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone 2D coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone index configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vehicle_direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current vehicle direction vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of initial direction costs for each configuration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_costs.hpp" line="96" column="13" declfile="include/cone_path_planner/calculate_costs.hpp" declline="96" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__costs_8hpp_1a7d0b3ef396ea9dd46be8dccf5124572a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec calc_wrong_direction_cost</definition>
+        <argsstring>(const arma::mat &amp;points_xy, const arma::imat &amp;configurations, ConeType cone_type)</argsstring>
+        <name>calc_wrong_direction_cost</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>points_xy</declname>
+        </param>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the cost for configurations making significant wrong turns based on cone type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points_xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone 2D coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone index configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cones (LEFT or RIGHT). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of wrong direction costs for each configuration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_costs.hpp" line="109" column="13" declfile="include/cone_path_planner/calculate_costs.hpp" declline="109" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__costs_8hpp_1a77c2a4a835e5ff549cada39eb0019328" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec calc_change_of_direction_cost</definition>
+        <argsstring>(const arma::mat &amp;points_xy, const arma::imat &amp;configurations, const arma::fvec &amp;vehicle_direction)</argsstring>
+        <name>calc_change_of_direction_cost</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>points_xy</declname>
+        </param>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>vehicle_direction</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the cost based on the number of changes in direction along a configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points_xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone 2D coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone index configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vehicle_direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial direction of the car vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of change of direction costs for each configuration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_costs.hpp" line="122" column="13" declfile="include/cone_path_planner/calculate_costs.hpp" declline="122" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__costs_8hpp_1a38092e96a6fb5dc9cf1eee51727cf52a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec calc_cones_on_either_cost</definition>
+        <argsstring>(const arma::mat &amp;points_xy, const arma::imat &amp;configurations, ConeType cone_type)</argsstring>
+        <name>calc_cones_on_either_cost</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>points_xy</declname>
+        </param>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <briefdescription>
+<para>Calculates a cost based on the distribution of cones on either side of the intended path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points_xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone 2D coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone index configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cones (LEFT or RIGHT). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of costs based on cone side distribution for each configuration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_costs.hpp" line="135" column="13" declfile="include/cone_path_planner/calculate_costs.hpp" declline="135" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for calculating costs associated with cone configurations. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains function declarations for calculating various costs related to cone configurations, including angle costs, distance costs, and other configuration-related metrics. </para>
+    </detaileddescription>
+    <location file="include/cone_path_planner/calculate_costs.hpp"/>
+  </compounddef>
+</doxygen>

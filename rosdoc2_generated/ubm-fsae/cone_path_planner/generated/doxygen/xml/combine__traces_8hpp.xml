@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="combine__traces_8hpp" kind="file" language="C++">
+    <compoundname>combine_traces.hpp</compoundname>
+    <includes refid="arma__conversions_8hpp" local="yes">cone_path_planner/arma_conversions.hpp</includes>
+    <includes refid="utils_8hpp" local="yes">cone_path_planner/utils.hpp</includes>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="combine__traces_8hpp_1a107440bbe44b1606772efb83e30703d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt; &gt;</type>
+        <definition>std::pair&lt;std::vector&lt;int&gt;, std::vector&lt;int&gt; &gt; calculate_final_configurations</definition>
+        <argsstring>(std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, std::vector&lt; std::vector&lt; int &gt;&gt; right_configurations, arma::fvec right_costs, std::vector&lt; std::vector&lt; int &gt;&gt; left_configurations, arma::fvec left_costs)</argsstring>
+        <name>calculate_final_configurations</name>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; int &gt;&gt;</type>
+          <declname>right_configurations</declname>
+        </param>
+        <param>
+          <type>arma::fvec</type>
+          <declname>right_costs</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; int &gt;&gt;</type>
+          <declname>left_configurations</declname>
+        </param>
+        <param>
+          <type>arma::fvec</type>
+          <declname>left_costs</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the final best configuration combining the right and left configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones represented as arrays of three floats [x, y, type]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The calculated right configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_costs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The calculated right costs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left_configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The calculated left configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left_costs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The calculated left costs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>right_configuration, left_configuration </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/combine_traces.hpp" line="18" column="11" declfile="include/cone_path_planner/combine_traces.hpp" declline="18" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="combine__traces_8hpp_1a6e2ff2e677ab191b5851911796612f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt; &gt;</type>
+        <definition>std::pair&lt;std::vector&lt;int&gt;, std::vector&lt;int&gt; &gt; handle_same_cone_in_both_configs</definition>
+        <argsstring>(std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, std::vector&lt; int &gt; right_configuration, std::vector&lt; int &gt; left_configuration)</argsstring>
+        <name>handle_same_cone_in_both_configs</name>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>right_configuration</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>left_configuration</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the new configuration if a cone is present in both configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones represented as arrays of three floats [x, y, type]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The best right configuration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The best left configuration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of vectors containing the new right and left configurations. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/combine_traces.hpp" line="34" column="11" declfile="include/cone_path_planner/combine_traces.hpp" declline="34" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="combine__traces_8hpp_1ae2809b468aad10064ce70963e37b0f72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; int, int &gt;</type>
+        <definition>std::pair&lt;int,int&gt; calculate_new_lenght</definition>
+        <argsstring>(std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, std::vector&lt; int &gt; right_configuration, std::vector&lt; int &gt; left_configuration, int right_intersection_index, int left_intersection_index)</argsstring>
+        <name>calculate_new_lenght</name>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>right_configuration</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>left_configuration</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>right_intersection_index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>left_intersection_index</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the new lenght of the configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones represented as arrays of three floats [x, y, type]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The calculated right configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left_configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The calculated left configurations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_intersection_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the intersection in the right configuration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left_intersection_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the intersection in the left configuration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of integers containing the new right and left indices. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/combine_traces.hpp" line="50" column="11" declfile="include/cone_path_planner/combine_traces.hpp" declline="50" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="combine__traces_8hpp_1a6a27c87f5613d3e4dc0158a5f5819fdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float calculate_angle_change</definition>
+        <argsstring>(std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, std::vector&lt; int &gt; configuration, int position_in_config)</argsstring>
+        <name>calculate_angle_change</name>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>configuration</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position_in_config</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the angle change. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones represented as arrays of three floats [x, y, type]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The indexes configuration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position_in_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position in the configuration. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/combine_traces.hpp" line="64" column="7" declfile="include/cone_path_planner/combine_traces.hpp" declline="64" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/combine_traces.hpp"/>
+  </compounddef>
+</doxygen>

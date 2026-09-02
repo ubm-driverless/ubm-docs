@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="cone__matching_8hpp" kind="file" language="C++">
+    <compoundname>cone_matching.hpp</compoundname>
+    <includes refid="utils_8hpp" local="yes">cone_path_planner/utils.hpp</includes>
+    <includes refid="functional__cone__matching_8hpp" local="yes">cone_path_planner/functional_cone_matching.hpp</includes>
+    <includes refid="matching__utils_8hpp" local="yes">cone_path_planner/matching_utils.hpp</includes>
+    <includes refid="arma__conversions_8hpp" local="yes">cone_path_planner/arma_conversions.hpp</includes>
+    <includedby refid="calculate__costs_8hpp" local="yes">include/cone_path_planner/calculate_costs.hpp</includedby>
+    <includedby refid="cone__path__planner__node_8hpp" local="yes">include/cone_path_planner/cone_path_planner_node.hpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/cone_path_planner/calculate_costs.hpp</label>
+        <link refid="calculate__costs_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/cone_matching.hpp</label>
+        <link refid="cone__matching_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classConeMatching" prot="public">ConeMatching</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/cone_matching.hpp"/>
+  </compounddef>
+</doxygen>

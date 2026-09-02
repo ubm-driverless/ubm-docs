@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlive__telemetry_1_1Downsampler" kind="class" language="C++" prot="public">
+    <compoundname>live_telemetry::Downsampler</compoundname>
+    <basecompoundref refid="classlive__telemetry_1_1IDataProcessor" prot="public" virt="non-virtual">live_telemetry::IDataProcessor&lt; T &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classlive__telemetry_1_1Downsampler_1a2abef976df98bb1f2e5a94e0edd9984e" prot="public" static="no">
+        <type>T</type>
+        <definition>using live_telemetry::Downsampler&lt; T &gt;::MessageType =  T</definition>
+        <argsstring></argsstring>
+        <name>MessageType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="25" column="3" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classlive__telemetry_1_1Downsampler_1a1ea1f0f466aac8d9a0868c9d2f202238" prot="public" static="no">
+        <type>std::function&lt; void(const T &amp;)&gt;</type>
+        <definition>using live_telemetry::Downsampler&lt; T &gt;::OnForwardCallback =  std::function&lt;void(const T&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>OnForwardCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="26" column="3" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1Downsampler_1ab76b0a7eb472fb24bd72ab5538dd9a02" prot="private" static="no" mutable="no">
+        <type><ref refid="structlive__telemetry_1_1DownsamplerConfig" kindref="compound">DownsamplerConfig</ref></type>
+        <definition>DownsamplerConfig live_telemetry::Downsampler&lt; T &gt;::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="98" column="21" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1Downsampler_1a465ea17e5a34b18132a222bf420b9a91" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; size_t &gt;</type>
+        <definition>std::atomic&lt;size_t&gt; live_telemetry::Downsampler&lt; T &gt;::processed_count_</definition>
+        <argsstring></argsstring>
+        <name>processed_count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="99" column="15" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1Downsampler_1a4f997fbfedcb43e65c8d85640fe10947" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; size_t &gt;</type>
+        <definition>std::atomic&lt;size_t&gt; live_telemetry::Downsampler&lt; T &gt;::forwarded_count_</definition>
+        <argsstring></argsstring>
+        <name>forwarded_count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="100" column="15" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1Downsampler_1a8dd7434ef9c5b27ebbb8d9a7b9248bf8" prot="private" static="no" mutable="no">
+        <type>OnForwardCallback</type>
+        <definition>OnForwardCallback live_telemetry::Downsampler&lt; T &gt;::on_forward_</definition>
+        <argsstring></argsstring>
+        <name>on_forward_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="101" column="21" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1ab5596e8a3184d9a40413217e70eead64" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>live_telemetry::Downsampler&lt; T &gt;::Downsampler</definition>
+        <argsstring>(const DownsamplerConfig &amp;config)</argsstring>
+        <name>Downsampler</name>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1DownsamplerConfig" kindref="compound">DownsamplerConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="28" column="12" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1a92456056c4d3921b2a114730cd39c683" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::Downsampler&lt; T &gt;::setOnForwardCallback</definition>
+        <argsstring>(OnForwardCallback callback)</argsstring>
+        <name>setOnForwardCallback</name>
+        <param>
+          <type>OnForwardCallback</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="35" column="8" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1a567504b6ad88168a3239d2a2515cb19d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::Downsampler&lt; T &gt;::process</definition>
+        <argsstring>(const T &amp;msg) override</argsstring>
+        <name>process</name>
+        <reimplements refid="classlive__telemetry_1_1IDataProcessor_1a34093788c13fcdd1aa088a7257b5231f">process</reimplements>
+        <param>
+          <type>const T &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="39" column="8" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="39" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1a4f72d8f849477b04f3690abd5443a031" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int live_telemetry::Downsampler&lt; T &gt;::getRatio</definition>
+        <argsstring>() const</argsstring>
+        <name>getRatio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="53" column="7" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1a76f196e23a67b819cd317ffa38706584" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::Downsampler&lt; T &gt;::setRatio</definition>
+        <argsstring>(int ratio)</argsstring>
+        <name>setRatio</name>
+        <param>
+          <type>int</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="57" column="8" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="57" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1aa0581c35cc0db22edc6b59c3ba10c5e3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::Downsampler&lt; T &gt;::getProcessedCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>getProcessedCount</name>
+        <reimplements refid="classlive__telemetry_1_1IDataProcessor_1a1dd06a12c8b426f63c27e318aef1d057">getProcessedCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="65" column="10" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1ab8a69f557c77939be2261fae2d176bda" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::Downsampler&lt; T &gt;::getForwardedCount</definition>
+        <argsstring>() const override</argsstring>
+        <name>getForwardedCount</name>
+        <reimplements refid="classlive__telemetry_1_1IDataProcessor_1ab6503f96b63517193e4a19c8fc7afd4b">getForwardedCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="69" column="10" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1ace012d84c3815c10483f42d6087367cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void live_telemetry::Downsampler&lt; T &gt;::resetStats</definition>
+        <argsstring>() override</argsstring>
+        <name>resetStats</name>
+        <reimplements refid="classlive__telemetry_1_1IDataProcessor_1a7d08a84d81e319697ab3a39db829f27b">resetStats</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="73" column="8" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1a69faef23a77c43d718a704c50b40cea7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double live_telemetry::Downsampler&lt; T &gt;::getSkipRate</definition>
+        <argsstring>() const</argsstring>
+        <name>getSkipRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="78" column="10" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="78" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1a13806407b575add443dd272f5db5cc2d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::Downsampler&lt; T &gt;::validateConfig</definition>
+        <argsstring>()</argsstring>
+        <name>validateConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="86" column="8" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="86" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Downsampler_1a91146ee4dfd4b6e1251414d81831276b" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::Downsampler&lt; T &gt;::shouldForward</definition>
+        <argsstring>() const</argsstring>
+        <name>shouldForward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="94" column="8" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>live_telemetry::IDataProcessor&lt; T &gt;</label>
+        <link refid="classlive__telemetry_1_1IDataProcessor"/>
+      </node>
+      <node id="1">
+        <label>live_telemetry::Downsampler&lt; T &gt;</label>
+        <link refid="classlive__telemetry_1_1Downsampler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>live_telemetry::IDataProcessor&lt; T &gt;</label>
+        <link refid="classlive__telemetry_1_1IDataProcessor"/>
+      </node>
+      <node id="1">
+        <label>live_telemetry::Downsampler&lt; T &gt;</label>
+        <link refid="classlive__telemetry_1_1Downsampler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/live_telemetry_node/downsampler.hpp" line="23" column="41" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="23" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classlive__telemetry_1_1Downsampler_1ab76b0a7eb472fb24bd72ab5538dd9a02" prot="private" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>config_</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1ab5596e8a3184d9a40413217e70eead64" prot="public" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>Downsampler</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a4f997fbfedcb43e65c8d85640fe10947" prot="private" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>forwarded_count_</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1ab8a69f557c77939be2261fae2d176bda" prot="public" virt="virtual"><scope>live_telemetry::Downsampler</scope><name>getForwardedCount</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1aa0581c35cc0db22edc6b59c3ba10c5e3" prot="public" virt="virtual"><scope>live_telemetry::Downsampler</scope><name>getProcessedCount</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a4f72d8f849477b04f3690abd5443a031" prot="public" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>getRatio</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a69faef23a77c43d718a704c50b40cea7" prot="public" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>getSkipRate</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a2abef976df98bb1f2e5a94e0edd9984e" prot="public" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>MessageType</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a8dd7434ef9c5b27ebbb8d9a7b9248bf8" prot="private" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>on_forward_</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a1ea1f0f466aac8d9a0868c9d2f202238" prot="public" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>OnForwardCallback</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a567504b6ad88168a3239d2a2515cb19d" prot="public" virt="virtual"><scope>live_telemetry::Downsampler</scope><name>process</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a465ea17e5a34b18132a222bf420b9a91" prot="private" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>processed_count_</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1ace012d84c3815c10483f42d6087367cf" prot="public" virt="virtual"><scope>live_telemetry::Downsampler</scope><name>resetStats</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a92456056c4d3921b2a114730cd39c683" prot="public" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>setOnForwardCallback</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a76f196e23a67b819cd317ffa38706584" prot="public" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>setRatio</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a91146ee4dfd4b6e1251414d81831276b" prot="private" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>shouldForward</name></member>
+      <member refid="classlive__telemetry_1_1Downsampler_1a13806407b575add443dd272f5db5cc2d" prot="private" virt="non-virtual"><scope>live_telemetry::Downsampler</scope><name>validateConfig</name></member>
+      <member refid="classlive__telemetry_1_1IDataProcessor_1aa249f26cb1bb1888bea9681f71cc8981" prot="public" virt="virtual"><scope>live_telemetry::Downsampler</scope><name>~IDataProcessor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

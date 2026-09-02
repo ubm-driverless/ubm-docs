@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classDummyController" kind="class" language="C++" prot="public">
+    <compoundname>DummyController</compoundname>
+    <basecompoundref refid="classMissionController" prot="public" virt="non-virtual">MissionController</basecompoundref>
+    <includes local="no">dummy_controller.hpp</includes>
+    <innerclass refid="structDummyController_1_1ProfilingTimers" prot="private">DummyController::ProfilingTimers</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDummyController_1a9ded85dd6b170a78e1e7f0c4ff77471e" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1NodeConfig" kindref="compound">control_structs::NodeConfig</ref> &amp;</type>
+        <definition>control_structs::NodeConfig&amp; DummyController::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dummy_controller.hpp" line="43" column="33" bodyfile="include/dummy_controller.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDummyController_1a1fa7f5165ed3a18dab6910230ee87abe" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1ControlState" kindref="compound">control_structs::ControlState</ref> &amp;</type>
+        <definition>control_structs::ControlState&amp; DummyController::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dummy_controller.hpp" line="44" column="35" bodyfile="include/dummy_controller.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDummyController_1a82f093e604c88f4b4ce0c1e87968ab00" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1RosInterfaces" kindref="compound">control_structs::RosInterfaces</ref> &amp;</type>
+        <definition>control_structs::RosInterfaces&amp; DummyController::ros_</definition>
+        <argsstring></argsstring>
+        <name>ros_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dummy_controller.hpp" line="45" column="36" bodyfile="include/dummy_controller.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDummyController_1a26a5eb092c0dc7a576092f2c7786000c" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1DummyControllerParameters" kindref="compound">control_structs::DummyControllerParameters</ref> &amp;</type>
+        <definition>control_structs::DummyControllerParameters&amp; DummyController::dummy_</definition>
+        <argsstring></argsstring>
+        <name>dummy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dummy_controller.hpp" line="46" column="48" bodyfile="include/dummy_controller.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDummyController_1a6ae9782d6bdd2df9ae5990791c1d9897" prot="private" static="no" mutable="no">
+        <type><ref refid="structProfilingTimers" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/graph_slam/graph_slam.tag">ProfilingTimers</ref></type>
+        <definition>ProfilingTimers DummyController::timers_</definition>
+        <argsstring></argsstring>
+        <name>timers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dummy_controller.hpp" line="57" column="21" bodyfile="include/dummy_controller.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDummyController_1a4dde4bce5328886e5878a85461dd41c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DummyController::DummyController</definition>
+        <argsstring>(control_structs::NodeConfig &amp;config, control_structs::ControlState &amp;state, control_structs::RosInterfaces &amp;ros, control_structs::DummyControllerParameters &amp;dummy)</argsstring>
+        <name>DummyController</name>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1NodeConfig" kindref="compound">control_structs::NodeConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1ControlState" kindref="compound">control_structs::ControlState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1RosInterfaces" kindref="compound">control_structs::RosInterfaces</ref> &amp;</type>
+          <declname>ros</declname>
+        </param>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1DummyControllerParameters" kindref="compound">control_structs::DummyControllerParameters</ref> &amp;</type>
+          <declname>dummy</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="classDummyController" kindref="compound">DummyController</ref>. Initializes parameters, subscriptions, and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dummy_controller.hpp" line="37" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classDummyController_1a9eb52f1e2fdb060d8dbd056f8007fcb7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DummyController::search_nearest_index</definition>
+        <argsstring>(const float &amp;x, const float &amp;y) const</argsstring>
+        <name>search_nearest_index</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Searches for the nearest index in the raceline based on the current position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dummy_controller.hpp" line="62" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classDummyController_1ac76773c166ff3a4719e9709323b8c4a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float, int &gt;</type>
+        <definition>std::tuple&lt;float, float, int&gt; DummyController::search_look_ahead_point</definition>
+        <argsstring>(const float &amp;actual_x, const float &amp;actual_y, const float &amp;actual_v, const float &amp;look_ahead_gain, const float &amp;min_look_ahead_dist)</argsstring>
+        <name>search_look_ahead_point</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>actual_x</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>actual_y</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>actual_v</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>look_ahead_gain</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>min_look_ahead_dist</declname>
+        </param>
+        <briefdescription>
+<para>Searches for the look-ahead point based on the current position and speed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>actual_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current X coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current Y coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current speed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>look_ahead_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gain for calculating the look-ahead distance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_look_ahead_dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum look-ahead distance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple containing the look-ahead point coordinates and the nearest index. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dummy_controller.hpp" line="73" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classDummyController_1a0125a62c1f5c2cd6287c13110dba47b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DummyController::control_loop</definition>
+        <argsstring>() override</argsstring>
+        <name>control_loop</name>
+        <reimplements refid="classMissionController_1a9b5e0d046deccb9bee61b36ffa8c64a9">control_loop</reimplements>
+        <briefdescription>
+<para>Main control loop for the Pure Pursuit algorithm. Calculates target steering and speed, and sends control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dummy_controller.hpp" line="85" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDummyController_1a0a4ffc298d5bc530708ca19942f4f9e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DummyController::publish_control_logging</definition>
+        <argsstring>()</argsstring>
+        <name>publish_control_logging</name>
+        <reimplements refid="classMissionController_1aadf5a79dc80fcd0306d2eb93f8df129c">publish_control_logging</reimplements>
+        <briefdescription>
+<para>Log control data to ROS topic This method publishes steering and torque control information to the logging topic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dummy_controller.hpp" line="91" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS2 node that implements the Pure Pursuit algorithm for controlling a vehicle along a raceline. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DummyController</label>
+        <link refid="classDummyController"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MissionController</label>
+        <link refid="classMissionController"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DummyController</label>
+        <link refid="classDummyController"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MissionController</label>
+        <link refid="classMissionController"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/dummy_controller.hpp" line="31" column="1" bodyfile="include/dummy_controller.hpp" bodystart="30" bodyend="93"/>
+    <listofallmembers>
+      <member refid="classDummyController_1a9ded85dd6b170a78e1e7f0c4ff77471e" prot="private" virt="non-virtual"><scope>DummyController</scope><name>config_</name></member>
+      <member refid="classDummyController_1a0125a62c1f5c2cd6287c13110dba47b7" prot="private" virt="virtual"><scope>DummyController</scope><name>control_loop</name></member>
+      <member refid="classDummyController_1a26a5eb092c0dc7a576092f2c7786000c" prot="private" virt="non-virtual"><scope>DummyController</scope><name>dummy_</name></member>
+      <member refid="classDummyController_1a4dde4bce5328886e5878a85461dd41c1" prot="public" virt="non-virtual"><scope>DummyController</scope><name>DummyController</name></member>
+      <member refid="classMissionController_1a6e4573ac1ee23bb8dd5ac505db51e6a2" prot="public" virt="virtual"><scope>DummyController</scope><name>load_path</name></member>
+      <member refid="classMissionController_1a051964f5c371f5fb0cae94f2f868d516" prot="public" virt="virtual"><scope>DummyController</scope><name>mission_finished</name></member>
+      <member refid="classDummyController_1a0a4ffc298d5bc530708ca19942f4f9e5" prot="private" virt="virtual"><scope>DummyController</scope><name>publish_control_logging</name></member>
+      <member refid="classDummyController_1a82f093e604c88f4b4ce0c1e87968ab00" prot="private" virt="non-virtual"><scope>DummyController</scope><name>ros_</name></member>
+      <member refid="classDummyController_1ac76773c166ff3a4719e9709323b8c4a6" prot="private" virt="non-virtual"><scope>DummyController</scope><name>search_look_ahead_point</name></member>
+      <member refid="classDummyController_1a9eb52f1e2fdb060d8dbd056f8007fcb7" prot="private" virt="non-virtual"><scope>DummyController</scope><name>search_nearest_index</name></member>
+      <member refid="classDummyController_1a1fa7f5165ed3a18dab6910230ee87abe" prot="private" virt="non-virtual"><scope>DummyController</scope><name>state_</name></member>
+      <member refid="classDummyController_1a6ae9782d6bdd2df9ae5990791c1d9897" prot="private" virt="non-virtual"><scope>DummyController</scope><name>timers_</name></member>
+      <member refid="classMissionController_1a44704e1e3185c3a5c40db140dd2f11b6" prot="public" virt="virtual"><scope>DummyController</scope><name>~MissionController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

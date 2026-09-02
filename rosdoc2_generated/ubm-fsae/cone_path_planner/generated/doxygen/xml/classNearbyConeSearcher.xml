@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classNearbyConeSearcher" kind="class" language="C++" prot="public">
+    <compoundname>NearbyConeSearcher</compoundname>
+    <includes local="no">nearby_cone_search.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classNearbyConeSearcher_1ab8862e32fbdc779d46fce7b5eff21dd9" prot="public" static="no">
+        <type>std::pair&lt; size_t, ConeType &gt;</type>
+        <definition>using NearbyConeSearcher::CacheKey =  std::pair&lt;size_t, ConeType&gt;</definition>
+        <argsstring></argsstring>
+        <name>CacheKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/nearby_cone_search.hpp" line="24" column="5" bodyfile="include/cone_path_planner/nearby_cone_search.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classNearbyConeSearcher_1a00331031367b4e31cfd971d4e390ba88" prot="public" static="no">
+        <type>std::tuple&lt; <ref refid="cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301" kindref="member">SearchDirectionsCache</ref>, <ref refid="cone__common__types_8hpp_1a2412aa2209e14a8461c2ee7fae62da2a" kindref="member">AngleMaskCache</ref>, arma::fmat, arma::cube &gt;</type>
+        <definition>using NearbyConeSearcher::CacheValue =  std::tuple&lt;SearchDirectionsCache, AngleMaskCache, arma::fmat, arma::cube&gt;</definition>
+        <argsstring></argsstring>
+        <name>CacheValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/nearby_cone_search.hpp" line="27" column="5" bodyfile="include/cone_path_planner/nearby_cone_search.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classNearbyConeSearcher_1a5b0c2fedb8754526275971aaed2223b0" prot="public" static="no" mutable="no">
+        <type>std::deque&lt; std::pair&lt; CacheKey, CacheValue &gt; &gt;</type>
+        <definition>std::deque&lt;std::pair&lt;CacheKey, CacheValue&gt; &gt; NearbyConeSearcher::caches_cache</definition>
+        <argsstring></argsstring>
+        <name>caches_cache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/nearby_cone_search.hpp" line="30" column="16" bodyfile="include/cone_path_planner/nearby_cone_search.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classNearbyConeSearcher_1a02cc546758afb5252d32c911f3ada9bc" prot="public" static="no" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t NearbyConeSearcher::max_cache_size</definition>
+        <argsstring></argsstring>
+        <name>max_cache_size</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/nearby_cone_search.hpp" line="33" column="18" bodyfile="include/cone_path_planner/nearby_cone_search.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classNearbyConeSearcher_1ad2a93e1660b9a0f8e19a73c2fac4b87d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NearbyConeSearcher::NearbyConeSearcher</definition>
+        <argsstring>()</argsstring>
+        <name>NearbyConeSearcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/nearby_cone_search.hpp" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classNearbyConeSearcher_1a72a9a2a2fc825aaa1efc5923ffa95c54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CacheValue</type>
+        <definition>CacheValue NearbyConeSearcher::get_caches</definition>
+        <argsstring>(const arma::mat &amp;cones, ConeType cone_type)</argsstring>
+        <name>get_caches</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve or compute cache data for a set of cones and a given cone type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone positions (each row is a cone, columns should include at least x and y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enum identifier for the type of cone. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tuple containing search direction cache, angle mask cache, squared distance matrix, and cone vectors. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/nearby_cone_search.hpp" line="43" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classNearbyConeSearcher_1aff7f6f1e5262399adda6d2afd1e360d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; arma::fvec, arma::fvec &gt;</type>
+        <definition>std::tuple&lt;arma::fvec, arma::fvec&gt; NearbyConeSearcher::number_cones_per_side</definition>
+        <argsstring>(const arma::mat &amp;cones, const arma::imat &amp;configurations, ConeType cone_type, double max_distance, double max_angle)</argsstring>
+        <name>number_cones_per_side</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_distance</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_angle</declname>
+        </param>
+        <briefdescription>
+<para>Compute the number of cones per side based on geometric and angular constraints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone positions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Integer matrix of configurations (indices of cones). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enum identifier for the cone type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed distance between cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed angle for valid configurations. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple of float vectors: (number of cones on the left, number on the right). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/nearby_cone_search.hpp" line="54" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class to manage caching and computation of cone distance, vector, and angle information. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/nearby_cone_search.hpp" line="21" column="25" bodyfile="include/cone_path_planner/nearby_cone_search.hpp" bodystart="21" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classNearbyConeSearcher_1ab8862e32fbdc779d46fce7b5eff21dd9" prot="public" virt="non-virtual"><scope>NearbyConeSearcher</scope><name>CacheKey</name></member>
+      <member refid="classNearbyConeSearcher_1a5b0c2fedb8754526275971aaed2223b0" prot="public" virt="non-virtual"><scope>NearbyConeSearcher</scope><name>caches_cache</name></member>
+      <member refid="classNearbyConeSearcher_1a00331031367b4e31cfd971d4e390ba88" prot="public" virt="non-virtual"><scope>NearbyConeSearcher</scope><name>CacheValue</name></member>
+      <member refid="classNearbyConeSearcher_1a72a9a2a2fc825aaa1efc5923ffa95c54" prot="public" virt="non-virtual"><scope>NearbyConeSearcher</scope><name>get_caches</name></member>
+      <member refid="classNearbyConeSearcher_1a02cc546758afb5252d32c911f3ada9bc" prot="public" virt="non-virtual"><scope>NearbyConeSearcher</scope><name>max_cache_size</name></member>
+      <member refid="classNearbyConeSearcher_1ad2a93e1660b9a0f8e19a73c2fac4b87d" prot="public" virt="non-virtual"><scope>NearbyConeSearcher</scope><name>NearbyConeSearcher</name></member>
+      <member refid="classNearbyConeSearcher_1aff7f6f1e5262399adda6d2afd1e360d7" prot="public" virt="non-virtual"><scope>NearbyConeSearcher</scope><name>number_cones_per_side</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

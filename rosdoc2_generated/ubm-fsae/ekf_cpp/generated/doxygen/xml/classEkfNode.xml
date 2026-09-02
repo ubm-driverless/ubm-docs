@@ -1,0 +1,1363 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classEkfNode" kind="class" language="C++" prot="public">
+    <compoundname>EkfNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classEkfNode_1ad87c6cefddb4e1419b41040131d20397" prot="public" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classExtendedKalmanFilter" kindref="compound">ExtendedKalmanFilter</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;ExtendedKalmanFilter&gt; EkfNode::ekf</definition>
+        <argsstring></argsstring>
+        <name>ekf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="54" column="21" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a763d02673cfc8a3e9c57adf2635cff50" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EkfNode::plot_graphs_</definition>
+        <argsstring></argsstring>
+        <name>plot_graphs_</name>
+        <briefdescription>
+<para>Save data to then plot graphs to visualize model estimate working. Needed public as run in main. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="56" column="10" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEkfNode_1a56e7f1dfbfe27ab6ce3c07184aafd220" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EkfNode::alpha_</definition>
+        <argsstring></argsstring>
+        <name>alpha_</name>
+        <briefdescription>
+<para>Adaptive weight. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="60" column="9" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a1686e5b128566fd60fc4fd5f6903364a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EkfNode::adaptive_R_</definition>
+        <argsstring></argsstring>
+        <name>adaptive_R_</name>
+        <briefdescription>
+<para>Adaptive R matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="61" column="10" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a5f8e74ed7a2968b1631d958b4948d050" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::P_weight_param_</definition>
+        <argsstring></argsstring>
+        <name>P_weight_param_</name>
+        <briefdescription>
+<para>Initial covariance parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="62" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a2f0e1085ccc6ad5ae6849a0d168333c6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; EkfNode::Q_weight_process_</definition>
+        <argsstring></argsstring>
+        <name>Q_weight_process_</name>
+        <briefdescription>
+<para>weights of the Diagonal process covariance matrix </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="63" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a581ce827652861d870edbec014b21f40" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; EkfNode::Q_weight_parameters_</definition>
+        <argsstring></argsstring>
+        <name>Q_weight_parameters_</name>
+        <briefdescription>
+<para>weights of the Diagonal parameter process covariance matrix </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="64" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a9efa7d208d5699f67a2e506b2b78c5dd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; EkfNode::R_weight_measurement_</definition>
+        <argsstring></argsstring>
+        <name>R_weight_measurement_</name>
+        <briefdescription>
+<para>weights of the Diagonal measurement covariance matrix </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="65" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1acf9fa55b5f701874a3a0060c41548a6d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EkfNode::debug_</definition>
+        <argsstring></argsstring>
+        <name>debug_</name>
+        <briefdescription>
+<para>Debug mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="66" column="10" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1aae470922cd7e457fafea1f206885126a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EkfNode::visualization_</definition>
+        <argsstring></argsstring>
+        <name>visualization_</name>
+        <briefdescription>
+<para>Visualization mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="67" column="10" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a6643740467442e591e82908fe45c9e6e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EkfNode::state_dim_</definition>
+        <argsstring></argsstring>
+        <name>state_dim_</name>
+        <briefdescription>
+<para>State dimension. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="68" column="9" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a2b2546e4ae3dcc06848573bba911c81e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::adaptive_weight_</definition>
+        <argsstring></argsstring>
+        <name>adaptive_weight_</name>
+        <briefdescription>
+<para>Adaptive weight for the filter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="69" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a6861f69579987e6e90f03b6708c86df8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::initialization_distance_threshold_</definition>
+        <argsstring></argsstring>
+        <name>initialization_distance_threshold_</name>
+        <briefdescription>
+<para>Distance threshold for initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="70" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a3fb18d9b958c20a75345db69cde7413a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::initialization_angle_threshold_</definition>
+        <argsstring></argsstring>
+        <name>initialization_angle_threshold_</name>
+        <briefdescription>
+<para>Angle threshold for initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="71" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a1d554f3baa3553daed5d550f9903b774" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EkfNode::gps_angle_init_</definition>
+        <argsstring></argsstring>
+        <name>gps_angle_init_</name>
+        <briefdescription>
+<para>Flag to indicate if GPS angle initialization is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="72" column="10" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a78d3f990b9e161f4d30a819702054f25" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::scale_covariance_</definition>
+        <argsstring></argsstring>
+        <name>scale_covariance_</name>
+        <briefdescription>
+<para>Scale factor for covariance matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="73" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1af28df7d1f38a4ad20895cbe9f28805d0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::wheel_base_sae_</definition>
+        <argsstring></argsstring>
+        <name>wheel_base_sae_</name>
+        <briefdescription>
+<para>Wheelbase of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="76" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a47a1ab2d37df48f4f6b6ef555353ae04" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::radius_wheel_</definition>
+        <argsstring></argsstring>
+        <name>radius_wheel_</name>
+        <briefdescription>
+<para>Wheel radius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="77" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1af7c32dd27e6882129c366d01a95e36e2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::cog_pct_front_</definition>
+        <argsstring></argsstring>
+        <name>cog_pct_front_</name>
+        <briefdescription>
+<para>Center of gravity percentage from the front. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="78" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a7b2bc1e0052df5f3d7e2ce87c1522316" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::mass_sae_</definition>
+        <argsstring></argsstring>
+        <name>mass_sae_</name>
+        <briefdescription>
+<para>Mass of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="79" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a34638f9af99fa70aa4f10aba3249eb5b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::g_</definition>
+        <argsstring></argsstring>
+        <name>g_</name>
+        <briefdescription>
+<para>Gravitational acceleration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="80" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a200e58ebdf4fae0e08da171a53efd619" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::inertia_sae_</definition>
+        <argsstring></argsstring>
+        <name>inertia_sae_</name>
+        <briefdescription>
+<para>Inertia of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="81" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a542c721b2bd0439086926b8115c5a228" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::aereodynamic_coefficient_</definition>
+        <argsstring></argsstring>
+        <name>aereodynamic_coefficient_</name>
+        <briefdescription>
+<para>Aerodynamic coefficient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="82" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1ad4d3b32ad8314e7add8af59013da7487" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::rolling_resistance_</definition>
+        <argsstring></argsstring>
+        <name>rolling_resistance_</name>
+        <briefdescription>
+<para>rolling resistance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="83" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1aecc52ae3b33b8bcc61ba9416914eac11" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::torque_gain_</definition>
+        <argsstring></argsstring>
+        <name>torque_gain_</name>
+        <briefdescription>
+<para>Torque gain from motor to wheel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="84" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a28f1e4249a48fa23cc44fe3403e8e124" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; EkfNode::pacejka_parameters_</definition>
+        <argsstring></argsstring>
+        <name>pacejka_parameters_</name>
+        <briefdescription>
+<para>Pacejka parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="85" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1acd0f75be6c3346a08751315a6614b633" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::steering_gain_</definition>
+        <argsstring></argsstring>
+        <name>steering_gain_</name>
+        <briefdescription>
+<para>Steering gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="86" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a66f398ffe0beed4bd13b85e71052b47f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::steering_offset_deg_</definition>
+        <argsstring></argsstring>
+        <name>steering_offset_deg_</name>
+        <briefdescription>
+<para>Steering offset in degrees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="87" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a21beec9b95aae7ce7a28238e5a51103e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EkfNode::heading_with_</definition>
+        <argsstring></argsstring>
+        <name>heading_with_</name>
+        <briefdescription>
+<para>Heading reference (e.g., &quot;IMU&quot;, &quot;GPS&quot;) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="88" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1aa1191e9f0bd09daf96ff1d0797cb6850" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::initial_ENU_</definition>
+        <argsstring></argsstring>
+        <name>initial_ENU_</name>
+        <briefdescription>
+<para>Bussola type (e.g., &quot;GPS&quot;, &quot;IMU&quot;) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="89" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1ad38ee1501a6cd0f2a10c1e008653f084" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::acceleration_threshold_</definition>
+        <argsstring></argsstring>
+        <name>acceleration_threshold_</name>
+        <briefdescription>
+<para>Acceleration threshold for filtering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="90" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1af1f9dada7c0f796716c5b6c8e78453d1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EkfNode::parameter_EKF_</definition>
+        <argsstring></argsstring>
+        <name>parameter_EKF_</name>
+        <briefdescription>
+<para>Parameter for EKF. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="91" column="10" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a196db141c337f9adce769ecaddd82004" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::tao_filter_parameter_</definition>
+        <argsstring></argsstring>
+        <name>tao_filter_parameter_</name>
+        <briefdescription>
+<para>Time constant of the Filter used for accellerations to estimate the parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="92" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a206d52f476692c814478ec39ae033c34" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::encoder_rpm_threshold_</definition>
+        <argsstring></argsstring>
+        <name>encoder_rpm_threshold_</name>
+        <briefdescription>
+<para>Threshold for encoder RPM to determine if the vehicle is moving. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="93" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a0c7415e9e45ce2dd752dd47df1731f5a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EkfNode::is_ready_service_name_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_name_</name>
+        <briefdescription>
+<para>Service name for readiness check. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="94" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1ad04fe0c2b983f8f723bb840c5535c693" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::torque_left</definition>
+        <argsstring></argsstring>
+        <name>torque_left</name>
+        <briefdescription>
+<para>Torque applied to the left wheel <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="97" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1affef8004ff019d9ebf836ee938a8ecfa" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::torque_right</definition>
+        <argsstring></argsstring>
+        <name>torque_right</name>
+        <briefdescription>
+<para>Torque applied to the right wheel <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="98" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a836afa86bafc1faed35317990504c4d5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::steering_angle</definition>
+        <argsstring></argsstring>
+        <name>steering_angle</name>
+        <briefdescription>
+<para>Steering angle of the front wheels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="99" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1ad0c8cd5a852db2a734318c5114be9ea2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::lat0</definition>
+        <argsstring></argsstring>
+        <name>lat0</name>
+        <briefdescription>
+<para>Latitude of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="102" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a11bd931e19eafe2b9c0635ed0c75d8c6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::lon0</definition>
+        <argsstring></argsstring>
+        <name>lon0</name>
+        <briefdescription>
+<para>Longitude of the vehicle <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="103" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a6452742783811e63c830799577c59c05" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::heading_0</definition>
+        <argsstring></argsstring>
+        <name>heading_0</name>
+        <briefdescription>
+<para>Initial heading of the vehicle in radians with respect to East <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="104" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a0842f5b345f653524d351e7d995ce57e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::offset_IMU</definition>
+        <argsstring></argsstring>
+        <name>offset_IMU</name>
+        <briefdescription>
+<para>Offset of the IMU in meters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="105" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a3b21f41329c24ee432c5dd50168f4c53" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::last_ax_meas_filtered</definition>
+        <argsstring></argsstring>
+        <name>last_ax_meas_filtered</name>
+        <briefdescription>
+<para>Last filtered acceleration in the car&apos;s x-direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="106" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a7a638149273200f5b8a29a2e670c2e3a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::last_ay_meas_filtered</definition>
+        <argsstring></argsstring>
+        <name>last_ay_meas_filtered</name>
+        <briefdescription>
+<para>Last filtered acceleration in the car&apos;s y-direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="107" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a027798f3b748601746eee230191db459" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EkfNode::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <briefdescription>
+<para>Time step in seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="108" column="12" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1ae85df7ec42d6362071fcbca236c7db66" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EkfNode::iteration_count</definition>
+        <argsstring></argsstring>
+        <name>iteration_count</name>
+        <briefdescription>
+<para>Counter for the number of iterations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="109" column="9" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a99f4f2d777ef1ecc4a9eacc8275159f8" prot="private" static="no" mutable="no">
+        <type>arma::vec2</type>
+        <definition>arma::vec2 EkfNode::last_ENU_position</definition>
+        <argsstring></argsstring>
+        <name>last_ENU_position</name>
+        <briefdescription>
+<para>Last position in ENU coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="110" column="16" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a03106e73ae9e0d826282edbec5a555cf" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point EkfNode::current_time</definition>
+        <argsstring></argsstring>
+        <name>current_time</name>
+        <briefdescription>
+<para>Current time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="113" column="52" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1ab0460a5680ee03b9100a21190409dfe7" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point EkfNode::last_time</definition>
+        <argsstring></argsstring>
+        <name>last_time</name>
+        <briefdescription>
+<para>Last time the sensor data was received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="114" column="52" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a1f344745562f3156759a5c537c067969" prot="private" static="no" mutable="no">
+        <type>ubm_interfaces::msg::Emergency</type>
+        <definition>ubm_interfaces::msg::Emergency EkfNode::status_emergency_msg</definition>
+        <argsstring></argsstring>
+        <name>status_emergency_msg</name>
+        <briefdescription>
+<para>Emergency status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="117" column="36" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1ab22f729de16ff0eec0f85d7003389693" prot="private" static="no" mutable="no">
+        <type>ubm_interfaces::msg::Info</type>
+        <definition>ubm_interfaces::msg::Info EkfNode::status_info_msg</definition>
+        <argsstring></argsstring>
+        <name>status_info_msg</name>
+        <briefdescription>
+<para>Info status message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="118" column="31" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a37eb9a1dfb191005a8944d5797282542" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EkfNode::initialized_GPS</definition>
+        <argsstring></argsstring>
+        <name>initialized_GPS</name>
+        <briefdescription>
+<para>Flag indicating if GPS data has been initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="121" column="10" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a0aaaff406ec78b151345c7299ebcdd82" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EkfNode::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <briefdescription>
+<para>Flag indicating if the filter has been initialized <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="122" column="10" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a1a857e7647d0169042a81559b0a2b84d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EkfNode::data_received_</definition>
+        <argsstring></argsstring>
+        <name>data_received_</name>
+        <briefdescription>
+<para>Flag to check if data has been received, initialized to true to avoid immediate shutdown. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="123" column="10" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a54d2cf67fe1ec6114e8a2c48035f7677" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EkfNode::set_initial_angle</definition>
+        <argsstring></argsstring>
+        <name>set_initial_angle</name>
+        <briefdescription>
+<para>Flag to indicate if the initial angle has been set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="124" column="10" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a3957dd747e1bf91dc91ec173c5a66437" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EkfNode::sensor_topic_</definition>
+        <argsstring></argsstring>
+        <name>sensor_topic_</name>
+        <briefdescription>
+<para>Topic for sensor subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="127" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a96fd855b639aa618f2fb124fc578ebe9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EkfNode::pose_visualization_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_visualization_topic_</name>
+        <briefdescription>
+<para>Topic for Pose visualization publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="128" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a8d8b400a9387fdb3aa577bc5ce8b3d76" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EkfNode::pose_publisher_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_publisher_topic_</name>
+        <briefdescription>
+<para>Topic for Odometry publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="129" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a7f3c6aa1c2ca0c2a7f8d496d9d8ce64e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EkfNode::point_model_publisher_topic_</definition>
+        <argsstring></argsstring>
+        <name>point_model_publisher_topic_</name>
+        <briefdescription>
+<para>Topic for point model propagation visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="130" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1ad314e574505a3b43ddb0b186071da1e0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EkfNode::emergency_topic_</definition>
+        <argsstring></argsstring>
+        <name>emergency_topic_</name>
+        <briefdescription>
+<para>Topic for emergency status publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="131" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a0939af0c6c3b5a4d0a3f3212c561e1fa" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EkfNode::info_topic_</definition>
+        <argsstring></argsstring>
+        <name>info_topic_</name>
+        <briefdescription>
+<para>Topic for info status publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="132" column="17" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a12b66e2a307ad756e8661f0c4a8027cf" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::VCUData &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::VCUData&gt;::SharedPtr EkfNode::sensor_sub_</definition>
+        <argsstring></argsstring>
+        <name>sensor_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subscriber for VCU message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="136" column="38" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1aa6f5ad74fd4af5ad5c196aedd0fdb943" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PoseStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr EkfNode::pose_visualization_publisher_</definition>
+        <argsstring></argsstring>
+        <name>pose_visualization_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for visualization on FoxGlove. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="137" column="35" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a00e8b7664ef6e486a7fa44eb97586c97" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Odometry&gt;::SharedPtr EkfNode::pose_publisher_</definition>
+        <argsstring></argsstring>
+        <name>pose_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for Odometry estimate </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="138" column="35" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a43ff7b1108f89c6eee3f25a41d5a4944" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr EkfNode::point_model_publisher_</definition>
+        <argsstring></argsstring>
+        <name>point_model_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher to visualize model propagation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="139" column="35" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a274dde1743fb13ce212fb0c0903b5949" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::Emergency &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::Emergency&gt;::SharedPtr EkfNode::status_emergency_publisher_</definition>
+        <argsstring></argsstring>
+        <name>status_emergency_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for emergency status messages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="140" column="35" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1ab77b72ba5f9cf1c3bcd0f22528469dc9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::Info &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::Info&gt;::SharedPtr EkfNode::status_info_publisher_</definition>
+        <argsstring></argsstring>
+        <name>status_info_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for info status messages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="141" column="35" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1af5f5a40d788336f2e240a53b7abd982e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; ubm_interfaces::srv::IsReady &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;ubm_interfaces::srv::IsReady&gt;::SharedPtr EkfNode::is_ready_service_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Service for readiness check. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="142" column="33" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a7382066203470ddb086b9024a5087b86" prot="private" static="no" mutable="no">
+        <type>OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>OnSetParametersCallbackHandle::SharedPtr EkfNode::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle for dynamic parameter updates. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="143" column="46" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEkfNode_1a138e27a829297918117f9e5f0f8cab85" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr EkfNode::watchdog_timer_</definition>
+        <argsstring></argsstring>
+        <name>watchdog_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer for watchdog functionality. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="144" column="34" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEkfNode_1a12caa9d5fe65cf2e0b8f515c8dc604d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EkfNode::EkfNode</definition>
+        <argsstring>()</argsstring>
+        <name>EkfNode</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classEkfNode" kindref="compound">EkfNode</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the node, sets up parameters, and creates subscribers and publishers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="52" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classEkfNode_1a6de4666bc2b2f0b3160b9ab4998c011a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult EkfNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Handles parameter updates dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of parameter update operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="152" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classEkfNode_1ad9f5fd93813bc07779ff47904859f741" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EkfNode::initialize_ros_communication</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_ros_communication</name>
+        <briefdescription>
+<para>Set up ROS subscribers and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a subscription to the raw VCU data and publishers for Odometry and visualization </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="161" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEkfNode_1aee17c99786f78f0a9d382d957ab358b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EkfNode::get_sensor_data</definition>
+        <argsstring>(const ubm_interfaces::msg::VCUData::SharedPtr sensor_msg)</argsstring>
+        <name>get_sensor_data</name>
+        <param>
+          <type>const ubm_interfaces::msg::VCUData::SharedPtr</type>
+          <declname>sensor_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback function to process incoming VCU messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is triggered when a new VCU message is received. It processes the data so as to obtain a measurement that can be used by the EKF. The method also handles the initialization of the filter</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensor_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the received VCU message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="171" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEkfNode_1a158696babb41bb785858ce382e9a2f6b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EkfNode::publish_pose</definition>
+        <argsstring>(const arma::vec8 &amp;state_estimate, const arma::mat &amp;covariance)</argsstring>
+        <name>publish_pose</name>
+        <param>
+          <type>const arma::vec8 &amp;</type>
+          <declname>state_estimate</declname>
+        </param>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>covariance</declname>
+        </param>
+        <briefdescription>
+<para>Publish the pose estimate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method publishes the pose estimate to the specified topic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state_estimate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state estimate vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>covariance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state estimate covariance matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="180" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEkfNode_1ad7843f58927251d2915339a4cc5a4f79" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EkfNode::publish_measured_pose</definition>
+        <argsstring>(const arma::vec7 &amp;measurement)</argsstring>
+        <name>publish_measured_pose</name>
+        <param>
+          <type>const arma::vec7 &amp;</type>
+          <declname>measurement</declname>
+        </param>
+        <briefdescription>
+<para>Publish the measured pose. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method publishes the measured pose to the specified topic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>measurement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement vector containing position, heading, angular and logitudinal velocity. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="189" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEkfNode_1a4a06b51db56247e0d8f28a5e5e25d864" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EkfNode::publish_point_model</definition>
+        <argsstring>(const double &amp;x, const double &amp;y)</argsstring>
+        <name>publish_point_model</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Publish a point to visualize model propagation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method publishes a point to the specified topic for visualization of the propagation of the model.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="199" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEkfNode_1a9ece1103a4998265d77821828e1375ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EkfNode::watchdog_callback</definition>
+        <argsstring>()</argsstring>
+        <name>watchdog_callback</name>
+        <briefdescription>
+<para>Watchdog callback to check if data has been received. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called periodically to check if data has been received. If no data is received for a certain period, it shuts down the node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="206" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEkfNode_1a3242745a3ff1803e02fcbb4172b0b73a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EkfNode::handle_service</definition>
+        <argsstring>(const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt; request, std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt; response)</argsstring>
+        <name>handle_service</name>
+        <param>
+          <type>const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+<para>Handle the readiness service request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the service request to check if the node is ready.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The service request. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The service response. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="216" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>EkfNode</label>
+        <link refid="classEkfNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>EkfNode</label>
+        <link refid="classEkfNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/ekf_cpp/ekf_cpp_node.hpp" line="45" column="34" bodyfile="include/ekf_cpp/ekf_cpp_node.hpp" bodystart="45" bodyend="218"/>
+    <listofallmembers>
+      <member refid="classEkfNode_1ad38ee1501a6cd0f2a10c1e008653f084" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>acceleration_threshold_</name></member>
+      <member refid="classEkfNode_1a1686e5b128566fd60fc4fd5f6903364a" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>adaptive_R_</name></member>
+      <member refid="classEkfNode_1a2b2546e4ae3dcc06848573bba911c81e" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>adaptive_weight_</name></member>
+      <member refid="classEkfNode_1a542c721b2bd0439086926b8115c5a228" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>aereodynamic_coefficient_</name></member>
+      <member refid="classEkfNode_1a56e7f1dfbfe27ab6ce3c07184aafd220" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>alpha_</name></member>
+      <member refid="classEkfNode_1af7c32dd27e6882129c366d01a95e36e2" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>cog_pct_front_</name></member>
+      <member refid="classEkfNode_1a03106e73ae9e0d826282edbec5a555cf" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>current_time</name></member>
+      <member refid="classEkfNode_1a1a857e7647d0169042a81559b0a2b84d" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>data_received_</name></member>
+      <member refid="classEkfNode_1acf9fa55b5f701874a3a0060c41548a6d" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>debug_</name></member>
+      <member refid="classEkfNode_1a027798f3b748601746eee230191db459" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>dt</name></member>
+      <member refid="classEkfNode_1ad87c6cefddb4e1419b41040131d20397" prot="public" virt="non-virtual"><scope>EkfNode</scope><name>ekf</name></member>
+      <member refid="classEkfNode_1a12caa9d5fe65cf2e0b8f515c8dc604d5" prot="public" virt="non-virtual"><scope>EkfNode</scope><name>EkfNode</name></member>
+      <member refid="classEkfNode_1ad314e574505a3b43ddb0b186071da1e0" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>emergency_topic_</name></member>
+      <member refid="classEkfNode_1a206d52f476692c814478ec39ae033c34" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>encoder_rpm_threshold_</name></member>
+      <member refid="classEkfNode_1a34638f9af99fa70aa4f10aba3249eb5b" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>g_</name></member>
+      <member refid="classEkfNode_1aee17c99786f78f0a9d382d957ab358b0" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>get_sensor_data</name></member>
+      <member refid="classEkfNode_1a1d554f3baa3553daed5d550f9903b774" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>gps_angle_init_</name></member>
+      <member refid="classEkfNode_1a3242745a3ff1803e02fcbb4172b0b73a" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>handle_service</name></member>
+      <member refid="classEkfNode_1a6452742783811e63c830799577c59c05" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>heading_0</name></member>
+      <member refid="classEkfNode_1a21beec9b95aae7ce7a28238e5a51103e" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>heading_with_</name></member>
+      <member refid="classEkfNode_1a200e58ebdf4fae0e08da171a53efd619" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>inertia_sae_</name></member>
+      <member refid="classEkfNode_1a0939af0c6c3b5a4d0a3f3212c561e1fa" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>info_topic_</name></member>
+      <member refid="classEkfNode_1aa1191e9f0bd09daf96ff1d0797cb6850" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>initial_ENU_</name></member>
+      <member refid="classEkfNode_1a3fb18d9b958c20a75345db69cde7413a" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>initialization_angle_threshold_</name></member>
+      <member refid="classEkfNode_1a6861f69579987e6e90f03b6708c86df8" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>initialization_distance_threshold_</name></member>
+      <member refid="classEkfNode_1ad9f5fd93813bc07779ff47904859f741" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>initialize_ros_communication</name></member>
+      <member refid="classEkfNode_1a0aaaff406ec78b151345c7299ebcdd82" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>initialized</name></member>
+      <member refid="classEkfNode_1a37eb9a1dfb191005a8944d5797282542" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>initialized_GPS</name></member>
+      <member refid="classEkfNode_1af5f5a40d788336f2e240a53b7abd982e" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>is_ready_service_</name></member>
+      <member refid="classEkfNode_1a0c7415e9e45ce2dd752dd47df1731f5a" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>is_ready_service_name_</name></member>
+      <member refid="classEkfNode_1ae85df7ec42d6362071fcbca236c7db66" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>iteration_count</name></member>
+      <member refid="classEkfNode_1a3b21f41329c24ee432c5dd50168f4c53" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>last_ax_meas_filtered</name></member>
+      <member refid="classEkfNode_1a7a638149273200f5b8a29a2e670c2e3a" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>last_ay_meas_filtered</name></member>
+      <member refid="classEkfNode_1a99f4f2d777ef1ecc4a9eacc8275159f8" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>last_ENU_position</name></member>
+      <member refid="classEkfNode_1ab0460a5680ee03b9100a21190409dfe7" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>last_time</name></member>
+      <member refid="classEkfNode_1ad0c8cd5a852db2a734318c5114be9ea2" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>lat0</name></member>
+      <member refid="classEkfNode_1a11bd931e19eafe2b9c0635ed0c75d8c6" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>lon0</name></member>
+      <member refid="classEkfNode_1a7b2bc1e0052df5f3d7e2ce87c1522316" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>mass_sae_</name></member>
+      <member refid="classEkfNode_1a0842f5b345f653524d351e7d995ce57e" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>offset_IMU</name></member>
+      <member refid="classEkfNode_1a5f8e74ed7a2968b1631d958b4948d050" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>P_weight_param_</name></member>
+      <member refid="classEkfNode_1a28f1e4249a48fa23cc44fe3403e8e124" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>pacejka_parameters_</name></member>
+      <member refid="classEkfNode_1af1f9dada7c0f796716c5b6c8e78453d1" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>parameter_EKF_</name></member>
+      <member refid="classEkfNode_1a6de4666bc2b2f0b3160b9ab4998c011a" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>params_callback</name></member>
+      <member refid="classEkfNode_1a7382066203470ddb086b9024a5087b86" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>params_callback_handle_</name></member>
+      <member refid="classEkfNode_1a763d02673cfc8a3e9c57adf2635cff50" prot="public" virt="non-virtual"><scope>EkfNode</scope><name>plot_graphs_</name></member>
+      <member refid="classEkfNode_1a43ff7b1108f89c6eee3f25a41d5a4944" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>point_model_publisher_</name></member>
+      <member refid="classEkfNode_1a7f3c6aa1c2ca0c2a7f8d496d9d8ce64e" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>point_model_publisher_topic_</name></member>
+      <member refid="classEkfNode_1a00e8b7664ef6e486a7fa44eb97586c97" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>pose_publisher_</name></member>
+      <member refid="classEkfNode_1a8d8b400a9387fdb3aa577bc5ce8b3d76" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>pose_publisher_topic_</name></member>
+      <member refid="classEkfNode_1aa6f5ad74fd4af5ad5c196aedd0fdb943" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>pose_visualization_publisher_</name></member>
+      <member refid="classEkfNode_1a96fd855b639aa618f2fb124fc578ebe9" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>pose_visualization_topic_</name></member>
+      <member refid="classEkfNode_1ad7843f58927251d2915339a4cc5a4f79" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>publish_measured_pose</name></member>
+      <member refid="classEkfNode_1a4a06b51db56247e0d8f28a5e5e25d864" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>publish_point_model</name></member>
+      <member refid="classEkfNode_1a158696babb41bb785858ce382e9a2f6b" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>publish_pose</name></member>
+      <member refid="classEkfNode_1a581ce827652861d870edbec014b21f40" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>Q_weight_parameters_</name></member>
+      <member refid="classEkfNode_1a2f0e1085ccc6ad5ae6849a0d168333c6" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>Q_weight_process_</name></member>
+      <member refid="classEkfNode_1a9efa7d208d5699f67a2e506b2b78c5dd" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>R_weight_measurement_</name></member>
+      <member refid="classEkfNode_1a47a1ab2d37df48f4f6b6ef555353ae04" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>radius_wheel_</name></member>
+      <member refid="classEkfNode_1ad4d3b32ad8314e7add8af59013da7487" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>rolling_resistance_</name></member>
+      <member refid="classEkfNode_1a78d3f990b9e161f4d30a819702054f25" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>scale_covariance_</name></member>
+      <member refid="classEkfNode_1a12b66e2a307ad756e8661f0c4a8027cf" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>sensor_sub_</name></member>
+      <member refid="classEkfNode_1a3957dd747e1bf91dc91ec173c5a66437" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>sensor_topic_</name></member>
+      <member refid="classEkfNode_1a54d2cf67fe1ec6114e8a2c48035f7677" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>set_initial_angle</name></member>
+      <member refid="classEkfNode_1a6643740467442e591e82908fe45c9e6e" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>state_dim_</name></member>
+      <member refid="classEkfNode_1a1f344745562f3156759a5c537c067969" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>status_emergency_msg</name></member>
+      <member refid="classEkfNode_1a274dde1743fb13ce212fb0c0903b5949" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>status_emergency_publisher_</name></member>
+      <member refid="classEkfNode_1ab22f729de16ff0eec0f85d7003389693" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>status_info_msg</name></member>
+      <member refid="classEkfNode_1ab77b72ba5f9cf1c3bcd0f22528469dc9" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>status_info_publisher_</name></member>
+      <member refid="classEkfNode_1a836afa86bafc1faed35317990504c4d5" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>steering_angle</name></member>
+      <member refid="classEkfNode_1acd0f75be6c3346a08751315a6614b633" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>steering_gain_</name></member>
+      <member refid="classEkfNode_1a66f398ffe0beed4bd13b85e71052b47f" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>steering_offset_deg_</name></member>
+      <member refid="classEkfNode_1a196db141c337f9adce769ecaddd82004" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>tao_filter_parameter_</name></member>
+      <member refid="classEkfNode_1aecc52ae3b33b8bcc61ba9416914eac11" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>torque_gain_</name></member>
+      <member refid="classEkfNode_1ad04fe0c2b983f8f723bb840c5535c693" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>torque_left</name></member>
+      <member refid="classEkfNode_1affef8004ff019d9ebf836ee938a8ecfa" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>torque_right</name></member>
+      <member refid="classEkfNode_1aae470922cd7e457fafea1f206885126a" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>visualization_</name></member>
+      <member refid="classEkfNode_1a9ece1103a4998265d77821828e1375ff" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>watchdog_callback</name></member>
+      <member refid="classEkfNode_1a138e27a829297918117f9e5f0f8cab85" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>watchdog_timer_</name></member>
+      <member refid="classEkfNode_1af28df7d1f38a4ad20895cbe9f28805d0" prot="private" virt="non-virtual"><scope>EkfNode</scope><name>wheel_base_sae_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

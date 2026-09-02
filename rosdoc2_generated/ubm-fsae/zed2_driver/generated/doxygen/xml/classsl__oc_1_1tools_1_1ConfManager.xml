@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsl__oc_1_1tools_1_1ConfManager" kind="class" language="C++" prot="public">
+    <compoundname>sl_oc::tools::ConfManager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1ConfManager_1a7a2f39c201d12195b4da92ac171b3fe6" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sl_oc::tools::ConfManager::filename_</definition>
+        <argsstring></argsstring>
+        <name>filename_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4041" column="17" bodyfile="include/calibration.hpp" bodystart="4041" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1ConfManager_1aca28a2ab512d97d9222291ee4f482bee" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::ConfManager::is_opened_</definition>
+        <argsstring></argsstring>
+        <name>is_opened_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4042" column="10" bodyfile="include/calibration.hpp" bodystart="4042" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1ConfManager_1afcf3cb7693c07cdc15f975b62233fe00" prot="private" static="no" mutable="no">
+        <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl" kindref="compound">CSimpleIniA</ref></type>
+        <definition>CSimpleIniA sl_oc::tools::ConfManager::ini_</definition>
+        <argsstring></argsstring>
+        <name>ini_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4043" column="17" bodyfile="include/calibration.hpp" bodystart="4043" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1ConfManager_1a6ef58c4b5a6011dcbac7666a999844f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sl_oc::tools::ConfManager::ConfManager</definition>
+        <argsstring>(std::string filename)</argsstring>
+        <name>ConfManager</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4006" column="5" bodyfile="include/calibration.hpp" bodystart="4006" bodyend="4011"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1ConfManager_1a3468e7c2c46e72dc3d39b71827dad6fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sl_oc::tools::ConfManager::~ConfManager</definition>
+        <argsstring>()</argsstring>
+        <name>~ConfManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4013" column="5" bodyfile="include/calibration.hpp" bodystart="4013" bodyend="4015"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1ConfManager_1ac032eaf922facefa41cda325d076b0ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float sl_oc::tools::ConfManager::getValue</definition>
+        <argsstring>(std::string key, float default_value=-1)</argsstring>
+        <name>getValue</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>default_value</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4017" column="11" bodyfile="include/calibration.hpp" bodystart="4017" bodyend="4025"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1ConfManager_1ac38f5352da2e831580c89cd4d5665f7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::ConfManager::setValue</definition>
+        <argsstring>(std::string key, float value)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4027" column="10" bodyfile="include/calibration.hpp" bodystart="4027" bodyend="4034"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1ConfManager_1aa4d158e9b127c31a4dea3a9e45a500bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::ConfManager::isOpened</definition>
+        <argsstring>()</argsstring>
+        <name>isOpened</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4036" column="17" bodyfile="include/calibration.hpp" bodystart="4036" bodyend="4038"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/calibration.hpp" line="4003" column="18" bodyfile="include/calibration.hpp" bodystart="4003" bodyend="4044"/>
+    <listofallmembers>
+      <member refid="classsl__oc_1_1tools_1_1ConfManager_1a6ef58c4b5a6011dcbac7666a999844f3" prot="public" virt="non-virtual"><scope>sl_oc::tools::ConfManager</scope><name>ConfManager</name></member>
+      <member refid="classsl__oc_1_1tools_1_1ConfManager_1a7a2f39c201d12195b4da92ac171b3fe6" prot="private" virt="non-virtual"><scope>sl_oc::tools::ConfManager</scope><name>filename_</name></member>
+      <member refid="classsl__oc_1_1tools_1_1ConfManager_1ac032eaf922facefa41cda325d076b0ed" prot="public" virt="non-virtual"><scope>sl_oc::tools::ConfManager</scope><name>getValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1ConfManager_1afcf3cb7693c07cdc15f975b62233fe00" prot="private" virt="non-virtual"><scope>sl_oc::tools::ConfManager</scope><name>ini_</name></member>
+      <member refid="classsl__oc_1_1tools_1_1ConfManager_1aca28a2ab512d97d9222291ee4f482bee" prot="private" virt="non-virtual"><scope>sl_oc::tools::ConfManager</scope><name>is_opened_</name></member>
+      <member refid="classsl__oc_1_1tools_1_1ConfManager_1aa4d158e9b127c31a4dea3a9e45a500bf" prot="public" virt="non-virtual"><scope>sl_oc::tools::ConfManager</scope><name>isOpened</name></member>
+      <member refid="classsl__oc_1_1tools_1_1ConfManager_1ac38f5352da2e831580c89cd4d5665f7c" prot="public" virt="non-virtual"><scope>sl_oc::tools::ConfManager</scope><name>setValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1ConfManager_1a3468e7c2c46e72dc3d39b71827dad6fd" prot="public" virt="non-virtual"><scope>sl_oc::tools::ConfManager</scope><name>~ConfManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

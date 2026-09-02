@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsl__oc_1_1tools_1_1StereoSgbmPar" kind="class" language="C++" prot="public">
+    <compoundname>sl_oc::tools::StereoSgbmPar</compoundname>
+    <includes local="no">stereo.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1aa7d3ef84e3fc7072c76c2d1bf60bcf2a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::blockSize</definition>
+        <argsstring></argsstring>
+        <name>blockSize</name>
+        <briefdescription>
+<para>[default: 3] Matched block size. It must be an odd number &gt;=1 . Normally, it should be somewhere in the 3..11 range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="53" column="9" bodyfile="include/stereo.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a47e39722f042eb7c1498fca47084a708" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::minDisparity</definition>
+        <argsstring></argsstring>
+        <name>minDisparity</name>
+        <briefdescription>
+<para>[default: 0] Minimum possible disparity value. Normally, it is zero but sometimes rectification algorithms can shift images, so this parameter needs to be adjusted accordingly. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="54" column="9" bodyfile="include/stereo.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a820c8202f76be0c1b331fbc1ad191173" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::numDisparities</definition>
+        <argsstring></argsstring>
+        <name>numDisparities</name>
+        <briefdescription>
+<para>[default: 96] Maximum disparity minus minimum disparity. The value is always greater than zero. In the current implementation, this parameter must be divisible by 16. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="55" column="9" bodyfile="include/stereo.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a8f2720be5b8bfbda04bf5940c5ac6512" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+<para>Set it to StereoSGBM::MODE_HH to run the full-scale two-pass dynamic programming algorithm. It will consume O(W*H*numDisparities) bytes, which is large for 640x480 stereo and huge for HD-size pictures. By default, it is set to <computeroutput>cv::StereoSGBM::MODE_SGBM_3WAY</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="56" column="9" bodyfile="include/stereo.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a03dfe8f51eef2a9b3f5d7554083ecc8a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::P1</definition>
+        <argsstring></argsstring>
+        <name>P1</name>
+        <briefdescription>
+<para>[default: 24*blockSize*blockSize] The first parameter controlling the disparity smoothness. See below. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="57" column="9" bodyfile="include/stereo.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1af20a2c2c64e6c17cae349ec7830bdc26" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::P2</definition>
+        <argsstring></argsstring>
+        <name>P2</name>
+        <briefdescription>
+<para>[default: 4*PI]The second parameter controlling the disparity smoothness. The larger the values are, the smoother the disparity is. P1 is the penalty on the disparity change by plus or minus 1 between neighbor pixels. P2 is the penalty on the disparity change by more than 1 between neighbor pixels. The algorithm requires P2 &gt; P1 . See stereo_match.cpp sample where some reasonably good P1 and P2 values are shown (like 8*number_of_image_channels*blockSize*blockSize and 32*number_of_image_channels*blockSize*blockSize , respectively). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="58" column="9" bodyfile="include/stereo.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a05ecc80b15ed462a44954cb388a7b809" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::disp12MaxDiff</definition>
+        <argsstring></argsstring>
+        <name>disp12MaxDiff</name>
+        <briefdescription>
+<para>[default: 96] Maximum allowed difference (in integer pixel units) in the left-right disparity check. Set it to a non-positive value to disable the check. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="59" column="9" bodyfile="include/stereo.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1ad9fe928df5078a66415374cfc2bad989" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::preFilterCap</definition>
+        <argsstring></argsstring>
+        <name>preFilterCap</name>
+        <briefdescription>
+<para>[default: 63] Truncation value for the prefiltered image pixels. The algorithm first computes x-derivative at each pixel and clips its value by [-preFilterCap, preFilterCap] interval. The result values are passed to the Birchfield-Tomasi pixel cost function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="60" column="9" bodyfile="include/stereo.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a305f8d7b70e3e6f320c2ce0b315a3ae6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::uniquenessRatio</definition>
+        <argsstring></argsstring>
+        <name>uniquenessRatio</name>
+        <briefdescription>
+<para>[default: 5] Margin in percentage by which the best (minimum) computed cost function value should &quot;win&quot; the second best value to consider the found match correct. Normally, a value within the 5-15 range is good enough. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="61" column="9" bodyfile="include/stereo.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a1f30bba144157391d44bcec8cfbbcea2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::speckleWindowSize</definition>
+        <argsstring></argsstring>
+        <name>speckleWindowSize</name>
+        <briefdescription>
+<para>[default: 255] Maximum size of smooth disparity regions to consider their noise speckles and invalidate. Set it to 0 to disable speckle filtering. Otherwise, set it somewhere in the 50-200 range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="62" column="9" bodyfile="include/stereo.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1aa0e78c35bc4cfee3561e0312a7c8b9c1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::StereoSgbmPar::speckleRange</definition>
+        <argsstring></argsstring>
+        <name>speckleRange</name>
+        <briefdescription>
+<para>[default: 1] Maximum disparity variation within each connected component. If you do speckle filtering, set the parameter to a positive value, it will be implicitly multiplied by 16. Normally, 1 or 2 is good enough. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="63" column="9" bodyfile="include/stereo.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a46c3af7e5fe0625cddc3dcf7a3315dc8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sl_oc::tools::StereoSgbmPar::minDepth_mm</definition>
+        <argsstring></argsstring>
+        <name>minDepth_mm</name>
+        <briefdescription>
+<para>[default: 300] Minimum value of depth for the extracted depth map </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="65" column="12" bodyfile="include/stereo.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1ac7583f2a31dad1def370a0c6b66f3a84" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sl_oc::tools::StereoSgbmPar::maxDepth_mm</definition>
+        <argsstring></argsstring>
+        <name>maxDepth_mm</name>
+        <briefdescription>
+<para>[default: 10000] Maximum value of depth for the extracted depth map </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="66" column="12" bodyfile="include/stereo.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1aa65405946a82812a2e3ff53383f5099c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sl_oc::tools::StereoSgbmPar::StereoSgbmPar</definition>
+        <argsstring>()</argsstring>
+        <name>StereoSgbmPar</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="25" column="5" bodyfile="include/stereo.hpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a6ae5104d33d44bf74150ce1fae60353e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::StereoSgbmPar::load</definition>
+        <argsstring>()</argsstring>
+        <name>load</name>
+        <briefdescription>
+<para>load stereo matching parameters </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if a configuration file exists </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="34" column="10" bodyfile="include/stereo.hpp" bodystart="87" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a67ba0610706d01554046cc81eec38e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::StereoSgbmPar::save</definition>
+        <argsstring>()</argsstring>
+        <name>save</name>
+        <briefdescription>
+<para>save stereo matching parameters </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if a configuration file has been correctly created </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="40" column="10" bodyfile="include/stereo.hpp" bodystart="120" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1a57d6a62f6cb05020255b2011205dbc9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::StereoSgbmPar::setDefaultValues</definition>
+        <argsstring>()</argsstring>
+        <name>setDefaultValues</name>
+        <briefdescription>
+<para>set default stereo matching parameters </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="45" column="10" bodyfile="include/stereo.hpp" bodystart="69" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1StereoSgbmPar_1acef4eaf9d19a99d372b651280668e541" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::StereoSgbmPar::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <briefdescription>
+<para>print the current stereo matching parameters on standard output </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="50" column="10" bodyfile="include/stereo.hpp" bodystart="150" bodyend="169"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classsl__oc_1_1tools_1_1StereoSgbmPar" kindref="compound">StereoSgbmPar</ref> class is used to store/retrieve the stereo matching parameters. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/stereo.hpp" line="20" column="1" bodyfile="include/stereo.hpp" bodystart="19" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1aa7d3ef84e3fc7072c76c2d1bf60bcf2a" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>blockSize</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a05ecc80b15ed462a44954cb388a7b809" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>disp12MaxDiff</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a6ae5104d33d44bf74150ce1fae60353e" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>load</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1ac7583f2a31dad1def370a0c6b66f3a84" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>maxDepth_mm</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a46c3af7e5fe0625cddc3dcf7a3315dc8" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>minDepth_mm</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a47e39722f042eb7c1498fca47084a708" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>minDisparity</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a8f2720be5b8bfbda04bf5940c5ac6512" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>mode</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a820c8202f76be0c1b331fbc1ad191173" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>numDisparities</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a03dfe8f51eef2a9b3f5d7554083ecc8a" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>P1</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1af20a2c2c64e6c17cae349ec7830bdc26" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>P2</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1ad9fe928df5078a66415374cfc2bad989" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>preFilterCap</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1acef4eaf9d19a99d372b651280668e541" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>print</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a67ba0610706d01554046cc81eec38e8b" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>save</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a57d6a62f6cb05020255b2011205dbc9c" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>setDefaultValues</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1aa0e78c35bc4cfee3561e0312a7c8b9c1" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>speckleRange</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a1f30bba144157391d44bcec8cfbbcea2" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>speckleWindowSize</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1aa65405946a82812a2e3ff53383f5099c" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>StereoSgbmPar</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StereoSgbmPar_1a305f8d7b70e3e6f320c2ce0b315a3ae6" prot="public" virt="non-virtual"><scope>sl_oc::tools::StereoSgbmPar</scope><name>uniquenessRatio</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

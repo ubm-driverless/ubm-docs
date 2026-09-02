@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacelive__telemetry" kind="namespace" language="C++">
+    <compoundname>live_telemetry</compoundname>
+    <innerclass refid="classlive__telemetry_1_1CameraDataHandler" prot="public">live_telemetry::CameraDataHandler</innerclass>
+    <innerclass refid="classlive__telemetry_1_1Downsampler" prot="public">live_telemetry::Downsampler</innerclass>
+    <innerclass refid="structlive__telemetry_1_1DownsamplerConfig" prot="public">live_telemetry::DownsamplerConfig</innerclass>
+    <innerclass refid="structlive__telemetry_1_1ExplicitTopicConfig" prot="public">live_telemetry::ExplicitTopicConfig</innerclass>
+    <innerclass refid="structlive__telemetry_1_1FoxgloveConfig" prot="public">live_telemetry::FoxgloveConfig</innerclass>
+    <innerclass refid="classlive__telemetry_1_1FoxgloveLogger" prot="public">live_telemetry::FoxgloveLogger</innerclass>
+    <innerclass refid="classlive__telemetry_1_1Gateway" prot="public">live_telemetry::Gateway</innerclass>
+    <innerclass refid="structlive__telemetry_1_1GatewayConfig" prot="public">live_telemetry::GatewayConfig</innerclass>
+    <innerclass refid="structlive__telemetry_1_1HandlerConfig" prot="public">live_telemetry::HandlerConfig</innerclass>
+    <innerclass refid="classlive__telemetry_1_1HandlerRegistry" prot="public">live_telemetry::HandlerRegistry</innerclass>
+    <innerclass refid="structlive__telemetry_1_1HandlerStats" prot="public">live_telemetry::HandlerStats</innerclass>
+    <innerclass refid="classlive__telemetry_1_1IDataProcessor" prot="public">live_telemetry::IDataProcessor</innerclass>
+    <innerclass refid="structlive__telemetry_1_1ImageScaleConfig" prot="public">live_telemetry::ImageScaleConfig</innerclass>
+    <innerclass refid="classlive__telemetry_1_1ImageScaler" prot="public">live_telemetry::ImageScaler</innerclass>
+    <innerclass refid="classlive__telemetry_1_1JpegCompressor" prot="public">live_telemetry::JpegCompressor</innerclass>
+    <innerclass refid="classlive__telemetry_1_1LiveTelemetryNode" prot="public">live_telemetry::LiveTelemetryNode</innerclass>
+    <innerclass refid="classlive__telemetry_1_1MessageDefinitionProvider" prot="public">live_telemetry::MessageDefinitionProvider</innerclass>
+    <innerclass refid="classlive__telemetry_1_1PointCloudHandler" prot="public">live_telemetry::PointCloudHandler</innerclass>
+    <innerclass refid="structlive__telemetry_1_1PublishStats" prot="public">live_telemetry::PublishStats</innerclass>
+    <innerclass refid="structlive__telemetry_1_1TelemetryConfig" prot="public">live_telemetry::TelemetryConfig</innerclass>
+    <innerclass refid="classlive__telemetry_1_1TopicHandler" prot="public">live_telemetry::TopicHandler</innerclass>
+    <innerclass refid="structlive__telemetry_1_1TopicHandlerEntry" prot="public">live_telemetry::TopicHandlerEntry</innerclass>
+    <innerclass refid="structlive__telemetry_1_1TopicSubscription" prot="public">live_telemetry::TopicSubscription</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="downsampler_8hpp_1aa2c8255ba1f8ca167a256b784c994ddd" prot="public" static="no">
+        <type><ref refid="classlive__telemetry_1_1Downsampler" kindref="compound">Downsampler</ref>&lt; ubm_interfaces::msg::CameraData &gt;</type>
+        <definition>using live_telemetry::CameraDataDownsampler = typedef Downsampler&lt;ubm_interfaces::msg::CameraData&gt;</definition>
+        <argsstring></argsstring>
+        <name>CameraDataDownsampler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="104" column="1" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="point__cloud__handler_8hpp_1a28ee942b3cd4f29e99a564ae5240f529" prot="public" static="no">
+        <type><ref refid="classlive__telemetry_1_1Downsampler" kindref="compound">Downsampler</ref>&lt; sensor_msgs::msg::PointCloud2 &gt;</type>
+        <definition>using live_telemetry::PointCloud2Downsampler = typedef Downsampler&lt;sensor_msgs::msg::PointCloud2&gt;</definition>
+        <argsstring></argsstring>
+        <name>PointCloud2Downsampler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="27" column="5" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="topic__handler_8hpp_1a36bdfa6a4084a2867bf3bb495a57398e" prot="public" static="no">
+        <type>std::function&lt; std::unique_ptr&lt; <ref refid="classlive__telemetry_1_1TopicHandler" kindref="compound">TopicHandler</ref> &gt;(rclcpp::Node *, const <ref refid="structlive__telemetry_1_1HandlerConfig" kindref="compound">HandlerConfig</ref> &amp;, <ref refid="classlive__telemetry_1_1FoxgloveLogger" kindref="compound">FoxgloveLogger</ref> *)&gt;</type>
+        <definition>using live_telemetry::HandlerFactory = typedef std::function&lt;std::unique_ptr&lt;TopicHandler&gt;( rclcpp::Node *, const HandlerConfig &amp;, FoxgloveLogger *)&gt;</definition>
+        <argsstring></argsstring>
+        <name>HandlerFactory</name>
+        <briefdescription>
+<para>Factory function type for creating handlers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this to register custom handlers in the <ref refid="classlive__telemetry_1_1HandlerRegistry" kindref="compound">HandlerRegistry</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/topic_handler.hpp" line="177" column="3" bodyfile="include/live_telemetry_node/topic_handler.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="handler__registry_8hpp_1af0e009243fdcaeca9fc2e1c3d46ef28f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::registerBuiltinHandlers</definition>
+        <argsstring>()</argsstring>
+        <name>registerBuiltinHandlers</name>
+        <briefdescription>
+<para>Register all built-in handler types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Called once at startup before any handlers are created. To add a new handler type, add its registration in register_handlers.cpp. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/handler_registry.hpp" line="117" column="6" declfile="include/live_telemetry_node/handler_registry.hpp" declline="117" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="protobuf__converter_8hpp_1a636f410d668aa2133d0167862b77b19f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string live_telemetry::SerializeFdSet</definition>
+        <argsstring>(const google::protobuf::Descriptor *toplevel_descriptor)</argsstring>
+        <name>SerializeFdSet</name>
+        <param>
+          <type>const google::protobuf::Descriptor *</type>
+          <declname>toplevel_descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/protobuf_converter.hpp" line="20" column="20" bodyfile="include/live_telemetry_node/protobuf_converter.hpp" bodystart="20" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="protobuf__converter_8hpp_1ad7ccfbc68745767e5472a03e85032818" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>foxglove::RawImage</type>
+        <definition>foxglove::RawImage live_telemetry::toProtobuf</definition>
+        <argsstring>(const sensor_msgs::msg::Image &amp;ros_image)</argsstring>
+        <name>toProtobuf</name>
+        <param>
+          <type>const sensor_msgs::msg::Image &amp;</type>
+          <declname>ros_image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/protobuf_converter.hpp" line="47" column="27" bodyfile="include/live_telemetry_node/protobuf_converter.hpp" bodystart="47" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="protobuf__converter_8hpp_1a414ba4df407aadc6d4f52ec37eeede52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>custom::CameraData</type>
+        <definition>custom::CameraData live_telemetry::toProtobuf</definition>
+        <argsstring>(const ubm_interfaces::msg::CameraData &amp;ros_msg)</argsstring>
+        <name>toProtobuf</name>
+        <param>
+          <type>const ubm_interfaces::msg::CameraData &amp;</type>
+          <declname>ros_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/protobuf_converter.hpp" line="64" column="27" bodyfile="include/live_telemetry_node/protobuf_converter.hpp" bodystart="64" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/live_telemetry_node/camera_data_handler.hpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

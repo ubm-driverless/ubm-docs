@@ -1,0 +1,777 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="costs__utils_8hpp" kind="file" language="C++">
+    <compoundname>costs_utils.hpp</compoundname>
+    <includes local="no">armadillo</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">array</includes>
+    <includes refid="functional__cone__matching_8hpp" local="yes">cone_path_planner/functional_cone_matching.hpp</includes>
+    <includes refid="matching__utils_8hpp" local="yes">cone_path_planner/matching_utils.hpp</includes>
+    <includes refid="nearby__cone__search_8hpp" local="yes">cone_path_planner/nearby_cone_search.hpp</includes>
+    <includes refid="cone__common__types_8hpp" local="yes">cone_path_planner/cone_common_types.hpp</includes>
+    <includes refid="utils_8hpp" local="yes">cone_path_planner/utils.hpp</includes>
+    <includedby refid="calculate__costs_8hpp" local="yes">include/cone_path_planner/calculate_costs.hpp</includedby>
+    <includedby refid="functional__cone__matching_8hpp" local="yes">include/cone_path_planner/functional_cone_matching.hpp</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>limits</label>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/costs_utils.hpp</label>
+        <link refid="costs__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="10">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>armadillo</label>
+      </node>
+      <node id="9">
+        <label>cone_path_planner/cone_common_types.hpp</label>
+        <link refid="cone__common__types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>tuple</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>array</label>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/cone_path_planner/costs_utils.hpp</label>
+        <link refid="costs__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/cone_path_planner/calculate_costs.hpp</label>
+        <link refid="calculate__costs_8hpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="costs__utils_8hpp_1aa6d9e2bfcbad410f469223b70db886ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clear_nearby_cone_search_cache</definition>
+        <argsstring>()</argsstring>
+        <name>clear_nearby_cone_search_cache</name>
+        <briefdescription>
+<para>Clears the global cache used by <ref refid="classNearbyConeSearcher" kindref="compound">NearbyConeSearcher</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="28" column="6" declfile="include/cone_path_planner/costs_utils.hpp" declline="28" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1aa45a5b7fa58cb3a5dbd8f4d441241631" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301" kindref="member">SearchDirectionsCache</ref></type>
+        <definition>SearchDirectionsCache create_search_directions_cache</definition>
+        <argsstring>()</argsstring>
+        <name>create_search_directions_cache</name>
+        <briefdescription>
+<para>Initializes a search directions cache with sentinel value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An initialized SearchDirectionsCache. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="34" column="23" declfile="include/cone_path_planner/costs_utils.hpp" declline="34" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1aef0cce031070700a473a833f82fefd36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="cone__common__types_8hpp_1a2412aa2209e14a8461c2ee7fae62da2a" kindref="member">AngleMaskCache</ref></type>
+        <definition>AngleMaskCache create_angle_cache</definition>
+        <argsstring>()</argsstring>
+        <name>create_angle_cache</name>
+        <briefdescription>
+<para>Initializes an angle mask cache with sentinel value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An initialized AngleMaskCache. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="40" column="16" declfile="include/cone_path_planner/costs_utils.hpp" declline="40" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1afb4efeb1cc849a23b85537896dedd858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; arma::fvec, arma::fvec &gt;</type>
+        <definition>std::tuple&lt;arma::fvec, arma::fvec&gt; impl_number_cones_per_side</definition>
+        <argsstring>(const arma::mat &amp;points_xy, const arma::imat &amp;configurations, ConeType cone_type, double max_distance, double max_angle, SearchDirectionsCache *existing_search_directions_cache=nullptr, AngleMaskCache *existing_angles_mask_cache=nullptr, arma::fmat *distance_matrix_square=nullptr, arma::cube *cones_to_cones_vecs=nullptr)</argsstring>
+        <name>impl_number_cones_per_side</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>points_xy</declname>
+        </param>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_distance</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_angle</declname>
+        </param>
+        <param>
+          <type><ref refid="cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301" kindref="member">SearchDirectionsCache</ref> *</type>
+          <declname>existing_search_directions_cache</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type><ref refid="cone__common__types_8hpp_1a2412aa2209e14a8461c2ee7fae62da2a" kindref="member">AngleMaskCache</ref> *</type>
+          <declname>existing_angles_mask_cache</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>arma::fmat *</type>
+          <declname>distance_matrix_square</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>arma::cube *</type>
+          <declname>cones_to_cones_vecs</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Computes the number of visible cones on each side for all configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points_xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone positions (Nx2) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone configurations (MxK) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of cones considered for direction calculation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum distance for cone visibility </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum angle to consider for visibility </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>existing_search_directions_cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional pointer to a precomputed directions cache </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>existing_angles_mask_cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional pointer to a precomputed angle mask cache </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>distance_matrix_square</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional precomputed squared distance matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cones_to_cones_vecs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional precomputed vectors between cones </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple of two float vectors: (good_cones_count, bad_cones_count) per configuration </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="56" column="12" declfile="include/cone_path_planner/costs_utils.hpp" declline="56" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1a906a6152e39ff7d870166b45390e1ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pre_calculate_search_directions</definition>
+        <argsstring>(const arma::mat &amp;points_xy, const arma::imat &amp;configurations, ConeType cone_type, SearchDirectionsCache &amp;cache)</argsstring>
+        <name>pre_calculate_search_directions</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>points_xy</declname>
+        </param>
+        <param>
+          <type>const arma::imat &amp;</type>
+          <declname>configurations</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type><ref refid="cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301" kindref="member">SearchDirectionsCache</ref> &amp;</type>
+          <declname>cache</declname>
+        </param>
+        <briefdescription>
+<para>Precomputes and populates the direction cache for all configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points_xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone positions (Nx2) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone configurations (MxK) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of cones considered </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a SearchDirectionsCache to populate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="76" column="6" declfile="include/cone_path_planner/costs_utils.hpp" declline="76" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1a20fc6f91312d6f2b15809e8dd65c20ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec calculate_match_search_direction_for_one_if_not_in_cache</definition>
+        <argsstring>(const arma::mat &amp;points_xy, const SearchDirectionsCacheKey &amp;key, ConeType cone_type, SearchDirectionsCache &amp;cache)</argsstring>
+        <name>calculate_match_search_direction_for_one_if_not_in_cache</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>points_xy</declname>
+        </param>
+        <param>
+          <type>const <ref refid="cone__common__types_8hpp_1ab2b58f3678216bde3d530279fbb704e9" kindref="member">SearchDirectionsCacheKey</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type><ref refid="cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301" kindref="member">SearchDirectionsCache</ref> &amp;</type>
+          <declname>cache</declname>
+        </param>
+        <briefdescription>
+<para>Computes or retrieves from cache the direction vector for a given key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points_xy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix of cone positions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Triple of cone indices defining the direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cone </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cache to update and check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The direction vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="92" column="12" declfile="include/cone_path_planner/costs_utils.hpp" declline="92" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1afdc7af7c29b7d879b524219dd5f35f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; arma::uvec, arma::uvec &gt;</type>
+        <definition>std::pair&lt;arma::uvec, arma::uvec&gt; calculate_visible_cones_for_one_cone</definition>
+        <argsstring>(int cone_idx, const arma::umat &amp;cone_within_distance_matrix_mask, const SearchDirectionsCacheKey &amp;search_direction_key, const arma::cube &amp;cone_to_cone_vecs, float search_angle, const SearchDirectionsCache &amp;search_direction_cache, AngleMaskCache &amp;angle_cache, const arma::uvec &amp;idxs_to_check)</argsstring>
+        <name>calculate_visible_cones_for_one_cone</name>
+        <param>
+          <type>int</type>
+          <declname>cone_idx</declname>
+        </param>
+        <param>
+          <type>const arma::umat &amp;</type>
+          <declname>cone_within_distance_matrix_mask</declname>
+        </param>
+        <param>
+          <type>const <ref refid="cone__common__types_8hpp_1ab2b58f3678216bde3d530279fbb704e9" kindref="member">SearchDirectionsCacheKey</ref> &amp;</type>
+          <declname>search_direction_key</declname>
+        </param>
+        <param>
+          <type>const arma::cube &amp;</type>
+          <declname>cone_to_cone_vecs</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>search_angle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301" kindref="member">SearchDirectionsCache</ref> &amp;</type>
+          <declname>search_direction_cache</declname>
+        </param>
+        <param>
+          <type><ref refid="cone__common__types_8hpp_1a2412aa2209e14a8461c2ee7fae62da2a" kindref="member">AngleMaskCache</ref> &amp;</type>
+          <declname>angle_cache</declname>
+        </param>
+        <param>
+          <type>const arma::uvec &amp;</type>
+          <declname>idxs_to_check</declname>
+        </param>
+        <briefdescription>
+<para>Calculates visibility masks (good and bad angles) for a cone with respect to others. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cone_idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the cone being evaluated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_within_distance_matrix_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean matrix mask of valid distances </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>search_direction_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to retrieve search direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_to_cone_vecs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cube of relative vectors </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>search_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>search_direction_cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cache of direction vectors </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cache of evaluated angles </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idxs_to_check</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indices of potential matching cones </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pair of boolean masks (good_mask, bad_mask) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="112" column="11" declfile="include/cone_path_planner/costs_utils.hpp" declline="112" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1a27b8898ee7e246a17648f569f931a0d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; bool, bool &gt;</type>
+        <definition>std::pair&lt;bool, bool&gt; angle_between_search_direction_of_cone_and_other_cone_is_too_large_if_not_in_cache</definition>
+        <argsstring>(const arma::cube &amp;all_cone_directions, const SearchDirectionsCacheKey &amp;directions_key, int cone_idx, int other_cone_idx, const SearchDirectionsCache &amp;search_directions_cache, AngleMaskCache &amp;angle_cache, float search_angle)</argsstring>
+        <name>angle_between_search_direction_of_cone_and_other_cone_is_too_large_if_not_in_cache</name>
+        <param>
+          <type>const arma::cube &amp;</type>
+          <declname>all_cone_directions</declname>
+        </param>
+        <param>
+          <type>const <ref refid="cone__common__types_8hpp_1ab2b58f3678216bde3d530279fbb704e9" kindref="member">SearchDirectionsCacheKey</ref> &amp;</type>
+          <declname>directions_key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cone_idx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>other_cone_idx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301" kindref="member">SearchDirectionsCache</ref> &amp;</type>
+          <declname>search_directions_cache</declname>
+        </param>
+        <param>
+          <type><ref refid="cone__common__types_8hpp_1a2412aa2209e14a8461c2ee7fae62da2a" kindref="member">AngleMaskCache</ref> &amp;</type>
+          <declname>angle_cache</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>search_angle</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves or computes the visibility angle result between two cones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="126" column="11" declfile="include/cone_path_planner/costs_utils.hpp" declline="126" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1a11f816dc47318c295d8f46db5ba4c088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; bool, bool &gt;</type>
+        <definition>std::pair&lt;bool, bool&gt; angle_between_search_direction_of_cone_and_other_cone_is_too_large</definition>
+        <argsstring>(const arma::cube &amp;all_cone_directions, const SearchDirectionsCacheKey &amp;directions_key, int cone_idx, int other_cone_idx, const SearchDirectionsCache &amp;search_directions_cache, float search_angle)</argsstring>
+        <name>angle_between_search_direction_of_cone_and_other_cone_is_too_large</name>
+        <param>
+          <type>const arma::cube &amp;</type>
+          <declname>all_cone_directions</declname>
+        </param>
+        <param>
+          <type>const <ref refid="cone__common__types_8hpp_1ab2b58f3678216bde3d530279fbb704e9" kindref="member">SearchDirectionsCacheKey</ref> &amp;</type>
+          <declname>directions_key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cone_idx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>other_cone_idx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301" kindref="member">SearchDirectionsCache</ref> &amp;</type>
+          <declname>search_directions_cache</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>search_angle</declname>
+        </param>
+        <briefdescription>
+<para>Computes the angle visibility between two direction vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="139" column="11" declfile="include/cone_path_planner/costs_utils.hpp" declline="139" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1ae704ef399c04d0cc21c2333d586bb700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double calc_angles</definition>
+        <argsstring>(const arma::fvec &amp;v1, const arma::fvec &amp;v2)</argsstring>
+        <name>calc_angles</name>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+<para>Computes the angle (in radians) between two vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Angle in radians </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="154" column="8" declfile="include/cone_path_planner/costs_utils.hpp" declline="154" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1ad220315507a49fd04f6f4c2833193358" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec angle_difference</definition>
+        <argsstring>(const arma::fvec &amp;a, const arma::fvec &amp;b)</argsstring>
+        <name>angle_difference</name>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Computes the minimal signed angular difference between two angles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates the element-wise difference between two vectors of angles <computeroutput>a</computeroutput> and <computeroutput>b</computeroutput>, normalizing the result into the range (-π, π]. This is useful for comparing orientations while properly handling angular wrap-around.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of angles in radians (start angles). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of angles in radians (end angles). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>arma::fvec Vector of signed angular differences (b - a), each in the range (-π, π]. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="167" column="12" declfile="include/cone_path_planner/costs_utils.hpp" declline="167" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1ac0aa5386079fc8662fe076e7bc3df24b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec mod_fvec</definition>
+        <argsstring>(const arma::fvec &amp;x, float y)</argsstring>
+        <name>mod_fvec</name>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Computes the floating-point modulo of each element in a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies a modulo operation element-wise to the input vector <computeroutput>x</computeroutput> with respect to the scalar <computeroutput>y</computeroutput>. The result is always in the range [0, y).</para>
+<para>This is useful for periodic computations like angle wrapping where the standard <computeroutput>%</computeroutput> or <computeroutput>std::fmod</computeroutput> are not sufficient.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input vector of values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Modulus value (should be positive). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>arma::fvec Vector of x mod y, each in the range [0, y). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="182" column="12" declfile="include/cone_path_planner/costs_utils.hpp" declline="182" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="costs__utils_8hpp_1a47704e3f17c2b97b0c0e1467a1e1a8b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::uvec</type>
+        <definition>arma::uvec set_difference</definition>
+        <argsstring>(const arma::uvec &amp;A, const arma::uvec &amp;B)</argsstring>
+        <name>set_difference</name>
+        <param>
+          <type>const arma::uvec &amp;</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>const arma::uvec &amp;</type>
+          <declname>B</declname>
+        </param>
+        <briefdescription>
+<para>Computes the difference between two sets of indices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies the standard library function <computeroutput>std::set_difference</computeroutput> to compute the difference between two sets of indices, then converted to an <computeroutput>arma::uvec</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First set of indices (should be sorted). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second set of indices (should be sorted). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>arma::uvec Vector of indices that are in A but not in B. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/costs_utils.hpp" line="194" column="12" declfile="include/cone_path_planner/costs_utils.hpp" declline="194" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides utility functions for cone search direction and visibility analysis. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/costs_utils.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classTraceBuffer" kind="class" language="C++" prot="public">
+    <compoundname>TraceBuffer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::list&lt; TraceWithBuffer &gt;</basecompoundref>
+    <includes local="no">TraceBuffer.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classTraceBuffer_1a2e383056ef9b918817649f2c13b8fe2d" prot="private" static="no" mutable="no">
+        <type>const <ref refid="structParams_1_1WayComputer_1_1Search" kindref="compound">Params::WayComputer::Search</ref></type>
+        <definition>const Params::WayComputer::Search TraceBuffer::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+<para>Search parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="47" column="37" bodyfile="include/structures/TraceBuffer.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTraceBuffer_1a6755869bfa5f05a14bebfbc6decfaa91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TraceBuffer::TraceBuffer</definition>
+        <argsstring>(const Params::WayComputer::Search &amp;params)</argsstring>
+        <name>TraceBuffer</name>
+        <param>
+          <type>const <ref refid="structParams_1_1WayComputer_1_1Search" kindref="compound">Params::WayComputer::Search</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="51" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classTraceBuffer_1abdb2aed2d180862b8a2ef8102609703c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TraceBuffer::prune</definition>
+        <argsstring>()</argsstring>
+        <name>prune</name>
+        <briefdescription>
+<para>Prunes the buffer by removing full <ref refid="classTrace" kindref="compound">Trace(s)</ref> that are shorter than the best. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="57" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTraceBuffer_1a77d2fc499d1537ed58e1ba2beed9e020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TraceBuffer::setEdgeAsDefinitive</definition>
+        <argsstring>(const Edge &amp;nextEdge)</argsstring>
+        <name>setEdgeAsDefinitive</name>
+        <param>
+          <type>const <ref refid="classEdge" kindref="compound">Edge</ref> &amp;</type>
+          <declname>nextEdge</declname>
+        </param>
+        <briefdescription>
+<para>Adds the next edge to the definitive path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nextEdge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>represents the next valid <ref refid="classEdge" kindref="compound">Edge</ref> that should be part of the definitive path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="65" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTraceBuffer_1a54e2c19e9aa19b4e5a3a6209de9b0d1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTraceWithBuffer" kindref="compound">TraceWithBuffer</ref></type>
+        <definition>TraceWithBuffer TraceBuffer::bestTraceWithBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>bestTraceWithBuffer</name>
+        <briefdescription>
+<para>Returns the best <ref refid="classTraceWithBuffer" kindref="compound">TraceWithBuffer</ref> (according to <ref refid="classTrace_1a43609c5dffca218d90108d3c03d2d9ba" kindref="member">Trace::operator&lt;</ref>). WARNING, if empty, returns an empty Trace! </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="71" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classTraceBuffer_1a6b3bc5343fbcb3a0b20d309285c01bc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTrace" kindref="compound">Trace</ref></type>
+        <definition>Trace TraceBuffer::bestTrace</definition>
+        <argsstring>() const</argsstring>
+        <name>bestTrace</name>
+        <briefdescription>
+<para>Returns the best <ref refid="classTrace" kindref="compound">Trace</ref> (according to <ref refid="classTrace_1a43609c5dffca218d90108d3c03d2d9ba" kindref="member">Trace::operator&lt;</ref>). WARNING, if empty, returns an empty Trace! </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="77" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classTraceBuffer_1acd410cac2c35c8a1ac6cb66b218ed0f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t TraceBuffer::height</definition>
+        <argsstring>() const</argsstring>
+        <name>height</name>
+        <briefdescription>
+<para>Returns size of the best <ref refid="classTrace" kindref="compound">Trace</ref> in the buffer. WARNING, implementation correctness depends on bestTrace impl. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="83" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a buffer of a search <ref refid="classTrace" kindref="compound">Trace</ref> tree, i.e. a set of traces each representing a possible path for the car to take. It provides methods to prune the possibilities and other useful functionality. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>TraceBuffer</label>
+        <link refid="classTraceBuffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::list&lt; TraceWithBuffer &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>TraceBuffer</label>
+        <link refid="classTraceBuffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::list&lt; TraceWithBuffer &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/structures/TraceBuffer.hpp" line="42" column="36" bodyfile="include/structures/TraceBuffer.hpp" bodystart="42" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classTraceBuffer_1a6b3bc5343fbcb3a0b20d309285c01bc7" prot="public" virt="non-virtual"><scope>TraceBuffer</scope><name>bestTrace</name></member>
+      <member refid="classTraceBuffer_1a54e2c19e9aa19b4e5a3a6209de9b0d1d" prot="public" virt="non-virtual"><scope>TraceBuffer</scope><name>bestTraceWithBuffer</name></member>
+      <member refid="classTraceBuffer_1acd410cac2c35c8a1ac6cb66b218ed0f0" prot="public" virt="non-virtual"><scope>TraceBuffer</scope><name>height</name></member>
+      <member refid="classTraceBuffer_1a2e383056ef9b918817649f2c13b8fe2d" prot="private" virt="non-virtual"><scope>TraceBuffer</scope><name>params_</name></member>
+      <member refid="classTraceBuffer_1abdb2aed2d180862b8a2ef8102609703c" prot="public" virt="non-virtual"><scope>TraceBuffer</scope><name>prune</name></member>
+      <member refid="classTraceBuffer_1a77d2fc499d1537ed58e1ba2beed9e020" prot="public" virt="non-virtual"><scope>TraceBuffer</scope><name>setEdgeAsDefinitive</name></member>
+      <member refid="classTraceBuffer_1a6755869bfa5f05a14bebfbc6decfaa91" prot="public" virt="non-virtual"><scope>TraceBuffer</scope><name>TraceBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

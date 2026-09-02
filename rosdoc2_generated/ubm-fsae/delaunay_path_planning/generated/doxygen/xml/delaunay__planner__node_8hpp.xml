@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="delaunay__planner__node_8hpp" kind="file" language="C++">
+    <compoundname>delaunay_planner_node.hpp</compoundname>
+    <includes local="no">tf2/LinearMath/Matrix3x3.hpp</includes>
+    <includes local="no">tf2/LinearMath/Quaternion.hpp</includes>
+    <includes local="no">tf2_geometry_msgs/tf2_geometry_msgs.hpp</includes>
+    <includes local="no">geometry_msgs/msg/quaternion.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/landmark.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/landmark_array.hpp</includes>
+    <includes local="yes">nav_msgs/msg/odometry.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/path_limits.hpp</includes>
+    <includes local="yes">ubm_interfaces/srv/is_ready.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/pose.hpp</includes>
+    <includes local="yes">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">sys/stat.h</includes>
+    <includes refid="WayComputer_8hpp" local="yes">modules/WayComputer.hpp</includes>
+    <includes refid="DelaunayTri_8hpp" local="yes">modules/DelaunayTri.hpp</includes>
+    <includes refid="Params_8hpp" local="yes">utils/Params.hpp</includes>
+    <includes refid="definitions_8hpp" local="yes">utils/definitions.hpp</includes>
+    <incdepgraph>
+      <node id="14">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="42">
+        <label>list</label>
+      </node>
+      <node id="41">
+        <label>structures/TraceBuffer.hpp</label>
+        <link refid="TraceBuffer_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>structures/Node.hpp</label>
+        <link refid="Node_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ubm_interfaces/srv/is_ready.hpp</label>
+      </node>
+      <node id="28">
+        <label>iomanip</label>
+      </node>
+      <node id="18">
+        <label>queue</label>
+      </node>
+      <node id="3">
+        <label>tf2/LinearMath/Quaternion.hpp</label>
+      </node>
+      <node id="32">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>nav_msgs/msg/odometry.hpp</label>
+      </node>
+      <node id="22">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="11">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="27">
+        <label>cmath</label>
+      </node>
+      <node id="23">
+        <label>cassert</label>
+      </node>
+      <node id="6">
+        <label>ubm_interfaces/msg/landmark.hpp</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>ubm_interfaces/msg/landmark_array.hpp</label>
+      </node>
+      <node id="47">
+        <label>map</label>
+      </node>
+      <node id="35">
+        <label>unordered_set</label>
+      </node>
+      <node id="12">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="15">
+        <label>modules/WayComputer.hpp</label>
+        <link refid="WayComputer_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>fstream</label>
+      </node>
+      <node id="24">
+        <label>structures/Edge.hpp</label>
+        <link refid="Edge_8hpp"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>structures/Point.hpp</label>
+        <link refid="Point_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tf2/LinearMath/Matrix3x3.hpp</label>
+      </node>
+      <node id="45">
+        <label>utils/Logger.hpp</label>
+        <link refid="Logger_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>modules/DelaunayTri.hpp</label>
+        <link refid="DelaunayTri_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>geometry_msgs/msg/point.hpp</label>
+      </node>
+      <node id="40">
+        <label>structures/Circle.hpp</label>
+        <link refid="Circle_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>vector</label>
+      </node>
+      <node id="38">
+        <label>array</label>
+      </node>
+      <node id="31">
+        <label>utils/constants.hpp</label>
+        <link refid="constants_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="20">
+        <label>iostream</label>
+      </node>
+      <node id="19">
+        <label>structures/Trace.hpp</label>
+        <link refid="Trace_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>utils/Failsafe.hpp</label>
+        <link refid="Failsafe_8hpp"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>tf2_eigen/tf2_eigen.hpp</label>
+      </node>
+      <node id="43">
+        <label>deque</label>
+      </node>
+      <node id="1">
+        <label>include/delaunay_path_planning/delaunay_planner_node.hpp</label>
+        <link refid="delaunay__planner__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ubm_interfaces/msg/path_limits.hpp</label>
+      </node>
+      <node id="46">
+        <label>chrono</label>
+      </node>
+      <node id="36">
+        <label>structures/Triangle.hpp</label>
+        <link refid="Triangle_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>geometry_msgs/msg/quaternion.hpp</label>
+      </node>
+      <node id="34">
+        <label>utils/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>algorithm</label>
+      </node>
+      <node id="30">
+        <label>structures/Vector.hpp</label>
+        <link refid="Vector_8hpp"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>utils/Params.hpp</label>
+        <link refid="Params_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classDelaunayPlannerNode" prot="public">DelaunayPlannerNode</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/delaunay_path_planning/delaunay_planner_node.hpp"/>
+  </compounddef>
+</doxygen>

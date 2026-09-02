@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ekf__cpp__node_8hpp" kind="file" language="C++">
+    <compoundname>ekf_cpp_node.hpp</compoundname>
+    <includes local="yes">rclcpp/rclcpp.hpp</includes>
+    <includes local="yes">rclcpp/parameter.hpp</includes>
+    <includes local="yes">rclcpp/node_interfaces/node_parameters_interface.hpp</includes>
+    <includes local="yes">rclcpp/node_interfaces/node_base_interface.hpp</includes>
+    <includes local="yes">rclcpp/time.hpp</includes>
+    <includes local="yes">rclcpp/duration.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/custom_header.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/pose_stamped.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/point_stamped.hpp</includes>
+    <includes local="yes">nav_msgs/msg/odometry.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/vcu_data.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/custom_int32.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/emergency.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/info.hpp</includes>
+    <includes local="yes">ubm_interfaces/srv/is_ready.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">armadillo</includes>
+    <includes refid="utils_8hpp" local="yes">ekf_cpp/utils.hpp</includes>
+    <includes refid="ekf_8hpp" local="yes">ekf_cpp/ekf.hpp</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>ubm_interfaces/msg/custom_header.hpp</label>
+      </node>
+      <node id="16">
+        <label>ubm_interfaces/srv/is_ready.hpp</label>
+      </node>
+      <node id="9">
+        <label>geometry_msgs/msg/pose_stamped.hpp</label>
+      </node>
+      <node id="11">
+        <label>nav_msgs/msg/odometry.hpp</label>
+      </node>
+      <node id="12">
+        <label>ubm_interfaces/msg/vcu_data.hpp</label>
+      </node>
+      <node id="19">
+        <label>cmath</label>
+      </node>
+      <node id="21">
+        <label>stdexcept</label>
+      </node>
+      <node id="20">
+        <label>numeric</label>
+      </node>
+      <node id="17">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/parameter.hpp</label>
+      </node>
+      <node id="2">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="25">
+        <label>armadillo</label>
+      </node>
+      <node id="6">
+        <label>rclcpp/time.hpp</label>
+      </node>
+      <node id="26">
+        <label>ekf_cpp/ekf.hpp</label>
+        <link refid="ekf_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ubm_interfaces/msg/info.hpp</label>
+      </node>
+      <node id="22">
+        <label>tuple</label>
+      </node>
+      <node id="24">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>rclcpp/duration.hpp</label>
+      </node>
+      <node id="23">
+        <label>utility</label>
+      </node>
+      <node id="1">
+        <label>include/ekf_cpp/ekf_cpp_node.hpp</label>
+        <link refid="ekf__cpp__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>geometry_msgs/msg/point_stamped.hpp</label>
+      </node>
+      <node id="27">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>rclcpp/node_interfaces/node_base_interface.hpp</label>
+      </node>
+      <node id="13">
+        <label>ubm_interfaces/msg/custom_int32.hpp</label>
+      </node>
+      <node id="14">
+        <label>ubm_interfaces/msg/emergency.hpp</label>
+      </node>
+      <node id="4">
+        <label>rclcpp/node_interfaces/node_parameters_interface.hpp</label>
+      </node>
+      <node id="18">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classEkfNode" prot="public">EkfNode</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ekf_cpp/ekf_cpp_node.hpp"/>
+  </compounddef>
+</doxygen>

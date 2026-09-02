@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlive__telemetry_1_1ImageScaler" kind="class" language="C++" prot="public">
+    <compoundname>live_telemetry::ImageScaler</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1ImageScaler_1aebe238cf71712d017b546efdc10feaeb" prot="private" static="no" mutable="no">
+        <type><ref refid="structlive__telemetry_1_1ImageScaleConfig" kindref="compound">ImageScaleConfig</ref></type>
+        <definition>ImageScaleConfig live_telemetry::ImageScaler::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/image_scaler.hpp" line="115" column="20" bodyfile="include/live_telemetry_node/image_scaler.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1ImageScaler_1a1c3d642534031fd5fd68286a401b7473" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>live_telemetry::ImageScaler::ImageScaler</definition>
+        <argsstring>(const ImageScaleConfig &amp;config)</argsstring>
+        <name>ImageScaler</name>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1ImageScaleConfig" kindref="compound">ImageScaleConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/image_scaler.hpp" line="16" column="12" bodyfile="include/live_telemetry_node/image_scaler.hpp" bodystart="16" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1ImageScaler_1aad99e764756b6f32ce29e3bef7ec6e95" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::ImageScaler::calculateOutputSize</definition>
+        <argsstring>(uint32_t input_width, uint32_t input_height, uint32_t &amp;out_width, uint32_t &amp;out_height) const</argsstring>
+        <name>calculateOutputSize</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>input_width</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>input_height</declname>
+        </param>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>out_width</declname>
+        </param>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>out_height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/image_scaler.hpp" line="19" column="8" bodyfile="include/live_telemetry_node/image_scaler.hpp" bodystart="19" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1ImageScaler_1a6026cd0432fdd3627f05f732d0187986" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>sensor_msgs::msg::Image</type>
+        <definition>sensor_msgs::msg::Image live_telemetry::ImageScaler::scaleNearest</definition>
+        <argsstring>(const sensor_msgs::msg::Image &amp;input) const</argsstring>
+        <name>scaleNearest</name>
+        <param>
+          <type>const sensor_msgs::msg::Image &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/image_scaler.hpp" line="47" column="27" bodyfile="include/live_telemetry_node/image_scaler.hpp" bodystart="47" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1ImageScaler_1a4925ccdc186033bd3edf27694cc1a37a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>sensor_msgs::msg::Image</type>
+        <definition>sensor_msgs::msg::Image live_telemetry::ImageScaler::scale</definition>
+        <argsstring>(const sensor_msgs::msg::Image &amp;input) const</argsstring>
+        <name>scale</name>
+        <param>
+          <type>const sensor_msgs::msg::Image &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/image_scaler.hpp" line="93" column="27" bodyfile="include/live_telemetry_node/image_scaler.hpp" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1ImageScaler_1a8b30bf3c32fea62db923952cde0c67a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::ImageScaler::isEnabled</definition>
+        <argsstring>() const</argsstring>
+        <name>isEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/image_scaler.hpp" line="97" column="8" bodyfile="include/live_telemetry_node/image_scaler.hpp" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1ImageScaler_1a267713bbdb5a8d2a92d6c0ef33e24695" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structlive__telemetry_1_1ImageScaleConfig" kindref="compound">ImageScaleConfig</ref> &amp;</type>
+        <definition>const ImageScaleConfig&amp; live_telemetry::ImageScaler::getConfig</definition>
+        <argsstring>() const</argsstring>
+        <name>getConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/image_scaler.hpp" line="98" column="26" bodyfile="include/live_telemetry_node/image_scaler.hpp" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1ImageScaler_1a454f37d66f5f5c1db189d0683ef032be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::ImageScaler::setConfig</definition>
+        <argsstring>(const ImageScaleConfig &amp;config)</argsstring>
+        <name>setConfig</name>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1ImageScaleConfig" kindref="compound">ImageScaleConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/image_scaler.hpp" line="99" column="8" bodyfile="include/live_telemetry_node/image_scaler.hpp" bodystart="99" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1ImageScaler_1ac0f219538693f7001761a22b34a5ac8c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int live_telemetry::ImageScaler::getChannels</definition>
+        <argsstring>(const std::string &amp;encoding)</argsstring>
+        <name>getChannels</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>encoding</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/image_scaler.hpp" line="102" column="14" bodyfile="include/live_telemetry_node/image_scaler.hpp" bodystart="102" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/live_telemetry_node/image_scaler.hpp" line="14" column="18" bodyfile="include/live_telemetry_node/image_scaler.hpp" bodystart="14" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classlive__telemetry_1_1ImageScaler_1aad99e764756b6f32ce29e3bef7ec6e95" prot="public" virt="non-virtual"><scope>live_telemetry::ImageScaler</scope><name>calculateOutputSize</name></member>
+      <member refid="classlive__telemetry_1_1ImageScaler_1aebe238cf71712d017b546efdc10feaeb" prot="private" virt="non-virtual"><scope>live_telemetry::ImageScaler</scope><name>config_</name></member>
+      <member refid="classlive__telemetry_1_1ImageScaler_1ac0f219538693f7001761a22b34a5ac8c" prot="private" virt="non-virtual"><scope>live_telemetry::ImageScaler</scope><name>getChannels</name></member>
+      <member refid="classlive__telemetry_1_1ImageScaler_1a267713bbdb5a8d2a92d6c0ef33e24695" prot="public" virt="non-virtual"><scope>live_telemetry::ImageScaler</scope><name>getConfig</name></member>
+      <member refid="classlive__telemetry_1_1ImageScaler_1a1c3d642534031fd5fd68286a401b7473" prot="public" virt="non-virtual"><scope>live_telemetry::ImageScaler</scope><name>ImageScaler</name></member>
+      <member refid="classlive__telemetry_1_1ImageScaler_1a8b30bf3c32fea62db923952cde0c67a2" prot="public" virt="non-virtual"><scope>live_telemetry::ImageScaler</scope><name>isEnabled</name></member>
+      <member refid="classlive__telemetry_1_1ImageScaler_1a4925ccdc186033bd3edf27694cc1a37a" prot="public" virt="non-virtual"><scope>live_telemetry::ImageScaler</scope><name>scale</name></member>
+      <member refid="classlive__telemetry_1_1ImageScaler_1a6026cd0432fdd3627f05f732d0187986" prot="public" virt="non-virtual"><scope>live_telemetry::ImageScaler</scope><name>scaleNearest</name></member>
+      <member refid="classlive__telemetry_1_1ImageScaler_1a454f37d66f5f5c1db189d0683ef032be" prot="public" virt="non-virtual"><scope>live_telemetry::ImageScaler</scope><name>setConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

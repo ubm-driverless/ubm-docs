@@ -1,0 +1,517 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structcontrol__structs_1_1ControlState" kind="struct" language="C++" prot="public">
+    <compoundname>control_structs::ControlState</compoundname>
+    <includes local="no">ControlStructDataType.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1ae84ef787987f405de632b417e5ad6b4c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool control_structs::ControlState::pose_obtained</definition>
+        <argsstring></argsstring>
+        <name>pose_obtained</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Whether the current speed has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="150" column="14" bodyfile="include/ControlStructDataType.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1ad18590545f7f6643344406d1cd8626e6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool control_structs::ControlState::start_control</definition>
+        <argsstring></argsstring>
+        <name>start_control</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the control loop should start. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="151" column="14" bodyfile="include/ControlStructDataType.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a7f1609f8db4b8ae75077755e1555a325" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool control_structs::ControlState::mission_correct</definition>
+        <argsstring></argsstring>
+        <name>mission_correct</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Flag to allow control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="152" column="14" bodyfile="include/ControlStructDataType.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a098e29d1fd8283efc0db0d490c094cc9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int control_structs::ControlState::watchdog_count</definition>
+        <argsstring></argsstring>
+        <name>watchdog_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Counter for watchdog initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="154" column="13" bodyfile="include/ControlStructDataType.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a592cf933b7732b3621bb64f366975e93" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int control_structs::ControlState::mission</definition>
+        <argsstring></argsstring>
+        <name>mission</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Current mission number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="155" column="13" bodyfile="include/ControlStructDataType.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a046f27cf7f0a0e81ec262ef4253d1044" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_structs::ControlState::steer_error_yaw_</definition>
+        <argsstring></argsstring>
+        <name>steer_error_yaw_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Yaw error from steering controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="158" column="15" bodyfile="include/ControlStructDataType.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1aa663c415d811db5a3f39f1311cc67e95" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_structs::ControlState::steer_error_cte_</definition>
+        <argsstring></argsstring>
+        <name>steer_error_cte_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Cross-track error from steering controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="159" column="15" bodyfile="include/ControlStructDataType.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1ad8ebb45b66761915223d748acbc4a59c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_structs::ControlState::setpoint_look_ahead_x_</definition>
+        <argsstring></argsstring>
+        <name>setpoint_look_ahead_x_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Look-ahead setpoint X. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="160" column="15" bodyfile="include/ControlStructDataType.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a9d384c83613b5c74962d4b433c184c1d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_structs::ControlState::setpoint_look_ahead_y_</definition>
+        <argsstring></argsstring>
+        <name>setpoint_look_ahead_y_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Look-ahead setpoint Y. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="161" column="15" bodyfile="include/ControlStructDataType.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a2471aa19e281f18539db482e5f639098" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_structs::ControlState::torque_error_speed_</definition>
+        <argsstring></argsstring>
+        <name>torque_error_speed_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Speed error from torque controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="162" column="15" bodyfile="include/ControlStructDataType.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a8ff7d852c68959b89dd5295f03d42d2f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_structs::ControlState::torque_error_integral_</definition>
+        <argsstring></argsstring>
+        <name>torque_error_integral_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Integral error from torque controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="163" column="15" bodyfile="include/ControlStructDataType.hpp" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1ab78af56558eacfeea60b5b801f319bba" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_structs::ControlState::torque_term_p_</definition>
+        <argsstring></argsstring>
+        <name>torque_term_p_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Proportional term from torque controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="164" column="15" bodyfile="include/ControlStructDataType.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1aa33f65a86ea668729fb2a56a5eb92a5f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_structs::ControlState::torque_term_i_</definition>
+        <argsstring></argsstring>
+        <name>torque_term_i_</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Integral term from torque controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="165" column="15" bodyfile="include/ControlStructDataType.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a1ed94eaaac37f0bb7efc75f9f44c5331" prot="public" static="no" mutable="no">
+        <type><ref refid="classSteeringController" kindref="compound">SteeringController</ref></type>
+        <definition>SteeringController control_structs::ControlState::steering_controller</definition>
+        <argsstring></argsstring>
+        <name>steering_controller</name>
+        <briefdescription>
+<para>PD steering controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="168" column="28" bodyfile="include/ControlStructDataType.hpp" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a7af7ee462112e060f68805b480a1c095" prot="public" static="no" mutable="no">
+        <type><ref refid="classFeedForwardAction" kindref="compound">FeedForwardAction</ref></type>
+        <definition>FeedForwardAction control_structs::ControlState::feedforward_action</definition>
+        <argsstring></argsstring>
+        <name>feedforward_action</name>
+        <briefdescription>
+<para>Feedforward action for steering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="169" column="27" bodyfile="include/ControlStructDataType.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a43b2c56b33e42ecc699ee4672a6535b1" prot="public" static="no" mutable="no">
+        <type><ref refid="classTorqueController" kindref="compound">TorqueController</ref></type>
+        <definition>TorqueController control_structs::ControlState::torque_controller</definition>
+        <argsstring></argsstring>
+        <name>torque_controller</name>
+        <briefdescription>
+<para>Torque controller for speed control. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="170" column="26" bodyfile="include/ControlStructDataType.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a541809f6daea1c832b8502594abc1ef6" prot="public" static="no" mutable="no">
+        <type>Raceline</type>
+        <definition>Raceline control_structs::ControlState::raceline</definition>
+        <argsstring></argsstring>
+        <name>raceline</name>
+        <briefdescription>
+<para>Shared CSV-loaded raceline (acceleration/skidpad/ebs). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="173" column="18" bodyfile="include/ControlStructDataType.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a51d30e57c5d43bb7d37a4bcc1c5035d9" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; control_structs::ControlState::raceline_s</definition>
+        <argsstring></argsstring>
+        <name>raceline_s</name>
+        <briefdescription>
+<para>Arc length along the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="174" column="21" bodyfile="include/ControlStructDataType.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a14416921ad84f9c96bc3b19539f37bd0" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; control_structs::ControlState::raceline_x</definition>
+        <argsstring></argsstring>
+        <name>raceline_x</name>
+        <briefdescription>
+<para>X coordinates of the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="175" column="21" bodyfile="include/ControlStructDataType.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a2f48516945e79dfe152495142111bf42" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; control_structs::ControlState::raceline_y</definition>
+        <argsstring></argsstring>
+        <name>raceline_y</name>
+        <briefdescription>
+<para>Y coordinates of the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="176" column="21" bodyfile="include/ControlStructDataType.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a2088654d261977f88b32460f17aa16fd" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; control_structs::ControlState::raceline_velocity</definition>
+        <argsstring></argsstring>
+        <name>raceline_velocity</name>
+        <briefdescription>
+<para>Velocity along the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="177" column="21" bodyfile="include/ControlStructDataType.hpp" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1aafcc8aa563c538383f5fe16396532873" prot="public" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose control_structs::ControlState::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+<para>Current pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="180" column="34" bodyfile="include/ControlStructDataType.hpp" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1afd1c2f5045d9fbedd4e1c91857bf1a92" prot="public" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose control_structs::ControlState::odom_pose</definition>
+        <argsstring></argsstring>
+        <name>odom_pose</name>
+        <briefdescription>
+<para>Current odometry pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="181" column="34" bodyfile="include/ControlStructDataType.hpp" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1ab04a2b405f19cc52084660c232e14cae" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_structs::ControlState::current_speed</definition>
+        <argsstring></argsstring>
+        <name>current_speed</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Current speed of the vehicle (m/s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="182" column="15" bodyfile="include/ControlStructDataType.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a1402a134dd1f2f48a93061a693cca179" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float control_structs::ControlState::old_steer_angle</definition>
+        <argsstring></argsstring>
+        <name>old_steer_angle</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Previous steering angle for control loop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="183" column="15" bodyfile="include/ControlStructDataType.hpp" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1af1ef018c9b365b9ca7b3c2393fa6dac6" prot="public" static="no" mutable="no">
+        <type><ref refid="classLapPerformance" kindref="compound">LapPerformance</ref></type>
+        <definition>LapPerformance control_structs::ControlState::lap_performance</definition>
+        <argsstring></argsstring>
+        <name>lap_performance</name>
+        <briefdescription>
+<para>Object for measuring lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="186" column="24" bodyfile="include/ControlStructDataType.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a1350a6142a26ad7afe82658bf650533d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool control_structs::ControlState::enable_speed_profile_</definition>
+        <argsstring></argsstring>
+        <name>enable_speed_profile_</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Enable online speed profile. If false, uses constant target_speed_. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="193" column="14" bodyfile="include/ControlStructDataType.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1adf1bcd0b632f1488633e481aa9905657" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool control_structs::ControlState::enable_debug_info_</definition>
+        <argsstring></argsstring>
+        <name>enable_debug_info_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Print debug info at every control cycle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="194" column="14" bodyfile="include/ControlStructDataType.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a5c966fe476c4df7ec911cb8f1c05ca81" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classSpeedGenerator" kindref="compound">SpeedGenerator</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;SpeedGenerator&gt; control_structs::ControlState::speed_generator</definition>
+        <argsstring></argsstring>
+        <name>speed_generator</name>
+        <briefdescription>
+<para>Speed profile generator instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="195" column="25" bodyfile="include/ControlStructDataType.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1ControlState_1a2074ecc08c1ac84b08b8ea477f6aa61f" prot="public" static="no" mutable="no">
+        <type>ubm_interfaces::msg::Control</type>
+        <definition>ubm_interfaces::msg::Control control_structs::ControlState::drive</definition>
+        <argsstring></argsstring>
+        <name>drive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="196" column="38" bodyfile="include/ControlStructDataType.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Stato runtime e componenti di controllo. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>FeedForwardAction</label>
+        <link refid="classFeedForwardAction"/>
+      </node>
+      <node id="1">
+        <label>control_structs::ControlState</label>
+        <link refid="structcontrol__structs_1_1ControlState"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>lap_performance</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>steering_controller</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>feedforward_action</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>torque_controller</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SteeringController</label>
+        <link refid="classSteeringController"/>
+      </node>
+      <node id="5">
+        <label>TorqueController</label>
+        <link refid="classTorqueController"/>
+      </node>
+      <node id="2">
+        <label>LapPerformance</label>
+        <link refid="classLapPerformance"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/ControlStructDataType.hpp" line="148" column="23" bodyfile="include/ControlStructDataType.hpp" bodystart="148" bodyend="198"/>
+    <listofallmembers>
+      <member refid="structcontrol__structs_1_1ControlState_1aafcc8aa563c538383f5fe16396532873" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>current_pose</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1ab04a2b405f19cc52084660c232e14cae" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>current_speed</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a2074ecc08c1ac84b08b8ea477f6aa61f" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>drive</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1adf1bcd0b632f1488633e481aa9905657" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>enable_debug_info_</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a1350a6142a26ad7afe82658bf650533d" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>enable_speed_profile_</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a7af7ee462112e060f68805b480a1c095" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>feedforward_action</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1af1ef018c9b365b9ca7b3c2393fa6dac6" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>lap_performance</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a592cf933b7732b3621bb64f366975e93" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>mission</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a7f1609f8db4b8ae75077755e1555a325" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>mission_correct</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1afd1c2f5045d9fbedd4e1c91857bf1a92" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>odom_pose</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a1402a134dd1f2f48a93061a693cca179" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>old_steer_angle</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1ae84ef787987f405de632b417e5ad6b4c" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>pose_obtained</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a541809f6daea1c832b8502594abc1ef6" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>raceline</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a51d30e57c5d43bb7d37a4bcc1c5035d9" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>raceline_s</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a2088654d261977f88b32460f17aa16fd" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>raceline_velocity</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a14416921ad84f9c96bc3b19539f37bd0" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>raceline_x</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a2f48516945e79dfe152495142111bf42" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>raceline_y</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1ad8ebb45b66761915223d748acbc4a59c" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>setpoint_look_ahead_x_</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a9d384c83613b5c74962d4b433c184c1d" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>setpoint_look_ahead_y_</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a5c966fe476c4df7ec911cb8f1c05ca81" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>speed_generator</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1ad18590545f7f6643344406d1cd8626e6" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>start_control</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1aa663c415d811db5a3f39f1311cc67e95" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>steer_error_cte_</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a046f27cf7f0a0e81ec262ef4253d1044" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>steer_error_yaw_</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a1ed94eaaac37f0bb7efc75f9f44c5331" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>steering_controller</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a43b2c56b33e42ecc699ee4672a6535b1" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>torque_controller</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a8ff7d852c68959b89dd5295f03d42d2f" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>torque_error_integral_</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a2471aa19e281f18539db482e5f639098" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>torque_error_speed_</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1aa33f65a86ea668729fb2a56a5eb92a5f" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>torque_term_i_</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1ab78af56558eacfeea60b5b801f319bba" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>torque_term_p_</name></member>
+      <member refid="structcontrol__structs_1_1ControlState_1a098e29d1fd8283efc0db0d490c094cc9" prot="public" virt="non-virtual"><scope>control_structs::ControlState</scope><name>watchdog_count</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

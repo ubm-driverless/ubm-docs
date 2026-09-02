@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classSpeedProfileGenerator" kind="class" language="C++" prot="public">
+    <compoundname>SpeedProfileGenerator</compoundname>
+    <basecompoundref refid="classSpeedGenerator" prot="public" virt="non-virtual">SpeedGenerator</basecompoundref>
+    <includes local="no">speed_profile_generator.hpp</includes>
+    <innerclass refid="structSpeedProfileGenerator_1_1RawSample" prot="private">SpeedProfileGenerator::RawSample</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSpeedProfileGenerator_1a3049cddf9462e655d4564db57d99f425" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1NodeConfig" kindref="compound">control_structs::NodeConfig</ref> &amp;</type>
+        <definition>control_structs::NodeConfig&amp; SpeedProfileGenerator::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="37" column="33" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpeedProfileGenerator_1a9fd677dc0cf3af65451978ba2ff3345e" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1ControlState" kindref="compound">control_structs::ControlState</ref> &amp;</type>
+        <definition>control_structs::ControlState&amp; SpeedProfileGenerator::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="38" column="35" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpeedProfileGenerator_1a4e78a78de6a02a0e3cb6d5f33c88bdc9" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1DummyControllerParameters" kindref="compound">control_structs::DummyControllerParameters</ref> &amp;</type>
+        <definition>control_structs::DummyControllerParameters&amp; SpeedProfileGenerator::dummy_</definition>
+        <argsstring></argsstring>
+        <name>dummy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="39" column="48" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpeedProfileGenerator_1ac8cfaba4aa5de3b97a2076db8e1f3217" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1SpeedProfileParameters" kindref="compound">control_structs::SpeedProfileParameters</ref> &amp;</type>
+        <definition>control_structs::SpeedProfileParameters&amp; SpeedProfileGenerator::speed_params_</definition>
+        <argsstring></argsstring>
+        <name>speed_params_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="40" column="45" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpeedProfileGenerator_1a8e9a5bdffba8763429fcaa0a69091676" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SpeedProfileGenerator::preview_k_</definition>
+        <argsstring></argsstring>
+        <name>preview_k_</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+<para>Curvature value from the forward scan, used for logging and debugging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="41" column="11" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpeedProfileGenerator_1acaf92941825b020f3ce7ec601c322e31" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SpeedProfileGenerator::last_raw_speed_</definition>
+        <argsstring></argsstring>
+        <name>last_raw_speed_</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="48" column="11" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpeedProfileGenerator_1a95ecd006e149c998e8e17d8bfb33fa21" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SpeedProfileGenerator::recording_complete_</definition>
+        <argsstring></argsstring>
+        <name>recording_complete_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="52" column="10" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpeedProfileGenerator_1a5277b8b7bbcffae4da5f51fb949a2fc0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpeedProfileGenerator::recording_start_idx_</definition>
+        <argsstring></argsstring>
+        <name>recording_start_idx_</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="53" column="10" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpeedProfileGenerator_1a5fde8f40bb423c79a631aafea444e72b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; RawSample &gt;</type>
+        <definition>std::vector&lt;RawSample&gt; SpeedProfileGenerator::raw_recording_</definition>
+        <argsstring></argsstring>
+        <name>raw_recording_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="54" column="17" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSpeedProfileGenerator_1a1b3730830bf345bc4db40751f134561e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; SpeedProfileGenerator::recorded_speed_</definition>
+        <argsstring></argsstring>
+        <name>recorded_speed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="55" column="21" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSpeedProfileGenerator_1a9d20d4c3f3ca5559917d180c68693bce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpeedProfileGenerator::SpeedProfileGenerator</definition>
+        <argsstring>(control_structs::NodeConfig &amp;config, control_structs::ControlState &amp;state, control_structs::DummyControllerParameters &amp;dummy, control_structs::SpeedProfileParameters &amp;speed_params)</argsstring>
+        <name>SpeedProfileGenerator</name>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1NodeConfig" kindref="compound">control_structs::NodeConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1ControlState" kindref="compound">control_structs::ControlState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1DummyControllerParameters" kindref="compound">control_structs::DummyControllerParameters</ref> &amp;</type>
+          <declname>dummy</declname>
+        </param>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1SpeedProfileParameters" kindref="compound">control_structs::SpeedProfileParameters</ref> &amp;</type>
+          <declname>speed_params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpeedProfileGenerator_1ad4d5ec487bdefd57608c6832b0064695" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float SpeedProfileGenerator::generate</definition>
+        <argsstring>(int nearest_index)</argsstring>
+        <name>generate</name>
+        <reimplements refid="classSpeedGenerator_1a76273850c123e7f77b8f2dfa6f3e232e">generate</reimplements>
+        <param>
+          <type>int</type>
+          <declname>nearest_index</declname>
+        </param>
+        <briefdescription>
+<para>Compute the target speed for this control cycle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nearest_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nearest raceline index to the car (generate by the caller). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>preview_k_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Curvature value used this cycle (for logging). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rate-limited target speed [m/s]. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="33" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpeedProfileGenerator_1af9a8513d1f5a08b8ab0d035887b47188" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float SpeedProfileGenerator::get_preview_k_</definition>
+        <argsstring>()</argsstring>
+        <name>get_preview_k_</name>
+        <reimplements refid="classSpeedGenerator_1ab7796d7b9ecfeec89f4519fafe79a4ad">get_preview_k_</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="34" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSpeedProfileGenerator_1a089a7f10730a5adc0489ffe63b986302" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SpeedProfileGenerator::get_preview_curvature</definition>
+        <argsstring>(int nearest_idx)</argsstring>
+        <name>get_preview_curvature</name>
+        <param>
+          <type>int</type>
+          <declname>nearest_idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="57" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpeedProfileGenerator_1aac514bed23ed0fea3dce9698a5bdb86b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SpeedProfileGenerator::target_speed_calc</definition>
+        <argsstring>(float curvature)</argsstring>
+        <name>target_speed_calc</name>
+        <param>
+          <type>float</type>
+          <declname>curvature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="58" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpeedProfileGenerator_1a1c9325aa74b9dd86625ed3d4c70d4612" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SpeedProfileGenerator::apply_rate_limit</definition>
+        <argsstring>(float v_target)</argsstring>
+        <name>apply_rate_limit</name>
+        <param>
+          <type>float</type>
+          <declname>v_target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="59" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpeedProfileGenerator_1aa78916d5d3330f4e462f408ce0ba6172" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpeedProfileGenerator::map_raw_to_raceline</definition>
+        <argsstring>(int n)</argsstring>
+        <name>map_raw_to_raceline</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="60" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpeedProfileGenerator_1a2973e1d1caa8843256e5d44502338638" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpeedProfileGenerator::fix_recording_edges</definition>
+        <argsstring>()</argsstring>
+        <name>fix_recording_edges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="61" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpeedProfileGenerator_1af242052e08c5375443effe2b4324180f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpeedProfileGenerator::remove_spikes</definition>
+        <argsstring>()</argsstring>
+        <name>remove_spikes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_profile_generator.hpp" line="62" column="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Online preventive speed profile for raceline following. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Implements a simplified online two-pass speed profile:<itemizedlist>
+<listitem><para>Forward scan (get_preview_curvature): scans the raceline ahead to find the worst upcoming curvature within a speed-scaled preview window.</para>
+</listitem><listitem><para>Rate limiter (target_speed_calc): enforces max acceleration/deceleration per control cycle, approximating the backward pass of a full two-pass profile.</para>
+</listitem></itemizedlist>
+</para>
+<para>All tunable parameters are held in DummyControllerParameters and exposed via YAML. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SpeedProfileGenerator</label>
+        <link refid="classSpeedProfileGenerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpeedGenerator</label>
+        <link refid="classSpeedGenerator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SpeedProfileGenerator</label>
+        <link refid="classSpeedProfileGenerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpeedGenerator</label>
+        <link refid="classSpeedGenerator"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/utils/speed_profile_generator.hpp" line="20" column="1" bodyfile="include/utils/speed_profile_generator.hpp" bodystart="19" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classSpeedProfileGenerator_1a1c9325aa74b9dd86625ed3d4c70d4612" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>apply_rate_limit</name></member>
+      <member refid="classSpeedProfileGenerator_1a3049cddf9462e655d4564db57d99f425" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>config_</name></member>
+      <member refid="classSpeedProfileGenerator_1a4e78a78de6a02a0e3cb6d5f33c88bdc9" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>dummy_</name></member>
+      <member refid="classSpeedProfileGenerator_1a2973e1d1caa8843256e5d44502338638" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>fix_recording_edges</name></member>
+      <member refid="classSpeedProfileGenerator_1ad4d5ec487bdefd57608c6832b0064695" prot="public" virt="virtual"><scope>SpeedProfileGenerator</scope><name>generate</name></member>
+      <member refid="classSpeedProfileGenerator_1a089a7f10730a5adc0489ffe63b986302" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>get_preview_curvature</name></member>
+      <member refid="classSpeedProfileGenerator_1af9a8513d1f5a08b8ab0d035887b47188" prot="public" virt="virtual"><scope>SpeedProfileGenerator</scope><name>get_preview_k_</name></member>
+      <member refid="classSpeedProfileGenerator_1acaf92941825b020f3ce7ec601c322e31" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>last_raw_speed_</name></member>
+      <member refid="classSpeedProfileGenerator_1aa78916d5d3330f4e462f408ce0ba6172" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>map_raw_to_raceline</name></member>
+      <member refid="classSpeedProfileGenerator_1a8e9a5bdffba8763429fcaa0a69091676" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>preview_k_</name></member>
+      <member refid="classSpeedProfileGenerator_1a5fde8f40bb423c79a631aafea444e72b" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>raw_recording_</name></member>
+      <member refid="classSpeedProfileGenerator_1a1b3730830bf345bc4db40751f134561e" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>recorded_speed_</name></member>
+      <member refid="classSpeedProfileGenerator_1a95ecd006e149c998e8e17d8bfb33fa21" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>recording_complete_</name></member>
+      <member refid="classSpeedProfileGenerator_1a5277b8b7bbcffae4da5f51fb949a2fc0" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>recording_start_idx_</name></member>
+      <member refid="classSpeedProfileGenerator_1af242052e08c5375443effe2b4324180f" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>remove_spikes</name></member>
+      <member refid="classSpeedProfileGenerator_1ac8cfaba4aa5de3b97a2076db8e1f3217" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>speed_params_</name></member>
+      <member refid="classSpeedProfileGenerator_1a9d20d4c3f3ca5559917d180c68693bce" prot="public" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>SpeedProfileGenerator</name></member>
+      <member refid="classSpeedProfileGenerator_1a9fd677dc0cf3af65451978ba2ff3345e" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>state_</name></member>
+      <member refid="classSpeedProfileGenerator_1aac514bed23ed0fea3dce9698a5bdb86b" prot="private" virt="non-virtual"><scope>SpeedProfileGenerator</scope><name>target_speed_calc</name></member>
+      <member refid="classSpeedGenerator_1ab92faba2b491826808ef7c01c0a29197" prot="public" virt="virtual"><scope>SpeedProfileGenerator</scope><name>~SpeedGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

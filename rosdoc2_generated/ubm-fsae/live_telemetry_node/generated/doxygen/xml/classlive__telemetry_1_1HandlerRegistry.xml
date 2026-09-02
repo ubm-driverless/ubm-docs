@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlive__telemetry_1_1HandlerRegistry" kind="class" language="C++" prot="public">
+    <compoundname>live_telemetry::HandlerRegistry</compoundname>
+    <includes local="no">handler_registry.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1HandlerRegistry_1a550107a5092002f3b0a9d98543b34d3f" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, HandlerFactory &gt;</type>
+        <definition>std::map&lt;std::string, HandlerFactory&gt; live_telemetry::HandlerRegistry::factories_</definition>
+        <argsstring></argsstring>
+        <name>factories_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/handler_registry.hpp" line="108" column="14" bodyfile="include/live_telemetry_node/handler_registry.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1HandlerRegistry_1abe4b0bd948b942999d8617f53ecea522" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classlive__telemetry_1_1HandlerRegistry" kindref="compound">HandlerRegistry</ref> &amp;</type>
+        <definition>static HandlerRegistry&amp; live_telemetry::HandlerRegistry::instance</definition>
+        <argsstring>()</argsstring>
+        <name>instance</name>
+        <briefdescription>
+<para>Get the singleton registry instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/handler_registry.hpp" line="47" column="28" bodyfile="include/live_telemetry_node/handler_registry.hpp" bodystart="47" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1HandlerRegistry_1a81975495ec0cede1c702de56a525dba6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::HandlerRegistry::registerHandler</definition>
+        <argsstring>(const std::string &amp;type_name, HandlerFactory factory)</argsstring>
+        <name>registerHandler</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type_name</declname>
+        </param>
+        <param>
+          <type>HandlerFactory</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+<para>Register a handler factory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique name for this handler type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Factory function to create handler instances </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/handler_registry.hpp" line="58" column="10" bodyfile="include/live_telemetry_node/handler_registry.hpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1HandlerRegistry_1a972988438992232f48b07aa4cc05fd79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classlive__telemetry_1_1TopicHandler" kindref="compound">TopicHandler</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;TopicHandler&gt; live_telemetry::HandlerRegistry::createHandler</definition>
+        <argsstring>(const std::string &amp;type_name, rclcpp::Node *node, const HandlerConfig &amp;config, FoxgloveLogger *logger)</argsstring>
+        <name>createHandler</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type_name</declname>
+        </param>
+        <param>
+          <type>rclcpp::Node *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1HandlerConfig" kindref="compound">HandlerConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="classlive__telemetry_1_1FoxgloveLogger" kindref="compound">FoxgloveLogger</ref> *</type>
+          <declname>logger</declname>
+        </param>
+        <briefdescription>
+<para>Create a handler instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handler type (must be registered) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ROS node for subscriptions/publishers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handler configuration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>logger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Foxglove logger for publishing </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Handler instance, or nullptr if type not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/handler_registry.hpp" line="71" column="21" bodyfile="include/live_telemetry_node/handler_registry.hpp" bodystart="71" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1HandlerRegistry_1ab07f83ecc695f558bbafb98d21bb62a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::HandlerRegistry::hasHandler</definition>
+        <argsstring>(const std::string &amp;type_name) const</argsstring>
+        <name>hasHandler</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type_name</declname>
+        </param>
+        <briefdescription>
+<para>Check if a handler type is registered. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/handler_registry.hpp" line="87" column="10" bodyfile="include/live_telemetry_node/handler_registry.hpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1HandlerRegistry_1ad2e440072a9c7471f9d3aefcae8691c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; live_telemetry::HandlerRegistry::getRegisteredTypes</definition>
+        <argsstring>() const</argsstring>
+        <name>getRegisteredTypes</name>
+        <briefdescription>
+<para>Get list of registered handler types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/handler_registry.hpp" line="95" column="17" bodyfile="include/live_telemetry_node/handler_registry.hpp" bodystart="95" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1HandlerRegistry_1a5ef7512ced7c1ef236ea88c12e349b65" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>live_telemetry::HandlerRegistry::HandlerRegistry</definition>
+        <argsstring>()=default</argsstring>
+        <name>HandlerRegistry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/handler_registry.hpp" line="107" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Registry for topic handler factories. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The registry manages handler factories and creates handler instances. Teams can register custom handlers for specific topic types.</para>
+<para>Built-in handlers:<itemizedlist>
+<listitem><para>&quot;camera_data&quot;: Image scaling, JPEG compression, protobuf conversion</para>
+</listitem></itemizedlist>
+</para>
+<para>For simple topic forwarding (without custom processing), use the gateway with explicit_topics instead of creating a handler.</para>
+<para>Usage: <programlisting><codeline><highlight class="normal">//<sp/>Register<sp/>a<sp/>custom<sp/>handler</highlight></codeline>
+<codeline><highlight class="normal">HandlerRegistry::instance().registerHandler(&quot;my_sensor&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[](rclcpp::Node*<sp/>n,<sp/>const<sp/>HandlerConfig&amp;<sp/>c,<sp/>FoxgloveLogger*<sp/>l)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>std::make_unique&lt;MySensorHandler&gt;(n,<sp/>c,<sp/>l);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Create<sp/>a<sp/>handler<sp/>for<sp/>a<sp/>topic</highlight></codeline>
+<codeline><highlight class="normal">auto<sp/>handler<sp/>=<sp/>registry.createHandler(&quot;my_sensor&quot;,<sp/>node,<sp/>config,<sp/>logger);</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="include/live_telemetry_node/handler_registry.hpp" line="42" column="1" bodyfile="include/live_telemetry_node/handler_registry.hpp" bodystart="41" bodyend="109"/>
+    <listofallmembers>
+      <member refid="classlive__telemetry_1_1HandlerRegistry_1a972988438992232f48b07aa4cc05fd79" prot="public" virt="non-virtual"><scope>live_telemetry::HandlerRegistry</scope><name>createHandler</name></member>
+      <member refid="classlive__telemetry_1_1HandlerRegistry_1a550107a5092002f3b0a9d98543b34d3f" prot="private" virt="non-virtual"><scope>live_telemetry::HandlerRegistry</scope><name>factories_</name></member>
+      <member refid="classlive__telemetry_1_1HandlerRegistry_1ad2e440072a9c7471f9d3aefcae8691c5" prot="public" virt="non-virtual"><scope>live_telemetry::HandlerRegistry</scope><name>getRegisteredTypes</name></member>
+      <member refid="classlive__telemetry_1_1HandlerRegistry_1a5ef7512ced7c1ef236ea88c12e349b65" prot="private" virt="non-virtual"><scope>live_telemetry::HandlerRegistry</scope><name>HandlerRegistry</name></member>
+      <member refid="classlive__telemetry_1_1HandlerRegistry_1ab07f83ecc695f558bbafb98d21bb62a6" prot="public" virt="non-virtual"><scope>live_telemetry::HandlerRegistry</scope><name>hasHandler</name></member>
+      <member refid="classlive__telemetry_1_1HandlerRegistry_1abe4b0bd948b942999d8617f53ecea522" prot="public" virt="non-virtual"><scope>live_telemetry::HandlerRegistry</scope><name>instance</name></member>
+      <member refid="classlive__telemetry_1_1HandlerRegistry_1a81975495ec0cede1c702de56a525dba6" prot="public" virt="non-virtual"><scope>live_telemetry::HandlerRegistry</scope><name>registerHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

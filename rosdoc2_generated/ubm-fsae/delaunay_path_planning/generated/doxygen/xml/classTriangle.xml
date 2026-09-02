@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classTriangle" kind="class" language="C++" prot="public">
+    <compoundname>Triangle</compoundname>
+    <includes local="no">Triangle.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classTriangle_1ab0ec71f989b83f283e253efe923e9c0b" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classCircle" kindref="compound">Circle</ref></type>
+        <definition>const Circle Triangle::circumCircle_</definition>
+        <argsstring></argsstring>
+        <name>circumCircle_</name>
+        <briefdescription>
+<para>Circumcircle of the <ref refid="classTriangle" kindref="compound">Triangle</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="33" column="16" bodyfile="include/structures/Triangle.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTriangle_1a9c59ef07ba3b2b9a2fc117035fb05b55" prot="private" static="no" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t Triangle::hash_</definition>
+        <argsstring></argsstring>
+        <name>hash_</name>
+        <briefdescription>
+<para><ref refid="classTriangle" kindref="compound">Triangle</ref>&apos;s unique hash. The hash is calculated using the Node(s)&apos; ids. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="38" column="18" bodyfile="include/structures/Triangle.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classTriangle_1ac7cd166c51ac8cf2273bfaf891db1fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class std::hash&lt; Triangle &gt;</definition>
+        <argsstring></argsstring>
+        <name>std::hash&lt; Triangle &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="48" column="19" bodyfile="include/structures/Triangle.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classTriangle_1a489eef185bc7aea322439b6c5bb4e8ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Triangle &amp;t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classTriangle" kindref="compound">Triangle</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Cout operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="142" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classTriangle_1ad623c8bfbae90002e870dc0baa427702" prot="public" static="no" mutable="no">
+        <type>const std::array&lt; <ref refid="classcNode" kindref="compound">cNode</ref>, 3 &gt;</type>
+        <definition>const std::array&lt;cNode, 3&gt; Triangle::nodes</definition>
+        <argsstring></argsstring>
+        <name>nodes</name>
+        <briefdescription>
+<para>The 3 <ref refid="classcNode" kindref="compound">cNode(s)</ref> defining a <ref refid="classTriangle" kindref="compound">Triangle</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="55" column="20" bodyfile="include/structures/Triangle.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTriangle_1adc5aa27e3f1ae0666d5c0b1afde6ed9d" prot="public" static="no" mutable="no">
+        <type>const std::array&lt; <ref refid="classEdge" kindref="compound">Edge</ref>, 3 &gt;</type>
+        <definition>const std::array&lt;Edge, 3&gt; Triangle::edges</definition>
+        <argsstring></argsstring>
+        <name>edges</name>
+        <briefdescription>
+<para>The <ref refid="classEdge" kindref="compound">Edge(s)</ref> defined by the 3 Node(s). This object contains basically same info as <emphasis>nodes</emphasis>, but it facilitates accessing the <emphasis>Triangles&apos;</emphasis> edges and makes the program a bit quicker spending little extra memory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="62" column="20" bodyfile="include/structures/Triangle.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classTriangle_1a9e165cf63ec07c2ce5b83a01ff8411b6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>static uint64_t Triangle::computeHash</definition>
+        <argsstring>(const cNode &amp;n0, const cNode &amp;n1, const cNode &amp;n2)</argsstring>
+        <name>computeHash</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n2</declname>
+        </param>
+        <briefdescription>
+<para>Returns the hash that would have a <ref refid="classTriangle" kindref="compound">Triangle</ref> having <emphasis>n0</emphasis>, <emphasis>n1</emphasis> and <emphasis>n2</emphasis> as its Node(s). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="48" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTriangle_1af9ad81fef94623299d448990f29fcf7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Triangle::Triangle</definition>
+        <argsstring>(const cNode &amp;n0, const cNode &amp;n1, const cNode &amp;n2)</argsstring>
+        <name>Triangle</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n2</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classTriangle" kindref="compound">Triangle</ref> object from 3 <ref refid="classcNode" kindref="compound">cNode(s)</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="71" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classTriangle_1ac16d10f486da7157fb45309518c17af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Triangle::Triangle</definition>
+        <argsstring>(const Edge &amp;e, const cNode &amp;n)</argsstring>
+        <name>Triangle</name>
+        <param>
+          <type>const <ref refid="classEdge" kindref="compound">Edge</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classTriangle" kindref="compound">Triangle</ref> object from an <ref refid="classEdge" kindref="compound">Edge</ref> and a Node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="79" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classTriangle_1a23d8d8a0e229bd07d67ccfbfad2e0e25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Triangle::operator==</definition>
+        <argsstring>(const Triangle &amp;t) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classTriangle" kindref="compound">Triangle</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator, two triangles will be equal if they have the same hash. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="86" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTriangle_1a760c4fd259ee5c61c962c6c42fd4ea3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Triangle::operator!=</definition>
+        <argsstring>(const Triangle &amp;t) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classTriangle" kindref="compound">Triangle</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Negation of the comparison operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="93" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTriangle_1a0d755ab16466f05560a955338a26cd31" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Triangle::containsNode</definition>
+        <argsstring>(const cNode &amp;n) const</argsstring>
+        <name>containsNode</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the <ref refid="classTriangle" kindref="compound">Triangle</ref> contains the Node <emphasis>n</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="100" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTriangle_1a1c915272e3a90b0c87fccc2daf3cb8b9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Triangle::containsEdge</definition>
+        <argsstring>(const Edge &amp;e) const</argsstring>
+        <name>containsEdge</name>
+        <param>
+          <type>const <ref refid="classEdge" kindref="compound">Edge</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the <ref refid="classEdge" kindref="compound">Edge</ref> <emphasis>e</emphasis> belongs to the <ref refid="classTriangle" kindref="compound">Triangle</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="107" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTriangle_1a0ff758c94dca05ede5077f29f3616b48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Triangle::circleContainsNode</definition>
+        <argsstring>(const cNode &amp;n) const</argsstring>
+        <name>circleContainsNode</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a Node is inside the <ref refid="classTriangle" kindref="compound">Triangle</ref>&apos;s circumcircle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="114" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTriangle_1a0e97cdaca328ed6403eff15f0142eb96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Triangle::anyNodeInSuperTriangle</definition>
+        <argsstring>() const</argsstring>
+        <name>anyNodeInSuperTriangle</name>
+        <briefdescription>
+<para>Checks if any Node of the <ref refid="classTriangle" kindref="compound">Triangle</ref> belongs to the supertriangle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="119" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTriangle_1a4a9b61707f748b6d007afa06ad563102" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::array&lt; double, 3 &gt;</type>
+        <definition>std::array&lt;double, 3&gt; Triangle::angles</definition>
+        <argsstring>() const</argsstring>
+        <name>angles</name>
+        <briefdescription>
+<para>Returns an array with the 3 angles of the <ref refid="classTriangle" kindref="compound">Triangle</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="124" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classTriangle_1addd441f47ac775b12967152f9a9cdd77" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        <definition>const Point&amp; Triangle::circumCenter</definition>
+        <argsstring>() const</argsstring>
+        <name>circumCenter</name>
+        <briefdescription>
+<para>Returns the circumcenter in local coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="129" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classTriangle_1a5095a43cfc8eda967e2a50a145debf44" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        <definition>const Point&amp; Triangle::circumCenterGlobal</definition>
+        <argsstring>() const</argsstring>
+        <name>circumCenterGlobal</name>
+        <briefdescription>
+<para>Returns the circumcenter in global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Triangle.hpp" line="134" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a triangle, includes all elements to ease the Delaunay triangulation calculation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/structures/Triangle.hpp" line="28" column="15" bodyfile="include/structures/Triangle.hpp" bodystart="28" bodyend="143"/>
+    <listofallmembers>
+      <member refid="classTriangle_1a4a9b61707f748b6d007afa06ad563102" prot="public" virt="non-virtual"><scope>Triangle</scope><name>angles</name></member>
+      <member refid="classTriangle_1a0e97cdaca328ed6403eff15f0142eb96" prot="public" virt="non-virtual"><scope>Triangle</scope><name>anyNodeInSuperTriangle</name></member>
+      <member refid="classTriangle_1a0ff758c94dca05ede5077f29f3616b48" prot="public" virt="non-virtual"><scope>Triangle</scope><name>circleContainsNode</name></member>
+      <member refid="classTriangle_1addd441f47ac775b12967152f9a9cdd77" prot="public" virt="non-virtual"><scope>Triangle</scope><name>circumCenter</name></member>
+      <member refid="classTriangle_1a5095a43cfc8eda967e2a50a145debf44" prot="public" virt="non-virtual"><scope>Triangle</scope><name>circumCenterGlobal</name></member>
+      <member refid="classTriangle_1ab0ec71f989b83f283e253efe923e9c0b" prot="private" virt="non-virtual"><scope>Triangle</scope><name>circumCircle_</name></member>
+      <member refid="classTriangle_1a9e165cf63ec07c2ce5b83a01ff8411b6" prot="private" virt="non-virtual"><scope>Triangle</scope><name>computeHash</name></member>
+      <member refid="classTriangle_1a1c915272e3a90b0c87fccc2daf3cb8b9" prot="public" virt="non-virtual"><scope>Triangle</scope><name>containsEdge</name></member>
+      <member refid="classTriangle_1a0d755ab16466f05560a955338a26cd31" prot="public" virt="non-virtual"><scope>Triangle</scope><name>containsNode</name></member>
+      <member refid="classTriangle_1adc5aa27e3f1ae0666d5c0b1afde6ed9d" prot="public" virt="non-virtual"><scope>Triangle</scope><name>edges</name></member>
+      <member refid="classTriangle_1a9c59ef07ba3b2b9a2fc117035fb05b55" prot="private" virt="non-virtual"><scope>Triangle</scope><name>hash_</name></member>
+      <member refid="classTriangle_1ad623c8bfbae90002e870dc0baa427702" prot="public" virt="non-virtual"><scope>Triangle</scope><name>nodes</name></member>
+      <member refid="classTriangle_1a760c4fd259ee5c61c962c6c42fd4ea3b" prot="public" virt="non-virtual"><scope>Triangle</scope><name>operator!=</name></member>
+      <member refid="classTriangle_1a489eef185bc7aea322439b6c5bb4e8ef" prot="public" virt="non-virtual"><scope>Triangle</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classTriangle_1a23d8d8a0e229bd07d67ccfbfad2e0e25" prot="public" virt="non-virtual"><scope>Triangle</scope><name>operator==</name></member>
+      <member refid="classTriangle_1ac7cd166c51ac8cf2273bfaf891db1fbb" prot="public" virt="non-virtual"><scope>Triangle</scope><name>std::hash&lt; Triangle &gt;</name></member>
+      <member refid="classTriangle_1af9ad81fef94623299d448990f29fcf7c" prot="public" virt="non-virtual"><scope>Triangle</scope><name>Triangle</name></member>
+      <member refid="classTriangle_1ac16d10f486da7157fb45309518c17af9" prot="public" virt="non-virtual"><scope>Triangle</scope><name>Triangle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

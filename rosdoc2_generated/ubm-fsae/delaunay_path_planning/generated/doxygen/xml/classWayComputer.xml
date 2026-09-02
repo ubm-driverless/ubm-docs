@@ -1,0 +1,652 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classWayComputer" kind="class" language="C++" prot="public">
+    <compoundname>WayComputer</compoundname>
+    <includes local="no">WayComputer.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classWayComputer_1a9f2e63fe75d63c3926ecd3dc36997339" prot="private" static="no" mutable="no">
+        <type>const <ref refid="structParams_1_1WayComputer" kindref="compound">Params::WayComputer</ref></type>
+        <definition>const Params::WayComputer WayComputer::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+<para>All parameters related to the <ref refid="classWayComputer" kindref="compound">WayComputer</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="40" column="29" bodyfile="include/modules/WayComputer.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWayComputer_1a61bd096debc128de17def65b6850f7ac" prot="private" static="no" mutable="no">
+        <type><ref refid="classFailsafe" kindref="compound">Failsafe</ref>&lt; <ref refid="structParams_1_1WayComputer_1_1Search" kindref="compound">Params::WayComputer::Search</ref> &gt;</type>
+        <definition>Failsafe&lt;Params::WayComputer::Search&gt; WayComputer::generalFailsafe_</definition>
+        <argsstring></argsstring>
+        <name>generalFailsafe_</name>
+        <briefdescription>
+<para><ref refid="classFailsafe" kindref="compound">Failsafe</ref> of search parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="45" column="12" bodyfile="include/modules/WayComputer.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWayComputer_1a25ec67cfe69e769bc3c9f947ea1564eb" prot="private" static="no" mutable="no">
+        <type><ref refid="classTrace" kindref="compound">Trace</ref></type>
+        <definition>Trace WayComputer::way_</definition>
+        <argsstring></argsstring>
+        <name>way_</name>
+        <briefdescription>
+<para>The result of the computation and last iteration&apos;s result. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="50" column="9" bodyfile="include/modules/WayComputer.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWayComputer_1a7627e3ad340302a0f177befb2fa08b79" prot="private" static="no" mutable="no">
+        <type><ref refid="classTrace" kindref="compound">Trace</ref></type>
+        <definition>Trace WayComputer::lastWay_</definition>
+        <argsstring></argsstring>
+        <name>lastWay_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="50" column="14" bodyfile="include/modules/WayComputer.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWayComputer_1ae45cdd26adf763baec801238d0e5c5f6" prot="private" static="no" mutable="no">
+        <type><ref refid="classTrace" kindref="compound">Trace</ref></type>
+        <definition>Trace WayComputer::wayToPublish_</definition>
+        <argsstring></argsstring>
+        <name>wayToPublish_</name>
+        <briefdescription>
+<para>This Way object had to be created to solve the non-stop loop calculation. It is the Way that will be published every time (for both full &amp; partial). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="57" column="9" bodyfile="include/modules/WayComputer.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWayComputer_1ab8eb47e734d884338a1a2718c2518910" prot="private" static="no" mutable="no">
+        <type>ubm_interfaces::msg::CustomHeader</type>
+        <definition>ubm_interfaces::msg::CustomHeader WayComputer::lastHeader_</definition>
+        <argsstring></argsstring>
+        <name>lastHeader_</name>
+        <briefdescription>
+<para>Last data timestamp. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="62" column="37" bodyfile="include/modules/WayComputer.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWayComputer_1a95bf300f91430d8b9551325537f712b7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WayComputer::isLoopClosed_</definition>
+        <argsstring></argsstring>
+        <name>isLoopClosed_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether or not <emphasis>way_</emphasis> has its loop closed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="67" column="8" bodyfile="include/modules/WayComputer.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classWayComputer_1a1e31908566540abdca84c7bc09d52134" prot="public" static="no" mutable="no">
+        <type>Eigen::Affine3d</type>
+        <definition>Eigen::Affine3d WayComputer::localTf_</definition>
+        <argsstring></argsstring>
+        <name>localTf_</name>
+        <briefdescription>
+<para>The transform between global and local frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="196" column="19" bodyfile="include/modules/WayComputer.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWayComputer_1ac8598b56da82b7939f545c683b4e18c1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WayComputer::localTfValid_</definition>
+        <argsstring></argsstring>
+        <name>localTfValid_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether or not <emphasis>localTf_</emphasis> is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="201" column="8" bodyfile="include/modules/WayComputer.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classWayComputer_1a4df8d9ef9b1ab321d094de950e1d58ec" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WayComputer::filterTriangulation</definition>
+        <argsstring>(TriangleSet &amp;triangulation) const</argsstring>
+        <name>filterTriangulation</name>
+        <param>
+          <type><ref refid="definitions_8hpp_1a3d52158136e186e3457f54700a800c59" kindref="member">TriangleSet</ref> &amp;</type>
+          <declname>triangulation</declname>
+        </param>
+        <briefdescription>
+<para>Filters the TriangleSet and removes all unwanted triangles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">triangulation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="74" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1a0e555f02b666e8e27bb7f3c1213b9a81" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt;double, double&gt; WayComputer::getHeuristic</definition>
+        <argsstring>(const Point &amp;actPos, const Edge &amp;nextEdge, const Vector &amp;actDir, const Trace *actTrace, const Params::WayComputer::Search &amp;params) const</argsstring>
+        <name>getHeuristic</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>actPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classEdge" kindref="compound">Edge</ref> &amp;</type>
+          <declname>nextEdge</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classVector" kindref="compound">Vector</ref> &amp;</type>
+          <declname>actDir</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classTrace" kindref="compound">Trace</ref> *</type>
+          <declname>actTrace</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structParams_1_1WayComputer_1_1Search" kindref="compound">Params::WayComputer::Search</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Computes and returns the heuristic based on angle and distance. Uses <emphasis>params</emphasis> as its parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">actPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nextEdge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">actDir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">actTrace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="86" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1a2f67f107d7b740c4d67cda052c43d9ca" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WayComputer::findNextEdges</definition>
+        <argsstring>(std::vector&lt; HeurInd &gt; &amp;nextEdges, const Trace *actTrace, const KDTree &amp;midpointsKDT, const std::vector&lt; Edge &gt; &amp;edges, const Params::WayComputer::Search &amp;params) const</argsstring>
+        <name>findNextEdges</name>
+        <param>
+          <type>std::vector&lt; <ref refid="definitions_8hpp_1aec7f7bc213ec7717d548321ad41c9ac7" kindref="member">HeurInd</ref> &gt; &amp;</type>
+          <declname>nextEdges</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classTrace" kindref="compound">Trace</ref> *</type>
+          <declname>actTrace</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classKDTree" kindref="compound">KDTree</ref> &amp;</type>
+          <declname>midpointsKDT</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classEdge" kindref="compound">Edge</ref> &gt; &amp;</type>
+          <declname>edges</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structParams_1_1WayComputer_1_1Search" kindref="compound">Params::WayComputer::Search</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Finds all possible next Edges according to all metrics and thresholds. Uses <emphasis>params</emphasis> as its parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">nextEdges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">actTrace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">midpointsKDT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">edges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="102" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1ad23e8ea892f9acae5d90de555f0eaab4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WayComputer::treeSearch</definition>
+        <argsstring>(TraceBuffer &amp;traceBuffer, const KDTree &amp;midpointsKDT, const std::vector&lt; Edge &gt; &amp;edges, const Params::WayComputer::Search &amp;params)</argsstring>
+        <name>treeSearch</name>
+        <param>
+          <type><ref refid="classTraceBuffer" kindref="compound">TraceBuffer</ref> &amp;</type>
+          <declname>traceBuffer</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classKDTree" kindref="compound">KDTree</ref> &amp;</type>
+          <declname>midpointsKDT</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classEdge" kindref="compound">Edge</ref> &gt; &amp;</type>
+          <declname>edges</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structParams_1_1WayComputer_1_1Search" kindref="compound">Params::WayComputer::Search</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Performs a limited-height heuristic-ponderated tree search. Uses <emphasis>params</emphasis> as its parameters. In other words, makes one step of the tree search and updates all traces of the <ref refid="classTraceBuffer" kindref="compound">TraceBuffer</ref>. The returned value represents if the search can continue or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">traceBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">midpointsKDT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">edges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="120" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1a2400fd84c0e787babe8d2b8adaf1a77a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WayComputer::computeWay</definition>
+        <argsstring>(const std::vector&lt; Edge &gt; &amp;edges, const Params::WayComputer::Search &amp;params)</argsstring>
+        <name>computeWay</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="classEdge" kindref="compound">Edge</ref> &gt; &amp;</type>
+          <declname>edges</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structParams_1_1WayComputer_1_1Search" kindref="compound">Params::WayComputer::Search</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Main function of the class, it takes all Edges and computes the best possible centerline (Way). Uses <emphasis>params</emphasis> as its parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">edges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="132" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classWayComputer_1ac055a46b944ba23717da0481fc4150f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WayComputer::WayComputer</definition>
+        <argsstring>(const Params::WayComputer &amp;params)</argsstring>
+        <name>WayComputer</name>
+        <param>
+          <type>const <ref refid="structParams_1_1WayComputer" kindref="compound">Params::WayComputer</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Way Computer object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="140" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1ab847601ba957731297d432a67a6373f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WayComputer::update</definition>
+        <argsstring>(TriangleSet &amp;triangulation, const ubm_interfaces::msg::CustomHeader &amp;header)</argsstring>
+        <name>update</name>
+        <param>
+          <type><ref refid="definitions_8hpp_1a3d52158136e186e3457f54700a800c59" kindref="member">TriangleSet</ref> &amp;</type>
+          <declname>triangulation</declname>
+        </param>
+        <param>
+          <type>const ubm_interfaces::msg::CustomHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+<para>Takes the Delaunay triangle set and computes the Way. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">triangulation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="148" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1a0ed2cb89f47e0ae774ba52e04c92720a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const bool &amp;</type>
+        <definition>const bool&amp; WayComputer::isLoopClosed</definition>
+        <argsstring>() const</argsstring>
+        <name>isLoopClosed</name>
+        <briefdescription>
+<para>Returns if the loop has been closed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="153" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1ae61732e75c27a46869d22c1e9ffa898a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WayComputer::writeWayToFile</definition>
+        <argsstring>(const std::string &amp;file_path) const</argsstring>
+        <name>writeWayToFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_path</declname>
+        </param>
+        <briefdescription>
+<para>Writes the Way to the file path specified. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">file_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="160" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1a28ade4a20ef168868d1c48e661a689ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const bool &amp;</type>
+        <definition>const bool&amp; WayComputer::isLocalTfValid</definition>
+        <argsstring>() const</argsstring>
+        <name>isLocalTfValid</name>
+        <briefdescription>
+<para>Returns if the attribute localTf is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="165" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1abd062d4921f3281888fa099046bb5e10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Eigen::Affine3d &amp;</type>
+        <definition>const Eigen::Affine3d&amp; WayComputer::getLocalTf</definition>
+        <argsstring>() const</argsstring>
+        <name>getLocalTf</name>
+        <briefdescription>
+<para>Returns the transformation from global to local. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="170" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1a8e5c1db8d154c9b6e9fe70d3d8bcd5bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classPoint" kindref="compound">Point</ref> &gt;</type>
+        <definition>std::vector&lt;Point&gt; WayComputer::getPath</definition>
+        <argsstring>() const</argsstring>
+        <name>getPath</name>
+        <briefdescription>
+<para>Returns the centerline vector in global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="175" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1a2d1ea020731f15eb46eae45e4a60eafb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classTrace" kindref="compound">Trace</ref> &amp;</type>
+        <definition>const Trace&amp; WayComputer::getWay</definition>
+        <argsstring>() const</argsstring>
+        <name>getWay</name>
+        <briefdescription>
+<para>Returns the centerline vector in global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="180" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1aaad9e24b3e22bc1d6e15a97d8b8dbd14" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8hpp_1a7b3c228b7d3dc0d7ff3532fc2f3db710" kindref="member">Tracklimits</ref></type>
+        <definition>Tracklimits WayComputer::getTracklimits</definition>
+        <argsstring>() const</argsstring>
+        <name>getTracklimits</name>
+        <briefdescription>
+<para>Returns the track limits in global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="185" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classWayComputer_1aaf13f8f901a45f08b7f35a8aa2c124cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>ubm_interfaces::msg::PathLimits</type>
+        <definition>ubm_interfaces::msg::PathLimits WayComputer::getPathLimits</definition>
+        <argsstring>() const</argsstring>
+        <name>getPathLimits</name>
+        <briefdescription>
+<para>Returns the centerline and track limits in custom_msgs format in global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/WayComputer.hpp" line="191" column="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class that has all tools and functions to compute the Way. It takes the Delaunay set and the car position to do so. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/modules/WayComputer.hpp" line="35" column="18" bodyfile="include/modules/WayComputer.hpp" bodystart="35" bodyend="202"/>
+    <listofallmembers>
+      <member refid="classWayComputer_1a2400fd84c0e787babe8d2b8adaf1a77a" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>computeWay</name></member>
+      <member refid="classWayComputer_1a4df8d9ef9b1ab321d094de950e1d58ec" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>filterTriangulation</name></member>
+      <member refid="classWayComputer_1a2f67f107d7b740c4d67cda052c43d9ca" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>findNextEdges</name></member>
+      <member refid="classWayComputer_1a61bd096debc128de17def65b6850f7ac" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>generalFailsafe_</name></member>
+      <member refid="classWayComputer_1a0e555f02b666e8e27bb7f3c1213b9a81" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>getHeuristic</name></member>
+      <member refid="classWayComputer_1abd062d4921f3281888fa099046bb5e10" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>getLocalTf</name></member>
+      <member refid="classWayComputer_1a8e5c1db8d154c9b6e9fe70d3d8bcd5bc" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>getPath</name></member>
+      <member refid="classWayComputer_1aaf13f8f901a45f08b7f35a8aa2c124cb" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>getPathLimits</name></member>
+      <member refid="classWayComputer_1aaad9e24b3e22bc1d6e15a97d8b8dbd14" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>getTracklimits</name></member>
+      <member refid="classWayComputer_1a2d1ea020731f15eb46eae45e4a60eafb" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>getWay</name></member>
+      <member refid="classWayComputer_1a28ade4a20ef168868d1c48e661a689ec" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>isLocalTfValid</name></member>
+      <member refid="classWayComputer_1a0ed2cb89f47e0ae774ba52e04c92720a" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>isLoopClosed</name></member>
+      <member refid="classWayComputer_1a95bf300f91430d8b9551325537f712b7" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>isLoopClosed_</name></member>
+      <member refid="classWayComputer_1ab8eb47e734d884338a1a2718c2518910" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>lastHeader_</name></member>
+      <member refid="classWayComputer_1a7627e3ad340302a0f177befb2fa08b79" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>lastWay_</name></member>
+      <member refid="classWayComputer_1a1e31908566540abdca84c7bc09d52134" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>localTf_</name></member>
+      <member refid="classWayComputer_1ac8598b56da82b7939f545c683b4e18c1" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>localTfValid_</name></member>
+      <member refid="classWayComputer_1a9f2e63fe75d63c3926ecd3dc36997339" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>params_</name></member>
+      <member refid="classWayComputer_1ad23e8ea892f9acae5d90de555f0eaab4" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>treeSearch</name></member>
+      <member refid="classWayComputer_1ab847601ba957731297d432a67a6373f8" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>update</name></member>
+      <member refid="classWayComputer_1a25ec67cfe69e769bc3c9f947ea1564eb" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>way_</name></member>
+      <member refid="classWayComputer_1ac055a46b944ba23717da0481fc4150f0" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>WayComputer</name></member>
+      <member refid="classWayComputer_1ae45cdd26adf763baec801238d0e5c5f6" prot="private" virt="non-virtual"><scope>WayComputer</scope><name>wayToPublish_</name></member>
+      <member refid="classWayComputer_1ae61732e75c27a46869d22c1e9ffa898a" prot="public" virt="non-virtual"><scope>WayComputer</scope><name>writeWayToFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

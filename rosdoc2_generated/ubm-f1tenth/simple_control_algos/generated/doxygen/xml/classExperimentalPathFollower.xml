@@ -1,0 +1,1081 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classExperimentalPathFollower" kind="class" language="C++" prot="public">
+    <compoundname>ExperimentalPathFollower</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes local="no">experimental_path_follower.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a0b2d01d8ad87c95d24eb670fd1b4ab01" prot="private" static="no" mutable="no">
+        <type>rclcpp::Clock</type>
+        <definition>rclcpp::Clock ExperimentalPathFollower::default_clock_</definition>
+        <argsstring></argsstring>
+        <name>default_clock_</name>
+        <briefdescription>
+<para>Default clock for throttled log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="57" column="19" bodyfile="include/experimental_path_follower.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ae5c69d897239c71166d22ad891ff5134" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::send_drive_msg_</definition>
+        <argsstring></argsstring>
+        <name>send_drive_msg_</name>
+        <briefdescription>
+<para>Whether to publish drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="58" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a60283df6a2102f99a8ae36f92db9232b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::visualize_markers_</definition>
+        <argsstring></argsstring>
+        <name>visualize_markers_</name>
+        <briefdescription>
+<para>Whether to publish visualization markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="59" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ae9c38fddfc0980228dd217e4329614a3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::enable_stanley_</definition>
+        <argsstring></argsstring>
+        <name>enable_stanley_</name>
+        <briefdescription>
+<para>Whether to use Stanley controller (true) or PD controller (false). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="60" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a86b03e2c454b90b91a91c75d1744961d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::enable_feedforward_</definition>
+        <argsstring></argsstring>
+        <name>enable_feedforward_</name>
+        <briefdescription>
+<para>Whether to use feedforward action for steering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="61" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a8be00adb23ea0a67388ff66dd9833d99" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::ff_path_based_only_</definition>
+        <argsstring></argsstring>
+        <name>ff_path_based_only_</name>
+        <briefdescription>
+<para>Whether to use path-based only feedforward action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="62" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ad7d4994ceed291cbd9ab5150706a9806" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::use_pose_speed</definition>
+        <argsstring></argsstring>
+        <name>use_pose_speed</name>
+        <briefdescription>
+<para>Whether to use pose or odom speed for look ahead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="64" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a49d63e82c78aee2b5e6466c4157de6c4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::use_p_enhanced_</definition>
+        <argsstring></argsstring>
+        <name>use_p_enhanced_</name>
+        <briefdescription>
+<para>Actives new controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="65" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a37a18ca0c7c63a9f4b24ba24a04b5759" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ExperimentalPathFollower::disable_print_timeout_</definition>
+        <argsstring></argsstring>
+        <name>disable_print_timeout_</name>
+        <briefdescription>
+<para>Timeout for disabling log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="67" column="9" bodyfile="include/experimental_path_follower.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a8c1542ff7e2ed5f34f43e1134cf3e0e8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ExperimentalPathFollower::tdp_</definition>
+        <argsstring></argsstring>
+        <name>tdp_</name>
+        <briefdescription>
+<para>Time delay penalty for the path planner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="68" column="9" bodyfile="include/experimental_path_follower.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ab8d0cfff1040600c07e65224e3504c1c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ExperimentalPathFollower::delay_ff_action_</definition>
+        <argsstring></argsstring>
+        <name>delay_ff_action_</name>
+        <briefdescription>
+<para>Delay for feedforward action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="69" column="9" bodyfile="include/experimental_path_follower.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1af6371dcd8f3913b142d5ae9d9afcdbe9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::wb_</definition>
+        <argsstring></argsstring>
+        <name>wb_</name>
+        <briefdescription>
+<para>Vehicle wheelbase length (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="70" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a6d59c9f4669c6dd687a6d27b0c9bc2af" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::kk_s_</definition>
+        <argsstring></argsstring>
+        <name>kk_s_</name>
+        <briefdescription>
+<para>PD controller proportional gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="71" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a176154b018b814febc31f9534964f36a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::kd_s_</definition>
+        <argsstring></argsstring>
+        <name>kd_s_</name>
+        <briefdescription>
+<para>PD controller derivative gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="72" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a196deda8175919b5fe05d72df6832b9d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::k_stanley_</definition>
+        <argsstring></argsstring>
+        <name>k_stanley_</name>
+        <briefdescription>
+<para>Stanley controller gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="73" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a51e1633e1cbc79fd7e6dc709a0dcc708" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::min_speed_</definition>
+        <argsstring></argsstring>
+        <name>min_speed_</name>
+        <briefdescription>
+<para>p_enhanced speed that limits steering action <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="74" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a870f4e034dfb27b05cbfeedfb0885e34" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::max_error_</definition>
+        <argsstring></argsstring>
+        <name>max_error_</name>
+        <briefdescription>
+<para>p_enhanced a smaller error limits steering action </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="75" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ade45292e6fb929bb0287d9bf548fe78b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::decay_v_</definition>
+        <argsstring></argsstring>
+        <name>decay_v_</name>
+        <briefdescription>
+<para>p_enhanced decay for speed (&gt;= 0) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="76" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1aeaa132bd5ef8bc3915212b8c454231b2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::decay_e_</definition>
+        <argsstring></argsstring>
+        <name>decay_e_</name>
+        <briefdescription>
+<para>p_enhanced decay for error (&gt;= 0) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="77" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a913a94ca7ac9bafa3696c05edd6c1aa5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::look_ahead_gain_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_gain_</name>
+        <briefdescription>
+<para>Gain for calculating look-ahead distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="78" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ac262ea427c1a2605440d2532c64bd6c6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::min_look_ahead_dist_</definition>
+        <argsstring></argsstring>
+        <name>min_look_ahead_dist_</name>
+        <briefdescription>
+<para>Minimum look-ahead distance (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="79" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a705baa9e82e4dc932b075b52c5131989" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::max_steer_</definition>
+        <argsstring></argsstring>
+        <name>max_steer_</name>
+        <briefdescription>
+<para>Maximum steering angle (radians). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="80" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a06657dd06140b356cec3a1a58ecdcc08" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::scale_speed_</definition>
+        <argsstring></argsstring>
+        <name>scale_speed_</name>
+        <briefdescription>
+<para>scaling factor to target speed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="81" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a013d58538998f6632801bc5ac16a84e1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::beta_ff_gain_</definition>
+        <argsstring></argsstring>
+        <name>beta_ff_gain_</name>
+        <briefdescription>
+<para>Gain for feedforward action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="82" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a4b75e854cedb61cdb5e80f0ff31afa4c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::averaging_ff_gain_</definition>
+        <argsstring></argsstring>
+        <name>averaging_ff_gain_</name>
+        <briefdescription>
+<para>Average the new steering angle with the previous one. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="83" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a18e5a119be711b3ffe6534c7f1027781" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::max_lap_statistics_</definition>
+        <argsstring></argsstring>
+        <name>max_lap_statistics_</name>
+        <briefdescription>
+<para>maximum number of lap statistics to store. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="84" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a45fc9c1b12a905b01b726ce214b07bcd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::starting_strip_</definition>
+        <argsstring></argsstring>
+        <name>starting_strip_</name>
+        <briefdescription>
+<para>Starting strip for the lap performance tracker in percentage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="85" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ac9f8a58ab20dce4fb32f321871f55c71" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ExperimentalPathFollower::look_ahead_point_topic_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the look-ahead point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="87" column="17" bodyfile="include/experimental_path_follower.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a62ac8fa2c90dc992d36d776409bc3316" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ExperimentalPathFollower::car_nearest_point_topic_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the nearest point on the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="88" column="17" bodyfile="include/experimental_path_follower.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ae1f80cd4178cff7d37d5887ded2289e2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ExperimentalPathFollower::status_topic_</definition>
+        <argsstring></argsstring>
+        <name>status_topic_</name>
+        <briefdescription>
+<para>Topic for control status messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="89" column="17" bodyfile="include/experimental_path_follower.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a6dbbe8c1c50dc68b2c907a6675f2e225" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ExperimentalPathFollower::odom_topic_</definition>
+        <argsstring></argsstring>
+        <name>odom_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to odometry messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="90" column="17" bodyfile="include/experimental_path_follower.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a686c1a5ebf2081c65e281f1027e430e3" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ExperimentalPathFollower::pose_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to pose messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="91" column="17" bodyfile="include/experimental_path_follower.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a2ccb192aef21f9de0a658dc3dcdf999c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ExperimentalPathFollower::drive_topic_</definition>
+        <argsstring></argsstring>
+        <name>drive_topic_</name>
+        <briefdescription>
+<para>Topic for publishing drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="92" column="17" bodyfile="include/experimental_path_follower.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a7b4e2642ecfabeb56a70069d9cbf2de1" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ExperimentalPathFollower::reset_lap_statistics_topic_</definition>
+        <argsstring></argsstring>
+        <name>reset_lap_statistics_topic_</name>
+        <briefdescription>
+<para>Topic for resetting lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="93" column="17" bodyfile="include/experimental_path_follower.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1aac41f14c57e66c400f25d6addcf8afed" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ExperimentalPathFollower::raceline_file_</definition>
+        <argsstring></argsstring>
+        <name>raceline_file_</name>
+        <briefdescription>
+<para>File containing the raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="94" column="17" bodyfile="include/experimental_path_follower.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a8c8f9cb9f3acd9517bd1fc00f0c88717" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::path_obtained</definition>
+        <argsstring></argsstring>
+        <name>path_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the raceline path has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="97" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a3ad0cfca00265da1348cb2092de369bd" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::speed_obtained</definition>
+        <argsstring></argsstring>
+        <name>speed_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current speed has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="98" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1acd19aec0700a6bd4792a29b16a224bc7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::pose_obtained</definition>
+        <argsstring></argsstring>
+        <name>pose_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current pose has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="99" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a3a2456a05ec687fa204503330fc3d63a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExperimentalPathFollower::allow_processing</definition>
+        <argsstring></argsstring>
+        <name>allow_processing</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the pure pursuit algorithm is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="100" column="10" bodyfile="include/experimental_path_follower.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a8f6ec9ec7a99a48a62d5897ffa0f1068" prot="private" static="no" mutable="no">
+        <type><ref refid="classSteeringController" kindref="compound">SteeringController</ref></type>
+        <definition>SteeringController ExperimentalPathFollower::steering_controller</definition>
+        <argsstring></argsstring>
+        <name>steering_controller</name>
+        <briefdescription>
+<para>PD steering controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="103" column="24" bodyfile="include/experimental_path_follower.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1aca496dc6166b59ca42ee70637d6c91a2" prot="private" static="no" mutable="no">
+        <type><ref refid="classFeedForwardAction" kindref="compound">FeedForwardAction</ref></type>
+        <definition>FeedForwardAction ExperimentalPathFollower::feedforward_action</definition>
+        <argsstring></argsstring>
+        <name>feedforward_action</name>
+        <briefdescription>
+<para>Feedforward action for steering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="104" column="23" bodyfile="include/experimental_path_follower.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a8911fbab9f664cb0c9f727754c084d2f" prot="private" static="no" mutable="no">
+        <type><ref refid="classRaceline" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/raceline_utils/raceline_utils.tag">Raceline</ref></type>
+        <definition>Raceline ExperimentalPathFollower::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+<para>Object representing the raceline path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="105" column="14" bodyfile="include/experimental_path_follower.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ae4d0392b64e576d3b60ace37d289a48e" prot="private" static="no" mutable="no">
+        <type><ref refid="classLapPerformance" kindref="compound">LapPerformance</ref></type>
+        <definition>LapPerformance ExperimentalPathFollower::lap_performance</definition>
+        <argsstring></argsstring>
+        <name>lap_performance</name>
+        <briefdescription>
+<para>Object for measuring lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="106" column="20" bodyfile="include/experimental_path_follower.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ad99f307c733ef57696856745becc5bb0" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose ExperimentalPathFollower::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+<para>Current pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="109" column="30" bodyfile="include/experimental_path_follower.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a6e5ebc3edb41cca909861beae1c27776" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose ExperimentalPathFollower::odom_pose</definition>
+        <argsstring></argsstring>
+        <name>odom_pose</name>
+        <briefdescription>
+<para>Current odometry pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="110" column="30" bodyfile="include/experimental_path_follower.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a21bcd1c40377b9a44143f04673f0fb56" prot="private" static="no" mutable="no">
+        <type>std_msgs::msg::Header</type>
+        <definition>std_msgs::msg::Header ExperimentalPathFollower::common_header</definition>
+        <argsstring></argsstring>
+        <name>common_header</name>
+        <briefdescription>
+<para>Common header for visualization messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="111" column="27" bodyfile="include/experimental_path_follower.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1aff0f7290a96f7f46708fc849ca86c9e3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExperimentalPathFollower::current_speed</definition>
+        <argsstring></argsstring>
+        <name>current_speed</name>
+        <briefdescription>
+<para>Current speed of the vehicle (m/s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="112" column="11" bodyfile="include/experimental_path_follower.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a7e2698c021713fc9e8bb622e6c85c644" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr ExperimentalPathFollower::odom_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>odom_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for odometry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="115" column="38" bodyfile="include/experimental_path_follower.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a5bdf82c6acaf9620186129965a05f2f8" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr ExperimentalPathFollower::pose_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>pose_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="116" column="38" bodyfile="include/experimental_path_follower.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1afa699b6776472d9f84b6bfa678f59372" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr ExperimentalPathFollower::status_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>status_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pure pursuit status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="117" column="38" bodyfile="include/experimental_path_follower.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a7a2bcff4cf1cb314d77b1d6006843827" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr ExperimentalPathFollower::reset_lap_statistics_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>reset_lap_statistics_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for resetting lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="118" column="38" bodyfile="include/experimental_path_follower.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1ac73de032d46e6e71b78de6d4ebf6e669" prot="private" static="no" mutable="no">
+        <type>OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>OnSetParametersCallbackHandle::SharedPtr ExperimentalPathFollower::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+<para>Handle for dynamic parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="119" column="46" bodyfile="include/experimental_path_follower.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a30d597d60effaf08f87071acf64c0c5e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ackermann_msgs::msg::AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ackermann_msgs::msg::AckermannDriveStamped&gt;::SharedPtr ExperimentalPathFollower::drive_publisher_</definition>
+        <argsstring></argsstring>
+        <name>drive_publisher_</name>
+        <briefdescription>
+<para>Publisher for control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="122" column="35" bodyfile="include/experimental_path_follower.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1aedf703d3bbcc879040e5df1a0675e922" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr ExperimentalPathFollower::look_ahead_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for look-ahead point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="123" column="35" bodyfile="include/experimental_path_follower.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a759fb39e2391afd23649dd5f4f007722" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr ExperimentalPathFollower::car_nearest_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for nearest point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="124" column="35" bodyfile="include/experimental_path_follower.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1a385a69125a5264de7d2503e79c57608d" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Path&gt;::SharedPtr ExperimentalPathFollower::raceline_publisher_</definition>
+        <argsstring></argsstring>
+        <name>raceline_publisher_</name>
+        <briefdescription>
+<para>Publisher for the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="125" column="35" bodyfile="include/experimental_path_follower.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExperimentalPathFollower_1aa0557232bb227f07abaef274ba1e6cc7" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; f1tenth_msgs::msg::LapPerformanceStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;f1tenth_msgs::msg::LapPerformanceStamped&gt;::SharedPtr ExperimentalPathFollower::lap_performance_publisher_</definition>
+        <argsstring></argsstring>
+        <name>lap_performance_publisher_</name>
+        <briefdescription>
+<para>Publisher for lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="126" column="35" bodyfile="include/experimental_path_follower.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classExperimentalPathFollower_1a6444b9943fc3d5f7367512c96d6ad906" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ExperimentalPathFollower::ExperimentalPathFollower</definition>
+        <argsstring>()</argsstring>
+        <name>ExperimentalPathFollower</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classExperimentalPathFollower" kindref="compound">ExperimentalPathFollower</ref>. Initializes parameters, subscriptions, and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="53" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classExperimentalPathFollower_1a8af8c0aad54b185be078fa1ce459c759" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult ExperimentalPathFollower::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Handles parameter updates dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classVector" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/delaunay_path_planning/delaunay_path_planning.tag">Vector</ref> of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of parameter update operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="135" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classExperimentalPathFollower_1a078edfaf47dc621b36c53f249acb5df3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExperimentalPathFollower::status_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr status_msg)</argsstring>
+        <name>status_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>status_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle status updates for enabling/disabling pure pursuit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether pure pursuit is enabled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="141" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classExperimentalPathFollower_1a22af41aa5c299d2a7ca1caaf695018b6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExperimentalPathFollower::odom_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr odom_msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>odom_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle odometry updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odometry message containing the current speed and pose. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="147" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classExperimentalPathFollower_1adbc581a762e5a6685e8afc7376b65ec0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExperimentalPathFollower::pose_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr pose_msg)</argsstring>
+        <name>pose_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>pose_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle pose updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odometry message containing the current pose of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="153" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classExperimentalPathFollower_1aff20e3ba9a9b270d8f512f7079e8f5c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExperimentalPathFollower::reset_lap_statistics_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr reset_msg)</argsstring>
+        <name>reset_lap_statistics_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>reset_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to reset lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether to reset lap statistics. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="159" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classExperimentalPathFollower_1adfd83632ae4bab7f199f6abb415954f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExperimentalPathFollower::control_loop</definition>
+        <argsstring>()</argsstring>
+        <name>control_loop</name>
+        <briefdescription>
+<para>Main control loop for the Pure Pursuit algorithm. Calculates target steering and speed, and sends control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/experimental_path_follower.hpp" line="165" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS2 node that implements the Pure Pursuit algorithm for controlling a vehicle along a raceline. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ExperimentalPathFollower</label>
+        <link refid="classExperimentalPathFollower"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ExperimentalPathFollower</label>
+        <link refid="classExperimentalPathFollower"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/experimental_path_follower.hpp" line="47" column="1" bodyfile="include/experimental_path_follower.hpp" bodystart="46" bodyend="166"/>
+    <listofallmembers>
+      <member refid="classExperimentalPathFollower_1a3a2456a05ec687fa204503330fc3d63a" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>allow_processing</name></member>
+      <member refid="classExperimentalPathFollower_1a4b75e854cedb61cdb5e80f0ff31afa4c" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>averaging_ff_gain_</name></member>
+      <member refid="classExperimentalPathFollower_1a013d58538998f6632801bc5ac16a84e1" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>beta_ff_gain_</name></member>
+      <member refid="classExperimentalPathFollower_1a759fb39e2391afd23649dd5f4f007722" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>car_nearest_point_publisher_</name></member>
+      <member refid="classExperimentalPathFollower_1a62ac8fa2c90dc992d36d776409bc3316" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>car_nearest_point_topic_</name></member>
+      <member refid="classExperimentalPathFollower_1a21bcd1c40377b9a44143f04673f0fb56" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>common_header</name></member>
+      <member refid="classExperimentalPathFollower_1adfd83632ae4bab7f199f6abb415954f0" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>control_loop</name></member>
+      <member refid="classExperimentalPathFollower_1ad99f307c733ef57696856745becc5bb0" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>current_pose</name></member>
+      <member refid="classExperimentalPathFollower_1aff0f7290a96f7f46708fc849ca86c9e3" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>current_speed</name></member>
+      <member refid="classExperimentalPathFollower_1aeaa132bd5ef8bc3915212b8c454231b2" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>decay_e_</name></member>
+      <member refid="classExperimentalPathFollower_1ade45292e6fb929bb0287d9bf548fe78b" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>decay_v_</name></member>
+      <member refid="classExperimentalPathFollower_1a0b2d01d8ad87c95d24eb670fd1b4ab01" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>default_clock_</name></member>
+      <member refid="classExperimentalPathFollower_1ab8d0cfff1040600c07e65224e3504c1c" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>delay_ff_action_</name></member>
+      <member refid="classExperimentalPathFollower_1a37a18ca0c7c63a9f4b24ba24a04b5759" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>disable_print_timeout_</name></member>
+      <member refid="classExperimentalPathFollower_1a30d597d60effaf08f87071acf64c0c5e" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>drive_publisher_</name></member>
+      <member refid="classExperimentalPathFollower_1a2ccb192aef21f9de0a658dc3dcdf999c" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>drive_topic_</name></member>
+      <member refid="classExperimentalPathFollower_1a86b03e2c454b90b91a91c75d1744961d" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>enable_feedforward_</name></member>
+      <member refid="classExperimentalPathFollower_1ae9c38fddfc0980228dd217e4329614a3" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>enable_stanley_</name></member>
+      <member refid="classExperimentalPathFollower_1a6444b9943fc3d5f7367512c96d6ad906" prot="public" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>ExperimentalPathFollower</name></member>
+      <member refid="classExperimentalPathFollower_1aca496dc6166b59ca42ee70637d6c91a2" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>feedforward_action</name></member>
+      <member refid="classExperimentalPathFollower_1a8be00adb23ea0a67388ff66dd9833d99" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>ff_path_based_only_</name></member>
+      <member refid="classExperimentalPathFollower_1a196deda8175919b5fe05d72df6832b9d" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>k_stanley_</name></member>
+      <member refid="classExperimentalPathFollower_1a176154b018b814febc31f9534964f36a" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>kd_s_</name></member>
+      <member refid="classExperimentalPathFollower_1a6d59c9f4669c6dd687a6d27b0c9bc2af" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>kk_s_</name></member>
+      <member refid="classExperimentalPathFollower_1ae4d0392b64e576d3b60ace37d289a48e" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>lap_performance</name></member>
+      <member refid="classExperimentalPathFollower_1aa0557232bb227f07abaef274ba1e6cc7" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>lap_performance_publisher_</name></member>
+      <member refid="classExperimentalPathFollower_1a913a94ca7ac9bafa3696c05edd6c1aa5" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>look_ahead_gain_</name></member>
+      <member refid="classExperimentalPathFollower_1aedf703d3bbcc879040e5df1a0675e922" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>look_ahead_point_publisher_</name></member>
+      <member refid="classExperimentalPathFollower_1ac9f8a58ab20dce4fb32f321871f55c71" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>look_ahead_point_topic_</name></member>
+      <member refid="classExperimentalPathFollower_1a870f4e034dfb27b05cbfeedfb0885e34" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>max_error_</name></member>
+      <member refid="classExperimentalPathFollower_1a18e5a119be711b3ffe6534c7f1027781" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>max_lap_statistics_</name></member>
+      <member refid="classExperimentalPathFollower_1a705baa9e82e4dc932b075b52c5131989" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>max_steer_</name></member>
+      <member refid="classExperimentalPathFollower_1ac262ea427c1a2605440d2532c64bd6c6" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>min_look_ahead_dist_</name></member>
+      <member refid="classExperimentalPathFollower_1a51e1633e1cbc79fd7e6dc709a0dcc708" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>min_speed_</name></member>
+      <member refid="classExperimentalPathFollower_1a22af41aa5c299d2a7ca1caaf695018b6" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>odom_callback</name></member>
+      <member refid="classExperimentalPathFollower_1a6e5ebc3edb41cca909861beae1c27776" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>odom_pose</name></member>
+      <member refid="classExperimentalPathFollower_1a7e2698c021713fc9e8bb622e6c85c644" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>odom_subscriber_</name></member>
+      <member refid="classExperimentalPathFollower_1a6dbbe8c1c50dc68b2c907a6675f2e225" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>odom_topic_</name></member>
+      <member refid="classExperimentalPathFollower_1a8af8c0aad54b185be078fa1ce459c759" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>params_callback</name></member>
+      <member refid="classExperimentalPathFollower_1ac73de032d46e6e71b78de6d4ebf6e669" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>params_callback_handle_</name></member>
+      <member refid="classExperimentalPathFollower_1a8911fbab9f664cb0c9f727754c084d2f" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>path</name></member>
+      <member refid="classExperimentalPathFollower_1a8c8f9cb9f3acd9517bd1fc00f0c88717" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>path_obtained</name></member>
+      <member refid="classExperimentalPathFollower_1adbc581a762e5a6685e8afc7376b65ec0" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>pose_callback</name></member>
+      <member refid="classExperimentalPathFollower_1acd19aec0700a6bd4792a29b16a224bc7" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>pose_obtained</name></member>
+      <member refid="classExperimentalPathFollower_1a5bdf82c6acaf9620186129965a05f2f8" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>pose_subscriber_</name></member>
+      <member refid="classExperimentalPathFollower_1a686c1a5ebf2081c65e281f1027e430e3" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>pose_topic_</name></member>
+      <member refid="classExperimentalPathFollower_1aac41f14c57e66c400f25d6addcf8afed" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>raceline_file_</name></member>
+      <member refid="classExperimentalPathFollower_1a385a69125a5264de7d2503e79c57608d" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>raceline_publisher_</name></member>
+      <member refid="classExperimentalPathFollower_1aff20e3ba9a9b270d8f512f7079e8f5c6" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>reset_lap_statistics_callback</name></member>
+      <member refid="classExperimentalPathFollower_1a7a2bcff4cf1cb314d77b1d6006843827" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>reset_lap_statistics_subscriber_</name></member>
+      <member refid="classExperimentalPathFollower_1a7b4e2642ecfabeb56a70069d9cbf2de1" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>reset_lap_statistics_topic_</name></member>
+      <member refid="classExperimentalPathFollower_1a06657dd06140b356cec3a1a58ecdcc08" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>scale_speed_</name></member>
+      <member refid="classExperimentalPathFollower_1ae5c69d897239c71166d22ad891ff5134" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>send_drive_msg_</name></member>
+      <member refid="classExperimentalPathFollower_1a3ad0cfca00265da1348cb2092de369bd" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>speed_obtained</name></member>
+      <member refid="classExperimentalPathFollower_1a45fc9c1b12a905b01b726ce214b07bcd" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>starting_strip_</name></member>
+      <member refid="classExperimentalPathFollower_1a078edfaf47dc621b36c53f249acb5df3" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>status_callback</name></member>
+      <member refid="classExperimentalPathFollower_1afa699b6776472d9f84b6bfa678f59372" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>status_subscriber_</name></member>
+      <member refid="classExperimentalPathFollower_1ae1f80cd4178cff7d37d5887ded2289e2" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>status_topic_</name></member>
+      <member refid="classExperimentalPathFollower_1a8f6ec9ec7a99a48a62d5897ffa0f1068" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>steering_controller</name></member>
+      <member refid="classExperimentalPathFollower_1a8c1542ff7e2ed5f34f43e1134cf3e0e8" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>tdp_</name></member>
+      <member refid="classExperimentalPathFollower_1a49d63e82c78aee2b5e6466c4157de6c4" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>use_p_enhanced_</name></member>
+      <member refid="classExperimentalPathFollower_1ad7d4994ceed291cbd9ab5150706a9806" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>use_pose_speed</name></member>
+      <member refid="classExperimentalPathFollower_1a60283df6a2102f99a8ae36f92db9232b" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>visualize_markers_</name></member>
+      <member refid="classExperimentalPathFollower_1af6371dcd8f3913b142d5ae9d9afcdbe9" prot="private" virt="non-virtual"><scope>ExperimentalPathFollower</scope><name>wb_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

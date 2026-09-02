@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structObstacle" kind="struct" language="C++" prot="public">
+    <compoundname>Obstacle</compoundname>
+    <includes local="no">potential_field.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structObstacle_1a72156fa98bfcacf91e9a9fecee2076e9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Obstacle::start_index</definition>
+        <argsstring></argsstring>
+        <name>start_index</name>
+        <briefdescription>
+<para>Start index of the obstacle in the range data (discrete index). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="25" column="9" bodyfile="include/potential_field.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObstacle_1a002c05af4e8722cc1dac15bd352bf53c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Obstacle::end_index</definition>
+        <argsstring></argsstring>
+        <name>end_index</name>
+        <briefdescription>
+<para>End index of the obstacle in the range data (discrete index). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="26" column="9" bodyfile="include/potential_field.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObstacle_1ac33d754de69bb4d668a50bca62c3e379" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Obstacle::phi</definition>
+        <argsstring></argsstring>
+        <name>phi</name>
+        <briefdescription>
+<para>Angular width of the obstacle in radians. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="27" column="11" bodyfile="include/potential_field.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObstacle_1a01ba638acc4ca0f030b945bb6cbb0c2c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Obstacle::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <briefdescription>
+<para>Angular position of the obstacle&apos;s center in radians. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="28" column="11" bodyfile="include/potential_field.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObstacle_1a6f6ddfdb0b09177aef3f887c6f853660" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Obstacle::distance</definition>
+        <argsstring></argsstring>
+        <name>distance</name>
+        <briefdescription>
+<para>Average distance to the obstacle (in meters or arbitrary units). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="29" column="11" bodyfile="include/potential_field.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObstacle_1ae74875c3207aafcef70f360579dc816e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Obstacle::sigma</definition>
+        <argsstring></argsstring>
+        <name>sigma</name>
+        <briefdescription>
+<para>Gaussian spread parameter for obstacle potential computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="30" column="11" bodyfile="include/potential_field.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObstacle_1a49b143fc676ddff28338037c97111e91" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Obstacle::distance_tilda</definition>
+        <argsstring></argsstring>
+        <name>distance_tilda</name>
+        <briefdescription>
+<para>Adjusted distance for potential calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="31" column="11" bodyfile="include/potential_field.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObstacle_1aca168ecaf700dfae694592330c6ea36e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Obstacle::coeff_a</definition>
+        <argsstring></argsstring>
+        <name>coeff_a</name>
+        <briefdescription>
+<para>Amplitude of the obstacle&apos;s repulsive potential field. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/potential_field.hpp" line="32" column="11" bodyfile="include/potential_field.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents an obstacle with its properties. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct encapsulates all the necessary parameters that define an obstacle in the potential field. These parameters include both the obstacle&apos;s physical dimensions and its contribution to the repulsive field. </para>
+    </detaileddescription>
+    <location file="include/potential_field.hpp" line="24" column="15" bodyfile="include/potential_field.hpp" bodystart="24" bodyend="33"/>
+    <listofallmembers>
+      <member refid="structObstacle_1aca168ecaf700dfae694592330c6ea36e" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>coeff_a</name></member>
+      <member refid="structObstacle_1a6f6ddfdb0b09177aef3f887c6f853660" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>distance</name></member>
+      <member refid="structObstacle_1a49b143fc676ddff28338037c97111e91" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>distance_tilda</name></member>
+      <member refid="structObstacle_1a002c05af4e8722cc1dac15bd352bf53c" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>end_index</name></member>
+      <member refid="structObstacle_1ac33d754de69bb4d668a50bca62c3e379" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>phi</name></member>
+      <member refid="structObstacle_1ae74875c3207aafcef70f360579dc816e" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>sigma</name></member>
+      <member refid="structObstacle_1a72156fa98bfcacf91e9a9fecee2076e9" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>start_index</name></member>
+      <member refid="structObstacle_1a01ba638acc4ca0f030b945bb6cbb0c2c" prot="public" virt="non-virtual"><scope>Obstacle</scope><name>theta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

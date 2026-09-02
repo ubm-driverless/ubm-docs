@@ -1,0 +1,1134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="calculate__configurations_8hpp" kind="file" language="C++">
+    <compoundname>calculate_configurations.hpp</compoundname>
+    <includes refid="utils_8hpp" local="yes">cone_path_planner/utils.hpp</includes>
+    <includedby refid="cone__sorting_8hpp" local="yes">include/cone_path_planner/cone_sorting.hpp</includedby>
+    <includedby refid="functional__cone__matching_8hpp" local="yes">include/cone_path_planner/functional_cone_matching.hpp</includedby>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="calculate__configurations_8hpp_1acbc32eccca90b5b819e02445f6aa3bbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::array&lt; int, 2 &gt;</type>
+        <definition>std::array&lt;int, 2&gt; select_starting_cones_indices</definition>
+        <argsstring>(const std::array&lt; float, 2 &gt; car_position, const std::array&lt; float, 2 &gt; car_direction, std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, ConeType cone_type, const float distance_threshold, const float angle_threshold)</argsstring>
+        <name>select_starting_cones_indices</name>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_position</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_direction</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>distance_threshold</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>angle_threshold</declname>
+        </param>
+        <briefdescription>
+<para>Select the first two cones indices to the car. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function selects the first two cones indices to the car, front one first.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>car_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones represented as arrays of three floats [x, y, type]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cones to select. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>distance_threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for distance to the car. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for angle to the car. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Array of two integers representing the indices of the first but ordered cones. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="20" column="12" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="20" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1ab311e4fb12a10db1475c92701b801afa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::array&lt; int, 2 &gt;</type>
+        <definition>std::array&lt;int, 2&gt; select_nearest_cones_indices</definition>
+        <argsstring>(const std::array&lt; float, 2 &gt; car_position, const std::array&lt; float, 2 &gt; car_direction, std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, ConeType cone_type, const float distance_threshold, const float angle_threshold)</argsstring>
+        <name>select_nearest_cones_indices</name>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_position</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_direction</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>distance_threshold</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>angle_threshold</declname>
+        </param>
+        <briefdescription>
+<para>Choose the two nearest cones to the car. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function selects the two nearest cones to the car based on their distance and angle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>car_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones represented as arrays of three floats [x, y, color]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cones to select. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>distance_threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for distance to the car. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for angle to the car. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Array of two integers representing the indices of the selected cones. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="40" column="12" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="40" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1afa982267dd0aa75e0d62d4cb53ae6ffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::mat</type>
+        <definition>arma::mat cdist_sq_euclidean</definition>
+        <argsstring>(const arma::mat arr_a, const arma::mat arr_b)</argsstring>
+        <name>cdist_sq_euclidean</name>
+        <param>
+          <type>const arma::mat</type>
+          <declname>arr_a</declname>
+        </param>
+        <param>
+          <type>const arma::mat</type>
+          <declname>arr_b</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the pairwise square euclidean distances from each point in <computeroutput>X</computeroutput> to each point in <computeroutput>Y</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arr_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Martix A </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arr_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix B </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A matrix of squared distances between each pair of rows in arr_a and arr_b. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="54" column="11" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="54" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1ad8f1dd2731ffc0b00ccae7f4402515ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; int &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;int&gt; &gt; adjacency_matrix</definition>
+        <argsstring>(std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, ConeType cone_type, const int max_n_neighbors, const float max_dist)</argsstring>
+        <name>adjacency_matrix</name>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>max_n_neighbors</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>max_dist</declname>
+        </param>
+        <briefdescription>
+<para>Create an adjacency matrix based on the distance between cones. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates an adjacency matrix based on the distance between cones.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones represented as arrays of three floats [x, y, type]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cones to select. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_n_neighbors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of neighbors for each cone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum distance to consider for neighbors. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Adjacency matrix represented as a 2D vector of integers. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="68" column="13" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="68" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1ad15946329aa847f45e967df6977ef5b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; breadth_first_order</definition>
+        <argsstring>(std::vector&lt; std::vector&lt; int &gt;&gt; adjacency_matrix, int start_index)</argsstring>
+        <name>breadth_first_order</name>
+        <param>
+          <type>std::vector&lt; std::vector&lt; int &gt;&gt;</type>
+          <declname>adjacency_matrix</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_index</declname>
+        </param>
+        <briefdescription>
+<para>Returns the nodes reachable from <computeroutput>start_idx</computeroutput> in BFS order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function performs a breadth-first search (BFS) on the adjacency matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adjacency_matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The adjacency matrix representing the graph. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the starting node. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="81" column="13" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="81" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1af15906d4549799e76eb04dc216d943b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt; &gt;</type>
+        <definition>std::pair&lt;std::vector&lt;int&gt;, std::vector&lt;int&gt; &gt; adjacency_matrix_to_borders_and_targets</definition>
+        <argsstring>(std::vector&lt; std::vector&lt; int &gt;&gt; adjacency_matrix)</argsstring>
+        <name>adjacency_matrix_to_borders_and_targets</name>
+        <param>
+          <type>std::vector&lt; std::vector&lt; int &gt;&gt;</type>
+          <declname>adjacency_matrix</declname>
+        </param>
+        <briefdescription>
+<para>Returns the neighbors of a node in the adjacency matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert an adjacency matrix to two flat arrays, one representing the neighbors of each node and one which indicates the starting index of each node in the neighbors array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adjacency_matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The adjacency matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of vectors: the first vector contains the neighbors, and the second vector contains the starting/ending indices. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="95" column="11" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="95" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1acc291572416721bed1fadfc10cc9d1fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; int &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;int&gt; &gt; end_configurations</definition>
+        <argsstring>(const std::array&lt; float, 2 &gt; car_position, const std::array&lt; float, 2 &gt; car_direction, std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, ConeType cone_type, int start_index, int target_lenght, std::vector&lt; int &gt; neighbors, std::vector&lt; int &gt; borders, const float max_dist_to_neighbor, const float threshold_directional_angle, const float threshold_absolute_angle, const float threshold_other_side_angle, const float threshold_filter_angle)</argsstring>
+        <name>end_configurations</name>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_position</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_direction</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>target_lenght</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>neighbors</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>borders</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>max_dist_to_neighbor</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_directional_angle</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_absolute_angle</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_other_side_angle</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_filter_angle</declname>
+        </param>
+        <briefdescription>
+<para>Select the best end configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>car_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones represented as arrays of three floats [x, y, type]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cones to select. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the starting node. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target_lenght</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the path that the search is searching for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>neighbors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of neighbors. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>borders</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector containing borders of neighbors. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_dist_to_neighbor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum distance to the neighbor cone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_directional_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for directional angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_absolute_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for absolute angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_other_side_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for the other side angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_filter_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for filtering cones in between. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns best end configurations. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="115" column="13" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="115" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1a4615854e623bf5a1cd23ae9f623b37e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt;bool&gt; neighbor_bool_mask_can_be_added_to_attempt</definition>
+        <argsstring>(const std::array&lt; float, 2 &gt; car_position, const std::array&lt; float, 2 &gt; car_direction, std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, ConeType cone_type, int position_in_stack, std::vector&lt; int &gt; current_attempt, std::vector&lt; int &gt; neighbors, const float max_dist_to_neighbor, const float threshold_directional_angle, const float threshold_absolute_angle, const float threshold_other_side_angle, const float threshold_filter_angle)</argsstring>
+        <name>neighbor_bool_mask_can_be_added_to_attempt</name>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_position</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_direction</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position_in_stack</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>current_attempt</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>neighbors</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>max_dist_to_neighbor</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_directional_angle</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_absolute_angle</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_other_side_angle</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_filter_angle</declname>
+        </param>
+        <briefdescription>
+<para>The function returns a boolean mask indicating which cones can be added to the current attempt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>car_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones represented as arrays of three floats [x, y, type]. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cones to select. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position_in_stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current position in the stack. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current_attempt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of current attempt. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>neighbors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of neighbors. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_dist_to_neighbor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum distance to the neighbor cone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_directional_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for directional angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_absolute_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for absolute angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_other_side_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for the other side angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_filter_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for filtering cones in between. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;bool&gt; Boolean mask. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="146" column="13" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="146" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1aebb1619cc5f2cf7ce09235e2f3a7f0ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt;bool&gt; check_distances</definition>
+        <argsstring>(std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, std::vector&lt; int &gt; current_attempt, int position_in_stack, std::vector&lt; std::array&lt; float, 2 &gt;&gt; neighbors_points, const float threshold_absolute_angle)</argsstring>
+        <name>check_distances</name>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>current_attempt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position_in_stack</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 2 &gt;&gt;</type>
+          <declname>neighbors_points</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_absolute_angle</declname>
+        </param>
+        <briefdescription>
+<para>Checks if neighbors can be added to the current attempt (using distances). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current_attempt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of current attempt. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position_in_stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current position in the stack. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>neighbors_points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of neighbors points(cones). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_absolute_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for absolute angle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;bool&gt; Boolean mask. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="169" column="13" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="169" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1a138d1199f3274bf52b4f008292574cce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt;bool&gt; check_expected_side</definition>
+        <argsstring>(ConeType cone_type, const std::array&lt; float, 2 &gt; car_position, const std::array&lt; float, 2 &gt; car_direction_normalized, std::vector&lt; std::array&lt; float, 2 &gt;&gt; neighbors_points, const float threshold_other_side_angle)</argsstring>
+        <name>check_expected_side</name>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_position</declname>
+        </param>
+        <param>
+          <type>const std::array&lt; float, 2 &gt;</type>
+          <declname>car_direction_normalized</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 2 &gt;&gt;</type>
+          <declname>neighbors_points</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_other_side_angle</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the cone second in attempt is on the right side of the car. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cone (left or right). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_direction_normalized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction of the car (x, y). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>neighbors_points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of neighbors points(cones). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_other_side_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for the other side angle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;bool&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="185" column="13" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="185" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1a9cdd3d233e1d8399e9562cb3d4e08a6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void filter_in_between_cones</definition>
+        <argsstring>(std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, std::vector&lt; int &gt; current_attempt, int position_in_stack, std::vector&lt; int &gt; neighbors, std::vector&lt; bool &gt; &amp;mask, int i, int candidate_neighbor, const float max_dist_to_neighbor, const float threshold_filter_angle)</argsstring>
+        <name>filter_in_between_cones</name>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>current_attempt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position_in_stack</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>neighbors</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; bool &gt; &amp;</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>candidate_neighbor</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>max_dist_to_neighbor</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>threshold_filter_angle</declname>
+        </param>
+        <briefdescription>
+<para>Check if neighbor lies between last in attempt and candidate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function find if there is a cone that is between the last cone in the attempt and the candidate neighbor, if so we do not want to pursue this path, because it will skip one cone</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current_attempt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of current attempt. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position_in_stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current position in the stack. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>neighbors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of neighbors points(cones). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The boolean mask. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current index in the mask. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>candidate_neighbor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the candidate neighbor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_dist_to_neighbor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum distance to the neighbor cone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_filter_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for filtering cones in between. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;bool&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="212" column="6" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="212" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__configurations_8hpp_1a6cf6a23c4d338bba003cfff2a4aa5af1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void check_direction_changes</definition>
+        <argsstring>(std::vector&lt; std::array&lt; float, 3 &gt;&gt; cones, std::array&lt; float, 2 &gt; car_direction_normalized, std::vector&lt; int &gt; current_attempt, int position_in_stack, std::vector&lt; int &gt; neighbors, std::vector&lt; bool &gt; &amp;mask, int i, ConeType cone_type, float threshold_directional_angle, float threshold_absolute_angle)</argsstring>
+        <name>check_direction_changes</name>
+        <param>
+          <type>std::vector&lt; std::array&lt; float, 3 &gt;&gt;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>std::array&lt; float, 2 &gt;</type>
+          <declname>car_direction_normalized</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>current_attempt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position_in_stack</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>neighbors</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; bool &gt; &amp;</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold_directional_angle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold_absolute_angle</declname>
+        </param>
+        <briefdescription>
+<para>Check if the direction of the cone change the config direction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_direction_normalized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The normalized direction of the car. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current_attempt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of current attempt. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position_in_stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current position in the stack. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>neighbors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of neighbors points(cones). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The boolean mask. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current index in the mask. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of cone (left or right). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_directional_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for directional angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold_absolute_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold for absolute angle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/calculate_configurations.hpp" line="237" column="6" declfile="include/cone_path_planner/calculate_configurations.hpp" declline="237" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/calculate_configurations.hpp"/>
+  </compounddef>
+</doxygen>

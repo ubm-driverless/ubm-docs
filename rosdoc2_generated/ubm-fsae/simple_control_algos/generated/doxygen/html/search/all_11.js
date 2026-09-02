@@ -1,0 +1,13 @@
+var searchData=
+[
+  ['target_5fspeed_5f_162',['target_speed_',['../structcontrol__structs_1_1NodeConfig.html#a2e0fa13473b851eb6752b5a2b93c27ef',1,'control_structs::NodeConfig']]],
+  ['tdp_5f_163',['tdp_',['../structcontrol__structs_1_1NodeConfig.html#aeb0f0f7b16b8d8efd870aa22956502f5',1,'control_structs::NodeConfig']]],
+  ['thirdpolynomial_164',['ThirdPolynomial',['../classThirdPolynomial.html',1,'ThirdPolynomial'],['../classThirdPolynomial.html#aa0a9d9dca17b52b9a8b737dc81b6367c',1,'ThirdPolynomial::ThirdPolynomial()']]],
+  ['torque_5fcontroller_165',['torque_controller',['../structcontrol__structs_1_1ControlState.html#a43b2c56b33e42ecc699ee4672a6535b1',1,'control_structs::ControlState']]],
+  ['torque_5ferror_5fintegral_5f_166',['torque_error_integral_',['../structcontrol__structs_1_1ControlState.html#a8ff7d852c68959b89dd5295f03d42d2f',1,'control_structs::ControlState']]],
+  ['torque_5ferror_5fspeed_5f_167',['torque_error_speed_',['../structcontrol__structs_1_1ControlState.html#a2471aa19e281f18539db482e5f639098',1,'control_structs::ControlState']]],
+  ['torque_5fpid_5fpublisher_5f_168',['torque_pid_publisher_',['../structcontrol__structs_1_1RosInterfaces.html#a92887a8ccab9a5cf1a3f1763fa2b9546',1,'control_structs::RosInterfaces']]],
+  ['torque_5fterm_5fi_5f_169',['torque_term_i_',['../structcontrol__structs_1_1ControlState.html#aa33f65a86ea668729fb2a56a5eb92a5f',1,'control_structs::ControlState']]],
+  ['torque_5fterm_5fp_5f_170',['torque_term_p_',['../structcontrol__structs_1_1ControlState.html#ab78af56558eacfeea60b5b801f319bba',1,'control_structs::ControlState']]],
+  ['torquecontroller_171',['TorqueController',['../classTorqueController.html',1,'TorqueController'],['../classTorqueController.html#a23bbb61072d9c87a2bd2a61afe2ffb0a',1,'TorqueController::TorqueController()']]]
+];

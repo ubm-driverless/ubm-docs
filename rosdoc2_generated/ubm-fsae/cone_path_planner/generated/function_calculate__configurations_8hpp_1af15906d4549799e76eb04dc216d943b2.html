@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function adjacency_matrix_to_borders_and_targets &mdash; cone_path_planner 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function angle_between_search_direction_of_cone_and_other_cone_is_too_large" href="function_costs__utils_8hpp_1a11f816dc47318c295d8f46db5ba4c088.html" />
+    <link rel="prev" title="Function adjacency_matrix" href="function_calculate__configurations_8hpp_1ad8f1dd2731ffc0b00ccae7f4402515ef.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            cone_path_planner
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classConeMatching.html">Class ConeMatching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classConePathPlanner.html">Class ConePathPlanner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classConePathPlannerNode.html">Class ConePathPlannerNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classConeSorting.html">Class ConeSorting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classNearbyConeSearcher.html">Class NearbyConeSearcher</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum_utils_8hpp_1a01126571d9d48a03e31190a1d16fa85d.html">Enum ConeType</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1ad8f1dd2731ffc0b00ccae7f4402515ef.html">Function adjacency_matrix</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Function adjacency_matrix_to_borders_and_targets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1a11f816dc47318c295d8f46db5ba4c088.html">Function angle_between_search_direction_of_cone_and_other_cone_is_too_large</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1a27b8898ee7e246a17648f569f931a0d8.html">Function angle_between_search_direction_of_cone_and_other_cone_is_too_large_if_not_in_cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1ad220315507a49fd04f6f4c2833193358.html">Function angle_difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a4f41df9a8a8c4d7a420fdd7333e50a63.html">Function angle_from_2d_vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_matching__utils_8hpp_1afcb56065ad5ddcd3a5182b27a1c2448d.html">Function angles_from_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_matching__utils_8hpp_1a91c30f4e147b613974742fb7fbb7dc8d.html">Function angles_from_matrix_std</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1ad15946329aa847f45e967df6977ef5b6.html">Function breadth_first_order</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__costs_8hpp_1afa7fb04b1b861d62bb407089d3d9d525.html">Function calc_angle_cost_for_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__costs_8hpp_1add94f442c07531308faabac90c3952d0.html">Function calc_angle_to_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1ae704ef399c04d0cc21c2333d586bb700.html">Function calc_angles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__costs_8hpp_1a77c2a4a835e5ff549cada39eb0019328.html">Function calc_change_of_direction_cost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__costs_8hpp_1a38092e96a6fb5dc9cf1eee51727cf52a.html">Function calc_cones_on_either_cost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__costs_8hpp_1afbd59df9b1495b853a9d1fb8d71c98cb.html">Function calc_distance_cost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__costs_8hpp_1a33781df33b8442575ed1bdf644370758.html">Function calc_initial_direction_cost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__costs_8hpp_1a4d03e83c147c5138c5d612f2d857926a.html">Function calc_number_of_cones_cost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__costs_8hpp_1a7d0b3ef396ea9dd46be8dccf5124572a.html">Function calc_wrong_direction_cost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_combine__traces_8hpp_1a6a27c87f5613d3e4dc0158a5f5819fdd.html">Function calculate_angle_change</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional__cone__matching_8hpp_1a723dc5ba34f17b91638495af8c14f163.html">Function calculate_cones_for_other_side</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__costs_8hpp_1ac281d88f622d5f38138a8fad88162efa.html">Function calculate_cost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_combine__traces_8hpp_1a107440bbe44b1606772efb83e30703d9.html">Function calculate_final_configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1a20fc6f91312d6f2b15809e8dd65c20ef.html">Function calculate_match_search_direction_for_one_if_not_in_cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional__cone__matching_8hpp_1a3011cbdef50a04318434263896740d2a.html">Function calculate_matches_for_side</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_combine__traces_8hpp_1ae2809b468aad10064ce70963e37b0f72.html">Function calculate_new_lenght</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional__cone__matching_8hpp_1ae0cfcb990f6c04336f1c0f1904ced768.html">Function calculate_positions_of_virtual_cones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional__cone__matching_8hpp_1aca428314ac09e7e2c61b11ad9562f9da.html">Function calculate_search_direction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional__cone__matching_8hpp_1a3e9e35b39c326b6e2ca3117b09da6081.html">Function calculate_search_direction_for_one</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional__cone__matching_8hpp_1a18bbc3fc4b88e28cc20ab2f652a06c03.html">Function calculate_virtual_cones_for_both_sides</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1afdc7af7c29b7d879b524219dd5f35f33.html">Function calculate_visible_cones_for_one_cone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1afa982267dd0aa75e0d62d4cb53ae6ffd.html">Function cdist_sq_euclidean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1a6cf6a23c4d338bba003cfff2a4aa5af1.html">Function check_direction_changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1aebb1619cc5f2cf7ce09235e2f3a7f0ad.html">Function check_distances</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1a138d1199f3274bf52b4f008292574cce.html">Function check_expected_side</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1aa6d9e2bfcbad410f469223b70db886ad.html">Function clear_nearby_cone_search_cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional__cone__matching_8hpp_1a44b714b594e5b94d1cc28250d2ff7e0a.html">Function combine_and_sort_virtual_with_real</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_arma__conversions_8hpp_1a02816c806c88c629c7fd70036f83a3ea.html">Function convert_fmat_to_std</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a229e86e09149bdecf85f1e91e0dd98e8.html">Function convert_from_arma_vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_arma__conversions_8hpp_1aa6415a71ddfcba52b5afd0cea790a8bf.html">Function convert_fvec_to_std</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_arma__conversions_8hpp_1a31699efad250d188bac351d47fff5e4b.html">Function convert_ivec_to_std</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_arma__conversions_8hpp_1a6afb17aafe2e253c0dc944dd64270637.html">Function convert_std_to_fmat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_arma__conversions_8hpp_1ac8bde8f528e824ebf4ee208d23973df3.html">Function convert_std_to_imat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_arma__conversions_8hpp_1a280be88290a9f5433705454b08ff528f.html">Function convert_std_to_ivec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a5b81972b6f8c6255aeb78a4a7af2b847.html">Function convert_to_arma_vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_arma__conversions_8hpp_1a2a2ccf8897d95e1488febb3b15fc1145.html">Function convert_vector_to_arma_vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1aef0cce031070700a473a833f82fefd36.html">Function create_angle_cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1aa45a5b7fa58cb3a5dbd8f4d441241631.html">Function create_search_directions_cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1acc291572416721bed1fadfc10cc9d1fa.html">Function end_configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1a9cdd3d233e1d8399e9562cb3d4e08a6b.html">Function filter_in_between_cones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_matching__utils_8hpp_1a51598923ec40712522fa728c92390cbc.html">Function find_angles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_combine__traces_8hpp_1a6e2ff2e677ab191b5851911796612f39.html">Function handle_same_cone_in_both_configs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1afb4efeb1cc849a23b85537896dedd858.html">Function impl_number_cones_per_side</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional__cone__matching_8hpp_1a67d29e8d606665b9b54e9741c7da2b0e.html">Function insert_virtual_cones_to_existing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1ac0aa5386079fc8662fe076e7bc3df24b.html">Function mod_fvec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1a4615854e623bf5a1cd23ae9f623b37e2.html">Function neighbor_bool_mask_can_be_added_to_attempt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1a906a6152e39ff7d870166b45390e1ad3.html">Function pre_calculate_search_directions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_cone__path__planner__node_8hpp_1a991b687c5a1f38d297c3f6a4ff6b55c5.html">Function publish_cones_as_marker_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_cone__path__planner__node_8hpp_1aaca0cae128cb5505e5f28047fa7e1a9b.html">Function publish_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_cone__path__planner__node_8hpp_1afc485e92bc8729b8cd5940042e021c74.html">Function publish_path_points_as_marker_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1ab346cbc8e58adf1d01aa6a34b65f699f.html">Function rotate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_matching__utils_8hpp_1a0323abb3e93a31300c2814bb96d31497.html">Function rotate_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_matching__utils_8hpp_1a1c3b726d411650145e09826616cfc75d.html">Function rotate_row_vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional__cone__matching_8hpp_1a500d8618208d324a9ed47c52d9ee1913.html">Function select_best_match_candidate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1ab311e4fb12a10db1475c92701b801afa.html">Function select_nearest_cones_indices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_calculate__configurations_8hpp_1acbc32eccca90b5b819e02445f6aa3bbc.html">Function select_starting_cones_indices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_costs__utils_8hpp_1a47704e3f17c2b97b0c0e1467a1e1a8b1.html">Function set_difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_matching__utils_8hpp_1a82b36a99a82b28a68c67b3e06e461e4d.html">Function trace_angles_between</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a8554a4bf66d0232bb5759d4ba87b8a4a.html">Function vec_angle_between</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="variable_cone__common__types_8hpp_1aa634bcc3c72d06f6b2a0d9f5ef554b7e.html">Variable SENTINEL_VALUE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_cone__common__types_8hpp_1a2412aa2209e14a8461c2ee7fae62da2a.html">Typedef AngleMaskCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_cone__common__types_8hpp_1a884845874542e5734847749753957c2a.html">Typedef AngleMaskCacheKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301.html">Typedef SearchDirectionsCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_cone__common__types_8hpp_1ab2b58f3678216bde3d530279fbb704e9.html">Typedef SearchDirectionsCacheKey</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_cone_path_planner.html">Directory cone_path_planner</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_arma_conversions.hpp.html">File arma_conversions.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_calculate_configurations.hpp.html">File calculate_configurations.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_calculate_costs.hpp.html">File calculate_costs.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_combine_traces.hpp.html">File combine_traces.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_cone_common_types.hpp.html">File cone_common_types.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_cone_matching.hpp.html">File cone_matching.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_cone_path_planner_node.hpp.html">File cone_path_planner_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_cone_sorting.hpp.html">File cone_sorting.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_costs_utils.hpp.html">File costs_utils.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_functional_cone_matching.hpp.html">File functional_cone_matching.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_matching_utils.hpp.html">File matching_utils.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_nearby_cone_search.hpp.html">File nearby_cone_search.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_spline_and_polynomial.hpp.html">File spline_and_polynomial.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_cone_path_planner_utils.hpp.html">File utils.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#cone-path-planner-node">Cone Path Planner Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#node-purpose">Node Purpose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#topics">Topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#functionality">Functionality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#hyperparameters">Hyperparameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cone_path_planner</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Function adjacency_matrix_to_borders_and_targets</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/function_calculate__configurations_8hpp_1af15906d4549799e76eb04dc216d943b2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="function-adjacency-matrix-to-borders-and-targets">
+<span id="exhale-function-calculate-configurations-8hpp-1af15906d4549799e76eb04dc216d943b2"></span><h1>Function adjacency_matrix_to_borders_and_targets<a class="headerlink" href="#function-adjacency-matrix-to-borders-and-targets" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_cone_path_planner_calculate_configurations.hpp.html#file-include-cone-path-planner-calculate-configurations-hpp"><span class="std std-ref">File calculate_configurations.hpp</span></a></p></li>
+</ul>
+<section id="function-documentation">
+<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv439adjacency_matrix_to_borders_and_targetsNSt6vectorINSt6vectorIiEEEE">
+<span id="_CPPv339adjacency_matrix_to_borders_and_targetsNSt6vectorINSt6vectorIiEEEE"></span><span id="_CPPv239adjacency_matrix_to_borders_and_targetsNSt6vectorINSt6vectorIiEEEE"></span><span id="adjacency_matrix_to_borders_and_targets__std::vector:std::vector:i::"></span><span class="target" id="calculate__configurations_8hpp_1af15906d4549799e76eb04dc216d943b2"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">adjacency_matrix_to_borders_and_targets</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">adjacency_matrix</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv439adjacency_matrix_to_borders_and_targetsNSt6vectorINSt6vectorIiEEEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Returns the neighbors of a node in the adjacency matrix. </p>
+<p>Convert an adjacency matrix to two flat arrays, one representing the neighbors of each node and one which indicates the starting index of each node in the neighbors array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>adjacency_matrix</strong> – The adjacency matrix. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pair of vectors: the first vector contains the neighbors, and the second vector contains the starting/ending indices. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="function_calculate__configurations_8hpp_1ad8f1dd2731ffc0b00ccae7f4402515ef.html" class="btn btn-neutral float-left" title="Function adjacency_matrix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="function_costs__utils_8hpp_1a11f816dc47318c295d8f46db5ba4c088.html" class="btn btn-neutral float-right" title="Function angle_between_search_direction_of_cone_and_other_cone_is_too_large" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;cone_path_planner&gt; Contributors. License: MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

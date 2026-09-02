@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classvesc__driver_1_1VescPacketSetRPM" kind="class" language="C++" prot="public">
+    <compoundname>vesc_driver::VescPacketSetRPM</compoundname>
+    <basecompoundref refid="classvesc__driver_1_1VescPacket" prot="public" virt="non-virtual">vesc_driver::VescPacket</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvesc__driver_1_1VescPacketSetRPM_1a2956241a4f3ecb7aea3a241de14f8755" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vesc_driver::VescPacketSetRPM::VescPacketSetRPM</definition>
+        <argsstring>(double rpm)</argsstring>
+        <name>VescPacketSetRPM</name>
+        <param>
+          <type>double</type>
+          <declname>rpm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_packet.hpp" line="218" column="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>vesc_driver::VescPacket</label>
+        <link refid="classvesc__driver_1_1VescPacket"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vesc_driver::VescFrame</label>
+        <link refid="classvesc__driver_1_1VescFrame"/>
+      </node>
+      <node id="1">
+        <label>vesc_driver::VescPacketSetRPM</label>
+        <link refid="classvesc__driver_1_1VescPacketSetRPM"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>vesc_driver::VescPacket</label>
+        <link refid="classvesc__driver_1_1VescPacket"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vesc_driver::VescFrame</label>
+        <link refid="classvesc__driver_1_1VescFrame"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>CRC_TYPE</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vesc_driver::VescPacketSetRPM</label>
+        <link refid="classvesc__driver_1_1VescPacketSetRPM"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CRC::Parameters&lt; crcpp_uint16, 16 &gt;</label>
+        <link refid="structCRC_1_1Parameters"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/vesc_driver/vesc_packet.hpp" line="216" column="1" bodyfile="include/vesc_driver/vesc_packet.hpp" bodystart="215" bodyend="221"/>
+    <listofallmembers>
+      <member refid="classvesc__driver_1_1VescFrame_1a0c1ae0fa22049aee22ab734c453a0254" prot="public" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>CRC_TYPE</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1a381fab130c5bf1a1cb90f139ffcdf03f" prot="public" virt="virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>frame</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1affb7d307e8867fa6a7e083c012d0450b" prot="protected" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>frame_</name></member>
+      <member refid="classvesc__driver_1_1VescPacket_1a67a5d44e3b15da6f72b412d9f62adcd4" prot="public" virt="virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>name</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1a249d14140742c5dc5d5592f37090cdfc" prot="protected" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>payload_</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1a4d114fa1c4255c81aa059d593d573f24" prot="public" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>VESC_EOF_VAL</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1a4227be6cc83c478ab9d6391adfe8d428" prot="public" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>VESC_MAX_FRAME_SIZE</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1adc3706d9398d18f2532c145c61e0a07f" prot="public" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>VESC_MAX_PAYLOAD_SIZE</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1a2cb0844d59e8db6a3b3de99b10d70530" prot="public" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>VESC_MIN_FRAME_SIZE</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1a22ad48e24d34fae663a325c1a01213a2" prot="public" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>VESC_SOF_VAL_LARGE_FRAME</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1aefbb5de9823b19394168beb747c91a2d" prot="public" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>VESC_SOF_VAL_SMALL_FRAME</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1a05c951a3d3886d4c130558ec31255d0c" prot="protected" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>VescFrame</name></member>
+      <member refid="classvesc__driver_1_1VescPacket_1a43db92c2f020c944db75bcad5e755f5f" prot="protected" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>VescPacket</name></member>
+      <member refid="classvesc__driver_1_1VescPacket_1a18d3a7fcc44a7478d624bf5b456c91bd" prot="protected" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>VescPacket</name></member>
+      <member refid="classvesc__driver_1_1VescPacketSetRPM_1a2956241a4f3ecb7aea3a241de14f8755" prot="public" virt="non-virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>VescPacketSetRPM</name></member>
+      <member refid="classvesc__driver_1_1VescFrame_1ab4aec0564b047ba78f7287d3466bba11" prot="public" virt="virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>~VescFrame</name></member>
+      <member refid="classvesc__driver_1_1VescPacket_1a475c0174d48ffef4f3d117bc05d639d7" prot="public" virt="virtual"><scope>vesc_driver::VescPacketSetRPM</scope><name>~VescPacket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

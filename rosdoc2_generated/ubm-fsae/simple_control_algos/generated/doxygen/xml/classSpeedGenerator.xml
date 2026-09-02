@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classSpeedGenerator" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>SpeedGenerator</compoundname>
+    <derivedcompoundref refid="classSpeedProfileGenerator" prot="public" virt="non-virtual">SpeedProfileGenerator</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSpeedGenerator_1ab92faba2b491826808ef7c01c0a29197" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual SpeedGenerator::~SpeedGenerator</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SpeedGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/interfaces/speed_generator.hpp" line="14" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpeedGenerator_1a76273850c123e7f77b8f2dfa6f3e232e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float SpeedGenerator::generate</definition>
+        <argsstring>(int nearest_index)=0</argsstring>
+        <name>generate</name>
+        <reimplementedby refid="classSpeedProfileGenerator_1ad4d5ec487bdefd57608c6832b0064695">generate</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>nearest_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/interfaces/speed_generator.hpp" line="16" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpeedGenerator_1ab7796d7b9ecfeec89f4519fafe79a4ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>float</type>
+        <definition>virtual float SpeedGenerator::get_preview_k_</definition>
+        <argsstring>()</argsstring>
+        <name>get_preview_k_</name>
+        <reimplementedby refid="classSpeedProfileGenerator_1af9a8513d1f5a08b8ab0d035887b47188">get_preview_k_</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/interfaces/speed_generator.hpp" line="17" column="23" bodyfile="include/interfaces/speed_generator.hpp" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SpeedProfileGenerator</label>
+        <link refid="classSpeedProfileGenerator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SpeedGenerator</label>
+        <link refid="classSpeedGenerator"/>
+      </node>
+    </inheritancegraph>
+    <location file="include/interfaces/speed_generator.hpp" line="12" column="1" bodyfile="include/interfaces/speed_generator.hpp" bodystart="11" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classSpeedGenerator_1a76273850c123e7f77b8f2dfa6f3e232e" prot="public" virt="pure-virtual"><scope>SpeedGenerator</scope><name>generate</name></member>
+      <member refid="classSpeedGenerator_1ab7796d7b9ecfeec89f4519fafe79a4ad" prot="public" virt="virtual"><scope>SpeedGenerator</scope><name>get_preview_k_</name></member>
+      <member refid="classSpeedGenerator_1ab92faba2b491826808ef7c01c0a29197" prot="public" virt="virtual"><scope>SpeedGenerator</scope><name>~SpeedGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

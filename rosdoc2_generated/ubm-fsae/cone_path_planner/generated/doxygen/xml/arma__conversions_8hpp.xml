@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="arma__conversions_8hpp" kind="file" language="C++">
+    <compoundname>arma_conversions.hpp</compoundname>
+    <includes local="no">armadillo</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cmath</includes>
+    <includedby refid="calculate__costs_8hpp" local="yes">include/cone_path_planner/calculate_costs.hpp</includedby>
+    <includedby refid="combine__traces_8hpp" local="yes">include/cone_path_planner/combine_traces.hpp</includedby>
+    <includedby refid="cone__matching_8hpp" local="yes">include/cone_path_planner/cone_matching.hpp</includedby>
+    <includedby refid="functional__cone__matching_8hpp" local="yes">include/cone_path_planner/functional_cone_matching.hpp</includedby>
+    <includedby refid="utils_8hpp" local="yes">include/cone_path_planner/utils.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="2">
+        <label>armadillo</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/arma_conversions.hpp</label>
+        <link refid="arma__conversions_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/cone_path_planner/calculate_costs.hpp</label>
+        <link refid="calculate__costs_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/arma_conversions.hpp</label>
+        <link refid="arma__conversions_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="arma__conversions_8hpp_1a02816c806c88c629c7fd70036f83a3ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;float&gt; &gt; convert_fmat_to_std</definition>
+        <argsstring>(const arma::fmat &amp;mat)</argsstring>
+        <name>convert_fmat_to_std</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+<para>Converts an Armadillo floating-point matrix (arma::fmat) to a standard C++ 2D vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function iterates over the elements of the arma::fmat and copies them into a std::vector&lt;std::vector&lt;float&gt;&gt; of the same dimensions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input Armadillo matrix to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 2D std::vector representing the same matrix data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/arma_conversions.hpp" line="17" column="13" declfile="include/cone_path_planner/arma_conversions.hpp" declline="17" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="arma__conversions_8hpp_1a31699efad250d188bac351d47fff5e4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; convert_ivec_to_std</definition>
+        <argsstring>(const arma::ivec &amp;vec)</argsstring>
+        <name>convert_ivec_to_std</name>
+        <param>
+          <type>const arma::ivec &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>Converts an Armadillo integer vector (arma::ivec) to a standard C++ vector of integers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates a std::vector&lt;int&gt; by copying all elements from the arma::ivec.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input Armadillo vector to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A std::vector containing the same integer values. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/arma_conversions.hpp" line="27" column="13" declfile="include/cone_path_planner/arma_conversions.hpp" declline="27" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="arma__conversions_8hpp_1aa6415a71ddfcba52b5afd0cea790a8bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; convert_fvec_to_std</definition>
+        <argsstring>(const arma::fvec &amp;vec)</argsstring>
+        <name>convert_fvec_to_std</name>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>Converts an Armadillo float vector (arma::fvec) to a standard C++ vector of floats. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates a std::vector&lt;float&gt; by copying all elements from the arma::fvec.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input Armadillo vector to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A std::vector containing the same float values. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/arma_conversions.hpp" line="37" column="13" declfile="include/cone_path_planner/arma_conversions.hpp" declline="37" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="arma__conversions_8hpp_1a6afb17aafe2e253c0dc944dd64270637" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fmat</type>
+        <definition>arma::fmat convert_std_to_fmat</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; float &gt;&gt; &amp;vec)</argsstring>
+        <name>convert_std_to_fmat</name>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; float &gt;&gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>Converts a standard C++ 2D vector to an Armadillo floating-point matrix (arma::fmat). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates an arma::fmat by copying all elements from the std::vector&lt;std::vector&lt;float&gt;&gt;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input 2D std::vector to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An Armadillo matrix containing the same floating-point values. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/arma_conversions.hpp" line="47" column="12" declfile="include/cone_path_planner/arma_conversions.hpp" declline="47" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="arma__conversions_8hpp_1ac8bde8f528e824ebf4ee208d23973df3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::imat</type>
+        <definition>arma::imat convert_std_to_imat</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; int &gt;&gt; &amp;vec)</argsstring>
+        <name>convert_std_to_imat</name>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt;&gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>Converts a standard C++ 2D vector to an Armadillo integers matrix (arma::imat). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates an arma::imat by copying all elements from the std::vector&lt;std::vector&lt;int&gt;&gt;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input 2D std::vector to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An Armadillo matrix containing the same integers values. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/arma_conversions.hpp" line="57" column="12" declfile="include/cone_path_planner/arma_conversions.hpp" declline="57" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="arma__conversions_8hpp_1a280be88290a9f5433705454b08ff528f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::ivec</type>
+        <definition>arma::ivec convert_std_to_ivec</definition>
+        <argsstring>(const std::vector&lt; int &gt; &amp;vec)</argsstring>
+        <name>convert_std_to_ivec</name>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>Converts a standard C++ vector of integers to an Armadillo integer vector (arma::ivec). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates an arma::ivec by copying all elements from the std::vector&lt;int&gt;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input std::vector to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An Armadillo integer vector containing the same integer values. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/arma_conversions.hpp" line="67" column="12" declfile="include/cone_path_planner/arma_conversions.hpp" declline="67" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="arma__conversions_8hpp_1a2a2ccf8897d95e1488febb3b15fc1145" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; arma::vec2 &gt;</type>
+        <definition>std::vector&lt;arma::vec2&gt; convert_vector_to_arma_vector</definition>
+        <argsstring>(const std::vector&lt; std::array&lt; float, 2 &gt;&gt; &amp;array_vector)</argsstring>
+        <name>convert_vector_to_arma_vector</name>
+        <param>
+          <type>const std::vector&lt; std::array&lt; float, 2 &gt;&gt; &amp;</type>
+          <declname>array_vector</declname>
+        </param>
+        <briefdescription>
+<para>Converts a std::vector of std::array&lt;float, 2&gt; to a std::vector of arma::vec2. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates a std::vector of arma::vec2 by copying all elements from the input std::vector of std::array&lt;float, 2&gt;. Each std::array is converted into an arma::vec2, preserving the order of elements.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array_vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input std::vector of std::array&lt;float, 2&gt; to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A std::vector of arma::vec2 containing the converted elements. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/arma_conversions.hpp" line="80" column="13" declfile="include/cone_path_planner/arma_conversions.hpp" declline="80" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/arma_conversions.hpp"/>
+  </compounddef>
+</doxygen>

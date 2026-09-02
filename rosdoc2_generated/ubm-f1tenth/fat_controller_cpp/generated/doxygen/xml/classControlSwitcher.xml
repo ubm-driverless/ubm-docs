@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classControlSwitcher" kind="class" language="C++" prot="public">
+    <compoundname>ControlSwitcher</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classControlSwitcher_1a9138a9b76c228702b2b7d45f2ca7a12b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ControlSwitcher::free_control</definition>
+        <argsstring></argsstring>
+        <name>free_control</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/fat_controller_cpp/control_switcher.hpp" line="14" column="9" bodyfile="include/fat_controller_cpp/control_switcher.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classControlSwitcher_1ae695b22c4046a2966c26e2ddfd184a39" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ControlSwitcher::obstacle_control</definition>
+        <argsstring></argsstring>
+        <name>obstacle_control</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/fat_controller_cpp/control_switcher.hpp" line="15" column="9" bodyfile="include/fat_controller_cpp/control_switcher.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classControlSwitcher_1a2e31af1ad4a16db4e5785ebad9d88b09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ControlSwitcher::ControlSwitcher</definition>
+        <argsstring>(int free_control_algorithm, int obstacle_control_algorithm)</argsstring>
+        <name>ControlSwitcher</name>
+        <param>
+          <type>int</type>
+          <declname>free_control_algorithm</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>obstacle_control_algorithm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/fat_controller_cpp/control_switcher.hpp" line="22" column="5" bodyfile="include/fat_controller_cpp/control_switcher.hpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlSwitcher_1a3dacda57d4747fbab1600247e6bb9ad1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ControlSwitcher::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/fat_controller_cpp/control_switcher.hpp" line="26" column="9" bodyfile="include/fat_controller_cpp/control_switcher.hpp" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlSwitcher_1a12a6443ce9d05de894e488fd5c39a2a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlSwitcher::disable</definition>
+        <argsstring>()</argsstring>
+        <name>disable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/fat_controller_cpp/control_switcher.hpp" line="28" column="10" bodyfile="include/fat_controller_cpp/control_switcher.hpp" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlSwitcher_1a32d68159f6bf8a0d654a60ad86fcdccb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ControlSwitcher::obstacle</definition>
+        <argsstring>(f1tenth_msgs::msg::ObstacleArray msg)</argsstring>
+        <name>obstacle</name>
+        <param>
+          <type>f1tenth_msgs::msg::ObstacleArray</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/fat_controller_cpp/control_switcher.hpp" line="30" column="9" bodyfile="include/fat_controller_cpp/control_switcher.hpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlSwitcher_1a947eb21e8ec04bd207cd7ab6f41498e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ControlSwitcher::lidar</definition>
+        <argsstring>(sensor_msgs::msg::LaserScan msg)</argsstring>
+        <name>lidar</name>
+        <param>
+          <type>sensor_msgs::msg::LaserScan</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/fat_controller_cpp/control_switcher.hpp" line="34" column="9" bodyfile="include/fat_controller_cpp/control_switcher.hpp" bodystart="34" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/fat_controller_cpp/control_switcher.hpp" line="12" column="22" bodyfile="include/fat_controller_cpp/control_switcher.hpp" bodystart="12" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classControlSwitcher_1a2e31af1ad4a16db4e5785ebad9d88b09" prot="public" virt="non-virtual"><scope>ControlSwitcher</scope><name>ControlSwitcher</name></member>
+      <member refid="classControlSwitcher_1a12a6443ce9d05de894e488fd5c39a2a0" prot="public" virt="non-virtual"><scope>ControlSwitcher</scope><name>disable</name></member>
+      <member refid="classControlSwitcher_1a3dacda57d4747fbab1600247e6bb9ad1" prot="public" virt="non-virtual"><scope>ControlSwitcher</scope><name>enable</name></member>
+      <member refid="classControlSwitcher_1a9138a9b76c228702b2b7d45f2ca7a12b" prot="private" virt="non-virtual"><scope>ControlSwitcher</scope><name>free_control</name></member>
+      <member refid="classControlSwitcher_1a947eb21e8ec04bd207cd7ab6f41498e3" prot="public" virt="non-virtual"><scope>ControlSwitcher</scope><name>lidar</name></member>
+      <member refid="classControlSwitcher_1a32d68159f6bf8a0d654a60ad86fcdccb" prot="public" virt="non-virtual"><scope>ControlSwitcher</scope><name>obstacle</name></member>
+      <member refid="classControlSwitcher_1ae695b22c4046a2966c26e2ddfd184a39" prot="private" virt="non-virtual"><scope>ControlSwitcher</scope><name>obstacle_control</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
