@@ -62,4 +62,19 @@ Most of the information on the camera, can be directly found in the README of th
 
 ### Lidar
 
-The second main sensor is the lidar during the year we had 2 lidar 
+The second main sensor is the lidar, this device operate on the Time-of-Flight (ToF)
+principle, which measures the distance to a target by analyzing the temporal delay of light pulses, combining this with the rotating element the sensors create a cloud of point that can be use to analyze the surrounding enviroment.
+
+During the last years we changed the lidar that we used, the first one was the The SICK multiScan 165
+
+![Lidar SICK multiScan 165](../assets/SICK%20lidar.png)   
+*Lidar SICK multiScan 165*
+
+the second one, that we used during the year 2025/26 is the Hesai OT128
+
+![Lidar Hesai OT128](../assets/OT128.png)  
+*Lidar Hesai OT128*
+
+The Ot128 was borrowed from the professor Mattoccia, so it was not a stable one, during the year 2026/27 should arriva a new SICK lidar.
+
+
