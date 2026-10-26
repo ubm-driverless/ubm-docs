@@ -1,0 +1,71 @@
+
+.. _file_include_odometry_odometry.hpp:
+
+File odometry.hpp
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_odometry>` (``include/odometry``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Defines the :ref:`exhale_class_classOdometry` class that provides different odometry reconstruction methods. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/odometry/odometry.hpp``)
+----------------------------------------------
+
+
+
+
+Detailed Description
+--------------------
+
+This class offers implementations for:
+
+- Euler integration
+
+- Runge-Kutta 2nd and 4th order integration
+
+- Kalman filtering for sensor fusion (TBD)
+
+
+
+The class is independent of ROS and can be used with any framework. 
+
+
+
+
+Includes
+--------
+
+
+- ``armadillo``
+
+- ``cmath``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_odometry_odometry_node.hpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structOdometryState`
+
+- :ref:`exhale_class_classOdometry`
+

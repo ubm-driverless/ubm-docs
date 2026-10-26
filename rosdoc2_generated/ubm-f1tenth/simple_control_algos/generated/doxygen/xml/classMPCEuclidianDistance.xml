@@ -1,0 +1,1041 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classMPCEuclidianDistance" kind="class" language="C++" prot="public">
+    <compoundname>MPCEuclidianDistance</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a2d1cb8b6061a0c9e2327f92f7ab01662" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPCEuclidianDistance::HORIZON</definition>
+        <argsstring></argsstring>
+        <name>HORIZON</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="14" column="12" bodyfile="include/mpc_casadi.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a09cecc7eda246c94ec81062a99b31af4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPCEuclidianDistance::STEP_SIZE</definition>
+        <argsstring></argsstring>
+        <name>STEP_SIZE</name>
+        <initializer>= 0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="16" column="12" bodyfile="include/mpc_casadi.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a5bb1bda1f86fa889d5e06d889a00d4fe" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPCEuclidianDistance::MAX_SPEED</definition>
+        <argsstring></argsstring>
+        <name>MAX_SPEED</name>
+        <initializer>= 10.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="19" column="12" bodyfile="include/mpc_casadi.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1ab2d5f41db84620093fb3fdc8911cfd3d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPCEuclidianDistance::MIN_SPEED_GAIN</definition>
+        <argsstring></argsstring>
+        <name>MIN_SPEED_GAIN</name>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="20" column="12" bodyfile="include/mpc_casadi.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a7ef6b2998479bbb1a91d78f80087058b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPCEuclidianDistance::MAX_SPEED_GAIN</definition>
+        <argsstring></argsstring>
+        <name>MAX_SPEED_GAIN</name>
+        <initializer>= 4.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="21" column="12" bodyfile="include/mpc_casadi.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1aec1fab8e525a68678719b73f5acd4e1c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPCEuclidianDistance::DELTA_THETA_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>DELTA_THETA_LIMIT</name>
+        <initializer>= 0.8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="22" column="12" bodyfile="include/mpc_casadi.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a83c5f9af10698e2168d7b7a0b226d74d" prot="public" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::distance_function</definition>
+        <argsstring></argsstring>
+        <name>distance_function</name>
+        <initializer>= casadi::MX(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="26" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a8180229d50efef96a803deac18551ad6" prot="public" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::steering_smoothness_cost</definition>
+        <argsstring></argsstring>
+        <name>steering_smoothness_cost</name>
+        <initializer>= casadi::MX(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="27" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1acce03d6081597b9431bbbf732f8fbcbb" prot="public" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::opponent_distance_cost</definition>
+        <argsstring></argsstring>
+        <name>opponent_distance_cost</name>
+        <initializer>= casadi::MX(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="28" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1af1ebea26f8d2ceccd2a096a29ac075de" prot="public" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::walls_cost</definition>
+        <argsstring></argsstring>
+        <name>walls_cost</name>
+        <initializer>= casadi::MX(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="29" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a56ce5fb5dafcfe9da7f83c7b7f5abd50" prot="public" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::centripetal_cost</definition>
+        <argsstring></argsstring>
+        <name>centripetal_cost</name>
+        <initializer>= casadi::MX(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="30" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a9f1dd4080fa1bb8824d6b3269996624a" prot="public" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::go_fast_cost</definition>
+        <argsstring></argsstring>
+        <name>go_fast_cost</name>
+        <initializer>= casadi::MX(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="31" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a134d8a9038e78f3ce77e6d47f3fdc905" prot="public" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::speed_smoothness_cost</definition>
+        <argsstring></argsstring>
+        <name>speed_smoothness_cost</name>
+        <initializer>= casadi::MX(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="32" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1af6bc036bf30dcb309718bc456118ab82" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCEuclidianDistance::use_gaussian_</definition>
+        <argsstring></argsstring>
+        <name>use_gaussian_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="79" column="10" bodyfile="include/mpc_casadi.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a2d7b970f870cb6e9157fce661ae895a5" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double MPCEuclidianDistance::VEHICLE_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>VEHICLE_LENGTH</name>
+        <initializer>= 0.33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="15" column="29" bodyfile="include/mpc_casadi.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1abbfbb5cf23977ffb785ca1f64e0cd3a9" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double MPCEuclidianDistance::DT</definition>
+        <argsstring></argsstring>
+        <name>DT</name>
+        <initializer>= 0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="17" column="29" bodyfile="include/mpc_casadi.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1ae52cbae4db2bc1464c4a2cfe4a58b448" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double MPCEuclidianDistance::INITIALIZATION_SPEED</definition>
+        <argsstring></argsstring>
+        <name>INITIALIZATION_SPEED</name>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="23" column="29" bodyfile="include/mpc_casadi.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a6694e9b7e716def8523513beb53e2432" prot="private" static="no" mutable="no">
+        <type>casadi::Opti</type>
+        <definition>casadi::Opti MPCEuclidianDistance::opti</definition>
+        <argsstring></argsstring>
+        <name>opti</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="103" column="18" bodyfile="include/mpc_casadi.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a54caf700c6383f633512037ba0b18063" prot="private" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::ca_start_state</definition>
+        <argsstring></argsstring>
+        <name>ca_start_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="105" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a88ed292a9e44bcea56a2e5212d529d01" prot="private" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::ca_target_states</definition>
+        <argsstring></argsstring>
+        <name>ca_target_states</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="106" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a5b097aabca2976121576df81dd584ed9" prot="private" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::ca_states</definition>
+        <argsstring></argsstring>
+        <name>ca_states</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="107" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a71bea6b67a4d15175f191a14851b634b" prot="private" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::ca_controls</definition>
+        <argsstring></argsstring>
+        <name>ca_controls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="108" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a1e1b6bfc94b22e7f76b51b50a8787d9d" prot="private" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::ca_opp_pos</definition>
+        <argsstring></argsstring>
+        <name>ca_opp_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="110" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1aadd0ba35cd8a00588d801d33ef7617e8" prot="private" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::ca_cost_function</definition>
+        <argsstring></argsstring>
+        <name>ca_cost_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="112" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1ab196f15c29ba04339e7e60a44fb3a7dd" prot="private" static="no" mutable="no">
+        <type>casadi::Function</type>
+        <definition>casadi::Function MPCEuclidianDistance::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="114" column="22" bodyfile="include/mpc_casadi.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1ad8abfc54f4a0e03ed03e4b0782bfa15d" prot="private" static="no" mutable="no">
+        <type>casadi::Function</type>
+        <definition>casadi::Function MPCEuclidianDistance::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="115" column="22" bodyfile="include/mpc_casadi.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1ab63776cf6f27c6a43d6b885c48792ebd" prot="private" static="no" mutable="no">
+        <type>casadi::Function</type>
+        <definition>casadi::Function MPCEuclidianDistance::map_function</definition>
+        <argsstring></argsstring>
+        <name>map_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="116" column="22" bodyfile="include/mpc_casadi.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1aa4b9753821866a42045a8868bb517bb2" prot="private" static="no" mutable="no">
+        <type>casadi::Function</type>
+        <definition>casadi::Function MPCEuclidianDistance::speed_function</definition>
+        <argsstring></argsstring>
+        <name>speed_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="117" column="22" bodyfile="include/mpc_casadi.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a2f9f81dc7701e24476813931597d0f78" prot="private" static="no" mutable="no">
+        <type>casadi::Function</type>
+        <definition>casadi::Function MPCEuclidianDistance::meter_border_distance</definition>
+        <argsstring></argsstring>
+        <name>meter_border_distance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="118" column="22" bodyfile="include/mpc_casadi.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a7371fe605ccb7f705c916ead002ee827" prot="private" static="no" mutable="no">
+        <type>casadi::DM</type>
+        <definition>casadi::DM MPCEuclidianDistance::controls_solution</definition>
+        <argsstring></argsstring>
+        <name>controls_solution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="120" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a9afb611057ff5cc500b63e5d954b71d3" prot="private" static="no" mutable="no">
+        <type>casadi::DM</type>
+        <definition>casadi::DM MPCEuclidianDistance::states_solution</definition>
+        <argsstring></argsstring>
+        <name>states_solution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="121" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a367b6759128a065ad3c570f1a9712449" prot="private" static="no" mutable="no">
+        <type>casadi::MX</type>
+        <definition>casadi::MX MPCEuclidianDistance::speed_m_q</definition>
+        <argsstring></argsstring>
+        <name>speed_m_q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="123" column="16" bodyfile="include/mpc_casadi.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1afc5117f1eb8de0e2a1b28dc7c9030f8f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;double, double&gt; &gt; MPCEuclidianDistance::last_x_y_state_initialization</definition>
+        <argsstring></argsstring>
+        <name>last_x_y_state_initialization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="125" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1aa607c0b27cc9960ad72e715e7dc0058f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCEuclidianDistance::infeasible</definition>
+        <argsstring></argsstring>
+        <name>infeasible</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="127" column="10" bodyfile="include/mpc_casadi.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1ac2ee1adec083251afc247ecc56ea8b90" prot="private" static="no" mutable="no">
+        <type><ref refid="classRaceline" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/raceline_utils/raceline_utils.tag">Raceline</ref></type>
+        <definition>Raceline MPCEuclidianDistance::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="129" column="14" bodyfile="include/mpc_casadi.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1aa6bc7c8d0c31fac811bf79e2a73055e0" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::distance_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>distance_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for distance from target point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="131" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a4da683ea243ee8db11c22f9346196ebe" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::race_line_d_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>race_line_d_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for lateral displacement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="132" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a08e1661954f4a7a7c9fa8892ca1a39e9" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::border_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>border_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for distance from borders. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="133" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a037dd80b7f323f0fb6d34157edc3bc99" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::steering_smoothness_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>steering_smoothness_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for steering smoothness. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="134" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1aa11f383aa86c91f4f9a3be29e7793e69" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::speed_smoothness_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>speed_smoothness_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for speed smoothness. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="135" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a170165a0586bfaf83d08f0ac8d40ce51" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::low_speed_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>low_speed_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for low speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="136" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1ac84d185967f6fb60e193d06dcf84159d" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::high_theta_dot_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>high_theta_dot_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for high theta dot (car heading change) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="137" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1abeab8e5b40928a4096a8bb01017dc4c0" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::total_time_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>total_time_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for total time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="138" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1af2bf1be12022c62eb8eea73cde16e888" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::opponent_distance_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>opponent_distance_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for distance from opponent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="139" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a03aabe9900db8f106e828d44b6fe027c" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::opponent_radius_ptr</definition>
+        <argsstring></argsstring>
+        <name>opponent_radius_ptr</name>
+        <briefdescription>
+<para>Pointer to opponent radius setting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="140" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a8b0c36d48f0a52e70ad236dff0359993" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::walls_cost_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>walls_cost_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to walls cost setting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="141" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1a3f26b360842a231e55ba35dcd9a892a9" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::centripetal_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>centripetal_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for centripetal cost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="142" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCEuclidianDistance_1ad32478d7b908bb18e0c119c81488eac8" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* MPCEuclidianDistance::go_fast_weight_ptr</definition>
+        <argsstring></argsstring>
+        <name>go_fast_weight_ptr</name>
+        <briefdescription>
+<para>Pointer to weight for speed tracking cost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="143" column="17" bodyfile="include/mpc_casadi.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMPCEuclidianDistance_1a337ef3b1dbe1a18ca54dfd18c05f07ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCEuclidianDistance::set_up</definition>
+        <argsstring>(const float &amp;distance_weight, const float &amp;race_line_d_weight, const float &amp;border_weight, const float &amp;steering_smoothness_weight, const float &amp;speed_smoothness_weight, const float &amp;low_speed_weight, const float &amp;high_theta_dot_weight, const float &amp;opponent_distance_weight, const float &amp;total_time_weight, const float &amp;opp_radius, const float &amp;walls_cost_weight, const float &amp;centripetal_weight, const float &amp;go_fast_weight)</argsstring>
+        <name>set_up</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>distance_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>race_line_d_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>border_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>steering_smoothness_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>speed_smoothness_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>low_speed_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>high_theta_dot_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>opponent_distance_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>total_time_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>opp_radius</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>walls_cost_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>centripetal_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>go_fast_weight</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="classFrenetOptimalTrajectory" kindref="compound">FrenetOptimalTrajectory</ref> class. Initializes parameters for calculating the optimal trajectory in Frenet coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>distance_weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight for distance from target point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>race_line_d_weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight for lateral displacement error. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>border_weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight for distance from border. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>steering_smoothness_weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight for high steering change. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>speed_smoothness_weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight for high accelerations. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>low_speed_weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight for low speeds. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>high_theta_dot_weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight for low speeds. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>total_time_weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weight for total time. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="47" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCEuclidianDistance_1a0e50c0b9c3fd6c6acb969466dde7bee1" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPCEuclidianDistance::MPCEuclidianDistance</definition>
+        <argsstring>(std::shared_ptr&lt; CasadiMapUtils &gt; map, Raceline raceline)</argsstring>
+        <name>MPCEuclidianDistance</name>
+        <param>
+          <type>std::shared_ptr&lt; CasadiMapUtils &gt;</type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type><ref refid="classRaceline" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/raceline_utils/raceline_utils.tag">Raceline</ref></type>
+          <declname>raceline</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="62" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCEuclidianDistance_1a6ecbcdcbed201c535016a7367a3c0b35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; std::vector&lt; std::pair&lt; double, double &gt; &gt;, std::vector&lt; std::tuple&lt; double, double, double &gt; &gt;, std::vector&lt; std::pair&lt; double, double &gt; &gt;, std::pair&lt; double, double &gt; &gt;</type>
+        <definition>std::tuple&lt; std::vector&lt;std::pair&lt;double, double&gt; &gt;, std::vector&lt;std::tuple&lt;double, double, double&gt; &gt;, std::vector&lt;std::pair&lt;double, double&gt; &gt;, std::pair&lt;double, double&gt; &gt; MPCEuclidianDistance::solve_one_iteration</definition>
+        <argsstring>(std::tuple&lt; double, double, double, double, double &gt; start_state, std::vector&lt; std::tuple&lt; double, double, double &gt;&gt; target_state, std::tuple&lt; double, double, double, double &gt; opponent_pos, bool has_opp, bool force_initialization)</argsstring>
+        <name>solve_one_iteration</name>
+        <param>
+          <type>std::tuple&lt; double, double, double, double, double &gt;</type>
+          <declname>start_state</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::tuple&lt; double, double, double &gt;&gt;</type>
+          <declname>target_state</declname>
+        </param>
+        <param>
+          <type>std::tuple&lt; double, double, double, double &gt;</type>
+          <declname>opponent_pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>has_opp</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>force_initialization</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="71" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCEuclidianDistance_1a0f14e93f95ef0a63bc1ed8eed622b93b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCEuclidianDistance::set_max_speed</definition>
+        <argsstring>(float max_speed)</argsstring>
+        <name>set_max_speed</name>
+        <param>
+          <type>float</type>
+          <declname>max_speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="81" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCEuclidianDistance_1a3d2086c11ee774081cc2c836024c739f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCEuclidianDistance::problem_definition</definition>
+        <argsstring>(bool has_opp)</argsstring>
+        <name>problem_definition</name>
+        <param>
+          <type>bool</type>
+          <declname>has_opp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="83" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCEuclidianDistance_1a04bf0b985143199e96ad4ab2264b7638" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCEuclidianDistance::set_initialization</definition>
+        <argsstring>(std::vector&lt; std::pair&lt; double, double &gt;&gt; controls, std::vector&lt; std::tuple&lt; double, double, double &gt;&gt; state)</argsstring>
+        <name>set_initialization</name>
+        <param>
+          <type>std::vector&lt; std::pair&lt; double, double &gt;&gt;</type>
+          <declname>controls</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::tuple&lt; double, double, double &gt;&gt;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="85" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classMPCEuclidianDistance_1a1b9992763687d1adc25dc2c5edeb37e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; casadi::DM, casadi::DM &gt;</type>
+        <definition>std::pair&lt;casadi::DM, casadi::DM&gt; MPCEuclidianDistance::initialization</definition>
+        <argsstring>(std::tuple&lt; double, double, double, double, double &gt; start_state, std::vector&lt; std::tuple&lt; double, double, double &gt;&gt; target_states)</argsstring>
+        <name>initialization</name>
+        <param>
+          <type>std::tuple&lt; double, double, double, double, double &gt;</type>
+          <declname>start_state</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::tuple&lt; double, double, double &gt;&gt;</type>
+          <declname>target_states</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="88" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCEuclidianDistance_1aeb4a23a159b774134c28a864593b957c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;double, double&gt; &gt; MPCEuclidianDistance::invert_bicycle_model</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;delta_thetas, double vehicle_length, double step_size, double max_theta_dot)</argsstring>
+        <name>invert_bicycle_model</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>delta_thetas</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vehicle_length</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>step_size</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_theta_dot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="92" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCEuclidianDistance_1a9b89016b3911d43eff2948a8a88d83bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCEuclidianDistance::space_based</definition>
+        <argsstring>(bool has_opp)</argsstring>
+        <name>space_based</name>
+        <param>
+          <type>bool</type>
+          <declname>has_opp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_casadi.hpp" line="100" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mpc_casadi.hpp" line="12" column="27" bodyfile="include/mpc_casadi.hpp" bodystart="12" bodyend="145"/>
+    <listofallmembers>
+      <member refid="classMPCEuclidianDistance_1a08e1661954f4a7a7c9fa8892ca1a39e9" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>border_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1a71bea6b67a4d15175f191a14851b634b" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>ca_controls</name></member>
+      <member refid="classMPCEuclidianDistance_1aadd0ba35cd8a00588d801d33ef7617e8" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>ca_cost_function</name></member>
+      <member refid="classMPCEuclidianDistance_1a1e1b6bfc94b22e7f76b51b50a8787d9d" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>ca_opp_pos</name></member>
+      <member refid="classMPCEuclidianDistance_1a54caf700c6383f633512037ba0b18063" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>ca_start_state</name></member>
+      <member refid="classMPCEuclidianDistance_1a5b097aabca2976121576df81dd584ed9" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>ca_states</name></member>
+      <member refid="classMPCEuclidianDistance_1a88ed292a9e44bcea56a2e5212d529d01" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>ca_target_states</name></member>
+      <member refid="classMPCEuclidianDistance_1a56ce5fb5dafcfe9da7f83c7b7f5abd50" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>centripetal_cost</name></member>
+      <member refid="classMPCEuclidianDistance_1a3f26b360842a231e55ba35dcd9a892a9" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>centripetal_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1a7371fe605ccb7f705c916ead002ee827" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>controls_solution</name></member>
+      <member refid="classMPCEuclidianDistance_1ad8abfc54f4a0e03ed03e4b0782bfa15d" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>d</name></member>
+      <member refid="classMPCEuclidianDistance_1aec1fab8e525a68678719b73f5acd4e1c" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>DELTA_THETA_LIMIT</name></member>
+      <member refid="classMPCEuclidianDistance_1a83c5f9af10698e2168d7b7a0b226d74d" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>distance_function</name></member>
+      <member refid="classMPCEuclidianDistance_1aa6bc7c8d0c31fac811bf79e2a73055e0" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>distance_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1abbfbb5cf23977ffb785ca1f64e0cd3a9" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>DT</name></member>
+      <member refid="classMPCEuclidianDistance_1a9f1dd4080fa1bb8824d6b3269996624a" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>go_fast_cost</name></member>
+      <member refid="classMPCEuclidianDistance_1ad32478d7b908bb18e0c119c81488eac8" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>go_fast_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1ac84d185967f6fb60e193d06dcf84159d" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>high_theta_dot_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1a2d1cb8b6061a0c9e2327f92f7ab01662" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>HORIZON</name></member>
+      <member refid="classMPCEuclidianDistance_1aa607c0b27cc9960ad72e715e7dc0058f" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>infeasible</name></member>
+      <member refid="classMPCEuclidianDistance_1a1b9992763687d1adc25dc2c5edeb37e7" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>initialization</name></member>
+      <member refid="classMPCEuclidianDistance_1ae52cbae4db2bc1464c4a2cfe4a58b448" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>INITIALIZATION_SPEED</name></member>
+      <member refid="classMPCEuclidianDistance_1aeb4a23a159b774134c28a864593b957c" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>invert_bicycle_model</name></member>
+      <member refid="classMPCEuclidianDistance_1afc5117f1eb8de0e2a1b28dc7c9030f8f" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>last_x_y_state_initialization</name></member>
+      <member refid="classMPCEuclidianDistance_1a170165a0586bfaf83d08f0ac8d40ce51" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>low_speed_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1ab63776cf6f27c6a43d6b885c48792ebd" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>map_function</name></member>
+      <member refid="classMPCEuclidianDistance_1a5bb1bda1f86fa889d5e06d889a00d4fe" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>MAX_SPEED</name></member>
+      <member refid="classMPCEuclidianDistance_1a7ef6b2998479bbb1a91d78f80087058b" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>MAX_SPEED_GAIN</name></member>
+      <member refid="classMPCEuclidianDistance_1a2f9f81dc7701e24476813931597d0f78" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>meter_border_distance</name></member>
+      <member refid="classMPCEuclidianDistance_1ab2d5f41db84620093fb3fdc8911cfd3d" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>MIN_SPEED_GAIN</name></member>
+      <member refid="classMPCEuclidianDistance_1a0e50c0b9c3fd6c6acb969466dde7bee1" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>MPCEuclidianDistance</name></member>
+      <member refid="classMPCEuclidianDistance_1acce03d6081597b9431bbbf732f8fbcbb" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>opponent_distance_cost</name></member>
+      <member refid="classMPCEuclidianDistance_1af2bf1be12022c62eb8eea73cde16e888" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>opponent_distance_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1a03aabe9900db8f106e828d44b6fe027c" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>opponent_radius_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1a6694e9b7e716def8523513beb53e2432" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>opti</name></member>
+      <member refid="classMPCEuclidianDistance_1ac2ee1adec083251afc247ecc56ea8b90" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>path</name></member>
+      <member refid="classMPCEuclidianDistance_1a3d2086c11ee774081cc2c836024c739f" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>problem_definition</name></member>
+      <member refid="classMPCEuclidianDistance_1a4da683ea243ee8db11c22f9346196ebe" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>race_line_d_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1ab196f15c29ba04339e7e60a44fb3a7dd" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>s</name></member>
+      <member refid="classMPCEuclidianDistance_1a04bf0b985143199e96ad4ab2264b7638" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>set_initialization</name></member>
+      <member refid="classMPCEuclidianDistance_1a0f14e93f95ef0a63bc1ed8eed622b93b" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>set_max_speed</name></member>
+      <member refid="classMPCEuclidianDistance_1a337ef3b1dbe1a18ca54dfd18c05f07ba" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>set_up</name></member>
+      <member refid="classMPCEuclidianDistance_1a6ecbcdcbed201c535016a7367a3c0b35" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>solve_one_iteration</name></member>
+      <member refid="classMPCEuclidianDistance_1a9b89016b3911d43eff2948a8a88d83bf" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>space_based</name></member>
+      <member refid="classMPCEuclidianDistance_1aa4b9753821866a42045a8868bb517bb2" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>speed_function</name></member>
+      <member refid="classMPCEuclidianDistance_1a367b6759128a065ad3c570f1a9712449" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>speed_m_q</name></member>
+      <member refid="classMPCEuclidianDistance_1a134d8a9038e78f3ce77e6d47f3fdc905" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>speed_smoothness_cost</name></member>
+      <member refid="classMPCEuclidianDistance_1aa11f383aa86c91f4f9a3be29e7793e69" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>speed_smoothness_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1a9afb611057ff5cc500b63e5d954b71d3" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>states_solution</name></member>
+      <member refid="classMPCEuclidianDistance_1a8180229d50efef96a803deac18551ad6" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>steering_smoothness_cost</name></member>
+      <member refid="classMPCEuclidianDistance_1a037dd80b7f323f0fb6d34157edc3bc99" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>steering_smoothness_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1a09cecc7eda246c94ec81062a99b31af4" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>STEP_SIZE</name></member>
+      <member refid="classMPCEuclidianDistance_1abeab8e5b40928a4096a8bb01017dc4c0" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>total_time_weight_ptr</name></member>
+      <member refid="classMPCEuclidianDistance_1af6bc036bf30dcb309718bc456118ab82" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>use_gaussian_</name></member>
+      <member refid="classMPCEuclidianDistance_1a2d7b970f870cb6e9157fce661ae895a5" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>VEHICLE_LENGTH</name></member>
+      <member refid="classMPCEuclidianDistance_1af1ebea26f8d2ceccd2a096a29ac075de" prot="public" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>walls_cost</name></member>
+      <member refid="classMPCEuclidianDistance_1a8b0c36d48f0a52e70ad236dff0359993" prot="private" virt="non-virtual"><scope>MPCEuclidianDistance</scope><name>walls_cost_weight_ptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

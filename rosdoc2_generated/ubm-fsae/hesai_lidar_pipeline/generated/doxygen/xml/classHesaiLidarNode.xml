@@ -1,0 +1,1689 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classHesaiLidarNode" kind="class" language="C++" prot="public">
+    <compoundname>HesaiLidarNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <innerclass refid="structHesaiLidarNode_1_1PoseState" prot="private">HesaiLidarNode::PoseState</innerclass>
+    <innerclass refid="structHesaiLidarNode_1_1ProfilingStats" prot="private">HesaiLidarNode::ProfilingStats</innerclass>
+    <innerclass refid="structHesaiLidarNode_1_1TrackedCone" prot="private">HesaiLidarNode::TrackedCone</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHesaiLidarNode_1a597e1310a131a14a322de2db7c034b69" prot="private" static="no" mutable="no">
+        <type>patchwork::Params</type>
+        <definition>patchwork::Params HesaiLidarNode::params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="71" column="23" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a52b4965678ef08b0fecae78fd098d225" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; sensor_msgs::msg::PointCloud2 &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;sensor_msgs::msg::PointCloud2&gt;::SharedPtr HesaiLidarNode::pointcloud_sub_</definition>
+        <argsstring></argsstring>
+        <name>pointcloud_sub_</name>
+        <briefdescription>
+<para>ROS2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="74" column="38" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1adefe9c34198901b6cd4309a7275a6e57" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; sensor_msgs::msg::PointCloud2 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;sensor_msgs::msg::PointCloud2&gt;::SharedPtr HesaiLidarNode::cloud_publisher_</definition>
+        <argsstring></argsstring>
+        <name>cloud_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="75" column="35" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a63231be16bccc5d6bdb4d0a4e7d0c521" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; sensor_msgs::msg::PointCloud2 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;sensor_msgs::msg::PointCloud2&gt;::SharedPtr HesaiLidarNode::cloud_outlier_removed_publisher_</definition>
+        <argsstring></argsstring>
+        <name>cloud_outlier_removed_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="76" column="35" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a5453913cd72ee5fa1a0f160dfd9a03d8" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; sensor_msgs::msg::PointCloud2 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;sensor_msgs::msg::PointCloud2&gt;::SharedPtr HesaiLidarNode::ground_publisher_</definition>
+        <argsstring></argsstring>
+        <name>ground_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="77" column="35" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a181ad254d6ff42da9af1ff0c1eb297ea" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; sensor_msgs::msg::PointCloud2 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;sensor_msgs::msg::PointCloud2&gt;::SharedPtr HesaiLidarNode::filtered_publisher_</definition>
+        <argsstring></argsstring>
+        <name>filtered_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="78" column="35" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a814099a1a478104930eb226b6236a9ae" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; sensor_msgs::msg::PointCloud2 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;sensor_msgs::msg::PointCloud2&gt;::SharedPtr HesaiLidarNode::nonground_publisher_</definition>
+        <argsstring></argsstring>
+        <name>nonground_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="79" column="35" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a533a2add0ce56e8f9c0d99b980fe5948" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; sensor_msgs::msg::PointCloud2 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;sensor_msgs::msg::PointCloud2&gt;::SharedPtr HesaiLidarNode::cluster_publisher_</definition>
+        <argsstring></argsstring>
+        <name>cluster_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="80" column="35" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ad8126785c182588683d5953c97f8c780" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr HesaiLidarNode::cone_publisher</definition>
+        <argsstring></argsstring>
+        <name>cone_publisher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="81" column="35" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a9a3a86568b871dc85b8ccb869275f8a2" prot="private" static="no" mutable="no">
+        <type>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr HesaiLidarNode::param_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>param_callback_handle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="82" column="71" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ade4935439495726167841487abba6bdd" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; ubm_interfaces::srv::IsReady &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;ubm_interfaces::srv::IsReady&gt;::SharedPtr HesaiLidarNode::is_ready_service_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="83" column="33" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a24fde4a98adc4f2aad7baf07c907e2b7" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::LandmarkArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::LandmarkArray&gt;::SharedPtr HesaiLidarNode::landmark_array_lidar_publisher</definition>
+        <argsstring></argsstring>
+        <name>landmark_array_lidar_publisher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="84" column="35" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a2b1c377765f8129ceaf3ff583313f2a5" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr HesaiLidarNode::odometry_sub_</definition>
+        <argsstring></argsstring>
+        <name>odometry_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="85" column="38" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a4a360ee7254e63550af09fa8da701293" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t HesaiLidarNode::frame_count</definition>
+        <argsstring></argsstring>
+        <name>frame_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="86" column="14" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a7621b61ae2107257cae2a2f3b35a9b69" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t HesaiLidarNode::differing_nonground_frame_count_</definition>
+        <argsstring></argsstring>
+        <name>differing_nonground_frame_count_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="87" column="14" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a282136991dab69d3ae3090dc3d5ea75a" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; patchwork::PatchWorkpp &gt;</type>
+        <definition>std::unique_ptr&lt;patchwork::PatchWorkpp&gt; HesaiLidarNode::Patchworkpp_</definition>
+        <argsstring></argsstring>
+        <name>Patchworkpp_</name>
+        <briefdescription>
+<para>Patchwork++. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="90" column="21" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a8192eb0898daa09d29b0e0766ee21428" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HesaiLidarNode::base_frame_</definition>
+        <argsstring></argsstring>
+        <name>base_frame_</name>
+        <initializer>{&quot;base_link&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="91" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1aa8c8e7308f8e907ab8ae8ad8b72c7001" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::use_sim_time</definition>
+        <argsstring></argsstring>
+        <name>use_sim_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="92" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a263a57df1ce5906112016012153d2a05" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HesaiLidarNode::sensor_height</definition>
+        <argsstring></argsstring>
+        <name>sensor_height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="93" column="12" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a0274c419aa71fdf0f99f1f296c7113bb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::num_iter</definition>
+        <argsstring></argsstring>
+        <name>num_iter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="94" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a6aa969316fdb5bb9cca11a91fd12c5a2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::num_lpr</definition>
+        <argsstring></argsstring>
+        <name>num_lpr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="95" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a80039f4db70d5d0dec0f23bbe30d0440" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::num_min_pts</definition>
+        <argsstring></argsstring>
+        <name>num_min_pts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="96" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a3bfa2fd8c64c5046a2a5b1b6bf692c27" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HesaiLidarNode::th_seeds</definition>
+        <argsstring></argsstring>
+        <name>th_seeds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="97" column="12" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1aebe89a0a5ea561b0a04ad893b3c51499" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HesaiLidarNode::th_dist</definition>
+        <argsstring></argsstring>
+        <name>th_dist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="98" column="12" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a059693cf578e3fd78b49bf21ec2df019" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HesaiLidarNode::th_seeds_v</definition>
+        <argsstring></argsstring>
+        <name>th_seeds_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="99" column="12" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a4c6658fd638c7acae8e800895f2277be" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HesaiLidarNode::th_dist_v</definition>
+        <argsstring></argsstring>
+        <name>th_dist_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="100" column="12" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1aea1d7bf25e34a4eb552824b52e8ba63f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HesaiLidarNode::max_range</definition>
+        <argsstring></argsstring>
+        <name>max_range</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="101" column="12" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a988a0a717094e45018443e6c8b0f37ac" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HesaiLidarNode::min_range</definition>
+        <argsstring></argsstring>
+        <name>min_range</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="102" column="12" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1aacc09c66bf9deb0b02b1bd8af0c609e4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HesaiLidarNode::uprightness_thr</definition>
+        <argsstring></argsstring>
+        <name>uprightness_thr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="103" column="12" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a1a2f2e9226878b1910cb0f1be4db112b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="104" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a3751e77f3401be0f51e9be757d67dd97" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::verbose_landmarks</definition>
+        <argsstring></argsstring>
+        <name>verbose_landmarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="105" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a6545078be0257f2a80218a0f458bd8de" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HesaiLidarNode::lidar_topic</definition>
+        <argsstring></argsstring>
+        <name>lidar_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="108" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ad76dc69db22a2706047b58ca120f13a6" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HesaiLidarNode::is_ready_service_name</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="109" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a648f4c633395e6b0f8ea0a54df89f876" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HesaiLidarNode::landmark_array_topic</definition>
+        <argsstring></argsstring>
+        <name>landmark_array_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="110" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a826aec4355d193ec7095a76fa57efcb6" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HesaiLidarNode::odometry_topic</definition>
+        <argsstring></argsstring>
+        <name>odometry_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="111" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a68aee41d793bd7763772a619b6ddd4a2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::tolerance</definition>
+        <argsstring></argsstring>
+        <name>tolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="114" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a895e4818a6b34eb8ee039a4a6162cbd0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::vertical_angular_resolution</definition>
+        <argsstring></argsstring>
+        <name>vertical_angular_resolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="115" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1aa9c4f2217f8be1376ce578f9c3d2e719" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::horizontal_angular_resolution</definition>
+        <argsstring></argsstring>
+        <name>horizontal_angular_resolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="116" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a6e3cde645f7e1813337ca0ae9757b405" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; HesaiLidarNode::vertical_band_mins_</definition>
+        <argsstring></argsstring>
+        <name>vertical_band_mins_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="118" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1afd05c9fa41aca7270a8ad0d89c92244b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; HesaiLidarNode::vertical_band_maxs_</definition>
+        <argsstring></argsstring>
+        <name>vertical_band_maxs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="119" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a989475353784f0963b2e268f72017fd7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; HesaiLidarNode::vertical_band_resolutions_</definition>
+        <argsstring></argsstring>
+        <name>vertical_band_resolutions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="120" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ad525407969547291677f7aa62a4ad4dd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::vertical_fov_center_deg</definition>
+        <argsstring></argsstring>
+        <name>vertical_fov_center_deg</name>
+        <initializer>= -5.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="121" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1aacee651ce1bcca6f2cb335243fb2e0d6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::min_azimuth</definition>
+        <argsstring></argsstring>
+        <name>min_azimuth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="122" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ae3d7d0b99088b7cc534ae7127234fae5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::max_azimuth</definition>
+        <argsstring></argsstring>
+        <name>max_azimuth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="123" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1af8cb4d5dc14feec31179b1e14bc95faf" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::max_cluster_size</definition>
+        <argsstring></argsstring>
+        <name>max_cluster_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="124" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a57c0a5d04a305baf7a31f817689c83e2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::minClusterSize</definition>
+        <argsstring></argsstring>
+        <name>minClusterSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="125" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a25c07f50394473e9eced84c1550f7624" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::minClusterSizeP</definition>
+        <argsstring></argsstring>
+        <name>minClusterSizeP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="126" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a531728566410ef215cecf9393b419c2d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::radius_small_cone</definition>
+        <argsstring></argsstring>
+        <name>radius_small_cone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="127" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a281332ef0ea326553a8e7772d300372f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::height_small_cone</definition>
+        <argsstring></argsstring>
+        <name>height_small_cone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="128" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a5daee75711f2dd952b94ddbd913aa351" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::estimation_efficiency</definition>
+        <argsstring></argsstring>
+        <name>estimation_efficiency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="129" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a2b01ef14f57eb0a1cb4c3dc314cbecef" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::max_range_clustering</definition>
+        <argsstring></argsstring>
+        <name>max_range_clustering</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="130" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a9f4264716ae7609685a4ab8217790ce8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::publish_marker</definition>
+        <argsstring></argsstring>
+        <name>publish_marker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="131" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a8a955d3ca502cfa15692cfd1167825fa" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::cluster_outlier_std_multiplier</definition>
+        <argsstring></argsstring>
+        <name>cluster_outlier_std_multiplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="132" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a422d2965a184d399a74348c70fda3c57" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::cluster_outlier_min_points</definition>
+        <argsstring></argsstring>
+        <name>cluster_outlier_min_points</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="133" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ac9c7b88d945a430793c79cee7713882c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::filter_isolated_cones_</definition>
+        <argsstring></argsstring>
+        <name>filter_isolated_cones_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="134" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ac56dd1d1b185eeb0821e4cf73df4562b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::isolated_cone_neighbor_radius_</definition>
+        <argsstring></argsstring>
+        <name>isolated_cone_neighbor_radius_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="135" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a0e25d02f49094ca5b6facae34e5c74ac" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::isolated_cone_min_neighbors_</definition>
+        <argsstring></argsstring>
+        <name>isolated_cone_min_neighbors_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="136" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ad66edf89c3778b80710193320524d67c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::isolated_cone_min_landmarks_</definition>
+        <argsstring></argsstring>
+        <name>isolated_cone_min_landmarks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="137" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1aff431393615948b7bc8649a4975048cb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::mission</definition>
+        <argsstring></argsstring>
+        <name>mission</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="139" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a7799413382dfa01e1c9a795d403b0f23" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::voxel_leaf_size</definition>
+        <argsstring></argsstring>
+        <name>voxel_leaf_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="142" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1aa83fd6ba1bcd6116131fc3817865b527" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::max_points_for_clustering</definition>
+        <argsstring></argsstring>
+        <name>max_points_for_clustering</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="143" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a1e53259678e6b95cd7b610dcbee6b4bf" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::ground_min_cluster_size</definition>
+        <argsstring></argsstring>
+        <name>ground_min_cluster_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="145" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ab56fbde0e0dec4bc7f09752cb663946e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::error_acceptance</definition>
+        <argsstring></argsstring>
+        <name>error_acceptance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="146" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a4aafc1c577645fe69f970c989f2c7593" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::compactness_threshold</definition>
+        <argsstring></argsstring>
+        <name>compactness_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="147" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a20bc08a165dc3933915e3079adae4100" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::pitch_angle</definition>
+        <argsstring></argsstring>
+        <name>pitch_angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="150" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a73831aa55b6c0bb08955b67ad4fae730" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::yaw_angle</definition>
+        <argsstring></argsstring>
+        <name>yaw_angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="151" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1af0a8f5989db53669a690107167673ff1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::lidar_offset_x</definition>
+        <argsstring></argsstring>
+        <name>lidar_offset_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="152" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a877fe3279f4ecd3fd54b1d3e791d45c3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::lidar_offset_z</definition>
+        <argsstring></argsstring>
+        <name>lidar_offset_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="153" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a2d1fea84bcdda49c1acbb0f18f20a6bd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::lidar_offset_y</definition>
+        <argsstring></argsstring>
+        <name>lidar_offset_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="154" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ad79134e792f9d9eab5018ddda7f7aa48" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::scale_covariance</definition>
+        <argsstring></argsstring>
+        <name>scale_covariance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="155" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a3a7357a3c5ffe85ea949ecd145bf09b8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::range_accuracy</definition>
+        <argsstring></argsstring>
+        <name>range_accuracy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="156" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a10db330c03e05d0fe2ce08ed2fe90c46" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::equation_check_min_dist</definition>
+        <argsstring></argsstring>
+        <name>equation_check_min_dist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="157" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a0cb904c2152cdf189a3b7eb3d1dd667b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::lidar_layers_</definition>
+        <argsstring></argsstring>
+        <name>lidar_layers_</name>
+        <initializer>= 128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="159" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a800a621914985d3fcbbe3f1c635c27b6" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint64_t, pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &gt;</type>
+        <definition>std::map&lt;uint64_t, pcl::PointCloud&lt;pcl::PointXYZ&gt;::Ptr&gt; HesaiLidarNode::prev_run_clouds_</definition>
+        <argsstring></argsstring>
+        <name>prev_run_clouds_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="163" column="15" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a62dbffbde63256fe56e83a7ff9aa0e37" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::save_nonground_cloud</definition>
+        <argsstring></argsstring>
+        <name>save_nonground_cloud</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="164" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a21adca40bc1132243df98b90e3e7cc59" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::compare_nonground_across_runs_</definition>
+        <argsstring></argsstring>
+        <name>compare_nonground_across_runs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="165" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1afff8ca1132e3e3b9af6df1a32ecc5a17" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HesaiLidarNode::nonground_save_path</definition>
+        <argsstring></argsstring>
+        <name>nonground_save_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="166" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a063d58142777158c313b74dd513e232f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::nonground_match_radius_sq_</definition>
+        <argsstring></argsstring>
+        <name>nonground_match_radius_sq_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="169" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a3e1e312625faeada8ad9e14fc962a6c1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::profiling</definition>
+        <argsstring></argsstring>
+        <name>profiling</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="172" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a367bde731cf9d1efa578f99450209fbb" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HesaiLidarNode::profiling_output_file</definition>
+        <argsstring></argsstring>
+        <name>profiling_output_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="173" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ad553e832e40be7cb3f40176690ee226d" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream HesaiLidarNode::landmark_file_stream</definition>
+        <argsstring></argsstring>
+        <name>landmark_file_stream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="174" column="19" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a62269c9564da8785f3ff9d7e2ce35dfa" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::use_downsampled_clusters</definition>
+        <argsstring></argsstring>
+        <name>use_downsampled_clusters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="177" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a2ba59d82a7ebc43cef04a2f1372b6347" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::downsample_before_ground_estimation</definition>
+        <argsstring></argsstring>
+        <name>downsample_before_ground_estimation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="178" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a0611477cb279f79588846aa4f15168e9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::ground_estimation_voxel_size</definition>
+        <argsstring></argsstring>
+        <name>ground_estimation_voxel_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="179" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a3eaa1cb13ec3629fe2cb636962f67b78" prot="private" static="no" mutable="no">
+        <type>struct HesaiLidarNode::ProfilingStats</type>
+        <definition>struct HesaiLidarNode::ProfilingStats HesaiLidarNode::profiling_stats</definition>
+        <argsstring></argsstring>
+        <name>profiling_stats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="188" column="21"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a4c129b2488af697ee0d691acfb284b84" prot="private" static="no" mutable="no">
+        <type>struct HesaiLidarNode::PoseState</type>
+        <definition>struct HesaiLidarNode::PoseState HesaiLidarNode::lidar_pose_previous_</definition>
+        <argsstring></argsstring>
+        <name>lidar_pose_previous_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="196" column="26"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a3cbc371e3a16837001d0feb26b7ed1b7" prot="private" static="no" mutable="no">
+        <type>struct HesaiLidarNode::PoseState</type>
+        <definition>struct HesaiLidarNode::PoseState HesaiLidarNode::lidar_pose_current_</definition>
+        <argsstring></argsstring>
+        <name>lidar_pose_current_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="196" column="46"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a2d5e490cc0d0e3d6f9148f2f6090f7bb" prot="private" static="no" mutable="no">
+        <type>struct HesaiLidarNode::PoseState</type>
+        <definition>struct HesaiLidarNode::PoseState HesaiLidarNode::odom_current_pose_</definition>
+        <argsstring></argsstring>
+        <name>odom_current_pose_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="196" column="64"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1aad2c19de2e72ae47c00b35ba2a1a1511" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::Enable_tracking</definition>
+        <argsstring></argsstring>
+        <name>Enable_tracking</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="200" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ac6e2809adfa8fa4ac78ec4b4e342d8ce" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t HesaiLidarNode::last_tracking_id</definition>
+        <argsstring></argsstring>
+        <name>last_tracking_id</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="201" column="13" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1aad4649cc806117da38fff97fdd99a139" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::verbose_tracking</definition>
+        <argsstring></argsstring>
+        <name>verbose_tracking</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="208" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a13eaff1e254d7a52d228b88afa869c3b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; TrackedCone &gt;</type>
+        <definition>std::vector&lt;TrackedCone&gt; HesaiLidarNode::tracked_cones_</definition>
+        <argsstring></argsstring>
+        <name>tracked_cones_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="209" column="17" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ac644d8b6e25a5a7b111e591f6277cf68" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HesaiLidarNode::tracking_treshold</definition>
+        <argsstring></argsstring>
+        <name>tracking_treshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="210" column="11" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a5a7e166cd151ed2fe7fdba39ce619358" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HesaiLidarNode::missed_frame_threshold</definition>
+        <argsstring></argsstring>
+        <name>missed_frame_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="211" column="9" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1ab42c1943046e542d4a0a64111f90694f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::tracking_marker</definition>
+        <argsstring></argsstring>
+        <name>tracking_marker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="212" column="10" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1af84db95b1681bb7ef5554edac75cc5b0" prot="private" static="no" mutable="no">
+        <type>visualization_msgs::msg::MarkerArray</type>
+        <definition>visualization_msgs::msg::MarkerArray HesaiLidarNode::previous_circles</definition>
+        <argsstring></argsstring>
+        <name>previous_circles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="215" column="42" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHesaiLidarNode_1a212c17b1ac531ae72c3656d598828225" prot="private" static="no" mutable="no">
+        <type>visualization_msgs::msg::MarkerArray</type>
+        <definition>visualization_msgs::msg::MarkerArray HesaiLidarNode::actual_circles</definition>
+        <argsstring></argsstring>
+        <name>actual_circles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="216" column="42" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHesaiLidarNode_1aa4a3c07852597d475b0e97816b9f2615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HesaiLidarNode::HesaiLidarNode</definition>
+        <argsstring>()</argsstring>
+        <name>HesaiLidarNode</name>
+        <briefdescription>
+<para>GroundSegmentationServer constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="48" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1a576281294df47a1afe8b734a983f493c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HesaiLidarNode::HesaiLidarNode</definition>
+        <argsstring>(const rclcpp::NodeOptions &amp;options)</argsstring>
+        <name>HesaiLidarNode</name>
+        <param>
+          <type>const rclcpp::NodeOptions &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="49" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classHesaiLidarNode_1a6da124e80db7e2df01222ea85b5ef3cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; sensor_msgs::msg::PointCloud2 &gt;</type>
+        <definition>std::unique_ptr&lt;sensor_msgs::msg::PointCloud2&gt; HesaiLidarNode::EstimateGround</definition>
+        <argsstring>(const sensor_msgs::msg::PointCloud2::SharedPtr msg)</argsstring>
+        <name>EstimateGround</name>
+        <param>
+          <type>const sensor_msgs::msg::PointCloud2::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="54" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1a5c2b790b33fb52240a9fc5dfa038bcfe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HesaiLidarNode::PublishClouds</definition>
+        <argsstring>(const Eigen::MatrixX3f &amp;est_ground, const Eigen::MatrixX3f &amp;est_nonground, const std_msgs::msg::Header header_msg)</argsstring>
+        <name>PublishClouds</name>
+        <param>
+          <type>const Eigen::MatrixX3f &amp;</type>
+          <declname>est_ground</declname>
+        </param>
+        <param>
+          <type>const Eigen::MatrixX3f &amp;</type>
+          <declname>est_nonground</declname>
+        </param>
+        <param>
+          <type>const std_msgs::msg::Header</type>
+          <declname>header_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="55" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1a4f5490e60b509ab08167436bd3671c3a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult HesaiLidarNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="56" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1a23e4526a44984409ab769af413afb125" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HesaiLidarNode::handle_service</definition>
+        <argsstring>(const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt; request, std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt; response)</argsstring>
+        <name>handle_service</name>
+        <param>
+          <type>const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="57" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1abf9c25b79a411aad16e0ab859fdc0c8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HesaiLidarNode::lidar_callback</definition>
+        <argsstring>(const sensor_msgs::msg::PointCloud2::SharedPtr msg)</argsstring>
+        <name>lidar_callback</name>
+        <param>
+          <type>const sensor_msgs::msg::PointCloud2::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1a5397590b1b192963960570f6198c6a6c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HesaiLidarNode::initialize_ros_communication</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_ros_communication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1a73d38d859be052362067e257c1e2b3ef" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HesaiLidarNode::odometry_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr msg)</argsstring>
+        <name>odometry_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1aa4bd6bf7c81ecaea80b96be608a859fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; pcl::PointCloud&lt; pcl::PointXYZI &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;pcl::PointCloud&lt;pcl::PointXYZI&gt; &gt; HesaiLidarNode::euclidean_cluster_points</definition>
+        <argsstring>(pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr point_cloud, std::vector&lt; pcl::PointIndices &gt; &amp;cluster_indices)</argsstring>
+        <name>euclidean_cluster_points</name>
+        <param>
+          <type>pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr</type>
+          <declname>point_cloud</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; pcl::PointIndices &gt; &amp;</type>
+          <declname>cluster_indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="61" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1af20adc71c399b10129fe25ce7cc06d32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HesaiLidarNode::compareNongroundCloudWithPreviousRun</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;cloud, const rclcpp::Time &amp;stamp)</argsstring>
+        <name>compareNongroundCloudWithPreviousRun</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>stamp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="62" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1ade1b0ddfe72ecbd0c601bfb5d383c5bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HesaiLidarNode::saveNongroundCloud</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;cloud, const rclcpp::Time &amp;stamp)</argsstring>
+        <name>saveNongroundCloud</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>stamp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="64" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1a0524ab4cb1eaa371cb615802b9ed9727" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HesaiLidarNode::isNongroundCloudEqual</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;a, const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;b) const</argsstring>
+        <name>isNongroundCloudEqual</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHesaiLidarNode_1a2dc8d7f89ecff4a8c32e39dc7f4155ef" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float HesaiLidarNode::computeNongroundDifferencePercentage</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;a, const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;b) const</argsstring>
+        <name>computeNongroundDifferencePercentage</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="69" column="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>HesaiLidarNode</label>
+        <link refid="classHesaiLidarNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>HesaiLidarNode</label>
+        <link refid="classHesaiLidarNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" line="45" column="1" bodyfile="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp" bodystart="44" bodyend="218"/>
+    <listofallmembers>
+      <member refid="classHesaiLidarNode_1a212c17b1ac531ae72c3656d598828225" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>actual_circles</name></member>
+      <member refid="classHesaiLidarNode_1a8192eb0898daa09d29b0e0766ee21428" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>base_frame_</name></member>
+      <member refid="classHesaiLidarNode_1a63231be16bccc5d6bdb4d0a4e7d0c521" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>cloud_outlier_removed_publisher_</name></member>
+      <member refid="classHesaiLidarNode_1adefe9c34198901b6cd4309a7275a6e57" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>cloud_publisher_</name></member>
+      <member refid="classHesaiLidarNode_1a422d2965a184d399a74348c70fda3c57" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>cluster_outlier_min_points</name></member>
+      <member refid="classHesaiLidarNode_1a8a955d3ca502cfa15692cfd1167825fa" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>cluster_outlier_std_multiplier</name></member>
+      <member refid="classHesaiLidarNode_1a533a2add0ce56e8f9c0d99b980fe5948" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>cluster_publisher_</name></member>
+      <member refid="classHesaiLidarNode_1a4aafc1c577645fe69f970c989f2c7593" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>compactness_threshold</name></member>
+      <member refid="classHesaiLidarNode_1a21adca40bc1132243df98b90e3e7cc59" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>compare_nonground_across_runs_</name></member>
+      <member refid="classHesaiLidarNode_1af20adc71c399b10129fe25ce7cc06d32" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>compareNongroundCloudWithPreviousRun</name></member>
+      <member refid="classHesaiLidarNode_1a2dc8d7f89ecff4a8c32e39dc7f4155ef" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>computeNongroundDifferencePercentage</name></member>
+      <member refid="classHesaiLidarNode_1ad8126785c182588683d5953c97f8c780" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>cone_publisher</name></member>
+      <member refid="classHesaiLidarNode_1a7621b61ae2107257cae2a2f3b35a9b69" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>differing_nonground_frame_count_</name></member>
+      <member refid="classHesaiLidarNode_1a2ba59d82a7ebc43cef04a2f1372b6347" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>downsample_before_ground_estimation</name></member>
+      <member refid="classHesaiLidarNode_1aad2c19de2e72ae47c00b35ba2a1a1511" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>Enable_tracking</name></member>
+      <member refid="classHesaiLidarNode_1a10db330c03e05d0fe2ce08ed2fe90c46" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>equation_check_min_dist</name></member>
+      <member refid="classHesaiLidarNode_1ab56fbde0e0dec4bc7f09752cb663946e" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>error_acceptance</name></member>
+      <member refid="classHesaiLidarNode_1a6da124e80db7e2df01222ea85b5ef3cf" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>EstimateGround</name></member>
+      <member refid="classHesaiLidarNode_1a5daee75711f2dd952b94ddbd913aa351" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>estimation_efficiency</name></member>
+      <member refid="classHesaiLidarNode_1aa4bd6bf7c81ecaea80b96be608a859fe" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>euclidean_cluster_points</name></member>
+      <member refid="classHesaiLidarNode_1ac9c7b88d945a430793c79cee7713882c" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>filter_isolated_cones_</name></member>
+      <member refid="classHesaiLidarNode_1a181ad254d6ff42da9af1ff0c1eb297ea" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>filtered_publisher_</name></member>
+      <member refid="classHesaiLidarNode_1a4a360ee7254e63550af09fa8da701293" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>frame_count</name></member>
+      <member refid="classHesaiLidarNode_1a0611477cb279f79588846aa4f15168e9" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>ground_estimation_voxel_size</name></member>
+      <member refid="classHesaiLidarNode_1a1e53259678e6b95cd7b610dcbee6b4bf" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>ground_min_cluster_size</name></member>
+      <member refid="classHesaiLidarNode_1a5453913cd72ee5fa1a0f160dfd9a03d8" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>ground_publisher_</name></member>
+      <member refid="classHesaiLidarNode_1a23e4526a44984409ab769af413afb125" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>handle_service</name></member>
+      <member refid="classHesaiLidarNode_1a281332ef0ea326553a8e7772d300372f" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>height_small_cone</name></member>
+      <member refid="classHesaiLidarNode_1aa4a3c07852597d475b0e97816b9f2615" prot="public" virt="non-virtual"><scope>HesaiLidarNode</scope><name>HesaiLidarNode</name></member>
+      <member refid="classHesaiLidarNode_1a576281294df47a1afe8b734a983f493c" prot="public" virt="non-virtual"><scope>HesaiLidarNode</scope><name>HesaiLidarNode</name></member>
+      <member refid="classHesaiLidarNode_1aa9c4f2217f8be1376ce578f9c3d2e719" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>horizontal_angular_resolution</name></member>
+      <member refid="classHesaiLidarNode_1a5397590b1b192963960570f6198c6a6c" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>initialize_ros_communication</name></member>
+      <member refid="classHesaiLidarNode_1ade4935439495726167841487abba6bdd" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>is_ready_service_</name></member>
+      <member refid="classHesaiLidarNode_1ad76dc69db22a2706047b58ca120f13a6" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>is_ready_service_name</name></member>
+      <member refid="classHesaiLidarNode_1a0524ab4cb1eaa371cb615802b9ed9727" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>isNongroundCloudEqual</name></member>
+      <member refid="classHesaiLidarNode_1ad66edf89c3778b80710193320524d67c" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>isolated_cone_min_landmarks_</name></member>
+      <member refid="classHesaiLidarNode_1a0e25d02f49094ca5b6facae34e5c74ac" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>isolated_cone_min_neighbors_</name></member>
+      <member refid="classHesaiLidarNode_1ac56dd1d1b185eeb0821e4cf73df4562b" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>isolated_cone_neighbor_radius_</name></member>
+      <member refid="classHesaiLidarNode_1a24fde4a98adc4f2aad7baf07c907e2b7" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>landmark_array_lidar_publisher</name></member>
+      <member refid="classHesaiLidarNode_1a648f4c633395e6b0f8ea0a54df89f876" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>landmark_array_topic</name></member>
+      <member refid="classHesaiLidarNode_1ad553e832e40be7cb3f40176690ee226d" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>landmark_file_stream</name></member>
+      <member refid="classHesaiLidarNode_1ac6e2809adfa8fa4ac78ec4b4e342d8ce" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>last_tracking_id</name></member>
+      <member refid="classHesaiLidarNode_1abf9c25b79a411aad16e0ab859fdc0c8c" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>lidar_callback</name></member>
+      <member refid="classHesaiLidarNode_1a0cb904c2152cdf189a3b7eb3d1dd667b" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>lidar_layers_</name></member>
+      <member refid="classHesaiLidarNode_1af0a8f5989db53669a690107167673ff1" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>lidar_offset_x</name></member>
+      <member refid="classHesaiLidarNode_1a2d1fea84bcdda49c1acbb0f18f20a6bd" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>lidar_offset_y</name></member>
+      <member refid="classHesaiLidarNode_1a877fe3279f4ecd3fd54b1d3e791d45c3" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>lidar_offset_z</name></member>
+      <member refid="classHesaiLidarNode_1a3cbc371e3a16837001d0feb26b7ed1b7" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>lidar_pose_current_</name></member>
+      <member refid="classHesaiLidarNode_1a4c129b2488af697ee0d691acfb284b84" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>lidar_pose_previous_</name></member>
+      <member refid="classHesaiLidarNode_1a6545078be0257f2a80218a0f458bd8de" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>lidar_topic</name></member>
+      <member refid="classHesaiLidarNode_1ae3d7d0b99088b7cc534ae7127234fae5" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>max_azimuth</name></member>
+      <member refid="classHesaiLidarNode_1af8cb4d5dc14feec31179b1e14bc95faf" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>max_cluster_size</name></member>
+      <member refid="classHesaiLidarNode_1aa83fd6ba1bcd6116131fc3817865b527" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>max_points_for_clustering</name></member>
+      <member refid="classHesaiLidarNode_1aea1d7bf25e34a4eb552824b52e8ba63f" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>max_range</name></member>
+      <member refid="classHesaiLidarNode_1a2b01ef14f57eb0a1cb4c3dc314cbecef" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>max_range_clustering</name></member>
+      <member refid="classHesaiLidarNode_1aacee651ce1bcca6f2cb335243fb2e0d6" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>min_azimuth</name></member>
+      <member refid="classHesaiLidarNode_1a988a0a717094e45018443e6c8b0f37ac" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>min_range</name></member>
+      <member refid="classHesaiLidarNode_1a57c0a5d04a305baf7a31f817689c83e2" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>minClusterSize</name></member>
+      <member refid="classHesaiLidarNode_1a25c07f50394473e9eced84c1550f7624" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>minClusterSizeP</name></member>
+      <member refid="classHesaiLidarNode_1a5a7e166cd151ed2fe7fdba39ce619358" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>missed_frame_threshold</name></member>
+      <member refid="classHesaiLidarNode_1aff431393615948b7bc8649a4975048cb" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>mission</name></member>
+      <member refid="classHesaiLidarNode_1a063d58142777158c313b74dd513e232f" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>nonground_match_radius_sq_</name></member>
+      <member refid="classHesaiLidarNode_1a814099a1a478104930eb226b6236a9ae" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>nonground_publisher_</name></member>
+      <member refid="classHesaiLidarNode_1afff8ca1132e3e3b9af6df1a32ecc5a17" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>nonground_save_path</name></member>
+      <member refid="classHesaiLidarNode_1a0274c419aa71fdf0f99f1f296c7113bb" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>num_iter</name></member>
+      <member refid="classHesaiLidarNode_1a6aa969316fdb5bb9cca11a91fd12c5a2" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>num_lpr</name></member>
+      <member refid="classHesaiLidarNode_1a80039f4db70d5d0dec0f23bbe30d0440" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>num_min_pts</name></member>
+      <member refid="classHesaiLidarNode_1a2d5e490cc0d0e3d6f9148f2f6090f7bb" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>odom_current_pose_</name></member>
+      <member refid="classHesaiLidarNode_1a73d38d859be052362067e257c1e2b3ef" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>odometry_callback</name></member>
+      <member refid="classHesaiLidarNode_1a2b1c377765f8129ceaf3ff583313f2a5" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>odometry_sub_</name></member>
+      <member refid="classHesaiLidarNode_1a826aec4355d193ec7095a76fa57efcb6" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>odometry_topic</name></member>
+      <member refid="classHesaiLidarNode_1a9a3a86568b871dc85b8ccb869275f8a2" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>param_callback_handle_</name></member>
+      <member refid="classHesaiLidarNode_1a597e1310a131a14a322de2db7c034b69" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>params</name></member>
+      <member refid="classHesaiLidarNode_1a4f5490e60b509ab08167436bd3671c3a" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>params_callback</name></member>
+      <member refid="classHesaiLidarNode_1a282136991dab69d3ae3090dc3d5ea75a" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>Patchworkpp_</name></member>
+      <member refid="classHesaiLidarNode_1a20bc08a165dc3933915e3079adae4100" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>pitch_angle</name></member>
+      <member refid="classHesaiLidarNode_1a52b4965678ef08b0fecae78fd098d225" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>pointcloud_sub_</name></member>
+      <member refid="classHesaiLidarNode_1a800a621914985d3fcbbe3f1c635c27b6" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>prev_run_clouds_</name></member>
+      <member refid="classHesaiLidarNode_1af84db95b1681bb7ef5554edac75cc5b0" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>previous_circles</name></member>
+      <member refid="classHesaiLidarNode_1a3e1e312625faeada8ad9e14fc962a6c1" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>profiling</name></member>
+      <member refid="classHesaiLidarNode_1a367bde731cf9d1efa578f99450209fbb" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>profiling_output_file</name></member>
+      <member refid="classHesaiLidarNode_1a3eaa1cb13ec3629fe2cb636962f67b78" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>profiling_stats</name></member>
+      <member refid="classHesaiLidarNode_1a9f4264716ae7609685a4ab8217790ce8" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>publish_marker</name></member>
+      <member refid="classHesaiLidarNode_1a5c2b790b33fb52240a9fc5dfa038bcfe" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>PublishClouds</name></member>
+      <member refid="classHesaiLidarNode_1a531728566410ef215cecf9393b419c2d" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>radius_small_cone</name></member>
+      <member refid="classHesaiLidarNode_1a3a7357a3c5ffe85ea949ecd145bf09b8" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>range_accuracy</name></member>
+      <member refid="classHesaiLidarNode_1a62dbffbde63256fe56e83a7ff9aa0e37" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>save_nonground_cloud</name></member>
+      <member refid="classHesaiLidarNode_1ade1b0ddfe72ecbd0c601bfb5d383c5bc" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>saveNongroundCloud</name></member>
+      <member refid="classHesaiLidarNode_1ad79134e792f9d9eab5018ddda7f7aa48" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>scale_covariance</name></member>
+      <member refid="classHesaiLidarNode_1a263a57df1ce5906112016012153d2a05" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>sensor_height</name></member>
+      <member refid="classHesaiLidarNode_1aebe89a0a5ea561b0a04ad893b3c51499" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>th_dist</name></member>
+      <member refid="classHesaiLidarNode_1a4c6658fd638c7acae8e800895f2277be" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>th_dist_v</name></member>
+      <member refid="classHesaiLidarNode_1a3bfa2fd8c64c5046a2a5b1b6bf692c27" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>th_seeds</name></member>
+      <member refid="classHesaiLidarNode_1a059693cf578e3fd78b49bf21ec2df019" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>th_seeds_v</name></member>
+      <member refid="classHesaiLidarNode_1a68aee41d793bd7763772a619b6ddd4a2" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>tolerance</name></member>
+      <member refid="classHesaiLidarNode_1a13eaff1e254d7a52d228b88afa869c3b" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>tracked_cones_</name></member>
+      <member refid="classHesaiLidarNode_1ab42c1943046e542d4a0a64111f90694f" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>tracking_marker</name></member>
+      <member refid="classHesaiLidarNode_1ac644d8b6e25a5a7b111e591f6277cf68" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>tracking_treshold</name></member>
+      <member refid="classHesaiLidarNode_1aacc09c66bf9deb0b02b1bd8af0c609e4" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>uprightness_thr</name></member>
+      <member refid="classHesaiLidarNode_1a62269c9564da8785f3ff9d7e2ce35dfa" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>use_downsampled_clusters</name></member>
+      <member refid="classHesaiLidarNode_1aa8c8e7308f8e907ab8ae8ad8b72c7001" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>use_sim_time</name></member>
+      <member refid="classHesaiLidarNode_1a1a2f2e9226878b1910cb0f1be4db112b" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>verbose</name></member>
+      <member refid="classHesaiLidarNode_1a3751e77f3401be0f51e9be757d67dd97" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>verbose_landmarks</name></member>
+      <member refid="classHesaiLidarNode_1aad4649cc806117da38fff97fdd99a139" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>verbose_tracking</name></member>
+      <member refid="classHesaiLidarNode_1a895e4818a6b34eb8ee039a4a6162cbd0" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>vertical_angular_resolution</name></member>
+      <member refid="classHesaiLidarNode_1afd05c9fa41aca7270a8ad0d89c92244b" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>vertical_band_maxs_</name></member>
+      <member refid="classHesaiLidarNode_1a6e3cde645f7e1813337ca0ae9757b405" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>vertical_band_mins_</name></member>
+      <member refid="classHesaiLidarNode_1a989475353784f0963b2e268f72017fd7" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>vertical_band_resolutions_</name></member>
+      <member refid="classHesaiLidarNode_1ad525407969547291677f7aa62a4ad4dd" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>vertical_fov_center_deg</name></member>
+      <member refid="classHesaiLidarNode_1a7799413382dfa01e1c9a795d403b0f23" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>voxel_leaf_size</name></member>
+      <member refid="classHesaiLidarNode_1a73831aa55b6c0bb08955b67ad4fae730" prot="private" virt="non-virtual"><scope>HesaiLidarNode</scope><name>yaw_angle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

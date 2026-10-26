@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlive__telemetry_1_1IDataProcessor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>live_telemetry::IDataProcessor</compoundname>
+    <derivedcompoundref refid="classlive__telemetry_1_1Downsampler" prot="public" virt="non-virtual">live_telemetry::Downsampler&lt; T &gt;</derivedcompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1IDataProcessor_1aa249f26cb1bb1888bea9681f71cc8981" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual live_telemetry::IDataProcessor&lt; T &gt;::~IDataProcessor</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IDataProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="15" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1IDataProcessor_1a34093788c13fcdd1aa088a7257b5231f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool live_telemetry::IDataProcessor&lt; T &gt;::process</definition>
+        <argsstring>(const T &amp;msg)=0</argsstring>
+        <name>process</name>
+        <reimplementedby refid="classlive__telemetry_1_1Downsampler_1a567504b6ad88168a3239d2a2515cb19d">process</reimplementedby>
+        <param>
+          <type>const T &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="16" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1IDataProcessor_1a1dd06a12c8b426f63c27e318aef1d057" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t live_telemetry::IDataProcessor&lt; T &gt;::getProcessedCount</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getProcessedCount</name>
+        <reimplementedby refid="classlive__telemetry_1_1Downsampler_1aa0581c35cc0db22edc6b59c3ba10c5e3">getProcessedCount</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="17" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1IDataProcessor_1ab6503f96b63517193e4a19c8fc7afd4b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t live_telemetry::IDataProcessor&lt; T &gt;::getForwardedCount</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getForwardedCount</name>
+        <reimplementedby refid="classlive__telemetry_1_1Downsampler_1ab8a69f557c77939be2261fae2d176bda">getForwardedCount</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="18" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1IDataProcessor_1a7d08a84d81e319697ab3a39db829f27b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void live_telemetry::IDataProcessor&lt; T &gt;::resetStats</definition>
+        <argsstring>()=0</argsstring>
+        <name>resetStats</name>
+        <reimplementedby refid="classlive__telemetry_1_1Downsampler_1ace012d84c3815c10483f42d6087367cf">resetStats</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/downsampler.hpp" line="19" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>live_telemetry::IDataProcessor&lt; T &gt;</label>
+        <link refid="classlive__telemetry_1_1IDataProcessor"/>
+      </node>
+      <node id="2">
+        <label>live_telemetry::Downsampler&lt; T &gt;</label>
+        <link refid="classlive__telemetry_1_1Downsampler"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/live_telemetry_node/downsampler.hpp" line="13" column="21" bodyfile="include/live_telemetry_node/downsampler.hpp" bodystart="13" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classlive__telemetry_1_1IDataProcessor_1ab6503f96b63517193e4a19c8fc7afd4b" prot="public" virt="pure-virtual"><scope>live_telemetry::IDataProcessor</scope><name>getForwardedCount</name></member>
+      <member refid="classlive__telemetry_1_1IDataProcessor_1a1dd06a12c8b426f63c27e318aef1d057" prot="public" virt="pure-virtual"><scope>live_telemetry::IDataProcessor</scope><name>getProcessedCount</name></member>
+      <member refid="classlive__telemetry_1_1IDataProcessor_1a34093788c13fcdd1aa088a7257b5231f" prot="public" virt="pure-virtual"><scope>live_telemetry::IDataProcessor</scope><name>process</name></member>
+      <member refid="classlive__telemetry_1_1IDataProcessor_1a7d08a84d81e319697ab3a39db829f27b" prot="public" virt="pure-virtual"><scope>live_telemetry::IDataProcessor</scope><name>resetStats</name></member>
+      <member refid="classlive__telemetry_1_1IDataProcessor_1aa249f26cb1bb1888bea9681f71cc8981" prot="public" virt="virtual"><scope>live_telemetry::IDataProcessor</scope><name>~IDataProcessor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

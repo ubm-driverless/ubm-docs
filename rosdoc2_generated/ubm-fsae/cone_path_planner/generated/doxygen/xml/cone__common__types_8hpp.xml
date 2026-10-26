@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="cone__common__types_8hpp" kind="file" language="C++">
+    <compoundname>cone_common_types.hpp</compoundname>
+    <includes local="no">armadillo</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">map</includes>
+    <includes local="no">limits</includes>
+    <includedby refid="costs__utils_8hpp" local="yes">include/cone_path_planner/costs_utils.hpp</includedby>
+    <includedby refid="nearby__cone__search_8hpp" local="yes">include/cone_path_planner/nearby_cone_search.hpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>limits</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>armadillo</label>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/cone_common_types.hpp</label>
+        <link refid="cone__common__types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tuple</label>
+      </node>
+      <node id="4">
+        <label>unordered_map</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/cone_path_planner/costs_utils.hpp</label>
+        <link refid="costs__utils_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/cone_path_planner/calculate_costs.hpp</label>
+        <link refid="calculate__costs_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/cone_common_types.hpp</label>
+        <link refid="cone__common__types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="cone__common__types_8hpp_1ab2b58f3678216bde3d530279fbb704e9" prot="public" static="no">
+        <type>std::tuple&lt; int, int, int &gt;</type>
+        <definition>using SearchDirectionsCacheKey =  std::tuple&lt;int, int, int&gt;</definition>
+        <argsstring></argsstring>
+        <name>SearchDirectionsCacheKey</name>
+        <briefdescription>
+<para>Type alias for a key used in the search directions cache. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_common_types.hpp" line="20" column="1" bodyfile="include/cone_path_planner/cone_common_types.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301" prot="public" static="no">
+        <type>std::map&lt; <ref refid="cone__common__types_8hpp_1ab2b58f3678216bde3d530279fbb704e9" kindref="member">SearchDirectionsCacheKey</ref>, arma::fvec &gt;</type>
+        <definition>using SearchDirectionsCache =  std::map&lt;SearchDirectionsCacheKey, arma::fvec&gt;</definition>
+        <argsstring></argsstring>
+        <name>SearchDirectionsCache</name>
+        <briefdescription>
+<para>Cache storing precomputed search directions for given key triples. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_common_types.hpp" line="23" column="1" bodyfile="include/cone_path_planner/cone_common_types.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cone__common__types_8hpp_1a884845874542e5734847749753957c2a" prot="public" static="no">
+        <type>std::tuple&lt; <ref refid="cone__common__types_8hpp_1ab2b58f3678216bde3d530279fbb704e9" kindref="member">SearchDirectionsCacheKey</ref>, int, int &gt;</type>
+        <definition>using AngleMaskCacheKey =  std::tuple&lt;SearchDirectionsCacheKey, int, int&gt;</definition>
+        <argsstring></argsstring>
+        <name>AngleMaskCacheKey</name>
+        <briefdescription>
+<para>Type alias for a key used in the angle visibility cache. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_common_types.hpp" line="26" column="1" bodyfile="include/cone_path_planner/cone_common_types.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cone__common__types_8hpp_1a2412aa2209e14a8461c2ee7fae62da2a" prot="public" static="no">
+        <type>std::map&lt; <ref refid="cone__common__types_8hpp_1a884845874542e5734847749753957c2a" kindref="member">AngleMaskCacheKey</ref>, std::pair&lt; bool, bool &gt; &gt;</type>
+        <definition>using AngleMaskCache =  std::map&lt;AngleMaskCacheKey, std::pair&lt;bool, bool&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>AngleMaskCache</name>
+        <briefdescription>
+<para>Cache storing boolean masks for visibility angles between cones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_common_types.hpp" line="29" column="1" bodyfile="include/cone_path_planner/cone_common_types.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="cone__common__types_8hpp_1aa634bcc3c72d06f6b2a0d9f5ef554b7e" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int SENTINEL_VALUE</definition>
+        <argsstring></argsstring>
+        <name>SENTINEL_VALUE</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+<para>Sentinel constant used for cache key padding. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_common_types.hpp" line="17" column="11" bodyfile="include/cone_path_planner/cone_common_types.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides data structures for cone search direction and visibility analysis. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/cone_common_types.hpp"/>
+  </compounddef>
+</doxygen>

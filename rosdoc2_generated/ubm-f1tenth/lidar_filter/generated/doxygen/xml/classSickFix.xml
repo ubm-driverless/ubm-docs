@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classSickFix" kind="class" language="C++" prot="public">
+    <compoundname>SickFix</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSickFix_1ab7983ef1b0d81a3d39c98df575f6c6d3" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; sensor_msgs::msg::LaserScan &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;sensor_msgs::msg::LaserScan&gt;::SharedPtr SickFix::sick_subscription_</definition>
+        <argsstring></argsstring>
+        <name>sick_subscription_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subscriber for raw LiDAR scans. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/sick_fix.hpp" line="23" column="38" bodyfile="include/lidar_filter/sick_fix.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSickFix_1af8e19d718612b266c21d719d3fded8c3" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; sensor_msgs::msg::LaserScan &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;sensor_msgs::msg::LaserScan&gt;::SharedPtr SickFix::fixed_publisher_</definition>
+        <argsstring></argsstring>
+        <name>fixed_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for preprocessed LiDAR scans. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/sick_fix.hpp" line="24" column="35" bodyfile="include/lidar_filter/sick_fix.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSickFix_1aab0bd2dca3ff36c98d49154d8ed650dd" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string SickFix::sick_topic</definition>
+        <argsstring></argsstring>
+        <name>sick_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/sick_fix.hpp" line="27" column="17" bodyfile="include/lidar_filter/sick_fix.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSickFix_1a31bd46fd9e020f59844b4b4cb84a6e46" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string SickFix::fixed_topic</definition>
+        <argsstring></argsstring>
+        <name>fixed_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/sick_fix.hpp" line="28" column="17" bodyfile="include/lidar_filter/sick_fix.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSickFix_1aaa3f6d1871abc37050761ec9f98e9798" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string SickFix::target_frameid</definition>
+        <argsstring></argsstring>
+        <name>target_frameid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/sick_fix.hpp" line="29" column="17" bodyfile="include/lidar_filter/sick_fix.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSickFix_1ad689245b181c8e0aa9a52d794f692c4b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SickFix::pointnum</definition>
+        <argsstring></argsstring>
+        <name>pointnum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/sick_fix.hpp" line="30" column="9" bodyfile="include/lidar_filter/sick_fix.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSickFix_1aadff84a1d435f033c63a5bea2578f8d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SickFix::SickFix</definition>
+        <argsstring>()</argsstring>
+        <name>SickFix</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classSickFix" kindref="compound">SickFix</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the node, sets up parameters, and creates subscribers and publishers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/sick_fix.hpp" line="19" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSickFix_1afd2b3fbc5aa5b09889f801512fea3e35" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SickFix::initialize_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/sick_fix.hpp" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classSickFix_1a4649d2d72cc7a89790829ee471d68e26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SickFix::initialize_ros_communication</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_ros_communication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/sick_fix.hpp" line="34" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classSickFix_1aaef436797e4e8a0d8e8728b5022b1a56" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SickFix::process_scan</definition>
+        <argsstring>(const sensor_msgs::msg::LaserScan::SharedPtr msg)</argsstring>
+        <name>process_scan</name>
+        <param>
+          <type>const sensor_msgs::msg::LaserScan::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/sick_fix.hpp" line="36" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SickFix</label>
+        <link refid="classSickFix"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SickFix</label>
+        <link refid="classSickFix"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/lidar_filter/sick_fix.hpp" line="12" column="34" bodyfile="include/lidar_filter/sick_fix.hpp" bodystart="12" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classSickFix_1af8e19d718612b266c21d719d3fded8c3" prot="private" virt="non-virtual"><scope>SickFix</scope><name>fixed_publisher_</name></member>
+      <member refid="classSickFix_1a31bd46fd9e020f59844b4b4cb84a6e46" prot="private" virt="non-virtual"><scope>SickFix</scope><name>fixed_topic</name></member>
+      <member refid="classSickFix_1afd2b3fbc5aa5b09889f801512fea3e35" prot="private" virt="non-virtual"><scope>SickFix</scope><name>initialize_parameters</name></member>
+      <member refid="classSickFix_1a4649d2d72cc7a89790829ee471d68e26" prot="private" virt="non-virtual"><scope>SickFix</scope><name>initialize_ros_communication</name></member>
+      <member refid="classSickFix_1ad689245b181c8e0aa9a52d794f692c4b" prot="private" virt="non-virtual"><scope>SickFix</scope><name>pointnum</name></member>
+      <member refid="classSickFix_1aaef436797e4e8a0d8e8728b5022b1a56" prot="private" virt="non-virtual"><scope>SickFix</scope><name>process_scan</name></member>
+      <member refid="classSickFix_1ab7983ef1b0d81a3d39c98df575f6c6d3" prot="private" virt="non-virtual"><scope>SickFix</scope><name>sick_subscription_</name></member>
+      <member refid="classSickFix_1aab0bd2dca3ff36c98d49154d8ed650dd" prot="private" virt="non-virtual"><scope>SickFix</scope><name>sick_topic</name></member>
+      <member refid="classSickFix_1aadff84a1d435f033c63a5bea2578f8d4" prot="public" virt="non-virtual"><scope>SickFix</scope><name>SickFix</name></member>
+      <member refid="classSickFix_1aaa3f6d1871abc37050761ec9f98e9798" prot="private" virt="non-virtual"><scope>SickFix</scope><name>target_frameid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

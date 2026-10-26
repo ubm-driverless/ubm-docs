@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsl__oc_1_1tools_1_1StopWatch" kind="class" language="C++" prot="public">
+    <compoundname>sl_oc::tools::StopWatch</compoundname>
+    <includes local="no">stopwatch.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1StopWatch_1a2450bcc7e5873a0e16e2af25d5b80de7" prot="private" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point sl_oc::tools::StopWatch::mStartTime</definition>
+        <argsstring></argsstring>
+        <name>mStartTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stopwatch.hpp" line="63" column="43" bodyfile="include/stopwatch.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1StopWatch_1ac5b9348483a57ac79bcbd076aee7fd8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sl_oc::tools::StopWatch::StopWatch</definition>
+        <argsstring>()</argsstring>
+        <name>StopWatch</name>
+        <briefdescription>
+<para><ref refid="classsl__oc_1_1tools_1_1StopWatch" kindref="compound">StopWatch</ref> constructor. Automatically starts time measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stopwatch.hpp" line="40" column="5" bodyfile="include/stopwatch.hpp" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1StopWatch_1a510cd453b742d921739a7b54eadc4830" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual sl_oc::tools::StopWatch::~StopWatch</definition>
+        <argsstring>()</argsstring>
+        <name>~StopWatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stopwatch.hpp" line="41" column="13" bodyfile="include/stopwatch.hpp" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1StopWatch_1af62e9a532e48e61c51a980d8e76045a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::StopWatch::tic</definition>
+        <argsstring>()</argsstring>
+        <name>tic</name>
+        <briefdescription>
+<para>Set the beginning time of the time measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stopwatch.hpp" line="46" column="10" bodyfile="include/stopwatch.hpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1StopWatch_1a913ff2996256810c57eabe436665c630" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double sl_oc::tools::StopWatch::toc</definition>
+        <argsstring>()</argsstring>
+        <name>toc</name>
+        <briefdescription>
+<para>Calculates the seconds elapsed from the last tic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the seconds elapsed from the last <ref refid="classsl__oc_1_1tools_1_1StopWatch_1af62e9a532e48e61c51a980d8e76045a1" kindref="member">tic</ref> with microseconds resolution. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stopwatch.hpp" line="55" column="12" bodyfile="include/stopwatch.hpp" bodystart="55" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Stop Timer used to measure time intervals. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/stopwatch.hpp" line="34" column="1" bodyfile="include/stopwatch.hpp" bodystart="33" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classsl__oc_1_1tools_1_1StopWatch_1a2450bcc7e5873a0e16e2af25d5b80de7" prot="private" virt="non-virtual"><scope>sl_oc::tools::StopWatch</scope><name>mStartTime</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StopWatch_1ac5b9348483a57ac79bcbd076aee7fd8e" prot="public" virt="non-virtual"><scope>sl_oc::tools::StopWatch</scope><name>StopWatch</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StopWatch_1af62e9a532e48e61c51a980d8e76045a1" prot="public" virt="non-virtual"><scope>sl_oc::tools::StopWatch</scope><name>tic</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StopWatch_1a913ff2996256810c57eabe436665c630" prot="public" virt="non-virtual"><scope>sl_oc::tools::StopWatch</scope><name>toc</name></member>
+      <member refid="classsl__oc_1_1tools_1_1StopWatch_1a510cd453b742d921739a7b54eadc4830" prot="public" virt="virtual"><scope>sl_oc::tools::StopWatch</scope><name>~StopWatch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

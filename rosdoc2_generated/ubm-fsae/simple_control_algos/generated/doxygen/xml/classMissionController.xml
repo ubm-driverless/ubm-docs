@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classMissionController" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>MissionController</compoundname>
+    <derivedcompoundref refid="classAccelerationController" prot="public" virt="non-virtual">AccelerationController</derivedcompoundref>
+    <derivedcompoundref refid="classDummyController" prot="public" virt="non-virtual">DummyController</derivedcompoundref>
+    <derivedcompoundref refid="classEbsController" prot="public" virt="non-virtual">EbsController</derivedcompoundref>
+    <derivedcompoundref refid="classPathFollowerNode" prot="public" virt="non-virtual">PathFollowerNode</derivedcompoundref>
+    <derivedcompoundref refid="classSkidpadController" prot="public" virt="non-virtual">SkidpadController</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMissionController_1a44704e1e3185c3a5c40db140dd2f11b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual MissionController::~MissionController</definition>
+        <argsstring>()=default</argsstring>
+        <name>~MissionController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/interfaces/mission_controller.hpp" line="18" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionController_1a6e4573ac1ee23bb8dd5ac505db51e6a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MissionController::load_path</definition>
+        <argsstring>(const std::string &amp;file_path)</argsstring>
+        <name>load_path</name>
+        <reimplementedby refid="classEbsController_1a0eafeea9392ea259911d8edf6a146510">load_path</reimplementedby>
+        <reimplementedby refid="classAccelerationController_1a0f9e377f910ef8a22e6e7e37cb4d7c58">load_path</reimplementedby>
+        <reimplementedby refid="classSkidpadController_1a9f19afc172845f5e926dcd3b10150def">load_path</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/interfaces/mission_controller.hpp" line="20" column="22" bodyfile="include/interfaces/mission_controller.hpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionController_1a9b5e0d046deccb9bee61b36ffa8c64a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void MissionController::control_loop</definition>
+        <argsstring>()=0</argsstring>
+        <name>control_loop</name>
+        <reimplementedby refid="classPathFollowerNode_1af860a906772e51e54e8c0dafc8ddbf8c">control_loop</reimplementedby>
+        <reimplementedby refid="classEbsController_1afeafd5a03d6e3149b6902836fd63f905">control_loop</reimplementedby>
+        <reimplementedby refid="classAccelerationController_1a37aa3976258b22969639115b16ac17dd">control_loop</reimplementedby>
+        <reimplementedby refid="classSkidpadController_1a62e1a27043fcf0cf7e7d5b238b57bc59">control_loop</reimplementedby>
+        <reimplementedby refid="classDummyController_1a0125a62c1f5c2cd6287c13110dba47b7">control_loop</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/interfaces/mission_controller.hpp" line="22" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionController_1a051964f5c371f5fb0cae94f2f868d516" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MissionController::mission_finished</definition>
+        <argsstring>()</argsstring>
+        <name>mission_finished</name>
+        <reimplementedby refid="classEbsController_1a75327cdc9e2aacfdc2fabf47e795c3cf">mission_finished</reimplementedby>
+        <reimplementedby refid="classAccelerationController_1a7bb8580bff8c43c2ed2e5f9de178b8c5">mission_finished</reimplementedby>
+        <reimplementedby refid="classSkidpadController_1acad20035d8bd5a774aec1b78512d3e48">mission_finished</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/interfaces/mission_controller.hpp" line="24" column="22" bodyfile="include/interfaces/mission_controller.hpp" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionController_1aadf5a79dc80fcd0306d2eb93f8df129c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MissionController::publish_control_logging</definition>
+        <argsstring>()</argsstring>
+        <name>publish_control_logging</name>
+        <reimplementedby refid="classDummyController_1a0a4ffc298d5bc530708ca19942f4f9e5">publish_control_logging</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/interfaces/mission_controller.hpp" line="26" column="22" bodyfile="include/interfaces/mission_controller.hpp" bodystart="26" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>EbsController</label>
+        <link refid="classEbsController"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DummyController</label>
+        <link refid="classDummyController"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PathFollowerNode</label>
+        <link refid="classPathFollowerNode"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AccelerationController</label>
+        <link refid="classAccelerationController"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MissionController</label>
+        <link refid="classMissionController"/>
+      </node>
+      <node id="6">
+        <label>SkidpadController</label>
+        <link refid="classSkidpadController"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/interfaces/mission_controller.hpp" line="16" column="1" bodyfile="include/interfaces/mission_controller.hpp" bodystart="15" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classMissionController_1a9b5e0d046deccb9bee61b36ffa8c64a9" prot="public" virt="pure-virtual"><scope>MissionController</scope><name>control_loop</name></member>
+      <member refid="classMissionController_1a6e4573ac1ee23bb8dd5ac505db51e6a2" prot="public" virt="virtual"><scope>MissionController</scope><name>load_path</name></member>
+      <member refid="classMissionController_1a051964f5c371f5fb0cae94f2f868d516" prot="public" virt="virtual"><scope>MissionController</scope><name>mission_finished</name></member>
+      <member refid="classMissionController_1aadf5a79dc80fcd0306d2eb93f8df129c" prot="public" virt="virtual"><scope>MissionController</scope><name>publish_control_logging</name></member>
+      <member refid="classMissionController_1a44704e1e3185c3a5c40db140dd2f11b6" prot="public" virt="virtual"><scope>MissionController</scope><name>~MissionController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

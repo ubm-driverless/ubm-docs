@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function performClustering &mdash; hesai_lidar_pipeline 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function PointDistance" href="function_Utils__clustering_8hpp_1adc7d2812634956ead63436cd80f3f770.html" />
+    <link rel="prev" title="Function patchworkpp_ros::utils::PointCloud2ToEigenMat" href="function_Utils_8hpp_1aa7afefa5aac37788974dae8ac0ea504e.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            hesai_lidar_pipeline
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_patchworkpp_ros.html">Namespace patchworkpp_ros</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_patchworkpp_ros__utils.html">Namespace patchworkpp_ros::utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structHesaiLidarNode_1_1PoseState.html">Struct HesaiLidarNode::PoseState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structHesaiLidarNode_1_1ProfilingStats.html">Struct HesaiLidarNode::ProfilingStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structHesaiLidarNode_1_1TrackedCone.html">Struct HesaiLidarNode::TrackedCone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classHesaiLidarNode.html">Class HesaiLidarNode</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1ae14e0dc18de23af73de446be7d5b2c81.html">Function circle_creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1a79dcc984a7540b2bb5d070fb0195ed3b.html">Function clear_previous_markers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1a5db50cb1fb8e2bdc5836100039325ba8.html">Function computeClusterCenter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1ad18a0b2c79cb21d654fc1f9428d13995.html">Function computeClusterCenterXYZ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1acf8c3820de46aace707d652f8086d836.html">Function computeClusterCompactness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1ae43fda361cd89b42c324e659bd49ac7c.html">Function computeClusterCompactnessStdDev</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1ae1bda5c35a40a690968c5cd9f6897c48.html">Function filterClusterOutliers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1aedf71612cb61cc5985f0ae8d0e7978b3.html">Function line_creation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1aeec82bd89d70123833ab87790c7bdfdc.html">Function patchworkpp_ros::utils::CreatePointCloud2Msg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a45803f9b04ed1cf141d726df08802a28.html">Function patchworkpp_ros::utils::EigenMatToPointCloud2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1abb4aac513b6394fe466dc0541e41c588.html">Function patchworkpp_ros::utils::EigenToPointCloud2(const std::vector&lt;Eigen::Vector3d&gt;&amp;, const Header&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1abd56b70d0c351fbf567ad193f4cb3849.html">Function patchworkpp_ros::utils::EigenToPointCloud2(const std::vector&lt;Eigen::Vector3d&gt;&amp;, const std::vector&lt;double&gt;&amp;, const Header&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1abb083c3f605ca09f5c58148d5a15fda5.html">Function patchworkpp_ros::utils::estimate_vertical_samples_from_profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a66b38a6a10b7c6bdf781b2089041d3c2.html">Function patchworkpp_ros::utils::ExtractTimestampsFromMsg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1affe07c837718a8d32742b2e1d36b4f7a.html">Function patchworkpp_ros::utils::FillPointCloud2Timestamp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1afb890964a15163bf452d33fe89aa5938.html">Function patchworkpp_ros::utils::FillPointCloud2XYZ(const std::vector&lt;Eigen::Vector3d&gt;&amp;, PointCloud2&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a7c46ad0c498c823a829eeb1df84136ba.html">Function patchworkpp_ros::utils::FillPointCloud2XYZ(const Eigen::MatrixX3f&amp;, PointCloud2&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a7c2f014dc6b94f7ccbcd392a8a90ee52.html">Function patchworkpp_ros::utils::FixFrameId</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1ae984a900ac400ecf42d40a54c72c76a7.html">Function patchworkpp_ros::utils::GetTimestampField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a026f458b6e7c0c9deb8fe2ef856b5c03.html">Function patchworkpp_ros::utils::GetTimestamps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a9fea260292b666f981782f657c4081d0.html">Function patchworkpp_ros::utils::NormalizeTimestamps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a7a206965266b5a13565952fc0a93448d.html">Function patchworkpp_ros::utils::PointCloud2ToEigen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1aa7afefa5aac37788974dae8ac0ea504e.html">Function patchworkpp_ros::utils::PointCloud2ToEigenMat</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Function performClustering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1adc7d2812634956ead63436cd80f3f770.html">Function PointDistance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1a08d4e9d6c02ed1497f499cd383923075.html">Function PreFiltering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils__clustering_8hpp_1a054c679db212a2cb5de107b03b005d1a.html">Function text_creation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_Utils_8hpp_1ae144a48de978d56d20c4fd97caf66281.html">Typedef patchworkpp_ros::utils::Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_Utils_8hpp_1a1364910ab4ca90aa740485a164581738.html">Typedef patchworkpp_ros::utils::PointCloud2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_Utils_8hpp_1ab3e0143996b88df515251c27f35cff30.html">Typedef patchworkpp_ros::utils::PointField</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_Hesai_Lidar_Pipeline.html">Directory Hesai_Lidar_Pipeline</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_Hesai_Lidar_Pipeline_Hesai_Lidar_Node.hpp.html">File Hesai_Lidar_Node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_Hesai_Lidar_Pipeline_Utils.hpp.html">File Utils.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_Hesai_Lidar_Pipeline_Utils_clustering.hpp.html">File Utils_clustering.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/LICENSE.html">LICENSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">hesai_lidar_pipeline</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Function performClustering</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/function_Utils__clustering_8hpp_1a84586e25d6ae8cdee301fab358cc47a8.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="function-performclustering">
+<span id="exhale-function-utils-clustering-8hpp-1a84586e25d6ae8cdee301fab358cc47a8"></span><h1>Function performClustering<a class="headerlink" href="#function-performclustering" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_Hesai_Lidar_Pipeline_Utils_clustering.hpp.html#file-include-hesai-lidar-pipeline-utils-clustering-hpp"><span class="std std-ref">File Utils_clustering.hpp</span></a></p></li>
+</ul>
+<section id="function-documentation">
+<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417performClusteringRKN3pcl10PointCloudIN3pcl8PointXYZEE3PtrEfii">
+<span id="_CPPv317performClusteringRKN3pcl10PointCloudIN3pcl8PointXYZEE3PtrEfii"></span><span id="_CPPv217performClusteringRKN3pcl10PointCloudIN3pcl8PointXYZEE3PtrEfii"></span><span id="performClustering__pcl::PointCloud:pcl::PointXYZ:::PtrCR.float.i.i"></span><span class="target" id="Utils__clustering_8hpp_1a84586e25d6ae8cdee301fab358cc47a8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">pcl</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PointIndices</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">performClustering</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">pcl</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PointCloud</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">pcl</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PointXYZ</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Ptr</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pointcloud_2d_ptr</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tolerance</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_cluster_size</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">minClusterSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417performClusteringRKN3pcl10PointCloudIN3pcl8PointXYZEE3PtrEfii" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="function_Utils_8hpp_1aa7afefa5aac37788974dae8ac0ea504e.html" class="btn btn-neutral float-left" title="Function patchworkpp_ros::utils::PointCloud2ToEigenMat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="function_Utils__clustering_8hpp_1adc7d2812634956ead63436cd80f3f770.html" class="btn btn-neutral float-right" title="Function PointDistance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;hesai_lidar_pipeline&gt; Contributors. License: MIT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

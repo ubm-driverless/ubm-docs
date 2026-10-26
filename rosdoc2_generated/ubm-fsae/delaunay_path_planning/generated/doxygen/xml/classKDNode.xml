@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classKDNode" kind="class" language="C++" prot="public">
+    <compoundname>KDNode</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classKDNode_1a0a1564eda174f7eb816cf6b9a512e770" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classKDNode" kindref="compound">KDNode</ref> &gt;</type>
+        <definition>using KDNode::KDNodePtr =  std::shared_ptr&lt;KDNode&gt;</definition>
+        <argsstring></argsstring>
+        <name>KDNodePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="57" column="3" bodyfile="include/utils/KDTree.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classKDNode_1a6c440b64b71189b1dcda99509cd12ca4" prot="public" static="no" mutable="no">
+        <type><ref refid="classKDTData" kindref="compound">KDTData</ref>&lt; size_t &gt;</type>
+        <definition>KDTData&lt;size_t&gt; KDNode::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="58" column="11" bodyfile="include/utils/KDTree.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKDNode_1ac304098716119d81890e4acb1c337e5d" prot="public" static="no" mutable="no">
+        <type><ref refid="classKDTData" kindref="compound">KDTData</ref>&lt; <ref refid="classPoint" kindref="compound">Point</ref> &gt;</type>
+        <definition>KDTData&lt;Point&gt; KDNode::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="59" column="11" bodyfile="include/utils/KDTree.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKDNode_1a3febb8b552a08597bbb0ac9bca723f39" prot="public" static="no" mutable="no">
+        <type>KDNodePtr</type>
+        <definition>KDNodePtr KDNode::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="60" column="13" bodyfile="include/utils/KDTree.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKDNode_1a8c848a410242bf7d3e3bb21b0631852e" prot="public" static="no" mutable="no">
+        <type>KDNodePtr</type>
+        <definition>KDNodePtr KDNode::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="61" column="13" bodyfile="include/utils/KDTree.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classKDNode_1a9a21d6cc46310516e0d931c481f17572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KDNode::KDNode</definition>
+        <argsstring>()</argsstring>
+        <name>KDNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="64" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDNode_1ab46b2145765d713a3310104d8d89981d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KDNode::KDNode</definition>
+        <argsstring>(const Point &amp;, const size_t &amp;, const KDNodePtr &amp;, const KDNodePtr &amp;)</argsstring>
+        <name>KDNode</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+        </param>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+        </param>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="65" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDNode_1aa7b6781848d25cc501d5930d304e0325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KDNode::KDNode</definition>
+        <argsstring>(const pointIndex &amp;, const KDNodePtr &amp;, const KDNodePtr &amp;)</argsstring>
+        <name>KDNode</name>
+        <param>
+          <type>const pointIndex &amp;</type>
+        </param>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+        </param>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="67" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDNode_1aaf6897b4bd312715a7af295243c9f3ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KDNode::~KDNode</definition>
+        <argsstring>()</argsstring>
+        <name>~KDNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="68" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDNode_1a4a4b65450d5bf16d8c320c3c8b46e122" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double KDNode::coord</definition>
+        <argsstring>(const size_t &amp;)</argsstring>
+        <name>coord</name>
+        <param>
+          <type>const size_t &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="71" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDNode_1a4ae3252758100660991b291ccb5f56b1" prot="public" static="no" const="yes" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KDNode::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="74" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDNode_1a8cf101718a042813ac493b26f17bb29c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KDNode::operator size_t</definition>
+        <argsstring>()</argsstring>
+        <name>operator size_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="75" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDNode_1a610c59eef703b2c4d49d0d842d719704" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KDNode::operator pointIndex</definition>
+        <argsstring>()</argsstring>
+        <name>operator pointIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="76" column="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>KDTData&lt; Point &gt;</label>
+        <link refid="classKDTData"/>
+      </node>
+      <node id="3">
+        <label>KDTData&lt; size_t &gt;</label>
+        <link refid="classKDTData"/>
+      </node>
+      <node id="1">
+        <label>KDNode</label>
+        <link refid="classKDNode"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>x</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/utils/KDTree.hpp" line="55" column="13" bodyfile="include/utils/KDTree.hpp" bodystart="55" bodyend="77"/>
+    <listofallmembers>
+      <member refid="classKDNode_1a4a4b65450d5bf16d8c320c3c8b46e122" prot="public" virt="non-virtual"><scope>KDNode</scope><name>coord</name></member>
+      <member refid="classKDNode_1a6c440b64b71189b1dcda99509cd12ca4" prot="public" virt="non-virtual"><scope>KDNode</scope><name>index</name></member>
+      <member refid="classKDNode_1a9a21d6cc46310516e0d931c481f17572" prot="public" virt="non-virtual"><scope>KDNode</scope><name>KDNode</name></member>
+      <member refid="classKDNode_1ab46b2145765d713a3310104d8d89981d" prot="public" virt="non-virtual"><scope>KDNode</scope><name>KDNode</name></member>
+      <member refid="classKDNode_1aa7b6781848d25cc501d5930d304e0325" prot="public" virt="non-virtual"><scope>KDNode</scope><name>KDNode</name></member>
+      <member refid="classKDNode_1a0a1564eda174f7eb816cf6b9a512e770" prot="public" virt="non-virtual"><scope>KDNode</scope><name>KDNodePtr</name></member>
+      <member refid="classKDNode_1a3febb8b552a08597bbb0ac9bca723f39" prot="public" virt="non-virtual"><scope>KDNode</scope><name>left</name></member>
+      <member refid="classKDNode_1a4ae3252758100660991b291ccb5f56b1" prot="public" virt="non-virtual"><scope>KDNode</scope><name>operator bool</name></member>
+      <member refid="classKDNode_1a610c59eef703b2c4d49d0d842d719704" prot="public" virt="non-virtual"><scope>KDNode</scope><name>operator pointIndex</name></member>
+      <member refid="classKDNode_1a8cf101718a042813ac493b26f17bb29c" prot="public" virt="non-virtual"><scope>KDNode</scope><name>operator size_t</name></member>
+      <member refid="classKDNode_1a8c848a410242bf7d3e3bb21b0631852e" prot="public" virt="non-virtual"><scope>KDNode</scope><name>right</name></member>
+      <member refid="classKDNode_1ac304098716119d81890e4acb1c337e5d" prot="public" virt="non-virtual"><scope>KDNode</scope><name>x</name></member>
+      <member refid="classKDNode_1aaf6897b4bd312715a7af295243c9f3ab" prot="public" virt="non-virtual"><scope>KDNode</scope><name>~KDNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

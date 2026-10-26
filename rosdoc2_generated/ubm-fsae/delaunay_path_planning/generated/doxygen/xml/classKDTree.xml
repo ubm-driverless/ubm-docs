@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classKDTree" kind="class" language="C++" prot="public">
+    <compoundname>KDTree</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classKDTree_1abb228395f108c2ea534064eac6bbf6c7" prot="private" static="no" mutable="no">
+        <type>KDNodePtr</type>
+        <definition>KDNodePtr KDTree::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="111" column="13" bodyfile="include/utils/KDTree.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKDTree_1abd75dd7e340553a01b6a1d9fdfee553e" prot="private" static="no" mutable="no">
+        <type>KDNodePtr</type>
+        <definition>KDNodePtr KDTree::leaf</definition>
+        <argsstring></argsstring>
+        <name>leaf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="112" column="13" bodyfile="include/utils/KDTree.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classKDTree_1a6279b792b492b5e997668f5c737322fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>KDNodePtr</type>
+        <definition>KDNodePtr KDTree::make_tree</definition>
+        <argsstring>(const pointIndexArr::iterator &amp;begin, const pointIndexArr::iterator &amp;end, const size_t &amp;length, const size_t &amp;level)</argsstring>
+        <name>make_tree</name>
+        <param>
+          <type>const pointIndexArr::iterator &amp;</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>const pointIndexArr::iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="114" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1a597d549ccdc65f25273b2a3f8613bb18" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>KDNodePtr</type>
+        <definition>KDNodePtr KDTree::nearest_</definition>
+        <argsstring>(const KDNodePtr &amp;branch, const Point &amp;pt, const size_t &amp;level, const KDNodePtr &amp;best, const double &amp;best_dist, const std::set&lt; size_t &gt; &amp;excs) const</argsstring>
+        <name>nearest_</name>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+          <declname>branch</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+          <declname>best</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>best_dist</declname>
+        </param>
+        <param>
+          <type>const std::set&lt; size_t &gt; &amp;</type>
+          <declname>excs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="126" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1a3ff62d37af3d110e73d2d01dd00ead2f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>KDNodePtr</type>
+        <definition>KDNodePtr KDTree::nearest_</definition>
+        <argsstring>(const Point &amp;pt, const std::set&lt; size_t &gt; &amp;excs) const</argsstring>
+        <name>nearest_</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const std::set&lt; size_t &gt; &amp;</type>
+          <declname>excs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="135" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1a0e22ef10cdd8064c9728d636021e49d5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>pointIndexArr</type>
+        <definition>pointIndexArr KDTree::neighborhood_</definition>
+        <argsstring>(const KDNodePtr &amp;branch, const Point &amp;pt, const double &amp;rad, const size_t &amp;level) const</argsstring>
+        <name>neighborhood_</name>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+          <declname>branch</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>rad</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="143" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classKDTree_1aa00b4936d6926d0d74e4b02c03089bc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KDTree::KDTree</definition>
+        <argsstring>()=default</argsstring>
+        <name>KDTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="121" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1a8c77f467fd585b34ceaf1c3bac093c7d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KDTree::KDTree</definition>
+        <argsstring>(const pointVec &amp;point_array)</argsstring>
+        <name>KDTree</name>
+        <param>
+          <type>const pointVec &amp;</type>
+          <declname>point_array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="122" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1aa145149461a0b515614ffe3a1bd3becf" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KDTree::KDTree</definition>
+        <argsstring>(const std::list&lt; Point &gt; &amp;point_list)</argsstring>
+        <name>KDTree</name>
+        <param>
+          <type>const std::list&lt; <ref refid="classPoint" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>point_list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="123" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1a65b50be734e7b8905d0a7523a6c9b2bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classKDTData" kindref="compound">KDTData</ref>&lt; <ref refid="classPoint" kindref="compound">Point</ref> &gt;</type>
+        <definition>KDTData&lt;Point&gt; KDTree::nearest_point</definition>
+        <argsstring>(const Point &amp;pt, const std::set&lt; size_t &gt; &amp;excs=std::set&lt; size_t &gt;()) const</argsstring>
+        <name>nearest_point</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const std::set&lt; size_t &gt; &amp;</type>
+          <declname>excs</declname>
+          <defval>std::set&lt; size_t &gt;()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="138" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1a7468038e80119be69f72e2d2ee228275" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classKDTData" kindref="compound">KDTData</ref>&lt; size_t &gt;</type>
+        <definition>KDTData&lt;size_t&gt; KDTree::nearest_index</definition>
+        <argsstring>(const Point &amp;pt, const std::set&lt; size_t &gt; &amp;excs=std::set&lt; size_t &gt;()) const</argsstring>
+        <name>nearest_index</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const std::set&lt; size_t &gt; &amp;</type>
+          <declname>excs</declname>
+          <defval>std::set&lt; size_t &gt;()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="139" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1a8218b8f66fbe8ede87cb8e19ba5703ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>pointIndexV</type>
+        <definition>pointIndexV KDTree::nearest_pointIndex</definition>
+        <argsstring>(const Point &amp;pt, const std::set&lt; size_t &gt; &amp;excs=std::set&lt; size_t &gt;()) const</argsstring>
+        <name>nearest_pointIndex</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const std::set&lt; size_t &gt; &amp;</type>
+          <declname>excs</declname>
+          <defval>std::set&lt; size_t &gt;()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="140" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1a5d867c795e11a3556a17e3bfd7d13655" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>pointIndexArr</type>
+        <definition>pointIndexArr KDTree::neighborhood</definition>
+        <argsstring>(const Point &amp;pt, const double &amp;rad) const</argsstring>
+        <name>neighborhood</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>rad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="151" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1aa75f3eebfb62f77c51165c263181aeb3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>pointVec</type>
+        <definition>pointVec KDTree::neighborhood_points</definition>
+        <argsstring>(const Point &amp;pt, const double &amp;rad) const</argsstring>
+        <name>neighborhood_points</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>rad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="155" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1af3b88642bd9635342fa1d499e277cb69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>indexArr</type>
+        <definition>indexArr KDTree::neighborhood_indices</definition>
+        <argsstring>(const Point &amp;pt, const double &amp;rad) const</argsstring>
+        <name>neighborhood_indices</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>rad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="159" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classKDTree_1a29db32a50ac0bf2d33baaa0c70feacd2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unordered_set&lt; size_t &gt;</type>
+        <definition>std::unordered_set&lt;size_t&gt; KDTree::neighborhood_indices_set</definition>
+        <argsstring>(const Point &amp;pt, const double &amp;rad) const</argsstring>
+        <name>neighborhood_indices_set</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>rad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="163" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/utils/KDTree.hpp" line="110" column="13" bodyfile="include/utils/KDTree.hpp" bodystart="110" bodyend="166"/>
+    <listofallmembers>
+      <member refid="classKDTree_1aa00b4936d6926d0d74e4b02c03089bc9" prot="public" virt="non-virtual"><scope>KDTree</scope><name>KDTree</name></member>
+      <member refid="classKDTree_1a8c77f467fd585b34ceaf1c3bac093c7d" prot="public" virt="non-virtual"><scope>KDTree</scope><name>KDTree</name></member>
+      <member refid="classKDTree_1aa145149461a0b515614ffe3a1bd3becf" prot="public" virt="non-virtual"><scope>KDTree</scope><name>KDTree</name></member>
+      <member refid="classKDTree_1abd75dd7e340553a01b6a1d9fdfee553e" prot="private" virt="non-virtual"><scope>KDTree</scope><name>leaf</name></member>
+      <member refid="classKDTree_1a6279b792b492b5e997668f5c737322fa" prot="private" virt="non-virtual"><scope>KDTree</scope><name>make_tree</name></member>
+      <member refid="classKDTree_1a597d549ccdc65f25273b2a3f8613bb18" prot="private" virt="non-virtual"><scope>KDTree</scope><name>nearest_</name></member>
+      <member refid="classKDTree_1a3ff62d37af3d110e73d2d01dd00ead2f" prot="private" virt="non-virtual"><scope>KDTree</scope><name>nearest_</name></member>
+      <member refid="classKDTree_1a7468038e80119be69f72e2d2ee228275" prot="public" virt="non-virtual"><scope>KDTree</scope><name>nearest_index</name></member>
+      <member refid="classKDTree_1a65b50be734e7b8905d0a7523a6c9b2bc" prot="public" virt="non-virtual"><scope>KDTree</scope><name>nearest_point</name></member>
+      <member refid="classKDTree_1a8218b8f66fbe8ede87cb8e19ba5703ec" prot="public" virt="non-virtual"><scope>KDTree</scope><name>nearest_pointIndex</name></member>
+      <member refid="classKDTree_1a5d867c795e11a3556a17e3bfd7d13655" prot="public" virt="non-virtual"><scope>KDTree</scope><name>neighborhood</name></member>
+      <member refid="classKDTree_1a0e22ef10cdd8064c9728d636021e49d5" prot="private" virt="non-virtual"><scope>KDTree</scope><name>neighborhood_</name></member>
+      <member refid="classKDTree_1af3b88642bd9635342fa1d499e277cb69" prot="public" virt="non-virtual"><scope>KDTree</scope><name>neighborhood_indices</name></member>
+      <member refid="classKDTree_1a29db32a50ac0bf2d33baaa0c70feacd2" prot="public" virt="non-virtual"><scope>KDTree</scope><name>neighborhood_indices_set</name></member>
+      <member refid="classKDTree_1aa75f3eebfb62f77c51165c263181aeb3" prot="public" virt="non-virtual"><scope>KDTree</scope><name>neighborhood_points</name></member>
+      <member refid="classKDTree_1abb228395f108c2ea534064eac6bbf6c7" prot="private" virt="non-virtual"><scope>KDTree</scope><name>root</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

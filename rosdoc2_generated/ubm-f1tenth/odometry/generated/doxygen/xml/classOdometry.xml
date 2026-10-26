@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classOdometry" kind="class" language="C++" prot="public">
+    <compoundname>Odometry</compoundname>
+    <includes local="no">odometry.hpp</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classOdometry_1a4da1d086f5b7baea6a23f784752521a8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structOdometryState" kindref="compound">OdometryState</ref></type>
+        <definition>static OdometryState Odometry::integrate_euler</definition>
+        <argsstring>(const OdometryState &amp;state, double dt)</argsstring>
+        <name>integrate_euler</name>
+        <param>
+          <type>const <ref refid="structOdometryState" kindref="compound">OdometryState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Updates the state using Euler integration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current state of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time step for integration. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Updated state after integration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="54" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometry_1a9ac51aaa706044e7984db41c0bb0ed1c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structOdometryState" kindref="compound">OdometryState</ref></type>
+        <definition>static OdometryState Odometry::integrate_rk2</definition>
+        <argsstring>(const OdometryState &amp;state, double dt)</argsstring>
+        <name>integrate_rk2</name>
+        <param>
+          <type>const <ref refid="structOdometryState" kindref="compound">OdometryState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Updates the state using 2nd order Runge-Kutta (RK2) integration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current state of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time step for integration. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Updated state after integration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="63" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometry_1a4fea366566dce79b90231fd50a1a52c5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structOdometryState" kindref="compound">OdometryState</ref></type>
+        <definition>static OdometryState Odometry::integrate_rk4</definition>
+        <argsstring>(const OdometryState &amp;state, double dt)</argsstring>
+        <name>integrate_rk4</name>
+        <param>
+          <type>const <ref refid="structOdometryState" kindref="compound">OdometryState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Updates the state using 4th order Runge-Kutta (RK4) integration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current state of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time step for integration. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Updated state after integration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="72" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classOdometry_1a2886b3386b16db7bc1521067778bb8e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structOdometryState" kindref="compound">OdometryState</ref></type>
+        <definition>static OdometryState Odometry::kalman_filter</definition>
+        <argsstring>(const OdometryState &amp;state, double dt)</argsstring>
+        <name>kalman_filter</name>
+        <param>
+          <type>const <ref refid="structOdometryState" kindref="compound">OdometryState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Estimates the state using a Kalman filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current state of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time step for prediction. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Estimated state after Kalman filtering. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="81" column="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides different odometry integration methods. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/odometry/odometry.hpp" line="45" column="15" bodyfile="include/odometry/odometry.hpp" bodystart="45" bodyend="82"/>
+    <listofallmembers>
+      <member refid="classOdometry_1a4da1d086f5b7baea6a23f784752521a8" prot="public" virt="non-virtual"><scope>Odometry</scope><name>integrate_euler</name></member>
+      <member refid="classOdometry_1a9ac51aaa706044e7984db41c0bb0ed1c" prot="public" virt="non-virtual"><scope>Odometry</scope><name>integrate_rk2</name></member>
+      <member refid="classOdometry_1a4fea366566dce79b90231fd50a1a52c5" prot="public" virt="non-virtual"><scope>Odometry</scope><name>integrate_rk4</name></member>
+      <member refid="classOdometry_1a2886b3386b16db7bc1521067778bb8e1" prot="public" virt="non-virtual"><scope>Odometry</scope><name>kalman_filter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

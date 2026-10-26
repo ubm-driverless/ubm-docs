@@ -1,0 +1,888 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classUkfNode" kind="class" language="C++" prot="public">
+    <compoundname>UkfNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classUkfNode_1a7420248bf8df76be9304d2fc95900245" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int UkfNode::watchdog_period_</definition>
+        <argsstring></argsstring>
+        <name>watchdog_period_</name>
+        <briefdescription>
+<para>Watchdog period in milliseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="56" column="9" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a2869611361d5855a447152fc521ccc9c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int UkfNode::gps_angle_initialization_points_</definition>
+        <argsstring></argsstring>
+        <name>gps_angle_initialization_points_</name>
+        <briefdescription>
+<para>Number of points for GPS angle initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="57" column="9" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a787f6118ce2536bbc23bb528ffba2c59" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UkfNode::encoder_rpm_threshold_</definition>
+        <argsstring></argsstring>
+        <name>encoder_rpm_threshold_</name>
+        <briefdescription>
+<para>Threshold for encoder RPM to determine if data is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="58" column="12" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a2e102b5dd587693a779c395a9c2f5ffc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UkfNode::gps_velocity_threshold_</definition>
+        <argsstring></argsstring>
+        <name>gps_velocity_threshold_</name>
+        <briefdescription>
+<para>Threshold for GPS velocity to determine if data is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="59" column="12" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a689dd016a9804641f5dde8f53bb0a2a4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UkfNode::gps_low_distance_threshold_</definition>
+        <argsstring></argsstring>
+        <name>gps_low_distance_threshold_</name>
+        <briefdescription>
+<para>Threshold for GPS distance to determine if data is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="60" column="12" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1afbbaa9206601f38b7123a2b1e29da834" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UkfNode::gps_high_distance_threshold_</definition>
+        <argsstring></argsstring>
+        <name>gps_high_distance_threshold_</name>
+        <briefdescription>
+<para>Threshold for GPS distance to determine if data is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="61" column="12" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a7b2a32f206152999dc23f26f70c831c9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UkfNode::sigma_k_</definition>
+        <argsstring></argsstring>
+        <name>sigma_k_</name>
+        <briefdescription>
+<para>Sigma for process noise. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="64" column="12" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a74632363a51a0b74c040407589ef606d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UkfNode::sigma_alpha_</definition>
+        <argsstring></argsstring>
+        <name>sigma_alpha_</name>
+        <briefdescription>
+<para>Sigma for alpha parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="65" column="12" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1ad62e65e813fc0e7a32398409b137d166" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UkfNode::sigma_beta_</definition>
+        <argsstring></argsstring>
+        <name>sigma_beta_</name>
+        <briefdescription>
+<para>Sigma for beta parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="66" column="12" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a7189b89b220cef72dec3798be432c6de" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; UkfNode::initial_state_</definition>
+        <argsstring></argsstring>
+        <name>initial_state_</name>
+        <briefdescription>
+<para>Initial state vector [x, y, heading, angle_offset]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="69" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1ae0dc88219fceb936e80515985a6f0ecd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; UkfNode::initial_state_covariance_diag_</definition>
+        <argsstring></argsstring>
+        <name>initial_state_covariance_diag_</name>
+        <briefdescription>
+<para>Initial state covariance matrix diagonal elements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="70" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a70f8bdd2eaad4cd4f0c95e8002236496" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; UkfNode::process_noise_covariance_diag_</definition>
+        <argsstring></argsstring>
+        <name>process_noise_covariance_diag_</name>
+        <briefdescription>
+<para>Process noise covariance matrix diagonal elements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="71" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1ae91d14d16841625f0b0711368fad59b7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; UkfNode::measurement_noise_covariance_diag_</definition>
+        <argsstring></argsstring>
+        <name>measurement_noise_covariance_diag_</name>
+        <briefdescription>
+<para>Measurement noise covariance matrix diagonal elements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="72" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a952339240ec0af1a7d00d744b0c0187a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string UkfNode::sensor_topic_</definition>
+        <argsstring></argsstring>
+        <name>sensor_topic_</name>
+        <briefdescription>
+<para>Topic for sensor subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="75" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1adb308913fab8e506c0b651ff31637b13" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string UkfNode::pose_visualization_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_visualization_topic_</name>
+        <briefdescription>
+<para>Topic for Pose visualization publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="76" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a5b15b686cc96ee1d3af8f9b9b7366562" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string UkfNode::pose_publisher_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_publisher_topic_</name>
+        <briefdescription>
+<para>Topic for Odometry publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="77" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a63d6167c210077ad563426c88cc1eb9a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string UkfNode::point_model_publisher_topic_</definition>
+        <argsstring></argsstring>
+        <name>point_model_publisher_topic_</name>
+        <briefdescription>
+<para>Topic for point model propagation visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="78" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a7e5c252b65831fa7288d453b99c7de1b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string UkfNode::status_topic_</definition>
+        <argsstring></argsstring>
+        <name>status_topic_</name>
+        <briefdescription>
+<para>Topic for status publisher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="79" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a931e0f0223933b01fa292b4e91474029" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string UkfNode::is_ready_service_name_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_name_</name>
+        <briefdescription>
+<para>Service name for readiness check. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="80" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a098ed67a1d199b16c2e4ad454886344e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::VCUData &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::VCUData&gt;::SharedPtr UkfNode::sensor_sub_</definition>
+        <argsstring></argsstring>
+        <name>sensor_sub_</name>
+        <briefdescription>
+<para>Subscriber for VCU message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="83" column="38" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a04f2c05efb1a8eb28dc9d721016d45ff" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PoseStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr UkfNode::pose_visualization_publisher_</definition>
+        <argsstring></argsstring>
+        <name>pose_visualization_publisher_</name>
+        <briefdescription>
+<para>Publisher for visualization on FoxGlove. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="84" column="35" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a17c060ef3f5ae01f90ebea958bf8ae2f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Odometry&gt;::SharedPtr UkfNode::pose_publisher_</definition>
+        <argsstring></argsstring>
+        <name>pose_publisher_</name>
+        <briefdescription>
+<para>Publisher for Odometry estimate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="85" column="35" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a495d87049fdde2f28166160da904d12a" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::Emergency &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::Emergency&gt;::SharedPtr UkfNode::status_emergency_publisher_</definition>
+        <argsstring></argsstring>
+        <name>status_emergency_publisher_</name>
+        <briefdescription>
+<para>Publisher for emergency status messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="86" column="35" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a28b14a8b4d87b1a1425ad64917c91350" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; ubm_interfaces::srv::IsReady &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;ubm_interfaces::srv::IsReady&gt;::SharedPtr UkfNode::is_ready_service_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_</name>
+        <briefdescription>
+<para>Service for readiness check. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="87" column="33" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a01d0c087a6c22d6c59c50eb280168a1a" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr UkfNode::watchdog_timer_</definition>
+        <argsstring></argsstring>
+        <name>watchdog_timer_</name>
+        <briefdescription>
+<para>Timer for monitoring. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="88" column="34" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a169670f5fb245279498a86f0bd238d6a" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classUnscentedKalmanFilter" kindref="compound">UnscentedKalmanFilter</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;UnscentedKalmanFilter&gt; UkfNode::ukf</definition>
+        <argsstring></argsstring>
+        <name>ukf</name>
+        <briefdescription>
+<para>Instance of the Unscented Kalman Filter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="91" column="21" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1ae1dec320a7be73909e0a471481ba9101" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool UkfNode::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Flag indicating if the filter has been initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="94" column="10" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a9f0fac6139e382021b6a742ff8538dc6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool UkfNode::data_received</definition>
+        <argsstring></argsstring>
+        <name>data_received</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Flag to indicate if data has been received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="95" column="10" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a06cb9c3ebfd2df93944fdac5af80ef9d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool UkfNode::gps_initialized</definition>
+        <argsstring></argsstring>
+        <name>gps_initialized</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Flag to indicate if GPS has been initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="96" column="10" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a02facef20b765d3900fb1347fcdac628" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool UkfNode::angle_offset_initialized</definition>
+        <argsstring></argsstring>
+        <name>angle_offset_initialized</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Flag to indicate if angle offset has been initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="97" column="10" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a9d6432409aa05082b1c2947c7aa741ac" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int UkfNode::iteration_count</definition>
+        <argsstring></argsstring>
+        <name>iteration_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Counter for the number of iterations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="98" column="9" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1ab0471f077588614be4e734c229eb853d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UkfNode::angle_offset</definition>
+        <argsstring></argsstring>
+        <name>angle_offset</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Angle offset between ENU coordinates and car&apos;s reference frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="99" column="12" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a0bf04608f56b4c234a4b31f5e8a380ef" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; arma::vec &gt;</type>
+        <definition>std::vector&lt;arma::vec&gt; UkfNode::gps_measurements</definition>
+        <argsstring></argsstring>
+        <name>gps_measurements</name>
+        <briefdescription>
+<para>Vector to store GPS measurements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="100" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a4f7fd778c5fe46914019c8d665a9bccc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; arma::vec &gt;</type>
+        <definition>std::vector&lt;arma::vec&gt; UkfNode::odometry_points</definition>
+        <argsstring></argsstring>
+        <name>odometry_points</name>
+        <briefdescription>
+<para>Vector to store odometry points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="101" column="17" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a6579dc028b44d5a3ef10a529549d3a25" prot="private" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec UkfNode::odometry_state</definition>
+        <argsstring></argsstring>
+        <name>odometry_state</name>
+        <briefdescription>
+<para>Current state of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="102" column="15" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a9a1e6ec46c8b5a919d5b7bc3214d5269" prot="private" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec UkfNode::gps_0_position</definition>
+        <argsstring></argsstring>
+        <name>gps_0_position</name>
+        <briefdescription>
+<para>Initial GPS position in ENU coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="103" column="15" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a29602011e4d0c86517f91112aabe277a" prot="private" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec UkfNode::gps_previous_position</definition>
+        <argsstring></argsstring>
+        <name>gps_previous_position</name>
+        <briefdescription>
+<para>Previous GPS position in ENU coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="104" column="15" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a0ec270bbaf56b46af789c03100f3e16d" prot="private" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec UkfNode::gps_xy_measurement</definition>
+        <argsstring></argsstring>
+        <name>gps_xy_measurement</name>
+        <briefdescription>
+<para>GPS measurement vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="105" column="15" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1af346cd792374aa6ec06b966e3c824682" prot="private" static="no" mutable="no">
+        <type>ubm_interfaces::msg::CustomHeader</type>
+        <definition>ubm_interfaces::msg::CustomHeader UkfNode::common_header</definition>
+        <argsstring></argsstring>
+        <name>common_header</name>
+        <briefdescription>
+<para>Common header for visualization messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="106" column="39" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1aedf852a1a6ef65115e4567b5bf80fbba" prot="private" static="no" mutable="no">
+        <type>nav_msgs::msg::Odometry</type>
+        <definition>nav_msgs::msg::Odometry UkfNode::car_odometry</definition>
+        <argsstring></argsstring>
+        <name>car_odometry</name>
+        <briefdescription>
+<para>Odometry message for the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="107" column="29" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1ac693f015f39cd3d8fcdfb96d0ab17339" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::PoseStamped</type>
+        <definition>geometry_msgs::msg::PoseStamped UkfNode::car_pose</definition>
+        <argsstring></argsstring>
+        <name>car_pose</name>
+        <briefdescription>
+<para>Pose message for the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="108" column="37" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUkfNode_1a5449846470051dcab024f3986ee34f5b" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point UkfNode::last_time</definition>
+        <argsstring></argsstring>
+        <name>last_time</name>
+        <briefdescription>
+<para>Last time the sensor data was received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="109" column="52" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classUkfNode_1a43b3a24def7a218a18e30f2f52b5b3d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UkfNode::UkfNode</definition>
+        <argsstring>()</argsstring>
+        <name>UkfNode</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classUkfNode" kindref="compound">UkfNode</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the node, sets up parameters, and creates subscribers and publishers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="51" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classUkfNode_1a21d4074ebb73371d0de6edd40df6a517" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UkfNode::initialize_ros_communication</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_ros_communication</name>
+        <briefdescription>
+<para>Set up ROS subscribers and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a subscription to the raw VCU data and publishers for Odometry and visualization </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="117" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classUkfNode_1a3bbd35c3c808820ad429f65f2fe23311" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UkfNode::get_sensor_data</definition>
+        <argsstring>(const ubm_interfaces::msg::VCUData::SharedPtr sensor_msg)</argsstring>
+        <name>get_sensor_data</name>
+        <param>
+          <type>const ubm_interfaces::msg::VCUData::SharedPtr</type>
+          <declname>sensor_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback function to process incoming VCU messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is triggered when a new VCU message is received. It processes the data so as to obtain a measurement that can be used by the EKF. The method also handles the initialization of the filter</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensor_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the received VCU message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="127" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classUkfNode_1a4b1a0fb093fdbfdd292d6cb481b7d97f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UkfNode::initialize_gps</definition>
+        <argsstring>(const ubm_interfaces::msg::VCUData::SharedPtr sensor_msg)</argsstring>
+        <name>initialize_gps</name>
+        <param>
+          <type>const ubm_interfaces::msg::VCUData::SharedPtr</type>
+          <declname>sensor_msg</declname>
+        </param>
+        <briefdescription>
+<para>Initialize GPS parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method initializes the GPS parameters using the data from the VCU message.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensor_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the received VCU message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="136" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classUkfNode_1a821371315b0a648b6be728309b2089ca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UkfNode::check_gps_validity</definition>
+        <argsstring>(const ubm_interfaces::msg::VCUData::SharedPtr sensor_msg, arma::vec &amp;gps_xy_measurement)</argsstring>
+        <name>check_gps_validity</name>
+        <param>
+          <type>const ubm_interfaces::msg::VCUData::SharedPtr</type>
+          <declname>sensor_msg</declname>
+        </param>
+        <param>
+          <type>arma::vec &amp;</type>
+          <declname>gps_xy_measurement</declname>
+        </param>
+        <briefdescription>
+<para>Check the validity of the GPS data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks if the GPS data from the VCU message is valid and extracts the relevant information.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensor_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the received VCU message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gps_xy_measurement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output vector for the extracted GPS measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the GPS data is valid, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="147" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classUkfNode_1a90cdc4be0a89dc233bd19f3b1326effa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UkfNode::compute_angle_offset</definition>
+        <argsstring>()</argsstring>
+        <name>compute_angle_offset</name>
+        <briefdescription>
+<para>Compute the angle offset between the ENU coordinates and the car&apos;s reference frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method computes the angle offset using the initial GPS position and the current GPS position. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="154" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classUkfNode_1a4e009f40a9caff600fc3491c7456ea2f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UkfNode::watchdog_callback</definition>
+        <argsstring>()</argsstring>
+        <name>watchdog_callback</name>
+        <briefdescription>
+<para>Watchdog callback to check if data has been received. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called periodically to check if data has been received. If no data is received for a certain period, it shuts down the node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="161" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classUkfNode_1a8da34d87d73d28c205c8227bcfca816d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UkfNode::handle_service</definition>
+        <argsstring>(const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt; request, std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt; response)</argsstring>
+        <name>handle_service</name>
+        <param>
+          <type>const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+<para>Handle the readiness service request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the service request to check if the node is ready.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The service request. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The service response. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf_node.hpp" line="171" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>UkfNode</label>
+        <link refid="classUkfNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>UkfNode</label>
+        <link refid="classUkfNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/ekf_cpp/ukf_node.hpp" line="44" column="34" bodyfile="include/ekf_cpp/ukf_node.hpp" bodystart="44" bodyend="174"/>
+    <listofallmembers>
+      <member refid="classUkfNode_1ab0471f077588614be4e734c229eb853d" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>angle_offset</name></member>
+      <member refid="classUkfNode_1a02facef20b765d3900fb1347fcdac628" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>angle_offset_initialized</name></member>
+      <member refid="classUkfNode_1aedf852a1a6ef65115e4567b5bf80fbba" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>car_odometry</name></member>
+      <member refid="classUkfNode_1ac693f015f39cd3d8fcdfb96d0ab17339" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>car_pose</name></member>
+      <member refid="classUkfNode_1a821371315b0a648b6be728309b2089ca" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>check_gps_validity</name></member>
+      <member refid="classUkfNode_1af346cd792374aa6ec06b966e3c824682" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>common_header</name></member>
+      <member refid="classUkfNode_1a90cdc4be0a89dc233bd19f3b1326effa" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>compute_angle_offset</name></member>
+      <member refid="classUkfNode_1a9f0fac6139e382021b6a742ff8538dc6" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>data_received</name></member>
+      <member refid="classUkfNode_1a787f6118ce2536bbc23bb528ffba2c59" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>encoder_rpm_threshold_</name></member>
+      <member refid="classUkfNode_1a3bbd35c3c808820ad429f65f2fe23311" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>get_sensor_data</name></member>
+      <member refid="classUkfNode_1a9a1e6ec46c8b5a919d5b7bc3214d5269" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>gps_0_position</name></member>
+      <member refid="classUkfNode_1a2869611361d5855a447152fc521ccc9c" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>gps_angle_initialization_points_</name></member>
+      <member refid="classUkfNode_1afbbaa9206601f38b7123a2b1e29da834" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>gps_high_distance_threshold_</name></member>
+      <member refid="classUkfNode_1a06cb9c3ebfd2df93944fdac5af80ef9d" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>gps_initialized</name></member>
+      <member refid="classUkfNode_1a689dd016a9804641f5dde8f53bb0a2a4" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>gps_low_distance_threshold_</name></member>
+      <member refid="classUkfNode_1a0bf04608f56b4c234a4b31f5e8a380ef" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>gps_measurements</name></member>
+      <member refid="classUkfNode_1a29602011e4d0c86517f91112aabe277a" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>gps_previous_position</name></member>
+      <member refid="classUkfNode_1a2e102b5dd587693a779c395a9c2f5ffc" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>gps_velocity_threshold_</name></member>
+      <member refid="classUkfNode_1a0ec270bbaf56b46af789c03100f3e16d" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>gps_xy_measurement</name></member>
+      <member refid="classUkfNode_1a8da34d87d73d28c205c8227bcfca816d" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>handle_service</name></member>
+      <member refid="classUkfNode_1a7189b89b220cef72dec3798be432c6de" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>initial_state_</name></member>
+      <member refid="classUkfNode_1ae0dc88219fceb936e80515985a6f0ecd" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>initial_state_covariance_diag_</name></member>
+      <member refid="classUkfNode_1a4b1a0fb093fdbfdd292d6cb481b7d97f" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>initialize_gps</name></member>
+      <member refid="classUkfNode_1a21d4074ebb73371d0de6edd40df6a517" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>initialize_ros_communication</name></member>
+      <member refid="classUkfNode_1ae1dec320a7be73909e0a471481ba9101" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>initialized</name></member>
+      <member refid="classUkfNode_1a28b14a8b4d87b1a1425ad64917c91350" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>is_ready_service_</name></member>
+      <member refid="classUkfNode_1a931e0f0223933b01fa292b4e91474029" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>is_ready_service_name_</name></member>
+      <member refid="classUkfNode_1a9d6432409aa05082b1c2947c7aa741ac" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>iteration_count</name></member>
+      <member refid="classUkfNode_1a5449846470051dcab024f3986ee34f5b" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>last_time</name></member>
+      <member refid="classUkfNode_1ae91d14d16841625f0b0711368fad59b7" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>measurement_noise_covariance_diag_</name></member>
+      <member refid="classUkfNode_1a4f7fd778c5fe46914019c8d665a9bccc" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>odometry_points</name></member>
+      <member refid="classUkfNode_1a6579dc028b44d5a3ef10a529549d3a25" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>odometry_state</name></member>
+      <member refid="classUkfNode_1a63d6167c210077ad563426c88cc1eb9a" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>point_model_publisher_topic_</name></member>
+      <member refid="classUkfNode_1a17c060ef3f5ae01f90ebea958bf8ae2f" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>pose_publisher_</name></member>
+      <member refid="classUkfNode_1a5b15b686cc96ee1d3af8f9b9b7366562" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>pose_publisher_topic_</name></member>
+      <member refid="classUkfNode_1a04f2c05efb1a8eb28dc9d721016d45ff" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>pose_visualization_publisher_</name></member>
+      <member refid="classUkfNode_1adb308913fab8e506c0b651ff31637b13" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>pose_visualization_topic_</name></member>
+      <member refid="classUkfNode_1a70f8bdd2eaad4cd4f0c95e8002236496" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>process_noise_covariance_diag_</name></member>
+      <member refid="classUkfNode_1a098ed67a1d199b16c2e4ad454886344e" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>sensor_sub_</name></member>
+      <member refid="classUkfNode_1a952339240ec0af1a7d00d744b0c0187a" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>sensor_topic_</name></member>
+      <member refid="classUkfNode_1a74632363a51a0b74c040407589ef606d" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>sigma_alpha_</name></member>
+      <member refid="classUkfNode_1ad62e65e813fc0e7a32398409b137d166" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>sigma_beta_</name></member>
+      <member refid="classUkfNode_1a7b2a32f206152999dc23f26f70c831c9" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>sigma_k_</name></member>
+      <member refid="classUkfNode_1a495d87049fdde2f28166160da904d12a" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>status_emergency_publisher_</name></member>
+      <member refid="classUkfNode_1a7e5c252b65831fa7288d453b99c7de1b" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>status_topic_</name></member>
+      <member refid="classUkfNode_1a169670f5fb245279498a86f0bd238d6a" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>ukf</name></member>
+      <member refid="classUkfNode_1a43b3a24def7a218a18e30f2f52b5b3d5" prot="public" virt="non-virtual"><scope>UkfNode</scope><name>UkfNode</name></member>
+      <member refid="classUkfNode_1a4e009f40a9caff600fc3491c7456ea2f" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>watchdog_callback</name></member>
+      <member refid="classUkfNode_1a7420248bf8df76be9304d2fc95900245" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>watchdog_period_</name></member>
+      <member refid="classUkfNode_1a01d0c087a6c22d6c59c50eb280168a1a" prot="private" virt="non-virtual"><scope>UkfNode</scope><name>watchdog_timer_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

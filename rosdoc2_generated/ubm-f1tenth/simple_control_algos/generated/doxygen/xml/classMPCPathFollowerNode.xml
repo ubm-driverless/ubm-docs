@@ -1,0 +1,1715 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classMPCPathFollowerNode" kind="class" language="C++" prot="public">
+    <compoundname>MPCPathFollowerNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes local="no">mpc_path_follower_node.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a280bfff46615fab399053ed34286e5cc" prot="private" static="no" mutable="no">
+        <type>const std::tuple&lt; double, double, double, double &gt;</type>
+        <definition>const std::tuple&lt;double, double, double, double&gt; MPCPathFollowerNode::opp_not_found_tuple_</definition>
+        <argsstring></argsstring>
+        <name>opp_not_found_tuple_</name>
+        <initializer>= std::tuple&lt;double, double, double, double&gt;({-1000.0, -1000.0, 0.0, 0.0})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="69" column="22" bodyfile="include/mpc_path_follower_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1afb1a27b6a512574ae73facdf73852324" prot="private" static="no" mutable="no">
+        <type>rclcpp::Clock</type>
+        <definition>rclcpp::Clock MPCPathFollowerNode::default_clock_</definition>
+        <argsstring></argsstring>
+        <name>default_clock_</name>
+        <briefdescription>
+<para>Default clock for throttled log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="71" column="19" bodyfile="include/mpc_path_follower_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a271c035b213f60e6dcaf4d93d9b2b00f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCPathFollowerNode::send_drive_msg_</definition>
+        <argsstring></argsstring>
+        <name>send_drive_msg_</name>
+        <briefdescription>
+<para>Whether to publish drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="72" column="10" bodyfile="include/mpc_path_follower_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ad0df9e7929580f5f7aa60a84e5ac970e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCPathFollowerNode::visualize_markers_</definition>
+        <argsstring></argsstring>
+        <name>visualize_markers_</name>
+        <briefdescription>
+<para>Whether to publish visualization markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="73" column="10" bodyfile="include/mpc_path_follower_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a694ea18ca7551d27f444c3109bb05f04" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCPathFollowerNode::has_opp_</definition>
+        <argsstring></argsstring>
+        <name>has_opp_</name>
+        <briefdescription>
+<para>Whether to consider opponent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="74" column="10" bodyfile="include/mpc_path_follower_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a4fbc19472570a2c7b019ef057409f127" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCPathFollowerNode::use_gaussian_</definition>
+        <argsstring></argsstring>
+        <name>use_gaussian_</name>
+        <briefdescription>
+<para>Whether to use gaussian distance or quadratic distance from opponent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="75" column="10" bodyfile="include/mpc_path_follower_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ac1169a7d09e92d32892ffc727a6b1d97" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPCPathFollowerNode::disable_print_timeout_</definition>
+        <argsstring></argsstring>
+        <name>disable_print_timeout_</name>
+        <briefdescription>
+<para>Timeout for disabling log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="76" column="9" bodyfile="include/mpc_path_follower_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ad7ac524d949a643a96f3ea64dcca9c2c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCPathFollowerNode::print_solve_time_</definition>
+        <argsstring></argsstring>
+        <name>print_solve_time_</name>
+        <briefdescription>
+<para>Whether to print MPC solve time and Hz. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="77" column="10" bodyfile="include/mpc_path_follower_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a3118d803883fb1bd32dd13f9f2122bab" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPCPathFollowerNode::horizon_</definition>
+        <argsstring></argsstring>
+        <name>horizon_</name>
+        <briefdescription>
+<para>MPC prediction horizon (number of steps). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="78" column="9" bodyfile="include/mpc_path_follower_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ab4a353760cc96294826e8c17ef491f95" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPCPathFollowerNode::mpc_step_rl_steps_</definition>
+        <argsstring></argsstring>
+        <name>mpc_step_rl_steps_</name>
+        <briefdescription>
+<para>MPC step size expressed as a multiple of the raceline spatial step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="79" column="9" bodyfile="include/mpc_path_follower_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a0349e37830cdd0eef9a6b0c21f3fe3bc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPCPathFollowerNode::look_ahead_index_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_index_</name>
+        <briefdescription>
+<para>Race line points from the car position (nearest index) to the look ahead point default is 30. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="80" column="9" bodyfile="include/mpc_path_follower_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a372c3960c674489b70d19c6874375a35" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::controls_index_</definition>
+        <argsstring></argsstring>
+        <name>controls_index_</name>
+        <briefdescription>
+<para>Index of the result controls array to use [1,10], 1 is the default and recommended, if the algorithm runs slowly, consider increasing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="81" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1aa7f7d56b4ddc1b60990871dc64a7dc44" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::min_speed_</definition>
+        <argsstring></argsstring>
+        <name>min_speed_</name>
+        <briefdescription>
+<para>p_enhanced speed that limits steering action </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="82" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ac7a2757850acb324d4a26d60b5ab1898" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::look_ahead_gain_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_gain_</name>
+        <briefdescription>
+<para>Gain for calculating look-ahead distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="83" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1acb70eb328487a7aeba5f56bfd0acf43c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::min_look_ahead_dist_</definition>
+        <argsstring></argsstring>
+        <name>min_look_ahead_dist_</name>
+        <briefdescription>
+<para>Minimum look-ahead distance (meters). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="84" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a92f1a0ac2b6a3bc366328b632807ba83" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::max_steer_</definition>
+        <argsstring></argsstring>
+        <name>max_steer_</name>
+        <briefdescription>
+<para>Maximum steering angle (radians). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="85" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a8aa23a0918c468d401151e62eca2d31d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::scale_speed_</definition>
+        <argsstring></argsstring>
+        <name>scale_speed_</name>
+        <briefdescription>
+<para>scaling factor to target speed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="86" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a9dda4ffbc8a1c285cbc51ff4c03bdbfc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::max_lap_statistics_</definition>
+        <argsstring></argsstring>
+        <name>max_lap_statistics_</name>
+        <briefdescription>
+<para>maximum number of lap statistics to store. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="87" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a090a7316f76b2c2e8b0da1971ec36c96" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::starting_strip_</definition>
+        <argsstring></argsstring>
+        <name>starting_strip_</name>
+        <briefdescription>
+<para>Starting strip for the lap performance tracker in percentage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="88" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a3f63e4ff37f27cb4fcff96d62a3adcdf" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::last_steering_angle_</definition>
+        <argsstring></argsstring>
+        <name>last_steering_angle_</name>
+        <briefdescription>
+<para>Store last steering control as first steering angle for new computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="89" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ab81dad42acc95d5ca8e69c9cabc64f05" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::distance_weight_</definition>
+        <argsstring></argsstring>
+        <name>distance_weight_</name>
+        <briefdescription>
+<para>Weight for distance from target point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="90" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a777e2530bbe46c909dfb3a252b67a3dd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::race_line_d_weight_</definition>
+        <argsstring></argsstring>
+        <name>race_line_d_weight_</name>
+        <briefdescription>
+<para>Weight for lateral displacement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="91" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a583616d4f66d90e72ec460f6520837b5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::border_weight_</definition>
+        <argsstring></argsstring>
+        <name>border_weight_</name>
+        <briefdescription>
+<para>Weight for distance from borders. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="92" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1af75237b1233f6e09a237815168db9c1b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::steering_smoothness_weight_</definition>
+        <argsstring></argsstring>
+        <name>steering_smoothness_weight_</name>
+        <briefdescription>
+<para>Weight for steering smoothness. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="93" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1aee65c9408086406996b6be1115e21a8f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::speed_smoothness_weight_</definition>
+        <argsstring></argsstring>
+        <name>speed_smoothness_weight_</name>
+        <briefdescription>
+<para>Weight for speed smoothness. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="94" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1aebab264f3ba977c77a073df61b88e936" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::low_speed_weight_</definition>
+        <argsstring></argsstring>
+        <name>low_speed_weight_</name>
+        <briefdescription>
+<para>Weight for low speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="95" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a6e6d6e514ee46b5aa1f4a490b725a82b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::high_theta_dot_weight_</definition>
+        <argsstring></argsstring>
+        <name>high_theta_dot_weight_</name>
+        <briefdescription>
+<para>Weight for high theta dot (car heading change) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="96" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a7e60ab0586fac5ef25c7b6c7364e17e9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::opponent_distance_weight_</definition>
+        <argsstring></argsstring>
+        <name>opponent_distance_weight_</name>
+        <briefdescription>
+<para>Weight for distance from opponent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="97" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ac0d75a422453a5ceef3f31d7c71f93e5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::total_time_weight_</definition>
+        <argsstring></argsstring>
+        <name>total_time_weight_</name>
+        <briefdescription>
+<para>Weight for total time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="98" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a4c70f72109211cc8440fee35620f94d6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::opponent_radius_</definition>
+        <argsstring></argsstring>
+        <name>opponent_radius_</name>
+        <briefdescription>
+<para>Opponent radius setting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="99" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a6a834beed0c37f6523366c0a4df98e45" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::walls_cost_weight_</definition>
+        <argsstring></argsstring>
+        <name>walls_cost_weight_</name>
+        <briefdescription>
+<para>Wall cost weight. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="100" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1afea7245586ab2409fb7208a87f9ce79a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::centripetal_weight_</definition>
+        <argsstring></argsstring>
+        <name>centripetal_weight_</name>
+        <briefdescription>
+<para>Weight for centripetal cost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="101" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a8b008075735c55f15b6bc6ef872a2da9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::go_fast_weight_</definition>
+        <argsstring></argsstring>
+        <name>go_fast_weight_</name>
+        <briefdescription>
+<para>Weight for speed tracking cost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="102" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a142d9134db80c8c8ef027b51fe46ef82" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPCPathFollowerNode::min_speed_gain_</definition>
+        <argsstring></argsstring>
+        <name>min_speed_gain_</name>
+        <briefdescription>
+<para>Min speed gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="103" column="12" bodyfile="include/mpc_path_follower_node.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1add1e401e5bd06e1817d4df80789607f1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPCPathFollowerNode::max_speed_gain_</definition>
+        <argsstring></argsstring>
+        <name>max_speed_gain_</name>
+        <briefdescription>
+<para>Max speed gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="104" column="12" bodyfile="include/mpc_path_follower_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a9e94200db63fdbcdaf895f5be0c97bdc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MPCPathFollowerNode::car_moved_distance_</definition>
+        <argsstring></argsstring>
+        <name>car_moved_distance_</name>
+        <briefdescription>
+<para>[m] Max plausible distance from last position (if bigger than this, the car must have been manually moved); </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="105" column="12" bodyfile="include/mpc_path_follower_node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a8b0cf1d547472267669082e78ebf0866" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::percentage_of_mpc_prediction_to_follow_</definition>
+        <argsstring></argsstring>
+        <name>percentage_of_mpc_prediction_to_follow_</name>
+        <briefdescription>
+<para>[0,100] Percentage of the MPC horizon that must be surpassed before re-using the previous solution as warm start </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="106" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ae62e2c6e63c489849e26f218c72b0fd1" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::look_ahead_point_topic_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the look-ahead point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="108" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a34d570688bbbf9da5b71dca89628e16a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::car_nearest_point_topic_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the nearest point on the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="109" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a88944d3618a760e5349c94db58f36c8b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::status_topic_</definition>
+        <argsstring></argsstring>
+        <name>status_topic_</name>
+        <briefdescription>
+<para>Topic for control status messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="110" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a437eab8593c04a484d8d2c7ad79185b8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::odom_topic_</definition>
+        <argsstring></argsstring>
+        <name>odom_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to odometry messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="111" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1af9fe85efd0d50a33a766a948cda915e0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::pose_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to pose messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="112" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a5a37dac31453a5a292f17ef2c8fcae77" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::drive_topic_</definition>
+        <argsstring></argsstring>
+        <name>drive_topic_</name>
+        <briefdescription>
+<para>Topic for publishing drive commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="113" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a2b580dfebaf2b763a83ecaaa16870148" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::reset_lap_statistics_topic_</definition>
+        <argsstring></argsstring>
+        <name>reset_lap_statistics_topic_</name>
+        <briefdescription>
+<para>Topic for resetting lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="114" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ab9f16d1b86273b63bdc1f5d2bd792895" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::set_max_speed_topic_</definition>
+        <argsstring></argsstring>
+        <name>set_max_speed_topic_</name>
+        <briefdescription>
+<para>Topic for setting max speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="115" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a817ca0c76307de37185a3c5bcb3b0b02" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::opponent_detection_topic_</definition>
+        <argsstring></argsstring>
+        <name>opponent_detection_topic_</name>
+        <briefdescription>
+<para>Topic for setting max speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="116" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ae4c5d2fa992de3b3092c96e1cb5c23c4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::raceline_file_</definition>
+        <argsstring></argsstring>
+        <name>raceline_file_</name>
+        <briefdescription>
+<para>File containing the raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="117" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a532aba834f3172e06340ad09f2039c3f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCPathFollowerNode::opponent_detected_</definition>
+        <argsstring></argsstring>
+        <name>opponent_detected_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="119" column="10" bodyfile="include/mpc_path_follower_node.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a42388f10259cb54036fd55d095695a0f" prot="private" static="no" mutable="no">
+        <type>std::tuple&lt; double, double, double, double &gt;</type>
+        <definition>std::tuple&lt;double, double, double, double&gt; MPCPathFollowerNode::last_opponent_position_speed_</definition>
+        <argsstring></argsstring>
+        <name>last_opponent_position_speed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="120" column="16" bodyfile="include/mpc_path_follower_node.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a05f0baf6b288cb2fc69e7c8f1ce698dc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCPathFollowerNode::path_obtained</definition>
+        <argsstring></argsstring>
+        <name>path_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the raceline path has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="123" column="10" bodyfile="include/mpc_path_follower_node.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a1623f7f299adee9bad27cfebd73752e5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCPathFollowerNode::speed_obtained</definition>
+        <argsstring></argsstring>
+        <name>speed_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current speed has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="124" column="10" bodyfile="include/mpc_path_follower_node.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ad7d06e0fc23fc58568a1f847b676f937" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCPathFollowerNode::pose_obtained</definition>
+        <argsstring></argsstring>
+        <name>pose_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current pose has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="125" column="10" bodyfile="include/mpc_path_follower_node.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1aefb26524ed088f9b89a78d5d39250a3e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MPCPathFollowerNode::allow_processing</definition>
+        <argsstring></argsstring>
+        <name>allow_processing</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the pure pursuit algorithm is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="126" column="10" bodyfile="include/mpc_path_follower_node.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1aa901667f5718c06a7d79a8ed4ed3938b" prot="private" static="no" mutable="no">
+        <type><ref refid="classRaceline" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/raceline_utils/raceline_utils.tag">Raceline</ref></type>
+        <definition>Raceline MPCPathFollowerNode::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+<para>Object representing the raceline path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="129" column="14" bodyfile="include/mpc_path_follower_node.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a4b96fb4a957008390c640998a558d266" prot="private" static="no" mutable="no">
+        <type><ref refid="classLapPerformance" kindref="compound">LapPerformance</ref></type>
+        <definition>LapPerformance MPCPathFollowerNode::lap_performance</definition>
+        <argsstring></argsstring>
+        <name>lap_performance</name>
+        <briefdescription>
+<para>Object for measuring lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="130" column="20" bodyfile="include/mpc_path_follower_node.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a4327d43198af44020ddff4f11307f866" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; MPCPathFollowerNode::rl_indexes</definition>
+        <argsstring></argsstring>
+        <name>rl_indexes</name>
+        <briefdescription>
+<para>Map from rl indexes and horizon ones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="131" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a5b40d00957c319b560a441db1e3cdd8e" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose MPCPathFollowerNode::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+<para>Current pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="134" column="30" bodyfile="include/mpc_path_follower_node.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1aa2470be3b512d4ae97fd409329a708c2" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose MPCPathFollowerNode::odom_pose</definition>
+        <argsstring></argsstring>
+        <name>odom_pose</name>
+        <briefdescription>
+<para>Current odometry pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="135" column="30" bodyfile="include/mpc_path_follower_node.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a7bc1ef2f877e15291f9c440c5535c066" prot="private" static="no" mutable="no">
+        <type>std_msgs::msg::Header</type>
+        <definition>std_msgs::msg::Header MPCPathFollowerNode::common_header</definition>
+        <argsstring></argsstring>
+        <name>common_header</name>
+        <briefdescription>
+<para>Common header for visualization messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="136" column="27" bodyfile="include/mpc_path_follower_node.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ae9b6fabd4a9e71b99e3e5be40acfa21b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPCPathFollowerNode::current_speed</definition>
+        <argsstring></argsstring>
+        <name>current_speed</name>
+        <briefdescription>
+<para>Current speed of the vehicle (m/s). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="137" column="11" bodyfile="include/mpc_path_follower_node.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a601e6c94afa8e5f027e2c12ab628b320" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; CasadiMapUtils &gt;</type>
+        <definition>std::shared_ptr&lt;CasadiMapUtils&gt; MPCPathFollowerNode::CMU</definition>
+        <argsstring></argsstring>
+        <name>CMU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="140" column="21" bodyfile="include/mpc_path_follower_node.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a80fed554a7ab9c104bcb62a997be7112" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classMPCEuclidianDistance" kindref="compound">MPCEuclidianDistance</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;MPCEuclidianDistance&gt; MPCPathFollowerNode::mpc_controller</definition>
+        <argsstring></argsstring>
+        <name>mpc_controller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="141" column="21" bodyfile="include/mpc_path_follower_node.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a5ff4a49dbd6b761aba34e7fc6608af32" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;double, double&gt; &gt; MPCPathFollowerNode::controls</definition>
+        <argsstring></argsstring>
+        <name>controls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="142" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1acbab3db9e0d2e1cb02c0a1fb9541f1a4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::tuple&lt; double, double, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::tuple&lt;double, double, double&gt; &gt; MPCPathFollowerNode::states</definition>
+        <argsstring></argsstring>
+        <name>states</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="143" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a56d7639aa346b9ff89286babff42d3b0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;double, double&gt; &gt; MPCPathFollowerNode::initialization_x_y_states</definition>
+        <argsstring></argsstring>
+        <name>initialization_x_y_states</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="144" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a3734f3da461693677c89da501a0189c7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;double, double&gt; &gt; MPCPathFollowerNode::future_opp_positions</definition>
+        <argsstring></argsstring>
+        <name>future_opp_positions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="145" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a3ce4d819d0a82aa66eb089abe2400446" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr MPCPathFollowerNode::odom_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>odom_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for odometry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="149" column="38" bodyfile="include/mpc_path_follower_node.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ab57b7537b829d303eb95c488f4d35d84" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr MPCPathFollowerNode::pose_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>pose_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="150" column="38" bodyfile="include/mpc_path_follower_node.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ab6102085222686179bb0b3de01da36f0" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr MPCPathFollowerNode::status_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>status_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for pure pursuit status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="151" column="38" bodyfile="include/mpc_path_follower_node.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ac098f56bbb971491fdeadef850280611" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Bool&gt;::SharedPtr MPCPathFollowerNode::reset_lap_statistics_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>reset_lap_statistics_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for resetting lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="152" column="38" bodyfile="include/mpc_path_follower_node.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a0c831af2f8bf6efa7146f86a3cd36994" prot="private" static="no" mutable="no">
+        <type>OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>OnSetParametersCallbackHandle::SharedPtr MPCPathFollowerNode::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+<para>Handle for dynamic parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="153" column="46" bodyfile="include/mpc_path_follower_node.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a18d6b8cf1cb249691085d4b8094bdb7a" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; std_msgs::msg::Float32 &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;std_msgs::msg::Float32&gt;::SharedPtr MPCPathFollowerNode::set_max_speed_</definition>
+        <argsstring></argsstring>
+        <name>set_max_speed_</name>
+        <briefdescription>
+<para>Subscriber for Max Speed Updates &gt; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="154" column="38" bodyfile="include/mpc_path_follower_node.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a9db66a11e2c3f068a0e3281905c41e9b" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; f1tenth_msgs::msg::PositionSpeed &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;f1tenth_msgs::msg::PositionSpeed&gt;::SharedPtr MPCPathFollowerNode::opponent_detection_sub_</definition>
+        <argsstring></argsstring>
+        <name>opponent_detection_sub_</name>
+        <briefdescription>
+<para>Subscriber for Opponent Detection &gt; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="155" column="38" bodyfile="include/mpc_path_follower_node.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a03246753142fecca7ad7bfffa2ecc0db" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ackermann_msgs::msg::AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ackermann_msgs::msg::AckermannDriveStamped&gt;::SharedPtr MPCPathFollowerNode::drive_publisher_</definition>
+        <argsstring></argsstring>
+        <name>drive_publisher_</name>
+        <briefdescription>
+<para>Publisher for control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="158" column="35" bodyfile="include/mpc_path_follower_node.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1aa730843c54f6765b128f79eab6379b8e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr MPCPathFollowerNode::look_ahead_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for look-ahead point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="159" column="35" bodyfile="include/mpc_path_follower_node.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ad2ae97dd32fea85f898ab5461b50beea" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PointStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr MPCPathFollowerNode::car_nearest_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for nearest point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="160" column="35" bodyfile="include/mpc_path_follower_node.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a4f258699a415707e6d467da0cfa238a3" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Path &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Path&gt;::SharedPtr MPCPathFollowerNode::raceline_publisher_</definition>
+        <argsstring></argsstring>
+        <name>raceline_publisher_</name>
+        <briefdescription>
+<para>Publisher for the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="161" column="35" bodyfile="include/mpc_path_follower_node.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ad88a523777d0c0e7375ccb351c1b1ccc" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; f1tenth_msgs::msg::LapPerformanceStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;f1tenth_msgs::msg::LapPerformanceStamped&gt;::SharedPtr MPCPathFollowerNode::lap_performance_publisher_</definition>
+        <argsstring></argsstring>
+        <name>lap_performance_publisher_</name>
+        <briefdescription>
+<para>Publisher for lap performance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="162" column="35" bodyfile="include/mpc_path_follower_node.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a905e2e67e04fc1b5473530c90f1a46c9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr MPCPathFollowerNode::marker_pub_</definition>
+        <argsstring></argsstring>
+        <name>marker_pub_</name>
+        <briefdescription>
+<para>Publisher for visualization markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="163" column="35" bodyfile="include/mpc_path_follower_node.hpp" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1ae212d674fc3b48ecfdafb726d81c9c1f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; std_msgs::msg::Float64MultiArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;std_msgs::msg::Float64MultiArray&gt;::SharedPtr MPCPathFollowerNode::sd_publisher_</definition>
+        <argsstring></argsstring>
+        <name>sd_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="164" column="35" bodyfile="include/mpc_path_follower_node.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1aa3e9d0b5d473758101a315b2ee20dba0" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; std_msgs::msg::Float32 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;std_msgs::msg::Float32&gt;::SharedPtr MPCPathFollowerNode::lap_progress_publisher_</definition>
+        <argsstring></argsstring>
+        <name>lap_progress_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="165" column="35" bodyfile="include/mpc_path_follower_node.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a39513b4369441943522d27fc95cf1c6b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::reset_color</definition>
+        <argsstring></argsstring>
+        <name>reset_color</name>
+        <initializer>= &quot;\033[0m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="168" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a4b25677c3fbd8761265fb040b523e24d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::bold_red_underline</definition>
+        <argsstring></argsstring>
+        <name>bold_red_underline</name>
+        <initializer>= &quot;\033[1;4;31m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="169" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a99de345de4ae7f01e934de44c6edbe37" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MPCPathFollowerNode::bold_green_underline</definition>
+        <argsstring></argsstring>
+        <name>bold_green_underline</name>
+        <initializer>= &quot;\033[1;4;32m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="170" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a5326b4e1ba1152e9396a3619fafa05b6" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr MPCPathFollowerNode::marker_timer_</definition>
+        <argsstring></argsstring>
+        <name>marker_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="173" column="34" bodyfile="include/mpc_path_follower_node.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a0994cfbfab066920bfd7ca7cd3301d4b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::tuple&lt; double, double, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::tuple&lt;double, double, double&gt; &gt; MPCPathFollowerNode::marker_future_positions</definition>
+        <argsstring></argsstring>
+        <name>marker_future_positions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="174" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a8ab9fe0276e242b664084c12b7784dd4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;double, double&gt; &gt; MPCPathFollowerNode::marker_initilization_positions</definition>
+        <argsstring></argsstring>
+        <name>marker_initilization_positions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="175" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMPCPathFollowerNode_1a8357a0f82a3fd0f8087ffcf174f319fc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;double, double&gt; &gt; MPCPathFollowerNode::marker_target_points</definition>
+        <argsstring></argsstring>
+        <name>marker_target_points</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="176" column="17" bodyfile="include/mpc_path_follower_node.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMPCPathFollowerNode_1afda879857d6fdb9ff8358a5674e0dedb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MPCPathFollowerNode::MPCPathFollowerNode</definition>
+        <argsstring>()</argsstring>
+        <name>MPCPathFollowerNode</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classMPCPathFollowerNode" kindref="compound">MPCPathFollowerNode</ref>. Initializes parameters, subscriptions, and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="65" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a4e2056431dfe3f4890878fe5409dca7b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult MPCPathFollowerNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Handles parameter updates dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classVector" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/delaunay_path_planning/delaunay_path_planning.tag">Vector</ref> of updated parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of parameter update operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="185" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1af566bc49437041e47068d3b1d58b61be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::status_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr status_msg)</argsstring>
+        <name>status_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>status_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle status updates for enabling/disabling pure pursuit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether pure pursuit is enabled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="191" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a988ff8da561104afa130694b2472b240" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::odom_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr odom_msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>odom_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle odometry updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odometry message containing the current speed and pose. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="197" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a514411ecfd7ab075ba0b25a4c6e3d8ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::pose_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr pose_msg)</argsstring>
+        <name>pose_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>pose_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle pose updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odometry message containing the current pose of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="203" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1ad363b660853e05b14b9231aca0c29c65" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::reset_lap_statistics_callback</definition>
+        <argsstring>(const std_msgs::msg::Bool::SharedPtr reset_msg)</argsstring>
+        <name>reset_lap_statistics_callback</name>
+        <param>
+          <type>const std_msgs::msg::Bool::SharedPtr</type>
+          <declname>reset_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to reset lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether to reset lap statistics. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="209" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a045da42b36f74cafe2a09f1c6b172179" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::set_max_speed_callback</definition>
+        <argsstring>(const std_msgs::msg::Float32::SharedPtr new_max_speed)</argsstring>
+        <name>set_max_speed_callback</name>
+        <param>
+          <type>const std_msgs::msg::Float32::SharedPtr</type>
+          <declname>new_max_speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="211" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a16268ee38dc75f2858bbccf3fc6bfaad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::control_loop</definition>
+        <argsstring>()</argsstring>
+        <name>control_loop</name>
+        <briefdescription>
+<para>Main control loop for the MPC path follower algorithm. Calculates target steering and speed, and sends control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="217" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a3989d7ee8093491bc0ac26d16510a92c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>visualization_msgs::msg::Marker</type>
+        <definition>visualization_msgs::msg::Marker MPCPathFollowerNode::create_sphere_marker</definition>
+        <argsstring>(double x, double y, int id, double r, double g, double b)</argsstring>
+        <name>create_sphere_marker</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Creates a visualization marker for a sphere. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="222" column="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1af76d48eac4556538e6c602932873448c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::deleteAllMarkers</definition>
+        <argsstring>()</argsstring>
+        <name>deleteAllMarkers</name>
+        <briefdescription>
+<para>Deletes all markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="227" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a23ec28f8d3d20df8faf9bee0a51705b6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::marker_timer</definition>
+        <argsstring>()</argsstring>
+        <name>marker_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="229" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a87c491c94eb1cc950bc490e03ddd2ffc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::opponent_detection_callback</definition>
+        <argsstring>(const f1tenth_msgs::msg::PositionSpeed::SharedPtr detected_pos_)</argsstring>
+        <name>opponent_detection_callback</name>
+        <param>
+          <type>const f1tenth_msgs::msg::PositionSpeed::SharedPtr</type>
+          <declname>detected_pos_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="231" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1acbe9a3c3c2c2d8145b8a855b4c4e1d39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::compute_casadi_iteration</definition>
+        <argsstring>(int nearest_index, bool to_force)</argsstring>
+        <name>compute_casadi_iteration</name>
+        <param>
+          <type>int</type>
+          <declname>nearest_index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>to_force</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="233" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a53d821b2bf8a12da226da358aadedf34" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; MPCPathFollowerNode::compute_closer_state_i</definition>
+        <argsstring>(float x, float y)</argsstring>
+        <name>compute_closer_state_i</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="235" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a1c1936d4ea330f772d2297e4f5f08eb3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ackermann_msgs::msg::AckermannDrive</type>
+        <definition>ackermann_msgs::msg::AckermannDrive MPCPathFollowerNode::interpolate_controls</definition>
+        <argsstring>(float closer_state_i)</argsstring>
+        <name>interpolate_controls</name>
+        <param>
+          <type>float</type>
+          <declname>closer_state_i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="237" column="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classMPCPathFollowerNode_1a4bb3cec469a6167f01dcfab40f86664b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MPCPathFollowerNode::translate_state_as_initialization</definition>
+        <argsstring>(int starting_index)</argsstring>
+        <name>translate_state_as_initialization</name>
+        <param>
+          <type>int</type>
+          <declname>starting_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpc_path_follower_node.hpp" line="239" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS2 node that implements MPC for controlling a vehicle along a raceline. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MPCPathFollowerNode</label>
+        <link refid="classMPCPathFollowerNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MPCPathFollowerNode</label>
+        <link refid="classMPCPathFollowerNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/mpc_path_follower_node.hpp" line="59" column="1" bodyfile="include/mpc_path_follower_node.hpp" bodystart="58" bodyend="241"/>
+    <listofallmembers>
+      <member refid="classMPCPathFollowerNode_1aefb26524ed088f9b89a78d5d39250a3e" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>allow_processing</name></member>
+      <member refid="classMPCPathFollowerNode_1a99de345de4ae7f01e934de44c6edbe37" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>bold_green_underline</name></member>
+      <member refid="classMPCPathFollowerNode_1a4b25677c3fbd8761265fb040b523e24d" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>bold_red_underline</name></member>
+      <member refid="classMPCPathFollowerNode_1a583616d4f66d90e72ec460f6520837b5" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>border_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1a9e94200db63fdbcdaf895f5be0c97bdc" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>car_moved_distance_</name></member>
+      <member refid="classMPCPathFollowerNode_1ad2ae97dd32fea85f898ab5461b50beea" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>car_nearest_point_publisher_</name></member>
+      <member refid="classMPCPathFollowerNode_1a34d570688bbbf9da5b71dca89628e16a" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>car_nearest_point_topic_</name></member>
+      <member refid="classMPCPathFollowerNode_1afea7245586ab2409fb7208a87f9ce79a" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>centripetal_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1a601e6c94afa8e5f027e2c12ab628b320" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>CMU</name></member>
+      <member refid="classMPCPathFollowerNode_1a7bc1ef2f877e15291f9c440c5535c066" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>common_header</name></member>
+      <member refid="classMPCPathFollowerNode_1acbe9a3c3c2c2d8145b8a855b4c4e1d39" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>compute_casadi_iteration</name></member>
+      <member refid="classMPCPathFollowerNode_1a53d821b2bf8a12da226da358aadedf34" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>compute_closer_state_i</name></member>
+      <member refid="classMPCPathFollowerNode_1a16268ee38dc75f2858bbccf3fc6bfaad" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>control_loop</name></member>
+      <member refid="classMPCPathFollowerNode_1a5ff4a49dbd6b761aba34e7fc6608af32" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>controls</name></member>
+      <member refid="classMPCPathFollowerNode_1a372c3960c674489b70d19c6874375a35" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>controls_index_</name></member>
+      <member refid="classMPCPathFollowerNode_1a3989d7ee8093491bc0ac26d16510a92c" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>create_sphere_marker</name></member>
+      <member refid="classMPCPathFollowerNode_1a5b40d00957c319b560a441db1e3cdd8e" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>current_pose</name></member>
+      <member refid="classMPCPathFollowerNode_1ae9b6fabd4a9e71b99e3e5be40acfa21b" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>current_speed</name></member>
+      <member refid="classMPCPathFollowerNode_1afb1a27b6a512574ae73facdf73852324" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>default_clock_</name></member>
+      <member refid="classMPCPathFollowerNode_1af76d48eac4556538e6c602932873448c" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>deleteAllMarkers</name></member>
+      <member refid="classMPCPathFollowerNode_1ac1169a7d09e92d32892ffc727a6b1d97" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>disable_print_timeout_</name></member>
+      <member refid="classMPCPathFollowerNode_1ab81dad42acc95d5ca8e69c9cabc64f05" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>distance_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1a03246753142fecca7ad7bfffa2ecc0db" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>drive_publisher_</name></member>
+      <member refid="classMPCPathFollowerNode_1a5a37dac31453a5a292f17ef2c8fcae77" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>drive_topic_</name></member>
+      <member refid="classMPCPathFollowerNode_1a3734f3da461693677c89da501a0189c7" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>future_opp_positions</name></member>
+      <member refid="classMPCPathFollowerNode_1a8b008075735c55f15b6bc6ef872a2da9" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>go_fast_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1a694ea18ca7551d27f444c3109bb05f04" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>has_opp_</name></member>
+      <member refid="classMPCPathFollowerNode_1a6e6d6e514ee46b5aa1f4a490b725a82b" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>high_theta_dot_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1a3118d803883fb1bd32dd13f9f2122bab" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>horizon_</name></member>
+      <member refid="classMPCPathFollowerNode_1a56d7639aa346b9ff89286babff42d3b0" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>initialization_x_y_states</name></member>
+      <member refid="classMPCPathFollowerNode_1a1c1936d4ea330f772d2297e4f5f08eb3" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>interpolate_controls</name></member>
+      <member refid="classMPCPathFollowerNode_1a4b96fb4a957008390c640998a558d266" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>lap_performance</name></member>
+      <member refid="classMPCPathFollowerNode_1ad88a523777d0c0e7375ccb351c1b1ccc" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>lap_performance_publisher_</name></member>
+      <member refid="classMPCPathFollowerNode_1aa3e9d0b5d473758101a315b2ee20dba0" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>lap_progress_publisher_</name></member>
+      <member refid="classMPCPathFollowerNode_1a42388f10259cb54036fd55d095695a0f" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>last_opponent_position_speed_</name></member>
+      <member refid="classMPCPathFollowerNode_1a3f63e4ff37f27cb4fcff96d62a3adcdf" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>last_steering_angle_</name></member>
+      <member refid="classMPCPathFollowerNode_1ac7a2757850acb324d4a26d60b5ab1898" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>look_ahead_gain_</name></member>
+      <member refid="classMPCPathFollowerNode_1a0349e37830cdd0eef9a6b0c21f3fe3bc" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>look_ahead_index_</name></member>
+      <member refid="classMPCPathFollowerNode_1aa730843c54f6765b128f79eab6379b8e" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>look_ahead_point_publisher_</name></member>
+      <member refid="classMPCPathFollowerNode_1ae62e2c6e63c489849e26f218c72b0fd1" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>look_ahead_point_topic_</name></member>
+      <member refid="classMPCPathFollowerNode_1aebab264f3ba977c77a073df61b88e936" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>low_speed_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1a0994cfbfab066920bfd7ca7cd3301d4b" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>marker_future_positions</name></member>
+      <member refid="classMPCPathFollowerNode_1a8ab9fe0276e242b664084c12b7784dd4" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>marker_initilization_positions</name></member>
+      <member refid="classMPCPathFollowerNode_1a905e2e67e04fc1b5473530c90f1a46c9" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>marker_pub_</name></member>
+      <member refid="classMPCPathFollowerNode_1a8357a0f82a3fd0f8087ffcf174f319fc" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>marker_target_points</name></member>
+      <member refid="classMPCPathFollowerNode_1a23ec28f8d3d20df8faf9bee0a51705b6" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>marker_timer</name></member>
+      <member refid="classMPCPathFollowerNode_1a5326b4e1ba1152e9396a3619fafa05b6" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>marker_timer_</name></member>
+      <member refid="classMPCPathFollowerNode_1a9dda4ffbc8a1c285cbc51ff4c03bdbfc" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>max_lap_statistics_</name></member>
+      <member refid="classMPCPathFollowerNode_1add1e401e5bd06e1817d4df80789607f1" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>max_speed_gain_</name></member>
+      <member refid="classMPCPathFollowerNode_1a92f1a0ac2b6a3bc366328b632807ba83" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>max_steer_</name></member>
+      <member refid="classMPCPathFollowerNode_1acb70eb328487a7aeba5f56bfd0acf43c" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>min_look_ahead_dist_</name></member>
+      <member refid="classMPCPathFollowerNode_1aa7f7d56b4ddc1b60990871dc64a7dc44" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>min_speed_</name></member>
+      <member refid="classMPCPathFollowerNode_1a142d9134db80c8c8ef027b51fe46ef82" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>min_speed_gain_</name></member>
+      <member refid="classMPCPathFollowerNode_1a80fed554a7ab9c104bcb62a997be7112" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>mpc_controller</name></member>
+      <member refid="classMPCPathFollowerNode_1ab4a353760cc96294826e8c17ef491f95" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>mpc_step_rl_steps_</name></member>
+      <member refid="classMPCPathFollowerNode_1afda879857d6fdb9ff8358a5674e0dedb" prot="public" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>MPCPathFollowerNode</name></member>
+      <member refid="classMPCPathFollowerNode_1a988ff8da561104afa130694b2472b240" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>odom_callback</name></member>
+      <member refid="classMPCPathFollowerNode_1aa2470be3b512d4ae97fd409329a708c2" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>odom_pose</name></member>
+      <member refid="classMPCPathFollowerNode_1a3ce4d819d0a82aa66eb089abe2400446" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>odom_subscriber_</name></member>
+      <member refid="classMPCPathFollowerNode_1a437eab8593c04a484d8d2c7ad79185b8" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>odom_topic_</name></member>
+      <member refid="classMPCPathFollowerNode_1a280bfff46615fab399053ed34286e5cc" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>opp_not_found_tuple_</name></member>
+      <member refid="classMPCPathFollowerNode_1a532aba834f3172e06340ad09f2039c3f" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>opponent_detected_</name></member>
+      <member refid="classMPCPathFollowerNode_1a87c491c94eb1cc950bc490e03ddd2ffc" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>opponent_detection_callback</name></member>
+      <member refid="classMPCPathFollowerNode_1a9db66a11e2c3f068a0e3281905c41e9b" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>opponent_detection_sub_</name></member>
+      <member refid="classMPCPathFollowerNode_1a817ca0c76307de37185a3c5bcb3b0b02" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>opponent_detection_topic_</name></member>
+      <member refid="classMPCPathFollowerNode_1a7e60ab0586fac5ef25c7b6c7364e17e9" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>opponent_distance_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1a4c70f72109211cc8440fee35620f94d6" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>opponent_radius_</name></member>
+      <member refid="classMPCPathFollowerNode_1a4e2056431dfe3f4890878fe5409dca7b" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>params_callback</name></member>
+      <member refid="classMPCPathFollowerNode_1a0c831af2f8bf6efa7146f86a3cd36994" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>params_callback_handle_</name></member>
+      <member refid="classMPCPathFollowerNode_1aa901667f5718c06a7d79a8ed4ed3938b" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>path</name></member>
+      <member refid="classMPCPathFollowerNode_1a05f0baf6b288cb2fc69e7c8f1ce698dc" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>path_obtained</name></member>
+      <member refid="classMPCPathFollowerNode_1a8b0cf1d547472267669082e78ebf0866" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>percentage_of_mpc_prediction_to_follow_</name></member>
+      <member refid="classMPCPathFollowerNode_1a514411ecfd7ab075ba0b25a4c6e3d8ad" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>pose_callback</name></member>
+      <member refid="classMPCPathFollowerNode_1ad7d06e0fc23fc58568a1f847b676f937" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>pose_obtained</name></member>
+      <member refid="classMPCPathFollowerNode_1ab57b7537b829d303eb95c488f4d35d84" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>pose_subscriber_</name></member>
+      <member refid="classMPCPathFollowerNode_1af9fe85efd0d50a33a766a948cda915e0" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>pose_topic_</name></member>
+      <member refid="classMPCPathFollowerNode_1ad7ac524d949a643a96f3ea64dcca9c2c" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>print_solve_time_</name></member>
+      <member refid="classMPCPathFollowerNode_1a777e2530bbe46c909dfb3a252b67a3dd" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>race_line_d_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1ae4c5d2fa992de3b3092c96e1cb5c23c4" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>raceline_file_</name></member>
+      <member refid="classMPCPathFollowerNode_1a4f258699a415707e6d467da0cfa238a3" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>raceline_publisher_</name></member>
+      <member refid="classMPCPathFollowerNode_1a39513b4369441943522d27fc95cf1c6b" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>reset_color</name></member>
+      <member refid="classMPCPathFollowerNode_1ad363b660853e05b14b9231aca0c29c65" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>reset_lap_statistics_callback</name></member>
+      <member refid="classMPCPathFollowerNode_1ac098f56bbb971491fdeadef850280611" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>reset_lap_statistics_subscriber_</name></member>
+      <member refid="classMPCPathFollowerNode_1a2b580dfebaf2b763a83ecaaa16870148" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>reset_lap_statistics_topic_</name></member>
+      <member refid="classMPCPathFollowerNode_1a4327d43198af44020ddff4f11307f866" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>rl_indexes</name></member>
+      <member refid="classMPCPathFollowerNode_1a8aa23a0918c468d401151e62eca2d31d" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>scale_speed_</name></member>
+      <member refid="classMPCPathFollowerNode_1ae212d674fc3b48ecfdafb726d81c9c1f" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>sd_publisher_</name></member>
+      <member refid="classMPCPathFollowerNode_1a271c035b213f60e6dcaf4d93d9b2b00f" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>send_drive_msg_</name></member>
+      <member refid="classMPCPathFollowerNode_1a18d6b8cf1cb249691085d4b8094bdb7a" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>set_max_speed_</name></member>
+      <member refid="classMPCPathFollowerNode_1a045da42b36f74cafe2a09f1c6b172179" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>set_max_speed_callback</name></member>
+      <member refid="classMPCPathFollowerNode_1ab9f16d1b86273b63bdc1f5d2bd792895" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>set_max_speed_topic_</name></member>
+      <member refid="classMPCPathFollowerNode_1a1623f7f299adee9bad27cfebd73752e5" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>speed_obtained</name></member>
+      <member refid="classMPCPathFollowerNode_1aee65c9408086406996b6be1115e21a8f" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>speed_smoothness_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1a090a7316f76b2c2e8b0da1971ec36c96" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>starting_strip_</name></member>
+      <member refid="classMPCPathFollowerNode_1acbab3db9e0d2e1cb02c0a1fb9541f1a4" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>states</name></member>
+      <member refid="classMPCPathFollowerNode_1af566bc49437041e47068d3b1d58b61be" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>status_callback</name></member>
+      <member refid="classMPCPathFollowerNode_1ab6102085222686179bb0b3de01da36f0" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>status_subscriber_</name></member>
+      <member refid="classMPCPathFollowerNode_1a88944d3618a760e5349c94db58f36c8b" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>status_topic_</name></member>
+      <member refid="classMPCPathFollowerNode_1af75237b1233f6e09a237815168db9c1b" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>steering_smoothness_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1ac0d75a422453a5ceef3f31d7c71f93e5" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>total_time_weight_</name></member>
+      <member refid="classMPCPathFollowerNode_1a4bb3cec469a6167f01dcfab40f86664b" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>translate_state_as_initialization</name></member>
+      <member refid="classMPCPathFollowerNode_1a4fbc19472570a2c7b019ef057409f127" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>use_gaussian_</name></member>
+      <member refid="classMPCPathFollowerNode_1ad0df9e7929580f5f7aa60a84e5ac970e" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>visualize_markers_</name></member>
+      <member refid="classMPCPathFollowerNode_1a6a834beed0c37f6523366c0a4df98e45" prot="private" virt="non-virtual"><scope>MPCPathFollowerNode</scope><name>walls_cost_weight_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

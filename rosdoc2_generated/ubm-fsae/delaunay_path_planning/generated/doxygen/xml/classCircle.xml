@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classCircle" kind="class" language="C++" prot="public">
+    <compoundname>Circle</compoundname>
+    <includes local="no">Circle.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCircle_1a48df023bd15aa6a29a397b70733d0da9" prot="private" static="no" mutable="no">
+        <type><ref refid="classPoint" kindref="compound">Point</ref></type>
+        <definition>Point Circle::center_</definition>
+        <argsstring></argsstring>
+        <name>center_</name>
+        <briefdescription>
+<para>The center of the <ref refid="classCircle" kindref="compound">Circle</ref> both in local and global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Circle.hpp" line="26" column="9" bodyfile="include/structures/Circle.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCircle_1a8d07f00489d7ab1ad038182b850c3597" prot="private" static="no" mutable="no">
+        <type><ref refid="classPoint" kindref="compound">Point</ref></type>
+        <definition>Point Circle::centerGlobal_</definition>
+        <argsstring></argsstring>
+        <name>centerGlobal_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Circle.hpp" line="26" column="17" bodyfile="include/structures/Circle.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCircle_1a469ac7bd8b31ccdae99c35ae5c83a994" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Circle::radSq_</definition>
+        <argsstring></argsstring>
+        <name>radSq_</name>
+        <briefdescription>
+<para>The radius of the <ref refid="classCircle" kindref="compound">Circle</ref> to the power of two. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Circle.hpp" line="31" column="10" bodyfile="include/structures/Circle.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCircle_1a422a8689b41359769bc5774c8a413325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Circle::Circle</definition>
+        <argsstring>(const cNode &amp;n0, const cNode &amp;n1, const cNode &amp;n2)</argsstring>
+        <name>Circle</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n2</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classCircle" kindref="compound">Circle</ref> object. <emphasis>n0</emphasis>, <emphasis>n1</emphasis>, <emphasis>n2</emphasis> are 3 Node(s) belonging to the <ref refid="classCircle" kindref="compound">Circle</ref>&apos;s circumference. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Circle.hpp" line="42" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classCircle_1a6001b9f72b653701091ca59db259d8ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Circle::containsNode</definition>
+        <argsstring>(const cNode &amp;n) const</argsstring>
+        <name>containsNode</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Checks if Node <emphasis>n</emphasis> is inside the <ref refid="classCircle" kindref="compound">Circle</ref>&apos;s circumference. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Circle.hpp" line="49" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classCircle_1aac40fc3824c28a65e7898d0d73ca8844" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        <definition>const Point&amp; Circle::center</definition>
+        <argsstring>() const</argsstring>
+        <name>center</name>
+        <briefdescription>
+<para>Returns the <ref refid="classCircle" kindref="compound">Circle</ref>&apos;s center in local coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Circle.hpp" line="54" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classCircle_1a0f27fc20c5bb9e3618beced7ff0d1a5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        <definition>const Point&amp; Circle::centerGlobal</definition>
+        <argsstring>() const</argsstring>
+        <name>centerGlobal</name>
+        <briefdescription>
+<para>Returns the <ref refid="classCircle" kindref="compound">Circle</ref>&apos;s center in global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Circle.hpp" line="59" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a circle in 2D coordinates. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/structures/Circle.hpp" line="21" column="13" bodyfile="include/structures/Circle.hpp" bodystart="21" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classCircle_1aac40fc3824c28a65e7898d0d73ca8844" prot="public" virt="non-virtual"><scope>Circle</scope><name>center</name></member>
+      <member refid="classCircle_1a48df023bd15aa6a29a397b70733d0da9" prot="private" virt="non-virtual"><scope>Circle</scope><name>center_</name></member>
+      <member refid="classCircle_1a0f27fc20c5bb9e3618beced7ff0d1a5e" prot="public" virt="non-virtual"><scope>Circle</scope><name>centerGlobal</name></member>
+      <member refid="classCircle_1a8d07f00489d7ab1ad038182b850c3597" prot="private" virt="non-virtual"><scope>Circle</scope><name>centerGlobal_</name></member>
+      <member refid="classCircle_1a422a8689b41359769bc5774c8a413325" prot="public" virt="non-virtual"><scope>Circle</scope><name>Circle</name></member>
+      <member refid="classCircle_1a6001b9f72b653701091ca59db259d8ed" prot="public" virt="non-virtual"><scope>Circle</scope><name>containsNode</name></member>
+      <member refid="classCircle_1a469ac7bd8b31ccdae99c35ae5c83a994" prot="private" virt="non-virtual"><scope>Circle</scope><name>radSq_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

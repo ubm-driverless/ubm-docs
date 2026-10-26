@@ -1,0 +1,1082 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classRaceline" kind="class" language="C++" prot="public">
+    <compoundname>Raceline</compoundname>
+    <includes local="no">raceline_utils.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRaceline_1a5caf6c560b343965671adcecf67cc9a9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::s_spline</definition>
+        <argsstring></argsstring>
+        <name>s_spline</name>
+        <briefdescription>
+<para>Cumulative length of the raceline using tum spline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="337" column="17" bodyfile="include/raceline_utils.hpp" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1aac403d1d0e067e9a90f3fd9877a9c411" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::x_r</definition>
+        <argsstring></argsstring>
+        <name>x_r</name>
+        <briefdescription>
+<para>x-coordinates of the raceline points </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="338" column="17" bodyfile="include/raceline_utils.hpp" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1ab46924b0489b589aa3b58153df1ea296" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::y_r</definition>
+        <argsstring></argsstring>
+        <name>y_r</name>
+        <briefdescription>
+<para>y-coordinates of the raceline points </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="339" column="17" bodyfile="include/raceline_utils.hpp" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1a43c074441caa6f318535c70689322b3a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::width_right</definition>
+        <argsstring></argsstring>
+        <name>width_right</name>
+        <briefdescription>
+<para>Distance to the right lane boundary. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="340" column="17" bodyfile="include/raceline_utils.hpp" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1a655faf535564b802d21c7e529d3391f1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::width_left</definition>
+        <argsstring></argsstring>
+        <name>width_left</name>
+        <briefdescription>
+<para>Distance to the left lane boundary. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="341" column="17" bodyfile="include/raceline_utils.hpp" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1ad7f839035babc6da693ac84a2c919814" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::heading</definition>
+        <argsstring></argsstring>
+        <name>heading</name>
+        <briefdescription>
+<para>Heading angles of the raceline points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="342" column="17" bodyfile="include/raceline_utils.hpp" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1a7c6a33d4d5d3ae613443134d89d3914a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::curvature</definition>
+        <argsstring></argsstring>
+        <name>curvature</name>
+        <briefdescription>
+<para>Curvature at each raceline point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="343" column="17" bodyfile="include/raceline_utils.hpp" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1aac9f4d406eab511afc39e6a49d3c871e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <briefdescription>
+<para>Speed values at each raceline point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="344" column="17" bodyfile="include/raceline_utils.hpp" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1a7bf97d6d28d4c9f31cc2fcb779418ef1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <briefdescription>
+<para>Acceleration values at each raceline point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="345" column="17" bodyfile="include/raceline_utils.hpp" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1a75e364cf7c96e321e94f1befd61d7466" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::s_euclidean</definition>
+        <argsstring></argsstring>
+        <name>s_euclidean</name>
+        <briefdescription>
+<para>Cumulative length of the raceline in euclidean distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="346" column="17" bodyfile="include/raceline_utils.hpp" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1a5fb82083d4d2bbc4742291b9d5dbfe91" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::point_distances</definition>
+        <argsstring></argsstring>
+        <name>point_distances</name>
+        <briefdescription>
+<para>Distance between consecutive points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="347" column="17" bodyfile="include/raceline_utils.hpp" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1a8d6cc785d98a6dff7686954df9724267" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structRacelineRow" kindref="compound">RacelineRow</ref> &gt;</type>
+        <definition>std::vector&lt;RacelineRow&gt; Raceline::raceline_data</definition>
+        <argsstring></argsstring>
+        <name>raceline_data</name>
+        <briefdescription>
+<para>Vector to store the raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="348" column="17" bodyfile="include/raceline_utils.hpp" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1a2685462d38b65f60c2fb69d6ecdc8256" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Raceline::num_points</definition>
+        <argsstring></argsstring>
+        <name>num_points</name>
+        <briefdescription>
+<para>Number of points in the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="350" column="9" bodyfile="include/raceline_utils.hpp" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1aed78f4f6432827004519f7c74c147d52" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Raceline::nearest_index</definition>
+        <argsstring></argsstring>
+        <name>nearest_index</name>
+        <briefdescription>
+<para>Index of the nearest point on the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="351" column="9" bodyfile="include/raceline_utils.hpp" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1ad9dadf2adaf6572dd6d2e46b1da9377e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Raceline::look_ahead_index</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_index</name>
+        <briefdescription>
+<para>Index of the look ahead point on the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="352" column="9" bodyfile="include/raceline_utils.hpp" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRaceline_1a0ce3d47520a0a0c8d10dba12ee115352" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Raceline::is_closed_track_</definition>
+        <argsstring></argsstring>
+        <name>is_closed_track_</name>
+        <briefdescription>
+<para>Whether the raceline is a closed loop (wrap-around) or an open path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="354" column="10" bodyfile="include/raceline_utils.hpp" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRaceline_1abf073897de0800ef0d35ffc9b011b90f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Raceline::Raceline</definition>
+        <argsstring>()</argsstring>
+        <name>Raceline</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classRaceline" kindref="compound">Raceline</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="58" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a9b2d9ce976b69f2b4ff470b436712b13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Raceline::initialize</definition>
+        <argsstring>(const std::string &amp;filename, bool is_closed_track=true)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_closed_track</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Initializes the <ref refid="classRaceline" kindref="compound">Raceline</ref> object with raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the CSV file containing the raceline data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="64" column="17" bodyfile="include/raceline_utils.hpp" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a120f692e3eab2f5596fab4edec7e776a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Raceline::initialize</definition>
+        <argsstring>(const std::string &amp;filename, bool &amp;success, bool is_closed_track=true)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>success</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_closed_track</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Initializes the <ref refid="classRaceline" kindref="compound">Raceline</ref> object with raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the CSV file containing the raceline data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a boolean variable to store the success status. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="75" column="18" bodyfile="include/raceline_utils.hpp" bodystart="75" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1abf0c8a748c99ba9fa9dbf5e3d798c7a3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Raceline::get_target_speed</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>get_target_speed</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves the target speed based on the speed function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the point on the path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The target speed at the given index. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="93" column="18" bodyfile="include/raceline_utils.hpp" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a7107b141ee18ab2903a0ccbc223a755a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structRacelineRow" kindref="compound">RacelineRow</ref></type>
+        <definition>RacelineRow Raceline::get_raceline_row</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>get_raceline_row</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves the raceline data at a given index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the point on the path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The raceline data at the given index. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="103" column="24" bodyfile="include/raceline_utils.hpp" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a5f738bda8f2a17a9cb028167d6afc8ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structRacelineData" kindref="compound">RacelineData</ref></type>
+        <definition>RacelineData Raceline::get_raceline_data</definition>
+        <argsstring>() const</argsstring>
+        <name>get_raceline_data</name>
+        <briefdescription>
+<para>Retrieves the whole raceline data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The raceline data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="112" column="25" bodyfile="include/raceline_utils.hpp" bodystart="112" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1ac68554cf5c5b04f8553ea7f9410c43f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; std::vector&lt; float &gt;, std::vector&lt; float &gt;, std::vector&lt; float &gt;, std::vector&lt; float &gt; &gt;</type>
+        <definition>std::tuple&lt;std::vector&lt;float&gt;, std::vector&lt;float&gt;, std::vector&lt;float&gt;, std::vector&lt;float&gt; &gt; Raceline::get_borders</definition>
+        <argsstring>() const</argsstring>
+        <name>get_borders</name>
+        <briefdescription>
+<para>Retrieves the borders of the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A tuple containing the borders of the raceline:<itemizedlist>
+<listitem><para>first: x coordinates of the left border</para>
+</listitem><listitem><para>second: y coordinates of the left border</para>
+</listitem><listitem><para>third: x coordinates of the right border</para>
+</listitem><listitem><para>fourth: y coordinates of the right border </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="137" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1ac9bd1e1519a3c0a750277682d7220b6e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Raceline::get_num_points</definition>
+        <argsstring>() const</argsstring>
+        <name>get_num_points</name>
+        <briefdescription>
+<para>Retrieves the raceline data at a given index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of points in the raceline. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="144" column="16" bodyfile="include/raceline_utils.hpp" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a1cf7e809bc8c48e9277daa03098b63eb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Raceline::get_nearest_index</definition>
+        <argsstring>() const</argsstring>
+        <name>get_nearest_index</name>
+        <briefdescription>
+<para>Retrieves the nearest index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The index of the nearest point on the raceline. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="153" column="16" bodyfile="include/raceline_utils.hpp" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a7d6e815f9c106d7e3f5e4589ad0e76df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; std::vector&lt; float &gt;, std::vector&lt; float &gt; &gt;</type>
+        <definition>std::pair&lt;std::vector&lt;float&gt;, std::vector&lt;float&gt; &gt; Raceline::get_raceline_xy</definition>
+        <argsstring>() const</argsstring>
+        <name>get_raceline_xy</name>
+        <briefdescription>
+<para>Retrieves the raceline points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A pair of vectors containing the x and y coordinates:<itemizedlist>
+<listitem><para>first: x coordinates as a vector</para>
+</listitem><listitem><para>second: y coordinates as a vector </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="164" column="22" bodyfile="include/raceline_utils.hpp" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a7c068656577610cc2d886b7ebeb5d6ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::get_heading</definition>
+        <argsstring>() const</argsstring>
+        <name>get_heading</name>
+        <briefdescription>
+<para>Retrieves the heading angles of the raceline points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A vector containing the heading angles of the raceline points. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="173" column="24" bodyfile="include/raceline_utils.hpp" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1add99458f3bd73f1c9b3d6da1d7ffe874" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; Raceline::get_curvature</definition>
+        <argsstring>() const</argsstring>
+        <name>get_curvature</name>
+        <briefdescription>
+<para>Retrieves the curvature values of the raceline points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A vector containing the curvature values of the raceline points. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="182" column="24" bodyfile="include/raceline_utils.hpp" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1ade34f664e8a27af40d6510d80df05385" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Raceline::read_csv</definition>
+        <argsstring>(const std::string &amp;filename)</argsstring>
+        <name>read_csv</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Reads the raceline data from a CSV file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the CSV file to read. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="190" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1aa3efb17ba36d0cf471bb97298e93e3d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Raceline::read_csv</definition>
+        <argsstring>(const std::string &amp;filename, bool &amp;success)</argsstring>
+        <name>read_csv</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>success</declname>
+        </param>
+        <briefdescription>
+<para>Reads the raceline data from a CSV file and returns success status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the CSV file to read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a boolean variable to store the success status. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="197" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1afa932197db453381eead1b651921a182" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Raceline::search_nearest_index</definition>
+        <argsstring>(const float &amp;x, const float &amp;y, float window_size_m=0.0f) const</argsstring>
+        <name>search_nearest_index</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>window_size_m</declname>
+          <defval>0.0f</defval>
+        </param>
+        <briefdescription>
+<para>Searches for the nearest index in a set of points to a given (x, y) coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function iterates through the set of points defined by the raceline data, and finds the index of the point that is closest to the given (x, y) coordinate.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the point to search for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the point to search for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>window_size_m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Search window (meters) around the last nearest index. 0 = full scan. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int The index of the nearest point in the set. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="210" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1aad62e43dcfca48dfa7e469fcc9fa538a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Raceline::search_nearest_index</definition>
+        <argsstring>(const float &amp;s) const</argsstring>
+        <name>search_nearest_index</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Searches for the nearest index in the array based on the given value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function iterates through the array of s values in the raceline and finds the index of the point that is closest to the given value <computeroutput>s</computeroutput>. The distance is calculated using the absolute difference between the given value and each point in the array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to search for the nearest index. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The index of the point that is closest to the given value <computeroutput>s</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="224" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a5ac5b899a8b789fb8f6dbbc3df56ec1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; Raceline::frenet_to_cartesian_r</definition>
+        <argsstring>(const float &amp;s, const float &amp;d) const</argsstring>
+        <name>frenet_to_cartesian_r</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Converts a Frenet s and d Frenet coordinate into cartesian coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a pair of Frenet coordinates (s, d) and converts them into Cartesian coordinates based on the raceline data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Frenet s coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Frenet d coordinate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The vector of Cartesian points. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="236" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1aae7fc45e5e675845358de48875754f7f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; Raceline::frenet_to_cartesian_r</definition>
+        <argsstring>(const std::pair&lt; float, float &gt; &amp;point) const</argsstring>
+        <name>frenet_to_cartesian_r</name>
+        <param>
+          <type>const std::pair&lt; float, float &gt; &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Converts a single Frenet point into Cartesian coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a single point in Frenet coordinates and converts it into Cartesian coordinates based on the raceline data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Frenet point to convert, tuple of s and d. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Cartesian point. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="248" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a89e5ffab20629c4cc740b5b78c62b2d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::pair&lt; float, float &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;float, float&gt; &gt; Raceline::frenet_to_cartesian_r</definition>
+        <argsstring>(const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;points) const</argsstring>
+        <name>frenet_to_cartesian_r</name>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Converts a set of Frenet points into Cartesian coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a set of points in Frenet coordinates and converts them into Cartesian coordinates based on the raceline data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of Frenet points to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The vector of Cartesian points. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="260" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a68766d8eda8fcc468f86e703885f11c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; Raceline::cartesian_to_frenet</definition>
+        <argsstring>(const float &amp;x, const float &amp;y) const</argsstring>
+        <name>cartesian_to_frenet</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Converts a Cartesian point into Frenet coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a Cartesian point and converts it into Frenet coordinates based on the raceline data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Frenet coordinates of the point. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="273" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a558912c11d4a84dcd82c1a23eb8e527d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; Raceline::cartesian_to_frenet</definition>
+        <argsstring>(const std::pair&lt; float, float &gt; &amp;points) const</argsstring>
+        <name>cartesian_to_frenet</name>
+        <param>
+          <type>const std::pair&lt; float, float &gt; &amp;</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Converts a single Cartesian point into Frenet coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a single Cartesian point and converts it into Frenet coordinates based on the raceline data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Cartesian point to convert, tuple of x and y. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Frenet coordinates of the point. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="285" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1a638fdef02e75565a2a502a6953e1d011" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::pair&lt; float, float &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;float, float&gt; &gt; Raceline::cartesian_to_frenet</definition>
+        <argsstring>(const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;points) const</argsstring>
+        <name>cartesian_to_frenet</name>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Converts a set of Cartesian points into Frenet coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a set of Cartesian points and converts them into Frenet coordinates based on the raceline data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of tuple x,y to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The vector of Frenet points. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="297" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1ad36ddb5725155f32939af2edac82ea15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float, float, float, float, int &gt;</type>
+        <definition>std::tuple&lt;float, float, float, float, float, int&gt; Raceline::search_nearest_point_tdp_projected</definition>
+        <argsstring>(const float &amp;actual_x, const float &amp;actual_y, const int &amp;tdp)</argsstring>
+        <name>search_nearest_point_tdp_projected</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>actual_x</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>actual_y</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>tdp</declname>
+        </param>
+        <briefdescription>
+<para>Compute frenet coordinates of the car with respect to the path and the equivalent cartesian coordinate. It comprehends the computation of the index of the nearest point on the path. The tdp is considered. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>actual_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the car. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the car. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tdp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time delay parameter (int). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::tuple&lt;float, float, float, float, int&gt; A tuple containing:<itemizedlist>
+<listitem><para><computeroutput>current_x</computeroutput>: The x-coordinate of the car (considering tdp)</para>
+</listitem><listitem><para><computeroutput>current_y</computeroutput>: The y-coordinate of the car (considering tdp)</para>
+</listitem><listitem><para><computeroutput>s_euclidian[projected_index]</computeroutput>: The frenet s coordinate (considering tdp)</para>
+</listitem><listitem><para><computeroutput>distance_d</computeroutput>: The frenet n coordinate (considering tdp)</para>
+</listitem><listitem><para><computeroutput>heading[projected_index]</computeroutput>: The heading angle of the car (considering tdp)</para>
+</listitem><listitem><para><computeroutput>nearest_index</computeroutput>: The index of the nearest point on the path (considering tdp) </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="314" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classRaceline_1aa63bd39dd91cdf6d576a8aa069f1c448" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; float, float, int &gt;</type>
+        <definition>std::tuple&lt;float, float, int&gt; Raceline::search_look_ahead_point</definition>
+        <argsstring>(const float &amp;actual_x, const float &amp;actual_y, const float &amp;actual_v, const float &amp;look_ahead_gain, const float &amp;min_look_ahead_dist, float window_size_m=0.0f)</argsstring>
+        <name>search_look_ahead_point</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>actual_x</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>actual_y</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>actual_v</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>look_ahead_gain</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>min_look_ahead_dist</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>window_size_m</declname>
+          <defval>0.0f</defval>
+        </param>
+        <briefdescription>
+<para>Searches the look ahead point on the path considering car position and speed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>actual_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the car. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the car. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>actual_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The speed of the car. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>look_ahead_gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The look ahead gain. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_look_ahead_dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum look ahead distance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>window_size_m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Search window (meters) around the last nearest index. 0 = full scan. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tuple with look_ahead_x, look_ahead_y, nearest_index. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/raceline_utils.hpp" line="328" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the path that the car follows, extracted from the map. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/raceline_utils.hpp" line="52" column="15" bodyfile="include/raceline_utils.hpp" bodystart="52" bodyend="355"/>
+    <listofallmembers>
+      <member refid="classRaceline_1a7bf97d6d28d4c9f31cc2fcb779418ef1" prot="private" virt="non-virtual"><scope>Raceline</scope><name>acceleration</name></member>
+      <member refid="classRaceline_1a68766d8eda8fcc468f86e703885f11c1" prot="public" virt="non-virtual"><scope>Raceline</scope><name>cartesian_to_frenet</name></member>
+      <member refid="classRaceline_1a558912c11d4a84dcd82c1a23eb8e527d" prot="public" virt="non-virtual"><scope>Raceline</scope><name>cartesian_to_frenet</name></member>
+      <member refid="classRaceline_1a638fdef02e75565a2a502a6953e1d011" prot="public" virt="non-virtual"><scope>Raceline</scope><name>cartesian_to_frenet</name></member>
+      <member refid="classRaceline_1a7c6a33d4d5d3ae613443134d89d3914a" prot="private" virt="non-virtual"><scope>Raceline</scope><name>curvature</name></member>
+      <member refid="classRaceline_1a5ac5b899a8b789fb8f6dbbc3df56ec1a" prot="public" virt="non-virtual"><scope>Raceline</scope><name>frenet_to_cartesian_r</name></member>
+      <member refid="classRaceline_1aae7fc45e5e675845358de48875754f7f" prot="public" virt="non-virtual"><scope>Raceline</scope><name>frenet_to_cartesian_r</name></member>
+      <member refid="classRaceline_1a89e5ffab20629c4cc740b5b78c62b2d2" prot="public" virt="non-virtual"><scope>Raceline</scope><name>frenet_to_cartesian_r</name></member>
+      <member refid="classRaceline_1ac68554cf5c5b04f8553ea7f9410c43f3" prot="public" virt="non-virtual"><scope>Raceline</scope><name>get_borders</name></member>
+      <member refid="classRaceline_1add99458f3bd73f1c9b3d6da1d7ffe874" prot="public" virt="non-virtual"><scope>Raceline</scope><name>get_curvature</name></member>
+      <member refid="classRaceline_1a7c068656577610cc2d886b7ebeb5d6ae" prot="public" virt="non-virtual"><scope>Raceline</scope><name>get_heading</name></member>
+      <member refid="classRaceline_1a1cf7e809bc8c48e9277daa03098b63eb" prot="public" virt="non-virtual"><scope>Raceline</scope><name>get_nearest_index</name></member>
+      <member refid="classRaceline_1ac9bd1e1519a3c0a750277682d7220b6e" prot="public" virt="non-virtual"><scope>Raceline</scope><name>get_num_points</name></member>
+      <member refid="classRaceline_1a5f738bda8f2a17a9cb028167d6afc8ce" prot="public" virt="non-virtual"><scope>Raceline</scope><name>get_raceline_data</name></member>
+      <member refid="classRaceline_1a7107b141ee18ab2903a0ccbc223a755a" prot="public" virt="non-virtual"><scope>Raceline</scope><name>get_raceline_row</name></member>
+      <member refid="classRaceline_1a7d6e815f9c106d7e3f5e4589ad0e76df" prot="public" virt="non-virtual"><scope>Raceline</scope><name>get_raceline_xy</name></member>
+      <member refid="classRaceline_1abf0c8a748c99ba9fa9dbf5e3d798c7a3" prot="public" virt="non-virtual"><scope>Raceline</scope><name>get_target_speed</name></member>
+      <member refid="classRaceline_1ad7f839035babc6da693ac84a2c919814" prot="private" virt="non-virtual"><scope>Raceline</scope><name>heading</name></member>
+      <member refid="classRaceline_1a9b2d9ce976b69f2b4ff470b436712b13" prot="public" virt="non-virtual"><scope>Raceline</scope><name>initialize</name></member>
+      <member refid="classRaceline_1a120f692e3eab2f5596fab4edec7e776a" prot="public" virt="non-virtual"><scope>Raceline</scope><name>initialize</name></member>
+      <member refid="classRaceline_1a0ce3d47520a0a0c8d10dba12ee115352" prot="private" virt="non-virtual"><scope>Raceline</scope><name>is_closed_track_</name></member>
+      <member refid="classRaceline_1ad9dadf2adaf6572dd6d2e46b1da9377e" prot="private" virt="non-virtual"><scope>Raceline</scope><name>look_ahead_index</name></member>
+      <member refid="classRaceline_1aed78f4f6432827004519f7c74c147d52" prot="private" virt="non-virtual"><scope>Raceline</scope><name>nearest_index</name></member>
+      <member refid="classRaceline_1a2685462d38b65f60c2fb69d6ecdc8256" prot="private" virt="non-virtual"><scope>Raceline</scope><name>num_points</name></member>
+      <member refid="classRaceline_1a5fb82083d4d2bbc4742291b9d5dbfe91" prot="private" virt="non-virtual"><scope>Raceline</scope><name>point_distances</name></member>
+      <member refid="classRaceline_1abf073897de0800ef0d35ffc9b011b90f" prot="public" virt="non-virtual"><scope>Raceline</scope><name>Raceline</name></member>
+      <member refid="classRaceline_1a8d6cc785d98a6dff7686954df9724267" prot="private" virt="non-virtual"><scope>Raceline</scope><name>raceline_data</name></member>
+      <member refid="classRaceline_1ade34f664e8a27af40d6510d80df05385" prot="public" virt="non-virtual"><scope>Raceline</scope><name>read_csv</name></member>
+      <member refid="classRaceline_1aa3efb17ba36d0cf471bb97298e93e3d7" prot="public" virt="non-virtual"><scope>Raceline</scope><name>read_csv</name></member>
+      <member refid="classRaceline_1a75e364cf7c96e321e94f1befd61d7466" prot="private" virt="non-virtual"><scope>Raceline</scope><name>s_euclidean</name></member>
+      <member refid="classRaceline_1a5caf6c560b343965671adcecf67cc9a9" prot="private" virt="non-virtual"><scope>Raceline</scope><name>s_spline</name></member>
+      <member refid="classRaceline_1aa63bd39dd91cdf6d576a8aa069f1c448" prot="public" virt="non-virtual"><scope>Raceline</scope><name>search_look_ahead_point</name></member>
+      <member refid="classRaceline_1afa932197db453381eead1b651921a182" prot="public" virt="non-virtual"><scope>Raceline</scope><name>search_nearest_index</name></member>
+      <member refid="classRaceline_1aad62e43dcfca48dfa7e469fcc9fa538a" prot="public" virt="non-virtual"><scope>Raceline</scope><name>search_nearest_index</name></member>
+      <member refid="classRaceline_1ad36ddb5725155f32939af2edac82ea15" prot="public" virt="non-virtual"><scope>Raceline</scope><name>search_nearest_point_tdp_projected</name></member>
+      <member refid="classRaceline_1aac9f4d406eab511afc39e6a49d3c871e" prot="private" virt="non-virtual"><scope>Raceline</scope><name>speed</name></member>
+      <member refid="classRaceline_1a655faf535564b802d21c7e529d3391f1" prot="private" virt="non-virtual"><scope>Raceline</scope><name>width_left</name></member>
+      <member refid="classRaceline_1a43c074441caa6f318535c70689322b3a" prot="private" virt="non-virtual"><scope>Raceline</scope><name>width_right</name></member>
+      <member refid="classRaceline_1aac403d1d0e067e9a90f3fd9877a9c411" prot="private" virt="non-virtual"><scope>Raceline</scope><name>x_r</name></member>
+      <member refid="classRaceline_1ab46924b0489b589aa3b58153df1ea296" prot="private" virt="non-virtual"><scope>Raceline</scope><name>y_r</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

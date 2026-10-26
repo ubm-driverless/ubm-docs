@@ -1,0 +1,696 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlive__telemetry_1_1PointCloudHandler" kind="class" language="C++" prot="public">
+    <compoundname>live_telemetry::PointCloudHandler</compoundname>
+    <basecompoundref refid="classlive__telemetry_1_1TopicHandler" prot="public" virt="non-virtual">live_telemetry::TopicHandler</basecompoundref>
+    <includes local="no">point_cloud_handler.hpp</includes>
+    <innerclass refid="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache" prot="private">live_telemetry::PointCloudHandler::FieldOffsetCache</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classlive__telemetry_1_1PointCloudHandler_1a49f646208bfd764b43cc8decd75464f4" prot="public" static="no">
+        <type>sensor_msgs::msg::PointCloud2</type>
+        <definition>using live_telemetry::PointCloudHandler::PointCloud2Msg =  sensor_msgs::msg::PointCloud2</definition>
+        <argsstring></argsstring>
+        <name>PointCloud2Msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="45" column="9" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1ab89d3b6a61e48a3007cabadd0a6caa53" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; PointCloud2Msg &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;PointCloud2Msg&gt;::SharedPtr live_telemetry::PointCloudHandler::subscriber_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="116" column="42" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a809d1ab1f810ef9ab2cdbf4595f734e9" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classlive__telemetry_1_1Downsampler" kindref="compound">PointCloud2Downsampler</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;PointCloud2Downsampler&gt; live_telemetry::PointCloudHandler::downsampler_</definition>
+        <argsstring></argsstring>
+        <name>downsampler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="117" column="25" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a366b6f12d18c9be6efcaf77385cf5d49" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float live_telemetry::PointCloudHandler::voxel_leaf_size_</definition>
+        <argsstring></argsstring>
+        <name>voxel_leaf_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="120" column="15" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1abaf2fbd805e8cef5efedb78d189ab3ef" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float live_telemetry::PointCloudHandler::max_radius_</definition>
+        <argsstring></argsstring>
+        <name>max_radius_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="121" column="15" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1aee411adf7850d2dc815214a995690618" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float live_telemetry::PointCloudHandler::max_radius_sq_</definition>
+        <argsstring></argsstring>
+        <name>max_radius_sq_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="122" column="15" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a61829c30ee329d18a2f4017c8dffdb6b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool live_telemetry::PointCloudHandler::include_intensity_</definition>
+        <argsstring></argsstring>
+        <name>include_intensity_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="123" column="14" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a8b88c5808468d602775b30ee420fd59d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool live_telemetry::PointCloudHandler::enable_voxel_</definition>
+        <argsstring></argsstring>
+        <name>enable_voxel_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="124" column="14" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1aebe10c71be85ea1ba58771bc858d9baa" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool live_telemetry::PointCloudHandler::enable_crop_</definition>
+        <argsstring></argsstring>
+        <name>enable_crop_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="125" column="14" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a6994478acf9276ccc44b697d45db90ab" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool live_telemetry::PointCloudHandler::use_worker_queue_</definition>
+        <argsstring></argsstring>
+        <name>use_worker_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="126" column="14" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1abfddb58bf0b5f62ddd94435ffefc9a29" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool live_telemetry::PointCloudHandler::use_raw_output_</definition>
+        <argsstring></argsstring>
+        <name>use_raw_output_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="127" column="14" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1aaf17c1d0e8abe89d564c81064f12f969" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool live_telemetry::PointCloudHandler::use_reliable_qos_</definition>
+        <argsstring></argsstring>
+        <name>use_reliable_qos_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="128" column="14" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1af538d89cef9ff7ed47fa76e27a4ab10c" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool live_telemetry::PointCloudHandler::verbose_perf_logging_</definition>
+        <argsstring></argsstring>
+        <name>verbose_perf_logging_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="129" column="20" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1ad15e3af568b932cfa2d15d7a29f5d4dd" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::PointCloudHandler::log_interval_</definition>
+        <argsstring></argsstring>
+        <name>log_interval_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="131" column="16" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a579cc3b68609ae1d6a786efa5c3d4c77" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::PointCloudHandler::stats_log_counter_</definition>
+        <argsstring></argsstring>
+        <name>stats_log_counter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="132" column="16" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a9a45b8e49f50368967c9c2610a3c4a27" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::PointCloudHandler::queue_drop_counter_</definition>
+        <argsstring></argsstring>
+        <name>queue_drop_counter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="133" column="16" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1aed8da9940d108dd3c305599a0e2c0da6" prot="private" static="no" mutable="yes">
+        <type>FieldOffsetCache</type>
+        <definition>FieldOffsetCache live_telemetry::PointCloudHandler::field_cache_</definition>
+        <argsstring></argsstring>
+        <name>field_cache_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="144" column="34" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a5a807422fda8bd95b56f6250a34c0089" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex live_telemetry::PointCloudHandler::queue_mutex_</definition>
+        <argsstring></argsstring>
+        <name>queue_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="146" column="20" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a3e9f8571766817c498baa4a9ccbb8d3a" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable live_telemetry::PointCloudHandler::queue_cv_</definition>
+        <argsstring></argsstring>
+        <name>queue_cv_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="147" column="33" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a5e5d943cb2e73c7a5655e3409595b9c8" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; PointCloud2Msg &gt;</type>
+        <definition>std::deque&lt;PointCloud2Msg&gt; live_telemetry::PointCloudHandler::processing_queue_</definition>
+        <argsstring></argsstring>
+        <name>processing_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="148" column="20" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1aadaab98a52891c1aef23468f474f7da1" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread live_telemetry::PointCloudHandler::worker_thread_</definition>
+        <argsstring></argsstring>
+        <name>worker_thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="149" column="21" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a55579ccb12616c6ad5ba089c787ec20c" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; live_telemetry::PointCloudHandler::stop_worker_</definition>
+        <argsstring></argsstring>
+        <name>stop_worker_</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="150" column="21" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a6d6ab06e0edec87ddbe5da398b08489b" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::PointCloudHandler::max_queue_size_</definition>
+        <argsstring></argsstring>
+        <name>max_queue_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="151" column="16" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1PointCloudHandler_1a1a27088b961ff4dec0056b5df2215a84" prot="private" static="no" mutable="yes">
+        <type>rclcpp::Serialization&lt; PointCloud2Msg &gt;</type>
+        <definition>rclcpp::Serialization&lt;PointCloud2Msg&gt; live_telemetry::PointCloudHandler::pointcloud_serializer_</definition>
+        <argsstring></argsstring>
+        <name>pointcloud_serializer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="152" column="39" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1a230a757e93271de21f3ef3d3b0e27daa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>live_telemetry::PointCloudHandler::PointCloudHandler</definition>
+        <argsstring>(rclcpp::Node *node, const HandlerConfig &amp;config, FoxgloveLogger *logger)</argsstring>
+        <name>PointCloudHandler</name>
+        <param>
+          <type>rclcpp::Node *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1HandlerConfig" kindref="compound">HandlerConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="classlive__telemetry_1_1FoxgloveLogger" kindref="compound">FoxgloveLogger</ref> *</type>
+          <declname>logger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="47" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1adbb09afc89e9e5ede15efd7a6d016961" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>live_telemetry::PointCloudHandler::~PointCloudHandler</definition>
+        <argsstring>() override</argsstring>
+        <name>~PointCloudHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="49" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1a440d7995abb4f2a88ffeb25394aa7572" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string live_telemetry::PointCloudHandler::getName</definition>
+        <argsstring>() const override</argsstring>
+        <name>getName</name>
+        <reimplements refid="classlive__telemetry_1_1TopicHandler_1aa65adc11e497610bc4907516645cfd01">getName</reimplements>
+        <briefdescription>
+<para>Get the handler name for logging and identification. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="51" column="21" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1a3a03d6272a51331074c7518575e7a7d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::PointCloudHandler::setDownsamplingRatio</definition>
+        <argsstring>(int ratio)</argsstring>
+        <name>setDownsamplingRatio</name>
+        <param>
+          <type>int</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="53" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1aacf1e5b4bcb8979ea099f639d605f400" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::PointCloudHandler::onMessage</definition>
+        <argsstring>(const PointCloud2Msg::SharedPtr msg)</argsstring>
+        <name>onMessage</name>
+        <param>
+          <type>const PointCloud2Msg::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="56" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1ac5b87f9519dde1cdb886cdf6ad7bfdcc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::PointCloudHandler::onForward</definition>
+        <argsstring>(const PointCloud2Msg &amp;msg)</argsstring>
+        <name>onForward</name>
+        <param>
+          <type>const PointCloud2Msg &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="57" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1a56606878b71a1a69d3d3aee7f9a03253" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::PointCloudHandler::workerLoop</definition>
+        <argsstring>()</argsstring>
+        <name>workerLoop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="58" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1a687b68b65c2e7824e1fb2334aa9d17b8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::PointCloudHandler::processQueuedMessage</definition>
+        <argsstring>(const PointCloud2Msg &amp;msg)</argsstring>
+        <name>processQueuedMessage</name>
+        <param>
+          <type>const PointCloud2Msg &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="59" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1a1469dac8bdfe646875e2857c649fbed3" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::PointCloudHandler::publishRawPointCloud</definition>
+        <argsstring>(const PointCloud2Msg &amp;cloud) const</argsstring>
+        <name>publishRawPointCloud</name>
+        <param>
+          <type>const PointCloud2Msg &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="60" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1a6378219248394ab27c7bfbfc16ee56ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::PointCloudHandler::logStats</definition>
+        <argsstring>()</argsstring>
+        <name>logStats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="61" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1ae897bae32eaceb4bc70f1b27fdb2d6c9" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename PointT</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void live_telemetry::PointCloudHandler::applyRadiusCrop</definition>
+        <argsstring>(typename pcl::PointCloud&lt; PointT &gt;::Ptr &amp;cloud) const</argsstring>
+        <name>applyRadiusCrop</name>
+        <param>
+          <type>typename pcl::PointCloud&lt; PointT &gt;::Ptr &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <briefdescription>
+<para>Crop points beyond max_radius from the sensor origin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Simple Euclidean distance check (x²+y²+z² ≤ r²). Applied before voxel grid to reduce the number of points entering the expensive step. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="70" column="14" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="70" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1af797ae2e2d1ce616879bd653af7b61bb" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>PointCloud2Msg</type>
+        <definition>PointCloud2Msg live_telemetry::PointCloudHandler::applyVoxelGrid</definition>
+        <argsstring>(const PointCloud2Msg &amp;input) const</argsstring>
+        <name>applyVoxelGrid</name>
+        <param>
+          <type>const PointCloud2Msg &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Apply voxel-grid down-sampling via PCL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts the incoming PointCloud2 to a PCL cloud with only XYZ(I), runs VoxelGrid, and returns a new PointCloud2 with the reduced set. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="104" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1a927b07beede14dc3320e411c59b85a0d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string live_telemetry::PointCloudHandler::packAsProtobuf</definition>
+        <argsstring>(const PointCloud2Msg &amp;cloud) const</argsstring>
+        <name>packAsProtobuf</name>
+        <param>
+          <type>const PointCloud2Msg &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <briefdescription>
+<para>Pack a stripped PointCloud2 (xyz + intensity) into a serialized foxglove.PointCloud protobuf binary. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="110" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1PointCloudHandler_1a574cfbc4e3951df8940fde9f5fbfb7f1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename PointT</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string live_telemetry::PointCloudHandler::packFilteredCloudAsProtobuf</definition>
+        <argsstring>(const pcl::PointCloud&lt; PointT &gt; &amp;cloud, const std_msgs::msg::Header &amp;header) const</argsstring>
+        <name>packFilteredCloudAsProtobuf</name>
+        <param>
+          <type>const pcl::PointCloud&lt; PointT &gt; &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <param>
+          <type>const std_msgs::msg::Header &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="112" column="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Specialized handler for PointCloud2 topics (e.g. raw LiDAR) </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Processing pipeline:<orderedlist>
+<listitem><para>Temporal downsampling — skip N frames (reuses Downsampler&lt;T&gt;)</para>
+</listitem><listitem><para>Radius crop — discard points beyond max_radius</para>
+</listitem><listitem><para>Voxel grid filtering — PCL VoxelGrid to reduce spatial density</para>
+</listitem><listitem><para>Field stripping — keep only xyz (+ optional intensity)</para>
+</listitem><listitem><para>Protobuf conversion — pack as foxglove.PointCloud for native rendering</para>
+</listitem></orderedlist>
+</para>
+<para>This prevents a single point-cloud panel in Foxglove from saturating the WebSocket link and starving other panels (camera, odometry, …). </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>live_telemetry::TopicHandler</label>
+        <link refid="classlive__telemetry_1_1TopicHandler"/>
+      </node>
+      <node id="1">
+        <label>live_telemetry::PointCloudHandler</label>
+        <link refid="classlive__telemetry_1_1PointCloudHandler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>live_telemetry::TopicHandler</label>
+        <link refid="classlive__telemetry_1_1TopicHandler"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>logger_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>config_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>stats_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>live_telemetry::FoxgloveLogger</label>
+        <link refid="classlive__telemetry_1_1FoxgloveLogger"/>
+      </node>
+      <node id="5">
+        <label>live_telemetry::HandlerStats</label>
+        <link refid="structlive__telemetry_1_1HandlerStats"/>
+      </node>
+      <node id="1">
+        <label>live_telemetry::PointCloudHandler</label>
+        <link refid="classlive__telemetry_1_1PointCloudHandler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>live_telemetry::HandlerConfig</label>
+        <link refid="structlive__telemetry_1_1HandlerConfig"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/live_telemetry_node/point_cloud_handler.hpp" line="43" column="1" bodyfile="include/live_telemetry_node/point_cloud_handler.hpp" bodystart="42" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1ae897bae32eaceb4bc70f1b27fdb2d6c9" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>applyRadiusCrop</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1af797ae2e2d1ce616879bd653af7b61bb" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>applyVoxelGrid</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a039d9637fa4acfec32fcd85d6a878b9c" prot="protected" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>config_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a809d1ab1f810ef9ab2cdbf4595f734e9" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>downsampler_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1aebe10c71be85ea1ba58771bc858d9baa" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>enable_crop_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a8b88c5808468d602775b30ee420fd59d" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>enable_voxel_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1aed8da9940d108dd3c305599a0e2c0da6" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>field_cache_</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a3d65dcdb9e8aeafff1aa31127187c3cc" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>getInputTopic</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a440d7995abb4f2a88ffeb25394aa7572" prot="public" virt="virtual"><scope>live_telemetry::PointCloudHandler</scope><name>getName</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a6b8da113fb9c27d9ab56f74a99c3338a" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>getStats</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a61829c30ee329d18a2f4017c8dffdb6b" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>include_intensity_</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a8b17ee21369c866a4ea64e7f7311c0e4" prot="public" virt="virtual"><scope>live_telemetry::PointCloudHandler</scope><name>isActive</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1ad15e3af568b932cfa2d15d7a29f5d4dd" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>log_interval_</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1ad9bb236e1bb4b85a18dba4aa36f388b3" prot="protected" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>logger_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a6378219248394ab27c7bfbfc16ee56ee" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>logStats</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1ac5f3787aa080dfae5e28bacc3652ad6f" prot="protected" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>logVerbose</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a6d6ab06e0edec87ddbe5da398b08489b" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>max_queue_size_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1abaf2fbd805e8cef5efedb78d189ab3ef" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>max_radius_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1aee411adf7850d2dc815214a995690618" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>max_radius_sq_</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a1c292deb108e63785e7e3968a195b2a2" prot="protected" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>node_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1ac5b87f9519dde1cdb886cdf6ad7bfdcc" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>onForward</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1aacf1e5b4bcb8979ea099f639d605f400" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>onMessage</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a73e12a4a6758c88edab63ae2fcebcba3" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>operator=</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a4347b11e89d90c9e0468079f100544c8" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>operator=</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a927b07beede14dc3320e411c59b85a0d" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>packAsProtobuf</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a574cfbc4e3951df8940fde9f5fbfb7f1" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>packFilteredCloudAsProtobuf</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a49f646208bfd764b43cc8decd75464f4" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>PointCloud2Msg</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a1a27088b961ff4dec0056b5df2215a84" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>pointcloud_serializer_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a230a757e93271de21f3ef3d3b0e27daa" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>PointCloudHandler</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a5e5d943cb2e73c7a5655e3409595b9c8" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>processing_queue_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a687b68b65c2e7824e1fb2334aa9d17b8" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>processQueuedMessage</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a1469dac8bdfe646875e2857c649fbed3" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>publishRawPointCloud</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a3e9f8571766817c498baa4a9ccbb8d3a" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>queue_cv_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a9a45b8e49f50368967c9c2610a3c4a27" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>queue_drop_counter_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a5a807422fda8bd95b56f6250a34c0089" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>queue_mutex_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a3a03d6272a51331074c7518575e7a7d4" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>setDownsamplingRatio</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a9197075b1a5012036ae148a76da39b89" prot="protected" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>shouldForward</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1abbb40a10b5815acb437fe63f455ddb07" prot="protected" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>stats_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a579cc3b68609ae1d6a786efa5c3d4c77" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>stats_log_counter_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a55579ccb12616c6ad5ba089c787ec20c" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>stop_worker_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1ab89d3b6a61e48a3007cabadd0a6caa53" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>subscriber_</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1addf9ed7f3579ee4642dba2ac2fafa020" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>TopicHandler</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a9c2bebf897706399b4ba401f2d696ae2" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>TopicHandler</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a9ff3a67150695434f273352276ce92c6" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>TopicHandler</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1abfddb58bf0b5f62ddd94435ffefc9a29" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>use_raw_output_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1aaf17c1d0e8abe89d564c81064f12f969" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>use_reliable_qos_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a6994478acf9276ccc44b697d45db90ab" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>use_worker_queue_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1af538d89cef9ff7ed47fa76e27a4ab10c" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>verbose_perf_logging_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a366b6f12d18c9be6efcaf77385cf5d49" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>voxel_leaf_size_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1aadaab98a52891c1aef23468f474f7da1" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>worker_thread_</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1a56606878b71a1a69d3d3aee7f9a03253" prot="private" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>workerLoop</name></member>
+      <member refid="classlive__telemetry_1_1PointCloudHandler_1adbb09afc89e9e5ede15efd7a6d016961" prot="public" virt="non-virtual"><scope>live_telemetry::PointCloudHandler</scope><name>~PointCloudHandler</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a74a407290bc290250674b9cb210130f7" prot="public" virt="virtual"><scope>live_telemetry::PointCloudHandler</scope><name>~TopicHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

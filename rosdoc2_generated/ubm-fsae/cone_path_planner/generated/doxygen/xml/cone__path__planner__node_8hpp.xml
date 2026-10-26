@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="cone__path__planner__node_8hpp" kind="file" language="C++">
+    <compoundname>cone_path_planner_node.hpp</compoundname>
+    <includes local="no">tf2/LinearMath/Matrix3x3.h</includes>
+    <includes local="no">tf2/LinearMath/Quaternion.h</includes>
+    <includes local="no">tf2_geometry_msgs/tf2_geometry_msgs.hpp</includes>
+    <includes local="no">geometry_msgs/msg/quaternion.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/landmark_array.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/pose.hpp</includes>
+    <includes local="yes">nav_msgs/msg/odometry.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/path_limits.hpp</includes>
+    <includes local="yes">visualization_msgs/msg/marker_array.hpp</includes>
+    <includes local="yes">visualization_msgs/msg/marker.hpp</includes>
+    <includes local="yes">rclcpp/rclcpp.hpp</includes>
+    <includes refid="cone__sorting_8hpp" local="yes">cone_path_planner/cone_sorting.hpp</includes>
+    <includes refid="cone__matching_8hpp" local="yes">cone_path_planner/cone_matching.hpp</includes>
+    <includes refid="spline__and__polynomial_8hpp" local="yes">cone_path_planner/spline_and_polynomial.hpp</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>nav_msgs/msg/odometry.hpp</label>
+      </node>
+      <node id="7">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>ubm_interfaces/msg/landmark_array.hpp</label>
+      </node>
+      <node id="11">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="12">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/cone_path_planner_node.hpp</label>
+        <link refid="cone__path__planner__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="3">
+        <label>tf2/LinearMath/Quaternion.h</label>
+      </node>
+      <node id="9">
+        <label>ubm_interfaces/msg/path_limits.hpp</label>
+      </node>
+      <node id="10">
+        <label>visualization_msgs/msg/marker_array.hpp</label>
+      </node>
+      <node id="5">
+        <label>geometry_msgs/msg/quaternion.hpp</label>
+      </node>
+      <node id="2">
+        <label>tf2/LinearMath/Matrix3x3.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classConePathPlannerNode" prot="public">ConePathPlannerNode</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cone__path__planner__node_8hpp_1aaca0cae128cb5505e5f28047fa7e1a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void publish_path</definition>
+        <argsstring>(const rclcpp::Publisher&lt; ubm_interfaces::msg::PathLimits &gt;::SharedPtr &amp;publisher, const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;path, const std::vector&lt; std::vector&lt; float &gt;&gt; &amp;left_cones, const std::vector&lt; std::vector&lt; float &gt;&gt; &amp;right_cones)</argsstring>
+        <name>publish_path</name>
+        <param>
+          <type>const rclcpp::Publisher&lt; ubm_interfaces::msg::PathLimits &gt;::SharedPtr &amp;</type>
+          <declname>publisher</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; float &gt;&gt; &amp;</type>
+          <declname>left_cones</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; float &gt;&gt; &amp;</type>
+          <declname>right_cones</declname>
+        </param>
+        <briefdescription>
+<para>Publish the path as a PathLimits message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>publisher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Publisher for the PathLimits message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="147" column="10" declfile="include/cone_path_planner/cone_path_planner_node.hpp" declline="147" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="cone__path__planner__node_8hpp_1afc485e92bc8729b8cd5940042e021c74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void publish_path_points_as_marker_array</definition>
+        <argsstring>(const rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr &amp;publisher, const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;points)</argsstring>
+        <name>publish_path_points_as_marker_array</name>
+        <param>
+          <type>const rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr &amp;</type>
+          <declname>publisher</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; float, float &gt;&gt; &amp;</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Publishes path points as a visualization marker array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>publisher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Publisher for the visualization markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of points to publish as vector of pairs </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="158" column="10" declfile="include/cone_path_planner/cone_path_planner_node.hpp" declline="158" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="cone__path__planner__node_8hpp_1a991b687c5a1f38d297c3f6a4ff6b55c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void publish_cones_as_marker_array</definition>
+        <argsstring>(const rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr &amp;publisher, const std::vector&lt; std::vector&lt; float &gt;&gt; &amp;cones)</argsstring>
+        <name>publish_cones_as_marker_array</name>
+        <param>
+          <type>const rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr &amp;</type>
+          <declname>publisher</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; float &gt;&gt; &amp;</type>
+          <declname>cones</declname>
+        </param>
+        <briefdescription>
+<para>Publishes left and right cone points as visualization marker arrays. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>publisher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Publisher for the visualization markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of cone points </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="167" column="10" declfile="include/cone_path_planner/cone_path_planner_node.hpp" declline="167" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/cone_path_planner_node.hpp"/>
+  </compounddef>
+</doxygen>

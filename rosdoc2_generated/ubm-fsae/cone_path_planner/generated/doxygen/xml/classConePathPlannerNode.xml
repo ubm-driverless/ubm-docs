@@ -1,0 +1,723 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classConePathPlannerNode" kind="class" language="C++" prot="public">
+    <compoundname>ConePathPlannerNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classConePathPlannerNode_1ac126336213784dcc3533586e660db38f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Clock::SharedPtr</type>
+        <definition>rclcpp::Clock::SharedPtr ConePathPlannerNode::default_clock_</definition>
+        <argsstring></argsstring>
+        <name>default_clock_</name>
+        <briefdescription>
+<para>Default clock for throttled log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="40" column="30" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a81a675b780f7eeabf922d2dd312b17de" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ConePathPlannerNode::disable_print_timeout_</definition>
+        <argsstring></argsstring>
+        <name>disable_print_timeout_</name>
+        <briefdescription>
+<para>Timeout for disabling print messages (in milliseconds). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="41" column="9" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1adca3ca76f9322bc478a7eafaa8262224" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ConePathPlannerNode::use_unknown_cones_</definition>
+        <argsstring></argsstring>
+        <name>use_unknown_cones_</name>
+        <briefdescription>
+<para>Whether to use unknown cones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="42" column="10" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a367b7fb272427e59336cc51f82576652" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ConePathPlannerNode::max_n_neighbors_</definition>
+        <argsstring></argsstring>
+        <name>max_n_neighbors_</name>
+        <briefdescription>
+<para>Maximum number of neighbors to consider for sorting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="43" column="9" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1ae40d7f18dadaf875334e242a10f70df1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ConePathPlannerNode::max_length_</definition>
+        <argsstring></argsstring>
+        <name>max_length_</name>
+        <briefdescription>
+<para>Maximum length of the raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="44" column="9" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a60c2923958c02e29b837f29ebbf28925" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ConePathPlannerNode::max_dist_</definition>
+        <argsstring></argsstring>
+        <name>max_dist_</name>
+        <briefdescription>
+<para>Maximum distance to consider for sorting cones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="45" column="11" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1aa59462cca20e54ae24af9fbed3762859" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ConePathPlannerNode::max_dist_to_car_</definition>
+        <argsstring></argsstring>
+        <name>max_dist_to_car_</name>
+        <briefdescription>
+<para>Maximum distance to the car. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="46" column="11" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1aa02e5b303e75aa458dbe9235238449fc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ConePathPlannerNode::max_dist_to_neighbor_</definition>
+        <argsstring></argsstring>
+        <name>max_dist_to_neighbor_</name>
+        <briefdescription>
+<para>Maximum distance to the neighbor cone. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="47" column="11" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1aea3d77ad3079306d357d7986f5288d30" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ConePathPlannerNode::threshold_directional_angle_</definition>
+        <argsstring></argsstring>
+        <name>threshold_directional_angle_</name>
+        <briefdescription>
+<para>Threshold for directional angle (rad). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="48" column="11" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a7d43b7497673e98dddc244e37bdbbac4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ConePathPlannerNode::threshold_absolute_angle_</definition>
+        <argsstring></argsstring>
+        <name>threshold_absolute_angle_</name>
+        <briefdescription>
+<para>Threshold for absolute angle (rad). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="49" column="11" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a34267836fd04bbe1a9409ddbe0eb96b0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ConePathPlannerNode::threshold_other_side_angle_</definition>
+        <argsstring></argsstring>
+        <name>threshold_other_side_angle_</name>
+        <briefdescription>
+<para>Threshold for the other side angle (rad). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="50" column="11" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a713b7812a33a348a6524d81c5a8a86e0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ConePathPlannerNode::threshold_filter_angle_</definition>
+        <argsstring></argsstring>
+        <name>threshold_filter_angle_</name>
+        <briefdescription>
+<para>Threshold for filtering cones in beetween (rad). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="51" column="11" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a31e792fb4f307aa8c5210f59d5332040" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ConePathPlannerNode::min_track_width_</definition>
+        <argsstring></argsstring>
+        <name>min_track_width_</name>
+        <briefdescription>
+<para>Minimum track width. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="52" column="11" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a4836a7be118b6e8c516b4d576f5e03ad" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ConePathPlannerNode::max_search_range_</definition>
+        <argsstring></argsstring>
+        <name>max_search_range_</name>
+        <briefdescription>
+<para>Maximum search range for matching cones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="53" column="11" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1ad137e5c01f61a023f7de57c018878e0b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ConePathPlannerNode::max_search_angle_</definition>
+        <argsstring></argsstring>
+        <name>max_search_angle_</name>
+        <briefdescription>
+<para>Maximum search angle for matching cones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="54" column="11" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a78ceab8183a06f38390607e23abef2c1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ConePathPlannerNode::debug_</definition>
+        <argsstring></argsstring>
+        <name>debug_</name>
+        <briefdescription>
+<para>Whether to enable debug mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="55" column="10" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1af5c61f474c05eb71e247507b79f65044" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ConePathPlannerNode::cones_topic_</definition>
+        <argsstring></argsstring>
+        <name>cones_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to cone messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="58" column="17" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a3639a2f06c64fdc280cb4ac4ac664a70" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ConePathPlannerNode::pose_topic_</definition>
+        <argsstring></argsstring>
+        <name>pose_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to pose messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="59" column="17" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a7775e62e9887d80a2293aa1271950f5c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ConePathPlannerNode::reactive_raceline_topic_</definition>
+        <argsstring></argsstring>
+        <name>reactive_raceline_topic_</name>
+        <briefdescription>
+<para>Topic for publishing the reactive raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="60" column="17" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a4841f314abc431738b3cdc631b27faa4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ConePathPlannerNode::path_visualization_topic_</definition>
+        <argsstring></argsstring>
+        <name>path_visualization_topic_</name>
+        <briefdescription>
+<para>Topic for publishing path visualization markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="61" column="17" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a11f083dce5079d53720d21619b9319bf" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ConePathPlannerNode::is_ready_service_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_</name>
+        <briefdescription>
+<para>Service name for checking if the node is ready. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="62" column="17" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a6aa1deff71ad5082e50ba042edcf0da2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ConePathPlannerNode::cones_received</definition>
+        <argsstring></argsstring>
+        <name>cones_received</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the cones have been received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="64" column="10" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1ab0f91a51fc003feef7b390635b110ace" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ConePathPlannerNode::pose_received</definition>
+        <argsstring></argsstring>
+        <name>pose_received</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the current pose has been received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="65" column="10" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1ae7a14a26ec052286c290e77f5a2a6261" prot="private" static="no" mutable="no">
+        <type>ubm_interfaces::msg::LandmarkArray</type>
+        <definition>ubm_interfaces::msg::LandmarkArray ConePathPlannerNode::cones_</definition>
+        <argsstring></argsstring>
+        <name>cones_</name>
+        <briefdescription>
+<para>Message to hold the cones data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="68" column="40" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1adea05fada992aeaa812fbf264b2f920b" prot="private" static="no" mutable="no">
+        <type><ref refid="classConeSorting" kindref="compound">ConeSorting</ref></type>
+        <definition>ConeSorting ConePathPlannerNode::cone_sorting</definition>
+        <argsstring></argsstring>
+        <name>cone_sorting</name>
+        <briefdescription>
+<para>Instance of the <ref refid="classConeSorting" kindref="compound">ConeSorting</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="69" column="17" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a1f32b3806552b34454ab32061901727a" prot="private" static="no" mutable="no">
+        <type><ref refid="classConeMatching" kindref="compound">ConeMatching</ref></type>
+        <definition>ConeMatching ConePathPlannerNode::cone_matching</definition>
+        <argsstring></argsstring>
+        <name>cone_matching</name>
+        <briefdescription>
+<para>Instance of the <ref refid="classConeMatching" kindref="compound">ConeMatching</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="70" column="18" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a9b324803b233bba03cee478953a35ee3" prot="private" static="no" mutable="no">
+        <type><ref refid="classCubicSpline2d" kindref="compound" external="/__w/ubm-docs/ubm-docs/cross_reference/simple_control_algos/simple_control_algos.tag">CubicSpline2d</ref></type>
+        <definition>CubicSpline2d ConePathPlannerNode::spline</definition>
+        <argsstring></argsstring>
+        <name>spline</name>
+        <briefdescription>
+<para>Cubic spline representing the reference path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="71" column="19" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a065017a124eeb5c802b33ebbb3c7c9f1" prot="private" static="no" mutable="no">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose ConePathPlannerNode::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+<para>Current pose of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="74" column="30" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1ab02c61f8c1db833a7795894403419f18" prot="private" static="no" mutable="no">
+        <type>ubm_interfaces::msg::LandmarkArray</type>
+        <definition>ubm_interfaces::msg::LandmarkArray ConePathPlannerNode::current_cones</definition>
+        <argsstring></argsstring>
+        <name>current_cones</name>
+        <briefdescription>
+<para>Array of cones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="75" column="40" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1ab05976b52fbeec441c653190fb794caf" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::array&lt; float, 3 &gt; &gt;</type>
+        <definition>std::vector&lt;std::array&lt;float, 3&gt; &gt; ConePathPlannerNode::cone_array_sorting</definition>
+        <argsstring></argsstring>
+        <name>cone_array_sorting</name>
+        <briefdescription>
+<para>Vector to hold cone data for sorting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="78" column="17" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a2d5da5a0e166eb9d03bc0a67a84a7e6a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::array&lt; float, 2 &gt; &gt;</type>
+        <definition>std::vector&lt;std::array&lt;float, 2&gt; &gt; ConePathPlannerNode::cone_array_matching</definition>
+        <argsstring></argsstring>
+        <name>cone_array_matching</name>
+        <briefdescription>
+<para>Vector to hold cone data for sorting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="79" column="17" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1afbe80b33885f8c0611ae193872689a8a" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::LandmarkArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::LandmarkArray&gt;::SharedPtr ConePathPlannerNode::cones_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>cones_subscriber_</name>
+        <briefdescription>
+<para>Subscription to the cones topic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="82" column="38" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a02a910f52cb6b43d30c942d11819bfbe" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr ConePathPlannerNode::pose_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>pose_subscriber_</name>
+        <briefdescription>
+<para>Subscription to the pose topic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="83" column="38" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1ac1c9ddceef062df538c338747a3afe68" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::PathLimits &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::PathLimits&gt;::SharedPtr ConePathPlannerNode::reactive_raceline_publisher_</definition>
+        <argsstring></argsstring>
+        <name>reactive_raceline_publisher_</name>
+        <briefdescription>
+<para>Publisher for the reactive raceline topic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="86" column="35" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConePathPlannerNode_1a114f00a64c1d775679f844111146014f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr ConePathPlannerNode::path_visualization_publisher_</definition>
+        <argsstring></argsstring>
+        <name>path_visualization_publisher_</name>
+        <briefdescription>
+<para>Publisher for path visualization markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="87" column="35" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classConePathPlannerNode_1aa1dcf02d80613904fd814d7e1190c071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConePathPlannerNode::ConePathPlannerNode</definition>
+        <argsstring>()</argsstring>
+        <name>ConePathPlannerNode</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classConePathPlanner" kindref="compound">ConePathPlanner</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the ROS node and sets up parameters and communication. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="36" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classConePathPlannerNode_1ab7f72dc6a1453b8a353d7e9c2fc88870" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConePathPlannerNode::initialize_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_parameters</name>
+        <briefdescription>
+<para>Initialize ROS parameters for the node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameters are declared and retrieved from the ROS parameter server. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="94" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classConePathPlannerNode_1acf305aae2f1c5add5fb32c40be20fffe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConePathPlannerNode::initialize_ros_communication</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_ros_communication</name>
+        <briefdescription>
+<para>Set up ROS subscribers and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a subscription to the cones topic and pose topic, and a publisher for the reactive raceline topic. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="102" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classConePathPlannerNode_1ac06bd7f127032e0998d3190b219c18ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConePathPlannerNode::cones_callback</definition>
+        <argsstring>(const ubm_interfaces::msg::LandmarkArray::SharedPtr cones_msg)</argsstring>
+        <name>cones_callback</name>
+        <param>
+          <type>const ubm_interfaces::msg::LandmarkArray::SharedPtr</type>
+          <declname>cones_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle cones updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cones message containing the detected cones. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="109" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classConePathPlannerNode_1ac887f2c769b345766744007faa5a65de" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConePathPlannerNode::pose_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr pose_msg)</argsstring>
+        <name>pose_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>pose_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle pose updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odometry message containing the current pose of the vehicle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="116" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classConePathPlannerNode_1a04a86993302b5a5cdb1c6081ada0f8fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConePathPlannerNode::control_loop</definition>
+        <argsstring>()</argsstring>
+        <name>control_loop</name>
+        <briefdescription>
+<para>Control loop for received cones and generating a reactive raceline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is called periodically to process the received cones and generate a reactive raceline based on the current pose of the vehicle. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="124" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classConePathPlannerNode_1a5f35ebb70d6a083881359f69e8109628" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::array&lt; float, 2 &gt;</type>
+        <definition>std::array&lt;float, 2&gt; ConePathPlannerNode::quaternion_to_2d_direction</definition>
+        <argsstring>(const geometry_msgs::msg::Quaternion &amp;quaternion)</argsstring>
+        <name>quaternion_to_2d_direction</name>
+        <param>
+          <type>const geometry_msgs::msg::Quaternion &amp;</type>
+          <declname>quaternion</declname>
+        </param>
+        <briefdescription>
+<para>Converts a quaternion to a 2D direction vector (cosine directors) based on the yaw angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function extracts the yaw angle from the quaternion (rotation around the Z-axis) and computes the corresponding 2D direction vector [cos(yaw), sin(yaw)].</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>quaternion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input quaternion representing the orientation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A std::array&lt;float, 2&gt; containing the 2D direction vector [cos(yaw), sin(yaw)]. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="136" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ConePathPlannerNode</label>
+        <link refid="classConePathPlannerNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ConePathPlannerNode</label>
+        <link refid="classConePathPlannerNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/cone_path_planner/cone_path_planner_node.hpp" line="29" column="46" bodyfile="include/cone_path_planner/cone_path_planner_node.hpp" bodystart="29" bodyend="137"/>
+    <listofallmembers>
+      <member refid="classConePathPlannerNode_1a2d5da5a0e166eb9d03bc0a67a84a7e6a" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>cone_array_matching</name></member>
+      <member refid="classConePathPlannerNode_1ab05976b52fbeec441c653190fb794caf" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>cone_array_sorting</name></member>
+      <member refid="classConePathPlannerNode_1a1f32b3806552b34454ab32061901727a" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>cone_matching</name></member>
+      <member refid="classConePathPlannerNode_1adea05fada992aeaa812fbf264b2f920b" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>cone_sorting</name></member>
+      <member refid="classConePathPlannerNode_1aa1dcf02d80613904fd814d7e1190c071" prot="public" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>ConePathPlannerNode</name></member>
+      <member refid="classConePathPlannerNode_1ae7a14a26ec052286c290e77f5a2a6261" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>cones_</name></member>
+      <member refid="classConePathPlannerNode_1ac06bd7f127032e0998d3190b219c18ec" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>cones_callback</name></member>
+      <member refid="classConePathPlannerNode_1a6aa1deff71ad5082e50ba042edcf0da2" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>cones_received</name></member>
+      <member refid="classConePathPlannerNode_1afbe80b33885f8c0611ae193872689a8a" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>cones_subscriber_</name></member>
+      <member refid="classConePathPlannerNode_1af5c61f474c05eb71e247507b79f65044" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>cones_topic_</name></member>
+      <member refid="classConePathPlannerNode_1a04a86993302b5a5cdb1c6081ada0f8fb" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>control_loop</name></member>
+      <member refid="classConePathPlannerNode_1ab02c61f8c1db833a7795894403419f18" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>current_cones</name></member>
+      <member refid="classConePathPlannerNode_1a065017a124eeb5c802b33ebbb3c7c9f1" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>current_pose</name></member>
+      <member refid="classConePathPlannerNode_1a78ceab8183a06f38390607e23abef2c1" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>debug_</name></member>
+      <member refid="classConePathPlannerNode_1ac126336213784dcc3533586e660db38f" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>default_clock_</name></member>
+      <member refid="classConePathPlannerNode_1a81a675b780f7eeabf922d2dd312b17de" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>disable_print_timeout_</name></member>
+      <member refid="classConePathPlannerNode_1ab7f72dc6a1453b8a353d7e9c2fc88870" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>initialize_parameters</name></member>
+      <member refid="classConePathPlannerNode_1acf305aae2f1c5add5fb32c40be20fffe" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>initialize_ros_communication</name></member>
+      <member refid="classConePathPlannerNode_1a11f083dce5079d53720d21619b9319bf" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>is_ready_service_</name></member>
+      <member refid="classConePathPlannerNode_1a60c2923958c02e29b837f29ebbf28925" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>max_dist_</name></member>
+      <member refid="classConePathPlannerNode_1aa59462cca20e54ae24af9fbed3762859" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>max_dist_to_car_</name></member>
+      <member refid="classConePathPlannerNode_1aa02e5b303e75aa458dbe9235238449fc" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>max_dist_to_neighbor_</name></member>
+      <member refid="classConePathPlannerNode_1ae40d7f18dadaf875334e242a10f70df1" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>max_length_</name></member>
+      <member refid="classConePathPlannerNode_1a367b7fb272427e59336cc51f82576652" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>max_n_neighbors_</name></member>
+      <member refid="classConePathPlannerNode_1ad137e5c01f61a023f7de57c018878e0b" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>max_search_angle_</name></member>
+      <member refid="classConePathPlannerNode_1a4836a7be118b6e8c516b4d576f5e03ad" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>max_search_range_</name></member>
+      <member refid="classConePathPlannerNode_1a31e792fb4f307aa8c5210f59d5332040" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>min_track_width_</name></member>
+      <member refid="classConePathPlannerNode_1a114f00a64c1d775679f844111146014f" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>path_visualization_publisher_</name></member>
+      <member refid="classConePathPlannerNode_1a4841f314abc431738b3cdc631b27faa4" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>path_visualization_topic_</name></member>
+      <member refid="classConePathPlannerNode_1ac887f2c769b345766744007faa5a65de" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>pose_callback</name></member>
+      <member refid="classConePathPlannerNode_1ab0f91a51fc003feef7b390635b110ace" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>pose_received</name></member>
+      <member refid="classConePathPlannerNode_1a02a910f52cb6b43d30c942d11819bfbe" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>pose_subscriber_</name></member>
+      <member refid="classConePathPlannerNode_1a3639a2f06c64fdc280cb4ac4ac664a70" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>pose_topic_</name></member>
+      <member refid="classConePathPlannerNode_1a5f35ebb70d6a083881359f69e8109628" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>quaternion_to_2d_direction</name></member>
+      <member refid="classConePathPlannerNode_1ac1c9ddceef062df538c338747a3afe68" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>reactive_raceline_publisher_</name></member>
+      <member refid="classConePathPlannerNode_1a7775e62e9887d80a2293aa1271950f5c" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>reactive_raceline_topic_</name></member>
+      <member refid="classConePathPlannerNode_1a9b324803b233bba03cee478953a35ee3" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>spline</name></member>
+      <member refid="classConePathPlannerNode_1a7d43b7497673e98dddc244e37bdbbac4" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>threshold_absolute_angle_</name></member>
+      <member refid="classConePathPlannerNode_1aea3d77ad3079306d357d7986f5288d30" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>threshold_directional_angle_</name></member>
+      <member refid="classConePathPlannerNode_1a713b7812a33a348a6524d81c5a8a86e0" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>threshold_filter_angle_</name></member>
+      <member refid="classConePathPlannerNode_1a34267836fd04bbe1a9409ddbe0eb96b0" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>threshold_other_side_angle_</name></member>
+      <member refid="classConePathPlannerNode_1adca3ca76f9322bc478a7eafaa8262224" prot="private" virt="non-virtual"><scope>ConePathPlannerNode</scope><name>use_unknown_cones_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

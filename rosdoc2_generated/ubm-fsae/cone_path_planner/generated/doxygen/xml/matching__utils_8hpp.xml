@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="matching__utils_8hpp" kind="file" language="C++">
+    <compoundname>matching_utils.hpp</compoundname>
+    <includes local="no">armadillo</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">algorithm</includes>
+    <includedby refid="calculate__costs_8hpp" local="yes">include/cone_path_planner/calculate_costs.hpp</includedby>
+    <includedby refid="cone__matching_8hpp" local="yes">include/cone_path_planner/cone_matching.hpp</includedby>
+    <includedby refid="costs__utils_8hpp" local="yes">include/cone_path_planner/costs_utils.hpp</includedby>
+    <includedby refid="functional__cone__matching_8hpp" local="yes">include/cone_path_planner/functional_cone_matching.hpp</includedby>
+    <includedby refid="nearby__cone__search_8hpp" local="yes">include/cone_path_planner/nearby_cone_search.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/matching_utils.hpp</label>
+        <link refid="matching__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>armadillo</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/cone_path_planner/costs_utils.hpp</label>
+        <link refid="costs__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/cone_path_planner/calculate_costs.hpp</label>
+        <link refid="calculate__costs_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/matching_utils.hpp</label>
+        <link refid="matching__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="matching__utils_8hpp_1a1c3b726d411650145e09826616cfc75d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::frowvec</type>
+        <definition>arma::frowvec rotate_row_vector</definition>
+        <argsstring>(const arma::frowvec &amp;v, float angle)</argsstring>
+        <name>rotate_row_vector</name>
+        <param>
+          <type>const arma::frowvec &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>Rotate a 2D row vector by a given angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row vector (size 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rotation angle in radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rotated row vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/matching_utils.hpp" line="16" column="15" declfile="include/cone_path_planner/matching_utils.hpp" declline="16" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="matching__utils_8hpp_1a0323abb3e93a31300c2814bb96d31497" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fmat</type>
+        <definition>arma::fmat rotate_matrix</definition>
+        <argsstring>(const arma::fmat &amp;points, float angle)</argsstring>
+        <name>rotate_matrix</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>Rotate a matrix of 2D points by a given angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix where each row is a 2D point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rotation angle in radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rotated matrix. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/matching_utils.hpp" line="25" column="12" declfile="include/cone_path_planner/matching_utils.hpp" declline="25" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="matching__utils_8hpp_1a51598923ec40712522fa728c92390cbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fmat</type>
+        <definition>arma::fmat find_angles</definition>
+        <argsstring>(const arma::fmat &amp;A, const arma::fmat &amp;B)</argsstring>
+        <name>find_angles</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>B</declname>
+        </param>
+        <briefdescription>
+<para>Calculate pairwise angles between rows of two matrices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First matrix (M x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second matrix (N x 2). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Matrix (M x N) containing angles in radians. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/matching_utils.hpp" line="34" column="12" declfile="include/cone_path_planner/matching_utils.hpp" declline="34" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="matching__utils_8hpp_1a91c30f4e147b613974742fb7fbb7dc8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; angles_from_matrix_std</definition>
+        <argsstring>(const arma::fmat &amp;points)</argsstring>
+        <name>angles_from_matrix_std</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the angles from 2D vectors to the x-axis. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix where each row is a 2D point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of angles in radians. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/matching_utils.hpp" line="42" column="13" declfile="include/cone_path_planner/matching_utils.hpp" declline="42" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="matching__utils_8hpp_1afcb56065ad5ddcd3a5182b27a1c2448d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec angles_from_matrix</definition>
+        <argsstring>(const arma::fmat &amp;mat)</argsstring>
+        <name>angles_from_matrix</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+<para>Computes the angles (in radians) between consecutive row vectors of a matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a matrix where each row is a vector and calculates the angle between each pair of consecutive rows using the dot product formula. The result is a vector of angles in radians, with one fewer element than the number of rows in the input matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix (<computeroutput>arma::fmat</computeroutput>) where each row represents a vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector (<computeroutput>arma::fvec</computeroutput>) containing the angles in radians between each pair of consecutive row vectors.</para>
+</simplesect>
+<simplesect kind="note"><para>The function clamps the cosine values to [-1, 1] to avoid domain errors in <computeroutput>acos</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/matching_utils.hpp" line="58" column="12" declfile="include/cone_path_planner/matching_utils.hpp" declline="58" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="matching__utils_8hpp_1a82b36a99a82b28a68c67b3e06e461e4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fvec</type>
+        <definition>arma::fvec trace_angles_between</definition>
+        <argsstring>(const arma::fmat &amp;mat)</argsstring>
+        <name>trace_angles_between</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+<para>Compute angles between consecutive row vectors in a matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a matrix <computeroutput>mat</computeroutput> where each row is a vector of float, this function returns a vector of angles (in radians) between consecutive rows.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input matrix (NxM), each row is a vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>arma::fvec Vector of size N-1 with angles between consecutive rows. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/matching_utils.hpp" line="70" column="12" declfile="include/cone_path_planner/matching_utils.hpp" declline="70" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/matching_utils.hpp"/>
+  </compounddef>
+</doxygen>

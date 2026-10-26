@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacesl__oc_1_1video" kind="namespace" language="C++">
+    <compoundname>sl_oc::video</compoundname>
+    <innerclass refid="structsl__oc_1_1video_1_1Resolution" prot="public">sl_oc::video::Resolution</innerclass>
+    <innerclass refid="structsl__oc_1_1video_1_1UVCBuffer" prot="public">sl_oc::video::UVCBuffer</innerclass>
+    <innerclass refid="structsl__oc_1_1video_1_1VideoParams" prot="public">sl_oc::video::VideoParams</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="videocapture__def_8hpp_1ad7d2d1743872a22ac88a5d938bc9e33f" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>SL_DEVICE</name>
+        <enumvalue id="videocapture__def_8hpp_1ad7d2d1743872a22ac88a5d938bc9e33fa70e519e34a6d0625129508391ceed654" prot="public">
+          <name>ZED</name>
+          <briefdescription>
+<para>ZED old FW. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1ad7d2d1743872a22ac88a5d938bc9e33faccc49115bf464e05db413e56744704b9" prot="public">
+          <name>ZED_M</name>
+          <briefdescription>
+<para>ZED Mini old FW. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1ad7d2d1743872a22ac88a5d938bc9e33fa21e89914d0cc9a5af85bd7c99a847367" prot="public">
+          <name>ZED_CBS</name>
+          <briefdescription>
+<para>ZED new FW. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1ad7d2d1743872a22ac88a5d938bc9e33facbb340102fa8ec2211efa8775cdc97e4" prot="public">
+          <name>ZED_M_CBS</name>
+          <briefdescription>
+<para>ZED Mini new FW. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1ad7d2d1743872a22ac88a5d938bc9e33fa603368901fe048d35e42ea73a0a2bfda" prot="public">
+          <name>ZED_2</name>
+          <briefdescription>
+<para>ZED2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1ad7d2d1743872a22ac88a5d938bc9e33fa6ed7ef1ff4831027012d79c6b5f8ad5f" prot="public">
+          <name>ZED_2i</name>
+          <briefdescription>
+<para>ZED2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1ad7d2d1743872a22ac88a5d938bc9e33fab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Camera models. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/videocapture_def.hpp" line="37" column="21" bodyfile="include/videocapture_def.hpp" bodystart="37" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="enum" id="videocapture__def_8hpp_1a05c2df30a13cdf5ff439ad2a1a18fb09" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>RESOLUTION</name>
+        <enumvalue id="videocapture__def_8hpp_1a05c2df30a13cdf5ff439ad2a1a18fb09ab5cf8bac4234790ecda4797bf325116c" prot="public">
+          <name>HD2K</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>2208*1242, available framerates: 15 fps. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1a05c2df30a13cdf5ff439ad2a1a18fb09aebf416754b5b57c91ce22b025015031b" prot="public">
+          <name>HD1080</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>1920*1080, available framerates: 15, 30 fps. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1a05c2df30a13cdf5ff439ad2a1a18fb09a4cdfd6b884ead99d46d935f580246f0e" prot="public">
+          <name>HD720</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>1280*720, available framerates: 15, 30, 60 fps. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1a05c2df30a13cdf5ff439ad2a1a18fb09adb4371197d1f58c7d4edb7dcd0565ad1" prot="public">
+          <name>VGA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>672*376, available framerates: 15, 30, 60, 100 fps. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1a05c2df30a13cdf5ff439ad2a1a18fb09af447f5c03508de4d88e340390ba7c78f" prot="public">
+          <name>LAST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Available resolutions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/videocapture_def.hpp" line="50" column="22" bodyfile="include/videocapture_def.hpp" bodystart="50" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="enum" id="videocapture__def_8hpp_1a422befca5974cb7ccb89919c0eec3662" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>FPS</name>
+        <enumvalue id="videocapture__def_8hpp_1a422befca5974cb7ccb89919c0eec3662a2d2534a49a411d2d25a839fa52a071a6" prot="public">
+          <name>FPS_15</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para>15 Frames per second. Available for all the resolutions. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1a422befca5974cb7ccb89919c0eec3662a4491b5a81b26c2d60e7d60334d658d0d" prot="public">
+          <name>FPS_30</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+<para>30 Frames per second. Not available for RESOLUTION::HD2K. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1a422befca5974cb7ccb89919c0eec3662a97ca268671aa69223171bb0b4aa1461d" prot="public">
+          <name>FPS_60</name>
+          <initializer>= 60</initializer>
+          <briefdescription>
+<para>60 Frames per second. Not available for RESOLUTION::HD2K and RESOLUTION::HD1080. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1a422befca5974cb7ccb89919c0eec3662a5f5e2e56f742de174c12628f138b4a43" prot="public">
+          <name>FPS_100</name>
+          <initializer>= 100</initializer>
+          <briefdescription>
+<para>100 Frames per second. Only available for RESOLUTION::VGA. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1a422befca5974cb7ccb89919c0eec3662af447f5c03508de4d88e340390ba7c78f" prot="public">
+          <name>LAST</name>
+          <initializer>= 101</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Available frames per seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/videocapture_def.hpp" line="61" column="15" bodyfile="include/videocapture_def.hpp" bodystart="61" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="enum" id="videocapture__def_8hpp_1a7e6c10d39fd369376814fd736979a176" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>CAM_SENS_POS</name>
+        <enumvalue id="videocapture__def_8hpp_1a7e6c10d39fd369376814fd736979a176a684d325a7303f52e64011467ff5c5758" prot="public">
+          <name>LEFT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>The left sensor. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1a7e6c10d39fd369376814fd736979a176a21507b40c80068eda19865706fdc2403" prot="public">
+          <name>RIGHT</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>The right sensor. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="videocapture__def_8hpp_1a7e6c10d39fd369376814fd736979a176af447f5c03508de4d88e340390ba7c78f" prot="public">
+          <name>LAST</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Position of the Camera CMOS sensors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/videocapture_def.hpp" line="72" column="24" bodyfile="include/videocapture_def.hpp" bodystart="72" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="videocapture__def_8hpp_1a2ea4cd892c21be73f3e63eb966433d75" prot="public" static="no">
+        <type>struct <ref refid="structsl__oc_1_1video_1_1VideoParams" kindref="compound">sl_oc::video::VideoParams</ref></type>
+        <definition>typedef struct sl_oc::video::VideoParams sl_oc::video::VideoParams</definition>
+        <argsstring></argsstring>
+        <name>VideoParams</name>
+        <briefdescription>
+<para>The camera configuration parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/videocapture_def.hpp" line="95" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="videocapture__def_8hpp_1adb69005aabfeadd9e308aa67a3ddff64" prot="public" static="yes" mutable="no">
+        <type>const std::vector&lt; <ref refid="structsl__oc_1_1video_1_1Resolution" kindref="compound">Resolution</ref> &gt;</type>
+        <definition>const std::vector&lt;Resolution&gt; sl_oc::video::cameraResolution</definition>
+        <argsstring></argsstring>
+        <name>cameraResolution</name>
+        <initializer>= {
+    <ref refid="structsl__oc_1_1video_1_1Resolution" kindref="compound">Resolution</ref>(2208, 1242),     
+    <ref refid="structsl__oc_1_1video_1_1Resolution" kindref="compound">Resolution</ref>(1920, 1080),     
+    <ref refid="structsl__oc_1_1video_1_1Resolution" kindref="compound">Resolution</ref>(1280, 720),      
+    <ref refid="structsl__oc_1_1video_1_1Resolution" kindref="compound">Resolution</ref>(672, 376)        
+}</initializer>
+        <briefdescription>
+<para>Vector of the available resolutions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/videocapture_def.hpp" line="116" column="26" bodyfile="include/videocapture_def.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="videocapture__def_8hpp_1ab2154fe3d39373015d1d0c17a6cc5bc4" prot="public" static="no" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char sl_oc::video::PRESET_GAMMA[9][16]</definition>
+        <argsstring>[9][16]</argsstring>
+        <name>PRESET_GAMMA</name>
+        <initializer>= {
+    {7,14,29,54,66,78,89,103,114,123,139,154,183,206,228,254}, 
+    {9,17,34,58,71,83,89,108,118,127,143,158,186,208,229,254},
+    {10,20,38,63,75,88,99,112,123,132,147,162,189,210,230,254},
+    {12,23,43,67,80,92,103,117,127,136,151,165,192,212,231,254},
+    {13,26,47,71,84,97,108,121,131,140,155,169,195,214,232,255}, 
+    {18,32,54,80,93,106,117,130,140,149,164,177,202,219,236,255},
+    {24,38,61,88,102,115,127,139,148,157,172,186,209,225,240,255},
+    {29,44,68,97,111,124,136,147,157,166,181,194,215,230,243,255},
+    {34,50,75,105,120,133,145,156,165,174,189,202,222,235,247,255} 
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Camera presets for gamma </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/videocapture_def.hpp" line="138" column="21" bodyfile="include/videocapture_def.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/videocapture_def.hpp" line="32" column="15"/>
+  </compounddef>
+</doxygen>

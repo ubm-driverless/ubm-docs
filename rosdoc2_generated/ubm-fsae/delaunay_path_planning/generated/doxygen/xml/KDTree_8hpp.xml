@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="KDTree_8hpp" kind="file" language="C++">
+    <compoundname>KDTree.hpp</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">list</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">set</includes>
+    <includes local="no">unordered_set</includes>
+    <includes local="no">vector</includes>
+    <includes refid="Point_8hpp" local="yes">structures/Point.hpp</includes>
+    <includedby refid="WayComputer_8hpp" local="yes">include/modules/WayComputer.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>list</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="6">
+        <label>limits</label>
+      </node>
+      <node id="5">
+        <label>iterator</label>
+      </node>
+      <node id="15">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="10">
+        <label>unordered_set</label>
+      </node>
+      <node id="12">
+        <label>structures/Point.hpp</label>
+        <link refid="Point_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>geometry_msgs/msg/point.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/utils/KDTree.hpp</label>
+        <link refid="KDTree_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>set</label>
+      </node>
+      <node id="2">
+        <label>algorithm</label>
+      </node>
+      <node id="8">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/modules/WayComputer.hpp</label>
+        <link refid="WayComputer_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/utils/KDTree.hpp</label>
+        <link refid="KDTree_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classKDTData" prot="public">KDTData</innerclass>
+    <innerclass refid="classKDNode" prot="public">KDNode</innerclass>
+    <innerclass refid="classcomparer" prot="public">comparer</innerclass>
+    <innerclass refid="classKDTree" prot="public">KDTree</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="KDTree_8hpp_1abf2e15e844088c8d93c30088fc07defb" prot="public" static="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>using indexArr =  std::vector&lt;size_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>indexArr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="32" column="1" bodyfile="include/utils/KDTree.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="KDTree_8hpp_1a9afe6e3c1cecd37e54785c8b004075e3" prot="public" static="no">
+        <type>typename std::pair&lt; <ref refid="classPoint" kindref="compound">Point</ref>, size_t &gt;</type>
+        <definition>using pointIndex =  typename std::pair&lt;Point, size_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>pointIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="33" column="1" bodyfile="include/utils/KDTree.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="KDTree_8hpp_1aeb34c58dd74e141b98afce46c9c53db9" prot="public" static="no">
+        <type>typename <ref refid="classKDTData" kindref="compound">KDTData</ref>&lt; pointIndex &gt;::<ref refid="classKDTData" kindref="compound">KDTData</ref></type>
+        <definition>using pointIndexV =  typename KDTData&lt;pointIndex&gt;::KDTData</definition>
+        <argsstring></argsstring>
+        <name>pointIndexV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="53" column="1" bodyfile="include/utils/KDTree.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="KDTree_8hpp_1adfaebd549c963997541614e0427e6d00" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classKDNode" kindref="compound">KDNode</ref> &gt;</type>
+        <definition>using KDNodePtr =  std::shared_ptr&lt;KDNode&gt;</definition>
+        <argsstring></argsstring>
+        <name>KDNodePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="79" column="1" bodyfile="include/utils/KDTree.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="KDTree_8hpp_1ab8753fea3054d0b0f4136f82522a19ee" prot="public" static="no">
+        <type>typename std::vector&lt; pointIndex &gt;</type>
+        <definition>using pointIndexArr =  typename std::vector&lt;pointIndex&gt;</definition>
+        <argsstring></argsstring>
+        <name>pointIndexArr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="102" column="1" bodyfile="include/utils/KDTree.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="KDTree_8hpp_1ab22afbda3c0a3862918b98bff1a86fdf" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="classPoint" kindref="compound">Point</ref> &gt;</type>
+        <definition>using pointVec =  std::vector&lt;Point&gt;</definition>
+        <argsstring></argsstring>
+        <name>pointVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="108" column="1" bodyfile="include/utils/KDTree.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="KDTree_8hpp_1a4dac0c91f372c2406062b6a03aba177a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>KDNodePtr</type>
+        <definition>KDNodePtr NewKDNodePtr</definition>
+        <argsstring>()</argsstring>
+        <name>NewKDNodePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="81" column="11" declfile="include/utils/KDTree.hpp" declline="81" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="KDTree_8hpp_1aab801d0fe972606a2b594b0796e68ae7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double dist2</definition>
+        <argsstring>(const Point &amp;, const Point &amp;)</argsstring>
+        <name>dist2</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="84" column="15" declfile="include/utils/KDTree.hpp" declline="84" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="KDTree_8hpp_1a88aaadba7a0a8e0bd52e2380d116833c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double dist2</definition>
+        <argsstring>(const KDNodePtr &amp;, const KDNodePtr &amp;)</argsstring>
+        <name>dist2</name>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+        </param>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="85" column="15" declfile="include/utils/KDTree.hpp" declline="85" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="KDTree_8hpp_1a9de82da48538536f6bbf6ddf44277e08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double dist</definition>
+        <argsstring>(const Point &amp;, const Point &amp;)</argsstring>
+        <name>dist</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="88" column="15" declfile="include/utils/KDTree.hpp" declline="88" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="KDTree_8hpp_1a2ef9933373b5d16ac094d441bc621419" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double dist</definition>
+        <argsstring>(const KDNodePtr &amp;, const KDNodePtr &amp;)</argsstring>
+        <name>dist</name>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+        </param>
+        <param>
+          <type>const KDNodePtr &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="89" column="15" declfile="include/utils/KDTree.hpp" declline="89" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="KDTree_8hpp_1a84e25d849d9a5093a58961746e72712d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sort_on_idx</definition>
+        <argsstring>(const pointIndexArr::iterator &amp;, const pointIndexArr::iterator &amp;, size_t idx)</argsstring>
+        <name>sort_on_idx</name>
+        <param>
+          <type>const pointIndexArr::iterator &amp;</type>
+        </param>
+        <param>
+          <type>const pointIndexArr::iterator &amp;</type>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/KDTree.hpp" line="104" column="13" declfile="include/utils/KDTree.hpp" declline="104" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/utils/KDTree.hpp"/>
+  </compounddef>
+</doxygen>

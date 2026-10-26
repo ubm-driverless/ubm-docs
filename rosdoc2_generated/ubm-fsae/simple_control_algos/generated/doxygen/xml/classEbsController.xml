@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classEbsController" kind="class" language="C++" prot="public">
+    <compoundname>EbsController</compoundname>
+    <basecompoundref refid="classMissionController" prot="public" virt="non-virtual">MissionController</basecompoundref>
+    <includes local="no">ebs_controller.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEbsController_1a1cccff062845a8924ad2690b0840b56a" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1NodeConfig" kindref="compound">control_structs::NodeConfig</ref> &amp;</type>
+        <definition>control_structs::NodeConfig&amp; EbsController::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ebs_controller.hpp" line="38" column="33" bodyfile="include/ebs_controller.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEbsController_1a27a200201283a1cd24fd6e4fac9fe2a2" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1ControlState" kindref="compound">control_structs::ControlState</ref> &amp;</type>
+        <definition>control_structs::ControlState&amp; EbsController::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ebs_controller.hpp" line="39" column="35" bodyfile="include/ebs_controller.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEbsController_1aa63f17193109e8bb2f0c113c1e616e00" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1RosInterfaces" kindref="compound">control_structs::RosInterfaces</ref> &amp;</type>
+        <definition>control_structs::RosInterfaces&amp; EbsController::ros_</definition>
+        <argsstring></argsstring>
+        <name>ros_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ebs_controller.hpp" line="40" column="36" bodyfile="include/ebs_controller.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEbsController_1a27d23da7bb20e42c2fdae2975111bd47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EbsController::EbsController</definition>
+        <argsstring>(control_structs::NodeConfig &amp;config, control_structs::ControlState &amp;state, control_structs::RosInterfaces &amp;ros)</argsstring>
+        <name>EbsController</name>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1NodeConfig" kindref="compound">control_structs::NodeConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1ControlState" kindref="compound">control_structs::ControlState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="structcontrol__structs_1_1RosInterfaces" kindref="compound">control_structs::RosInterfaces</ref> &amp;</type>
+          <declname>ros</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="classEbsController" kindref="compound">EbsController</ref>. Initializes parameters, subscriptions, and publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ebs_controller.hpp" line="33" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classEbsController_1a0eafeea9392ea259911d8edf6a146510" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EbsController::load_path</definition>
+        <argsstring>(const std::string &amp;file_path) override</argsstring>
+        <name>load_path</name>
+        <reimplements refid="classMissionController_1a6e4573ac1ee23bb8dd5ac505db51e6a2">load_path</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_path</declname>
+        </param>
+        <briefdescription>
+<para>Loads the raceline path from a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the raceline file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ebs_controller.hpp" line="46" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEbsController_1afeafd5a03d6e3149b6902836fd63f905" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EbsController::control_loop</definition>
+        <argsstring>() override</argsstring>
+        <name>control_loop</name>
+        <reimplements refid="classMissionController_1a9b5e0d046deccb9bee61b36ffa8c64a9">control_loop</reimplements>
+        <briefdescription>
+<para>Main control loop for the Pure Pursuit algorithm. Calculates target steering and speed, and sends control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ebs_controller.hpp" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEbsController_1a75327cdc9e2aacfdc2fabf47e795c3cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EbsController::mission_finished</definition>
+        <argsstring>() override</argsstring>
+        <name>mission_finished</name>
+        <reimplements refid="classMissionController_1a051964f5c371f5fb0cae94f2f868d516">mission_finished</reimplements>
+        <briefdescription>
+<para>Publishes the mission finished message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method publishes a message indicating that the skidpad mission has finished. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ebs_controller.hpp" line="60" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS2 node that implements the Pure Pursuit algorithm for controlling a vehicle along a raceline. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>EbsController</label>
+        <link refid="classEbsController"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MissionController</label>
+        <link refid="classMissionController"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>EbsController</label>
+        <link refid="classEbsController"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MissionController</label>
+        <link refid="classMissionController"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/ebs_controller.hpp" line="27" column="1" bodyfile="include/ebs_controller.hpp" bodystart="26" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classEbsController_1a1cccff062845a8924ad2690b0840b56a" prot="private" virt="non-virtual"><scope>EbsController</scope><name>config_</name></member>
+      <member refid="classEbsController_1afeafd5a03d6e3149b6902836fd63f905" prot="private" virt="virtual"><scope>EbsController</scope><name>control_loop</name></member>
+      <member refid="classEbsController_1a27d23da7bb20e42c2fdae2975111bd47" prot="public" virt="non-virtual"><scope>EbsController</scope><name>EbsController</name></member>
+      <member refid="classEbsController_1a0eafeea9392ea259911d8edf6a146510" prot="private" virt="virtual"><scope>EbsController</scope><name>load_path</name></member>
+      <member refid="classEbsController_1a75327cdc9e2aacfdc2fabf47e795c3cf" prot="private" virt="virtual"><scope>EbsController</scope><name>mission_finished</name></member>
+      <member refid="classMissionController_1aadf5a79dc80fcd0306d2eb93f8df129c" prot="public" virt="virtual"><scope>EbsController</scope><name>publish_control_logging</name></member>
+      <member refid="classEbsController_1aa63f17193109e8bb2f0c113c1e616e00" prot="private" virt="non-virtual"><scope>EbsController</scope><name>ros_</name></member>
+      <member refid="classEbsController_1a27a200201283a1cd24fd6e4fac9fe2a2" prot="private" virt="non-virtual"><scope>EbsController</scope><name>state_</name></member>
+      <member refid="classMissionController_1a44704e1e3185c3a5c40db140dd2f11b6" prot="public" virt="virtual"><scope>EbsController</scope><name>~MissionController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File downsampler.hpp &mdash; live_telemetry_node 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="File foxglove_logger.hpp" href="file_include_live_telemetry_node_foxglove_logger.hpp.html" />
+    <link rel="prev" title="File config.hpp" href="file_include_live_telemetry_node_config.hpp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            live_telemetry_node
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_live_telemetry.html">Namespace live_telemetry</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1DownsamplerConfig.html">Struct DownsamplerConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1ExplicitTopicConfig.html">Struct ExplicitTopicConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1FoxgloveConfig.html">Struct FoxgloveConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1FoxgloveLogger_1_1ProtobufChannelEntry.html">Struct FoxgloveLogger::ProtobufChannelEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1GatewayConfig.html">Struct GatewayConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1HandlerConfig.html">Struct HandlerConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1HandlerStats.html">Struct HandlerStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1ImageScaleConfig.html">Struct ImageScaleConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache.html">Struct PointCloudHandler::FieldOffsetCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1PublishStats.html">Struct PublishStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TelemetryConfig.html">Struct TelemetryConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TopicHandlerEntry.html">Struct TopicHandlerEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TopicSubscription.html">Struct TopicSubscription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1CameraDataHandler.html">Class CameraDataHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1Downsampler.html">Template Class Downsampler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1FoxgloveLogger.html">Class FoxgloveLogger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1Gateway.html">Class Gateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1HandlerRegistry.html">Class HandlerRegistry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1IDataProcessor.html">Template Class IDataProcessor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1ImageScaler.html">Class ImageScaler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1JpegCompressor.html">Class JpegCompressor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1LiveTelemetryNode.html">Class LiveTelemetryNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1MessageDefinitionProvider.html">Class MessageDefinitionProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1PointCloudHandler.html">Class PointCloudHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1TopicHandler.html">Class TopicHandler</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_handler__registry_8hpp_1af0e009243fdcaeca9fc2e1c3d46ef28f.html">Function live_telemetry::registerBuiltinHandlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1a636f410d668aa2133d0167862b77b19f.html">Function live_telemetry::SerializeFdSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1ad7ccfbc68745767e5472a03e85032818.html">Function live_telemetry::toProtobuf(const sensor_msgs::msg::Image&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1a414ba4df407aadc6d4f52ec37eeede52.html">Function live_telemetry::toProtobuf(const ubm_interfaces::msg::CameraData&amp;)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_downsampler_8hpp_1aa2c8255ba1f8ca167a256b784c994ddd.html">Typedef live_telemetry::CameraDataDownsampler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_topic__handler_8hpp_1a36bdfa6a4084a2867bf3bb495a57398e.html">Typedef live_telemetry::HandlerFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_point__cloud__handler_8hpp_1a28ee942b3cd4f29e99a564ae5240f529.html">Typedef live_telemetry::PointCloud2Downsampler</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_live_telemetry_node.html">Directory live_telemetry_node</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#files">Files</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_camera_data_handler.hpp.html">File camera_data_handler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_config.hpp.html">File config.hpp</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">File downsampler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_foxglove_logger.hpp.html">File foxglove_logger.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_gateway.hpp.html">File gateway.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_handler_registry.hpp.html">File handler_registry.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_image_scaler.hpp.html">File image_scaler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_jpeg_compressor.hpp.html">File jpeg_compressor.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_live_telemetry_node.hpp.html">File live_telemetry_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_message_definition_provider.hpp.html">File message_definition_provider.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_point_cloud_handler.hpp.html">File point_cloud_handler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_protobuf_converter.hpp.html">File protobuf_converter.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_topic_handler.hpp.html">File topic_handler.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#live-telemetry-node">Live Telemetry Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#problem">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#solution">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#architecture">Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#quick-start">Quick Start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#specialized-handlers">Specialized Handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#build-run">Build &amp; Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#performance-replay-docker">Performance Replay (Docker)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">live_telemetry_node</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">File downsampler.hpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/file_include_live_telemetry_node_downsampler.hpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-downsampler-hpp">
+<span id="file-include-live-telemetry-node-downsampler-hpp"></span><h1>File downsampler.hpp<a class="headerlink" href="#file-downsampler-hpp" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="dir_include_live_telemetry_node.html#dir-include-live-telemetry-node"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">include/live_telemetry_node</span></code>)</p>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-include-live-telemetry-node-downsampler-hpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">include/live_telemetry_node/downsampler.hpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id5">Classes</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id6">Typedefs</a></p></li>
+</ul>
+</nav>
+<section id="definition-include-live-telemetry-node-downsampler-hpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">include/live_telemetry_node/downsampler.hpp</span></code>)<a class="headerlink" href="#definition-include-live-telemetry-node-downsampler-hpp" title="Link to this heading"></a></h2>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">atomic</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">functional</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">live_telemetry_node/config.hpp</span></code> (<a class="reference internal" href="file_include_live_telemetry_node_config.hpp.html#file-include-live-telemetry-node-config-hpp"><span class="std std-ref">File config.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ubm_interfaces/msg/camera_data.hpp</span></code></p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file_include_live_telemetry_node_camera_data_handler.hpp.html#file-include-live-telemetry-node-camera-data-handler-hpp"><span class="std std-ref">File camera_data_handler.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_live_telemetry_node_point_cloud_handler.hpp.html#file-include-live-telemetry-node-point-cloud-handler-hpp"><span class="std std-ref">File point_cloud_handler.hpp</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_live_telemetry.html#namespace-live-telemetry"><span class="std std-ref">Namespace live_telemetry</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="classlive__telemetry_1_1Downsampler.html#exhale-class-classlive-telemetry-1-1downsampler"><span class="std std-ref">Template Class Downsampler</span></a></p></li>
+<li><p><a class="reference internal" href="classlive__telemetry_1_1IDataProcessor.html#exhale-class-classlive-telemetry-1-1idataprocessor"><span class="std std-ref">Template Class IDataProcessor</span></a></p></li>
+</ul>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="typedef_downsampler_8hpp_1aa2c8255ba1f8ca167a256b784c994ddd.html#exhale-typedef-downsampler-8hpp-1aa2c8255ba1f8ca167a256b784c994ddd"><span class="std std-ref">Typedef live_telemetry::CameraDataDownsampler</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="file_include_live_telemetry_node_config.hpp.html" class="btn btn-neutral float-left" title="File config.hpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="file_include_live_telemetry_node_foxglove_logger.hpp.html" class="btn btn-neutral float-right" title="File foxglove_logger.hpp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;live_telemetry_node&gt; Contributors. License: MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

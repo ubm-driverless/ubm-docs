@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structlive__telemetry_1_1TelemetryConfig" kind="struct" language="C++" prot="public">
+    <compoundname>live_telemetry::TelemetryConfig</compoundname>
+    <includes local="no">config.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlive__telemetry_1_1TelemetryConfig_1a2dfc1b665a04833ad42e5b199b5fee7f" prot="public" static="no" mutable="no">
+        <type><ref refid="structlive__telemetry_1_1FoxgloveConfig" kindref="compound">FoxgloveConfig</ref></type>
+        <definition>FoxgloveConfig live_telemetry::TelemetryConfig::foxglove</definition>
+        <argsstring></argsstring>
+        <name>foxglove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/config.hpp" line="102" column="20" bodyfile="include/live_telemetry_node/config.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlive__telemetry_1_1TelemetryConfig_1a8d48e79abc91c1fc8abcf4bf1df8c2b7" prot="public" static="no" mutable="no">
+        <type><ref refid="structlive__telemetry_1_1GatewayConfig" kindref="compound">GatewayConfig</ref></type>
+        <definition>GatewayConfig live_telemetry::TelemetryConfig::gateway</definition>
+        <argsstring></argsstring>
+        <name>gateway</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/config.hpp" line="103" column="19" bodyfile="include/live_telemetry_node/config.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlive__telemetry_1_1TelemetryConfig_1a45cffd9a491eddedb341cd6c33bb4ebf" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structlive__telemetry_1_1TopicHandlerEntry" kindref="compound">TopicHandlerEntry</ref> &gt;</type>
+        <definition>std::vector&lt;TopicHandlerEntry&gt; live_telemetry::TelemetryConfig::handlers</definition>
+        <argsstring></argsstring>
+        <name>handlers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/config.hpp" line="104" column="17" bodyfile="include/live_telemetry_node/config.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlive__telemetry_1_1TelemetryConfig_1acc9a591ea982c8c871f19c7a01245a11" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool live_telemetry::TelemetryConfig::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/config.hpp" line="105" column="10" bodyfile="include/live_telemetry_node/config.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Main telemetry node configuration. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>live_telemetry::GatewayConfig</label>
+        <link refid="structlive__telemetry_1_1GatewayConfig"/>
+      </node>
+      <node id="4">
+        <label>live_telemetry::ImageScaleConfig</label>
+        <link refid="structlive__telemetry_1_1ImageScaleConfig"/>
+      </node>
+      <node id="1">
+        <label>live_telemetry::TelemetryConfig</label>
+        <link refid="structlive__telemetry_1_1TelemetryConfig"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>gateway</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>foxglove</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>live_telemetry::FoxgloveConfig</label>
+        <link refid="structlive__telemetry_1_1FoxgloveConfig"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>image_scale</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/live_telemetry_node/config.hpp" line="101" column="1" bodyfile="include/live_telemetry_node/config.hpp" bodystart="100" bodyend="106"/>
+    <listofallmembers>
+      <member refid="structlive__telemetry_1_1TelemetryConfig_1a2dfc1b665a04833ad42e5b199b5fee7f" prot="public" virt="non-virtual"><scope>live_telemetry::TelemetryConfig</scope><name>foxglove</name></member>
+      <member refid="structlive__telemetry_1_1TelemetryConfig_1a8d48e79abc91c1fc8abcf4bf1df8c2b7" prot="public" virt="non-virtual"><scope>live_telemetry::TelemetryConfig</scope><name>gateway</name></member>
+      <member refid="structlive__telemetry_1_1TelemetryConfig_1a45cffd9a491eddedb341cd6c33bb4ebf" prot="public" virt="non-virtual"><scope>live_telemetry::TelemetryConfig</scope><name>handlers</name></member>
+      <member refid="structlive__telemetry_1_1TelemetryConfig_1acc9a591ea982c8c871f19c7a01245a11" prot="public" virt="non-virtual"><scope>live_telemetry::TelemetryConfig</scope><name>verbose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

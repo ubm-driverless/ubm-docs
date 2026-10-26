@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class MPCEuclidianDistance &mdash; simple_control_algos 1.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=fc837d61"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class MPCPathFollowerNode" href="classMPCPathFollowerNode.html" />
+    <link rel="prev" title="Class LapPerformance" href="classLapPerformance.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            simple_control_algos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structFrenetPath.html">Struct FrenetPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structLapPerformanceData.html">Struct LapPerformanceData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structObstacle.html">Struct Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classcubic__spline__2d.html">Class cubic_spline_2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline1d.html">Class CubicSpline1d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline2d.html">Class CubicSpline2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classDisparityExtenderNode.html">Class DisparityExtenderNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classExperimentalPathFollower.html">Class ExperimentalPathFollower</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFeedForwardAction.html">Class FeedForwardAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetMapBasedNode.html">Class FrenetMapBasedNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetOptimalTrajectory.html">Class FrenetOptimalTrajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFrenetOvertakingNode.html">Class FrenetOvertakingNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classLapPerformance.html">Class LapPerformance</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class MPCEuclidianDistance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMPCPathFollowerNode.html">Class MPCPathFollowerNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPathFollowerNode.html">Class PathFollowerNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPotentialFieldNode.html">Class PotentialFieldNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPotentialPursuitNode.html">Class PotentialPursuitNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomial.html">Class QuarticPolynomial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomialMiddlePose.html">Class QuarticPolynomialMiddlePose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSteeringController.html">Class SteeringController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThirdPolynomial.html">Class ThirdPolynomial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a548f490e1cc2964ec6a3099dedee3485.html">Template Function argmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a7961cf9f682c353bbbbee08688449363.html">Function calculate_mean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a7c87b3820a510fe8ba3d31de23d1368d.html">Function calculate_mean_in_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1aabda3256be7b08b8e746b28d18cdd374.html">Function calculate_obstacle_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_disparity__extender_8hpp_1a291ed5db3ed90572f2fa73268d730fc3.html">Function check_imminent_crash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1aad9c06f14481d9674434dfba4c96df16.html">Function compute_attractive_potential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a977a357ef5623917ae2dbb7d71c540a5.html">Function compute_choosen_index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a803813ac89e8048584b04e919455f5df.html">Function compute_obstacle_potential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_disparity__extender_8hpp_1a62ce1c1cbfc59821940f236e0bc3e974.html">Function disparity_extender_steering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_disparity__extender_8hpp_1a4ad9538c20847b48c0ceba8c62c0b69f.html">Function find_disparities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_disparity__extender_8hpp_1a29c2ded4d0f27a2a43d5ad06dbf11200.html">Function find_disparity_steering_angle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a3bfec49a1ed55be5be4a39ad99afea84.html">Function find_local_minima</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a2d4be497bdcc23caa0ab2fd575915ba0.html">Function find_obstacles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a49e610728a5471f56fc020d2b6ee6e9b.html">Function get_rgb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a056a3290e38efc55bcdee6c5655237c7.html">Function heading_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a478f9c32589c5d73b481c36e939f27a1.html">Function linspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a60300b3e5373b56171efdb41435d35ee.html">Function max_index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a8b22fce713a12c10d65d6e211afd221f.html">Function potential_field_steering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1aac3f04ff98d2a27e8e515906313fed04.html">Function potential_pursuit_steering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1ac6279e31fb4c59cdfe219f3f092ad0ae.html">Function publish_performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a7eba2453e99da10af2d521c211d1984c.html">Function publish_points_as_marker_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a8936e6a359cea43e0e3ff73cc416f6fb.html">Function publish_points_as_pointcloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1abec49d66b6a81df1e7269db9bc18fbb7.html">Function publish_raceline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a588d8ae799d233a401111c312e73364f.html">Function rafi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_potential__field_8hpp_1a71f0c0cfaeac67efc260987375b06050.html">Function reduce_lidar_fov</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a88dbb5d572b05732c37a6ab53f130fab.html">Function rifa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_simple__speed_8hpp_1a8666ead035190ddbcd155650aeb37176.html">Function speed_proportional_steering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_simple__speed_8hpp_1ad8b9a9a94d3855969c36725c280f7d5b.html">Function speed_steer_and_fov</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a81265f88837c5951afcce3413be9ed09.html">Function visualize_markers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_disparity_extender.hpp.html">File disparity_extender.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_disparity_extender_node.hpp.html">File disparity_extender_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_experimental_path_follower.hpp.html">File experimental_path_follower.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_map_based_node.hpp.html">File frenet_map_based_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking.hpp.html">File frenet_overtaking.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking_node.hpp.html">File frenet_overtaking_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_overtaking_node_detector.hpp.html">File frenet_overtaking_node_detector.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_lap_performance.hpp.html">File lap_performance.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_mpc_casadi.hpp.html">File mpc_casadi.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_mpc_path_follower_node.hpp.html">File mpc_path_follower_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_path_follower_node.hpp.html">File path_follower_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_potential_field.hpp.html">File potential_field.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_potential_field_node.hpp.html">File potential_field_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_potential_pursuit_node.hpp.html">File potential_pursuit_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_ros_utils.hpp.html">File ros_utils.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_simple_speed.hpp.html">File simple_speed.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_spline_and_polynomial.hpp.html">File spline_and_polynomial.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_steering_controller.hpp.html">File steering_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils.hpp.html">File utils.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/LICENSE.html">LICENSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#simple-control-algorithms">Simple Control Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#reactive-algorithms-nodes-overview">Reactive Algorithms Nodes Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#libraries">Libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">simple_control_algos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class MPCEuclidianDistance</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classMPCEuclidianDistance.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-mpceuclidiandistance">
+<span id="exhale-class-classmpceuclidiandistance"></span><h1>Class MPCEuclidianDistance<a class="headerlink" href="#class-mpceuclidiandistance" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_mpc_casadi.hpp.html#file-include-mpc-casadi-hpp"><span class="std std-ref">File mpc_casadi.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv420MPCEuclidianDistance">
+<span id="_CPPv320MPCEuclidianDistance"></span><span id="_CPPv220MPCEuclidianDistance"></span><span id="MPCEuclidianDistance"></span><span class="target" id="classMPCEuclidianDistance"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPCEuclidianDistance</span></span></span><a class="headerlink" href="#_CPPv420MPCEuclidianDistance" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance6set_upERKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKf">
+<span id="_CPPv3N20MPCEuclidianDistance6set_upERKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKf"></span><span id="_CPPv2N20MPCEuclidianDistance6set_upERKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKf"></span><span id="MPCEuclidianDistance::set_up__floatCR.floatCR.floatCR.floatCR.floatCR.floatCR.floatCR.floatCR.floatCR.floatCR.floatCR.floatCR.floatCR"></span><span class="target" id="classMPCEuclidianDistance_1a337ef3b1dbe1a18ca54dfd18c05f07ba"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_up</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">distance_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">race_line_d_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">border_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">steering_smoothness_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">speed_smoothness_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">low_speed_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">high_theta_dot_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">opponent_distance_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">total_time_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">opp_radius</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">walls_cost_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">centripetal_weight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">go_fast_weight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance6set_upERKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKfRKf" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor for the <a class="reference internal" href="classFrenetOptimalTrajectory.html#classFrenetOptimalTrajectory"><span class="std std-ref">FrenetOptimalTrajectory</span></a> class. Initializes parameters for calculating the optimal trajectory in Frenet coordinates. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distance_weight</strong> – Weight for distance from target point. </p></li>
+<li><p><strong>race_line_d_weight</strong> – Weight for lateral displacement error. </p></li>
+<li><p><strong>border_weight</strong> – Weight for distance from border. </p></li>
+<li><p><strong>steering_smoothness_weight</strong> – Weight for high steering change. </p></li>
+<li><p><strong>speed_smoothness_weight</strong> – Weight for high accelerations. </p></li>
+<li><p><strong>low_speed_weight</strong> – Weight for low speeds. </p></li>
+<li><p><strong>high_theta_dot_weight</strong> – Weight for low speeds. </p></li>
+<li><p><strong>total_time_weight</strong> – Weight for total time. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance20MPCEuclidianDistanceENSt10shared_ptrI14CasadiMapUtilsEE8Raceline">
+<span id="_CPPv3N20MPCEuclidianDistance20MPCEuclidianDistanceENSt10shared_ptrI14CasadiMapUtilsEE8Raceline"></span><span id="_CPPv2N20MPCEuclidianDistance20MPCEuclidianDistanceENSt10shared_ptrI14CasadiMapUtilsEE8Raceline"></span><span id="MPCEuclidianDistance::MPCEuclidianDistance__std::shared_ptr:CasadiMapUtils:.Raceline"></span><span class="target" id="classMPCEuclidianDistance_1a0e50c0b9c3fd6c6acb969466dde7bee1"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPCEuclidianDistance</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">CasadiMapUtils</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">map</span></span>, <a class="reference external" href="http://docs.ros.org/en/latest/p/raceline_utils/generated/classRaceline.html#_CPPv48Raceline" title="(in raceline_utils v1.1)"><span class="n"><span class="pre">Raceline</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">raceline</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance20MPCEuclidianDistanceENSt10shared_ptrI14CasadiMapUtilsEE8Raceline" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance19solve_one_iterationENSt5tupleIdddddEENSt6vectorINSt5tupleIdddEEEENSt5tupleIddddEEbb">
+<span id="_CPPv3N20MPCEuclidianDistance19solve_one_iterationENSt5tupleIdddddEENSt6vectorINSt5tupleIdddEEEENSt5tupleIddddEEbb"></span><span id="_CPPv2N20MPCEuclidianDistance19solve_one_iterationENSt5tupleIdddddEENSt6vectorINSt5tupleIdddEEEENSt5tupleIddddEEbb"></span><span id="MPCEuclidianDistance::solve_one_iteration__std::tuple:double.double.double.double.double:.std::vector:std::tuple:double.double.double::.std::tuple:double.double.double.double:.b.b"></span><span class="target" id="classMPCEuclidianDistance_1a6ecbcdcbed201c535016a7367a3c0b35"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">solve_one_iteration</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">start_state</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">target_state</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">opponent_pos</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">has_opp</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force_initialization</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance19solve_one_iterationENSt5tupleIdddddEENSt6vectorINSt5tupleIdddEEEENSt5tupleIddddEEbb" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance13set_max_speedEf">
+<span id="_CPPv3N20MPCEuclidianDistance13set_max_speedEf"></span><span id="_CPPv2N20MPCEuclidianDistance13set_max_speedEf"></span><span id="MPCEuclidianDistance::set_max_speed__float"></span><span class="target" id="classMPCEuclidianDistance_1a0f14e93f95ef0a63bc1ed8eed622b93b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_max_speed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_speed</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance13set_max_speedEf" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance18problem_definitionEb">
+<span id="_CPPv3N20MPCEuclidianDistance18problem_definitionEb"></span><span id="_CPPv2N20MPCEuclidianDistance18problem_definitionEb"></span><span id="MPCEuclidianDistance::problem_definition__b"></span><span class="target" id="classMPCEuclidianDistance_1a3d2086c11ee774081cc2c836024c739f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">problem_definition</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">has_opp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance18problem_definitionEb" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance18set_initializationENSt6vectorINSt4pairIddEEEENSt6vectorINSt5tupleIdddEEEE">
+<span id="_CPPv3N20MPCEuclidianDistance18set_initializationENSt6vectorINSt4pairIddEEEENSt6vectorINSt5tupleIdddEEEE"></span><span id="_CPPv2N20MPCEuclidianDistance18set_initializationENSt6vectorINSt4pairIddEEEENSt6vectorINSt5tupleIdddEEEE"></span><span id="MPCEuclidianDistance::set_initialization__std::vector:std::pair:double.double::.std::vector:std::tuple:double.double.double::"></span><span class="target" id="classMPCEuclidianDistance_1a04bf0b985143199e96ad4ab2264b7638"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_initialization</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">controls</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance18set_initializationENSt6vectorINSt4pairIddEEEENSt6vectorINSt5tupleIdddEEEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance7HORIZONE">
+<span id="_CPPv3N20MPCEuclidianDistance7HORIZONE"></span><span id="_CPPv2N20MPCEuclidianDistance7HORIZONE"></span><span id="MPCEuclidianDistance::HORIZON__i"></span><span class="target" id="classMPCEuclidianDistance_1a2d1cb8b6061a0c9e2327f92f7ab01662"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HORIZON</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance7HORIZONE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance9STEP_SIZEE">
+<span id="_CPPv3N20MPCEuclidianDistance9STEP_SIZEE"></span><span id="_CPPv2N20MPCEuclidianDistance9STEP_SIZEE"></span><span id="MPCEuclidianDistance::STEP_SIZE__double"></span><span class="target" id="classMPCEuclidianDistance_1a09cecc7eda246c94ec81062a99b31af4"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">STEP_SIZE</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.1</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance9STEP_SIZEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance9MAX_SPEEDE">
+<span id="_CPPv3N20MPCEuclidianDistance9MAX_SPEEDE"></span><span id="_CPPv2N20MPCEuclidianDistance9MAX_SPEEDE"></span><span id="MPCEuclidianDistance::MAX_SPEED__double"></span><span class="target" id="classMPCEuclidianDistance_1a5bb1bda1f86fa889d5e06d889a00d4fe"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAX_SPEED</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10.0</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance9MAX_SPEEDE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance14MIN_SPEED_GAINE">
+<span id="_CPPv3N20MPCEuclidianDistance14MIN_SPEED_GAINE"></span><span id="_CPPv2N20MPCEuclidianDistance14MIN_SPEED_GAINE"></span><span id="MPCEuclidianDistance::MIN_SPEED_GAIN__double"></span><span class="target" id="classMPCEuclidianDistance_1ab2d5f41db84620093fb3fdc8911cfd3d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MIN_SPEED_GAIN</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.5</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance14MIN_SPEED_GAINE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance14MAX_SPEED_GAINE">
+<span id="_CPPv3N20MPCEuclidianDistance14MAX_SPEED_GAINE"></span><span id="_CPPv2N20MPCEuclidianDistance14MAX_SPEED_GAINE"></span><span id="MPCEuclidianDistance::MAX_SPEED_GAIN__double"></span><span class="target" id="classMPCEuclidianDistance_1a7ef6b2998479bbb1a91d78f80087058b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAX_SPEED_GAIN</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">4.0</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance14MAX_SPEED_GAINE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance17DELTA_THETA_LIMITE">
+<span id="_CPPv3N20MPCEuclidianDistance17DELTA_THETA_LIMITE"></span><span id="_CPPv2N20MPCEuclidianDistance17DELTA_THETA_LIMITE"></span><span id="MPCEuclidianDistance::DELTA_THETA_LIMIT__double"></span><span class="target" id="classMPCEuclidianDistance_1aec1fab8e525a68678719b73f5acd4e1c"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DELTA_THETA_LIMIT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.8</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance17DELTA_THETA_LIMITE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance17distance_functionE">
+<span id="_CPPv3N20MPCEuclidianDistance17distance_functionE"></span><span id="_CPPv2N20MPCEuclidianDistance17distance_functionE"></span><span id="MPCEuclidianDistance::distance_function__casadi::MX"></span><span class="target" id="classMPCEuclidianDistance_1a83c5f9af10698e2168d7b7a0b226d74d"></span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distance_function</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance17distance_functionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance24steering_smoothness_costE">
+<span id="_CPPv3N20MPCEuclidianDistance24steering_smoothness_costE"></span><span id="_CPPv2N20MPCEuclidianDistance24steering_smoothness_costE"></span><span id="MPCEuclidianDistance::steering_smoothness_cost__casadi::MX"></span><span class="target" id="classMPCEuclidianDistance_1a8180229d50efef96a803deac18551ad6"></span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">steering_smoothness_cost</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance24steering_smoothness_costE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance22opponent_distance_costE">
+<span id="_CPPv3N20MPCEuclidianDistance22opponent_distance_costE"></span><span id="_CPPv2N20MPCEuclidianDistance22opponent_distance_costE"></span><span id="MPCEuclidianDistance::opponent_distance_cost__casadi::MX"></span><span class="target" id="classMPCEuclidianDistance_1acce03d6081597b9431bbbf732f8fbcbb"></span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">opponent_distance_cost</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance22opponent_distance_costE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance10walls_costE">
+<span id="_CPPv3N20MPCEuclidianDistance10walls_costE"></span><span id="_CPPv2N20MPCEuclidianDistance10walls_costE"></span><span id="MPCEuclidianDistance::walls_cost__casadi::MX"></span><span class="target" id="classMPCEuclidianDistance_1af1ebea26f8d2ceccd2a096a29ac075de"></span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">walls_cost</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance10walls_costE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance16centripetal_costE">
+<span id="_CPPv3N20MPCEuclidianDistance16centripetal_costE"></span><span id="_CPPv2N20MPCEuclidianDistance16centripetal_costE"></span><span id="MPCEuclidianDistance::centripetal_cost__casadi::MX"></span><span class="target" id="classMPCEuclidianDistance_1a56ce5fb5dafcfe9da7f83c7b7f5abd50"></span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">centripetal_cost</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance16centripetal_costE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance12go_fast_costE">
+<span id="_CPPv3N20MPCEuclidianDistance12go_fast_costE"></span><span id="_CPPv2N20MPCEuclidianDistance12go_fast_costE"></span><span id="MPCEuclidianDistance::go_fast_cost__casadi::MX"></span><span class="target" id="classMPCEuclidianDistance_1a9f1dd4080fa1bb8824d6b3269996624a"></span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">go_fast_cost</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance12go_fast_costE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance21speed_smoothness_costE">
+<span id="_CPPv3N20MPCEuclidianDistance21speed_smoothness_costE"></span><span id="_CPPv2N20MPCEuclidianDistance21speed_smoothness_costE"></span><span id="MPCEuclidianDistance::speed_smoothness_cost__casadi::MX"></span><span class="target" id="classMPCEuclidianDistance_1a134d8a9038e78f3ce77e6d47f3fdc905"></span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">speed_smoothness_cost</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">casadi</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MX</span></span><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance21speed_smoothness_costE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance13use_gaussian_E">
+<span id="_CPPv3N20MPCEuclidianDistance13use_gaussian_E"></span><span id="_CPPv2N20MPCEuclidianDistance13use_gaussian_E"></span><span id="MPCEuclidianDistance::use_gaussian___b"></span><span class="target" id="classMPCEuclidianDistance_1af6bc036bf30dcb309718bc456118ab82"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">use_gaussian_</span></span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance13use_gaussian_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance14VEHICLE_LENGTHE">
+<span id="_CPPv3N20MPCEuclidianDistance14VEHICLE_LENGTHE"></span><span id="_CPPv2N20MPCEuclidianDistance14VEHICLE_LENGTHE"></span><span id="MPCEuclidianDistance::VEHICLE_LENGTH__double"></span><span class="target" id="classMPCEuclidianDistance_1a2d7b970f870cb6e9157fce661ae895a5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VEHICLE_LENGTH</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.33</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance14VEHICLE_LENGTHE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance2DTE">
+<span id="_CPPv3N20MPCEuclidianDistance2DTE"></span><span id="_CPPv2N20MPCEuclidianDistance2DTE"></span><span id="MPCEuclidianDistance::DT__double"></span><span class="target" id="classMPCEuclidianDistance_1abbfbb5cf23977ffb785ca1f64e0cd3a9"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.1</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance2DTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MPCEuclidianDistance20INITIALIZATION_SPEEDE">
+<span id="_CPPv3N20MPCEuclidianDistance20INITIALIZATION_SPEEDE"></span><span id="_CPPv2N20MPCEuclidianDistance20INITIALIZATION_SPEEDE"></span><span id="MPCEuclidianDistance::INITIALIZATION_SPEED__double"></span><span class="target" id="classMPCEuclidianDistance_1ae52cbae4db2bc1464c4a2cfe4a58b448"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INITIALIZATION_SPEED</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span><a class="headerlink" href="#_CPPv4N20MPCEuclidianDistance20INITIALIZATION_SPEEDE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classLapPerformance.html" class="btn btn-neutral float-left" title="Class LapPerformance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classMPCPathFollowerNode.html" class="btn btn-neutral float-right" title="Class MPCPathFollowerNode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;simple_control_algos&gt; Contributors. License: MIT Lincense.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

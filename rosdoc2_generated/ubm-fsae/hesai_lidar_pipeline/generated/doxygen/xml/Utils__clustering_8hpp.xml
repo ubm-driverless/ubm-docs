@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="Utils__clustering_8hpp" kind="file" language="C++">
+    <compoundname>Utils_clustering.hpp</compoundname>
+    <includes local="yes">geometry_msgs/msg/point.hpp</includes>
+    <includes local="no">pcl/common/common.h</includes>
+    <includes local="no">pcl/common/transforms.h</includes>
+    <includes local="no">pcl/filters/filter.h</includes>
+    <includes local="no">pcl/point_types.h</includes>
+    <includes local="no">pcl/common/centroid.h</includes>
+    <includes local="no">pcl/filters/voxel_grid.h</includes>
+    <includes local="no">pcl/filters/passthrough.h</includes>
+    <includes local="no">pcl/kdtree/kdtree_flann.h</includes>
+    <includes local="no">pcl/filters/extract_indices.h</includes>
+    <includes local="no">pcl/search/kdtree.h</includes>
+    <includes local="no">pcl/segmentation/extract_clusters.h</includes>
+    <includes local="no">pcl/io/pcd_io.h</includes>
+    <includes local="no">pcl/point_cloud.h</includes>
+    <includes local="no">pcl/filters/crop_box.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">numeric</includes>
+    <includes local="yes">visualization_msgs/msg/marker.hpp</includes>
+    <includes local="yes">visualization_msgs/msg/marker_array.hpp</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">builtin_interfaces/msg/duration.hpp</includes>
+    <includedby refid="Hesai__Lidar__Node_8hpp" local="yes">include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>pcl/point_types.h</label>
+      </node>
+      <node id="4">
+        <label>pcl/common/transforms.h</label>
+      </node>
+      <node id="16">
+        <label>pcl/filters/crop_box.h</label>
+      </node>
+      <node id="23">
+        <label>builtin_interfaces/msg/duration.hpp</label>
+      </node>
+      <node id="9">
+        <label>pcl/filters/passthrough.h</label>
+      </node>
+      <node id="13">
+        <label>pcl/segmentation/extract_clusters.h</label>
+      </node>
+      <node id="15">
+        <label>pcl/point_cloud.h</label>
+      </node>
+      <node id="18">
+        <label>numeric</label>
+      </node>
+      <node id="19">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="21">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="3">
+        <label>pcl/common/common.h</label>
+      </node>
+      <node id="11">
+        <label>pcl/filters/extract_indices.h</label>
+      </node>
+      <node id="2">
+        <label>geometry_msgs/msg/point.hpp</label>
+      </node>
+      <node id="7">
+        <label>pcl/common/centroid.h</label>
+      </node>
+      <node id="1">
+        <label>include/Hesai_Lidar_Pipeline/Utils_clustering.hpp</label>
+        <link refid="Utils__clustering_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>pcl/search/kdtree.h</label>
+      </node>
+      <node id="17">
+        <label>math.h</label>
+      </node>
+      <node id="10">
+        <label>pcl/kdtree/kdtree_flann.h</label>
+      </node>
+      <node id="20">
+        <label>visualization_msgs/msg/marker_array.hpp</label>
+      </node>
+      <node id="22">
+        <label>chrono</label>
+      </node>
+      <node id="5">
+        <label>pcl/filters/filter.h</label>
+      </node>
+      <node id="14">
+        <label>pcl/io/pcd_io.h</label>
+      </node>
+      <node id="8">
+        <label>pcl/filters/voxel_grid.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Utils__clustering_8hpp_1a84586e25d6ae8cdee301fab358cc47a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; pcl::PointIndices &gt;</type>
+        <definition>std::vector&lt;pcl::PointIndices&gt; performClustering</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;pointcloud_2d_ptr, float tolerance, int max_cluster_size, int minClusterSize)</argsstring>
+        <name>performClustering</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>pointcloud_2d_ptr</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>tolerance</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_cluster_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minClusterSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="28" column="13" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="28" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1adc7d2812634956ead63436cd80f3f770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PointDistance</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>PointDistance</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="52" column="7" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="52" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1a08d4e9d6c02ed1497f499cd383923075" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pcl::PointCloud&lt; pcl::PointXYZI &gt;::Ptr</type>
+        <definition>pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr PreFiltering</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZI &gt;::Ptr &amp;cloud, float min_azimuth, float max_azimuth, float max_distance, float lidar_yaw_offset)</argsstring>
+        <name>PreFiltering</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZI &gt;::Ptr &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>min_azimuth</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_azimuth</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_distance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lidar_yaw_offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="59" column="23" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="59" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1a5db50cb1fb8e2bdc5836100039325ba8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>pcl::PointXYZ</type>
+        <definition>pcl::PointXYZ computeClusterCenter</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;cloud, const pcl::PointIndices &amp;indices)</argsstring>
+        <name>computeClusterCenter</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <param>
+          <type>const pcl::PointIndices &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="86" column="22" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="86" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1ad18a0b2c79cb21d654fc1f9428d13995" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>pcl::PointXYZ</type>
+        <definition>pcl::PointXYZ computeClusterCenterXYZ</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;cloud, const std::vector&lt; int &gt; &amp;indices)</argsstring>
+        <name>computeClusterCenterXYZ</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="120" column="22" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="120" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1acf8c3820de46aace707d652f8086d836" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float computeClusterCompactness</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;cloud, const std::vector&lt; int &gt; &amp;indices, const pcl::PointXYZ &amp;centroid)</argsstring>
+        <name>computeClusterCompactness</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <param>
+          <type>const pcl::PointXYZ &amp;</type>
+          <declname>centroid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="155" column="14" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="155" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1ae43fda361cd89b42c324e659bd49ac7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float computeClusterCompactnessStdDev</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;cloud, const std::vector&lt; int &gt; &amp;indices, const pcl::PointXYZ &amp;centroid)</argsstring>
+        <name>computeClusterCompactnessStdDev</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <param>
+          <type>const pcl::PointXYZ &amp;</type>
+          <declname>centroid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="183" column="14" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="183" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1ae1bda5c35a40a690968c5cd9f6897c48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; filterClusterOutliers</definition>
+        <argsstring>(const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;cloud, const std::vector&lt; int &gt; &amp;indices, float std_multiplier, int min_points)</argsstring>
+        <name>filterClusterOutliers</name>
+        <param>
+          <type>const pcl::PointCloud&lt; pcl::PointXYZ &gt;::Ptr &amp;</type>
+          <declname>cloud</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>std_multiplier</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_points</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="218" column="20" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="218" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1ae14e0dc18de23af73de446be7d5b2c81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void circle_creation</definition>
+        <argsstring>(visualization_msgs::msg::Marker &amp;circle, float x, float y, float radius, float z, int id, std::string color=&quot;blue&quot;)</argsstring>
+        <name>circle_creation</name>
+        <param>
+          <type>visualization_msgs::msg::Marker &amp;</type>
+          <declname>circle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>color</declname>
+          <defval>&quot;blue&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="277" column="6" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="277" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1aedf71612cb61cc5985f0ae8d0e7978b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void line_creation</definition>
+        <argsstring>(visualization_msgs::msg::Marker &amp;line, float x, float y, float z, int id)</argsstring>
+        <name>line_creation</name>
+        <param>
+          <type>visualization_msgs::msg::Marker &amp;</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="308" column="6" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="308" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1a054c679db212a2cb5de107b03b005d1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void text_creation</definition>
+        <argsstring>(visualization_msgs::msg::Marker &amp;text, float x, float y, float z, int id, int cluster_i)</argsstring>
+        <name>text_creation</name>
+        <param>
+          <type>visualization_msgs::msg::Marker &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cluster_i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="341" column="6" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="341" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils__clustering_8hpp_1a79dcc984a7540b2bb5d070fb0195ed3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clear_previous_markers</definition>
+        <argsstring>(int max_id, rclcpp::Clock::SharedPtr clock, rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr line_publisher)</argsstring>
+        <name>clear_previous_markers</name>
+        <param>
+          <type>int</type>
+          <declname>max_id</declname>
+        </param>
+        <param>
+          <type>rclcpp::Clock::SharedPtr</type>
+          <declname>clock</declname>
+        </param>
+        <param>
+          <type>rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt;::SharedPtr</type>
+          <declname>line_publisher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" line="371" column="6" bodyfile="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp" bodystart="371" bodyend="388"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Hesai_Lidar_Pipeline/Utils_clustering.hpp"/>
+  </compounddef>
+</doxygen>

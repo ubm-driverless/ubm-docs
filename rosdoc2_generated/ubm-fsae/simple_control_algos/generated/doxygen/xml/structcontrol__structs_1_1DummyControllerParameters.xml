@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structcontrol__structs_1_1DummyControllerParameters" kind="struct" language="C++" prot="public">
+    <compoundname>control_structs::DummyControllerParameters</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcontrol__structs_1_1DummyControllerParameters_1a465b4bd6ae5f812db8dd905e9b6740b8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int control_structs::DummyControllerParameters::laps_total_</definition>
+        <argsstring></argsstring>
+        <name>laps_total_</name>
+        <briefdescription>
+<para>Total number of laps to complete. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="243" column="13" bodyfile="include/ControlStructDataType.hpp" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1DummyControllerParameters_1a04e586cc90c3f0b5a419e8bdca6b43e8" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string control_structs::DummyControllerParameters::partial_path_limits_topic_</definition>
+        <argsstring></argsstring>
+        <name>partial_path_limits_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to partial path limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="244" column="21" bodyfile="include/ControlStructDataType.hpp" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1DummyControllerParameters_1ad9fef42811590fb597e2a7a9066b0b7a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string control_structs::DummyControllerParameters::full_path_limits_topic_</definition>
+        <argsstring></argsstring>
+        <name>full_path_limits_topic_</name>
+        <briefdescription>
+<para>Topic for subscribing to full path limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="245" column="21" bodyfile="include/ControlStructDataType.hpp" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1DummyControllerParameters_1aef005ab00e97b2afe5759f8653840e09" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool control_structs::DummyControllerParameters::full_path_obtained</definition>
+        <argsstring></argsstring>
+        <name>full_path_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the full raceline path has been obtained. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="248" column="14" bodyfile="include/ControlStructDataType.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1DummyControllerParameters_1a2859339c3cdd51da4882b0dbfe07b885" prot="public" static="no" mutable="no">
+        <type><ref refid="structLapPerformanceData" kindref="compound">LapPerformanceData</ref></type>
+        <definition>LapPerformanceData control_structs::DummyControllerParameters::lap_performance_data</definition>
+        <argsstring></argsstring>
+        <name>lap_performance_data</name>
+        <briefdescription>
+<para>Data structure to store lap performance data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="251" column="28" bodyfile="include/ControlStructDataType.hpp" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1DummyControllerParameters_1ac9d5ea3245ac7a9b3b7535322a419a97" prot="public" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::PathLimits &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::PathLimits&gt;::SharedPtr control_structs::DummyControllerParameters::partial_path_limits_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>partial_path_limits_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for partial path limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="254" column="42" bodyfile="include/ControlStructDataType.hpp" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1DummyControllerParameters_1aeffc4a5da00d731daccacdca3004767f" prot="public" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::PathLimits &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::PathLimits&gt;::SharedPtr control_structs::DummyControllerParameters::full_path_limits_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>full_path_limits_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for full path limits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="255" column="42" bodyfile="include/ControlStructDataType.hpp" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1DummyControllerParameters_1ac5dffc13a788aa12ba5b59cbe999da68" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool control_structs::DummyControllerParameters::path_obtained</definition>
+        <argsstring></argsstring>
+        <name>path_obtained</name>
+        <initializer>=false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="256" column="14" bodyfile="include/ControlStructDataType.hpp" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1DummyControllerParameters_1af4cc662740d62a07c2677dd74594c722" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool control_structs::DummyControllerParameters::enable_profiling_</definition>
+        <argsstring></argsstring>
+        <name>enable_profiling_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Print timing statistics at every control cycle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="258" column="14" bodyfile="include/ControlStructDataType.hpp" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>control_structs::DummyControllerParameters</label>
+        <link refid="structcontrol__structs_1_1DummyControllerParameters"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>lap_performance_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>LapPerformanceData</label>
+        <link refid="structLapPerformanceData"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/ControlStructDataType.hpp" line="241" column="36" bodyfile="include/ControlStructDataType.hpp" bodystart="241" bodyend="260"/>
+    <listofallmembers>
+      <member refid="structcontrol__structs_1_1DummyControllerParameters_1af4cc662740d62a07c2677dd74594c722" prot="public" virt="non-virtual"><scope>control_structs::DummyControllerParameters</scope><name>enable_profiling_</name></member>
+      <member refid="structcontrol__structs_1_1DummyControllerParameters_1aeffc4a5da00d731daccacdca3004767f" prot="public" virt="non-virtual"><scope>control_structs::DummyControllerParameters</scope><name>full_path_limits_subscriber_</name></member>
+      <member refid="structcontrol__structs_1_1DummyControllerParameters_1ad9fef42811590fb597e2a7a9066b0b7a" prot="public" virt="non-virtual"><scope>control_structs::DummyControllerParameters</scope><name>full_path_limits_topic_</name></member>
+      <member refid="structcontrol__structs_1_1DummyControllerParameters_1aef005ab00e97b2afe5759f8653840e09" prot="public" virt="non-virtual"><scope>control_structs::DummyControllerParameters</scope><name>full_path_obtained</name></member>
+      <member refid="structcontrol__structs_1_1DummyControllerParameters_1a2859339c3cdd51da4882b0dbfe07b885" prot="public" virt="non-virtual"><scope>control_structs::DummyControllerParameters</scope><name>lap_performance_data</name></member>
+      <member refid="structcontrol__structs_1_1DummyControllerParameters_1a465b4bd6ae5f812db8dd905e9b6740b8" prot="public" virt="non-virtual"><scope>control_structs::DummyControllerParameters</scope><name>laps_total_</name></member>
+      <member refid="structcontrol__structs_1_1DummyControllerParameters_1ac9d5ea3245ac7a9b3b7535322a419a97" prot="public" virt="non-virtual"><scope>control_structs::DummyControllerParameters</scope><name>partial_path_limits_subscriber_</name></member>
+      <member refid="structcontrol__structs_1_1DummyControllerParameters_1a04e586cc90c3f0b5a419e8bdca6b43e8" prot="public" virt="non-virtual"><scope>control_structs::DummyControllerParameters</scope><name>partial_path_limits_topic_</name></member>
+      <member refid="structcontrol__structs_1_1DummyControllerParameters_1ac5dffc13a788aa12ba5b59cbe999da68" prot="public" virt="non-virtual"><scope>control_structs::DummyControllerParameters</scope><name>path_obtained</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

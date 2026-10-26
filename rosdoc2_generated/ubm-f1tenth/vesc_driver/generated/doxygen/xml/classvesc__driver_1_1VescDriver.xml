@@ -1,0 +1,665 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classvesc__driver_1_1VescDriver" kind="class" language="C++" prot="public">
+    <compoundname>vesc_driver::VescDriver</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+    <innerclass refid="structvesc__driver_1_1VescDriver_1_1CommandLimit" prot="private">vesc_driver::VescDriver::CommandLimit</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classvesc__driver_1_1VescDriver_1a5af02e80728ef67ea0deb62de4705582" prot="private" static="no" strong="no">
+        <type></type>
+        <name>driver_mode_t</name>
+        <enumvalue id="classvesc__driver_1_1VescDriver_1a5af02e80728ef67ea0deb62de4705582a7423159bb3604813c8c84edc32b204ab" prot="private">
+          <name>MODE_INITIALIZING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classvesc__driver_1_1VescDriver_1a5af02e80728ef67ea0deb62de4705582a7e03a5d68decb36411e882bc808807b7" prot="private">
+          <name>MODE_OPERATING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="125" column="3" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="124" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a67b4c7c413e7c2911679eaa857ca6ce7" prot="private" static="no" mutable="no">
+        <type><ref refid="classvesc__driver_1_1VescInterface" kindref="compound">VescInterface</ref></type>
+        <definition>VescInterface vesc_driver::VescDriver::vesc_</definition>
+        <argsstring></argsstring>
+        <name>vesc_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="74" column="17" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a0a44eddde975fed797b07df4151f7c2c" prot="private" static="no" mutable="no">
+        <type>VescStateStamped</type>
+        <definition>VescStateStamped vesc_driver::VescDriver::last_state_</definition>
+        <argsstring></argsstring>
+        <name>last_state_</name>
+        <briefdescription>
+<para>Last received state message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="79" column="20" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a39993b1cca77b55f7ca35a4bcc5ac7e6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vesc_driver::VescDriver::state_received_</definition>
+        <argsstring></argsstring>
+        <name>state_received_</name>
+        <briefdescription>
+<para>Flag to check if state message was received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="80" column="8" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a0bb6db98661a4376406954c113ec1965" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float vesc_driver::VescDriver::undervoltage_threshold_</definition>
+        <argsstring></argsstring>
+        <name>undervoltage_threshold_</name>
+        <briefdescription>
+<para>Threshold for undervoltage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="81" column="9" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a19a458acac8cfdc6a9dff6da4cbe162d" prot="private" static="no" mutable="no">
+        <type>CommandLimit</type>
+        <definition>CommandLimit vesc_driver::VescDriver::duty_cycle_limit_</definition>
+        <argsstring></argsstring>
+        <name>duty_cycle_limit_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="100" column="16" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a3b52b196f551710dd5c02884419e9e60" prot="private" static="no" mutable="no">
+        <type>CommandLimit</type>
+        <definition>CommandLimit vesc_driver::VescDriver::current_limit_</definition>
+        <argsstring></argsstring>
+        <name>current_limit_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="101" column="16" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a2c099bcc2e30382c58eb5fc4f0430078" prot="private" static="no" mutable="no">
+        <type>CommandLimit</type>
+        <definition>CommandLimit vesc_driver::VescDriver::brake_limit_</definition>
+        <argsstring></argsstring>
+        <name>brake_limit_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="102" column="16" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1af5ccddf01f4ec5a5a0d8f36a090e74c3" prot="private" static="no" mutable="no">
+        <type>CommandLimit</type>
+        <definition>CommandLimit vesc_driver::VescDriver::speed_limit_</definition>
+        <argsstring></argsstring>
+        <name>speed_limit_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="103" column="16" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1aef05b50d0eb9afc41cd34af99fda0bf1" prot="private" static="no" mutable="no">
+        <type>CommandLimit</type>
+        <definition>CommandLimit vesc_driver::VescDriver::position_limit_</definition>
+        <argsstring></argsstring>
+        <name>position_limit_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="104" column="16" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a97a8f1f8e28fe5c0e33e7ed173178647" prot="private" static="no" mutable="no">
+        <type>CommandLimit</type>
+        <definition>CommandLimit vesc_driver::VescDriver::servo_limit_</definition>
+        <argsstring></argsstring>
+        <name>servo_limit_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="105" column="16" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a4eee90f59edab0ec5b4a56d1b26992b9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; VescStateStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;VescStateStamped&gt;::SharedPtr vesc_driver::VescDriver::state_pub_</definition>
+        <argsstring></argsstring>
+        <name>state_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="108" column="33" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a387c05802c288cbf8850cc2af9705bd7" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; VescImuStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;VescImuStamped&gt;::SharedPtr vesc_driver::VescDriver::imu_pub_</definition>
+        <argsstring></argsstring>
+        <name>imu_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="109" column="33" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a6b9a5d3be89d4d3967438299e56375f8" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; Imu &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;Imu&gt;::SharedPtr vesc_driver::VescDriver::imu_std_pub_</definition>
+        <argsstring></argsstring>
+        <name>imu_std_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="110" column="33" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1acd46b949608d2913395048e2d2626027" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; std_msgs::msg::Int32 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;std_msgs::msg::Int32&gt;::SharedPtr vesc_driver::VescDriver::vesc_node_pid_pub_</definition>
+        <argsstring></argsstring>
+        <name>vesc_node_pid_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="111" column="33" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a15302e6bfbb8e188a33b8f14869a8e3e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; Float64 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;Float64&gt;::SharedPtr vesc_driver::VescDriver::servo_sensor_pub_</definition>
+        <argsstring></argsstring>
+        <name>servo_sensor_pub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="112" column="33" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a2cee02a5b56d188857c1c7252136fc9b" prot="private" static="no" mutable="no">
+        <type>rclcpp::SubscriptionBase::SharedPtr</type>
+        <definition>rclcpp::SubscriptionBase::SharedPtr vesc_driver::VescDriver::duty_cycle_sub_</definition>
+        <argsstring></argsstring>
+        <name>duty_cycle_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="113" column="39" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1af5edde453db09e9e0503f986ca8978ad" prot="private" static="no" mutable="no">
+        <type>rclcpp::SubscriptionBase::SharedPtr</type>
+        <definition>rclcpp::SubscriptionBase::SharedPtr vesc_driver::VescDriver::current_sub_</definition>
+        <argsstring></argsstring>
+        <name>current_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="114" column="39" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a7fc06b368a8d17fc33b1522a4d469098" prot="private" static="no" mutable="no">
+        <type>rclcpp::SubscriptionBase::SharedPtr</type>
+        <definition>rclcpp::SubscriptionBase::SharedPtr vesc_driver::VescDriver::brake_sub_</definition>
+        <argsstring></argsstring>
+        <name>brake_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="115" column="39" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a345d16ab692388241c4c911255a465bb" prot="private" static="no" mutable="no">
+        <type>rclcpp::SubscriptionBase::SharedPtr</type>
+        <definition>rclcpp::SubscriptionBase::SharedPtr vesc_driver::VescDriver::speed_sub_</definition>
+        <argsstring></argsstring>
+        <name>speed_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="116" column="39" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a87d92cb42921f3ee3a31bcc1c1d6afee" prot="private" static="no" mutable="no">
+        <type>rclcpp::SubscriptionBase::SharedPtr</type>
+        <definition>rclcpp::SubscriptionBase::SharedPtr vesc_driver::VescDriver::position_sub_</definition>
+        <argsstring></argsstring>
+        <name>position_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="117" column="39" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1af652b1e6e20d969c0645ab156ca3237b" prot="private" static="no" mutable="no">
+        <type>rclcpp::SubscriptionBase::SharedPtr</type>
+        <definition>rclcpp::SubscriptionBase::SharedPtr vesc_driver::VescDriver::servo_sub_</definition>
+        <argsstring></argsstring>
+        <name>servo_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="118" column="39" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1af5d6070c6f7c240e1bca86e037f502e1" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; AckermannDriveStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;AckermannDriveStamped&gt;::SharedPtr vesc_driver::VescDriver::ackermann_sub_</definition>
+        <argsstring></argsstring>
+        <name>ackermann_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="119" column="36" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1aee82c8d13fd919615d97cd6f6b3c0cf2" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr vesc_driver::VescDriver::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="120" column="32" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a2a04fb30b5c693484ec78ce35e7b6596" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr vesc_driver::VescDriver::battery_timer_</definition>
+        <argsstring></argsstring>
+        <name>battery_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="121" column="32" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1aa143050fa0ef6686f7099faf52e72184" prot="private" static="no" mutable="no">
+        <type>driver_mode_t</type>
+        <definition>driver_mode_t vesc_driver::VescDriver::driver_mode_</definition>
+        <argsstring></argsstring>
+        <name>driver_mode_</name>
+        <briefdescription>
+<para>driver state machine mode (state) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="132" column="17" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a49adf41210d2191a483288908f9b3d51" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vesc_driver::VescDriver::fw_version_major_</definition>
+        <argsstring></argsstring>
+        <name>fw_version_major_</name>
+        <briefdescription>
+<para>firmware major version reported by vesc </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="133" column="7" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvesc__driver_1_1VescDriver_1a91a8f718108c1bd24c5c271425bd9e30" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vesc_driver::VescDriver::fw_version_minor_</definition>
+        <argsstring></argsstring>
+        <name>fw_version_minor_</name>
+        <briefdescription>
+<para>firmware minor version reported by vesc </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="134" column="7" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1af0e8118aec3b359edd8d471685986889" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vesc_driver::VescDriver::VescDriver</definition>
+        <argsstring>(const rclcpp::NodeOptions &amp;options)</argsstring>
+        <name>VescDriver</name>
+        <param>
+          <type>const rclcpp::NodeOptions &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="70" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1a1785e7ec894840931a8215dcf90041d4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::vescPacketCallback</definition>
+        <argsstring>(const std::shared_ptr&lt; VescPacket const &gt; &amp;packet)</argsstring>
+        <name>vescPacketCallback</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classvesc__driver_1_1VescPacket" kindref="compound">VescPacket</ref> const &gt; &amp;</type>
+          <declname>packet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="75" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1af7db395fd3dc67db1d2a45f6df8e8542" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::vescErrorCallback</definition>
+        <argsstring>(const std::string &amp;error)</argsstring>
+        <name>vescErrorCallback</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="76" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1ae4c5fcfe16b101b2ea54d4f3d203346c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::brakeCallback</definition>
+        <argsstring>(const Float64::SharedPtr brake)</argsstring>
+        <name>brakeCallback</name>
+        <param>
+          <type>const Float64::SharedPtr</type>
+          <declname>brake</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="137" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1a63747126463778f4f7cd8104ba2bfbee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::currentCallback</definition>
+        <argsstring>(const Float64::SharedPtr current)</argsstring>
+        <name>currentCallback</name>
+        <param>
+          <type>const Float64::SharedPtr</type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="138" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1a98c3a8dd14ca5714954b628ed9ee3144" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::dutyCycleCallback</definition>
+        <argsstring>(const Float64::SharedPtr duty_cycle)</argsstring>
+        <name>dutyCycleCallback</name>
+        <param>
+          <type>const Float64::SharedPtr</type>
+          <declname>duty_cycle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="139" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1ada5f3556ba5cef4f4443969767029e9b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::positionCallback</definition>
+        <argsstring>(const Float64::SharedPtr position)</argsstring>
+        <name>positionCallback</name>
+        <param>
+          <type>const Float64::SharedPtr</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="140" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1a478a542337ac6bbb210abff46b729d58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::servoCallback</definition>
+        <argsstring>(const Float64::SharedPtr servo)</argsstring>
+        <name>servoCallback</name>
+        <param>
+          <type>const Float64::SharedPtr</type>
+          <declname>servo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="141" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1a785d9b40956c2e89e078506a59a7fc56" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::speedCallback</definition>
+        <argsstring>(const Float64::SharedPtr speed)</argsstring>
+        <name>speedCallback</name>
+        <param>
+          <type>const Float64::SharedPtr</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="142" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1a4e691981203b9cf4701350cf16ffb572" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::ackermannCmdCallback</definition>
+        <argsstring>(const AckermannDriveStamped::SharedPtr cmd)</argsstring>
+        <name>ackermannCmdCallback</name>
+        <param>
+          <type>const AckermannDriveStamped::SharedPtr</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="143" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1afa4fb23c9619a68a389f01d303823a5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::timerCallback</definition>
+        <argsstring>()</argsstring>
+        <name>timerCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="144" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classvesc__driver_1_1VescDriver_1a7b1f6d09530fa098a5ed9f8ad4538188" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vesc_driver::VescDriver::batteryCallback</definition>
+        <argsstring>()</argsstring>
+        <name>batteryCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vesc_driver/vesc_driver.hpp" line="145" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>vesc_driver::VescDriver</label>
+        <link refid="classvesc__driver_1_1VescDriver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>vesc_driver::VescDriver</label>
+        <link refid="classvesc__driver_1_1VescDriver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/vesc_driver/vesc_driver.hpp" line="68" column="1" bodyfile="include/vesc_driver/vesc_driver.hpp" bodystart="66" bodyend="146"/>
+    <listofallmembers>
+      <member refid="classvesc__driver_1_1VescDriver_1af5d6070c6f7c240e1bca86e037f502e1" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>ackermann_sub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a4e691981203b9cf4701350cf16ffb572" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>ackermannCmdCallback</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a2a04fb30b5c693484ec78ce35e7b6596" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>battery_timer_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a7b1f6d09530fa098a5ed9f8ad4538188" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>batteryCallback</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a2c099bcc2e30382c58eb5fc4f0430078" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>brake_limit_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a7fc06b368a8d17fc33b1522a4d469098" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>brake_sub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1ae4c5fcfe16b101b2ea54d4f3d203346c" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>brakeCallback</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a3b52b196f551710dd5c02884419e9e60" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>current_limit_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1af5edde453db09e9e0503f986ca8978ad" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>current_sub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a63747126463778f4f7cd8104ba2bfbee" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>currentCallback</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1aa143050fa0ef6686f7099faf52e72184" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>driver_mode_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a5af02e80728ef67ea0deb62de4705582" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>driver_mode_t</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a19a458acac8cfdc6a9dff6da4cbe162d" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>duty_cycle_limit_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a2cee02a5b56d188857c1c7252136fc9b" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>duty_cycle_sub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a98c3a8dd14ca5714954b628ed9ee3144" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>dutyCycleCallback</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a49adf41210d2191a483288908f9b3d51" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>fw_version_major_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a91a8f718108c1bd24c5c271425bd9e30" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>fw_version_minor_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a387c05802c288cbf8850cc2af9705bd7" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>imu_pub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a6b9a5d3be89d4d3967438299e56375f8" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>imu_std_pub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a0a44eddde975fed797b07df4151f7c2c" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>last_state_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a5af02e80728ef67ea0deb62de4705582a7423159bb3604813c8c84edc32b204ab" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>MODE_INITIALIZING</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a5af02e80728ef67ea0deb62de4705582a7e03a5d68decb36411e882bc808807b7" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>MODE_OPERATING</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1aef05b50d0eb9afc41cd34af99fda0bf1" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>position_limit_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a87d92cb42921f3ee3a31bcc1c1d6afee" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>position_sub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1ada5f3556ba5cef4f4443969767029e9b" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>positionCallback</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a97a8f1f8e28fe5c0e33e7ed173178647" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>servo_limit_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a15302e6bfbb8e188a33b8f14869a8e3e" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>servo_sensor_pub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1af652b1e6e20d969c0645ab156ca3237b" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>servo_sub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a478a542337ac6bbb210abff46b729d58" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>servoCallback</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1af5ccddf01f4ec5a5a0d8f36a090e74c3" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>speed_limit_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a345d16ab692388241c4c911255a465bb" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>speed_sub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a785d9b40956c2e89e078506a59a7fc56" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>speedCallback</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a4eee90f59edab0ec5b4a56d1b26992b9" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>state_pub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a39993b1cca77b55f7ca35a4bcc5ac7e6" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>state_received_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1aee82c8d13fd919615d97cd6f6b3c0cf2" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>timer_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1afa4fb23c9619a68a389f01d303823a5c" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>timerCallback</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a0bb6db98661a4376406954c113ec1965" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>undervoltage_threshold_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a67b4c7c413e7c2911679eaa857ca6ce7" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>vesc_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1acd46b949608d2913395048e2d2626027" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>vesc_node_pid_pub_</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1af0e8118aec3b359edd8d471685986889" prot="public" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>VescDriver</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1af7db395fd3dc67db1d2a45f6df8e8542" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>vescErrorCallback</name></member>
+      <member refid="classvesc__driver_1_1VescDriver_1a1785e7ec894840931a8215dcf90041d4" prot="private" virt="non-virtual"><scope>vesc_driver::VescDriver</scope><name>vescPacketCallback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

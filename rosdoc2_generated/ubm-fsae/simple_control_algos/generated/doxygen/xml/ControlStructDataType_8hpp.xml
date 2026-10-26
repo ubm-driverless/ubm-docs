@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ControlStructDataType_8hpp" kind="file" language="C++">
+    <compoundname>ControlStructDataType.hpp</compoundname>
+    <includes local="no">cfloat</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">chrono</includes>
+    <includes local="yes">rclcpp/rclcpp.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/custom_header.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/custom_bool.hpp</includes>
+    <includes local="yes">nav_msgs/msg/odometry.hpp</includes>
+    <includes local="yes">nav_msgs/msg/path.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/pose.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/pose_stamped.hpp</includes>
+    <includes local="yes">geometry_msgs/msg/point.hpp</includes>
+    <includes refid="ros__utils_8hpp" local="yes">utils/ros_utils.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/control.hpp</includes>
+    <includes local="yes">ubm_interfaces/srv/is_ready.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/emergency.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/info.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/mission_finished.hpp</includes>
+    <includes local="yes">ackermann_msgs/msg/ackermann_drive_stamped.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/pid_control_output.hpp</includes>
+    <includes refid="steering__controller_8hpp" local="yes">utils/steering_controller.hpp</includes>
+    <includes refid="speed__sae__controller_8hpp" local="yes">utils/speed_sae_controller.hpp</includes>
+    <includes refid="utils_8hpp" local="yes">utils/utils.hpp</includes>
+    <includes refid="spline__and__polynomial_8hpp" local="yes">utils/spline_and_polynomial.hpp</includes>
+    <includes local="yes">raceline_utils.hpp</includes>
+    <includes refid="lap__performance_8hpp" local="yes">utils/lap_performance.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/lap_performance.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/path_limits.hpp</includes>
+    <includes local="yes">tf2/LinearMath/Quaternion.hpp</includes>
+    <includes local="yes">tf2/utils.hpp</includes>
+    <includes local="yes">tf2_geometry_msgs/tf2_geometry_msgs.hpp</includes>
+    <includedby refid="acceleration__controller_8hpp" local="yes">include/acceleration_controller.hpp</includedby>
+    <includedby refid="mission__controller_8hpp" local="yes">include/interfaces/mission_controller.hpp</includedby>
+    <includedby refid="speed__generator_8hpp" local="yes">include/interfaces/speed_generator.hpp</includedby>
+    <includedby refid="control__node_8hpp" local="yes">include/control_node.hpp</includedby>
+    <includedby refid="skidpad__controller_8hpp" local="yes">include/skidpad_controller.hpp</includedby>
+    <includedby refid="ebs__controller_8hpp" local="yes">include/ebs_controller.hpp</includedby>
+    <includedby refid="dummy__controller_8hpp" local="yes">include/dummy_controller.hpp</includedby>
+    <includedby refid="speed__profile__generator_8hpp" local="yes">include/utils/speed_profile_generator.hpp</includedby>
+    <includedby refid="path__follower__node_8hpp" local="yes">include/path_follower_node.hpp</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>ubm_interfaces/msg/custom_header.hpp</label>
+      </node>
+      <node id="28">
+        <label>ubm_interfaces/srv/is_ready.hpp</label>
+      </node>
+      <node id="32">
+        <label>ackermann_msgs/msg/ackermann_drive_stamped.hpp</label>
+      </node>
+      <node id="14">
+        <label>geometry_msgs/msg/pose_stamped.hpp</label>
+      </node>
+      <node id="20">
+        <label>tf2/LinearMath/Quaternion.hpp</label>
+      </node>
+      <node id="16">
+        <label>utils/ros_utils.hpp</label>
+        <link refid="ros__utils_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/ControlStructDataType.hpp</label>
+        <link refid="ControlStructDataType_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>nav_msgs/msg/odometry.hpp</label>
+      </node>
+      <node id="34">
+        <label>utils/utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>geometry_msgs/msg/pose.hpp</label>
+      </node>
+      <node id="26">
+        <label>sensor_msgs/point_cloud2_iterator.hpp</label>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="37">
+        <label>stdexcept</label>
+      </node>
+      <node id="36">
+        <label>numeric</label>
+      </node>
+      <node id="12">
+        <label>nav_msgs/msg/path.hpp</label>
+      </node>
+      <node id="27">
+        <label>ubm_interfaces/msg/control.hpp</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="23">
+        <label>visualization_msgs/msg/marker.hpp</label>
+      </node>
+      <node id="8">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="19">
+        <label>sensor_msgs/msg/point_cloud2.hpp</label>
+      </node>
+      <node id="2">
+        <label>cfloat</label>
+      </node>
+      <node id="40">
+        <label>raceline_utils.hpp</label>
+      </node>
+      <node id="30">
+        <label>ubm_interfaces/msg/info.hpp</label>
+      </node>
+      <node id="15">
+        <label>geometry_msgs/msg/point.hpp</label>
+      </node>
+      <node id="38">
+        <label>tuple</label>
+      </node>
+      <node id="17">
+        <label>ubm_interfaces/msg/lap_performance.hpp</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="21">
+        <label>tf2/utils.hpp</label>
+      </node>
+      <node id="39">
+        <label>utility</label>
+      </node>
+      <node id="33">
+        <label>ubm_interfaces/msg/pid_control_output.hpp</label>
+      </node>
+      <node id="18">
+        <label>geometry_msgs/msg/point_stamped.hpp</label>
+      </node>
+      <node id="22">
+        <label>tf2_geometry_msgs/tf2_geometry_msgs.hpp</label>
+      </node>
+      <node id="31">
+        <label>ubm_interfaces/msg/mission_finished.hpp</label>
+      </node>
+      <node id="25">
+        <label>iostream</label>
+      </node>
+      <node id="29">
+        <label>ubm_interfaces/msg/emergency.hpp</label>
+      </node>
+      <node id="41">
+        <label>ubm_interfaces/msg/path_limits.hpp</label>
+      </node>
+      <node id="24">
+        <label>visualization_msgs/msg/marker_array.hpp</label>
+      </node>
+      <node id="7">
+        <label>chrono</label>
+      </node>
+      <node id="35">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>ubm_interfaces/msg/custom_bool.hpp</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/ControlStructDataType.hpp</label>
+        <link refid="ControlStructDataType_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/path_follower_node.hpp</label>
+        <link refid="path__follower__node_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structcontrol__structs_1_1NodeConfig" prot="public">control_structs::NodeConfig</innerclass>
+    <innerclass refid="structcontrol__structs_1_1RosInterfaces" prot="public">control_structs::RosInterfaces</innerclass>
+    <innerclass refid="structcontrol__structs_1_1ControlState" prot="public">control_structs::ControlState</innerclass>
+    <innerclass refid="structcontrol__structs_1_1PathFollowerParameters" prot="public">control_structs::PathFollowerParameters</innerclass>
+    <innerclass refid="structcontrol__structs_1_1SpeedProfileParameters" prot="public">control_structs::SpeedProfileParameters</innerclass>
+    <innerclass refid="structcontrol__structs_1_1DummyControllerParameters" prot="public">control_structs::DummyControllerParameters</innerclass>
+    <innernamespace refid="namespacecontrol__structs">control_structs</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ControlStructDataType.hpp"/>
+  </compounddef>
+</doxygen>

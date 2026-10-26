@@ -1,0 +1,772 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classBagRecorderNode" kind="class" language="C++" prot="public">
+    <compoundname>BagRecorderNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBagRecorderNode_1ac2dbcb585f5f1a0a0587796bbef16536" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::CustomBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::CustomBool&gt;::SharedPtr BagRecorderNode::driving_enabled_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>driving_enabled_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="48" column="38" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a1d40ceb7bfe176b11f29620003c25fe7" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::VCUData &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::VCUData&gt;::SharedPtr BagRecorderNode::sensor_sub_</definition>
+        <argsstring></argsstring>
+        <name>sensor_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="49" column="38" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1ad61c7cbabb91fd40a63f3b534e486a7c" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::VCUData &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::VCUData&gt;::SharedPtr BagRecorderNode::movement_sub_</definition>
+        <argsstring></argsstring>
+        <name>movement_sub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="50" column="38" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a25b1408cd9453149fc3caeee405affa6" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; ubm_interfaces::srv::IsReady &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;ubm_interfaces::srv::IsReady&gt;::SharedPtr BagRecorderNode::is_ready_service_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="51" column="33" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a921acc5a7b45da5ae13c1d2aa9ca7a3b" prot="private" static="no" mutable="no">
+        <type>rclcpp::CallbackGroup::SharedPtr</type>
+        <definition>rclcpp::CallbackGroup::SharedPtr BagRecorderNode::recording_group_</definition>
+        <argsstring></argsstring>
+        <name>recording_group_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="52" column="38" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a62e0eb8b82e83b9b18acb789fa5ce3d9" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; rosbag2_cpp::writers::SequentialWriter &gt;</type>
+        <definition>std::unique_ptr&lt;rosbag2_cpp::writers::SequentialWriter&gt; BagRecorderNode::writer_</definition>
+        <argsstring></argsstring>
+        <name>writer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="56" column="21" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a37e5253fa884a03e0f63a8eae5236ac1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; rclcpp::GenericSubscription::SharedPtr &gt;</type>
+        <definition>std::vector&lt;rclcpp::GenericSubscription::SharedPtr&gt; BagRecorderNode::subscriptions_</definition>
+        <argsstring></argsstring>
+        <name>subscriptions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="57" column="17" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1aea0b8f77b72b2ceb61a5afd1197ab673" prot="private" static="no" mutable="no">
+        <type>rosbag2_cpp::ConverterOptions</type>
+        <definition>rosbag2_cpp::ConverterOptions BagRecorderNode::converter_options</definition>
+        <argsstring></argsstring>
+        <name>converter_options</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="58" column="35" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1aa4b40f1a0e4b3adabb753e5f58466528" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr BagRecorderNode::size_check_timer_</definition>
+        <argsstring></argsstring>
+        <name>size_check_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="59" column="34" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a236a72b93c7023b270333b9d80faa100" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr BagRecorderNode::recording_timer_</definition>
+        <argsstring></argsstring>
+        <name>recording_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="60" column="34" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1ae9f693272b1135a587b03d0e0b1e9e41" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr BagRecorderNode::movement_check_timer_</definition>
+        <argsstring></argsstring>
+        <name>movement_check_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="61" column="34" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a516eb95a8c53b2a6fb2d2523ad3b2ec8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string BagRecorderNode::current_bag_path_</definition>
+        <argsstring></argsstring>
+        <name>current_bag_path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="62" column="17" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a700316a835d20b4292fc329c64c31012" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BagRecorderNode::is_recording_</definition>
+        <argsstring></argsstring>
+        <name>is_recording_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="63" column="10" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1ad8bdd02b4d736d194a7e59b2dab0a508" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; BagRecorderNode::topics</definition>
+        <argsstring></argsstring>
+        <name>topics</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="64" column="17" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a65e5187af8af2a2a9320903379ba0415" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string BagRecorderNode::driving_enabled_topic</definition>
+        <argsstring></argsstring>
+        <name>driving_enabled_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="67" column="17" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a5535af18113cefb8b3e3f70e6c171568" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string BagRecorderNode::is_ready_service_name</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="68" column="17" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a2b64257a88d0093dc180892d32b38b3f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string BagRecorderNode::vcu_data_topic_name</definition>
+        <argsstring></argsstring>
+        <name>vcu_data_topic_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="69" column="17" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a0389824a3ac14f183a44bcf272e8bacc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string BagRecorderNode::save_format</definition>
+        <argsstring></argsstring>
+        <name>save_format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="70" column="17" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a18c25a4482ff311e5c509d596acb09ed" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string BagRecorderNode::bag_dir</definition>
+        <argsstring></argsstring>
+        <name>bag_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="71" column="17" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1af383a656b2d8e817b6255c94c4f03a92" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string BagRecorderNode::serialization_format</definition>
+        <argsstring></argsstring>
+        <name>serialization_format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="72" column="17" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a423dd18a8a25a09c9f82c2a410c10471" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BagRecorderNode::min_free_space_GB</definition>
+        <argsstring></argsstring>
+        <name>min_free_space_GB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="73" column="12" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a07230facea7f5ad51a8379d3f5532dab" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BagRecorderNode::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="74" column="10" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1ac37308201cadf2518d21785115ec92ba" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BagRecorderNode::mission</definition>
+        <argsstring></argsstring>
+        <name>mission</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="77" column="9" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1af047fc598df36d6af6426185e9e1d995" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BagRecorderNode::longitude_deg</definition>
+        <argsstring></argsstring>
+        <name>longitude_deg</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="78" column="12" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a91bef7f84f3f474f34368167205fbd03" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double BagRecorderNode::latitude_deg</definition>
+        <argsstring></argsstring>
+        <name>latitude_deg</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="79" column="12" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1ab821d74b6b8e408053fe3d05e315a56a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BagRecorderNode::first_time</definition>
+        <argsstring></argsstring>
+        <name>first_time</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="80" column="10" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a5d463ef108307f04d601b8a1ea6a1a2a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BagRecorderNode::callback_without_update</definition>
+        <argsstring></argsstring>
+        <name>callback_without_update</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="81" column="9" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1aee025add55ca77670984bcb30f8cf019" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BagRecorderNode::driving_enabled</definition>
+        <argsstring></argsstring>
+        <name>driving_enabled</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="82" column="10" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1af27e48c70c5cec70f68ad4e71ecc7669" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BagRecorderNode::manual_driving_moved_</definition>
+        <argsstring></argsstring>
+        <name>manual_driving_moved_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="83" column="10" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a7d929e38b89a0139ee1147f7f82e3386" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BagRecorderNode::movement_hits_</definition>
+        <argsstring></argsstring>
+        <name>movement_hits_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="84" column="9" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1afc49862cd171b7c4e300d233caf7b6b4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BagRecorderNode::latest_torque_rl_nm_</definition>
+        <argsstring></argsstring>
+        <name>latest_torque_rl_nm_</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="85" column="11" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1aecf85e41a4d2b83a98fa334b67bd153c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BagRecorderNode::latest_torque_rr_nm_</definition>
+        <argsstring></argsstring>
+        <name>latest_torque_rr_nm_</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="86" column="11" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a957f0b8b576f52665a28a29400068a7f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BagRecorderNode::previous_torque_sample_nm_</definition>
+        <argsstring></argsstring>
+        <name>previous_torque_sample_nm_</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="87" column="11" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a8542fa09c87bbc1e8edb70d0756de8bc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BagRecorderNode::has_previous_torque_sample_</definition>
+        <argsstring></argsstring>
+        <name>has_previous_torque_sample_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="88" column="10" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classBagRecorderNode_1a3480c2c5d0d20fb86805944accfef300" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float BagRecorderNode::torque_threshold_nm</definition>
+        <argsstring></argsstring>
+        <name>torque_threshold_nm</name>
+        <initializer>= 5.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="90" column="28" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1a732b04ba0463a6acb1ae6f53a33da036" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float BagRecorderNode::torque_delta_epsilon_nm</definition>
+        <argsstring></argsstring>
+        <name>torque_delta_epsilon_nm</name>
+        <initializer>= 1e-3f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="91" column="28" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBagRecorderNode_1ac92dfd0b56228654e423db2fe7dea19a" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int BagRecorderNode::required_consecutive_hits</definition>
+        <argsstring></argsstring>
+        <name>required_consecutive_hits</name>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="92" column="26" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBagRecorderNode_1a59b2016c1a7d002db47a7a0084fdc236" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BagRecorderNode::BagRecorderNode</definition>
+        <argsstring>()</argsstring>
+        <name>BagRecorderNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="31" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classBagRecorderNode_1a49d7cde3df166530e7b1ec624429ec53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BagRecorderNode::~BagRecorderNode</definition>
+        <argsstring>()</argsstring>
+        <name>~BagRecorderNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="32" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classBagRecorderNode_1a4416df19145adfcb3b7d8c02f04857c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BagRecorderNode::initialize_ros_communication</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_ros_communication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classBagRecorderNode_1aa46230bdea2989f82d7f4b9345b3e286" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BagRecorderNode::check_bag_size</definition>
+        <argsstring>()</argsstring>
+        <name>check_bag_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="36" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classBagRecorderNode_1aa61fd411c1470ebfba919c1c12fb35a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BagRecorderNode::handle_service</definition>
+        <argsstring>(const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt; request, std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt; response)</argsstring>
+        <name>handle_service</name>
+        <param>
+          <type>const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="37" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classBagRecorderNode_1a7608cd6660098b21eabaaa5603944fe6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BagRecorderNode::gps_location_callback</definition>
+        <argsstring>(const ubm_interfaces::msg::VCUData::SharedPtr vcu_data_msg)</argsstring>
+        <name>gps_location_callback</name>
+        <param>
+          <type>const ubm_interfaces::msg::VCUData::SharedPtr</type>
+          <declname>vcu_data_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classBagRecorderNode_1a756b7346a07c53f81d9499da4fb7afe6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BagRecorderNode::movement_callback</definition>
+        <argsstring>(const ubm_interfaces::msg::VCUData::SharedPtr vcu_data_msg)</argsstring>
+        <name>movement_callback</name>
+        <param>
+          <type>const ubm_interfaces::msg::VCUData::SharedPtr</type>
+          <declname>vcu_data_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="40" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classBagRecorderNode_1a1b69d5e2afe65b5a2a922d0437e117ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BagRecorderNode::check_manual_driving_movement</definition>
+        <argsstring>()</argsstring>
+        <name>check_manual_driving_movement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="41" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classBagRecorderNode_1a35bd2cc47d748799fd3a2208e17079c8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BagRecorderNode::control_callback</definition>
+        <argsstring>(const ubm_interfaces::msg::CustomBool::SharedPtr driving_bool)</argsstring>
+        <name>control_callback</name>
+        <param>
+          <type>const ubm_interfaces::msg::CustomBool::SharedPtr</type>
+          <declname>driving_bool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classBagRecorderNode_1afc19dcd9f76df26083a0892b1ffa23e3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BagRecorderNode::start_recording</definition>
+        <argsstring>()</argsstring>
+        <name>start_recording</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="43" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classBagRecorderNode_1a39a465a884dcbbf6fa09d3862a746af6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BagRecorderNode::stop_recording</definition>
+        <argsstring>(bool cancel)</argsstring>
+        <name>stop_recording</name>
+        <param>
+          <type>bool</type>
+          <declname>cancel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="44" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classBagRecorderNode_1a6197ad1b4e12958a628eacc3aee5ce82" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string BagRecorderNode::generate_bag_name</definition>
+        <argsstring>()</argsstring>
+        <name>generate_bag_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="45" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BagRecorderNode</label>
+        <link refid="classBagRecorderNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BagRecorderNode</label>
+        <link refid="classBagRecorderNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/bag_recorder_node/bag_recorder_node.hpp" line="29" column="1" bodyfile="include/bag_recorder_node/bag_recorder_node.hpp" bodystart="28" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classBagRecorderNode_1a18c25a4482ff311e5c509d596acb09ed" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>bag_dir</name></member>
+      <member refid="classBagRecorderNode_1a59b2016c1a7d002db47a7a0084fdc236" prot="public" virt="non-virtual"><scope>BagRecorderNode</scope><name>BagRecorderNode</name></member>
+      <member refid="classBagRecorderNode_1a5d463ef108307f04d601b8a1ea6a1a2a" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>callback_without_update</name></member>
+      <member refid="classBagRecorderNode_1aa46230bdea2989f82d7f4b9345b3e286" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>check_bag_size</name></member>
+      <member refid="classBagRecorderNode_1a1b69d5e2afe65b5a2a922d0437e117ff" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>check_manual_driving_movement</name></member>
+      <member refid="classBagRecorderNode_1a35bd2cc47d748799fd3a2208e17079c8" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>control_callback</name></member>
+      <member refid="classBagRecorderNode_1aea0b8f77b72b2ceb61a5afd1197ab673" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>converter_options</name></member>
+      <member refid="classBagRecorderNode_1a516eb95a8c53b2a6fb2d2523ad3b2ec8" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>current_bag_path_</name></member>
+      <member refid="classBagRecorderNode_1aee025add55ca77670984bcb30f8cf019" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>driving_enabled</name></member>
+      <member refid="classBagRecorderNode_1ac2dbcb585f5f1a0a0587796bbef16536" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>driving_enabled_subscriber_</name></member>
+      <member refid="classBagRecorderNode_1a65e5187af8af2a2a9320903379ba0415" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>driving_enabled_topic</name></member>
+      <member refid="classBagRecorderNode_1ab821d74b6b8e408053fe3d05e315a56a" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>first_time</name></member>
+      <member refid="classBagRecorderNode_1a6197ad1b4e12958a628eacc3aee5ce82" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>generate_bag_name</name></member>
+      <member refid="classBagRecorderNode_1a7608cd6660098b21eabaaa5603944fe6" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>gps_location_callback</name></member>
+      <member refid="classBagRecorderNode_1aa61fd411c1470ebfba919c1c12fb35a5" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>handle_service</name></member>
+      <member refid="classBagRecorderNode_1a8542fa09c87bbc1e8edb70d0756de8bc" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>has_previous_torque_sample_</name></member>
+      <member refid="classBagRecorderNode_1a4416df19145adfcb3b7d8c02f04857c1" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>initialize_ros_communication</name></member>
+      <member refid="classBagRecorderNode_1a25b1408cd9453149fc3caeee405affa6" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>is_ready_service_</name></member>
+      <member refid="classBagRecorderNode_1a5535af18113cefb8b3e3f70e6c171568" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>is_ready_service_name</name></member>
+      <member refid="classBagRecorderNode_1a700316a835d20b4292fc329c64c31012" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>is_recording_</name></member>
+      <member refid="classBagRecorderNode_1afc49862cd171b7c4e300d233caf7b6b4" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>latest_torque_rl_nm_</name></member>
+      <member refid="classBagRecorderNode_1aecf85e41a4d2b83a98fa334b67bd153c" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>latest_torque_rr_nm_</name></member>
+      <member refid="classBagRecorderNode_1a91bef7f84f3f474f34368167205fbd03" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>latitude_deg</name></member>
+      <member refid="classBagRecorderNode_1af047fc598df36d6af6426185e9e1d995" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>longitude_deg</name></member>
+      <member refid="classBagRecorderNode_1af27e48c70c5cec70f68ad4e71ecc7669" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>manual_driving_moved_</name></member>
+      <member refid="classBagRecorderNode_1a423dd18a8a25a09c9f82c2a410c10471" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>min_free_space_GB</name></member>
+      <member refid="classBagRecorderNode_1ac37308201cadf2518d21785115ec92ba" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>mission</name></member>
+      <member refid="classBagRecorderNode_1a756b7346a07c53f81d9499da4fb7afe6" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>movement_callback</name></member>
+      <member refid="classBagRecorderNode_1ae9f693272b1135a587b03d0e0b1e9e41" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>movement_check_timer_</name></member>
+      <member refid="classBagRecorderNode_1a7d929e38b89a0139ee1147f7f82e3386" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>movement_hits_</name></member>
+      <member refid="classBagRecorderNode_1ad61c7cbabb91fd40a63f3b534e486a7c" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>movement_sub_</name></member>
+      <member refid="classBagRecorderNode_1a957f0b8b576f52665a28a29400068a7f" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>previous_torque_sample_nm_</name></member>
+      <member refid="classBagRecorderNode_1a921acc5a7b45da5ae13c1d2aa9ca7a3b" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>recording_group_</name></member>
+      <member refid="classBagRecorderNode_1a236a72b93c7023b270333b9d80faa100" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>recording_timer_</name></member>
+      <member refid="classBagRecorderNode_1ac92dfd0b56228654e423db2fe7dea19a" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>required_consecutive_hits</name></member>
+      <member refid="classBagRecorderNode_1a0389824a3ac14f183a44bcf272e8bacc" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>save_format</name></member>
+      <member refid="classBagRecorderNode_1a1d40ceb7bfe176b11f29620003c25fe7" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>sensor_sub_</name></member>
+      <member refid="classBagRecorderNode_1af383a656b2d8e817b6255c94c4f03a92" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>serialization_format</name></member>
+      <member refid="classBagRecorderNode_1aa4b40f1a0e4b3adabb753e5f58466528" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>size_check_timer_</name></member>
+      <member refid="classBagRecorderNode_1afc19dcd9f76df26083a0892b1ffa23e3" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>start_recording</name></member>
+      <member refid="classBagRecorderNode_1a39a465a884dcbbf6fa09d3862a746af6" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>stop_recording</name></member>
+      <member refid="classBagRecorderNode_1a37e5253fa884a03e0f63a8eae5236ac1" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>subscriptions_</name></member>
+      <member refid="classBagRecorderNode_1ad8bdd02b4d736d194a7e59b2dab0a508" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>topics</name></member>
+      <member refid="classBagRecorderNode_1a732b04ba0463a6acb1ae6f53a33da036" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>torque_delta_epsilon_nm</name></member>
+      <member refid="classBagRecorderNode_1a3480c2c5d0d20fb86805944accfef300" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>torque_threshold_nm</name></member>
+      <member refid="classBagRecorderNode_1a2b64257a88d0093dc180892d32b38b3f" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>vcu_data_topic_name</name></member>
+      <member refid="classBagRecorderNode_1a07230facea7f5ad51a8379d3f5532dab" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>verbose</name></member>
+      <member refid="classBagRecorderNode_1a62e0eb8b82e83b9b18acb789fa5ce3d9" prot="private" virt="non-virtual"><scope>BagRecorderNode</scope><name>writer_</name></member>
+      <member refid="classBagRecorderNode_1a49d7cde3df166530e7b1ec624429ec53" prot="public" virt="non-virtual"><scope>BagRecorderNode</scope><name>~BagRecorderNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

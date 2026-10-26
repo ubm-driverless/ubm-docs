@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="lap__performance_8hpp" kind="file" language="C++">
+    <compoundname>lap_performance.hpp</compoundname>
+    <includes local="no">chrono</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="ros__utils_8hpp" local="yes">include/utils/ros_utils.hpp</includedby>
+    <includedby refid="ControlStructDataType_8hpp" local="yes">include/ControlStructDataType.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>numeric</label>
+      </node>
+      <node id="6">
+        <label>tuple</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>include/utils/lap_performance.hpp</label>
+        <link refid="lap__performance_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>chrono</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/utils/ros_utils.hpp</label>
+        <link refid="ros__utils_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/utils/lap_performance.hpp</label>
+        <link refid="lap__performance_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structLapPerformanceData" prot="public">LapPerformanceData</innerclass>
+    <innerclass refid="classLapPerformance" prot="public">LapPerformance</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/utils/lap_performance.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classAccelerationController" kind="class"><name>AccelerationController</name>
+    <member refid="classAccelerationController_1aa63ace546061391c5322b2bd8504246c" kind="variable"><name>config_</name></member>
+    <member refid="classAccelerationController_1a152a2a196d83af41ce069bc73215993f" kind="variable"><name>state_</name></member>
+    <member refid="classAccelerationController_1a8ac751fc2a465fa2838041a5116370d8" kind="variable"><name>ros_</name></member>
+    <member refid="classAccelerationController_1a38385385c3f7b66b1d93c933d9a3582b" kind="variable"><name>skidpad_path_</name></member>
+    <member refid="classAccelerationController_1afe91f823b7e062eb6e9341073f37a87d" kind="function"><name>AccelerationController</name></member>
+    <member refid="classAccelerationController_1a0f9e377f910ef8a22e6e7e37cb4d7c58" kind="function"><name>load_path</name></member>
+    <member refid="classAccelerationController_1a37aa3976258b22969639115b16ac17dd" kind="function"><name>control_loop</name></member>
+    <member refid="classAccelerationController_1a7bb8580bff8c43c2ed2e5f9de178b8c5" kind="function"><name>mission_finished</name></member>
+  </compound>
+  <compound refid="classControlNode" kind="class"><name>ControlNode</name>
+    <member refid="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84" kind="enum"><name>Mission</name></member>
+    <member refid="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84aee49d439f92c07271c132560998b73e1" kind="enumvalue"><name>ACCELERATION</name></member>
+    <member refid="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84abaf272b06d68165527e91888c294dd52" kind="enumvalue"><name>SKIDPAD</name></member>
+    <member refid="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84a748105e3604329b8be29b48c8de915f7" kind="enumvalue"><name>AUTOCROSS</name></member>
+    <member refid="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84a0ca25c5af22edc019d28afcf211c34dd" kind="enumvalue"><name>TRACKDRIVE</name></member>
+    <member refid="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84a3805508c91ba0e8c66494b9fb9a96c4f" kind="enumvalue"><name>EBS_TEST</name></member>
+    <member refid="classControlNode_1a13495747bb83f8be0d4f9d652dafee61" kind="variable"><name>raceline_file</name></member>
+    <member refid="classControlNode_1a513023bca93058d958669de04cf222af" kind="variable"><name>config_</name></member>
+    <member refid="classControlNode_1aafd14713a442470d4ca845d2f0363f79" kind="variable"><name>ros_</name></member>
+    <member refid="classControlNode_1a927b82b9a91fd83707ebe092ac054a04" kind="variable"><name>state_</name></member>
+    <member refid="classControlNode_1a3004c510bac460f255f2b5081e37aeab" kind="variable"><name>pathf_</name></member>
+    <member refid="classControlNode_1a1fc5f856d1363bb9d65e0992d5e57c03" kind="variable"><name>dummy_</name></member>
+    <member refid="classControlNode_1af138c5a51c45d61ee405dc2504223da1" kind="variable"><name>speed_params_</name></member>
+    <member refid="classControlNode_1a4a4bc2f5b0bcedf4c900972a5d4aa2b0" kind="variable"><name>controller</name></member>
+    <member refid="classControlNode_1aa4c4b748703206897d4fd7f06ec30f26" kind="variable"><name>mission_type_</name></member>
+    <member refid="classControlNode_1a9c8c3aa26e9a5f20457f000fdcb6765a" kind="function"><name>ControlNode</name></member>
+    <member refid="classControlNode_1a346145f2ddf2f225e2e6ddcdbdafce17" kind="function"><name>params_callback</name></member>
+    <member refid="classControlNode_1a30329e6bf5c2e6f61a6867993802bd97" kind="function"><name>handle_service</name></member>
+    <member refid="classControlNode_1a91bcb1f0a690d3fe04eb0232eda152c9" kind="function"><name>odom_callback</name></member>
+    <member refid="classControlNode_1a82374c66e3d65691ba62fd031f80e51f" kind="function"><name>start_control_callback</name></member>
+    <member refid="classControlNode_1aacd38d7d0ed3ff288f90ad7742165533" kind="function"><name>reset_lap_statistics_callback</name></member>
+    <member refid="classControlNode_1a38f13805ddb3d466a53603db32ea7af4" kind="function"><name>watchdog_callback</name></member>
+    <member refid="classControlNode_1a38c9da34c099ef3876001bdc87f8a9ab" kind="function"><name>control_publisher_callback</name></member>
+    <member refid="classControlNode_1abe63a1f11affd47b205418f479a1e317" kind="function"><name>full_path_limits_callback</name></member>
+    <member refid="classControlNode_1a973879156ed6568043e6ea3a64ebc51b" kind="function"><name>partial_path_limits_callback</name></member>
+  </compound>
+  <compound refid="structcontrol__structs_1_1ControlState" kind="struct"><name>control_structs::ControlState</name>
+    <member refid="structcontrol__structs_1_1ControlState_1ae84ef787987f405de632b417e5ad6b4c" kind="variable"><name>pose_obtained</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1ad18590545f7f6643344406d1cd8626e6" kind="variable"><name>start_control</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a7f1609f8db4b8ae75077755e1555a325" kind="variable"><name>mission_correct</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a098e29d1fd8283efc0db0d490c094cc9" kind="variable"><name>watchdog_count</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a592cf933b7732b3621bb64f366975e93" kind="variable"><name>mission</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a046f27cf7f0a0e81ec262ef4253d1044" kind="variable"><name>steer_error_yaw_</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1aa663c415d811db5a3f39f1311cc67e95" kind="variable"><name>steer_error_cte_</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1ad8ebb45b66761915223d748acbc4a59c" kind="variable"><name>setpoint_look_ahead_x_</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a9d384c83613b5c74962d4b433c184c1d" kind="variable"><name>setpoint_look_ahead_y_</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a2471aa19e281f18539db482e5f639098" kind="variable"><name>torque_error_speed_</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a8ff7d852c68959b89dd5295f03d42d2f" kind="variable"><name>torque_error_integral_</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1ab78af56558eacfeea60b5b801f319bba" kind="variable"><name>torque_term_p_</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1aa33f65a86ea668729fb2a56a5eb92a5f" kind="variable"><name>torque_term_i_</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a1ed94eaaac37f0bb7efc75f9f44c5331" kind="variable"><name>steering_controller</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a7af7ee462112e060f68805b480a1c095" kind="variable"><name>feedforward_action</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a43b2c56b33e42ecc699ee4672a6535b1" kind="variable"><name>torque_controller</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a541809f6daea1c832b8502594abc1ef6" kind="variable"><name>raceline</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a51d30e57c5d43bb7d37a4bcc1c5035d9" kind="variable"><name>raceline_s</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a14416921ad84f9c96bc3b19539f37bd0" kind="variable"><name>raceline_x</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a2f48516945e79dfe152495142111bf42" kind="variable"><name>raceline_y</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a2088654d261977f88b32460f17aa16fd" kind="variable"><name>raceline_velocity</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1aafcc8aa563c538383f5fe16396532873" kind="variable"><name>current_pose</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1afd1c2f5045d9fbedd4e1c91857bf1a92" kind="variable"><name>odom_pose</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1ab04a2b405f19cc52084660c232e14cae" kind="variable"><name>current_speed</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a1402a134dd1f2f48a93061a693cca179" kind="variable"><name>old_steer_angle</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1af1ef018c9b365b9ca7b3c2393fa6dac6" kind="variable"><name>lap_performance</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a1350a6142a26ad7afe82658bf650533d" kind="variable"><name>enable_speed_profile_</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1adf1bcd0b632f1488633e481aa9905657" kind="variable"><name>enable_debug_info_</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a5c966fe476c4df7ec911cb8f1c05ca81" kind="variable"><name>speed_generator</name></member>
+    <member refid="structcontrol__structs_1_1ControlState_1a2074ecc08c1ac84b08b8ea477f6aa61f" kind="variable"><name>drive</name></member>
+  </compound>
+  <compound refid="classcubic__spline__2d" kind="class"><name>cubic_spline_2d</name>
+  </compound>
+  <compound refid="classCubicSpline1d" kind="class"><name>CubicSpline1d</name>
+    <member refid="classCubicSpline1d_1aeaf3de4fc33a220da85b63d9f04138a5" kind="variable"><name>x</name></member>
+    <member refid="classCubicSpline1d_1a3499e2ffebfc4d4faaf24361893cdead" kind="variable"><name>y</name></member>
+    <member refid="classCubicSpline1d_1afab62994b0ead963760ee90cff61c234" kind="variable"><name>a_0</name></member>
+    <member refid="classCubicSpline1d_1a17ed6088562d063b3144a81b89ad1ff3" kind="variable"><name>a_1</name></member>
+    <member refid="classCubicSpline1d_1a3de6abe7fb869ee84a90a736bd728f94" kind="variable"><name>a_3</name></member>
+    <member refid="classCubicSpline1d_1a75e76e7186781b1d8506d5b4c3a48c45" kind="variable"><name>a_2</name></member>
+    <member refid="classCubicSpline1d_1a1b874b278c676659b505501712ba66b2" kind="variable"><name>lenght_x</name></member>
+    <member refid="classCubicSpline1d_1a026fb1cd65a4ff63002ea25a15e097cb" kind="function"><name>CubicSpline1d</name></member>
+    <member refid="classCubicSpline1d_1a6431a7dcf6d4c3c1d593b8066a123219" kind="function"><name>initialize</name></member>
+    <member refid="classCubicSpline1d_1a03800bf80f6ca8e9d29a9ec4635a2856" kind="function"><name>get_pos_and_derivatives</name></member>
+    <member refid="classCubicSpline1d_1a77d5bf1c84e32021aa0ad851d53d043a" kind="function"><name>get_derivatives</name></member>
+    <member refid="classCubicSpline1d_1af8aa3d420b826369eddadf6a0396fb09" kind="function"><name>calc_position</name></member>
+    <member refid="classCubicSpline1d_1aecaa4cf7256aa9c6bf5883ada8f8e2e8" kind="function"><name>search_index</name></member>
+    <member refid="classCubicSpline1d_1abf50ded1b76ddc2cf4b5b41e08f89b8f" kind="function"><name>calc_a</name></member>
+    <member refid="classCubicSpline1d_1a95ae5b6a4d66a14feed9fb10a71eb8d2" kind="function"><name>calc_b</name></member>
+  </compound>
+  <compound refid="classCubicSpline2d" kind="class"><name>CubicSpline2d</name>
+    <member refid="classCubicSpline2d_1a70120fcaef7a54fa99c9251ae03a4e97" kind="variable"><name>s</name></member>
+    <member refid="classCubicSpline2d_1a8216abd688863245b207a734f641cc09" kind="variable"><name>sx</name></member>
+    <member refid="classCubicSpline2d_1acae4807ec573ea0c5e592281944556fb" kind="variable"><name>sy</name></member>
+    <member refid="classCubicSpline2d_1a9b4101279dab750c07f9eb0f4b004fd9" kind="function"><name>CubicSpline2d</name></member>
+    <member refid="classCubicSpline2d_1a1cc21ba7a0bf4f709b1a40f1396164ba" kind="function"><name>initialize</name></member>
+    <member refid="classCubicSpline2d_1af5094f4d70f9885e6167e1063f52ddec" kind="function"><name>calc_position</name></member>
+    <member refid="classCubicSpline2d_1a0e158aa00dff04336eaf6b0bf2850cb3" kind="function"><name>calc_curvature_and_yaw</name></member>
+    <member refid="classCubicSpline2d_1ab82f5e532219d5f7fb5d12b3ec647fee" kind="function"><name>calc_position_curvature_yaw</name></member>
+    <member refid="classCubicSpline2d_1aeb2a38c920a75a387c8f8ade0e23fa10" kind="function"><name>get_s</name></member>
+    <member refid="classCubicSpline2d_1afb31194f4a979f6a0adc05b7349a84e0" kind="function"><name>calc_s</name></member>
+  </compound>
+  <compound refid="classDummyController" kind="class"><name>DummyController</name>
+    <member refid="classDummyController_1a9ded85dd6b170a78e1e7f0c4ff77471e" kind="variable"><name>config_</name></member>
+    <member refid="classDummyController_1a1fa7f5165ed3a18dab6910230ee87abe" kind="variable"><name>state_</name></member>
+    <member refid="classDummyController_1a82f093e604c88f4b4ce0c1e87968ab00" kind="variable"><name>ros_</name></member>
+    <member refid="classDummyController_1a26a5eb092c0dc7a576092f2c7786000c" kind="variable"><name>dummy_</name></member>
+    <member refid="classDummyController_1a6ae9782d6bdd2df9ae5990791c1d9897" kind="variable"><name>timers_</name></member>
+    <member refid="classDummyController_1a4dde4bce5328886e5878a85461dd41c1" kind="function"><name>DummyController</name></member>
+    <member refid="classDummyController_1a9eb52f1e2fdb060d8dbd056f8007fcb7" kind="function"><name>search_nearest_index</name></member>
+    <member refid="classDummyController_1ac76773c166ff3a4719e9709323b8c4a6" kind="function"><name>search_look_ahead_point</name></member>
+    <member refid="classDummyController_1a0125a62c1f5c2cd6287c13110dba47b7" kind="function"><name>control_loop</name></member>
+    <member refid="classDummyController_1a0a4ffc298d5bc530708ca19942f4f9e5" kind="function"><name>publish_control_logging</name></member>
+  </compound>
+  <compound refid="structcontrol__structs_1_1DummyControllerParameters" kind="struct"><name>control_structs::DummyControllerParameters</name>
+    <member refid="structcontrol__structs_1_1DummyControllerParameters_1a465b4bd6ae5f812db8dd905e9b6740b8" kind="variable"><name>laps_total_</name></member>
+    <member refid="structcontrol__structs_1_1DummyControllerParameters_1a04e586cc90c3f0b5a419e8bdca6b43e8" kind="variable"><name>partial_path_limits_topic_</name></member>
+    <member refid="structcontrol__structs_1_1DummyControllerParameters_1ad9fef42811590fb597e2a7a9066b0b7a" kind="variable"><name>full_path_limits_topic_</name></member>
+    <member refid="structcontrol__structs_1_1DummyControllerParameters_1aef005ab00e97b2afe5759f8653840e09" kind="variable"><name>full_path_obtained</name></member>
+    <member refid="structcontrol__structs_1_1DummyControllerParameters_1a2859339c3cdd51da4882b0dbfe07b885" kind="variable"><name>lap_performance_data</name></member>
+    <member refid="structcontrol__structs_1_1DummyControllerParameters_1ac9d5ea3245ac7a9b3b7535322a419a97" kind="variable"><name>partial_path_limits_subscriber_</name></member>
+    <member refid="structcontrol__structs_1_1DummyControllerParameters_1aeffc4a5da00d731daccacdca3004767f" kind="variable"><name>full_path_limits_subscriber_</name></member>
+    <member refid="structcontrol__structs_1_1DummyControllerParameters_1ac5dffc13a788aa12ba5b59cbe999da68" kind="variable"><name>path_obtained</name></member>
+    <member refid="structcontrol__structs_1_1DummyControllerParameters_1af4cc662740d62a07c2677dd74594c722" kind="variable"><name>enable_profiling_</name></member>
+  </compound>
+  <compound refid="classEbsController" kind="class"><name>EbsController</name>
+    <member refid="classEbsController_1a1cccff062845a8924ad2690b0840b56a" kind="variable"><name>config_</name></member>
+    <member refid="classEbsController_1a27a200201283a1cd24fd6e4fac9fe2a2" kind="variable"><name>state_</name></member>
+    <member refid="classEbsController_1aa63f17193109e8bb2f0c113c1e616e00" kind="variable"><name>ros_</name></member>
+    <member refid="classEbsController_1a27d23da7bb20e42c2fdae2975111bd47" kind="function"><name>EbsController</name></member>
+    <member refid="classEbsController_1a0eafeea9392ea259911d8edf6a146510" kind="function"><name>load_path</name></member>
+    <member refid="classEbsController_1afeafd5a03d6e3149b6902836fd63f905" kind="function"><name>control_loop</name></member>
+    <member refid="classEbsController_1a75327cdc9e2aacfdc2fabf47e795c3cf" kind="function"><name>mission_finished</name></member>
+  </compound>
+  <compound refid="classFeedForwardAction" kind="class"><name>FeedForwardAction</name>
+    <member refid="classFeedForwardAction_1ab0802790fe68e73bd12440cde0207e3f" kind="variable"><name>path_based_only_ptr</name></member>
+    <member refid="classFeedForwardAction_1a8bf6b70e7a1a3ded04aadac20aa7fdd9" kind="variable"><name>delay_ff_action_ptr</name></member>
+    <member refid="classFeedForwardAction_1a1bc95236d70a7249f57d4881bc72910a" kind="variable"><name>num_points_ptr</name></member>
+    <member refid="classFeedForwardAction_1a4985cc6ca95887cc4d0738e0edf7dc1f" kind="variable"><name>wb_ptr</name></member>
+    <member refid="classFeedForwardAction_1a69b85cb739d1dfc23a72ee68ca1d9548" kind="variable"><name>max_steer_ptr</name></member>
+    <member refid="classFeedForwardAction_1a021182bc0dc09aadfb6d9955c9f23d9b" kind="variable"><name>beta_ff_gain_ptr</name></member>
+    <member refid="classFeedForwardAction_1a59c586e85972bef63ca84c6c3609a572" kind="variable"><name>averaging_ff_gain_ptr</name></member>
+    <member refid="classFeedForwardAction_1a61109879b1fe0c774805da4681abfc13" kind="variable"><name>path_curvature_copy</name></member>
+    <member refid="classFeedForwardAction_1a787eb274104cccc6b9a780f7b441af10" kind="variable"><name>feedforward_values</name></member>
+    <member refid="classFeedForwardAction_1adeab82e1948821eb6eada778488fa8a8" kind="function"><name>FeedForwardAction</name></member>
+    <member refid="classFeedForwardAction_1ab3a4d69c1a39102b039156e2fa8f3310" kind="function"><name>initialize</name></member>
+    <member refid="classFeedForwardAction_1ab94b8875b79a4ed2bd8d6d0a4af57c03" kind="function"><name>feedforward_action</name></member>
+  </compound>
+  <compound refid="classLapPerformance" kind="class"><name>LapPerformance</name>
+    <member refid="classLapPerformance_1a1f38df3d53fa68ae8665ab8b1f64f12c" kind="variable"><name>begin_lap</name></member>
+    <member refid="classLapPerformance_1af4d40c5c17d904e2b1d0ff8bc964cebb" kind="variable"><name>check_zone</name></member>
+    <member refid="classLapPerformance_1a037278ef41fd64baeeed68ea254e95f4" kind="variable"><name>max_laps_memory</name></member>
+    <member refid="classLapPerformance_1a39a30ca6bf3c251939924a4052992809" kind="variable"><name>lap_num_points</name></member>
+    <member refid="classLapPerformance_1a2afab8f322d61eb16c386b623acbfaf8" kind="variable"><name>lap_count</name></member>
+    <member refid="classLapPerformance_1a8b712dfcd7ca6081256c551b45ff8795" kind="variable"><name>new_lap_end_idx</name></member>
+    <member refid="classLapPerformance_1a0631abca3029d0aceb345f5b7e873e45" kind="variable"><name>check_zone_start</name></member>
+    <member refid="classLapPerformance_1a31c200382968042e666ebcdb0020a6d1" kind="variable"><name>check_zone_end</name></member>
+    <member refid="classLapPerformance_1a050bce2cdf6d4798b98e0709e5829f2f" kind="variable"><name>lap_times</name></member>
+    <member refid="classLapPerformance_1a14313a48e42adc8bf9fdf85a2ec87bf0" kind="variable"><name>last_time</name></member>
+    <member refid="classLapPerformance_1acb41c297c34bd43bef5f076644ec32c8" kind="function"><name>LapPerformance</name></member>
+    <member refid="classLapPerformance_1a7077e41333b0450c5e9f674a0ffee4c9" kind="function"><name>initialize</name></member>
+    <member refid="classLapPerformance_1a7d57b41056c5863027f6bf6641b9930c" kind="function"><name>reset</name></member>
+    <member refid="classLapPerformance_1a10d44db0f7df96a35f53ddde0a37837e" kind="function"><name>update</name></member>
+    <member refid="classLapPerformance_1aa3c1ae8321b4971ed0b4efb5747c7ab4" kind="function"><name>statistics_update</name></member>
+  </compound>
+  <compound refid="structLapPerformanceData" kind="struct"><name>LapPerformanceData</name>
+    <member refid="structLapPerformanceData_1a1b5a8d54ab433fc24e1a3dfd36fffd14" kind="variable"><name>new_lap</name></member>
+    <member refid="structLapPerformanceData_1a67492561e61d672b44c23e6942b50598" kind="variable"><name>number_laps</name></member>
+    <member refid="structLapPerformanceData_1a02db0ce43c2a9a4e0efc613250ec3174" kind="variable"><name>lap_time</name></member>
+    <member refid="structLapPerformanceData_1a72067747fbb1348b2039596e604f8c20" kind="variable"><name>mean_time</name></member>
+    <member refid="structLapPerformanceData_1adb215601a54f20bd262b930a43faf7a8" kind="variable"><name>standard_deviation</name></member>
+    <member refid="structLapPerformanceData_1ae1139615dba21e7ca31639daebfdf239" kind="function"><name>LapPerformanceData</name></member>
+  </compound>
+  <compound refid="classMissionController" kind="class"><name>MissionController</name>
+    <member refid="classMissionController_1a44704e1e3185c3a5c40db140dd2f11b6" kind="function"><name>~MissionController</name></member>
+    <member refid="classMissionController_1a6e4573ac1ee23bb8dd5ac505db51e6a2" kind="function"><name>load_path</name></member>
+    <member refid="classMissionController_1a9b5e0d046deccb9bee61b36ffa8c64a9" kind="function"><name>control_loop</name></member>
+    <member refid="classMissionController_1a051964f5c371f5fb0cae94f2f868d516" kind="function"><name>mission_finished</name></member>
+    <member refid="classMissionController_1aadf5a79dc80fcd0306d2eb93f8df129c" kind="function"><name>publish_control_logging</name></member>
+  </compound>
+  <compound refid="structcontrol__structs_1_1NodeConfig" kind="struct"><name>control_structs::NodeConfig</name>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a8b69cdfabcd3825e56a15ca80aafda71" kind="variable"><name>send_drive_msg_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a0866ab92a0a616a5d5373e22173d2545" kind="variable"><name>visualize_markers_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a0dd1a083b99fbf9e586ee3c346ff9381" kind="variable"><name>watchdog_is_active_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a843542c2c9dce6ae1cf54554f0f673c3" kind="variable"><name>enable_control_logging_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1abd9049850cfa07f21380b2338fc291f7" kind="variable"><name>disable_print_timeout_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1aeb0f0f7b16b8d8efd870aa22956502f5" kind="variable"><name>tdp_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1aa20543173ae94bef4dffefa0b8348962" kind="variable"><name>watchdog_period_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a9cfc835183f83a6534fbb250c526c7fd" kind="variable"><name>starting_strip_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a6d35becf8a22b8dec789c074d86a58e3" kind="variable"><name>scale_speed_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1aea120c6a0b091f9cfca3a85a5a153253" kind="variable"><name>wb_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a865479ce53ad89aceb28750d994aeb0c" kind="variable"><name>kk_s_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1af9a15cbda6a1db925146e15366fdf302" kind="variable"><name>kd_s_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1aba0286b17c06bf0945a5c1f1e7e3af3c" kind="variable"><name>max_steer_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a213fd569ba6a1a7635f9ed61382ae28e" kind="variable"><name>k_staley</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a596ee631552241a1505f713f411fdc97" kind="variable"><name>min_speed_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a1834ba382090b52d18aca51f64531d81" kind="variable"><name>max_error_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a931df9ba0a4ac7061340af4ba0f4bd05" kind="variable"><name>decay_v_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a246837778000ff704294768d5ab34f16" kind="variable"><name>decay_e_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a18d3427d741cfe2c8ca0cf9d5250ca4e" kind="variable"><name>window_size_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a3a690a38ca1e232c703ba54abf34affe" kind="variable"><name>look_ahead_gain_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a56b8c24cd70384c4e7c243f78744b2a7" kind="variable"><name>min_look_ahead_dist_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a4614d0e868b37036d4b0058ff6e3d04f" kind="variable"><name>steering_gain_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1adc2a825502b1df5c66235e0f05e937eb" kind="variable"><name>kk_torque_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1ace50b5967d6d034e41ea70046ad3126d" kind="variable"><name>ki_torque_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1afe655f44597038603abf2b2611b19f79" kind="variable"><name>max_torque_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a2e0fa13473b851eb6752b5a2b93c27ef" kind="variable"><name>target_speed_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a30659d06028cc8d2c430b1f475d0730a" kind="variable"><name>raceline_discretization_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a8d5ffb834b440365f8b099d546fc6651" kind="variable"><name>control_frequency_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1ad1729ee8cf554b812346de6f162f8a9e" kind="variable"><name>look_ahead_point_topic_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a04fe5040e4bd2b8e8e144a5f7f8c1833" kind="variable"><name>car_nearest_point_topic_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a5cf172d6024034fe322e0478254a9767" kind="variable"><name>odom_topic_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a558cdf2da390f64a3739d3299685b51a" kind="variable"><name>pose_topic_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a1fd7fc86218f8ae36145ded1d030013a" kind="variable"><name>path_limits_topic_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a7151cdaf6a23c966fd68d5fe880882e5" kind="variable"><name>drive_topic_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a2bc2aee2615096b7d909724c19e7f50c" kind="variable"><name>start_control_topic_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1abce88455318f9d0021cbb77ce13183b9" kind="variable"><name>frame_id_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a9e6de1accc81ce84885d82ce8e63cca8" kind="variable"><name>is_ready_service_name_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1a57f2caabb14b87f23b8a74271b8f65a5" kind="variable"><name>mission_finished_topic_</name></member>
+    <member refid="structcontrol__structs_1_1NodeConfig_1ab3f90207f81a22b69126345ad5f57e9a" kind="variable"><name>check_readiness_</name></member>
+  </compound>
+  <compound refid="classPathFollowerNode" kind="class"><name>PathFollowerNode</name>
+    <member refid="classPathFollowerNode_1af0d44bf33a6073c79066b47897de3d02" kind="variable"><name>config_</name></member>
+    <member refid="classPathFollowerNode_1a14ca47c6764f2f23f3505a6d8c3528d4" kind="variable"><name>state_</name></member>
+    <member refid="classPathFollowerNode_1ae7c4d0edb663ec01204d04ba0f0edaba" kind="variable"><name>ros_</name></member>
+    <member refid="classPathFollowerNode_1a96fa2fac30a7b95c37aba8e3645da424" kind="variable"><name>pathf_</name></member>
+    <member refid="classPathFollowerNode_1a3129cbbfb49c9b7c395513ab84aa1425" kind="function"><name>PathFollowerNode</name></member>
+    <member refid="classPathFollowerNode_1af860a906772e51e54e8c0dafc8ddbf8c" kind="function"><name>control_loop</name></member>
+  </compound>
+  <compound refid="structcontrol__structs_1_1PathFollowerParameters" kind="struct"><name>control_structs::PathFollowerParameters</name>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1afb3c29e9fddc1ae6447af33f5884769d" kind="variable"><name>enable_speed_override_</name></member>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1ab47a45e197f6472e9a24d38a3c2b632e" kind="variable"><name>constant_speed_override_</name></member>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1ac76b25fdee59a201c323b009e1e3da83" kind="variable"><name>enable_steer_override_</name></member>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1a4f0de3fdd4cd6a98799d2a80a30c389b" kind="variable"><name>constant_steer_override_</name></member>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1aec1919574288898f486e003d5b6d26e9" kind="variable"><name>max_lap_statistics_</name></member>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1a05426c98b1325bac8866c8277ecada5b" kind="variable"><name>reset_lap_statistics_topic_</name></member>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1ac3560db66402e59d8b816de1a2fe7e1a" kind="variable"><name>speed_obtained</name></member>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1a18385bcd957726b8c328f38ed324c7a2" kind="variable"><name>path_obtained</name></member>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1a022cb3bd6d3adf7e68fc5540bed91ab8" kind="variable"><name>reset_lap_statistics_subscriber_</name></member>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1a6fb78fa5b3fbad2e239a846feea2a557" kind="variable"><name>raceline_publisher_</name></member>
+    <member refid="structcontrol__structs_1_1PathFollowerParameters_1af3a9a5548419d94f0b2aecb879bbfc17" kind="variable"><name>lap_performance_publisher_</name></member>
+  </compound>
+  <compound refid="structDummyController_1_1ProfilingTimers" kind="struct"><name>DummyController::ProfilingTimers</name>
+    <member refid="structDummyController_1_1ProfilingTimers_1abb81a11f36dc06b67021b64ac84b14b3" kind="variable"><name>nearest_index_times</name></member>
+    <member refid="structDummyController_1_1ProfilingTimers_1a3b3f5066471c5c3ade7492d530674a69" kind="variable"><name>look_ahead_times</name></member>
+    <member refid="structDummyController_1_1ProfilingTimers_1a2aa076d9c4ea311a6c26129d0e8ccc7d" kind="variable"><name>speed_generation_times</name></member>
+    <member refid="structDummyController_1_1ProfilingTimers_1ae05879a001e1b6492badffb0d4c6db2b" kind="variable"><name>steering_times</name></member>
+    <member refid="structDummyController_1_1ProfilingTimers_1a5b5b2dfe3227addb2b986ee84b3bddde" kind="variable"><name>torque_times</name></member>
+    <member refid="structDummyController_1_1ProfilingTimers_1ad2687538d00f3164e389abd7ef58d1dd" kind="variable"><name>total_times</name></member>
+  </compound>
+  <compound refid="classQuarticPolynomial" kind="class"><name>QuarticPolynomial</name>
+    <member refid="classQuarticPolynomial_1a0bf8d403e353919883d2f26a020e0f83" kind="variable"><name>a_0</name></member>
+    <member refid="classQuarticPolynomial_1a58ad5b6a465bbf0e3e04b1ca300008f0" kind="variable"><name>a_1</name></member>
+    <member refid="classQuarticPolynomial_1a33f9dfa22606de894984ea12dbf93d89" kind="variable"><name>a_2</name></member>
+    <member refid="classQuarticPolynomial_1a60c3daa1a9a947a53db1dfb54d9cebe3" kind="variable"><name>a_3</name></member>
+    <member refid="classQuarticPolynomial_1aeb0c4a327f1142132e4b143ff4e88d93" kind="variable"><name>a_4</name></member>
+    <member refid="classQuarticPolynomial_1a24c4f212e7c04b2d247b2d65fce8b329" kind="function"><name>QuarticPolynomial</name></member>
+    <member refid="classQuarticPolynomial_1ac4b5e72b860da0a607712f4d73b05036" kind="function"><name>calc_point</name></member>
+    <member refid="classQuarticPolynomial_1a87494d3d001459c958f2ca7be2f4b23e" kind="function"><name>calc_first_derivative</name></member>
+    <member refid="classQuarticPolynomial_1a17dbaea906a2ac818db324bf979da6b0" kind="function"><name>calc_second_derivative</name></member>
+    <member refid="classQuarticPolynomial_1abc125e1b7a73c65f9ef80eb03b475dff" kind="function"><name>calc_third_derivative</name></member>
+    <member refid="classQuarticPolynomial_1a327dbadde98f9f72025d7c1a5e3c96a6" kind="function"><name>calc_all</name></member>
+  </compound>
+  <compound refid="classQuarticPolynomialMiddlePose" kind="class"><name>QuarticPolynomialMiddlePose</name>
+    <member refid="classQuarticPolynomialMiddlePose_1a64fceb024f2b1b2667caa09f2660fa99" kind="variable"><name>a_0</name></member>
+    <member refid="classQuarticPolynomialMiddlePose_1ae7d2ced931185c5b3a10e0c857c54263" kind="variable"><name>a_1</name></member>
+    <member refid="classQuarticPolynomialMiddlePose_1a0e0f3da6f3ca3f96f96970f372553472" kind="variable"><name>a_2</name></member>
+    <member refid="classQuarticPolynomialMiddlePose_1a4313eeba77ab79517077b6c528f7b098" kind="variable"><name>a_3</name></member>
+    <member refid="classQuarticPolynomialMiddlePose_1aa7429345a1f4a81ff1c12a83b30f6250" kind="variable"><name>a_4</name></member>
+    <member refid="classQuarticPolynomialMiddlePose_1a1f7b90cd62b91ddd24d375110bd7eaa0" kind="function"><name>QuarticPolynomialMiddlePose</name></member>
+    <member refid="classQuarticPolynomialMiddlePose_1aa9d26e49ebf6579b7da01d6b01e68bcf" kind="function"><name>calc_point</name></member>
+    <member refid="classQuarticPolynomialMiddlePose_1a21e032af051f361c7711885e31828ef9" kind="function"><name>calc_first_derivative</name></member>
+    <member refid="classQuarticPolynomialMiddlePose_1a5a56a8409c599afcf5e731a37b25b726" kind="function"><name>calc_second_derivative</name></member>
+    <member refid="classQuarticPolynomialMiddlePose_1a2c250ac8e3c9e90bf8b2f8d56567e0b9" kind="function"><name>calc_third_derivative</name></member>
+    <member refid="classQuarticPolynomialMiddlePose_1a1a4395714a0ca134a9a63ece1e906dd3" kind="function"><name>calc_all</name></member>
+  </compound>
+  <compound refid="structSpeedProfileGenerator_1_1RawSample" kind="struct"><name>SpeedProfileGenerator::RawSample</name>
+    <member refid="structSpeedProfileGenerator_1_1RawSample_1a7751ca4c24a57c35524e87d13cf4aebc" kind="variable"><name>x</name></member>
+    <member refid="structSpeedProfileGenerator_1_1RawSample_1a07b79b49add300caee74159292175f08" kind="variable"><name>y</name></member>
+    <member refid="structSpeedProfileGenerator_1_1RawSample_1a6c35ef70678347bf90273f590e66b94a" kind="variable"><name>speed</name></member>
+  </compound>
+  <compound refid="structcontrol__structs_1_1RosInterfaces" kind="struct"><name>control_structs::RosInterfaces</name>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1af1f93bc5f9fd5dfaadd2b8f322991efd" kind="variable"><name>default_clock_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1a639f593f4b21c36cb6f0520656cc271f" kind="variable"><name>odom_subscriber_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1ab90f829241c81630b4a829e1f454a81a" kind="variable"><name>start_control_subscriber_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1aa528cb81bd6a3165d955141f508a9a2e" kind="variable"><name>path_limits_subscriber_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1a7a652bf1b4cd675f9243b11e768b2062" kind="variable"><name>is_ready_service_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1a47396bcdcb5e50c37534cfd5d343acec" kind="variable"><name>params_callback_handle_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1a0056eceacec1201d68a0eda0d584feca" kind="variable"><name>drive_publisher_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1a4a518fbdd48b447fe2454c96fe8195ff" kind="variable"><name>look_ahead_point_publisher_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1ab8ca64b2c68a4aec87b6bab68ea1ecda" kind="variable"><name>car_nearest_point_publisher_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1abf0175404993e5a7a6b328d11ce67d23" kind="variable"><name>status_emergency_publisher_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1a7d5ea591ecbabbd736e3d52025a36225" kind="variable"><name>status_info_publisher_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1a5400b3fbae34f5dd3beea5ca3a8b5f87" kind="variable"><name>mission_finished_publisher_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1abb3e3309c4176bbca90262a6a8daefae" kind="variable"><name>steering_pid_publisher_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1a92887a8ccab9a5cf1a3f1763fa2b9546" kind="variable"><name>torque_pid_publisher_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1ac5bc44d29dbd8775b2c69e62582087c9" kind="variable"><name>watchdog_timer_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1a000382edc919a9ab8fc36ee1433d98df" kind="variable"><name>control_timer_</name></member>
+    <member refid="structcontrol__structs_1_1RosInterfaces_1a603a5485d97c2d5daad23e78e646b7dc" kind="variable"><name>common_header</name></member>
+  </compound>
+  <compound refid="classSkidpadController" kind="class"><name>SkidpadController</name>
+    <member refid="classSkidpadController_1a62c483027ea00776a0bb062df662f907" kind="variable"><name>config_</name></member>
+    <member refid="classSkidpadController_1a1b8fc3a7923b3fcdcd6725bbb9f09d2d" kind="variable"><name>state_</name></member>
+    <member refid="classSkidpadController_1a6eb2c6b1206072958959474699e5910c" kind="variable"><name>ros_</name></member>
+    <member refid="classSkidpadController_1a42408793e772cbd8d430b74db278c6a8" kind="variable"><name>skidpad_path_</name></member>
+    <member refid="classSkidpadController_1aacb0bda1ba569b8c32cf5391e11da44b" kind="variable"><name>mission_start_time_</name></member>
+    <member refid="classSkidpadController_1a3e396f3bb7ee62240e4d6ec40ce46360" kind="variable"><name>mission_timing_started_</name></member>
+    <member refid="classSkidpadController_1a07efb9e6dce86003ba0269b06d071893" kind="variable"><name>mission_timing_reported_</name></member>
+    <member refid="classSkidpadController_1ade7d28c984b50ccfbca03589d5cfb72f" kind="function"><name>SkidpadController</name></member>
+    <member refid="classSkidpadController_1a9f19afc172845f5e926dcd3b10150def" kind="function"><name>load_path</name></member>
+    <member refid="classSkidpadController_1a62e1a27043fcf0cf7e7d5b238b57bc59" kind="function"><name>control_loop</name></member>
+    <member refid="classSkidpadController_1acad20035d8bd5a774aec1b78512d3e48" kind="function"><name>mission_finished</name></member>
+  </compound>
+  <compound refid="classSpeedGenerator" kind="class"><name>SpeedGenerator</name>
+    <member refid="classSpeedGenerator_1ab92faba2b491826808ef7c01c0a29197" kind="function"><name>~SpeedGenerator</name></member>
+    <member refid="classSpeedGenerator_1a76273850c123e7f77b8f2dfa6f3e232e" kind="function"><name>generate</name></member>
+    <member refid="classSpeedGenerator_1ab7796d7b9ecfeec89f4519fafe79a4ad" kind="function"><name>get_preview_k_</name></member>
+  </compound>
+  <compound refid="classSpeedProfileGenerator" kind="class"><name>SpeedProfileGenerator</name>
+    <member refid="classSpeedProfileGenerator_1a3049cddf9462e655d4564db57d99f425" kind="variable"><name>config_</name></member>
+    <member refid="classSpeedProfileGenerator_1a9fd677dc0cf3af65451978ba2ff3345e" kind="variable"><name>state_</name></member>
+    <member refid="classSpeedProfileGenerator_1a4e78a78de6a02a0e3cb6d5f33c88bdc9" kind="variable"><name>dummy_</name></member>
+    <member refid="classSpeedProfileGenerator_1ac8cfaba4aa5de3b97a2076db8e1f3217" kind="variable"><name>speed_params_</name></member>
+    <member refid="classSpeedProfileGenerator_1a8e9a5bdffba8763429fcaa0a69091676" kind="variable"><name>preview_k_</name></member>
+    <member refid="classSpeedProfileGenerator_1acaf92941825b020f3ce7ec601c322e31" kind="variable"><name>last_raw_speed_</name></member>
+    <member refid="classSpeedProfileGenerator_1a95ecd006e149c998e8e17d8bfb33fa21" kind="variable"><name>recording_complete_</name></member>
+    <member refid="classSpeedProfileGenerator_1a5277b8b7bbcffae4da5f51fb949a2fc0" kind="variable"><name>recording_start_idx_</name></member>
+    <member refid="classSpeedProfileGenerator_1a5fde8f40bb423c79a631aafea444e72b" kind="variable"><name>raw_recording_</name></member>
+    <member refid="classSpeedProfileGenerator_1a1b3730830bf345bc4db40751f134561e" kind="variable"><name>recorded_speed_</name></member>
+    <member refid="classSpeedProfileGenerator_1a9d20d4c3f3ca5559917d180c68693bce" kind="function"><name>SpeedProfileGenerator</name></member>
+    <member refid="classSpeedProfileGenerator_1ad4d5ec487bdefd57608c6832b0064695" kind="function"><name>generate</name></member>
+    <member refid="classSpeedProfileGenerator_1af9a8513d1f5a08b8ab0d035887b47188" kind="function"><name>get_preview_k_</name></member>
+    <member refid="classSpeedProfileGenerator_1a089a7f10730a5adc0489ffe63b986302" kind="function"><name>get_preview_curvature</name></member>
+    <member refid="classSpeedProfileGenerator_1aac514bed23ed0fea3dce9698a5bdb86b" kind="function"><name>target_speed_calc</name></member>
+    <member refid="classSpeedProfileGenerator_1a1c9325aa74b9dd86625ed3d4c70d4612" kind="function"><name>apply_rate_limit</name></member>
+    <member refid="classSpeedProfileGenerator_1aa78916d5d3330f4e462f408ce0ba6172" kind="function"><name>map_raw_to_raceline</name></member>
+    <member refid="classSpeedProfileGenerator_1a2973e1d1caa8843256e5d44502338638" kind="function"><name>fix_recording_edges</name></member>
+    <member refid="classSpeedProfileGenerator_1af242052e08c5375443effe2b4324180f" kind="function"><name>remove_spikes</name></member>
+  </compound>
+  <compound refid="structcontrol__structs_1_1SpeedProfileParameters" kind="struct"><name>control_structs::SpeedProfileParameters</name>
+    <member refid="structcontrol__structs_1_1SpeedProfileParameters_1a3445ed845c9c7b25c310ef81688ba380" kind="variable"><name>a_lat_max_</name></member>
+    <member refid="structcontrol__structs_1_1SpeedProfileParameters_1aac3f9740e430de5fd975657986e7aa4e" kind="variable"><name>v_min_</name></member>
+    <member refid="structcontrol__structs_1_1SpeedProfileParameters_1a202c58d792c81fcefbd51e441d9d3412" kind="variable"><name>max_accel_</name></member>
+    <member refid="structcontrol__structs_1_1SpeedProfileParameters_1aaeca3820036a0f9946194cdef2c19584" kind="variable"><name>max_decel_</name></member>
+    <member refid="structcontrol__structs_1_1SpeedProfileParameters_1a1d1d1d9550ad3f7cc58407c86658c908" kind="variable"><name>preview_time_</name></member>
+    <member refid="structcontrol__structs_1_1SpeedProfileParameters_1ad9906b5f7a75602668a2c038b2eb896e" kind="variable"><name>preview_dist_min_</name></member>
+    <member refid="structcontrol__structs_1_1SpeedProfileParameters_1aa04515c47e8b8b4689326e60bb4ade06" kind="variable"><name>curvature_triangle_step_</name></member>
+    <member refid="structcontrol__structs_1_1SpeedProfileParameters_1ac6ff56da1e47fc15d6ab42d561ef78bc" kind="variable"><name>k_noise_guard_</name></member>
+    <member refid="structcontrol__structs_1_1SpeedProfileParameters_1a5a63d2cda12d58bea5884f20cd2654e6" kind="variable"><name>speed_deadband_</name></member>
+    <member refid="structcontrol__structs_1_1SpeedProfileParameters_1a25ae47907438894633ff410c5e470cdb" kind="variable"><name>max_speed_</name></member>
+  </compound>
+  <compound refid="classSteeringController" kind="class"><name>SteeringController</name>
+    <member refid="classSteeringController_1a5aee0f7624d258b929a724322898e796" kind="variable"><name>wb_ptr</name></member>
+    <member refid="classSteeringController_1a908454cac3354bad78a40c565494298e" kind="variable"><name>max_steer_ptr</name></member>
+    <member refid="classSteeringController_1a93e0bacc9342a78486af4bf096a0f73a" kind="variable"><name>kk_s_ptr</name></member>
+    <member refid="classSteeringController_1af55541edc081048354f8e00153175df2" kind="variable"><name>kd_s_ptr</name></member>
+    <member refid="classSteeringController_1a47e7d92d309d484d1213992f54749637" kind="variable"><name>k_stanley_ptr</name></member>
+    <member refid="classSteeringController_1aa37d8956a64f1ce42ad10d91312197e3" kind="variable"><name>min_speed_ptr</name></member>
+    <member refid="classSteeringController_1a96e9ea300250a5a45f2229ef7f885f3f" kind="variable"><name>max_error_ptr</name></member>
+    <member refid="classSteeringController_1a2a48a554280f78ebe85818836754bc46" kind="variable"><name>decay_v_ptr</name></member>
+    <member refid="classSteeringController_1a903d0c6874cf37931bcf4989895b1ce3" kind="variable"><name>decay_e_ptr</name></member>
+    <member refid="classSteeringController_1aeb69db638352951a42b0afba25ce1dd1" kind="variable"><name>steer_err_old</name></member>
+    <member refid="classSteeringController_1aeaf032f85ce9b5765db848770956b1a4" kind="variable"><name>derivative</name></member>
+    <member refid="classSteeringController_1aaeb518af85dbdb823dc8d62d9db6021e" kind="variable"><name>last_time</name></member>
+    <member refid="classSteeringController_1a22b85d0b9d90ea3b3819c1976ec3ff85" kind="function"><name>SteeringController</name></member>
+    <member refid="classSteeringController_1a6e35dd0f599ea25819695b9298b70d1e" kind="function"><name>initialize</name></member>
+    <member refid="classSteeringController_1a5e174f4e1a7af8ae316c74bcbc9ea97a" kind="function"><name>pd_controller</name></member>
+    <member refid="classSteeringController_1a7ec3758f7b24babf585d8ad893be7e97" kind="function"><name>geometric_controller</name></member>
+    <member refid="classSteeringController_1ac746344a7197b19295b272e3839e7af0" kind="function"><name>stanley_controller</name></member>
+    <member refid="classSteeringController_1a85ed9d0437028cc10f6a21a7e066c62c" kind="function"><name>p_enhanced_controller</name></member>
+  </compound>
+  <compound refid="classThirdPolynomial" kind="class"><name>ThirdPolynomial</name>
+    <member refid="classThirdPolynomial_1afa6d476dc9028097078738f63e613fbc" kind="variable"><name>a_0</name></member>
+    <member refid="classThirdPolynomial_1ad71b608f05e102c1a0377b4b937ac993" kind="variable"><name>a_1</name></member>
+    <member refid="classThirdPolynomial_1a9d8672ddd87f7b7601c6cd224ca3dcdd" kind="variable"><name>a_2</name></member>
+    <member refid="classThirdPolynomial_1a76a5dee437812bd85231fb04a77eeedd" kind="variable"><name>a_3</name></member>
+    <member refid="classThirdPolynomial_1aa0a9d9dca17b52b9a8b737dc81b6367c" kind="function"><name>ThirdPolynomial</name></member>
+    <member refid="classThirdPolynomial_1ad278e37fa40b17efc838a7bd67ded65a" kind="function"><name>calc_point</name></member>
+    <member refid="classThirdPolynomial_1a4d67bba3a4498295315922d891e57aa0" kind="function"><name>calc_first_derivative</name></member>
+    <member refid="classThirdPolynomial_1a3a56fac53ffe8e6f49078f8acf71cec5" kind="function"><name>calc_second_derivative</name></member>
+    <member refid="classThirdPolynomial_1a16af3b32694d807dae8705a076fe365f" kind="function"><name>calc_third_derivative</name></member>
+    <member refid="classThirdPolynomial_1a2dbde603bad187b56449332ea9499857" kind="function"><name>calc_all</name></member>
+  </compound>
+  <compound refid="classTorqueController" kind="class"><name>TorqueController</name>
+    <member refid="classTorqueController_1a44c3e483457ee59a0e4e3652a9ddb9d8" kind="variable"><name>kk_torque_ptr</name></member>
+    <member refid="classTorqueController_1a67835ffa0534e3f254743929f3ec67f7" kind="variable"><name>ki_torque_ptr</name></member>
+    <member refid="classTorqueController_1ae197c0fba32a0dd33dfe97cda3335216" kind="variable"><name>maximum_torque_ptr</name></member>
+    <member refid="classTorqueController_1adc3c461c358fd0fedf91ffed59401494" kind="variable"><name>integral_error</name></member>
+    <member refid="classTorqueController_1adc8d7e08b0a0ff19426f5a0f48c5e44d" kind="variable"><name>last_time</name></member>
+    <member refid="classTorqueController_1a23bbb61072d9c87a2bd2a61afe2ffb0a" kind="function"><name>TorqueController</name></member>
+    <member refid="classTorqueController_1af374f9ab6bcb9237afc2d4ed73e353a4" kind="function"><name>initialize</name></member>
+    <member refid="classTorqueController_1aa6c19d160f1cff421af337d96efca31d" kind="function"><name>reset</name></member>
+    <member refid="classTorqueController_1a57f8bb32e0206cd9b44b743a2801bbae" kind="function"><name>pi_controller</name></member>
+  </compound>
+  <compound refid="namespacecontrol__structs" kind="namespace"><name>control_structs</name>
+  </compound>
+  <compound refid="acceleration__controller_8hpp" kind="file"><name>acceleration_controller.hpp</name>
+  </compound>
+  <compound refid="control__node_8hpp" kind="file"><name>control_node.hpp</name>
+  </compound>
+  <compound refid="ControlStructDataType_8hpp" kind="file"><name>ControlStructDataType.hpp</name>
+  </compound>
+  <compound refid="dummy__controller_8hpp" kind="file"><name>dummy_controller.hpp</name>
+  </compound>
+  <compound refid="ebs__controller_8hpp" kind="file"><name>ebs_controller.hpp</name>
+  </compound>
+  <compound refid="mission__controller_8hpp" kind="file"><name>mission_controller.hpp</name>
+  </compound>
+  <compound refid="speed__generator_8hpp" kind="file"><name>speed_generator.hpp</name>
+  </compound>
+  <compound refid="path__follower__node_8hpp" kind="file"><name>path_follower_node.hpp</name>
+  </compound>
+  <compound refid="skidpad__controller_8hpp" kind="file"><name>skidpad_controller.hpp</name>
+  </compound>
+  <compound refid="lap__performance_8hpp" kind="file"><name>lap_performance.hpp</name>
+  </compound>
+  <compound refid="ros__utils_8hpp" kind="file"><name>ros_utils.hpp</name>
+    <member refid="ros__utils_8hpp_1a1c302fecbc320694c92b7363cd0d7f35" kind="function"><name>publish_performance</name></member>
+    <member refid="ros__utils_8hpp_1acdd4d10e13db0d62aa9bf84a812c7895" kind="function"><name>visualize_markers</name></member>
+    <member refid="ros__utils_8hpp_1ad8bece350207dd4e9535a9776f902abc" kind="function"><name>visualize_markers</name></member>
+    <member refid="ros__utils_8hpp_1a2eb198870d55f9cb7c26e1f60b9a1979" kind="function"><name>publish_raceline</name></member>
+    <member refid="ros__utils_8hpp_1abe1b1b997bef9846de6c15b8c8d5fa0f" kind="function"><name>publish_points_as_marker_array</name></member>
+    <member refid="ros__utils_8hpp_1a19d41a1984d9db4166ff1979918e1a7a" kind="function"><name>publish_points_as_pointcloud</name></member>
+  </compound>
+  <compound refid="simple__speed_8hpp" kind="file"><name>simple_speed.hpp</name>
+    <member refid="simple__speed_8hpp_1a8666ead035190ddbcd155650aeb37176" kind="function"><name>speed_proportional_steering</name></member>
+    <member refid="simple__speed_8hpp_1ad8b9a9a94d3855969c36725c280f7d5b" kind="function"><name>speed_steer_and_fov</name></member>
+  </compound>
+  <compound refid="speed__profile__generator_8hpp" kind="file"><name>speed_profile_generator.hpp</name>
+  </compound>
+  <compound refid="speed__sae__controller_8hpp" kind="file"><name>speed_sae_controller.hpp</name>
+  </compound>
+  <compound refid="spline__and__polynomial_8hpp" kind="file"><name>spline_and_polynomial.hpp</name>
+  </compound>
+  <compound refid="steering__controller_8hpp" kind="file"><name>steering_controller.hpp</name>
+  </compound>
+  <compound refid="utils_8hpp" kind="file"><name>utils.hpp</name>
+    <member refid="utils_8hpp_1a7961cf9f682c353bbbbee08688449363" kind="function"><name>calculate_mean</name></member>
+    <member refid="utils_8hpp_1a7c87b3820a510fe8ba3d31de23d1368d" kind="function"><name>calculate_mean_in_range</name></member>
+    <member refid="utils_8hpp_1a49e610728a5471f56fc020d2b6ee6e9b" kind="function"><name>get_rgb</name></member>
+    <member refid="utils_8hpp_1a88dbb5d572b05732c37a6ab53f130fab" kind="function"><name>rifa</name></member>
+    <member refid="utils_8hpp_1a588d8ae799d233a401111c312e73364f" kind="function"><name>rafi</name></member>
+    <member refid="utils_8hpp_1a478f9c32589c5d73b481c36e939f27a1" kind="function"><name>linspace</name></member>
+    <member refid="utils_8hpp_1a548f490e1cc2964ec6a3099dedee3485" kind="function"><name>argmin</name></member>
+    <member refid="utils_8hpp_1ab868f789f6ce2325022257f61de9c9f8" kind="function"><name>heading_error</name></member>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_b6a1b25c97174b03ee33ad89b32089b9" kind="dir"><name>include/interfaces</name>
+  </compound>
+  <compound refid="dir_821002d4f10779a80d4fb17bc32f21f1" kind="dir"><name>include/utils</name>
+  </compound>
+</doxygenindex>

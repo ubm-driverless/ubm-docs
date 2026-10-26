@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classDelaunayTri" kind="class" language="C++" prot="public">
+    <compoundname>DelaunayTri</compoundname>
+    <includes local="no">DelaunayTri.hpp</includes>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classDelaunayTri_1a8a8c0dd8a6d256094b74414b92ab869b" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTriangle" kindref="compound">Triangle</ref></type>
+        <definition>static Triangle DelaunayTri::superTriangle</definition>
+        <argsstring>(const std::vector&lt; cNode &gt; &amp;nodes)</argsstring>
+        <name>superTriangle</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="classcNode" kindref="compound">cNode</ref> &gt; &amp;</type>
+          <declname>nodes</declname>
+        </param>
+        <briefdescription>
+<para>Builds and returns a <ref refid="classTriangle" kindref="compound">Triangle</ref> such that all Node(s) of <emphasis>nodes</emphasis> are positioned inside. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/DelaunayTri.hpp" line="34" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classDelaunayTri_1ab0316be147690a279f524b5955fd3b28" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8hpp_1a3d52158136e186e3457f54700a800c59" kindref="member">TriangleSet</ref></type>
+        <definition>static TriangleSet DelaunayTri::compute</definition>
+        <argsstring>(const std::vector&lt; cNode &gt; &amp;nodes)</argsstring>
+        <name>compute</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="classcNode" kindref="compound">cNode</ref> &gt; &amp;</type>
+          <declname>nodes</declname>
+        </param>
+        <briefdescription>
+<para>Computes the Delaunay triangulation set using an implementation of the Bowyer-Watson algorithm to find the Delaunay triangulation given a set of points. O(nlogn). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/DelaunayTri.hpp" line="44" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Static class that computes the Delaunay triangulation set given a set of Node(s) (Cones). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/modules/DelaunayTri.hpp" line="26" column="18" bodyfile="include/modules/DelaunayTri.hpp" bodystart="26" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classDelaunayTri_1ab0316be147690a279f524b5955fd3b28" prot="public" virt="non-virtual"><scope>DelaunayTri</scope><name>compute</name></member>
+      <member refid="classDelaunayTri_1a8a8c0dd8a6d256094b74414b92ab869b" prot="private" virt="non-virtual"><scope>DelaunayTri</scope><name>superTriangle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

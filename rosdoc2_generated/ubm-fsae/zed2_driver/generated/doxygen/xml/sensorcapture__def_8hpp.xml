@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sensorcapture__def_8hpp" kind="file" language="C++">
+    <compoundname>sensorcapture_def.hpp</compoundname>
+    <includes refid="defines_8hpp" local="yes">defines.hpp</includes>
+    <innerclass refid="structsl__oc_1_1sensors_1_1usb_1_1RawData" prot="public">sl_oc::sensors::usb::RawData</innerclass>
+    <innerclass refid="structsl__oc_1_1sensors_1_1usb_1_1StreamStatus" prot="public">sl_oc::sensors::usb::StreamStatus</innerclass>
+    <innerclass refid="structsl__oc_1_1sensors_1_1usb_1_1__ov580__cmd__struct" prot="public">sl_oc::sensors::usb::_ov580_cmd_struct</innerclass>
+    <innernamespace refid="namespacesl__oc">sl_oc</innernamespace>
+    <innernamespace refid="namespacesl__oc_1_1sensors">sl_oc::sensors</innernamespace>
+    <innernamespace refid="namespacesl__oc_1_1sensors_1_1usb">sl_oc::sensors::usb</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1a41ca8af45cee2a77e55c1de1f2aa4917" prot="public" static="no">
+        <name>DEFAULT_GRAVITY</name>
+        <initializer>(9.8189f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="24" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1a12c7b17bb03dc66dac226cdfe74f3c2d" prot="public" static="no">
+        <name>ACC_SCALE</name>
+        <initializer>(DEFAULT_GRAVITY*(8.0f/32768.0f))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="25" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1abdeac7f9288bf09fd6e1739d22ff8bea" prot="public" static="no">
+        <name>GYRO_SCALE</name>
+        <initializer>(1000.0f/32768.0f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="26" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1af91ea782523c15cb13ede694b43d1510" prot="public" static="no">
+        <name>MAG_SCALE</name>
+        <initializer>(1.0f/16.0f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="27" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1a37fc2eea145b1cf777795b062ce43500" prot="public" static="no">
+        <name>TEMP_SCALE</name>
+        <initializer>(0.01f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="28" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1ac5ae941fdb828d48883ea4089639008f" prot="public" static="no">
+        <name>PRESS_SCALE_NEW</name>
+        <initializer>(0.0001f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="29" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1aef04781a37ed3da21502a86580639099" prot="public" static="no">
+        <name>PRESS_SCALE_OLD</name>
+        <initializer>(0.01f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="30" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1a93df42c11be064d40ced7c1497926e66" prot="public" static="no">
+        <name>HUMID_SCALE_NEW</name>
+        <initializer>(0.01f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="31" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1aaf70fcb18ed8f0a604d91a0e9b2d95a2" prot="public" static="no">
+        <name>HUMID_SCALE_OLD</name>
+        <initializer>(1.0f/1024.0f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="32" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1a81582d04d243390261d772b18e6485c8" prot="public" static="no">
+        <name>TS_SCALE</name>
+        <initializer>(39062.5f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="34" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1a29264bc7dc06714b386d8177b92157b5" prot="public" static="no">
+        <name>TEMP_NOT_VALID</name>
+        <initializer>(-27315)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="35" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensorcapture__def_8hpp_1adb934a468c7afbd84b03a8f90c9d5388" prot="public" static="no">
+        <name>NTP_ADJUST_CT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="170" column="9" bodyfile="include/sensorcapture_def.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sensorcapture__def_8hpp_1a9b634eb903d1afbc226f3415ec162669" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string wstr2str</definition>
+        <argsstring>(const wchar_t *wstr)</argsstring>
+        <name>wstr2str</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>wstr</declname>
+        </param>
+        <briefdescription>
+<para>Convert a wchar array to std::string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wstr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the wchar array to be converted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="182" column="20" bodyfile="include/sensorcapture_def.hpp" bodystart="182" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/sensorcapture_def.hpp"/>
+  </compounddef>
+</doxygen>

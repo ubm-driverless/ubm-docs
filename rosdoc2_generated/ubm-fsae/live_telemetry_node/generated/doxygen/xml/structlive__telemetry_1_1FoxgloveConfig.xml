@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structlive__telemetry_1_1FoxgloveConfig" kind="struct" language="C++" prot="public">
+    <compoundname>live_telemetry::FoxgloveConfig</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlive__telemetry_1_1FoxgloveConfig_1a4725fb33b155bb7f5f9a1e383feac629" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string live_telemetry::FoxgloveConfig::log_channel</definition>
+        <argsstring></argsstring>
+        <name>log_channel</name>
+        <initializer>= &quot;/telemetry/log&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/config.hpp" line="32" column="17" bodyfile="include/live_telemetry_node/config.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlive__telemetry_1_1FoxgloveConfig_1a0fb190412c814a604b399b556fff5be0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string live_telemetry::FoxgloveConfig::camera_data_channel</definition>
+        <argsstring></argsstring>
+        <name>camera_data_channel</name>
+        <initializer>= &quot;/camera_data&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/config.hpp" line="33" column="17" bodyfile="include/live_telemetry_node/config.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlive__telemetry_1_1FoxgloveConfig_1afd7d9fe98b0fa7710d80a4059c5e103e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int live_telemetry::FoxgloveConfig::log_interval</definition>
+        <argsstring></argsstring>
+        <name>log_interval</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/config.hpp" line="34" column="9" bodyfile="include/live_telemetry_node/config.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlive__telemetry_1_1FoxgloveConfig_1a67449ca4ec539f381cec75c22702f8c5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool live_telemetry::FoxgloveConfig::enabled</definition>
+        <argsstring></argsstring>
+        <name>enabled</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/config.hpp" line="35" column="10" bodyfile="include/live_telemetry_node/config.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlive__telemetry_1_1FoxgloveConfig_1a2531cd39e5a274b3da89208c64d4e883" prot="public" static="no" mutable="no">
+        <type><ref refid="structlive__telemetry_1_1ImageScaleConfig" kindref="compound">ImageScaleConfig</ref></type>
+        <definition>ImageScaleConfig live_telemetry::FoxgloveConfig::image_scale</definition>
+        <argsstring></argsstring>
+        <name>image_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/config.hpp" line="36" column="22" bodyfile="include/live_telemetry_node/config.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>live_telemetry::ImageScaleConfig</label>
+        <link refid="structlive__telemetry_1_1ImageScaleConfig"/>
+      </node>
+      <node id="1">
+        <label>live_telemetry::FoxgloveConfig</label>
+        <link refid="structlive__telemetry_1_1FoxgloveConfig"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>image_scale</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/live_telemetry_node/config.hpp" line="31" column="1" bodyfile="include/live_telemetry_node/config.hpp" bodystart="30" bodyend="37"/>
+    <listofallmembers>
+      <member refid="structlive__telemetry_1_1FoxgloveConfig_1a0fb190412c814a604b399b556fff5be0" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveConfig</scope><name>camera_data_channel</name></member>
+      <member refid="structlive__telemetry_1_1FoxgloveConfig_1a67449ca4ec539f381cec75c22702f8c5" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveConfig</scope><name>enabled</name></member>
+      <member refid="structlive__telemetry_1_1FoxgloveConfig_1a2531cd39e5a274b3da89208c64d4e883" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveConfig</scope><name>image_scale</name></member>
+      <member refid="structlive__telemetry_1_1FoxgloveConfig_1a4725fb33b155bb7f5f9a1e383feac629" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveConfig</scope><name>log_channel</name></member>
+      <member refid="structlive__telemetry_1_1FoxgloveConfig_1afd7d9fe98b0fa7710d80a4059c5e103e" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveConfig</scope><name>log_interval</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classConeMatching" kind="class"><name>ConeMatching</name>
+    <member refid="classConeMatching_1acf76db36509fa71a359690474ec3d1a3" kind="variable"><name>min_track_width_ptr</name></member>
+    <member refid="classConeMatching_1aeeca7474216435e5ab21d7802b1ed65b" kind="variable"><name>max_search_range_ptr</name></member>
+    <member refid="classConeMatching_1ada4c647983f21f860e3fe2e8845a4214" kind="variable"><name>max_search_angle_ptr</name></member>
+    <member refid="classConeMatching_1a14d880e663a67211c127bb3eceabb6c1" kind="function"><name>ConeMatching</name></member>
+    <member refid="classConeMatching_1a3aa7b8b9c527044f69983bec638eab03" kind="function"><name>initialize</name></member>
+    <member refid="classConeMatching_1ad566023731f803950e7c58a700e00818" kind="function"><name>run_cone_matching</name></member>
+  </compound>
+  <compound refid="classConePathPlanner" kind="class"><name>ConePathPlanner</name>
+  </compound>
+  <compound refid="classConePathPlannerNode" kind="class"><name>ConePathPlannerNode</name>
+    <member refid="classConePathPlannerNode_1ac126336213784dcc3533586e660db38f" kind="variable"><name>default_clock_</name></member>
+    <member refid="classConePathPlannerNode_1a81a675b780f7eeabf922d2dd312b17de" kind="variable"><name>disable_print_timeout_</name></member>
+    <member refid="classConePathPlannerNode_1adca3ca76f9322bc478a7eafaa8262224" kind="variable"><name>use_unknown_cones_</name></member>
+    <member refid="classConePathPlannerNode_1a367b7fb272427e59336cc51f82576652" kind="variable"><name>max_n_neighbors_</name></member>
+    <member refid="classConePathPlannerNode_1ae40d7f18dadaf875334e242a10f70df1" kind="variable"><name>max_length_</name></member>
+    <member refid="classConePathPlannerNode_1a60c2923958c02e29b837f29ebbf28925" kind="variable"><name>max_dist_</name></member>
+    <member refid="classConePathPlannerNode_1aa59462cca20e54ae24af9fbed3762859" kind="variable"><name>max_dist_to_car_</name></member>
+    <member refid="classConePathPlannerNode_1aa02e5b303e75aa458dbe9235238449fc" kind="variable"><name>max_dist_to_neighbor_</name></member>
+    <member refid="classConePathPlannerNode_1aea3d77ad3079306d357d7986f5288d30" kind="variable"><name>threshold_directional_angle_</name></member>
+    <member refid="classConePathPlannerNode_1a7d43b7497673e98dddc244e37bdbbac4" kind="variable"><name>threshold_absolute_angle_</name></member>
+    <member refid="classConePathPlannerNode_1a34267836fd04bbe1a9409ddbe0eb96b0" kind="variable"><name>threshold_other_side_angle_</name></member>
+    <member refid="classConePathPlannerNode_1a713b7812a33a348a6524d81c5a8a86e0" kind="variable"><name>threshold_filter_angle_</name></member>
+    <member refid="classConePathPlannerNode_1a31e792fb4f307aa8c5210f59d5332040" kind="variable"><name>min_track_width_</name></member>
+    <member refid="classConePathPlannerNode_1a4836a7be118b6e8c516b4d576f5e03ad" kind="variable"><name>max_search_range_</name></member>
+    <member refid="classConePathPlannerNode_1ad137e5c01f61a023f7de57c018878e0b" kind="variable"><name>max_search_angle_</name></member>
+    <member refid="classConePathPlannerNode_1a78ceab8183a06f38390607e23abef2c1" kind="variable"><name>debug_</name></member>
+    <member refid="classConePathPlannerNode_1af5c61f474c05eb71e247507b79f65044" kind="variable"><name>cones_topic_</name></member>
+    <member refid="classConePathPlannerNode_1a3639a2f06c64fdc280cb4ac4ac664a70" kind="variable"><name>pose_topic_</name></member>
+    <member refid="classConePathPlannerNode_1a7775e62e9887d80a2293aa1271950f5c" kind="variable"><name>reactive_raceline_topic_</name></member>
+    <member refid="classConePathPlannerNode_1a4841f314abc431738b3cdc631b27faa4" kind="variable"><name>path_visualization_topic_</name></member>
+    <member refid="classConePathPlannerNode_1a11f083dce5079d53720d21619b9319bf" kind="variable"><name>is_ready_service_</name></member>
+    <member refid="classConePathPlannerNode_1a6aa1deff71ad5082e50ba042edcf0da2" kind="variable"><name>cones_received</name></member>
+    <member refid="classConePathPlannerNode_1ab0f91a51fc003feef7b390635b110ace" kind="variable"><name>pose_received</name></member>
+    <member refid="classConePathPlannerNode_1ae7a14a26ec052286c290e77f5a2a6261" kind="variable"><name>cones_</name></member>
+    <member refid="classConePathPlannerNode_1adea05fada992aeaa812fbf264b2f920b" kind="variable"><name>cone_sorting</name></member>
+    <member refid="classConePathPlannerNode_1a1f32b3806552b34454ab32061901727a" kind="variable"><name>cone_matching</name></member>
+    <member refid="classConePathPlannerNode_1a9b324803b233bba03cee478953a35ee3" kind="variable"><name>spline</name></member>
+    <member refid="classConePathPlannerNode_1a065017a124eeb5c802b33ebbb3c7c9f1" kind="variable"><name>current_pose</name></member>
+    <member refid="classConePathPlannerNode_1ab02c61f8c1db833a7795894403419f18" kind="variable"><name>current_cones</name></member>
+    <member refid="classConePathPlannerNode_1ab05976b52fbeec441c653190fb794caf" kind="variable"><name>cone_array_sorting</name></member>
+    <member refid="classConePathPlannerNode_1a2d5da5a0e166eb9d03bc0a67a84a7e6a" kind="variable"><name>cone_array_matching</name></member>
+    <member refid="classConePathPlannerNode_1afbe80b33885f8c0611ae193872689a8a" kind="variable"><name>cones_subscriber_</name></member>
+    <member refid="classConePathPlannerNode_1a02a910f52cb6b43d30c942d11819bfbe" kind="variable"><name>pose_subscriber_</name></member>
+    <member refid="classConePathPlannerNode_1ac1c9ddceef062df538c338747a3afe68" kind="variable"><name>reactive_raceline_publisher_</name></member>
+    <member refid="classConePathPlannerNode_1a114f00a64c1d775679f844111146014f" kind="variable"><name>path_visualization_publisher_</name></member>
+    <member refid="classConePathPlannerNode_1aa1dcf02d80613904fd814d7e1190c071" kind="function"><name>ConePathPlannerNode</name></member>
+    <member refid="classConePathPlannerNode_1ab7f72dc6a1453b8a353d7e9c2fc88870" kind="function"><name>initialize_parameters</name></member>
+    <member refid="classConePathPlannerNode_1acf305aae2f1c5add5fb32c40be20fffe" kind="function"><name>initialize_ros_communication</name></member>
+    <member refid="classConePathPlannerNode_1ac06bd7f127032e0998d3190b219c18ec" kind="function"><name>cones_callback</name></member>
+    <member refid="classConePathPlannerNode_1ac887f2c769b345766744007faa5a65de" kind="function"><name>pose_callback</name></member>
+    <member refid="classConePathPlannerNode_1a04a86993302b5a5cdb1c6081ada0f8fb" kind="function"><name>control_loop</name></member>
+    <member refid="classConePathPlannerNode_1a5f35ebb70d6a083881359f69e8109628" kind="function"><name>quaternion_to_2d_direction</name></member>
+  </compound>
+  <compound refid="classConeSorting" kind="class"><name>ConeSorting</name>
+    <member refid="classConeSorting_1a3f2e941f12905c1e7f662b2068077fcb" kind="variable"><name>use_unknown_cones_ptr</name></member>
+    <member refid="classConeSorting_1aeaaf36b5a805b34115b22e23d1107300" kind="variable"><name>max_n_neighbors_ptr</name></member>
+    <member refid="classConeSorting_1a2bcecd8aecf3624aa06d44bdaeb0ff47" kind="variable"><name>max_length_ptr</name></member>
+    <member refid="classConeSorting_1a53293b7694afdf6866ada74c8cd9bd8c" kind="variable"><name>max_dist_ptr</name></member>
+    <member refid="classConeSorting_1ab88c3901e6dbdb7b0a6d0d2bf11b1423" kind="variable"><name>max_dist_to_car_ptr</name></member>
+    <member refid="classConeSorting_1a60cdeea057ce5a3046f2a7e892db022a" kind="variable"><name>max_dist_to_neighbor_ptr</name></member>
+    <member refid="classConeSorting_1ace9bfe9ddfe63d0b6bbaf4b73c82d463" kind="variable"><name>threshold_directional_angle_ptr</name></member>
+    <member refid="classConeSorting_1ae59fe0c144c826ef97b5adac16b07953" kind="variable"><name>threshold_absolute_angle_ptr</name></member>
+    <member refid="classConeSorting_1ac0a2b14ea041b89d2f4836da2d642e7d" kind="variable"><name>threshold_other_side_angle_ptr</name></member>
+    <member refid="classConeSorting_1a0c94758e913aef045aa60c300ffe8bbd" kind="variable"><name>threshold_filter_angle_ptr</name></member>
+    <member refid="classConeSorting_1a7876266422bcf859b1921c8eadd31705" kind="function"><name>ConeSorting</name></member>
+    <member refid="classConeSorting_1ad6be60b4ad1727ea887b73668f4721cd" kind="function"><name>initialize</name></member>
+    <member refid="classConeSorting_1adab648ab5d7c525ffd603c324b25d0fe" kind="function"><name>run_cone_sorting</name></member>
+  </compound>
+  <compound refid="classNearbyConeSearcher" kind="class"><name>NearbyConeSearcher</name>
+    <member refid="classNearbyConeSearcher_1ab8862e32fbdc779d46fce7b5eff21dd9" kind="typedef"><name>CacheKey</name></member>
+    <member refid="classNearbyConeSearcher_1a00331031367b4e31cfd971d4e390ba88" kind="typedef"><name>CacheValue</name></member>
+    <member refid="classNearbyConeSearcher_1a5b0c2fedb8754526275971aaed2223b0" kind="variable"><name>caches_cache</name></member>
+    <member refid="classNearbyConeSearcher_1a02cc546758afb5252d32c911f3ada9bc" kind="variable"><name>max_cache_size</name></member>
+    <member refid="classNearbyConeSearcher_1ad2a93e1660b9a0f8e19a73c2fac4b87d" kind="function"><name>NearbyConeSearcher</name></member>
+    <member refid="classNearbyConeSearcher_1a72a9a2a2fc825aaa1efc5923ffa95c54" kind="function"><name>get_caches</name></member>
+    <member refid="classNearbyConeSearcher_1aff7f6f1e5262399adda6d2afd1e360d7" kind="function"><name>number_cones_per_side</name></member>
+  </compound>
+  <compound refid="arma__conversions_8hpp" kind="file"><name>arma_conversions.hpp</name>
+    <member refid="arma__conversions_8hpp_1a02816c806c88c629c7fd70036f83a3ea" kind="function"><name>convert_fmat_to_std</name></member>
+    <member refid="arma__conversions_8hpp_1a31699efad250d188bac351d47fff5e4b" kind="function"><name>convert_ivec_to_std</name></member>
+    <member refid="arma__conversions_8hpp_1aa6415a71ddfcba52b5afd0cea790a8bf" kind="function"><name>convert_fvec_to_std</name></member>
+    <member refid="arma__conversions_8hpp_1a6afb17aafe2e253c0dc944dd64270637" kind="function"><name>convert_std_to_fmat</name></member>
+    <member refid="arma__conversions_8hpp_1ac8bde8f528e824ebf4ee208d23973df3" kind="function"><name>convert_std_to_imat</name></member>
+    <member refid="arma__conversions_8hpp_1a280be88290a9f5433705454b08ff528f" kind="function"><name>convert_std_to_ivec</name></member>
+    <member refid="arma__conversions_8hpp_1a2a2ccf8897d95e1488febb3b15fc1145" kind="function"><name>convert_vector_to_arma_vector</name></member>
+  </compound>
+  <compound refid="calculate__configurations_8hpp" kind="file"><name>calculate_configurations.hpp</name>
+    <member refid="calculate__configurations_8hpp_1acbc32eccca90b5b819e02445f6aa3bbc" kind="function"><name>select_starting_cones_indices</name></member>
+    <member refid="calculate__configurations_8hpp_1ab311e4fb12a10db1475c92701b801afa" kind="function"><name>select_nearest_cones_indices</name></member>
+    <member refid="calculate__configurations_8hpp_1afa982267dd0aa75e0d62d4cb53ae6ffd" kind="function"><name>cdist_sq_euclidean</name></member>
+    <member refid="calculate__configurations_8hpp_1ad8f1dd2731ffc0b00ccae7f4402515ef" kind="function"><name>adjacency_matrix</name></member>
+    <member refid="calculate__configurations_8hpp_1ad15946329aa847f45e967df6977ef5b6" kind="function"><name>breadth_first_order</name></member>
+    <member refid="calculate__configurations_8hpp_1af15906d4549799e76eb04dc216d943b2" kind="function"><name>adjacency_matrix_to_borders_and_targets</name></member>
+    <member refid="calculate__configurations_8hpp_1acc291572416721bed1fadfc10cc9d1fa" kind="function"><name>end_configurations</name></member>
+    <member refid="calculate__configurations_8hpp_1a4615854e623bf5a1cd23ae9f623b37e2" kind="function"><name>neighbor_bool_mask_can_be_added_to_attempt</name></member>
+    <member refid="calculate__configurations_8hpp_1aebb1619cc5f2cf7ce09235e2f3a7f0ad" kind="function"><name>check_distances</name></member>
+    <member refid="calculate__configurations_8hpp_1a138d1199f3274bf52b4f008292574cce" kind="function"><name>check_expected_side</name></member>
+    <member refid="calculate__configurations_8hpp_1a9cdd3d233e1d8399e9562cb3d4e08a6b" kind="function"><name>filter_in_between_cones</name></member>
+    <member refid="calculate__configurations_8hpp_1a6cf6a23c4d338bba003cfff2a4aa5af1" kind="function"><name>check_direction_changes</name></member>
+  </compound>
+  <compound refid="calculate__costs_8hpp" kind="file"><name>calculate_costs.hpp</name>
+    <member refid="calculate__costs_8hpp_1ac281d88f622d5f38138a8fad88162efa" kind="function"><name>calculate_cost</name></member>
+    <member refid="calculate__costs_8hpp_1afa7fb04b1b861d62bb407089d3d9d525" kind="function"><name>calc_angle_cost_for_configuration</name></member>
+    <member refid="calculate__costs_8hpp_1add94f442c07531308faabac90c3952d0" kind="function"><name>calc_angle_to_next</name></member>
+    <member refid="calculate__costs_8hpp_1afbd59df9b1495b853a9d1fb8d71c98cb" kind="function"><name>calc_distance_cost</name></member>
+    <member refid="calculate__costs_8hpp_1a4d03e83c147c5138c5d612f2d857926a" kind="function"><name>calc_number_of_cones_cost</name></member>
+    <member refid="calculate__costs_8hpp_1a33781df33b8442575ed1bdf644370758" kind="function"><name>calc_initial_direction_cost</name></member>
+    <member refid="calculate__costs_8hpp_1a7d0b3ef396ea9dd46be8dccf5124572a" kind="function"><name>calc_wrong_direction_cost</name></member>
+    <member refid="calculate__costs_8hpp_1a77c2a4a835e5ff549cada39eb0019328" kind="function"><name>calc_change_of_direction_cost</name></member>
+    <member refid="calculate__costs_8hpp_1a38092e96a6fb5dc9cf1eee51727cf52a" kind="function"><name>calc_cones_on_either_cost</name></member>
+  </compound>
+  <compound refid="combine__traces_8hpp" kind="file"><name>combine_traces.hpp</name>
+    <member refid="combine__traces_8hpp_1a107440bbe44b1606772efb83e30703d9" kind="function"><name>calculate_final_configurations</name></member>
+    <member refid="combine__traces_8hpp_1a6e2ff2e677ab191b5851911796612f39" kind="function"><name>handle_same_cone_in_both_configs</name></member>
+    <member refid="combine__traces_8hpp_1ae2809b468aad10064ce70963e37b0f72" kind="function"><name>calculate_new_lenght</name></member>
+    <member refid="combine__traces_8hpp_1a6a27c87f5613d3e4dc0158a5f5819fdd" kind="function"><name>calculate_angle_change</name></member>
+  </compound>
+  <compound refid="cone__common__types_8hpp" kind="file"><name>cone_common_types.hpp</name>
+    <member refid="cone__common__types_8hpp_1ab2b58f3678216bde3d530279fbb704e9" kind="typedef"><name>SearchDirectionsCacheKey</name></member>
+    <member refid="cone__common__types_8hpp_1acb542fca1a5b7567597f1a3783525301" kind="typedef"><name>SearchDirectionsCache</name></member>
+    <member refid="cone__common__types_8hpp_1a884845874542e5734847749753957c2a" kind="typedef"><name>AngleMaskCacheKey</name></member>
+    <member refid="cone__common__types_8hpp_1a2412aa2209e14a8461c2ee7fae62da2a" kind="typedef"><name>AngleMaskCache</name></member>
+    <member refid="cone__common__types_8hpp_1aa634bcc3c72d06f6b2a0d9f5ef554b7e" kind="variable"><name>SENTINEL_VALUE</name></member>
+  </compound>
+  <compound refid="cone__matching_8hpp" kind="file"><name>cone_matching.hpp</name>
+  </compound>
+  <compound refid="cone__path__planner__node_8hpp" kind="file"><name>cone_path_planner_node.hpp</name>
+    <member refid="cone__path__planner__node_8hpp_1aaca0cae128cb5505e5f28047fa7e1a9b" kind="function"><name>publish_path</name></member>
+    <member refid="cone__path__planner__node_8hpp_1afc485e92bc8729b8cd5940042e021c74" kind="function"><name>publish_path_points_as_marker_array</name></member>
+    <member refid="cone__path__planner__node_8hpp_1a991b687c5a1f38d297c3f6a4ff6b55c5" kind="function"><name>publish_cones_as_marker_array</name></member>
+  </compound>
+  <compound refid="cone__sorting_8hpp" kind="file"><name>cone_sorting.hpp</name>
+  </compound>
+  <compound refid="costs__utils_8hpp" kind="file"><name>costs_utils.hpp</name>
+    <member refid="costs__utils_8hpp_1aa6d9e2bfcbad410f469223b70db886ad" kind="function"><name>clear_nearby_cone_search_cache</name></member>
+    <member refid="costs__utils_8hpp_1aa45a5b7fa58cb3a5dbd8f4d441241631" kind="function"><name>create_search_directions_cache</name></member>
+    <member refid="costs__utils_8hpp_1aef0cce031070700a473a833f82fefd36" kind="function"><name>create_angle_cache</name></member>
+    <member refid="costs__utils_8hpp_1afb4efeb1cc849a23b85537896dedd858" kind="function"><name>impl_number_cones_per_side</name></member>
+    <member refid="costs__utils_8hpp_1a906a6152e39ff7d870166b45390e1ad3" kind="function"><name>pre_calculate_search_directions</name></member>
+    <member refid="costs__utils_8hpp_1a20fc6f91312d6f2b15809e8dd65c20ef" kind="function"><name>calculate_match_search_direction_for_one_if_not_in_cache</name></member>
+    <member refid="costs__utils_8hpp_1afdc7af7c29b7d879b524219dd5f35f33" kind="function"><name>calculate_visible_cones_for_one_cone</name></member>
+    <member refid="costs__utils_8hpp_1a27b8898ee7e246a17648f569f931a0d8" kind="function"><name>angle_between_search_direction_of_cone_and_other_cone_is_too_large_if_not_in_cache</name></member>
+    <member refid="costs__utils_8hpp_1a11f816dc47318c295d8f46db5ba4c088" kind="function"><name>angle_between_search_direction_of_cone_and_other_cone_is_too_large</name></member>
+    <member refid="costs__utils_8hpp_1ae704ef399c04d0cc21c2333d586bb700" kind="function"><name>calc_angles</name></member>
+    <member refid="costs__utils_8hpp_1ad220315507a49fd04f6f4c2833193358" kind="function"><name>angle_difference</name></member>
+    <member refid="costs__utils_8hpp_1ac0aa5386079fc8662fe076e7bc3df24b" kind="function"><name>mod_fvec</name></member>
+    <member refid="costs__utils_8hpp_1a47704e3f17c2b97b0c0e1467a1e1a8b1" kind="function"><name>set_difference</name></member>
+  </compound>
+  <compound refid="functional__cone__matching_8hpp" kind="file"><name>functional_cone_matching.hpp</name>
+    <member refid="functional__cone__matching_8hpp_1a18bbc3fc4b88e28cc20ab2f652a06c03" kind="function"><name>calculate_virtual_cones_for_both_sides</name></member>
+    <member refid="functional__cone__matching_8hpp_1a723dc5ba34f17b91638495af8c14f163" kind="function"><name>calculate_cones_for_other_side</name></member>
+    <member refid="functional__cone__matching_8hpp_1a3011cbdef50a04318434263896740d2a" kind="function"><name>calculate_matches_for_side</name></member>
+    <member refid="functional__cone__matching_8hpp_1a3e9e35b39c326b6e2ca3117b09da6081" kind="function"><name>calculate_search_direction_for_one</name></member>
+    <member refid="functional__cone__matching_8hpp_1aca428314ac09e7e2c61b11ad9562f9da" kind="function"><name>calculate_search_direction</name></member>
+    <member refid="functional__cone__matching_8hpp_1a500d8618208d324a9ed47c52d9ee1913" kind="function"><name>select_best_match_candidate</name></member>
+    <member refid="functional__cone__matching_8hpp_1ae0cfcb990f6c04336f1c0f1904ced768" kind="function"><name>calculate_positions_of_virtual_cones</name></member>
+    <member refid="functional__cone__matching_8hpp_1a44b714b594e5b94d1cc28250d2ff7e0a" kind="function"><name>combine_and_sort_virtual_with_real</name></member>
+    <member refid="functional__cone__matching_8hpp_1a67d29e8d606665b9b54e9741c7da2b0e" kind="function"><name>insert_virtual_cones_to_existing</name></member>
+  </compound>
+  <compound refid="matching__utils_8hpp" kind="file"><name>matching_utils.hpp</name>
+    <member refid="matching__utils_8hpp_1a1c3b726d411650145e09826616cfc75d" kind="function"><name>rotate_row_vector</name></member>
+    <member refid="matching__utils_8hpp_1a0323abb3e93a31300c2814bb96d31497" kind="function"><name>rotate_matrix</name></member>
+    <member refid="matching__utils_8hpp_1a51598923ec40712522fa728c92390cbc" kind="function"><name>find_angles</name></member>
+    <member refid="matching__utils_8hpp_1a91c30f4e147b613974742fb7fbb7dc8d" kind="function"><name>angles_from_matrix_std</name></member>
+    <member refid="matching__utils_8hpp_1afcb56065ad5ddcd3a5182b27a1c2448d" kind="function"><name>angles_from_matrix</name></member>
+    <member refid="matching__utils_8hpp_1a82b36a99a82b28a68c67b3e06e461e4d" kind="function"><name>trace_angles_between</name></member>
+  </compound>
+  <compound refid="nearby__cone__search_8hpp" kind="file"><name>nearby_cone_search.hpp</name>
+  </compound>
+  <compound refid="spline__and__polynomial_8hpp" kind="file"><name>spline_and_polynomial.hpp</name>
+  </compound>
+  <compound refid="utils_8hpp" kind="file"><name>utils.hpp</name>
+    <member refid="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85d" kind="enum"><name>ConeType</name></member>
+    <member refid="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85da684d325a7303f52e64011467ff5c5758" kind="enumvalue"><name>LEFT</name></member>
+    <member refid="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85da87a39f874fe63364c38b84409c89e503" kind="enumvalue"><name>ORANGE_BIG</name></member>
+    <member refid="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85da666560577ad308857699da5cac332553" kind="enumvalue"><name>ORANGE_SMALL</name></member>
+    <member refid="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85da696b031073e74bf2cb98e5ef201d4aa3" kind="enumvalue"><name>UNKNOWN</name></member>
+    <member refid="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85da21507b40c80068eda19865706fdc2403" kind="enumvalue"><name>RIGHT</name></member>
+    <member refid="utils_8hpp_1a5b81972b6f8c6255aeb78a4a7af2b847" kind="function"><name>convert_to_arma_vector</name></member>
+    <member refid="utils_8hpp_1a229e86e09149bdecf85f1e91e0dd98e8" kind="function"><name>convert_from_arma_vector</name></member>
+    <member refid="utils_8hpp_1ab346cbc8e58adf1d01aa6a34b65f699f" kind="function"><name>rotate</name></member>
+    <member refid="utils_8hpp_1a4f41df9a8a8c4d7a420fdd7333e50a63" kind="function"><name>angle_from_2d_vector</name></member>
+    <member refid="utils_8hpp_1a8554a4bf66d0232bb5759d4ba87b8a4a" kind="function"><name>vec_angle_between</name></member>
+  </compound>
+  <compound refid="dir_b127839008275e0ca9d12f557880de69" kind="dir"><name>include/cone_path_planner</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+</doxygenindex>

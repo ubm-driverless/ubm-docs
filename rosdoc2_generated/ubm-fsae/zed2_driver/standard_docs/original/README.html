@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Key Features &mdash; zed2_driver 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            zed2_driver
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/index.html">C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/index.html#full-c-api">Full C++ API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/namespace_sl_oc.html">Namespace sl_oc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/namespace_sl_oc__sensors.html">Namespace sl_oc::sensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/namespace_sl_oc__sensors__usb.html">Namespace sl_oc::sensors::usb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/namespace_sl_oc__tools.html">Namespace sl_oc::tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/namespace_sl_oc__video.html">Namespace sl_oc::video</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/index.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1sensors_1_1usb_1_1__ov580__cmd__struct.html">Struct _ov580_cmd_struct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1sensors_1_1usb_1_1RawData.html">Struct RawData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1sensors_1_1usb_1_1StreamStatus.html">Struct StreamStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry.html">Struct CSimpleIniTempl::Entry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry_1_1KeyOrder.html">Struct Entry::KeyOrder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry_1_1LoadOrder.html">Struct Entry::LoadOrder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1tools_1_1SI__GenericCase.html">Template Struct SI_GenericCase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1tools_1_1SI__GenericNoCase.html">Template Struct SI_GenericNoCase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1video_1_1Resolution.html">Struct Resolution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1video_1_1UVCBuffer.html">Struct UVCBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/structsl__oc_1_1video_1_1VideoParams.html">Struct VideoParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/classsl__oc_1_1tools_1_1ConfManager.html">Class ConfManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/classsl__oc_1_1tools_1_1CSimpleIniTempl.html">Template Class CSimpleIniTempl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Converter.html">Class CSimpleIniTempl::Converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1FileWriter.html">Class CSimpleIniTempl::FileWriter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1OutputWriter.html">Class CSimpleIniTempl::OutputWriter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1StringWriter.html">Class CSimpleIniTempl::StringWriter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/classsl__oc_1_1tools_1_1SI__ConvertA.html">Template Class SI_ConvertA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/classsl__oc_1_1tools_1_1SI__ConvertW.html">Template Class SI_ConvertW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/classsl__oc_1_1tools_1_1StereoSgbmPar.html">Class StereoSgbmPar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/classsl__oc_1_1tools_1_1StopWatch.html">Class StopWatch</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/index.html#enums">Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_sensorcapture__def_8hpp_1a860df0fb107d9fc83134647b192af0d5.html">Enum CUSTOMHID_REPORT_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_sensorcapture__def_8hpp_1a31ab9392a74d84590af56941d889770f.html">Enum CUSTOMHID_REQUEST_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_sensorcapture__def_8hpp_1aa5bbc0cb62bf6c1fe09c6b36f14958ac.html">Enum ZED_2_FW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_sensorcapture__def_8hpp_1aa45170560065abceff1ae3c6418a0068.html">Enum ZED_M_FW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_calibration_8hpp_1a3613acdc7847bb77a6df2178e714c1c5.html">Enum ConversionFlags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_calibration_8hpp_1aa90f2e80a67048d6d16f1b462a96f085.html">Enum ConversionResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_calibration_8hpp_1a51eabf2462a3dcda43054000de00b788.html">Enum SI_Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_defines_8hpp_1a5f9ed77b6fa4bdd3d7cd9666242d4eb1.html">Enum VERBOSITY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_videocapture__def_8hpp_1a7e6c10d39fd369376814fd736979a176.html">Enum CAM_SENS_POS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_videocapture__def_8hpp_1a422befca5974cb7ccb89919c0eec3662.html">Enum FPS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_videocapture__def_8hpp_1a05c2df30a13cdf5ff439ad2a1a18fb09.html">Enum RESOLUTION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/enum_videocapture__def_8hpp_1ad7d2d1743872a22ac88a5d938bc9e33f.html">Enum SL_DEVICE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_defines_8hpp_1a7655773641067c1b3945975cd79b4fdb.html">Function getSteadyTimestamp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_defines_8hpp_1abaa6ff2bb60843da4683abd7710ded22.html">Function getWallTimestamp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_sensorcapture__def_8hpp_1a950d51d623841961643af97587e79ecc.html">Function sl_oc::sensors::atLeast(const int&amp;, const ZED_2_FW&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_sensorcapture__def_8hpp_1aa2f8a4ac22cbbf7eff7479fcde677eab.html">Function sl_oc::sensors::atLeast(const int&amp;, const ZED_M_FW&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1a62ebc6820d709ab1c850bd786e3e072f.html">Function sl_oc::tools::checkFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1ac0e8b124de994366769532275fbdb32c.html">Function sl_oc::tools::ConvertUTF16toUTF32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1a2428870f3bba27f663fef13fe2ca13eb.html">Function sl_oc::tools::ConvertUTF16toUTF8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1a6a0499b21f309924cda50985c7e7042b.html">Function sl_oc::tools::ConvertUTF32toUTF16</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1a2dc5d1addef1dcd50755ec057a32f858.html">Function sl_oc::tools::ConvertUTF32toUTF8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1a4488263ad01827c0ad99594199719d2f.html">Function sl_oc::tools::ConvertUTF8toUTF16</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1a481007179dab61d58148c5ec520082b3.html">Function sl_oc::tools::ConvertUTF8toUTF32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1a86089056315c8aeb84786ecabc86ce0d.html">Function sl_oc::tools::downloadCalibrationFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1a9c1dadffa0704d0123cc603ca8642918.html">Function sl_oc::tools::getHiddenDir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1ab4aeb5d56112b0a21bdbb46cc1bf8437.html">Function sl_oc::tools::getRootHiddenDir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1a080f90de48a271e995bd4934fc9dc490.html">Function sl_oc::tools::initCalibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1aa3ad40e2819bccb7441d8b47b9d8e2df.html">Function sl_oc::tools::isLegalUTF8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1acef2a34205d0a61d44338b8e7b89b1c8.html">Function sl_oc::tools::isLegalUTF8Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_ocv__display_8hpp_1a35f9e533cc3d146bad0a5e81b11438b6.html">Function sl_oc::tools::showImage(std::string, cv::UMat&amp;, sl_oc::video::RESOLUTION, bool, std::string)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_ocv__display_8hpp_1a0d9b42e65a019bc9656d7b7975bd34fa.html">Function sl_oc::tools::showImage(std::string, cv::Mat&amp;, sl_oc::video::RESOLUTION, bool, std::string)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1aab95954583f50edf3fe9efcd942ef56d.html">Function sl_oc::tools::split(const std::string&amp;, char, std::vector&lt;std::string&gt;&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_calibration_8hpp_1a430082bffe0c16af5e6536b855270837.html">Function sl_oc::tools::split(const std::string&amp;, char)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/function_sensorcapture__def_8hpp_1a9b634eb903d1afbc226f3415ec162669.html">Function wstr2str</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/index.html#variables">Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_sensorcapture__def_8hpp_1a301374c380e894113bb4d8135701da15.html">Variable sl_oc::sensors::TS_SHIFT_VAL_COUNT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_defines_8hpp_1a28411cc56539216b88321d461ea322af.html">Variable sl_oc::SL_USB_PROD_MCU_ZED2_REVA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_defines_8hpp_1a11f225ac5da6ed60ae872c62784dd119.html">Variable sl_oc::SL_USB_PROD_MCU_ZED2i_REVA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_defines_8hpp_1a73d809d21a20feeccaabc12b74acfd56.html">Variable sl_oc::SL_USB_PROD_MCU_ZEDM_REVA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_defines_8hpp_1ade7483da321af4b7218df94781df456a.html">Variable sl_oc::SL_USB_PROD_ZED_2_REVB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_defines_8hpp_1ad784d0c9e851078182ce6b23fc6ea744.html">Variable sl_oc::SL_USB_PROD_ZED_2i</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_defines_8hpp_1a97fef92b1cf70ebe9f7781b39377d49b.html">Variable sl_oc::SL_USB_PROD_ZED_M_REVA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_defines_8hpp_1a74eadb2d3d6ce94d1ccc5031bc02f7c4.html">Variable sl_oc::SL_USB_PROD_ZED_M_REVB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_defines_8hpp_1a14cadcd39b9c7077fbd5fde71cb1680d.html">Variable sl_oc::SL_USB_PROD_ZED_REVA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_defines_8hpp_1a406baab812b8fe7ec8a6ead7d1f2f202.html">Variable sl_oc::SL_USB_PROD_ZED_REVB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_defines_8hpp_1ac1bf4a1ea0bed5be96f13fe6e49b33d2.html">Variable sl_oc::SL_USB_VENDOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_calibration_8hpp_1a795b34b0abcfec9961022ffa2d55289c.html">Variable sl_oc::tools::firstByteMark</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_calibration_8hpp_1a977fc1bd2e975c4f7b0ea1168b7566b1.html">Variable sl_oc::tools::halfBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_calibration_8hpp_1ad0069c26fa178885a3c4a5662921e7df.html">Variable sl_oc::tools::halfMask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_calibration_8hpp_1add12a4369807f793ce0e71f21bf3ac9f.html">Variable sl_oc::tools::halfShift</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_calibration_8hpp_1ab193c3f0e1fd5eed468fe6b51db98bea.html">Variable sl_oc::tools::offsetsFromUTF8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_stereo_8hpp_1ae1d2f3b1e614750a77b952e3407327b4.html">Variable sl_oc::tools::STEREO_PAR_FILENAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_calibration_8hpp_1ad0cf93a3110204dfe281003bcf18cc54.html">Variable sl_oc::tools::trailingBytesForUTF8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_videocapture__def_8hpp_1adb69005aabfeadd9e308aa67a3ddff64.html">Variable sl_oc::video::cameraResolution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/variable_videocapture__def_8hpp_1ab2154fe3d39373015d1d0c17a6cc5bc4.html">Variable sl_oc::video::PRESET_GAMMA</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/index.html#defines">Defines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1a12c7b17bb03dc66dac226cdfe74f3c2d.html">Define ACC_SCALE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a7d6444ead3a7e870acdb77aaffb8f9d2.html">Define CSimpleIni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1ae287c82d088c035d6176a7b5cf91e473.html">Define CSimpleIniCase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1a41ca8af45cee2a77e55c1de1f2aa4917.html">Define DEFAULT_GRAVITY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/defines_8hpp_1a5ad98a46012c95db8bd24ee139692d9a.html">Define ERROR_OUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1abdeac7f9288bf09fd6e1739d22ff8bea.html">Define GYRO_SCALE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1a93df42c11be064d40ced7c1497926e66.html">Define HUMID_SCALE_NEW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1aaf70fcb18ed8f0a604d91a0e9b2d95a2.html">Define HUMID_SCALE_OLD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a1f5b9a23fd6735cf032b2c2b10629dce.html">Define INCLUDED_SimpleIni_h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/defines_8hpp_1af5ffa89cacceb879f8932c2d50ea0509.html">Define INFO_OUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_videocapture_8hpp_1aae33ba76f4b0494da32757427e1634f8.html">Define LOG_SEP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1af91ea782523c15cb13ede694b43d1510.html">Define MAG_SCALE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_videocapture__def_8hpp_1a0501e82515b2bdf36453c4cc80f5e0cc.html">Define NSEC_PER_SEC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1adb934a468c7afbd84b03a8f90c9d5388.html">Define NTP_ADJUST_CT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1ac5ae941fdb828d48883ea4089639008f.html">Define PRESS_SCALE_NEW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1aef04781a37ed3da21502a86580639099.html">Define PRESS_SCALE_OLD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1aa1c86fe2eaf27ba2cc163372f32a9106.html">Define SI_ASSERT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a5c2bfc13fd1603a3236d11093ffc9ae0.html">Define SI_Case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1aff631184b835a493cc23e8d5780005a8.html">Define SI_CONVERT_GENERIC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a3864eb3c1be64f869c66e8b2c87088c4.html">Define SI_NEWLINE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a37c74ba148bf76a7ef3437655c29be1a.html">Define SI_NEWLINE_A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1aad85e3fb9ce0ed8112a00bdc493a1184.html">Define SI_NEWLINE_W</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1ad75e6dec39f5fa62f12364e434a155da.html">Define SI_NoCase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1affde7f4680e7419f0e4a480a3e67ca98.html">Define SI_UTF8_SIGNATURE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1a29264bc7dc06714b386d8177b92157b5.html">Define TEMP_NOT_VALID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1a37fc2eea145b1cf777795b062ce43500.html">Define TEMP_SCALE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_sensorcapture__def_8hpp_1a81582d04d243390261d772b18e6485c8.html">Define TS_SCALE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1adc71280d09832f0fb6c6b83fbf043140.html">Define UNI_MAX_BMP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a98a2f50a1ca513613316ffd384dd1bfb.html">Define UNI_MAX_LEGAL_UTF32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a69d0ea77d1231214ba0893e846d7fcaf.html">Define UNI_MAX_UTF16</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a26c4390ae1463df1e6075ea585ed79a3.html">Define UNI_MAX_UTF32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a44b240b95a93f71535c03f5e26d7dbe1.html">Define UNI_REPLACEMENT_CHAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1ae5481872f1061e4e2a66849802b4b81e.html">Define UNI_SUR_HIGH_END</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a4ab84eb26356a90f3b7b9ac7aca1edfe.html">Define UNI_SUR_HIGH_START</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1ab9a531ffb73be79f7089049c1b84dc59.html">Define UNI_SUR_LOW_END</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/define_calibration_8hpp_1a23de5862375b48afcb4e3ff7b56a274d.html">Define UNI_SUR_LOW_START</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/defines_8hpp_1a76f51a2a59c23e0e3324b387a577a2b7.html">Define WARNING_OUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/defines_8hpp_1af824d9301fd86c3a85f918a25610aad8.html">Define ZED_OC_MAJOR_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/defines_8hpp_1a666c1d538268780b803dd4de7c70d80a.html">Define ZED_OC_MINOR_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/defines_8hpp_1a49bf1e31edc40b29eba0c870ca93a42c.html">Define ZED_OC_PATCH_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/defines_8hpp_1aaeb55e0334e074dfe62ea807a90286fb.html">Define ZED_OC_VERSION_ATTRIBUTE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_sensorcapture__def_8hpp_1a4c03a30a18f68024b3f706760935795e.html">Typedef sl_oc::sensors::usb::CUSTOMHID_REPORT_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_sensorcapture__def_8hpp_1a6ce2f109d7c9c0cb72331ee6b79bba9c.html">Typedef sl_oc::sensors::usb::CUSTOMHID_REQUEST_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_sensorcapture__def_8hpp_1a783cc259cc2880e147317911b9579cea.html">Typedef sl_oc::sensors::usb::OV580CmdStruct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_sensorcapture__def_8hpp_1adc3f17d07af280d4b432ac6baeae68d6.html">Typedef sl_oc::sensors::usb::RawData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_sensorcapture__def_8hpp_1ad617ae9360aa291658e7b5ecf7893566.html">Typedef sl_oc::sensors::usb::StreamStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_calibration_8hpp_1aa25db66d7e4465a2cde0aaecdcdde810.html">Typedef sl_oc::tools::CSimpleIniA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_calibration_8hpp_1a76bb991756a840242fe13b7393317b6a.html">Typedef sl_oc::tools::CSimpleIniCaseA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_calibration_8hpp_1ae54b02add2c4fb6e15601e6b8ef5fe6a.html">Typedef sl_oc::tools::CSimpleIniCaseW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_calibration_8hpp_1ab0c6a63cdb66c1f6cd00c2533cdee03b.html">Typedef sl_oc::tools::CSimpleIniW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_calibration_8hpp_1afb080ee2bf31c65afac54f6f38aede58.html">Typedef sl_oc::tools::UTF16</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_calibration_8hpp_1acffdd6a4e1d813786c22deb23ec3576e.html">Typedef sl_oc::tools::UTF32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_calibration_8hpp_1a07dd52ea2c75ebdf01f2608a41b31e86.html">Typedef sl_oc::tools::UTF8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/typedef_videocapture__def_8hpp_1a2ea4cd892c21be73f3e63eb966433d75.html">Typedef sl_oc::video::VideoParams</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/dir_include.html">Directory include</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/file_include_calibration.hpp.html">File calibration.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/file_include_defines.hpp.html">File defines.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/file_include_ocv_display.hpp.html">File ocv_display.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/file_include_sensorcapture.hpp.html">File sensorcapture.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/file_include_sensorcapture_def.hpp.html">File sensorcapture_def.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/file_include_stereo.hpp.html">File stereo.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/file_include_stopwatch.hpp.html">File stopwatch.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/file_include_videocapture.hpp.html">File videocapture.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/file_include_videocapture_def.hpp.html">File videocapture_def.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGELOG.html">CHANGELOG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../CHANGELOG.html#changelog">Changelog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../CHANGELOG.html#v0-6-0-2022-11-04">v0.6.0 - 2022 11 04</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CHANGELOG.html#v0-5-0-2021-09-10">v0.5.0 - 2021 09 10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CHANGELOG.html#v0-4-1-2021-05-28">v0.4.1 - 2021 05 28</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CHANGELOG.html#v0-4-0-2021-05-28">v0.4.0 - 2021 05 28</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CHANGELOG.html#v0-3-0-2020-03-01">v0.3.0 - 2020 03 01</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CHANGELOG.html#v0-2-1-2020-02-08">v0.2.1 - 2020 02 08</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CHANGELOG.html#v0-2-2020-06-10">v0.2 - 2020 06 10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CHANGELOG.html#v0-1-2020-06-04">v0.1 - 2020 06 04</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../LICENSE.html">LICENSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#key-features">Key Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#build-and-install">Build and install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#install-prerequisites">Install prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#clone-the-repository">Clone the repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#add-udev-rule">Add udev rule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#build">Build</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#install">Install</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#run">Run</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#get-video-data">Get video data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#get-sensor-data">Get sensor data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#running-the-examples">Running the examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#coordinates-system">Coordinates system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#known-issues">Known issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#opengl-version">OpenGL version</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#related">Related</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#license">License</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#support">Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_docs.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_docs_api_doc.html">api_doc/</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../user_docs/api_doc/main_page.html">ZED Open Capture API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">zed2_driver</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Key Features</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/standard_docs/original/README.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1 align="center">
+  Open Capture Camera API
+</h1>
+<h4 align="center">A platform-agnostic camera and sensor capture API for the <a href="https://www.stereolabs.com/products/zed-2">ZED 2, ZED 2i, and ZED Mini</a> stereo cameras</h4>
+<h5 align="center">*** not compatible with GMSL2 devices: <a href="https://www.stereolabs.com/products/zed-x">ZED X, ZED X Mini, and ZED X One</a> ***</h5>
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#build-and-install">Build and install</a> •
+  <a href="#run">Run</a> • 
+  <a href="#documentation">Documentation</a> •
+  <a href="#running-the-examples">Examples</a> •
+  <a href="#known-issues">Known issues</a> •
+  <a href="#related">Related</a> •
+  <a href="#license">License</a>
+</p>
+<br>
+<section id="key-features">
+<h1>Key Features<a class="headerlink" href="#key-features" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Open source C++ capture library compatible with C++11 standard</p></li>
+<li><p>Video Capture</p>
+<ul>
+<li><p>raw YUV 4:2:2 data format</p></li>
+<li><p>Camera controls</p></li>
+<li><p>HIGH-RESOLUTION mode with USB3</p></li>
+<li><p>compatibility VGA mode with USB2</p></li>
+</ul>
+</li>
+<li><p>Sensor Data Capture</p>
+<ul>
+<li><p>6-DOF IMU (3-DOF accelerometer + 3-DOF gyroscope)</p></li>
+<li><p>3-DOF Magnetometer (Only ZED 2 and ZED 2i)</p></li>
+<li><p>Barometer (Only ZED 2 and ZED 2i)</p></li>
+<li><p>Sensors temperature (Only ZED 2 and ZED 2i)</p></li>
+</ul>
+</li>
+<li><p>Sensors/video Synchronization</p></li>
+<li><p>Portable</p>
+<ul>
+<li><p>Tested on Linux</p></li>
+<li><p>Tested on x64, ARM</p></li>
+</ul>
+</li>
+<li><p>Small Size</p>
+<ul>
+<li><p>~100KB library size</p></li>
+<li><p>libusb, hidapi dependencies</p></li>
+</ul>
+</li>
+<li><p>Complete set of examples</p>
+<ul>
+<li><p>Video capture</p></li>
+<li><p>Camera control</p></li>
+<li><p>Stereo rectification</p></li>
+<li><p>IMU, magnetometer, and barometer data capture</p></li>
+<li><p>Video and sensor synchronization</p></li>
+<li><p>Disparity/Depth/Point Cloud extraction using OpenCV Transparent API</p></li>
+<li><p>Depth tuning using OpenCV control GUI</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="description">
+<h1>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h1>
+<p>The ZED Open Capture is a multi-platform, open-source C++ library for low-level camera and sensor capture for the ZED stereo camera family. It doesn’t require CUDA and therefore can be used on many desktop and embedded platforms.</p>
+<p>The open-source library provides methods to access raw video frames, calibration data, camera controls, and raw data from the USB3 camera sensors (on ZED 2, ZED 2i, and ZED Mini). A synchronization mechanism is provided to get the correct sensor data associated with a video frame.</p>
+<p><strong>Note:</strong> While in the ZED SDK all output data is calibrated and compensated, here the extracted raw data is not corrected by the camera and sensor calibration parameters. You can retrieve camera and sensor calibration data using the <a class="reference external" href="https://www.stereolabs.com/docs/video/camera-calibration/">ZED SDK</a> to correct your camera data <a class="reference internal" href="#running-the-examples"><span class="xref myst">see <code class="docutils literal notranslate"><span class="pre">zed_open_capture_rectify_example</span></code> example</span></a>.</p>
+</section>
+<section id="build-and-install">
+<h1>Build and install<a class="headerlink" href="#build-and-install" title="Link to this heading"></a></h1>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>USB3 Stereolabs Stereo camera: <a class="reference external" href="https://www.stereolabs.com/zed-2i/">ZED 2i</a>, <a class="reference external" href="https://www.stereolabs.com/zed-2/">ZED 2</a>, <a class="reference external" href="https://www.stereolabs.com/zed/">ZED</a>, <a class="reference external" href="https://www.stereolabs.com/zed-mini/">ZED Mini</a></p></li>
+<li><p>Linux OS</p></li>
+<li><p>GCC (v7.5+)</p></li>
+<li><p>CMake (v3.1+)</p></li>
+<li><p>OpenCV (v3.4.0+) -Optional for the examples-</p></li>
+</ul>
+</section>
+<section id="install-prerequisites">
+<h2>Install prerequisites<a class="headerlink" href="#install-prerequisites" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Install GCC compiler and build tools</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">build-essential</span></code></p>
+</li>
+<li><p>Install CMake build system</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">cmake</span></code></p>
+</li>
+<li><p>Install HIDAPI and LIBUSB libraries:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">libusb-1.0-0-dev</span> <span class="pre">libhidapi-libusb0</span> <span class="pre">libhidapi-dev</span></code></p>
+</li>
+<li><p>Install OpenCV to build the examples (optional)</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">libopencv-dev</span> <span class="pre">libopencv-viz-dev</span></code></p>
+</li>
+</ul>
+</section>
+<section id="clone-the-repository">
+<h2>Clone the repository<a class="headerlink" href="#clone-the-repository" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/stereolabs/zed-open-capture.git
+<span class="nb">cd</span><span class="w"> </span>zed-open-capture
+</pre></div>
+</div>
+</section>
+<section id="add-udev-rule">
+<h2>Add udev rule<a class="headerlink" href="#add-udev-rule" title="Link to this heading"></a></h2>
+<p>Stereo cameras such as ZED 2 and ZED Mini have built-in sensors (e.g. IMU) that are identified as USB HID devices.
+To be able to access the USB HID device, you must add a udev rule contained in the <code class="docutils literal notranslate"><span class="pre">udev</span></code> folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>udev
+bash<span class="w"> </span>install_udev_rule.sh
+<span class="nb">cd</span><span class="w"> </span>..
+</pre></div>
+</div>
+</section>
+<section id="build">
+<h2>Build<a class="headerlink" href="#build" title="Link to this heading"></a></h2>
+<section id="build-library-and-examples">
+<h3>Build library and examples<a class="headerlink" href="#build-library-and-examples" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..
+make<span class="w"> </span>-j<span class="k">$(</span>nproc<span class="k">)</span>
+</pre></div>
+</div>
+</section>
+<section id="build-only-the-library">
+<h3>Build only the library<a class="headerlink" href="#build-only-the-library" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..<span class="w"> </span>-DBUILD_EXAMPLES<span class="o">=</span>OFF
+make<span class="w"> </span>-j<span class="k">$(</span>nproc<span class="k">)</span>
+</pre></div>
+</div>
+</section>
+<section id="build-only-the-video-capture-library">
+<h3>Build only the video capture library<a class="headerlink" href="#build-only-the-video-capture-library" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..<span class="w"> </span>-DBUILD_SENSORS<span class="o">=</span>OFF<span class="w"> </span>-DBUILD_EXAMPLES<span class="o">=</span>OFF
+make<span class="w"> </span>-j<span class="k">$(</span>nproc<span class="k">)</span>
+</pre></div>
+</div>
+</section>
+<section id="build-only-the-sensor-capture-library">
+<h3>Build only the sensor capture library<a class="headerlink" href="#build-only-the-sensor-capture-library" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..<span class="w"> </span>-DBUILD_VIDEO<span class="o">=</span>OFF<span class="w"> </span>-DBUILD_EXAMPLES<span class="o">=</span>OFF
+make<span class="w"> </span>-j<span class="k">$(</span>nproc<span class="k">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="install">
+<h2>Install<a class="headerlink" href="#install" title="Link to this heading"></a></h2>
+<p>To install the library, go to the <code class="docutils literal notranslate"><span class="pre">build</span></code> folder and launch the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>make<span class="w"> </span>install
+sudo<span class="w"> </span>ldconfig
+</pre></div>
+</div>
+</section>
+</section>
+<section id="run">
+<h1>Run<a class="headerlink" href="#run" title="Link to this heading"></a></h1>
+<section id="get-video-data">
+<h2>Get video data<a class="headerlink" href="#get-video-data" title="Link to this heading"></a></h2>
+<p>Include the <code class="docutils literal notranslate"><span class="pre">videocapture.hpp</span></code> header, declare a <code class="docutils literal notranslate"><span class="pre">VideoCapture</span></code> object, and retrieve a video frame (in YUV 4:2:2 format) with <code class="docutils literal notranslate"><span class="pre">getLastFrame()</span></code>:</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;videocapture.hpp&quot;</span>
+
+<span class="n">sl_oc</span><span class="o">::</span><span class="n">video</span><span class="o">::</span><span class="n">VideoCapture</span><span class="w"> </span><span class="n">cap</span><span class="p">;</span>
+<span class="n">cap</span><span class="p">.</span><span class="n">initializeVideo</span><span class="p">();</span>
+<span class="k">const</span><span class="w"> </span><span class="n">sl_oc</span><span class="o">::</span><span class="n">video</span><span class="o">::</span><span class="n">Frame</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cap</span><span class="p">.</span><span class="n">getLastFrame</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="get-sensor-data">
+<h2>Get sensor data<a class="headerlink" href="#get-sensor-data" title="Link to this heading"></a></h2>
+<p>Include the <code class="docutils literal notranslate"><span class="pre">SensorCapture</span></code> header, declare a <code class="docutils literal notranslate"><span class="pre">SensorCapture</span></code> object, get a list of available devices, initialize the first one, and finally retrieve sensor data:</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sensorcapture.hpp&quot;</span>
+
+<span class="n">sl_oc</span><span class="o">::</span><span class="n">sensors</span><span class="o">::</span><span class="n">SensorCapture</span><span class="w"> </span><span class="n">sens</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">devs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sens</span><span class="p">.</span><span class="n">getDeviceList</span><span class="p">();</span>
+<span class="n">sens</span><span class="p">.</span><span class="n">initializeSensors</span><span class="p">(</span><span class="w"> </span><span class="n">devs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="p">);</span>
+<span class="k">const</span><span class="w"> </span><span class="n">sl_oc</span><span class="o">::</span><span class="n">sensors</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">Imu</span><span class="w"> </span><span class="n">imuData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sens</span><span class="p">.</span><span class="n">getLastIMUData</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+<span class="k">const</span><span class="w"> </span><span class="n">sl_oc</span><span class="o">::</span><span class="n">sensors</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">Magnetometer</span><span class="w"> </span><span class="n">magData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sens</span><span class="p">.</span><span class="n">getLastMagnetometerData</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="k">const</span><span class="w"> </span><span class="n">sl_oc</span><span class="o">::</span><span class="n">sensors</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">Environment</span><span class="w"> </span><span class="n">envData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sens</span><span class="p">.</span><span class="n">getLastEnvironmentData</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="k">const</span><span class="w"> </span><span class="n">sl_oc</span><span class="o">::</span><span class="n">sensors</span><span class="o">::</span><span class="n">data</span><span class="o">::</span><span class="n">Temperature</span><span class="w"> </span><span class="n">tempData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sens</span><span class="p">.</span><span class="n">getLastCameraTemperatureData</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="running-the-examples">
+<h1>Running the examples<a class="headerlink" href="#running-the-examples" title="Link to this heading"></a></h1>
+<p>After installing the library and examples, you will have the following sample applications in your <code class="docutils literal notranslate"><span class="pre">build</span></code> directory:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/stereolabs/zed-open-capture/blob/master/examples/zed_oc_video_example.cpp">zed_open_capture_video_example</a>: This application captures and displays video frames from the camera.</p></li>
+<li><p><a class="reference external" href="https://github.com/stereolabs/zed-open-capture/blob/master/examples/zed_oc_multi_video_example.cpp">zed_open_capture_multicam_video_example</a>: This application captures and displays video frames from two cameras.</p></li>
+<li><p><a class="reference external" href="https://github.com/stereolabs/zed-open-capture/blob/master/examples/zed_oc_control_example.cpp">zed_open_capture_control_example</a>: This application captures and displays video frames from the camera and provides runtime control of camera parameters using keyboard shortcuts.</p></li>
+<li><p><a class="reference external" href="https://github.com/stereolabs/zed-open-capture/blob/master/examples/zed_oc_rectify_example.cpp">zed_open_capture_rectify_example</a>: This application downloads factory stereo calibration parameters from Stereolabs server, performs stereo image rectification and displays original and rectified frames.</p></li>
+<li><p><a class="reference external" href="https://github.com/stereolabs/zed-open-capture/blob/master/examples/zed_oc_sensors_example.cpp">zed_open_capture_sensors_example</a>: This application creates a <code class="docutils literal notranslate"><span class="pre">SensorCapture</span></code> object and displays on the command console the values of camera sensors acquired at full rate.</p></li>
+<li><p><a class="reference external" href="https://github.com/stereolabs/zed-open-capture/blob/master/examples/zed_oc_sync_example.cpp">zed_open_capture_sync_example</a>: This application creates a <code class="docutils literal notranslate"><span class="pre">VideoCapture</span></code> and a <code class="docutils literal notranslate"><span class="pre">SensorCapture</span></code> object, initialize the camera/sensors synchronization and displays on screen the video stream with the synchronized IMU data.</p></li>
+<li><p><a class="reference external" href="https://github.com/stereolabs/zed-open-capture/blob/master/examples/zed_oc_depth_example.cpp">zed_open_capture_depth_example</a>: This application captures and displays video frames, calculates disparity map, then extracts the depth map and the point cloud displaying the result and the estimation of the performance.</p></li>
+<li><p><a class="reference external" href="https://github.com/stereolabs/zed-open-capture/blob/master/examples/tools/zed_oc_tune_stereo_sgbm.cpp">zed_open_capture_depth_tune_stereo</a>: This application captures the first available stereo frames and provides GUI Controls to tune the disparity map results and save them to be used in the <code class="docutils literal notranslate"><span class="pre">zed_open_capture_depth_example</span></code> example</p></li>
+</ul>
+<p>To run the examples, open a terminal console and enter one of the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zed_open_capture_video_example
+zed_open_capture_multicam_video_example
+zed_open_capture_control_example
+zed_open_capture_rectify_example
+zed_open_capture_sensors_example
+zed_open_capture_sync_example
+zed_open_capture_depth_example
+zed_open_capture_depth_tune_stereo
+</pre></div>
+</div>
+<p><strong>Note:</strong> OpenCV is used in the examples for controls, display, and depth extraction.</p>
+</section>
+<section id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h1>
+<p>The API is documented in the Include.h files. It is also generated as a Doxygen for simpler navigation: https://stereolabs.github.io/zed-open-capture</p>
+<p>You can also generate the documentation locally in HTML format (with Doxygen) using the commands below. Access the docs by opening <code class="docutils literal notranslate"><span class="pre">doc/html/index.html</span></code> in your web browser.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>doxygen<span class="w"> </span><span class="c1"># if not previously installed</span>
+<span class="nb">cd</span><span class="w"> </span>doc
+./generate_doc.sh
+</pre></div>
+</div>
+</section>
+<section id="coordinates-system">
+<h1>Coordinates system<a class="headerlink" href="#coordinates-system" title="Link to this heading"></a></h1>
+<p>The coordinate system is only used for sensor data. The given IMU and Magnetometer data are expressed in the RAW coordinate system as shown below</p>
+<p><img alt="" src="standard_docs/original/images/imu_axis.jpg" /></p>
+</section>
+<section id="known-issues">
+<h1>Known issues<a class="headerlink" href="#known-issues" title="Link to this heading"></a></h1>
+<section id="opengl-version">
+<h2>OpenGL version<a class="headerlink" href="#opengl-version" title="Link to this heading"></a></h2>
+<p>On some embedded devices, like Raspberry Pi 4, the depth extraction example can crash with the following error:</p>
+<p><code class="docutils literal notranslate"><span class="pre">vtkShaderProgram.cxx:438</span>&#160;&#160;&#160; <span class="pre">ERR|</span> <span class="pre">vtkShaderProgram</span> <span class="pre">(0x23a611c0):</span> <span class="pre">0:1(10):</span> <span class="pre">error:</span> <span class="pre">GLSL</span> <span class="pre">1.50</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">supported.</span> <span class="pre">Supported</span> <span class="pre">versions</span> <span class="pre">are:</span> <span class="pre">1.10,</span> <span class="pre">1.20,</span> <span class="pre">1.00</span> <span class="pre">ES,</span> <span class="pre">and</span> <span class="pre">3.00</span> <span class="pre">ES</span></code></p>
+<p>to correctly execute the example application it is necessary to change the default OpenGL version:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">MESA_GL_VERSION_OVERRIDE</span><span class="o">=</span><span class="mf">3.2</span>
+</pre></div>
+</div>
+<p>you can permanently add this configuration by adding the above command as the last line of the <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file.</p>
+</section>
+</section>
+<section id="related">
+<h1>Related<a class="headerlink" href="#related" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.stereolabs.com">Stereolabs</a></p></li>
+<li><p><a class="reference external" href="https://www.stereolabs.com/zed-2i/">ZED 2i multi-sensor camera</a></p></li>
+<li><p><a class="reference external" href="https://www.stereolabs.com/developers/">ZED SDK</a></p></li>
+</ul>
+</section>
+<section id="license">
+<h1>License<a class="headerlink" href="#license" title="Link to this heading"></a></h1>
+<p>This library is licensed under the MIT License.</p>
+</section>
+<section id="support">
+<h1>Support<a class="headerlink" href="#support" title="Link to this heading"></a></h1>
+<p>If you need assistance go to our Community site at https://community.stereolabs.com/</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;zed2_driver&gt; Contributors. License: MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

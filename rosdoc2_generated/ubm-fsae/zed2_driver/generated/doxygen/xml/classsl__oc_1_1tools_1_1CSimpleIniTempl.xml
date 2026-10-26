@@ -1,0 +1,2261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsl__oc_1_1tools_1_1CSimpleIniTempl" kind="class" language="C++" prot="public">
+    <compoundname>sl_oc::tools::CSimpleIniTempl</compoundname>
+    <innerclass refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Converter" prot="public">sl_oc::tools::CSimpleIniTempl::Converter</innerclass>
+    <innerclass refid="structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry" prot="public">sl_oc::tools::CSimpleIniTempl::Entry</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1FileWriter" prot="public">sl_oc::tools::CSimpleIniTempl::FileWriter</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1OutputWriter" prot="public">sl_oc::tools::CSimpleIniTempl::OutputWriter</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1StringWriter" prot="public">sl_oc::tools::CSimpleIniTempl::StringWriter</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class SI_CHAR</type>
+      </param>
+      <param>
+        <type>class SI_STRLESS</type>
+      </param>
+      <param>
+        <type>class SI_CONVERTER</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="user-defined">
+      <header>Settings</header>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a9e0453e6cdc5dcba6b8adbc57a208340" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SetUnicode</definition>
+        <argsstring>(bool a_bIsUtf8=true)</argsstring>
+        <name>SetUnicode</name>
+        <param>
+          <type>bool</type>
+          <declname>a_bIsUtf8</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the storage format of the INI data. This affects both the loading and saving of the INI data using all of the Load/Save API functions. This value cannot be changed after any INI data has been loaded.</para>
+<para>If the file is not set to Unicode (UTF-8), then the data encoding is assumed to be the OS native encoding. This encoding is the system locale on Linux/Unix and the legacy MBCS encoding on Windows NT/2K/XP. If the storage format is set to Unicode then the file will be loaded as UTF-8 encoded data regardless of the native file encoding. If SI_CHAR == char then all of the char* parameters take and return UTF-8 encoded data regardless of the system locale.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_bIsUtf8</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Assume UTF-8 encoding for the source? </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="355" column="10" bodyfile="include/calibration.hpp" bodystart="355" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ad38534a2b3ff37fbf8d7a40482e86655" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::IsUnicode</definition>
+        <argsstring>() const</argsstring>
+        <name>IsUnicode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the storage format of the INI data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="360" column="10" bodyfile="include/calibration.hpp" bodystart="360" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aff2eaa953a3df9a6718a421a920abfe4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SetMultiKey</definition>
+        <argsstring>(bool a_bAllowMultiKey=true)</argsstring>
+        <name>SetMultiKey</name>
+        <param>
+          <type>bool</type>
+          <declname>a_bAllowMultiKey</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Should multiple identical keys be permitted in the file. If set to false then the last value encountered will be used as the value of the key. If set to true, then all values will be available to be queried. For example, with the following input:</para>
+<para><preformatted>
+[section]
+test=value1
+test=value2
+</preformatted></para>
+<para>Then with SetMultiKey(true), both of the values &quot;value1&quot; and &quot;value2&quot; will be returned for the key test. If SetMultiKey(false) is used, then the value for &quot;test&quot; will only be &quot;value2&quot;. This value may be changed at any time.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_bAllowMultiKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allow multi-keys in the source? </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="382" column="10" bodyfile="include/calibration.hpp" bodystart="382" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1af2492c7ec1bda909e4990c5bfeffeed8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::IsMultiKey</definition>
+        <argsstring>() const</argsstring>
+        <name>IsMultiKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the storage format of the INI data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="387" column="10" bodyfile="include/calibration.hpp" bodystart="387" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a2d8f0815df7b350691b8a94ba87503e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SetMultiLine</definition>
+        <argsstring>(bool a_bAllowMultiLine=true)</argsstring>
+        <name>SetMultiLine</name>
+        <param>
+          <type>bool</type>
+          <declname>a_bAllowMultiLine</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Should data values be permitted to span multiple lines in the file. If set to false then the multi-line construct &lt;&lt;&lt;TAG as a value will be returned as is instead of loading the data. This value may be changed at any time.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_bAllowMultiLine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allow multi-line values in the source? </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="398" column="10" bodyfile="include/calibration.hpp" bodystart="398" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a5e0f080f3399308da4a060adbdf601ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::IsMultiLine</definition>
+        <argsstring>() const</argsstring>
+        <name>IsMultiLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Query the status of multi-line data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="403" column="10" bodyfile="include/calibration.hpp" bodystart="403" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a201b694a66cf25f6ec045e6560e84af5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SetSpaces</definition>
+        <argsstring>(bool a_bSpaces=true)</argsstring>
+        <name>SetSpaces</name>
+        <param>
+          <type>bool</type>
+          <declname>a_bSpaces</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Should spaces be added around the equals sign when writing key/value pairs out. When true, the result will be &quot;key = value&quot;. When false, the result will be &quot;key=value&quot;. This value may be changed at any time.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_bSpaces</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Add spaces around the equals sign? </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="413" column="10" bodyfile="include/calibration.hpp" bodystart="413" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aeb954de66b166f10a682158d41265b86" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::UsingSpaces</definition>
+        <argsstring>() const</argsstring>
+        <name>UsingSpaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Query the status of spaces output </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="418" column="10" bodyfile="include/calibration.hpp" bodystart="418" bodyend="420"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aa04cb6856064c1dccc958945e1e339f6" prot="public" static="no">
+        <type>SI_CHAR</type>
+        <definition>typedef SI_CHAR sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SI_CHAR_T</definition>
+        <argsstring></argsstring>
+        <name>SI_CHAR_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="129" column="21" bodyfile="include/calibration.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ad7a2f266f8257f3c35b0d325c7167906" prot="public" static="no">
+        <type>std::multimap&lt; <ref refid="structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry" kindref="compound">Entry</ref>, const SI_CHAR *, typename <ref refid="structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry_1_1KeyOrder" kindref="compound">Entry::KeyOrder</ref> &gt;</type>
+        <definition>typedef std::multimap&lt;Entry, const SI_CHAR *, typename Entry::KeyOrder&gt; sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::TKeyVal</definition>
+        <argsstring></argsstring>
+        <name>TKeyVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>map keys to values </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="194" column="27" bodyfile="include/calibration.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a7771f2ed1ed51dd679ea06abb784b2df" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry" kindref="compound">Entry</ref>, <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ad7a2f266f8257f3c35b0d325c7167906" kindref="member">TKeyVal</ref>, typename <ref refid="structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry_1_1KeyOrder" kindref="compound">Entry::KeyOrder</ref> &gt;</type>
+        <definition>typedef std::map&lt;Entry, TKeyVal, typename Entry::KeyOrder&gt; sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::TSection</definition>
+        <argsstring></argsstring>
+        <name>TSection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>map sections to key/value map </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="197" column="22" bodyfile="include/calibration.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ac8ec80f322536df1bd692c4a9032440f" prot="public" static="no">
+        <type>std::list&lt; <ref refid="structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry" kindref="compound">Entry</ref> &gt;</type>
+        <definition>typedef std::list&lt;Entry&gt; sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::TNamesDepend</definition>
+        <argsstring></argsstring>
+        <name>TNamesDepend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set of dependent string pointers. Note that these pointers are dependent on memory owned by CSimpleIni. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="202" column="23" bodyfile="include/calibration.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1acee0c928cfc877ca7048de022fb8f450" prot="private" static="no" mutable="no">
+        <type>SI_CHAR *</type>
+        <definition>SI_CHAR* sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::m_pData</definition>
+        <argsstring></argsstring>
+        <name>m_pData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy of the INI file data in our character format. This will be modified when parsed to have NULL characters added after all interesting string entries. All of the string pointers to sections, keys and values point into this block of memory. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1101" column="14" bodyfile="include/calibration.hpp" bodystart="1101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a3887036f2029e7144043e8354ee70fc7" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::m_uDataLen</definition>
+        <argsstring></argsstring>
+        <name>m_uDataLen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Length of the data that we have stored. Used when deleting strings to determine if the string is stored here or in the allocated string buffer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1107" column="12" bodyfile="include/calibration.hpp" bodystart="1107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a5656bcd76729f2977048ca2db188bd76" prot="private" static="no" mutable="no">
+        <type>const SI_CHAR *</type>
+        <definition>const SI_CHAR* sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::m_pFileComment</definition>
+        <argsstring></argsstring>
+        <name>m_pFileComment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File comment for this data, if one exists. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1110" column="20" bodyfile="include/calibration.hpp" bodystart="1110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ac7441786229e8ffb70174257cd92ad77" prot="private" static="no" mutable="no">
+        <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a7771f2ed1ed51dd679ea06abb784b2df" kindref="member">TSection</ref></type>
+        <definition>TSection sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::m_data</definition>
+        <argsstring></argsstring>
+        <name>m_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parsed INI data. Section -&gt; (Key -&gt; Value). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1113" column="14" bodyfile="include/calibration.hpp" bodystart="1113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ae3752765fa7424b245996990ccd595d6" prot="private" static="no" mutable="no">
+        <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ac8ec80f322536df1bd692c4a9032440f" kindref="member">TNamesDepend</ref></type>
+        <definition>TNamesDepend sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::m_strings</definition>
+        <argsstring></argsstring>
+        <name>m_strings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This vector stores allocated memory for copies of strings that have been supplied after the file load. It will be empty unless <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a28e5e0c156052b6299e3f0c6d32b9b06" kindref="member">SetValue()</ref> has been called. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1119" column="18" bodyfile="include/calibration.hpp" bodystart="1119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ab4517cd729f052d4448a4c465c255358" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::m_bStoreIsUtf8</definition>
+        <argsstring></argsstring>
+        <name>m_bStoreIsUtf8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is the format of our datafile UTF-8 or MBCS? </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1122" column="10" bodyfile="include/calibration.hpp" bodystart="1122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a857a7818085c11d760039321f16f4728" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::m_bAllowMultiKey</definition>
+        <argsstring></argsstring>
+        <name>m_bAllowMultiKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Are multiple values permitted for the same key? </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1125" column="10" bodyfile="include/calibration.hpp" bodystart="1125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1af8a0cfab629e739559992ffc953da987" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::m_bAllowMultiLine</definition>
+        <argsstring></argsstring>
+        <name>m_bAllowMultiLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Are data values permitted to span multiple lines? </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1128" column="10" bodyfile="include/calibration.hpp" bodystart="1128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1acd55a71cc81f1bfb0d4305718e32c499" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::m_bSpaces</definition>
+        <argsstring></argsstring>
+        <name>m_bSpaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Should spaces be written out surrounding the equals sign? </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1131" column="10" bodyfile="include/calibration.hpp" bodystart="1131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a0c92ce015827de064fc606507d0a375a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::m_nOrder</definition>
+        <argsstring></argsstring>
+        <name>m_nOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Next order value, used to ensure sections and keys are output in the same order that they are loaded/added. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1136" column="9" bodyfile="include/calibration.hpp" bodystart="1136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a9fc2a71b3a189f298f54f87483cf9cb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::CSimpleIniTempl</definition>
+        <argsstring>(bool a_bIsUtf8=false, bool a_bMultiKey=false, bool a_bMultiLine=false)</argsstring>
+        <name>CSimpleIniTempl</name>
+        <param>
+          <type>bool</type>
+          <declname>a_bIsUtf8</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bMultiKey</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bMultiLine</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_bIsUtf8</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>See the method <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a9e0453e6cdc5dcba6b8adbc57a208340" kindref="member">SetUnicode()</ref> for details. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bMultiKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>See the method <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aff2eaa953a3df9a6718a421a920abfe4" kindref="member">SetMultiKey()</ref> for details. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bMultiLine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>See the method <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a2d8f0815df7b350691b8a94ba87503e9" kindref="member">SetMultiLine()</ref> for details. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="321" column="5" bodyfile="include/calibration.hpp" bodystart="1144" bodyend="1157"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a9a5646ac0cdff27d200452b39a2ee840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::~CSimpleIniTempl</definition>
+        <argsstring>()</argsstring>
+        <name>~CSimpleIniTempl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="328" column="5" bodyfile="include/calibration.hpp" bodystart="1160" bodyend="1162"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a196d3a633d271853c43370ba850a5d8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deallocate all memory stored by this object </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="331" column="10" bodyfile="include/calibration.hpp" bodystart="1166" bodyend="1184"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a07177ed6aa10d6db56e5fdaf7882f940" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::IsEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>IsEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Has any data been loaded </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="334" column="10" bodyfile="include/calibration.hpp" bodystart="334" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a91219877c8ea7193677d87db8f9f349b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::LoadFile</definition>
+        <argsstring>(const char *a_pszFile)</argsstring>
+        <name>LoadFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>a_pszFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Load an INI file from disk into memory</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pszFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the file to be loaded. This will be passed to fopen() and so must be a valid path for the current platform.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="434" column="14" bodyfile="include/calibration.hpp" bodystart="1188" bodyend="1203"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a9d2e725ab64bd0bafc3913a3e32c9728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::LoadFile</definition>
+        <argsstring>(FILE *a_fpFile)</argsstring>
+        <name>LoadFile</name>
+        <param>
+          <type>FILE *</type>
+          <declname>a_fpFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Load the file from a file pointer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_fpFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valid file pointer to read the file data from. The file will be read until end of file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="457" column="14" bodyfile="include/calibration.hpp" bodystart="1233" bodyend="1268"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a14d429de923ad77ea9bdd9450a385936" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::LoadData</definition>
+        <argsstring>(const std::string &amp;a_strData)</argsstring>
+        <name>LoadData</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>a_strData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Load INI file data direct from a std::string</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_strData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be loaded</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="479" column="14" bodyfile="include/calibration.hpp" bodystart="479" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a88a03e85126aba31c10fb6fdd8703025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::LoadData</definition>
+        <argsstring>(const char *a_pData, size_t a_uDataLen)</argsstring>
+        <name>LoadData</name>
+        <param>
+          <type>const char *</type>
+          <declname>a_pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>a_uDataLen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Load INI file data direct from memory</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be loaded </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_uDataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data in bytes</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="490" column="14" bodyfile="include/calibration.hpp" bodystart="1272" bodyend="1342"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a90861cd54b387cd4f2752c864743b762" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SaveFile</definition>
+        <argsstring>(const char *a_pszFile, bool a_bAddSignature=true) const</argsstring>
+        <name>SaveFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>a_pszFile</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bAddSignature</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save an INI file from memory to disk</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pszFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the file to be saved. This will be passed to fopen() and so must be a valid path for the current platform.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bAddSignature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prepend the UTF-8 BOM if the output data is in UTF-8 format. If it is not UTF-8 then this parameter is ignored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="508" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a77e3801856f53ccce3e1dec39633a04f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SaveFile</definition>
+        <argsstring>(FILE *a_pFile, bool a_bAddSignature=false) const</argsstring>
+        <name>SaveFile</name>
+        <param>
+          <type>FILE *</type>
+          <declname>a_pFile</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bAddSignature</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save the INI data to a file. See <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a5e6b051be520d9a0695b86d65bf30024" kindref="member">Save()</ref> for details.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to a file. File should be opened for binary output.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bAddSignature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prepend the UTF-8 BOM if the output data is in UTF-8 format. If it is not UTF-8 then this value is ignored. Do not set this to true if anything has already been written to the file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="542" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a5e6b051be520d9a0695b86d65bf30024" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::Save</definition>
+        <argsstring>(OutputWriter &amp;a_oOutput, bool a_bAddSignature=false) const</argsstring>
+        <name>Save</name>
+        <param>
+          <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1OutputWriter" kindref="compound">OutputWriter</ref> &amp;</type>
+          <declname>a_oOutput</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bAddSignature</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save the INI data. The data will be written to the output device in a format appropriate to the current data, selected by:</para>
+<para><table rows="4" cols="2"><row>
+<entry thead="yes"><para>SI_CHAR </para>
+</entry><entry thead="yes"><para>FORMAT </para>
+</entry></row>
+<row>
+<entry thead="no"><para>char </para>
+</entry><entry thead="no"><para>same format as when loaded (MBCS or UTF-8) </para>
+</entry></row>
+<row>
+<entry thead="no"><para>wchar_t </para>
+</entry><entry thead="no"><para>UTF-8 </para>
+</entry></row>
+<row>
+<entry thead="no"><para>other </para>
+</entry><entry thead="no"><para>UTF-8 </para>
+</entry></row>
+</table>
+</para>
+<para>Note that comments from the original data is preserved as per the documentation on comments. The order of the sections and values from the original file will be preserved.</para>
+<para>Any data prepended or appended to the output device must use the the same format (MBCS or UTF-8). You may use the <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a384f0320e8b8553dd563cd12bd764293" kindref="member">GetConverter()</ref> method to convert text to the correct format regardless of the output format being used by SimpleIni.</para>
+<para>To add a BOM to UTF-8 data, write it out manually at the very beginning like is done in SaveFile when a_bUseBOM is true.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_oOutput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output writer to write the data to.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bAddSignature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prepend the UTF-8 BOM if the output data is in UTF-8 format. If it is not UTF-8 then this value is ignored. Do not set this to true if anything has already been written to the <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1OutputWriter" kindref="compound">OutputWriter</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="578" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1abf18209ce2792aa081e6a577a96ce263" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::Save</definition>
+        <argsstring>(std::string &amp;a_sBuffer, bool a_bAddSignature=false) const</argsstring>
+        <name>Save</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>a_sBuffer</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bAddSignature</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append the INI data to a string. See <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a5e6b051be520d9a0695b86d65bf30024" kindref="member">Save()</ref> for details.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_sBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to have the INI data appended to.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bAddSignature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prepend the UTF-8 BOM if the output data is in UTF-8 format. If it is not UTF-8 then this value is ignored. Do not set this to true if anything has already been written to the string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="616" column="14" bodyfile="include/calibration.hpp" bodystart="616" bodyend="622"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a7cfcfdcb9009e8ea395baebba144e054" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::GetAllSections</definition>
+        <argsstring>(TNamesDepend &amp;a_names) const</argsstring>
+        <name>GetAllSections</name>
+        <param>
+          <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ac8ec80f322536df1bd692c4a9032440f" kindref="member">TNamesDepend</ref> &amp;</type>
+          <declname>a_names</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve all section names. The list is returned as an STL vector of names and can be iterated or searched as necessary. Note that the sort order of the returned strings is NOT DEFINED. You can sort the names into the load order if desired. Search this file for &quot;.sort&quot; for an example.</para>
+<para>NOTE! This structure contains only pointers to strings. The actual string data is stored in memory owned by CSimpleIni. Ensure that the CSimpleIni object is not destroyed or <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a196d3a633d271853c43370ba850a5d8f" kindref="member">Reset()</ref> while these pointers are in use!</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_names</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector that will receive all of the section names. See note above! </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="639" column="10" bodyfile="include/calibration.hpp" bodystart="2131" bodyend="2139"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1af935fe34a6bc6c7a4b103f4aebe5ab9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::GetAllKeys</definition>
+        <argsstring>(const SI_CHAR *a_pSection, TNamesDepend &amp;a_names) const</argsstring>
+        <name>GetAllKeys</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ac8ec80f322536df1bd692c4a9032440f" kindref="member">TNamesDepend</ref> &amp;</type>
+          <declname>a_names</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve all unique key names in a section. The sort order of the returned strings is NOT DEFINED. You can sort the names into the load order if desired. Search this file for &quot;.sort&quot; for an example. Only unique key names are returned.</para>
+<para>NOTE! This structure contains only pointers to strings. The actual string data is stored in memory owned by CSimpleIni. Ensure that the CSimpleIni object is not destroyed or <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a196d3a633d271853c43370ba850a5d8f" kindref="member">Reset()</ref> while these strings are in use!</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to request data for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_names</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List that will receive all of the key names. See note above!</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Section was found. </para>
+</simplesect>
+<simplesect kind="return"><para>false Matching section was not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="660" column="10" bodyfile="include/calibration.hpp" bodystart="2143" bodyend="2169"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a478516021b663c8eb512d0a77e41415d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::GetAllValues</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, TNamesDepend &amp;a_values) const</argsstring>
+        <name>GetAllValues</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ac8ec80f322536df1bd692c4a9032440f" kindref="member">TNamesDepend</ref> &amp;</type>
+          <declname>a_values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve all values for a specific key. This method can be used when multiple keys are both enabled and disabled. Note that the sort order of the returned strings is NOT DEFINED. You can sort the names into the load order if desired. Search this file for &quot;.sort&quot; for an example.</para>
+<para>NOTE! The returned values are pointers to string data stored in memory owned by CSimpleIni. Ensure that the CSimpleIni object is not destroyed or Reset while you are using this pointer!</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to search for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List to return if the key is not found</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Key was found. </para>
+</simplesect>
+<simplesect kind="return"><para>false Matching section/key was not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="681" column="10" bodyfile="include/calibration.hpp" bodystart="2049" bodyend="2079"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a518325f19a0a68f1861999ad85f1bc65" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::GetSectionSize</definition>
+        <argsstring>(const SI_CHAR *a_pSection) const</argsstring>
+        <name>GetSectionSize</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Query the number of keys in a specific section. Note that if multiple keys are enabled, then this value may be different to the number of keys returned by GetAllKeys.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to request data for</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>-1 Section does not exist in the file </para>
+</simplesect>
+<simplesect kind="return"><para>&gt;=0 Number of keys in the section </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="696" column="9" bodyfile="include/calibration.hpp" bodystart="2083" bodyend="2113"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a26e27d0a75228252ac7d27045eeb1bbb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ad7a2f266f8257f3c35b0d325c7167906" kindref="member">TKeyVal</ref> *</type>
+        <definition>const CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::TKeyVal * sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::GetSection</definition>
+        <argsstring>(const SI_CHAR *a_pSection) const</argsstring>
+        <name>GetSection</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve all key and value pairs for a section. The data is returned as a pointer to an STL map and can be iterated or searched as desired. Note that multiple entries for the same key may exist when multiple keys have been enabled.</para>
+<para>NOTE! This structure contains only pointers to strings. The actual string data is stored in memory owned by CSimpleIni. Ensure that the CSimpleIni object is not destroyed or <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a196d3a633d271853c43370ba850a5d8f" kindref="member">Reset()</ref> while these strings are in use!</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the section to return </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean Was a section matching the supplied name found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="714" column="20" bodyfile="include/calibration.hpp" bodystart="2117" bodyend="2127"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a27fd5acbe5dfe9c8fc1f95686dfde658" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const SI_CHAR *</type>
+        <definition>const SI_CHAR * sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::GetValue</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, const SI_CHAR *a_pDefault=NULL, bool *a_pHasMultiple=NULL) const</argsstring>
+        <name>GetValue</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pDefault</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>a_pHasMultiple</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the value for a specific key. If multiple keys are enabled (see SetMultiKey) then only the first value associated with that key will be returned, see GetAllValues for getting all values with multikey.</para>
+<para>NOTE! The returned value is a pointer to string data stored in memory owned by CSimpleIni. Ensure that the CSimpleIni object is not destroyed or Reset while you are using this pointer!</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to search for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pDefault</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to return if the key is not found </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pHasMultiple</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optionally receive notification of if there are multiple entries for this key.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a_pDefault Key was not found in the section </para>
+</simplesect>
+<simplesect kind="return"><para>other Value of the key </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="735" column="20" bodyfile="include/calibration.hpp" bodystart="1826" bodyend="1858"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a6f6cab0e67fdfe42a98ea34268242a6e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::GetLongValue</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, long a_nDefault=0, bool *a_pHasMultiple=NULL) const</argsstring>
+        <name>GetLongValue</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>a_nDefault</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>a_pHasMultiple</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve a numeric value for a specific key. If multiple keys are enabled (see SetMultiKey) then only the first value associated with that key will be returned, see GetAllValues for getting all values with multikey.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to search for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nDefault</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to return if the key is not found </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pHasMultiple</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optionally receive notification of if there are multiple entries for this key.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a_nDefault Key was not found in the section </para>
+</simplesect>
+<simplesect kind="return"><para>other Value of the key </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="755" column="10" bodyfile="include/calibration.hpp" bodystart="1862" bodyend="1895"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ac32ceab13fc5119d734665db4f63c6fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::GetDoubleValue</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, double a_nDefault=0, bool *a_pHasMultiple=NULL) const</argsstring>
+        <name>GetDoubleValue</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_nDefault</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>a_pHasMultiple</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve a numeric value for a specific key. If multiple keys are enabled (see SetMultiKey) then only the first value associated with that key will be returned, see GetAllValues for getting all values with multikey.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to search for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nDefault</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to return if the key is not found </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pHasMultiple</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optionally receive notification of if there are multiple entries for this key.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a_nDefault Key was not found in the section </para>
+</simplesect>
+<simplesect kind="return"><para>other Value of the key </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="775" column="12" bodyfile="include/calibration.hpp" bodystart="1930" bodyend="1956"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a34dcdeae3fc952a46c31f29dfbc6adbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::GetBoolValue</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, bool a_bDefault=false, bool *a_pHasMultiple=NULL) const</argsstring>
+        <name>GetBoolValue</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bDefault</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>a_pHasMultiple</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve a boolean value for a specific key. If multiple keys are enabled (see SetMultiKey) then only the first value associated with that key will be returned, see GetAllValues for getting all values with multikey.</para>
+<para>Strings starting with &quot;t&quot;, &quot;y&quot;, &quot;on&quot; or &quot;1&quot; are returned as logically true. Strings starting with &quot;f&quot;, &quot;n&quot;, &quot;of&quot; or &quot;0&quot; are returned as logically false. For all other values the default is returned. Character comparisons are case-insensitive.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to search for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bDefault</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to return if the key is not found </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pHasMultiple</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optionally receive notification of if there are multiple entries for this key.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a_nDefault Key was not found in the section </para>
+</simplesect>
+<simplesect kind="return"><para>other Value of the key </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="800" column="10" bodyfile="include/calibration.hpp" bodystart="1990" bodyend="2020"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a28e5e0c156052b6299e3f0c6d32b9b06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SetValue</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, const SI_CHAR *a_pValue, const SI_CHAR *a_pComment=NULL, bool a_bForceReplace=false)</argsstring>
+        <name>SetValue</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pValue</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pComment</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bForceReplace</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add or update a section or value. This will always insert when multiple keys are enabled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to add or update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to add or update. Set to NULL to create an empty section. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to set. Set to NULL to create an empty section. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comment to be associated with the section or the key. If a_pKey is NULL then it will be associated with the section, otherwise the key. Note that a comment may be set ONLY when the section or key is first created (i.e. when this function returns the value SI_INSERTED). If you wish to create a section with a comment then you need to create the section separately to the key. The comment string must be in full comment form already (have a comment character starting every line). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bForceReplace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should all existing values in a multi-key INI file be replaced with this entry. This option has no effect if not using multi-key files. The difference between Delete/SetValue and SetValue with a_bForceReplace = true, is that the load order and comment will be preserved this way.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+<simplesect kind="return"><para>SI_UPDATED Value was updated </para>
+</simplesect>
+<simplesect kind="return"><para>SI_INSERTED Value was inserted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="836" column="14" bodyfile="include/calibration.hpp" bodystart="836" bodyend="844"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a1d944787bd08f707e1ceeb16eabbe51d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SetLongValue</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, long a_nValue, const SI_CHAR *a_pComment=NULL, bool a_bUseHex=false, bool a_bForceReplace=false)</argsstring>
+        <name>SetLongValue</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>a_nValue</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pComment</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bUseHex</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bForceReplace</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add or update a numeric value. This will always insert when multiple keys are enabled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to add or update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to add or update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comment to be associated with the key. See the notes on <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a28e5e0c156052b6299e3f0c6d32b9b06" kindref="member">SetValue()</ref> for comments. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bUseHex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>By default the value will be written to the file in decimal format. Set this to true to write it as hexadecimal. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bForceReplace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should all existing values in a multi-key INI file be replaced with this entry. This option has no effect if not using multi-key files. The difference between Delete/SetLongValue and SetLongValue with a_bForceReplace = true, is that the load order and comment will be preserved this way.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+<simplesect kind="return"><para>SI_UPDATED Value was updated </para>
+</simplesect>
+<simplesect kind="return"><para>SI_INSERTED Value was inserted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="869" column="14" bodyfile="include/calibration.hpp" bodystart="1899" bodyend="1926"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aa785a16cae924fe98a839ea86421a916" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SetDoubleValue</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, double a_nValue, const SI_CHAR *a_pComment=NULL, bool a_bForceReplace=false)</argsstring>
+        <name>SetDoubleValue</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_nValue</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pComment</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bForceReplace</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add or update a double value. This will always insert when multiple keys are enabled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to add or update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to add or update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comment to be associated with the key. See the notes on <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a28e5e0c156052b6299e3f0c6d32b9b06" kindref="member">SetValue()</ref> for comments. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bForceReplace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should all existing values in a multi-key INI file be replaced with this entry. This option has no effect if not using multi-key files. The difference between Delete/SetDoubleValue and SetDoubleValue with a_bForceReplace = true, is that the load order and comment will be preserved this way.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+<simplesect kind="return"><para>SI_UPDATED Value was updated </para>
+</simplesect>
+<simplesect kind="return"><para>SI_INSERTED Value was inserted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="898" column="14" bodyfile="include/calibration.hpp" bodystart="1960" bodyend="1986"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ad87c5f3896cd0272b51dd8b0a209ad94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SetBoolValue</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, bool a_bValue, const SI_CHAR *a_pComment=NULL, bool a_bForceReplace=false)</argsstring>
+        <name>SetBoolValue</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bValue</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pComment</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bForceReplace</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add or update a boolean value. This will always insert when multiple keys are enabled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to add or update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to add or update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comment to be associated with the key. See the notes on <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a28e5e0c156052b6299e3f0c6d32b9b06" kindref="member">SetValue()</ref> for comments. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bForceReplace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should all existing values in a multi-key INI file be replaced with this entry. This option has no effect if not using multi-key files. The difference between Delete/SetBoolValue and SetBoolValue with a_bForceReplace = true, is that the load order and comment will be preserved this way.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SI_Error See error definitions </para>
+</simplesect>
+<simplesect kind="return"><para>SI_UPDATED Value was updated </para>
+</simplesect>
+<simplesect kind="return"><para>SI_INSERTED Value was inserted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="926" column="14" bodyfile="include/calibration.hpp" bodystart="2024" bodyend="2045"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1abad8acfee824049e8865cff8939c7319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::Delete</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, bool a_bRemoveEmpty=false)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bRemoveEmpty</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete an entire section, or a key from a section. Note that the data returned by GetSection is invalid and must not be used after anything has been deleted from that section using this method. Note when multiple keys is enabled, this will delete all keys with that name; to selectively delete individual key/values, use DeleteValue.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to delete key from, or if a_pKey is NULL, the section to remove. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to remove from the section. Set to NULL to remove the entire section. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bRemoveEmpty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the section is empty after this key has been deleted, should the empty section be removed?</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Key or section was deleted. </para>
+</simplesect>
+<simplesect kind="return"><para>false Key or section was not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="952" column="10" bodyfile="include/calibration.hpp" bodystart="2384" bodyend="2390"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a157eb08fac4a9015f0416778386fa5bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::DeleteValue</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, const SI_CHAR *a_pValue, bool a_bRemoveEmpty=false)</argsstring>
+        <name>DeleteValue</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pValue</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bRemoveEmpty</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete an entire section, or a key from a section. If value is provided, only remove keys with the value. Note that the data returned by GetSection is invalid and must not be used after anything has been deleted from that section using this method. Note when multiple keys is enabled, all keys with the value will be deleted.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section to delete key from, or if a_pKey is NULL, the section to remove. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key to remove from the section. Set to NULL to remove the entire section. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value of key to remove from the section. Set to NULL to remove all keys. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bRemoveEmpty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the section is empty after this key has been deleted, should the empty section be removed?</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Key/value or section was deleted. </para>
+</simplesect>
+<simplesect kind="return"><para>false Key/value or section was not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="978" column="10" bodyfile="include/calibration.hpp" bodystart="2394" bodyend="2460"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a384f0320e8b8553dd563cd12bd764293" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Converter" kindref="compound">Converter</ref></type>
+        <definition>Converter sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::GetConverter</definition>
+        <argsstring>() const</argsstring>
+        <name>GetConverter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a conversion object to convert text to the same encoding as is used by the <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a5e6b051be520d9a0695b86d65bf30024" kindref="member">Save()</ref>, <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a90861cd54b387cd4f2752c864743b762" kindref="member">SaveFile()</ref> and SaveString() functions. Use this to prepare the strings that you wish to append or prepend to the output INI data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="991" column="15" bodyfile="include/calibration.hpp" bodystart="991" bodyend="993"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a97da0c3ea00d82d33be34e28a35aa80b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::CSimpleIniTempl</definition>
+        <argsstring>(const CSimpleIniTempl &amp;)</argsstring>
+        <name>CSimpleIniTempl</name>
+        <param>
+          <type>const <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl" kindref="compound">CSimpleIniTempl</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="999" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aa1a7d2b202b109f7224553fdfeed4162" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl" kindref="compound">CSimpleIniTempl</ref> &amp;</type>
+        <definition>CSimpleIniTempl&amp; sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::operator=</definition>
+        <argsstring>(const CSimpleIniTempl &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl" kindref="compound">CSimpleIniTempl</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1000" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a69b903051ca95381f8616a8537a1b8b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::FindFileComment</definition>
+        <argsstring>(SI_CHAR *&amp;a_pData, bool a_bCopyStrings)</argsstring>
+        <name>FindFileComment</name>
+        <param>
+          <type>SI_CHAR *&amp;</type>
+          <declname>a_pData</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bCopyStrings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse the data looking for a file comment and store it if found. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1004" column="14" bodyfile="include/calibration.hpp" bodystart="1363" bodyend="1385"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a43ae499cf24e1184c938157d451fb17b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::FindEntry</definition>
+        <argsstring>(SI_CHAR *&amp;a_pData, const SI_CHAR *&amp;a_pSection, const SI_CHAR *&amp;a_pKey, const SI_CHAR *&amp;a_pVal, const SI_CHAR *&amp;a_pComment) const</argsstring>
+        <name>FindEntry</name>
+        <param>
+          <type>SI_CHAR *&amp;</type>
+          <declname>a_pData</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *&amp;</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *&amp;</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *&amp;</type>
+          <declname>a_pVal</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *&amp;</type>
+          <declname>a_pComment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse the data looking for the next valid entry. The memory pointed to by a_pData is modified by inserting NULL characters. The pointer is updated to the current location in the block of text. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1013" column="10" bodyfile="include/calibration.hpp" bodystart="1389" bodyend="1517"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a4f7e30db2589d4efc1d79118c991751f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::AddEntry</definition>
+        <argsstring>(const SI_CHAR *a_pSection, const SI_CHAR *a_pKey, const SI_CHAR *a_pValue, const SI_CHAR *a_pComment, bool a_bForceReplace, bool a_bCopyStrings)</argsstring>
+        <name>AddEntry</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pSection</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pKey</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pValue</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pComment</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bForceReplace</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bCopyStrings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add the section/key/value to our data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pSection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Section name. Sections will be created if they don&apos;t already exist. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key name. May be NULL to create an empty section. Existing entries will be updated. New entries will be created. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value for the key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comment to be associated with the section or the key. If a_pKey is NULL then it will be associated with the section, otherwise the key. This must be a string in full comment form already (have a comment character starting every line). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bForceReplace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should all existing values in a multi-key INI file be replaced with this entry. This option has no effect if not using multi-key files. The difference between Delete/AddEntry and AddEntry with a_bForceReplace = true, is that the load order and comment will be preserved this way. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bCopyStrings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should copies of the strings be made or not. If false then the pointers will be used as is. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1043" column="14" bodyfile="include/calibration.hpp" bodystart="1722" bodyend="1822"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a1c3198b2fc97476aa0b17523525d8ca5" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::IsSpace</definition>
+        <argsstring>(SI_CHAR ch) const</argsstring>
+        <name>IsSpace</name>
+        <param>
+          <type>SI_CHAR</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is the supplied character a whitespace character? </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1053" column="17" bodyfile="include/calibration.hpp" bodystart="1053" bodyend="1055"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a246f3fcdcfb6227363e9524ba3e93bfe" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::IsComment</definition>
+        <argsstring>(SI_CHAR ch) const</argsstring>
+        <name>IsComment</name>
+        <param>
+          <type>SI_CHAR</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Does the supplied character start a comment line? </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1058" column="17" bodyfile="include/calibration.hpp" bodystart="1058" bodyend="1060"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a958464006765f7d3b20c56ac7063748c" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::SkipNewLine</definition>
+        <argsstring>(SI_CHAR *&amp;a_pData) const</argsstring>
+        <name>SkipNewLine</name>
+        <param>
+          <type>SI_CHAR *&amp;</type>
+          <declname>a_pData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Skip over a newline character (or characters) for either DOS or UNIX </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1063" column="17" bodyfile="include/calibration.hpp" bodystart="1063" bodyend="1065"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a35b67f42075bc2bf415c1cd5b85f2ece" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SI_Error</type>
+        <definition>SI_Error sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::CopyString</definition>
+        <argsstring>(const SI_CHAR *&amp;a_pString)</argsstring>
+        <name>CopyString</name>
+        <param>
+          <type>const SI_CHAR *&amp;</type>
+          <declname>a_pString</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make a copy of the supplied string, replacing the original pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1068" column="14" bodyfile="include/calibration.hpp" bodystart="1698" bodyend="1718"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a51af7a227115bdd0f286b6aede90eff2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::DeleteString</definition>
+        <argsstring>(const SI_CHAR *a_pString)</argsstring>
+        <name>DeleteString</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pString</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete a string from the copied strings buffer if necessary </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1071" column="10" bodyfile="include/calibration.hpp" bodystart="2464" bodyend="2480"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a61f2d2406d290345abd5583e99973cd9" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::IsLess</definition>
+        <argsstring>(const SI_CHAR *a_pLeft, const SI_CHAR *a_pRight) const</argsstring>
+        <name>IsLess</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pLeft</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pRight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Internal use of our string comparison function </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1074" column="10" bodyfile="include/calibration.hpp" bodystart="1074" bodyend="1077"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1abd3a58aa52f359a1ddd04723e527b12a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::IsMultiLineTag</definition>
+        <argsstring>(const SI_CHAR *a_pData) const</argsstring>
+        <name>IsMultiLineTag</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1079" column="10" bodyfile="include/calibration.hpp" bodystart="1521" bodyend="1529"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ad4dff3c7630006191e37302eaa3cc952" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::IsMultiLineData</definition>
+        <argsstring>(const SI_CHAR *a_pData) const</argsstring>
+        <name>IsMultiLineData</name>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1080" column="10" bodyfile="include/calibration.hpp" bodystart="1533" bodyend="1565"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a98afff165e5c3a6a50933851fa817393" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::LoadMultiLineText</definition>
+        <argsstring>(SI_CHAR *&amp;a_pData, const SI_CHAR *&amp;a_pVal, const SI_CHAR *a_pTagName, bool a_bAllowBlankLinesInComment=false) const</argsstring>
+        <name>LoadMultiLineText</name>
+        <param>
+          <type>SI_CHAR *&amp;</type>
+          <declname>a_pData</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *&amp;</type>
+          <declname>a_pVal</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pTagName</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>a_bAllowBlankLinesInComment</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1081" column="10" bodyfile="include/calibration.hpp" bodystart="1577" bodyend="1694"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1af15daa54ac4598075415bf4eb25b40c5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::IsNewLineChar</definition>
+        <argsstring>(SI_CHAR a_c) const</argsstring>
+        <name>IsNewLineChar</name>
+        <param>
+          <type>SI_CHAR</type>
+          <declname>a_c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1087" column="10" bodyfile="include/calibration.hpp" bodystart="1569" bodyend="1573"/>
+      </memberdef>
+      <memberdef kind="function" id="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aa07bb1c21d241729685fa66438bf35df" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::CSimpleIniTempl&lt; SI_CHAR, SI_STRLESS, SI_CONVERTER &gt;::OutputMultiLineText</definition>
+        <argsstring>(OutputWriter &amp;a_oOutput, Converter &amp;a_oConverter, const SI_CHAR *a_pText) const</argsstring>
+        <name>OutputMultiLineText</name>
+        <param>
+          <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1OutputWriter" kindref="compound">OutputWriter</ref> &amp;</type>
+          <declname>a_oOutput</declname>
+        </param>
+        <param>
+          <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Converter" kindref="compound">Converter</ref> &amp;</type>
+          <declname>a_oConverter</declname>
+        </param>
+        <param>
+          <type>const SI_CHAR *</type>
+          <declname>a_pText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="1089" column="10" bodyfile="include/calibration.hpp" bodystart="2356" bodyend="2380"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/calibration.hpp" line="127" column="22" bodyfile="include/calibration.hpp" bodystart="127" bodyend="1137"/>
+    <listofallmembers>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a4f7e30db2589d4efc1d79118c991751f" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>AddEntry</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a35b67f42075bc2bf415c1cd5b85f2ece" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>CopyString</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a9fc2a71b3a189f298f54f87483cf9cb0" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>CSimpleIniTempl</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a97da0c3ea00d82d33be34e28a35aa80b" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>CSimpleIniTempl</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1abad8acfee824049e8865cff8939c7319" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>Delete</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a51af7a227115bdd0f286b6aede90eff2" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>DeleteString</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a157eb08fac4a9015f0416778386fa5bb" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>DeleteValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a43ae499cf24e1184c938157d451fb17b" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>FindEntry</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a69b903051ca95381f8616a8537a1b8b0" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>FindFileComment</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1af935fe34a6bc6c7a4b103f4aebe5ab9b" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>GetAllKeys</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a7cfcfdcb9009e8ea395baebba144e054" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>GetAllSections</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a478516021b663c8eb512d0a77e41415d" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>GetAllValues</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a34dcdeae3fc952a46c31f29dfbc6adbe" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>GetBoolValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a384f0320e8b8553dd563cd12bd764293" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>GetConverter</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ac32ceab13fc5119d734665db4f63c6fa" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>GetDoubleValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a6f6cab0e67fdfe42a98ea34268242a6e" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>GetLongValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a26e27d0a75228252ac7d27045eeb1bbb" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>GetSection</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a518325f19a0a68f1861999ad85f1bc65" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>GetSectionSize</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a27fd5acbe5dfe9c8fc1f95686dfde658" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>GetValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a246f3fcdcfb6227363e9524ba3e93bfe" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>IsComment</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a07177ed6aa10d6db56e5fdaf7882f940" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>IsEmpty</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a61f2d2406d290345abd5583e99973cd9" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>IsLess</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1af2492c7ec1bda909e4990c5bfeffeed8" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>IsMultiKey</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a5e0f080f3399308da4a060adbdf601ce" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>IsMultiLine</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ad4dff3c7630006191e37302eaa3cc952" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>IsMultiLineData</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1abd3a58aa52f359a1ddd04723e527b12a" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>IsMultiLineTag</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1af15daa54ac4598075415bf4eb25b40c5" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>IsNewLineChar</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a1c3198b2fc97476aa0b17523525d8ca5" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>IsSpace</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ad38534a2b3ff37fbf8d7a40482e86655" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>IsUnicode</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a14d429de923ad77ea9bdd9450a385936" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>LoadData</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a88a03e85126aba31c10fb6fdd8703025" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>LoadData</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a91219877c8ea7193677d87db8f9f349b" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>LoadFile</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a9d2e725ab64bd0bafc3913a3e32c9728" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>LoadFile</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a98afff165e5c3a6a50933851fa817393" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>LoadMultiLineText</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a857a7818085c11d760039321f16f4728" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>m_bAllowMultiKey</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1af8a0cfab629e739559992ffc953da987" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>m_bAllowMultiLine</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1acd55a71cc81f1bfb0d4305718e32c499" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>m_bSpaces</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ab4517cd729f052d4448a4c465c255358" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>m_bStoreIsUtf8</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ac7441786229e8ffb70174257cd92ad77" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>m_data</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a0c92ce015827de064fc606507d0a375a" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>m_nOrder</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1acee0c928cfc877ca7048de022fb8f450" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>m_pData</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a5656bcd76729f2977048ca2db188bd76" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>m_pFileComment</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ae3752765fa7424b245996990ccd595d6" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>m_strings</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a3887036f2029e7144043e8354ee70fc7" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>m_uDataLen</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aa1a7d2b202b109f7224553fdfeed4162" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>operator=</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aa07bb1c21d241729685fa66438bf35df" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>OutputMultiLineText</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a196d3a633d271853c43370ba850a5d8f" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>Reset</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a5e6b051be520d9a0695b86d65bf30024" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>Save</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1abf18209ce2792aa081e6a577a96ce263" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>Save</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a90861cd54b387cd4f2752c864743b762" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SaveFile</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a77e3801856f53ccce3e1dec39633a04f" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SaveFile</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ad87c5f3896cd0272b51dd8b0a209ad94" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SetBoolValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aa785a16cae924fe98a839ea86421a916" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SetDoubleValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a1d944787bd08f707e1ceeb16eabbe51d" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SetLongValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aff2eaa953a3df9a6718a421a920abfe4" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SetMultiKey</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a2d8f0815df7b350691b8a94ba87503e9" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SetMultiLine</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a201b694a66cf25f6ec045e6560e84af5" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SetSpaces</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a9e0453e6cdc5dcba6b8adbc57a208340" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SetUnicode</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a28e5e0c156052b6299e3f0c6d32b9b06" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SetValue</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aa04cb6856064c1dccc958945e1e339f6" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SI_CHAR_T</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a958464006765f7d3b20c56ac7063748c" prot="private" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>SkipNewLine</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ad7a2f266f8257f3c35b0d325c7167906" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>TKeyVal</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1ac8ec80f322536df1bd692c4a9032440f" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>TNamesDepend</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a7771f2ed1ed51dd679ea06abb784b2df" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>TSection</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1aeb954de66b166f10a682158d41265b86" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>UsingSpaces</name></member>
+      <member refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1a9a5646ac0cdff27d200452b39a2ee840" prot="public" virt="non-virtual"><scope>sl_oc::tools::CSimpleIniTempl</scope><name>~CSimpleIniTempl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
