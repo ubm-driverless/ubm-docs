@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['raceline_247',['Raceline',['http://docs.ros.org/en/latest/p/raceline_utils/generated/doxygen/html/classRaceline.html',1,'Raceline'],['http://docs.ros.org/en/latest/p/raceline_utils/generated/doxygen/html/classRaceline.html#abf073897de0800ef0d35ffc9b011b90f',1,'Raceline::Raceline()'],['../structcontrol__structs_1_1ControlState.html#a541809f6daea1c832b8502594abc1ef6',1,'control_structs::ControlState::raceline()']]],
+  ['raceline_5fdiscretization_5f_248',['raceline_discretization_',['../structcontrol__structs_1_1NodeConfig.html#a30659d06028cc8d2c430b1f475d0730a',1,'control_structs::NodeConfig']]],
+  ['raceline_5fpublisher_5f_249',['raceline_publisher_',['../structcontrol__structs_1_1PathFollowerParameters.html#a6fb78fa5b3fbad2e239a846feea2a557',1,'control_structs::PathFollowerParameters']]],
+  ['raceline_5fs_250',['raceline_s',['../structcontrol__structs_1_1ControlState.html#a51d30e57c5d43bb7d37a4bcc1c5035d9',1,'control_structs::ControlState']]],
+  ['raceline_5futils_2ehpp_251',['raceline_utils.hpp',['http://docs.ros.org/en/latest/p/raceline_utils/generated/doxygen/html/raceline__utils_8hpp.html.html',1,'']]],
+  ['raceline_5fvelocity_252',['raceline_velocity',['../structcontrol__structs_1_1ControlState.html#a2088654d261977f88b32460f17aa16fd',1,'control_structs::ControlState']]],
+  ['raceline_5fx_253',['raceline_x',['../structcontrol__structs_1_1ControlState.html#a14416921ad84f9c96bc3b19539f37bd0',1,'control_structs::ControlState']]],
+  ['raceline_5fy_254',['raceline_y',['../structcontrol__structs_1_1ControlState.html#a2f48516945e79dfe152495142111bf42',1,'control_structs::ControlState']]],
+  ['racelinedata_255',['RacelineData',['http://docs.ros.org/en/latest/p/raceline_utils/generated/doxygen/html/structRacelineData.html',1,'']]],
+  ['racelinerow_256',['RacelineRow',['http://docs.ros.org/en/latest/p/raceline_utils/generated/doxygen/html/structRacelineRow.html',1,'']]],
+  ['rafi_257',['rafi',['../utils_8hpp.html#a588d8ae799d233a401111c312e73364f',1,'utils.hpp']]],
+  ['read_5fcsv_258',['read_csv',['http://docs.ros.org/en/latest/p/raceline_utils/generated/doxygen/html/classRaceline.html#ade34f664e8a27af40d6510d80df05385',1,'Raceline::read_csv(const std::string &amp;filename)'],['http://docs.ros.org/en/latest/p/raceline_utils/generated/doxygen/html/classRaceline.html#aa3efb17ba36d0cf471bb97298e93e3d7',1,'Raceline::read_csv(const std::string &amp;filename, bool &amp;success)']]],
+  ['reset_259',['reset',['../classLapPerformance.html#a7d57b41056c5863027f6bf6641b9930c',1,'LapPerformance::reset()'],['../classTorqueController.html#aa6c19d160f1cff421af337d96efca31d',1,'TorqueController::reset()']]],
+  ['reset_5flap_5fstatistics_5fsubscriber_5f_260',['reset_lap_statistics_subscriber_',['../structcontrol__structs_1_1PathFollowerParameters.html#a022cb3bd6d3adf7e68fc5540bed91ab8',1,'control_structs::PathFollowerParameters']]],
+  ['reset_5flap_5fstatistics_5ftopic_5f_261',['reset_lap_statistics_topic_',['../structcontrol__structs_1_1PathFollowerParameters.html#a05426c98b1325bac8866c8277ecada5b',1,'control_structs::PathFollowerParameters']]],
+  ['restructureclosure_262',['restructureClosure',['http://docs.ros.org/en/latest/p/delaunay_path_planning/generated/doxygen/html/classTrace.html#a47326f20d7cadc6c9e2283c2edc54812',1,'Trace']]],
+  ['rifa_263',['rifa',['../utils_8hpp.html#a88dbb5d572b05732c37a6ab53f130fab',1,'utils.hpp']]],
+  ['ros_5futils_2ehpp_264',['ros_utils.hpp',['../ros__utils_8hpp.html',1,'']]],
+  ['rosinterfaces_265',['RosInterfaces',['../structcontrol__structs_1_1RosInterfaces.html',1,'control_structs']]],
+  ['rotclock_266',['rotClock',['http://docs.ros.org/en/latest/p/delaunay_path_planning/generated/doxygen/html/classVector.html#a78f154a8bbd5a56f778ec8c3f0fe3dec',1,'Vector']]],
+  ['rotcounterclock_267',['rotCounterClock',['http://docs.ros.org/en/latest/p/delaunay_path_planning/generated/doxygen/html/classVector.html#a35bfee3971a588bf1df69ce9d56dac43',1,'Vector']]]
+];

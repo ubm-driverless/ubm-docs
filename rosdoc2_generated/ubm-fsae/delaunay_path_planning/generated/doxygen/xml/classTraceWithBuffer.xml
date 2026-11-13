@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classTraceWithBuffer" kind="class" language="C++" prot="public">
+    <compoundname>TraceWithBuffer</compoundname>
+    <includes local="no">TraceBuffer.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classTraceWithBuffer_1a847ad57c1c4338d02ca9a0d9568ef750" prot="public" static="no" mutable="no">
+        <type><ref refid="classTrace" kindref="compound">Trace</ref></type>
+        <definition>Trace TraceWithBuffer::trace</definition>
+        <argsstring></argsstring>
+        <name>trace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="27" column="9" bodyfile="include/structures/TraceBuffer.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTraceWithBuffer_1a64ed409c84a2de139b812ee0439cb82d" prot="public" static="no" mutable="no">
+        <type>std::deque&lt; const <ref refid="classEdge" kindref="compound">Edge</ref> * &gt;</type>
+        <definition>std::deque&lt;const Edge*&gt; TraceWithBuffer::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="28" column="14" bodyfile="include/structures/TraceBuffer.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTraceWithBuffer_1ab3595a12e3f13529f76ee425902da8e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TraceWithBuffer::TraceWithBuffer</definition>
+        <argsstring>(const Trace &amp;t, const Edge *firstEdge=nullptr)</argsstring>
+        <name>TraceWithBuffer</name>
+        <param>
+          <type>const <ref refid="classTrace" kindref="compound">Trace</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classEdge" kindref="compound">Edge</ref> *</type>
+          <declname>firstEdge</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="29" column="3" bodyfile="include/structures/TraceBuffer.hpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classTraceWithBuffer_1ad7e91bf443b0721df7a0e10cba3a9cb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TraceWithBuffer::TraceWithBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>TraceWithBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/TraceBuffer.hpp" line="33" column="3" bodyfile="include/structures/TraceBuffer.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Auxiliar type to help with the search. Represents a trace and a buffer containing the elements in the current tree search. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>TraceWithBuffer</label>
+        <link refid="classTraceWithBuffer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>trace</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Trace</label>
+        <link refid="classTrace"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/structures/TraceBuffer.hpp" line="25" column="22" bodyfile="include/structures/TraceBuffer.hpp" bodystart="25" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classTraceWithBuffer_1a64ed409c84a2de139b812ee0439cb82d" prot="public" virt="non-virtual"><scope>TraceWithBuffer</scope><name>buffer</name></member>
+      <member refid="classTraceWithBuffer_1a847ad57c1c4338d02ca9a0d9568ef750" prot="public" virt="non-virtual"><scope>TraceWithBuffer</scope><name>trace</name></member>
+      <member refid="classTraceWithBuffer_1ab3595a12e3f13529f76ee425902da8e1" prot="public" virt="non-virtual"><scope>TraceWithBuffer</scope><name>TraceWithBuffer</name></member>
+      <member refid="classTraceWithBuffer_1ad7e91bf443b0721df7a0e10cba3a9cb1" prot="public" virt="non-virtual"><scope>TraceWithBuffer</scope><name>TraceWithBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

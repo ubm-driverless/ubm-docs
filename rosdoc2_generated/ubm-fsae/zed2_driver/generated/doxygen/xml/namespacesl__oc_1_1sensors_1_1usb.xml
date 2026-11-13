@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacesl__oc_1_1sensors_1_1usb" kind="namespace" language="C++">
+    <compoundname>sl_oc::sensors::usb</compoundname>
+    <innerclass refid="structsl__oc_1_1sensors_1_1usb_1_1__ov580__cmd__struct" prot="public">sl_oc::sensors::usb::_ov580_cmd_struct</innerclass>
+    <innerclass refid="structsl__oc_1_1sensors_1_1usb_1_1RawData" prot="public">sl_oc::sensors::usb::RawData</innerclass>
+    <innerclass refid="structsl__oc_1_1sensors_1_1usb_1_1StreamStatus" prot="public">sl_oc::sensors::usb::StreamStatus</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sensorcapture__def_8hpp_1a860df0fb107d9fc83134647b192af0d5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CUSTOMHID_REPORT_ID</name>
+        <enumvalue id="sensorcapture__def_8hpp_1a860df0fb107d9fc83134647b192af0d5afde9c2f13c4b4d1072af44915074c292" prot="public">
+          <name>REP_ID_SENSOR_DATA</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+<para>Sensor data report ID. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sensorcapture__def_8hpp_1a860df0fb107d9fc83134647b192af0d5aca34a4cb508e0107967eb3f077921c4f" prot="public">
+          <name>REP_ID_REQUEST_SET</name>
+          <initializer>= 0x21</initializer>
+          <briefdescription>
+<para>USB Request report ID. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sensorcapture__def_8hpp_1a860df0fb107d9fc83134647b192af0d5a5fc950b8b7be06301ba1ecd9ceb475f0" prot="public">
+          <name>REP_ID_OV580_CMD</name>
+          <initializer>= 0x22</initializer>
+          <briefdescription>
+<para>OV580 control request. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sensorcapture__def_8hpp_1a860df0fb107d9fc83134647b192af0d5a1f49107bd7255f4b52b603c597350e53" prot="public">
+          <name>REP_ID_SENSOR_STREAM_STATUS</name>
+          <initializer>= 0x32</initializer>
+          <briefdescription>
+<para>Stream Status report ID. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>USB HID communication report IDs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="48" column="33" bodyfile="include/sensorcapture_def.hpp" bodystart="48" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="enum" id="sensorcapture__def_8hpp_1a31ab9392a74d84590af56941d889770f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CUSTOMHID_REQUEST_ID</name>
+        <enumvalue id="sensorcapture__def_8hpp_1a31ab9392a74d84590af56941d889770fadf69ac899f72595a41c189111e98ccab" prot="public">
+          <name>RQ_CMD_PING</name>
+          <initializer>= 0xF2</initializer>
+          <briefdescription>
+<para>Command to ping the MCU to communicate that host is alive. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sensorcapture__def_8hpp_1a31ab9392a74d84590af56941d889770faed00ef83697c28ef43c1a7edaee1f4c8" prot="public">
+          <name>RQ_CMD_RST</name>
+          <initializer>= 0xE1</initializer>
+          <briefdescription>
+<para>Command to reset the MCU. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sensorcapture__def_8hpp_1a31ab9392a74d84590af56941d889770fae1f05bfc0ec675504c099aa60f56e400" prot="public">
+          <name>OV580_CMD_RESET</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+<para>Command to reset the OV580 using the MCU. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>USB HID requests IDs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="66" column="34" bodyfile="include/sensorcapture_def.hpp" bodystart="66" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sensorcapture__def_8hpp_1a4c03a30a18f68024b3f706760935795e" prot="public" static="no">
+        <type>enum sl_oc::sensors::usb::CUSTOMHID_REPORT_ID</type>
+        <definition>typedef enum sl_oc::sensors::usb::CUSTOMHID_REPORT_ID sl_oc::sensors::usb::CUSTOMHID_REPORT_ID</definition>
+        <argsstring></argsstring>
+        <name>CUSTOMHID_REPORT_ID</name>
+        <briefdescription>
+<para>USB HID communication report IDs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="61" column="21"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sensorcapture__def_8hpp_1a6ce2f109d7c9c0cb72331ee6b79bba9c" prot="public" static="no">
+        <type>enum sl_oc::sensors::usb::CUSTOMHID_REQUEST_ID</type>
+        <definition>typedef enum sl_oc::sensors::usb::CUSTOMHID_REQUEST_ID sl_oc::sensors::usb::CUSTOMHID_REQUEST_ID</definition>
+        <argsstring></argsstring>
+        <name>CUSTOMHID_REQUEST_ID</name>
+        <briefdescription>
+<para>USB HID requests IDs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="70" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sensorcapture__def_8hpp_1adc3f17d07af280d4b432ac6baeae68d6" prot="public" static="no">
+        <type>struct <ref refid="structsl__oc_1_1sensors_1_1usb_1_1RawData" kindref="compound">sl_oc::sensors::usb::RawData</ref></type>
+        <definition>typedef struct sl_oc::sensors::usb::RawData sl_oc::sensors::usb::RawData</definition>
+        <argsstring></argsstring>
+        <name>RawData</name>
+        <briefdescription>
+<para>The RAW sensor data structure retrieved from camera MCU by USB. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="106" column="9"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sensorcapture__def_8hpp_1ad617ae9360aa291658e7b5ecf7893566" prot="public" static="no">
+        <type>struct <ref refid="structsl__oc_1_1sensors_1_1usb_1_1StreamStatus" kindref="compound">sl_oc::sensors::usb::StreamStatus</ref></type>
+        <definition>typedef struct sl_oc::sensors::usb::StreamStatus sl_oc::sensors::usb::StreamStatus</definition>
+        <argsstring></argsstring>
+        <name>StreamStatus</name>
+        <briefdescription>
+<para>Status of the usb data streaming. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="114" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sensorcapture__def_8hpp_1a783cc259cc2880e147317911b9579cea" prot="public" static="no">
+        <type>struct <ref refid="structsl__oc_1_1sensors_1_1usb_1_1__ov580__cmd__struct" kindref="compound">sl_oc::sensors::usb::_ov580_cmd_struct</ref></type>
+        <definition>typedef struct sl_oc::sensors::usb::_ov580_cmd_struct sl_oc::sensors::usb::OV580CmdStruct</definition>
+        <argsstring></argsstring>
+        <name>OV580CmdStruct</name>
+        <briefdescription>
+<para>OV580 control using the MCU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sensorcapture_def.hpp" line="123" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/sensorcapture_def.hpp" line="43" column="13"/>
+  </compounddef>
+</doxygen>

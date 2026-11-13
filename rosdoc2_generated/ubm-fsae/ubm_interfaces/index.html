@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ubm_interfaces &mdash; ubm_interfaces 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Message Definitions" href="interfaces/message_definitions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            ubm_interfaces
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="interfaces/message_definitions.html">Message Definitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CameraData.html">CameraData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Cone.html">Cone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/ConeArray.html">ConeArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Control.html">Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CustomBool.html">CustomBool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CustomHeader.html">CustomHeader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CustomInt32.html">CustomInt32</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CustomPointCloud2.html">CustomPointCloud2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CustomUInt8MultiArray.html">CustomUInt8MultiArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Emergency.html">Emergency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Landmark.html">Landmark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/LandmarkArray.html">LandmarkArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/LapPerformance.html">LapPerformance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/MissionFinished.html">MissionFinished</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/PIDControlOutput.html">PIDControlOutput</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Path.html">Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/PathLimits.html">PathLimits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Raceline.html">Raceline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/RecoverableError.html">RecoverableError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/VCUData.html">VCUData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Warning.html">Warning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces/service_definitions.html">Service Definitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/srv/IsReady.html">IsReady</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/srv/SendTcpAsuDataEnactPacket.html">SendTcpAsuDataEnactPacket</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#asu-diagnostic-msgs">asu_diagnostic_msgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#camera-msgs">camera_msgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#fsae-msgs">fsae_msgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#landmark-msgs">landmark_msgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#vcu-msgs">vcu_msgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#services-organization">Services Organization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#vcu-srvs">vcu_srvs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ubm_interfaces</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ubm_interfaces</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubm-interfaces">
+<h1>ubm_interfaces<a class="headerlink" href="#ubm-interfaces" title="Link to this heading"></a></h1>
+<p>Package for all centralized custom interfaces of UBM messages</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="interfaces/message_definitions.html">Message Definitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CameraData.html">CameraData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Cone.html">Cone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/ConeArray.html">ConeArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Control.html">Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CustomBool.html">CustomBool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CustomHeader.html">CustomHeader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CustomInt32.html">CustomInt32</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CustomPointCloud2.html">CustomPointCloud2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/CustomUInt8MultiArray.html">CustomUInt8MultiArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Emergency.html">Emergency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Landmark.html">Landmark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/LandmarkArray.html">LandmarkArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/LapPerformance.html">LapPerformance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/MissionFinished.html">MissionFinished</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/PIDControlOutput.html">PIDControlOutput</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Path.html">Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/PathLimits.html">PathLimits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Raceline.html">Raceline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/RecoverableError.html">RecoverableError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/VCUData.html">VCUData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/msg/Warning.html">Warning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces/service_definitions.html">Service Definitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/srv/IsReady.html">IsReady</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/srv/SendTcpAsuDataEnactPacket.html">SendTcpAsuDataEnactPacket</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_docs/README.html">README</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="readme">
+<h1>README<a class="headerlink" href="#readme" title="Link to this heading"></a></h1>
+<p>#Message Files Organization</p>
+<section id="asu-diagnostic-msgs">
+<h2>asu_diagnostic_msgs<a class="headerlink" href="#asu-diagnostic-msgs" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Emergency.msg</p></li>
+<li><p>Info.msg</p></li>
+<li><p>MissionFinished.msg</p></li>
+<li><p>RecoverableError.msg</p></li>
+<li><p>Warning.msg</p></li>
+</ul>
+</section>
+<section id="camera-msgs">
+<h2>camera_msgs<a class="headerlink" href="#camera-msgs" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>CameraData.msg</p></li>
+</ul>
+</section>
+<section id="fsae-msgs">
+<h2>fsae_msgs<a class="headerlink" href="#fsae-msgs" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Cone.msg</p></li>
+<li><p>ConeArray.msg</p></li>
+<li><p>ConeStamped.msg</p></li>
+<li><p>LapPerformance.msg</p></li>
+<li><p>LapPerformanceStamped.msg</p></li>
+<li><p>Path.msg</p></li>
+<li><p>PathLimits.msg</p></li>
+<li><p>PIDControlOutput.msg</p></li>
+<li><p>Raceline.msg</p></li>
+<li><p>RacelineStamped.msg</p></li>
+</ul>
+</section>
+<section id="landmark-msgs">
+<h2>landmark_msgs<a class="headerlink" href="#landmark-msgs" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Landmark.msg</p></li>
+<li><p>LandmarkArray.msg</p></li>
+</ul>
+</section>
+<section id="vcu-msgs">
+<h2>vcu_msgs<a class="headerlink" href="#vcu-msgs" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Control.msg</p></li>
+<li><p>VCUData.msg</p></li>
+</ul>
+</section>
+<section id="services-organization">
+<h2>Services Organization<a class="headerlink" href="#services-organization" title="Link to this heading"></a></h2>
+<section id="vcu-srvs">
+<h3>vcu_srvs<a class="headerlink" href="#vcu-srvs" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>IsReady.srv</p></li>
+<li><p>SendTcpAsuDataEnactPacket.srv</p></li>
+</ul>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="interfaces/message_definitions.html" class="btn btn-neutral float-right" title="Message Definitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;ubm_interfaces&gt; Contributors. License: MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="calibration_8hpp" kind="file" language="C++">
+    <compoundname>calibration.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">locale</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">cstdio</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">sys/vfs.h</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">map</includes>
+    <includes local="no">list</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">wchar.h</includes>
+    <includes local="no">opencv2/opencv.hpp</includes>
+    <includedby refid="stereo_8hpp" local="yes">include/stereo.hpp</includedby>
+    <incdepgraph>
+      <node id="14">
+        <label>list</label>
+      </node>
+      <node id="5">
+        <label>locale</label>
+      </node>
+      <node id="18">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="13">
+        <label>map</label>
+      </node>
+      <node id="7">
+        <label>fstream</label>
+      </node>
+      <node id="17">
+        <label>wchar.h</label>
+      </node>
+      <node id="8">
+        <label>cstdio</label>
+      </node>
+      <node id="9">
+        <label>unistd.h</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>sys/vfs.h</label>
+      </node>
+      <node id="3">
+        <label>sstream</label>
+      </node>
+      <node id="12">
+        <label>cstdlib</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>include/calibration.hpp</label>
+        <link refid="calibration_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>algorithm</label>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+      </node>
+      <node id="11">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classsl__oc_1_1tools_1_1CSimpleIniTempl" prot="public">sl_oc::tools::CSimpleIniTempl</innerclass>
+    <innerclass refid="structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry" prot="public">sl_oc::tools::CSimpleIniTempl::Entry</innerclass>
+    <innerclass refid="structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry_1_1KeyOrder" prot="public">sl_oc::tools::CSimpleIniTempl::Entry::KeyOrder</innerclass>
+    <innerclass refid="structsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Entry_1_1LoadOrder" prot="public">sl_oc::tools::CSimpleIniTempl::Entry::LoadOrder</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1OutputWriter" prot="public">sl_oc::tools::CSimpleIniTempl::OutputWriter</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1FileWriter" prot="public">sl_oc::tools::CSimpleIniTempl::FileWriter</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1StringWriter" prot="public">sl_oc::tools::CSimpleIniTempl::StringWriter</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1CSimpleIniTempl_1_1Converter" prot="public">sl_oc::tools::CSimpleIniTempl::Converter</innerclass>
+    <innerclass refid="structsl__oc_1_1tools_1_1SI__GenericCase" prot="public">sl_oc::tools::SI_GenericCase</innerclass>
+    <innerclass refid="structsl__oc_1_1tools_1_1SI__GenericNoCase" prot="public">sl_oc::tools::SI_GenericNoCase</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1SI__ConvertA" prot="public">sl_oc::tools::SI_ConvertA</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1SI__ConvertW" prot="public">sl_oc::tools::SI_ConvertW</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1ConfManager" prot="public">sl_oc::tools::ConfManager</innerclass>
+    <innernamespace refid="namespacesl__oc">sl_oc</innernamespace>
+    <innernamespace refid="namespacesl__oc_1_1tools">sl_oc::tools</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="calibration_8hpp_1a1f5b9a23fd6735cf032b2c2b10629dce" prot="public" static="no">
+        <name>INCLUDED_SimpleIni_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="49" column="9" bodyfile="include/calibration.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1aa1c86fe2eaf27ba2cc163372f32a9106" prot="public" static="no">
+        <name>SI_ASSERT</name>
+        <param><defname>x</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="87" column="10" bodyfile="include/calibration.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1affde7f4680e7419f0e4a480a3e67ca98" prot="public" static="no">
+        <name>SI_UTF8_SIGNATURE</name>
+        <initializer>&quot;\xEF\xBB\xBF&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="104" column="9" bodyfile="include/calibration.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1a37c74ba148bf76a7ef3437655c29be1a" prot="public" static="no">
+        <name>SI_NEWLINE_A</name>
+        <initializer>&quot;\n&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="110" column="9" bodyfile="include/calibration.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1aad85e3fb9ce0ed8112a00bdc493a1184" prot="public" static="no">
+        <name>SI_NEWLINE_W</name>
+        <initializer>L&quot;\n&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="111" column="9" bodyfile="include/calibration.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1aff631184b835a493cc23e8d5780005a8" prot="public" static="no">
+        <name>SI_CONVERT_GENERIC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2500" column="10" bodyfile="include/calibration.hpp" bodystart="2500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1a5c2bfc13fd1603a3236d11093ffc9ae0" prot="public" static="no">
+        <name>SI_Case</name>
+        <initializer>SI_GenericCase</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2674" column="9" bodyfile="include/calibration.hpp" bodystart="2674" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1ad75e6dec39f5fa62f12364e434a155da" prot="public" static="no">
+        <name>SI_NoCase</name>
+        <initializer>SI_GenericNoCase</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2675" column="9" bodyfile="include/calibration.hpp" bodystart="2675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1a44b240b95a93f71535c03f5e26d7dbe1" prot="public" static="no">
+        <name>UNI_REPLACEMENT_CHAR</name>
+        <initializer>(UTF32)0x0000FFFD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2773" column="9" bodyfile="include/calibration.hpp" bodystart="2773" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1adc71280d09832f0fb6c6b83fbf043140" prot="public" static="no">
+        <name>UNI_MAX_BMP</name>
+        <initializer>(UTF32)0x0000FFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2774" column="9" bodyfile="include/calibration.hpp" bodystart="2774" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1a69d0ea77d1231214ba0893e846d7fcaf" prot="public" static="no">
+        <name>UNI_MAX_UTF16</name>
+        <initializer>(UTF32)0x0010FFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2775" column="9" bodyfile="include/calibration.hpp" bodystart="2775" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1a26c4390ae1463df1e6075ea585ed79a3" prot="public" static="no">
+        <name>UNI_MAX_UTF32</name>
+        <initializer>(UTF32)0x7FFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2776" column="9" bodyfile="include/calibration.hpp" bodystart="2776" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1a98a2f50a1ca513613316ffd384dd1bfb" prot="public" static="no">
+        <name>UNI_MAX_LEGAL_UTF32</name>
+        <initializer>(UTF32)0x0010FFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2777" column="9" bodyfile="include/calibration.hpp" bodystart="2777" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1a4ab84eb26356a90f3b7b9ac7aca1edfe" prot="public" static="no">
+        <name>UNI_SUR_HIGH_START</name>
+        <initializer>(UTF32)0xD800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2833" column="9" bodyfile="include/calibration.hpp" bodystart="2833" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1ae5481872f1061e4e2a66849802b4b81e" prot="public" static="no">
+        <name>UNI_SUR_HIGH_END</name>
+        <initializer>(UTF32)0xDBFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2834" column="9" bodyfile="include/calibration.hpp" bodystart="2834" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1a23de5862375b48afcb4e3ff7b56a274d" prot="public" static="no">
+        <name>UNI_SUR_LOW_START</name>
+        <initializer>(UTF32)0xDC00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2835" column="9" bodyfile="include/calibration.hpp" bodystart="2835" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1ab9a531ffb73be79f7089049c1b84dc59" prot="public" static="no">
+        <name>UNI_SUR_LOW_END</name>
+        <initializer>(UTF32)0xDFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2836" column="9" bodyfile="include/calibration.hpp" bodystart="2836" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1a7d6444ead3a7e870acdb77aaffb8f9d2" prot="public" static="no">
+        <name>CSimpleIni</name>
+        <initializer>CSimpleIniA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3956" column="9" bodyfile="include/calibration.hpp" bodystart="3956" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1ae287c82d088c035d6176a7b5cf91e473" prot="public" static="no">
+        <name>CSimpleIniCase</name>
+        <initializer>CSimpleIniCaseA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3957" column="9" bodyfile="include/calibration.hpp" bodystart="3957" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="calibration_8hpp_1a3864eb3c1be64f869c66e8b2c87088c4" prot="public" static="no">
+        <name>SI_NEWLINE</name>
+        <initializer>SI_NEWLINE_A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3958" column="9" bodyfile="include/calibration.hpp" bodystart="3958" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/calibration.hpp"/>
+  </compounddef>
+</doxygen>

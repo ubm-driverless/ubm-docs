@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classUnscentedKalmanFilter" kind="class" language="C++" prot="public">
+    <compoundname>UnscentedKalmanFilter</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classUnscentedKalmanFilter_1a3ff40a7d081cd2e5546b900ad0f2c36e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int UnscentedKalmanFilter::state_dim_</definition>
+        <argsstring></argsstring>
+        <name>state_dim_</name>
+        <briefdescription>
+<para>Dimension of the state vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="83" column="11" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUnscentedKalmanFilter_1a809136fdfccd9e0b5cd8a1904c53c77b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UnscentedKalmanFilter::sigma_lambda_</definition>
+        <argsstring></argsstring>
+        <name>sigma_lambda_</name>
+        <briefdescription>
+<para>Lambda parameter for UKF. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="84" column="14" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUnscentedKalmanFilter_1a926caef8db78a3ca1da5166e435b68cc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UnscentedKalmanFilter::weight_m0_</definition>
+        <argsstring></argsstring>
+        <name>weight_m0_</name>
+        <briefdescription>
+<para>Weight for the mean of the sigma points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="85" column="14" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUnscentedKalmanFilter_1abc1ba2c3bc42f44af4f4806681310e26" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UnscentedKalmanFilter::weight_c0_</definition>
+        <argsstring></argsstring>
+        <name>weight_c0_</name>
+        <briefdescription>
+<para>Weight for the covariance of the sigma points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="86" column="14" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUnscentedKalmanFilter_1a903abc71dfae2dfd71f05a25a3983761" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UnscentedKalmanFilter::weight_</definition>
+        <argsstring></argsstring>
+        <name>weight_</name>
+        <briefdescription>
+<para>Weight for the other sigma points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="87" column="14" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUnscentedKalmanFilter_1aad2c16305f6b65de067dc9c872cd1e75" prot="private" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec UnscentedKalmanFilter::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <briefdescription>
+<para>Current state vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="90" column="17" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUnscentedKalmanFilter_1a6f75fc3d13ddc414ae90c280190afa30" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat UnscentedKalmanFilter::state_covariance_</definition>
+        <argsstring></argsstring>
+        <name>state_covariance_</name>
+        <briefdescription>
+<para>Current state covariance matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="91" column="17" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUnscentedKalmanFilter_1ac19da4155981ca25fe76e70eb43d20b2" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat UnscentedKalmanFilter::process_noise_covariance_</definition>
+        <argsstring></argsstring>
+        <name>process_noise_covariance_</name>
+        <briefdescription>
+<para>Process noise covariance matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="92" column="17" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUnscentedKalmanFilter_1a2171b5fa47d40584d7193b065640e108" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat UnscentedKalmanFilter::measurement_noise_covariance_</definition>
+        <argsstring></argsstring>
+        <name>measurement_noise_covariance_</name>
+        <briefdescription>
+<para>Measurement noise covariance matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="93" column="17" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUnscentedKalmanFilter_1a91494bf149582f722584e3856a589679" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; arma::vec &gt;</type>
+        <definition>std::vector&lt;arma::vec&gt; UnscentedKalmanFilter::sigma_points_</definition>
+        <argsstring></argsstring>
+        <name>sigma_points_</name>
+        <briefdescription>
+<para>Sigma points for the UKF. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="96" column="19" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classUnscentedKalmanFilter_1aa458889d473beef3f106b37de1e3669e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UnscentedKalmanFilter::UnscentedKalmanFilter</definition>
+        <argsstring>(const double &amp;sigma_k, const double &amp;sigma_alpha, const double &amp;sigma_beta, const std::vector&lt; double &gt; &amp;initial_state, const std::vector&lt; double &gt; &amp;initial_state_covariance_diag_, const std::vector&lt; double &gt; &amp;process_noise_covariance_diag_, const std::vector&lt; double &gt; &amp;measurement_noise_covariance_diag_)</argsstring>
+        <name>UnscentedKalmanFilter</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>sigma_k</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>sigma_alpha</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>sigma_beta</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>initial_state</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>initial_state_covariance_diag_</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>process_noise_covariance_diag_</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>measurement_noise_covariance_diag_</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Ukf object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="40" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classUnscentedKalmanFilter_1a17d8b7877af12a92a9005f56060c9c68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnscentedKalmanFilter::model_update</definition>
+        <argsstring>(arma::vec &amp;future_state, const arma::vec &amp;state, const arma::vec &amp;model_inputs, const double &amp;dt) const</argsstring>
+        <name>model_update</name>
+        <param>
+          <type>arma::vec &amp;</type>
+          <declname>future_state</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>model_inputs</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="48" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classUnscentedKalmanFilter_1a349cd4bc079cb333f787fafbeccb3522" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnscentedKalmanFilter::measurement_model</definition>
+        <argsstring>(arma::vec &amp;measurement_prediction, const arma::vec &amp;state) const</argsstring>
+        <name>measurement_model</name>
+        <param>
+          <type>arma::vec &amp;</type>
+          <declname>measurement_prediction</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="53" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classUnscentedKalmanFilter_1a7da6c7e8014bc4cf300bf8fb03adf670" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnscentedKalmanFilter::prediction_step</definition>
+        <argsstring>(const arma::vec &amp;model_inputs, const double &amp;dt)</argsstring>
+        <name>prediction_step</name>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>model_inputs</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="56" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classUnscentedKalmanFilter_1a0be6314ba39b6deb99a41464e3aafec6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnscentedKalmanFilter::correction_step</definition>
+        <argsstring>(const arma::vec &amp;measurement)</argsstring>
+        <name>correction_step</name>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>measurement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="59" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classUnscentedKalmanFilter_1a0ce9b3b3c60a22f92b291526f5eb8b9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnscentedKalmanFilter::update_odometry_message</definition>
+        <argsstring>(nav_msgs::msg::Odometry &amp;odom, geometry_msgs::msg::PoseStamped &amp;pose)</argsstring>
+        <name>update_odometry_message</name>
+        <param>
+          <type>nav_msgs::msg::Odometry &amp;</type>
+          <declname>odom</declname>
+        </param>
+        <param>
+          <type>geometry_msgs::msg::PoseStamped &amp;</type>
+          <declname>pose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="61" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classUnscentedKalmanFilter_1ad6d7024cc796d281d079c51bf177567a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnscentedKalmanFilter::return_state</definition>
+        <argsstring>(arma::vec &amp;state) const</argsstring>
+        <name>return_state</name>
+        <param>
+          <type>arma::vec &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="64" column="14" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classUnscentedKalmanFilter_1aee52ae18048fdfa863df9e6339af56c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnscentedKalmanFilter::return_state_covariance</definition>
+        <argsstring>(arma::mat &amp;state_covariance) const</argsstring>
+        <name>return_state_covariance</name>
+        <param>
+          <type>arma::mat &amp;</type>
+          <declname>state_covariance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="68" column="14" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classUnscentedKalmanFilter_1a5e548fe4298d34ec46706e9448857677" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnscentedKalmanFilter::set_state</definition>
+        <argsstring>(const arma::vec &amp;state)</argsstring>
+        <name>set_state</name>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="72" column="14" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classUnscentedKalmanFilter_1a013f207e24a240652db871c573587e53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnscentedKalmanFilter::set_state_covariance</definition>
+        <argsstring>(const arma::mat &amp;state_covariance)</argsstring>
+        <name>set_state_covariance</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>state_covariance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ukf.hpp" line="76" column="14" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="76" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ekf_cpp/ukf.hpp" line="34" column="28" bodyfile="include/ekf_cpp/ukf.hpp" bodystart="34" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classUnscentedKalmanFilter_1a0be6314ba39b6deb99a41464e3aafec6" prot="public" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>correction_step</name></member>
+      <member refid="classUnscentedKalmanFilter_1a349cd4bc079cb333f787fafbeccb3522" prot="public" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>measurement_model</name></member>
+      <member refid="classUnscentedKalmanFilter_1a2171b5fa47d40584d7193b065640e108" prot="private" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>measurement_noise_covariance_</name></member>
+      <member refid="classUnscentedKalmanFilter_1a17d8b7877af12a92a9005f56060c9c68" prot="public" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>model_update</name></member>
+      <member refid="classUnscentedKalmanFilter_1a7da6c7e8014bc4cf300bf8fb03adf670" prot="public" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>prediction_step</name></member>
+      <member refid="classUnscentedKalmanFilter_1ac19da4155981ca25fe76e70eb43d20b2" prot="private" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>process_noise_covariance_</name></member>
+      <member refid="classUnscentedKalmanFilter_1ad6d7024cc796d281d079c51bf177567a" prot="public" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>return_state</name></member>
+      <member refid="classUnscentedKalmanFilter_1aee52ae18048fdfa863df9e6339af56c2" prot="public" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>return_state_covariance</name></member>
+      <member refid="classUnscentedKalmanFilter_1a5e548fe4298d34ec46706e9448857677" prot="public" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>set_state</name></member>
+      <member refid="classUnscentedKalmanFilter_1a013f207e24a240652db871c573587e53" prot="public" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>set_state_covariance</name></member>
+      <member refid="classUnscentedKalmanFilter_1a809136fdfccd9e0b5cd8a1904c53c77b" prot="private" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>sigma_lambda_</name></member>
+      <member refid="classUnscentedKalmanFilter_1a91494bf149582f722584e3856a589679" prot="private" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>sigma_points_</name></member>
+      <member refid="classUnscentedKalmanFilter_1aad2c16305f6b65de067dc9c872cd1e75" prot="private" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>state_</name></member>
+      <member refid="classUnscentedKalmanFilter_1a6f75fc3d13ddc414ae90c280190afa30" prot="private" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>state_covariance_</name></member>
+      <member refid="classUnscentedKalmanFilter_1a3ff40a7d081cd2e5546b900ad0f2c36e" prot="private" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>state_dim_</name></member>
+      <member refid="classUnscentedKalmanFilter_1aa458889d473beef3f106b37de1e3669e" prot="public" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>UnscentedKalmanFilter</name></member>
+      <member refid="classUnscentedKalmanFilter_1a0ce9b3b3c60a22f92b291526f5eb8b9a" prot="public" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>update_odometry_message</name></member>
+      <member refid="classUnscentedKalmanFilter_1a903abc71dfae2dfd71f05a25a3983761" prot="private" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>weight_</name></member>
+      <member refid="classUnscentedKalmanFilter_1abc1ba2c3bc42f44af4f4806681310e26" prot="private" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>weight_c0_</name></member>
+      <member refid="classUnscentedKalmanFilter_1a926caef8db78a3ca1da5166e435b68cc" prot="private" virt="non-virtual"><scope>UnscentedKalmanFilter</scope><name>weight_m0_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,85 @@
+
+.. _file_include_disparity_extender_node.hpp:
+
+File disparity_extender_node.hpp
+================================
+
+|exhale_lsh| :ref:`Parent directory <dir_include>` (``include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+This file contains the declaration of the :ref:`exhale_class_classDisparityExtenderNode` class, which is a ROS2 node responsible for processing laser scan data to extend disparities. The node subscribes to laser scan, odometry, and status messages, and publishes drive commands and visualization markers. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/disparity_extender_node.hpp``)
+----------------------------------------------------
+
+
+
+
+Detailed Description
+--------------------
+
+The algorithm is based on the article "The "Disparity Extender" Algorithm, and F1/Tenth" available at https://www.nathanotterness.com/2019/04/the-disparity-extender-algorithm-and.html. 
+
+
+
+
+Includes
+--------
+
+
+- ``ackermann_msgs/msg/ackermann_drive_stamped.hpp``
+
+- ``algorithm``
+
+- ``cmath``
+
+- ``disparity_extender.hpp`` (:ref:`file_include_disparity_extender.hpp`)
+
+- ``geometry_msgs/msg/point.hpp``
+
+- ``limits``
+
+- ``nav_msgs/msg/odometry.hpp``
+
+- ``rclcpp/rclcpp.hpp``
+
+- ``sensor_msgs/msg/laser_scan.hpp``
+
+- ``simple_speed.hpp`` (:ref:`file_include_simple_speed.hpp`)
+
+- ``std_msgs/msg/bool.hpp``
+
+- ``stdexcept``
+
+- ``string``
+
+- ``tf2/utils.h``
+
+- ``utility``
+
+- ``utils.hpp`` (:ref:`file_include_ros_utils.hpp`)
+
+- ``vector``
+
+- ``visualization_msgs/msg/marker.hpp``
+
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classDisparityExtenderNode`
+

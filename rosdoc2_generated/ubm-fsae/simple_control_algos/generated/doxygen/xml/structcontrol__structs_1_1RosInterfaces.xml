@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structcontrol__structs_1_1RosInterfaces" kind="struct" language="C++" prot="public">
+    <compoundname>control_structs::RosInterfaces</compoundname>
+    <includes local="no">ControlStructDataType.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1af1f93bc5f9fd5dfaadd2b8f322991efd" prot="public" static="no" mutable="no">
+        <type>rclcpp::Clock</type>
+        <definition>rclcpp::Clock control_structs::RosInterfaces::default_clock_</definition>
+        <argsstring></argsstring>
+        <name>default_clock_</name>
+        <briefdescription>
+<para>Default clock for throttled log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="115" column="23" bodyfile="include/ControlStructDataType.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1a639f593f4b21c36cb6f0520656cc271f" prot="public" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr control_structs::RosInterfaces::odom_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>odom_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for odometry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="119" column="42" bodyfile="include/ControlStructDataType.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1ab90f829241c81630b4a829e1f454a81a" prot="public" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::CustomBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::CustomBool&gt;::SharedPtr control_structs::RosInterfaces::start_control_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>start_control_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for start control messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="120" column="42" bodyfile="include/ControlStructDataType.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1aa528cb81bd6a3165d955141f508a9a2e" prot="public" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; ubm_interfaces::msg::PathLimits &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;ubm_interfaces::msg::PathLimits&gt;::SharedPtr control_structs::RosInterfaces::path_limits_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>path_limits_subscriber_</name>
+        <briefdescription>
+<para>Subscriber for path limits. used in skidpad and ebs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="122" column="42" bodyfile="include/ControlStructDataType.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1a7a652bf1b4cd675f9243b11e768b2062" prot="public" static="no" mutable="no">
+        <type>rclcpp::Service&lt; ubm_interfaces::srv::IsReady &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;ubm_interfaces::srv::IsReady&gt;::SharedPtr control_structs::RosInterfaces::is_ready_service_</definition>
+        <argsstring></argsstring>
+        <name>is_ready_service_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Service for readiness check. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="126" column="37" bodyfile="include/ControlStructDataType.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1a47396bcdcb5e50c37534cfd5d343acec" prot="public" static="no" mutable="no">
+        <type>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr</type>
+        <definition>rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr control_structs::RosInterfaces::params_callback_handle_</definition>
+        <argsstring></argsstring>
+        <name>params_callback_handle_</name>
+        <briefdescription>
+<para>Handle for dynamic parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="127" column="75" bodyfile="include/ControlStructDataType.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1a0056eceacec1201d68a0eda0d584feca" prot="public" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::Control &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::Control&gt;::SharedPtr control_structs::RosInterfaces::drive_publisher_</definition>
+        <argsstring></argsstring>
+        <name>drive_publisher_</name>
+        <briefdescription>
+<para>Publisher for control commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="130" column="39" bodyfile="include/ControlStructDataType.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1a4a518fbdd48b447fe2454c96fe8195ff" prot="public" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PoseStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr control_structs::RosInterfaces::look_ahead_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>look_ahead_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for look-ahead point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="131" column="39" bodyfile="include/ControlStructDataType.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1ab8ca64b2c68a4aec87b6bab68ea1ecda" prot="public" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::PoseStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr control_structs::RosInterfaces::car_nearest_point_publisher_</definition>
+        <argsstring></argsstring>
+        <name>car_nearest_point_publisher_</name>
+        <briefdescription>
+<para>Publisher for nearest point visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="132" column="39" bodyfile="include/ControlStructDataType.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1abf0175404993e5a7a6b328d11ce67d23" prot="public" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::Emergency &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::Emergency&gt;::SharedPtr control_structs::RosInterfaces::status_emergency_publisher_</definition>
+        <argsstring></argsstring>
+        <name>status_emergency_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for emergency status messages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="133" column="39" bodyfile="include/ControlStructDataType.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1a7d5ea591ecbabbd736e3d52025a36225" prot="public" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::Info &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::Info&gt;::SharedPtr control_structs::RosInterfaces::status_info_publisher_</definition>
+        <argsstring></argsstring>
+        <name>status_info_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for info status messages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="134" column="39" bodyfile="include/ControlStructDataType.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1a5400b3fbae34f5dd3beea5ca3a8b5f87" prot="public" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::MissionFinished &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::MissionFinished&gt;::SharedPtr control_structs::RosInterfaces::mission_finished_publisher_</definition>
+        <argsstring></argsstring>
+        <name>mission_finished_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Publisher for mission finished messages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="135" column="39" bodyfile="include/ControlStructDataType.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1abb3e3309c4176bbca90262a6a8daefae" prot="public" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::PIDControlOutput &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::PIDControlOutput&gt;::SharedPtr control_structs::RosInterfaces::steering_pid_publisher_</definition>
+        <argsstring></argsstring>
+        <name>steering_pid_publisher_</name>
+        <briefdescription>
+<para>Publisher for steering PID output aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="136" column="39" bodyfile="include/ControlStructDataType.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1a92887a8ccab9a5cf1a3f1763fa2b9546" prot="public" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; ubm_interfaces::msg::PIDControlOutput &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;ubm_interfaces::msg::PIDControlOutput&gt;::SharedPtr control_structs::RosInterfaces::torque_pid_publisher_</definition>
+        <argsstring></argsstring>
+        <name>torque_pid_publisher_</name>
+        <briefdescription>
+<para>Publisher for torque PID output aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="137" column="39" bodyfile="include/ControlStructDataType.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1ac5bc44d29dbd8775b2c69e62582087c9" prot="public" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr control_structs::RosInterfaces::watchdog_timer_</definition>
+        <argsstring></argsstring>
+        <name>watchdog_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="140" column="38" bodyfile="include/ControlStructDataType.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1a000382edc919a9ab8fc36ee1433d98df" prot="public" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr control_structs::RosInterfaces::control_timer_</definition>
+        <argsstring></argsstring>
+        <name>control_timer_</name>
+        <briefdescription>
+<para>Timer for control loop execution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="141" column="38" bodyfile="include/ControlStructDataType.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontrol__structs_1_1RosInterfaces_1a603a5485d97c2d5daad23e78e646b7dc" prot="public" static="no" mutable="no">
+        <type>ubm_interfaces::msg::CustomHeader</type>
+        <definition>ubm_interfaces::msg::CustomHeader control_structs::RosInterfaces::common_header</definition>
+        <argsstring></argsstring>
+        <name>common_header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ControlStructDataType.hpp" line="144" column="43" bodyfile="include/ControlStructDataType.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ROS interfaces (pub/sub/service/timer) and header base. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ControlStructDataType.hpp" line="114" column="24" bodyfile="include/ControlStructDataType.hpp" bodystart="114" bodyend="145"/>
+    <listofallmembers>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1ab8ca64b2c68a4aec87b6bab68ea1ecda" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>car_nearest_point_publisher_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1a603a5485d97c2d5daad23e78e646b7dc" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>common_header</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1a000382edc919a9ab8fc36ee1433d98df" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>control_timer_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1af1f93bc5f9fd5dfaadd2b8f322991efd" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>default_clock_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1a0056eceacec1201d68a0eda0d584feca" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>drive_publisher_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1a7a652bf1b4cd675f9243b11e768b2062" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>is_ready_service_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1a4a518fbdd48b447fe2454c96fe8195ff" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>look_ahead_point_publisher_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1a5400b3fbae34f5dd3beea5ca3a8b5f87" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>mission_finished_publisher_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1a639f593f4b21c36cb6f0520656cc271f" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>odom_subscriber_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1a47396bcdcb5e50c37534cfd5d343acec" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>params_callback_handle_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1aa528cb81bd6a3165d955141f508a9a2e" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>path_limits_subscriber_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1ab90f829241c81630b4a829e1f454a81a" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>start_control_subscriber_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1abf0175404993e5a7a6b328d11ce67d23" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>status_emergency_publisher_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1a7d5ea591ecbabbd736e3d52025a36225" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>status_info_publisher_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1abb3e3309c4176bbca90262a6a8daefae" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>steering_pid_publisher_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1a92887a8ccab9a5cf1a3f1763fa2b9546" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>torque_pid_publisher_</name></member>
+      <member refid="structcontrol__structs_1_1RosInterfaces_1ac5bc44d29dbd8775b2c69e62582087c9" prot="public" virt="non-virtual"><scope>control_structs::RosInterfaces</scope><name>watchdog_timer_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

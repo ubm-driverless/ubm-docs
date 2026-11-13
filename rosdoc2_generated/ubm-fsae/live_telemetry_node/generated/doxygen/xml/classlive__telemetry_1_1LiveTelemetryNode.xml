@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlive__telemetry_1_1LiveTelemetryNode" kind="class" language="C++" prot="public">
+    <compoundname>live_telemetry::LiveTelemetryNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1LiveTelemetryNode_1ad1b7bcb442ca391e193e41dfb21f9485" prot="private" static="no" mutable="no">
+        <type><ref refid="structlive__telemetry_1_1TelemetryConfig" kindref="compound">TelemetryConfig</ref></type>
+        <definition>TelemetryConfig live_telemetry::LiveTelemetryNode::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="31" column="19" bodyfile="include/live_telemetry_node/live_telemetry_node.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1LiveTelemetryNode_1a2f7b52ef8b793093dcfad81239e1111e" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classlive__telemetry_1_1FoxgloveLogger" kindref="compound">FoxgloveLogger</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;FoxgloveLogger&gt; live_telemetry::LiveTelemetryNode::foxglove_logger_</definition>
+        <argsstring></argsstring>
+        <name>foxglove_logger_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="32" column="19" bodyfile="include/live_telemetry_node/live_telemetry_node.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1LiveTelemetryNode_1a4f642cf9b05e677a11fc30499110daf0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classlive__telemetry_1_1TopicHandler" kindref="compound">TopicHandler</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;TopicHandler&gt; &gt; live_telemetry::LiveTelemetryNode::handlers_</definition>
+        <argsstring></argsstring>
+        <name>handlers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="33" column="15" bodyfile="include/live_telemetry_node/live_telemetry_node.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1LiveTelemetryNode_1a3579acee1f933bd3a10a708a8af10aca" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classlive__telemetry_1_1Gateway" kindref="compound">Gateway</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Gateway&gt; live_telemetry::LiveTelemetryNode::gateway_</definition>
+        <argsstring></argsstring>
+        <name>gateway_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="34" column="19" bodyfile="include/live_telemetry_node/live_telemetry_node.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1LiveTelemetryNode_1ae0f3c0e7818574758b171b48f9dc1767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>live_telemetry::LiveTelemetryNode::LiveTelemetryNode</definition>
+        <argsstring>()</argsstring>
+        <name>LiveTelemetryNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="19" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1LiveTelemetryNode_1ae3802f9f690070e060b90bdcfdc07aad" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>live_telemetry::LiveTelemetryNode::LiveTelemetryNode</definition>
+        <argsstring>(const TelemetryConfig &amp;config)</argsstring>
+        <name>LiveTelemetryNode</name>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1TelemetryConfig" kindref="compound">TelemetryConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="20" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1LiveTelemetryNode_1a2780bcefe4cadc15306cc085964cfb04" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structlive__telemetry_1_1TelemetryConfig" kindref="compound">TelemetryConfig</ref> &amp;</type>
+        <definition>const TelemetryConfig&amp; live_telemetry::LiveTelemetryNode::getConfig</definition>
+        <argsstring>() const</argsstring>
+        <name>getConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="22" column="25" bodyfile="include/live_telemetry_node/live_telemetry_node.hpp" bodystart="22" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1LiveTelemetryNode_1a65b8a3676cd6ed48debf76019cc130fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::LiveTelemetryNode::initializeParameters</definition>
+        <argsstring>()</argsstring>
+        <name>initializeParameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="25" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1LiveTelemetryNode_1a09156fbddbf53a38fb2009670545de82" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::LiveTelemetryNode::initializeHandlers</definition>
+        <argsstring>()</argsstring>
+        <name>initializeHandlers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="26" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1LiveTelemetryNode_1abbd928c05c9342e1314727c21202f625" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::LiveTelemetryNode::logConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>logConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="27" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1LiveTelemetryNode_1aaf5082e48d18107bd8d3209ff9bf669f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlive__telemetry_1_1HandlerConfig" kindref="compound">HandlerConfig</ref></type>
+        <definition>HandlerConfig live_telemetry::LiveTelemetryNode::toHandlerConfig</definition>
+        <argsstring>(const TopicHandlerEntry &amp;entry) const</argsstring>
+        <name>toHandlerConfig</name>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1TopicHandlerEntry" kindref="compound">TopicHandlerEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="29" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>live_telemetry::LiveTelemetryNode</label>
+        <link refid="classlive__telemetry_1_1LiveTelemetryNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>live_telemetry::LiveTelemetryNode</label>
+        <link refid="classlive__telemetry_1_1LiveTelemetryNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/live_telemetry_node/live_telemetry_node.hpp" line="17" column="44" bodyfile="include/live_telemetry_node/live_telemetry_node.hpp" bodystart="17" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1ad1b7bcb442ca391e193e41dfb21f9485" prot="private" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>config_</name></member>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a2f7b52ef8b793093dcfad81239e1111e" prot="private" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>foxglove_logger_</name></member>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a3579acee1f933bd3a10a708a8af10aca" prot="private" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>gateway_</name></member>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a2780bcefe4cadc15306cc085964cfb04" prot="public" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>getConfig</name></member>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a4f642cf9b05e677a11fc30499110daf0" prot="private" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>handlers_</name></member>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a09156fbddbf53a38fb2009670545de82" prot="private" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>initializeHandlers</name></member>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a65b8a3676cd6ed48debf76019cc130fe" prot="private" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>initializeParameters</name></member>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1ae0f3c0e7818574758b171b48f9dc1767" prot="public" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>LiveTelemetryNode</name></member>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1ae3802f9f690070e060b90bdcfdc07aad" prot="public" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>LiveTelemetryNode</name></member>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1abbd928c05c9342e1314727c21202f625" prot="private" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>logConfiguration</name></member>
+      <member refid="classlive__telemetry_1_1LiveTelemetryNode_1aaf5082e48d18107bd8d3209ff9bf669f" prot="private" virt="non-virtual"><scope>live_telemetry::LiveTelemetryNode</scope><name>toHandlerConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

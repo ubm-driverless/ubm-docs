@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classVisualization" kind="class" language="C++" prot="public">
+    <compoundname>Visualization</compoundname>
+    <includes local="no">Visualization.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classVisualization_1a90a89e068eab71de77441bbf9c87fb0b" prot="private" static="no" mutable="no">
+        <type><ref refid="structParams_1_1Visualization" kindref="compound">Params::Visualization</ref></type>
+        <definition>Params::Visualization Visualization::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+<para><ref refid="classVisualization" kindref="compound">Visualization</ref> parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="60" column="27" bodyfile="include/modules/Visualization.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classVisualization_1a0075bce27415b08bcd2964a99a6b2c46" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt; &gt; Visualization::trianglesPub</definition>
+        <argsstring></argsstring>
+        <name>trianglesPub</name>
+        <briefdescription>
+<para>Publisher for triangulation markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="61" column="21" bodyfile="include/modules/Visualization.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classVisualization_1aa46533fe5183ac9a513e168136053b1b" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt; &gt; Visualization::wayPub</definition>
+        <argsstring></argsstring>
+        <name>wayPub</name>
+        <briefdescription>
+<para>Publisher for path markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="62" column="21" bodyfile="include/modules/Visualization.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classVisualization_1aff19652b23523364c864734b071616a8" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; rclcpp::Publisher&lt; visualization_msgs::msg::MarkerArray &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt; &gt; Visualization::traceBufferPub</definition>
+        <argsstring></argsstring>
+        <name>traceBufferPub</name>
+        <briefdescription>
+<para>Publisher for trace buffer markers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="63" column="21" bodyfile="include/modules/Visualization.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classVisualization_1a4c19f2f8f72d897f5f32154220ca1754" prot="private" static="no" mutable="no">
+        <type>ubm_interfaces::msg::CustomHeader</type>
+        <definition>ubm_interfaces::msg::CustomHeader Visualization::lastHeader_</definition>
+        <argsstring></argsstring>
+        <name>lastHeader_</name>
+        <briefdescription>
+<para>Last used message header. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="64" column="39" bodyfile="include/modules/Visualization.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classVisualization_1a6fc476f599d1c3250a7e5b99e8ba4203" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classVisualization" kindref="compound">Visualization</ref> &amp;</type>
+        <definition>static Visualization&amp; Visualization::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription>
+<para>Get the singleton instance of <ref refid="classVisualization" kindref="compound">Visualization</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Reference to the <ref refid="classVisualization" kindref="compound">Visualization</ref> instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="21" column="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classVisualization_1aa9aa57c448f3622dfaa9563870795c08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Visualization::init</definition>
+        <argsstring>(rclcpp::Node::SharedPtr node, const Params::Visualization &amp;params)</argsstring>
+        <name>init</name>
+        <param>
+          <type>rclcpp::Node::SharedPtr</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structParams_1_1Visualization" kindref="compound">Params::Visualization</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the visualization publishers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared pointer to the ROS2 node. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classVisualization" kindref="compound">Visualization</ref> parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="28" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classVisualization_1a158e800ad2a3c9722637d8622fae06d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Visualization::setHeader</definition>
+        <argsstring>(const ubm_interfaces::msg::CustomHeader &amp;header)</argsstring>
+        <name>setHeader</name>
+        <param>
+          <type>const ubm_interfaces::msg::CustomHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+<para>Set the header for the next published markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ROS2 message header to use. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="34" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classVisualization_1a18bc2997a10aaae3970e53794cfe0d28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Visualization::visualize</definition>
+        <argsstring>(const EdgeSet &amp;edgeSet) const</argsstring>
+        <name>visualize</name>
+        <param>
+          <type>const <ref refid="definitions_8hpp_1a26bb88b1de8a1e8eef8651f1e9368883" kindref="member">EdgeSet</ref> &amp;</type>
+          <declname>edgeSet</declname>
+        </param>
+        <briefdescription>
+<para>Visualize a set of edges (e.g., triangulation). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>edgeSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set of edges to visualize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="40" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classVisualization_1a18605bf075624d0a0ab3d31d1d2c20a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Visualization::visualize</definition>
+        <argsstring>(const Trace &amp;way) const</argsstring>
+        <name>visualize</name>
+        <param>
+          <type>const <ref refid="classTrace" kindref="compound">Trace</ref> &amp;</type>
+          <declname>way</declname>
+        </param>
+        <briefdescription>
+<para>Visualize a path (trace) and its track limits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>way</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trace to visualize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="46" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classVisualization_1a991500a5471808631765a68d464bb518" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Visualization::visualize</definition>
+        <argsstring>(const TraceBuffer &amp;traceBuffer) const</argsstring>
+        <name>visualize</name>
+        <param>
+          <type>const <ref refid="classTraceBuffer" kindref="compound">TraceBuffer</ref> &amp;</type>
+          <declname>traceBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Visualize a buffer of traces (e.g., for tree search visualization). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>traceBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer of traces to visualize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="52" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classVisualization_1ad61ab33d93654350c1640191f24de4b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Visualization::Visualization</definition>
+        <argsstring>()=default</argsstring>
+        <name>Visualization</name>
+        <briefdescription>
+<para>Private constructor for singleton pattern. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/modules/Visualization.hpp" line="58" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Singleton class for visualizing various structures in ROS2 using MarkerArray. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/modules/Visualization.hpp" line="15" column="20" bodyfile="include/modules/Visualization.hpp" bodystart="15" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classVisualization_1a6fc476f599d1c3250a7e5b99e8ba4203" prot="public" virt="non-virtual"><scope>Visualization</scope><name>getInstance</name></member>
+      <member refid="classVisualization_1aa9aa57c448f3622dfaa9563870795c08" prot="public" virt="non-virtual"><scope>Visualization</scope><name>init</name></member>
+      <member refid="classVisualization_1a4c19f2f8f72d897f5f32154220ca1754" prot="private" virt="non-virtual"><scope>Visualization</scope><name>lastHeader_</name></member>
+      <member refid="classVisualization_1a90a89e068eab71de77441bbf9c87fb0b" prot="private" virt="non-virtual"><scope>Visualization</scope><name>params_</name></member>
+      <member refid="classVisualization_1a158e800ad2a3c9722637d8622fae06d5" prot="public" virt="non-virtual"><scope>Visualization</scope><name>setHeader</name></member>
+      <member refid="classVisualization_1aff19652b23523364c864734b071616a8" prot="private" virt="non-virtual"><scope>Visualization</scope><name>traceBufferPub</name></member>
+      <member refid="classVisualization_1a0075bce27415b08bcd2964a99a6b2c46" prot="private" virt="non-virtual"><scope>Visualization</scope><name>trianglesPub</name></member>
+      <member refid="classVisualization_1ad61ab33d93654350c1640191f24de4b5" prot="private" virt="non-virtual"><scope>Visualization</scope><name>Visualization</name></member>
+      <member refid="classVisualization_1a18bc2997a10aaae3970e53794cfe0d28" prot="public" virt="non-virtual"><scope>Visualization</scope><name>visualize</name></member>
+      <member refid="classVisualization_1a18605bf075624d0a0ab3d31d1d2c20a8" prot="public" virt="non-virtual"><scope>Visualization</scope><name>visualize</name></member>
+      <member refid="classVisualization_1a991500a5471808631765a68d464bb518" prot="public" virt="non-virtual"><scope>Visualization</scope><name>visualize</name></member>
+      <member refid="classVisualization_1aa46533fe5183ac9a513e168136053b1b" prot="private" virt="non-virtual"><scope>Visualization</scope><name>wayPub</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

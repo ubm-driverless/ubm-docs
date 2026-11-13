@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="particle__filter_8hpp" kind="file" language="C++">
+    <compoundname>particle_filter.hpp</compoundname>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">rclcpp/logging.hpp</includes>
+    <includes local="no">armadillo</includes>
+    <includes local="no">opencv2/opencv.hpp</includes>
+    <includes local="no">range_libc/RangeLib.h</includes>
+    <includedby refid="particle__filter__node_8hpp" local="yes">include/particle_filter_cpp/particle_filter_node.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/logging.hpp</label>
+      </node>
+      <node id="6">
+        <label>range_libc/RangeLib.h</label>
+      </node>
+      <node id="2">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="4">
+        <label>armadillo</label>
+      </node>
+      <node id="1">
+        <label>include/particle_filter_cpp/particle_filter.hpp</label>
+        <link refid="particle__filter_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/particle_filter_cpp/particle_filter_node.hpp</label>
+        <link refid="particle__filter__node_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/particle_filter_cpp/particle_filter.hpp</label>
+        <link refid="particle__filter_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="particle__filter_8hpp_1a9d27c1cd60362c91497c4dc21a5c334e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int rifa</definition>
+        <argsstring>(float angle_degrees, const float &amp;angle_increment, const float &amp;fov_rad)</argsstring>
+        <name>rifa</name>
+        <param>
+          <type>float</type>
+          <declname>angle_degrees</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>fov_rad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Range Index From Angle <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle_degrees</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle in degrees (it must be in the range [-<computeroutput>fov_deg</computeroutput>/2, <computeroutput>fov_deg</computeroutput>/2], where <computeroutput>fov_deg</computeroutput> = <computeroutput>fov_rad</computeroutput> * 180 / pi) [deg] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle increment of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fov_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field of view of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the index of the lidar ranges vector corresponding to the given angle</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter.hpp" line="32" column="12" bodyfile="include/particle_filter_cpp/particle_filter.hpp" bodystart="32" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="particle__filter_8hpp_1a3442de6c919175d0c754aa84e8c4dfb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float rafi</definition>
+        <argsstring>(const int &amp;index, const float &amp;angle_increment, const float &amp;fov_rad)</argsstring>
+        <name>rafi</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>angle_increment</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>fov_rad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Range Angle From Index (inverse of <computeroutput>rifa</computeroutput> but returns the angle in radians) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the lidar ranges vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle_increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle increment of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fov_rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field of view of the lidar [rad] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the angle corresponding to the given index [rad]</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter.hpp" line="54" column="14" bodyfile="include/particle_filter_cpp/particle_filter.hpp" bodystart="54" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="particle__filter_8hpp_1af5b0cec4fcaa823526cdb0a7a2101371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::Mat&lt; double &gt;</type>
+        <definition>arma::Mat&lt;double&gt; get_ray_behaviour_sensor_model</definition>
+        <argsstring>(const float &amp;max_range_px, const float &amp;resolution, const float &amp;ray_short_weight, const float &amp;ray_max_weight, const float &amp;ray_rand_weight, const float &amp;ray_hit_weight, const float &amp;ray_hit_sigma)</argsstring>
+        <name>get_ray_behaviour_sensor_model</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>max_range_px</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>resolution</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>ray_short_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>ray_max_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>ray_rand_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>ray_hit_weight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>ray_hit_sigma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter.hpp" line="73" column="11" declfile="include/particle_filter_cpp/particle_filter.hpp" declline="73" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="particle__filter_8hpp_1aadb5d97434b5e038388b93d9db595ae3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_range_libc</definition>
+        <argsstring>(float x, float y, float theta)</argsstring>
+        <name>test_range_libc</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter.hpp" line="82" column="6" declfile="include/particle_filter_cpp/particle_filter.hpp" declline="82" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This header file contains the definition of the methods that are used to implement the Particle Filter algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/particle_filter_cpp/particle_filter.hpp"/>
+  </compounddef>
+</doxygen>

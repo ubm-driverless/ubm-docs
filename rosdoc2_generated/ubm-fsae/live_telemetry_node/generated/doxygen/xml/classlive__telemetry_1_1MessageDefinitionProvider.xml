@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlive__telemetry_1_1MessageDefinitionProvider" kind="class" language="C++" prot="public">
+    <compoundname>live_telemetry::MessageDefinitionProvider</compoundname>
+    <includes local="no">message_definition_provider.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1MessageDefinitionProvider_1a7787f1901057fc6c91a1ef3ec9ac8479" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; live_telemetry::MessageDefinitionProvider::cache_</definition>
+        <argsstring></argsstring>
+        <name>cache_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/message_definition_provider.hpp" line="104" column="18" bodyfile="include/live_telemetry_node/message_definition_provider.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1MessageDefinitionProvider_1a5f39a07120a768edeaa30426641b6a1f" prot="private" static="yes" mutable="no">
+        <type>const std::set&lt; std::string &gt;</type>
+        <definition>const std::set&lt;std::string&gt; live_telemetry::MessageDefinitionProvider::BUILTINS</definition>
+        <argsstring></argsstring>
+        <name>BUILTINS</name>
+        <initializer>= {
+            &quot;bool&quot;, &quot;byte&quot;, &quot;char&quot;,
+            &quot;float32&quot;, &quot;float64&quot;,
+            &quot;int8&quot;, &quot;int16&quot;, &quot;int32&quot;, &quot;int64&quot;,
+            &quot;uint8&quot;, &quot;uint16&quot;, &quot;uint32&quot;, &quot;uint64&quot;,
+            &quot;string&quot;, &quot;wstring&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/message_definition_provider.hpp" line="121" column="38" bodyfile="include/live_telemetry_node/message_definition_provider.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1MessageDefinitionProvider_1a95ccb62607e3c6d9e6fecc8533c4dff5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string live_telemetry::MessageDefinitionProvider::getFullDefinition</definition>
+        <argsstring>(const std::string &amp;type_name)</argsstring>
+        <name>getFullDefinition</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type_name</declname>
+        </param>
+        <briefdescription>
+<para>Get the full concatenated message definition for a ROS2 type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fully qualified type, e.g. &quot;nav_msgs/msg/Odometry&quot; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Full definition string, or empty on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/message_definition_provider.hpp" line="41" column="21" bodyfile="include/live_telemetry_node/message_definition_provider.hpp" bodystart="41" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1MessageDefinitionProvider_1a77dbf2f9d7f047da7c9e1d208fb537d8" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string live_telemetry::MessageDefinitionProvider::toShortType</definition>
+        <argsstring>(const std::string &amp;full_type)</argsstring>
+        <name>toShortType</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>full_type</declname>
+        </param>
+        <briefdescription>
+<para>Convert &quot;pkg/msg/Type&quot; to &quot;pkg/Type&quot; (short form used in .msg files) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/message_definition_provider.hpp" line="109" column="28" bodyfile="include/live_telemetry_node/message_definition_provider.hpp" bodystart="109" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1MessageDefinitionProvider_1a4667c4fae77b068a5976b442d374ce3c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; std::string, std::string &gt;</type>
+        <definition>static std::pair&lt;std::string, std::string&gt; live_telemetry::MessageDefinitionProvider::parseTypeName</definition>
+        <argsstring>(const std::string &amp;type_name)</argsstring>
+        <name>parseTypeName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type_name</declname>
+        </param>
+        <briefdescription>
+<para>Parse &quot;nav_msgs/msg/Odometry&quot; -&gt; (&quot;nav_msgs&quot;, &quot;Odometry&quot;) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/message_definition_provider.hpp" line="131" column="26" bodyfile="include/live_telemetry_node/message_definition_provider.hpp" bodystart="131" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1MessageDefinitionProvider_1addb35cc1250fe96e343041345986e27a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string live_telemetry::MessageDefinitionProvider::resolveTypeName</definition>
+        <argsstring>(const std::string &amp;type_str, const std::string &amp;parent_package)</argsstring>
+        <name>resolveTypeName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type_str</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>parent_package</declname>
+        </param>
+        <briefdescription>
+<para>Resolve a type reference to a fully-qualified name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Examples: &quot;geometry_msgs/Point&quot; -&gt; &quot;geometry_msgs/msg/Point&quot; &quot;geometry_msgs/msg/Point&quot; -&gt; &quot;geometry_msgs/msg/Point&quot; &quot;Header&quot; -&gt; &quot;std_msgs/msg/Header&quot; &quot;MySubType&quot; -&gt; &quot;&lt;parent_package&gt;/msg/MySubType&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/message_definition_provider.hpp" line="270" column="28" bodyfile="include/live_telemetry_node/message_definition_provider.hpp" bodystart="270" bodyend="294"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1MessageDefinitionProvider_1a2df6d7cedb5f5ab1a8967007bbf94cc9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string live_telemetry::MessageDefinitionProvider::readMsgFile</definition>
+        <argsstring>(const std::string &amp;type_name)</argsstring>
+        <name>readMsgFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type_name</declname>
+        </param>
+        <briefdescription>
+<para>Read a .msg file from the ament index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/message_definition_provider.hpp" line="145" column="21" bodyfile="include/live_telemetry_node/message_definition_provider.hpp" bodystart="145" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1MessageDefinitionProvider_1aeb6a342d476cba953ed2c87a6f0b331b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::MessageDefinitionProvider::enqueueDependencies</definition>
+        <argsstring>(const std::string &amp;definition, const std::string &amp;parent_package, std::queue&lt; std::pair&lt; std::string, std::string &gt;&gt; &amp;to_process, const std::set&lt; std::string &gt; &amp;visited)</argsstring>
+        <name>enqueueDependencies</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>definition</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>parent_package</declname>
+        </param>
+        <param>
+          <type>std::queue&lt; std::pair&lt; std::string, std::string &gt;&gt; &amp;</type>
+          <declname>to_process</declname>
+        </param>
+        <param>
+          <type>const std::set&lt; std::string &gt; &amp;</type>
+          <declname>visited</declname>
+        </param>
+        <briefdescription>
+<para>Parse a .msg definition to extract all referenced types and enqueue them. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>definition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The .msg file content </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent_package</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Package of the type whose definition we&apos;re parsing </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to_process</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Queue to add discovered dependencies to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visited</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set of already-visited types </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/message_definition_provider.hpp" line="181" column="14" bodyfile="include/live_telemetry_node/message_definition_provider.hpp" bodystart="181" bodyend="259"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Reads ROS2 .msg files from the ament index and produces full message definition strings (with all transitive dependencies) suitable for Foxglove&apos;s &quot;ros2msg&quot; schema encoding. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Output format matches the rosbag2 convention:</para>
+<sect1 id="classlive__telemetry_1_1MessageDefinitionProvider_1autotoc_md0">
+<title>&lt;top-level .msg content&gt;</title>
+<para>MSG: geometry_msgs/msg/Point </para>
+</sect1>
+<sect1 id="classlive__telemetry_1_1MessageDefinitionProvider_1autotoc_md1">
+<title>&lt;Point .msg content&gt;</title>
+<para>MSG: std_msgs/msg/Header &lt;Header .msg content&gt; ... </para>
+</sect1>
+    </detaileddescription>
+    <location file="include/live_telemetry_node/message_definition_provider.hpp" line="34" column="1" bodyfile="include/live_telemetry_node/message_definition_provider.hpp" bodystart="33" bodyend="295"/>
+    <listofallmembers>
+      <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a5f39a07120a768edeaa30426641b6a1f" prot="private" virt="non-virtual"><scope>live_telemetry::MessageDefinitionProvider</scope><name>BUILTINS</name></member>
+      <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a7787f1901057fc6c91a1ef3ec9ac8479" prot="private" virt="non-virtual"><scope>live_telemetry::MessageDefinitionProvider</scope><name>cache_</name></member>
+      <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1aeb6a342d476cba953ed2c87a6f0b331b" prot="private" virt="non-virtual"><scope>live_telemetry::MessageDefinitionProvider</scope><name>enqueueDependencies</name></member>
+      <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a95ccb62607e3c6d9e6fecc8533c4dff5" prot="public" virt="non-virtual"><scope>live_telemetry::MessageDefinitionProvider</scope><name>getFullDefinition</name></member>
+      <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a4667c4fae77b068a5976b442d374ce3c" prot="private" virt="non-virtual"><scope>live_telemetry::MessageDefinitionProvider</scope><name>parseTypeName</name></member>
+      <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a2df6d7cedb5f5ab1a8967007bbf94cc9" prot="private" virt="non-virtual"><scope>live_telemetry::MessageDefinitionProvider</scope><name>readMsgFile</name></member>
+      <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1addb35cc1250fe96e343041345986e27a" prot="private" virt="non-virtual"><scope>live_telemetry::MessageDefinitionProvider</scope><name>resolveTypeName</name></member>
+      <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a77dbf2f9d7f047da7c9e1d208fb537d8" prot="private" virt="non-virtual"><scope>live_telemetry::MessageDefinitionProvider</scope><name>toShortType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classEdge" kind="class" language="C++" prot="public">
+    <compoundname>Edge</compoundname>
+    <includes local="no">Edge.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEdge_1a63d05fd73d188d650a58b95c8835be3e" prot="private" static="no" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t Edge::hash_</definition>
+        <argsstring></argsstring>
+        <name>hash_</name>
+        <briefdescription>
+<para><ref refid="classEdge" kindref="compound">Edge</ref>&apos;s unique hash. The hash is calculated using the Node(s)&apos; ids. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="24" column="18" bodyfile="include/structures/Edge.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classEdge_1a777420fccd6c0a91ba5c8288d409ff08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class std::hash&lt; Edge &gt;</definition>
+        <argsstring></argsstring>
+        <name>std::hash&lt; Edge &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="42" column="17" bodyfile="include/structures/Edge.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classEdge_1aa1b374eb64c6c754621b4fc918a9df57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Edge &amp;e)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classEdge" kindref="compound">Edge</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Cout operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[int]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>e </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="115" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classEdge_1add8d0437edf3751f28bc2c55ae2bac69" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classcNode" kindref="compound">cNode</ref></type>
+        <definition>const cNode Edge::n0</definition>
+        <argsstring></argsstring>
+        <name>n0</name>
+        <briefdescription>
+<para>An <ref refid="classEdge" kindref="compound">Edge</ref> is defined by two Node(s) (whose points create an edge). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="49" column="15" bodyfile="include/structures/Edge.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEdge_1a4a450c1c5a5a561c35b2d0d1c1894bfe" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classcNode" kindref="compound">cNode</ref></type>
+        <definition>const cNode Edge::n1</definition>
+        <argsstring></argsstring>
+        <name>n1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="49" column="18" bodyfile="include/structures/Edge.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEdge_1abc6ae03840e73e2a757f18edc07adcfd" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Edge::len</definition>
+        <argsstring></argsstring>
+        <name>len</name>
+        <briefdescription>
+<para>The length of the <ref refid="classEdge" kindref="compound">Edge</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="54" column="16" bodyfile="include/structures/Edge.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classEdge_1aa1a13508b59eb1ea6537f2a59f718092" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>static uint64_t Edge::computeHash</definition>
+        <argsstring>(const cNode &amp;n0, const cNode &amp;n1)</argsstring>
+        <name>computeHash</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n1</declname>
+        </param>
+        <briefdescription>
+<para>Returns the hash that would have an <ref refid="classEdge" kindref="compound">Edge</ref> having <emphasis>n0</emphasis> and <emphasis>n1</emphasis> as its Node(s). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="33" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classEdge_1a01246d25be196be9e9407faa01edfaab" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>static double Edge::computeLen</definition>
+        <argsstring>(const cNode &amp;n0, const cNode &amp;n1)</argsstring>
+        <name>computeLen</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n1</declname>
+        </param>
+        <briefdescription>
+<para>Returns the length that would have an <ref refid="classEdge" kindref="compound">Edge</ref> defined by <emphasis>n0</emphasis> and <emphasis>n1</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="42" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEdge_1a014819cda33c4e1cbbdd9adad400399d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Edge::Edge</definition>
+        <argsstring>(const cNode &amp;n0, const cNode &amp;n1)</argsstring>
+        <name>Edge</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n1</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classEdge" kindref="compound">Edge</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="62" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classEdge_1a38c76499b14c3ada34f0b485f6e2a5bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Edge::operator==</definition>
+        <argsstring>(const Edge &amp;e) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classEdge" kindref="compound">Edge</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator. Two <ref refid="classEdge" kindref="compound">Edge(s)</ref> will be equal if they have the same hash. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="70" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classEdge_1aad68f2cc1043548996c7ce6f4989a93d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Edge::operator!=</definition>
+        <argsstring>(const Edge &amp;e) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classEdge" kindref="compound">Edge</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Negation of the comparison operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="77" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classEdge_1a884890e1bb6156b4c1ccdfe82e89c9b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Edge::updateLocal</definition>
+        <argsstring>(const Eigen::Affine3d &amp;tf) const</argsstring>
+        <name>updateLocal</name>
+        <param>
+          <type>const Eigen::Affine3d &amp;</type>
+          <declname>tf</declname>
+        </param>
+        <briefdescription>
+<para>Updates the local coordinates of both Node(s). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="84" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classEdge_1a086ace834982e49bda4f6a191d086ea6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classPoint" kindref="compound">Point</ref></type>
+        <definition>Point Edge::midPoint</definition>
+        <argsstring>() const</argsstring>
+        <name>midPoint</name>
+        <briefdescription>
+<para>Returns the midpoint of the <ref refid="classEdge" kindref="compound">Edge</ref> in local coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="89" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classEdge_1af803e47800f606e4ad41cc2b4d10cb10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classPoint" kindref="compound">Point</ref></type>
+        <definition>Point Edge::midPointGlobal</definition>
+        <argsstring>() const</argsstring>
+        <name>midPointGlobal</name>
+        <briefdescription>
+<para>Returns the midpoint of the <ref refid="classEdge" kindref="compound">Edge</ref> in global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="94" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classEdge_1acfdd65c3020f2b66b68a31622a9fa3d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classVector" kindref="compound">Vector</ref></type>
+        <definition>Vector Edge::normal</definition>
+        <argsstring>() const</argsstring>
+        <name>normal</name>
+        <briefdescription>
+<para>Returns a normal vector to the <ref refid="classEdge" kindref="compound">Edge</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="99" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEdge_1a1ad5c0cbdbbe4ca01931ea3c862720fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Edge::trackWidth</definition>
+        <argsstring>(const Vector &amp;dir) const</argsstring>
+        <name>trackWidth</name>
+        <param>
+          <type>const <ref refid="classVector" kindref="compound">Vector</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns the estimated track width for this particular <ref refid="classEdge" kindref="compound">Edge</ref> taking into account the direction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Edge.hpp" line="107" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a triangle edge and has all information related to it. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Edge</label>
+        <link refid="classEdge"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>n0</edgelabel>
+          <edgelabel>n1</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cNode</label>
+        <link refid="classcNode"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/structures/Edge.hpp" line="19" column="11" bodyfile="include/structures/Edge.hpp" bodystart="19" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classEdge_1aa1a13508b59eb1ea6537f2a59f718092" prot="private" virt="non-virtual"><scope>Edge</scope><name>computeHash</name></member>
+      <member refid="classEdge_1a01246d25be196be9e9407faa01edfaab" prot="private" virt="non-virtual"><scope>Edge</scope><name>computeLen</name></member>
+      <member refid="classEdge_1a014819cda33c4e1cbbdd9adad400399d" prot="public" virt="non-virtual"><scope>Edge</scope><name>Edge</name></member>
+      <member refid="classEdge_1a63d05fd73d188d650a58b95c8835be3e" prot="private" virt="non-virtual"><scope>Edge</scope><name>hash_</name></member>
+      <member refid="classEdge_1abc6ae03840e73e2a757f18edc07adcfd" prot="public" virt="non-virtual"><scope>Edge</scope><name>len</name></member>
+      <member refid="classEdge_1a086ace834982e49bda4f6a191d086ea6" prot="public" virt="non-virtual"><scope>Edge</scope><name>midPoint</name></member>
+      <member refid="classEdge_1af803e47800f606e4ad41cc2b4d10cb10" prot="public" virt="non-virtual"><scope>Edge</scope><name>midPointGlobal</name></member>
+      <member refid="classEdge_1add8d0437edf3751f28bc2c55ae2bac69" prot="public" virt="non-virtual"><scope>Edge</scope><name>n0</name></member>
+      <member refid="classEdge_1a4a450c1c5a5a561c35b2d0d1c1894bfe" prot="public" virt="non-virtual"><scope>Edge</scope><name>n1</name></member>
+      <member refid="classEdge_1acfdd65c3020f2b66b68a31622a9fa3d7" prot="public" virt="non-virtual"><scope>Edge</scope><name>normal</name></member>
+      <member refid="classEdge_1aad68f2cc1043548996c7ce6f4989a93d" prot="public" virt="non-virtual"><scope>Edge</scope><name>operator!=</name></member>
+      <member refid="classEdge_1aa1b374eb64c6c754621b4fc918a9df57" prot="public" virt="non-virtual"><scope>Edge</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classEdge_1a38c76499b14c3ada34f0b485f6e2a5bb" prot="public" virt="non-virtual"><scope>Edge</scope><name>operator==</name></member>
+      <member refid="classEdge_1a777420fccd6c0a91ba5c8288d409ff08" prot="public" virt="non-virtual"><scope>Edge</scope><name>std::hash&lt; Edge &gt;</name></member>
+      <member refid="classEdge_1a1ad5c0cbdbbe4ca01931ea3c862720fd" prot="public" virt="non-virtual"><scope>Edge</scope><name>trackWidth</name></member>
+      <member refid="classEdge_1a884890e1bb6156b4c1ccdfe82e89c9b1" prot="public" virt="non-virtual"><scope>Edge</scope><name>updateLocal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

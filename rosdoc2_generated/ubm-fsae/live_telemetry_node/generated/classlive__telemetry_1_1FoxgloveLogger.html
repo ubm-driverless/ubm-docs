@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class FoxgloveLogger &mdash; live_telemetry_node 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class Gateway" href="classlive__telemetry_1_1Gateway.html" />
+    <link rel="prev" title="Template Class Downsampler" href="classlive__telemetry_1_1Downsampler.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            live_telemetry_node
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_live_telemetry.html">Namespace live_telemetry</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1DownsamplerConfig.html">Struct DownsamplerConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1ExplicitTopicConfig.html">Struct ExplicitTopicConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1FoxgloveConfig.html">Struct FoxgloveConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1FoxgloveLogger_1_1ProtobufChannelEntry.html">Struct FoxgloveLogger::ProtobufChannelEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1GatewayConfig.html">Struct GatewayConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1HandlerConfig.html">Struct HandlerConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1HandlerStats.html">Struct HandlerStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1ImageScaleConfig.html">Struct ImageScaleConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache.html">Struct PointCloudHandler::FieldOffsetCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1PublishStats.html">Struct PublishStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TelemetryConfig.html">Struct TelemetryConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TopicHandlerEntry.html">Struct TopicHandlerEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TopicSubscription.html">Struct TopicSubscription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1CameraDataHandler.html">Class CameraDataHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1Downsampler.html">Template Class Downsampler</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class FoxgloveLogger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1Gateway.html">Class Gateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1HandlerRegistry.html">Class HandlerRegistry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1IDataProcessor.html">Template Class IDataProcessor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1ImageScaler.html">Class ImageScaler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1JpegCompressor.html">Class JpegCompressor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1LiveTelemetryNode.html">Class LiveTelemetryNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1MessageDefinitionProvider.html">Class MessageDefinitionProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1PointCloudHandler.html">Class PointCloudHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1TopicHandler.html">Class TopicHandler</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_handler__registry_8hpp_1af0e009243fdcaeca9fc2e1c3d46ef28f.html">Function live_telemetry::registerBuiltinHandlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1a636f410d668aa2133d0167862b77b19f.html">Function live_telemetry::SerializeFdSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1ad7ccfbc68745767e5472a03e85032818.html">Function live_telemetry::toProtobuf(const sensor_msgs::msg::Image&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1a414ba4df407aadc6d4f52ec37eeede52.html">Function live_telemetry::toProtobuf(const ubm_interfaces::msg::CameraData&amp;)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_downsampler_8hpp_1aa2c8255ba1f8ca167a256b784c994ddd.html">Typedef live_telemetry::CameraDataDownsampler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_topic__handler_8hpp_1a36bdfa6a4084a2867bf3bb495a57398e.html">Typedef live_telemetry::HandlerFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_point__cloud__handler_8hpp_1a28ee942b3cd4f29e99a564ae5240f529.html">Typedef live_telemetry::PointCloud2Downsampler</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_live_telemetry_node.html">Directory live_telemetry_node</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_camera_data_handler.hpp.html">File camera_data_handler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_config.hpp.html">File config.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_downsampler.hpp.html">File downsampler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_foxglove_logger.hpp.html">File foxglove_logger.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_gateway.hpp.html">File gateway.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_handler_registry.hpp.html">File handler_registry.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_image_scaler.hpp.html">File image_scaler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_jpeg_compressor.hpp.html">File jpeg_compressor.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_live_telemetry_node.hpp.html">File live_telemetry_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_message_definition_provider.hpp.html">File message_definition_provider.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_point_cloud_handler.hpp.html">File point_cloud_handler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_protobuf_converter.hpp.html">File protobuf_converter.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_topic_handler.hpp.html">File topic_handler.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#live-telemetry-node">Live Telemetry Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#problem">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#solution">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#architecture">Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#quick-start">Quick Start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#specialized-handlers">Specialized Handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#build-run">Build &amp; Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#performance-replay-docker">Performance Replay (Docker)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">live_telemetry_node</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class FoxgloveLogger</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classlive__telemetry_1_1FoxgloveLogger.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-foxglovelogger">
+<span id="exhale-class-classlive-telemetry-1-1foxglovelogger"></span><h1>Class FoxgloveLogger<a class="headerlink" href="#class-foxglovelogger" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_live_telemetry_node_foxglove_logger.hpp.html#file-include-live-telemetry-node-foxglove-logger-hpp"><span class="std std-ref">File foxglove_logger.hpp</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Link to this heading"></a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structlive__telemetry_1_1FoxgloveLogger_1_1ProtobufChannelEntry.html#exhale-struct-structlive-telemetry-1-1foxglovelogger-1-1protobufchannelentry"><span class="std std-ref">Struct FoxgloveLogger::ProtobufChannelEntry</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLoggerE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLoggerE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLoggerE"></span><span id="live_telemetry::FoxgloveLogger"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FoxgloveLogger</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLoggerE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger5LevelE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger5LevelE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger5LevelE"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Level</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger5LevelE" title="Link to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger5Level5DebugE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger5Level5DebugE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger5Level5DebugE"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76aa603905470e2a5b8c13e96b579ef0dba"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Debug</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger5Level5DebugE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger5Level4InfoE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger5Level4InfoE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger5Level4InfoE"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76a4059b0251f66a18cb56f544728796875"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Info</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger5Level4InfoE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger5Level7WarningE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger5Level7WarningE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger5Level7WarningE"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76a0eaadb4fcb48a0a0ed7bc9868be9fbaa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Warning</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger5Level7WarningE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger5Level5ErrorE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger5Level5ErrorE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger5Level5ErrorE"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76a902b0d55fddef6f8d651fe1035b7d4bd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Error</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger5Level5ErrorE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger14FoxgloveLoggerERK14FoxgloveConfig">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger14FoxgloveLoggerERK14FoxgloveConfig"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger14FoxgloveLoggerERK14FoxgloveConfig"></span><span id="live_telemetry::FoxgloveLogger::FoxgloveLogger__FoxgloveConfigCR"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1ab96c1824240aae70147a302d8acfe186"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FoxgloveLogger</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structlive__telemetry_1_1FoxgloveConfig.html#_CPPv4N14live_telemetry14FoxgloveConfigE" title="live_telemetry::FoxgloveConfig"><span class="n"><span class="pre">FoxgloveConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger14FoxgloveLoggerERK14FoxgloveConfig" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14live_telemetry14FoxgloveLogger7isReadyEv">
+<span id="_CPPv3NK14live_telemetry14FoxgloveLogger7isReadyEv"></span><span id="_CPPv2NK14live_telemetry14FoxgloveLogger7isReadyEv"></span><span id="live_telemetry::FoxgloveLogger::isReadyC"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1ac200f759d7ff1117b39c1b0cbab489aa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isReady</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14live_telemetry14FoxgloveLogger7isReadyEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger4infoERKNSt6stringE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger4infoERKNSt6stringE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger4infoERKNSt6stringE"></span><span id="live_telemetry::FoxgloveLogger::info__ssCR"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a17ba0ed24d95f9b182f0e12d45d8b3f8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">info</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger4infoERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger5debugERKNSt6stringE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger5debugERKNSt6stringE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger5debugERKNSt6stringE"></span><span id="live_telemetry::FoxgloveLogger::debug__ssCR"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a26c82554e670390b5838a5f27520ba94"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger5debugERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger7warningERKNSt6stringE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger7warningERKNSt6stringE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger7warningERKNSt6stringE"></span><span id="live_telemetry::FoxgloveLogger::warning__ssCR"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a5f7919347307bb59ec846eb84a5d5997"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warning</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger7warningERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger5errorERKNSt6stringE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger5errorERKNSt6stringE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger5errorERKNSt6stringE"></span><span id="live_telemetry::FoxgloveLogger::error__ssCR"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1addf46be30588b5de732dfee9fdb688b6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger5errorERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger3logE5LevelRKNSt6stringE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger3logE5LevelRKNSt6stringE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger3logE5LevelRKNSt6stringE"></span><span id="live_telemetry::FoxgloveLogger::log__Level.ssCR"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a41c42315dc66cf7ba24b9a5866536c42"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">log</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N14live_telemetry14FoxgloveLogger5LevelE" title="live_telemetry::FoxgloveLogger::Level"><span class="n"><span class="pre">Level</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">level</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger3logE5LevelRKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger17publishCameraDataERKN14ubm_interfaces3msg10CameraDataE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger17publishCameraDataERKN14ubm_interfaces3msg10CameraDataE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger17publishCameraDataERKN14ubm_interfaces3msg10CameraDataE"></span><span id="live_telemetry::FoxgloveLogger::publishCameraData__ubm_interfaces::msg::CameraDataCR"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1afb8ce662dbcee1fd3f5789df96fff0bc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishCameraData</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CameraData</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ros_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger17publishCameraDataERKN14ubm_interfaces3msg10CameraDataE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14live_telemetry14FoxgloveLogger8getStatsEv">
+<span id="_CPPv3NK14live_telemetry14FoxgloveLogger8getStatsEv"></span><span id="_CPPv2NK14live_telemetry14FoxgloveLogger8getStatsEv"></span><span id="live_telemetry::FoxgloveLogger::getStatsC"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1ac460a1cdb83da6dd719b21a51ea6cb1a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="structlive__telemetry_1_1PublishStats.html#_CPPv4N14live_telemetry12PublishStatsE" title="live_telemetry::PublishStats"><span class="n"><span class="pre">PublishStats</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStats</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14live_telemetry14FoxgloveLogger8getStatsEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14live_telemetry14FoxgloveLogger16getBandwidthMbpsEv">
+<span id="_CPPv3NK14live_telemetry14FoxgloveLogger16getBandwidthMbpsEv"></span><span id="_CPPv2NK14live_telemetry14FoxgloveLogger16getBandwidthMbpsEv"></span><span id="live_telemetry::FoxgloveLogger::getBandwidthMbpsC"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a0fce06e2cc2548925d6bc41af7b8c218"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBandwidthMbps</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14live_telemetry14FoxgloveLogger16getBandwidthMbpsEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14live_telemetry14FoxgloveLogger14getStatsStringEv">
+<span id="_CPPv3NK14live_telemetry14FoxgloveLogger14getStatsStringEv"></span><span id="_CPPv2NK14live_telemetry14FoxgloveLogger14getStatsStringEv"></span><span id="live_telemetry::FoxgloveLogger::getStatsStringC"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a311e74f20e82a62f3733167493c6cf74"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStatsString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14live_telemetry14FoxgloveLogger14getStatsStringEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger19setImageScaleConfigERK16ImageScaleConfig">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger19setImageScaleConfigERK16ImageScaleConfig"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger19setImageScaleConfigERK16ImageScaleConfig"></span><span id="live_telemetry::FoxgloveLogger::setImageScaleConfig__ImageScaleConfigCR"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a518a0b76d990d6f3a993e3c9c2c1f335"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setImageScaleConfig</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structlive__telemetry_1_1ImageScaleConfig.html#_CPPv4N14live_telemetry16ImageScaleConfigE" title="live_telemetry::ImageScaleConfig"><span class="n"><span class="pre">ImageScaleConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger19setImageScaleConfigERK16ImageScaleConfig" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14live_telemetry14FoxgloveLogger19getImageScaleConfigEv">
+<span id="_CPPv3NK14live_telemetry14FoxgloveLogger19getImageScaleConfigEv"></span><span id="_CPPv2NK14live_telemetry14FoxgloveLogger19getImageScaleConfigEv"></span><span id="live_telemetry::FoxgloveLogger::getImageScaleConfigC"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a947eccc49cade04718ae38872526e55a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structlive__telemetry_1_1ImageScaleConfig.html#_CPPv4N14live_telemetry16ImageScaleConfigE" title="live_telemetry::ImageScaleConfig"><span class="n"><span class="pre">ImageScaleConfig</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getImageScaleConfig</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14live_telemetry14FoxgloveLogger19getImageScaleConfigEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger9getServerEv">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger9getServerEv"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger9getServerEv"></span><span id="live_telemetry::FoxgloveLogger::getServer"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a82601ba19e2759a8f4dad0fc108a107b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">foxglove</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">WebSocketServer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getServer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger9getServerEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger17publishPointCloudERKNSt6stringERKNSt6stringE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger17publishPointCloudERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger17publishPointCloudERKNSt6stringERKNSt6stringE"></span><span id="live_telemetry::FoxgloveLogger::publishPointCloud__ssCR.ssCR"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1af68dc43bbd542b81ff2f900ccf7e26b9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishPointCloud</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">serialized_proto</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger17publishPointCloudERKNSt6stringERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Publish a pre-serialized foxglove.PointCloud protobuf message. </p>
+<p>The channel is lazily created on the first call for each topic_name. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14FoxgloveLogger21publishGenericMessageERKNSt6stringERKNSt6stringERKNSt10shared_ptrIN6rclcpp17SerializedMessageEEE">
+<span id="_CPPv3N14live_telemetry14FoxgloveLogger21publishGenericMessageERKNSt6stringERKNSt6stringERKNSt10shared_ptrIN6rclcpp17SerializedMessageEEE"></span><span id="_CPPv2N14live_telemetry14FoxgloveLogger21publishGenericMessageERKNSt6stringERKNSt6stringERKNSt10shared_ptrIN6rclcpp17SerializedMessageEEE"></span><span id="live_telemetry::FoxgloveLogger::publishGenericMessage__ssCR.ssCR.std::shared_ptr:rclcpp::SerializedMessage:CR"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1ae1c672981a0274781d351cc5bf4f7e98"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishGenericMessage</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic_type</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SerializedMessage</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14FoxgloveLogger21publishGenericMessageERKNSt6stringERKNSt6stringERKNSt10shared_ptrIN6rclcpp17SerializedMessageEEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14live_telemetry14FoxgloveLogger10hasChannelERKNSt6stringE">
+<span id="_CPPv3NK14live_telemetry14FoxgloveLogger10hasChannelERKNSt6stringE"></span><span id="_CPPv2NK14live_telemetry14FoxgloveLogger10hasChannelERKNSt6stringE"></span><span id="live_telemetry::FoxgloveLogger::hasChannel__ssCRC"></span><span class="target" id="classlive__telemetry_1_1FoxgloveLogger_1a63993736125647097f704335d067019f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasChannel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic_name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14live_telemetry14FoxgloveLogger10hasChannelERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classlive__telemetry_1_1Downsampler.html" class="btn btn-neutral float-left" title="Template Class Downsampler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classlive__telemetry_1_1Gateway.html" class="btn btn-neutral float-right" title="Class Gateway" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;live_telemetry_node&gt; Contributors. License: MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

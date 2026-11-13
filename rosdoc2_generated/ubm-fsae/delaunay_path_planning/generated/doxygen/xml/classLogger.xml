@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classLogger" kind="class" language="C++" prot="public">
+    <compoundname>Logger</compoundname>
+    <includes local="no">Logger.hpp</includes>
+    <innerclass refid="structLogger_1_1Task" prot="public">Logger::Task</innerclass>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classLogger_1a941595de7c2e41708a69224c70f777a5" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool Logger::print_immediately</definition>
+        <argsstring></argsstring>
+        <name>print_immediately</name>
+        <briefdescription>
+<para>If true, logs and timings are printed immediately; otherwise, they are queued for the report. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="101" column="15" bodyfile="include/utils/Logger.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classLogger_1a4076e01d2dfc4379e774be2255044b05" prot="private" static="yes" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="structLogger_1_1Task" kindref="compound">Task</ref> &gt;</type>
+        <definition>std::map&lt;std::string, Task&gt; Logger::tasks_</definition>
+        <argsstring></argsstring>
+        <name>tasks_</name>
+        <briefdescription>
+<para>Map of all timed tasks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="104" column="19" bodyfile="include/utils/Logger.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogger_1af1336e971daad8ed609601c6b1d19f8b" prot="private" static="yes" mutable="no">
+        <type>std::queue&lt; std::string &gt;</type>
+        <definition>std::queue&lt;std::string&gt; Logger::info_msgs_</definition>
+        <argsstring></argsstring>
+        <name>info_msgs_</name>
+        <briefdescription>
+<para>Queue of info messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="105" column="21" bodyfile="include/utils/Logger.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogger_1a05050da89f83010ac362c9626fccacb1" prot="private" static="yes" mutable="no">
+        <type>std::queue&lt; std::string &gt;</type>
+        <definition>std::queue&lt;std::string&gt; Logger::warn_msgs_</definition>
+        <argsstring></argsstring>
+        <name>warn_msgs_</name>
+        <briefdescription>
+<para>Queue of warning messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="106" column="21" bodyfile="include/utils/Logger.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogger_1a62ec1c326e3441d59b4dbe705792e53d" prot="private" static="yes" mutable="no">
+        <type>rclcpp::Logger</type>
+        <definition>rclcpp::Logger Logger::logger_</definition>
+        <argsstring></argsstring>
+        <name>logger_</name>
+        <briefdescription>
+<para><ref refid="classLogger" kindref="compound">Logger</ref> used for RCLCPP macros. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="107" column="25" bodyfile="include/utils/Logger.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classLogger_1a11a2f2d8d400afa54a2e28228abee128" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Logger::set_logger</definition>
+        <argsstring>(const rclcpp::Logger &amp;logger)</argsstring>
+        <name>set_logger</name>
+        <param>
+          <type>const rclcpp::Logger &amp;</type>
+          <declname>logger</declname>
+        </param>
+        <briefdescription>
+<para>Set the logger to be used for RCLCPP macros. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rclcpp::Logger instance (e.g., from your node). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="66" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogger_1ab1b23d8725d6dc885f37b51004cf5ac0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Logger::tick</definition>
+        <argsstring>(const std::string &amp;clockName)</argsstring>
+        <name>tick</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>clockName</declname>
+        </param>
+        <briefdescription>
+<para>Start timing a named code section. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clockName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the code section/task. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="72" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogger_1a9af8973d84e5467f7fde7f364e84f972" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::chrono::duration&lt; double &gt;</type>
+        <definition>static std::chrono::duration&lt;double&gt; Logger::tock</definition>
+        <argsstring>(const std::string &amp;clockName)</argsstring>
+        <name>tock</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>clockName</declname>
+        </param>
+        <briefdescription>
+<para>Stop timing a named code section and optionally print the result. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clockName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the code section/task. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Duration of this run. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="79" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogger_1a15637c2ae9afb989e682d6e932fb2ce7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Logger::loginfo</definition>
+        <argsstring>(const std::string &amp;msg)</argsstring>
+        <name>loginfo</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Add an info message to the log queue or print immediately. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="85" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogger_1a45776c80184e6dac550236a70088d176" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Logger::logwarn</definition>
+        <argsstring>(const std::string &amp;msg)</argsstring>
+        <name>logwarn</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Add a warning message to the log queue or print immediately. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The warning message to log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="91" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogger_1ac8a14151c37386b1a8f554f730024aad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Logger::print_report</definition>
+        <argsstring>()</argsstring>
+        <name>print_report</name>
+        <briefdescription>
+<para>Print a formatted report of all timed tasks and queued log messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Logger.hpp" line="96" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Static utility class for time profiling and logging in ROS2. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides static methods to time code sections, collect and print log messages, and print a formatted report. Uses rclcpp logging macros and supports both immediate and deferred printing. </para>
+    </detaileddescription>
+    <location file="include/utils/Logger.hpp" line="28" column="13" bodyfile="include/utils/Logger.hpp" bodystart="28" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classLogger_1af1336e971daad8ed609601c6b1d19f8b" prot="private" virt="non-virtual"><scope>Logger</scope><name>info_msgs_</name></member>
+      <member refid="classLogger_1a62ec1c326e3441d59b4dbe705792e53d" prot="private" virt="non-virtual"><scope>Logger</scope><name>logger_</name></member>
+      <member refid="classLogger_1a15637c2ae9afb989e682d6e932fb2ce7" prot="public" virt="non-virtual"><scope>Logger</scope><name>loginfo</name></member>
+      <member refid="classLogger_1a45776c80184e6dac550236a70088d176" prot="public" virt="non-virtual"><scope>Logger</scope><name>logwarn</name></member>
+      <member refid="classLogger_1a941595de7c2e41708a69224c70f777a5" prot="public" virt="non-virtual"><scope>Logger</scope><name>print_immediately</name></member>
+      <member refid="classLogger_1ac8a14151c37386b1a8f554f730024aad" prot="public" virt="non-virtual"><scope>Logger</scope><name>print_report</name></member>
+      <member refid="classLogger_1a11a2f2d8d400afa54a2e28228abee128" prot="public" virt="non-virtual"><scope>Logger</scope><name>set_logger</name></member>
+      <member refid="classLogger_1a4076e01d2dfc4379e774be2255044b05" prot="private" virt="non-virtual"><scope>Logger</scope><name>tasks_</name></member>
+      <member refid="classLogger_1ab1b23d8725d6dc885f37b51004cf5ac0" prot="public" virt="non-virtual"><scope>Logger</scope><name>tick</name></member>
+      <member refid="classLogger_1a9af8973d84e5467f7fde7f364e84f972" prot="public" virt="non-virtual"><scope>Logger</scope><name>tock</name></member>
+      <member refid="classLogger_1a05050da89f83010ac362c9626fccacb1" prot="private" virt="non-virtual"><scope>Logger</scope><name>warn_msgs_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

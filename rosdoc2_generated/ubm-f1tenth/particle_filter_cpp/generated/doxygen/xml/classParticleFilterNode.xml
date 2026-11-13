@@ -1,0 +1,1065 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classParticleFilterNode" kind="class" language="C++" prot="public">
+    <compoundname>ParticleFilterNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classParticleFilterNode_1a5cc07b38867ec1858b016c4db40fed2d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ParticleFilterNode::initial_pose_obtained</definition>
+        <argsstring></argsstring>
+        <name>initial_pose_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="30" column="10" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1aa4871a5324eb6b416d1eca6e696ff457" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ParticleFilterNode::odom_obtained</definition>
+        <argsstring></argsstring>
+        <name>odom_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="31" column="10" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a0cae3bf5519b09b5900bde0212b83e77" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ParticleFilterNode::scan_obtained</definition>
+        <argsstring></argsstring>
+        <name>scan_obtained</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="32" column="10" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a8f598bc3209eb2a807a92ab730654c19" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFilterNode::disable_print_timeout_</definition>
+        <argsstring></argsstring>
+        <name>disable_print_timeout_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="34" column="9" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a934152197734f4b8ba1ba6b791ce7752" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::odom_x</definition>
+        <argsstring></argsstring>
+        <name>odom_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="36" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a426aa2cf8956e3f1008c72d4d1a3b7c0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::odom_y</definition>
+        <argsstring></argsstring>
+        <name>odom_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="37" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a0da00e02a8d4783d2eaa789f099c9faf" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::odom_yaw</definition>
+        <argsstring></argsstring>
+        <name>odom_yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="38" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1ac005b9c0b35629e171032d88c09d2c69" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::odom_speed</definition>
+        <argsstring></argsstring>
+        <name>odom_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="39" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1aa347b6dc8b710027b799ef57a0db1f61" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::last_odom_x</definition>
+        <argsstring></argsstring>
+        <name>last_odom_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="40" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a188cede669adb735df9762598988085a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::last_odom_y</definition>
+        <argsstring></argsstring>
+        <name>last_odom_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="41" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1ab2d934e9a52c1645cd294a792d6ba807" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::last_odom_yaw</definition>
+        <argsstring></argsstring>
+        <name>last_odom_yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="42" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a9e5401bb8de6c1482965f6e8975f2324" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat ParticleFilterNode::map</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="44" column="13" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a0666b68348da6151dc5a6b5214d8b792" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ParticleFilterNode::ray_cast_algo_</definition>
+        <argsstring></argsstring>
+        <name>ray_cast_algo_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="46" column="17" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a8c1e8cfdba1c1d5a45073edb98781e20" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ParticleFilterNode::use_pf_estimated_speed_</definition>
+        <argsstring></argsstring>
+        <name>use_pf_estimated_speed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="47" column="10" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a3bc26c57cdfe35bc80e760e1256d4676" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ParticleFilterNode::sensor_model_type_</definition>
+        <argsstring></argsstring>
+        <name>sensor_model_type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="50" column="17" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1aef808de06cb130ea787ae40c8dfa5aec" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ParticleFilterNode::sensor_model_eval_method_</definition>
+        <argsstring></argsstring>
+        <name>sensor_model_eval_method_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="51" column="17" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1af96286a76cde3379e6fff0e559fbe54c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ParticleFilterNode::add_gaussian_noise_to_odom_</definition>
+        <argsstring></argsstring>
+        <name>add_gaussian_noise_to_odom_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="52" column="10" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1aa929b2995407247b5f64bbdb4478f6c7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::considered_lidar_fov_deg_</definition>
+        <argsstring></argsstring>
+        <name>considered_lidar_fov_deg_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="54" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a8107bb4f57d54b83b924bd6a3907ab6e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::considered_lidar_fov_rad</definition>
+        <argsstring></argsstring>
+        <name>considered_lidar_fov_rad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="55" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a9389e2cc22caa5e237813a5d8fc135ab" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::lidar_fov_rad</definition>
+        <argsstring></argsstring>
+        <name>lidar_fov_rad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="56" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a266d69304f18ed8c49c288b7b20a0d9e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::angle_increment</definition>
+        <argsstring></argsstring>
+        <name>angle_increment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="57" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1aa640ca526b9a381fa59ac4c9b41d9eb1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFilterNode::ranges_start_index</definition>
+        <argsstring></argsstring>
+        <name>ranges_start_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="58" column="9" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a585570de204c42f5233f53b8ceacaf70" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFilterNode::ranges_end_index</definition>
+        <argsstring></argsstring>
+        <name>ranges_end_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="59" column="9" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a4618692b725ffbd3d990defd8c2206b5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::max_range_</definition>
+        <argsstring></argsstring>
+        <name>max_range_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="60" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a7f3817005cf66a522bc0051d88f56d16" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFilterNode::max_range_px</definition>
+        <argsstring></argsstring>
+        <name>max_range_px</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="61" column="9" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a6cf76ebfcc76d3808d187a3ff25ca920" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFilterNode::range_step_</definition>
+        <argsstring></argsstring>
+        <name>range_step_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="62" column="9" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a8e005e850638e87b9e71673ebcee662f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFilterNode::theta_discretization_</definition>
+        <argsstring></argsstring>
+        <name>theta_discretization_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="63" column="9" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1abd161f3060fb0c941032464da94eaac5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFilterNode::num_particles_</definition>
+        <argsstring></argsstring>
+        <name>num_particles_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="64" column="9" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1ad2dfc325b252ca1deb70f28c045907eb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleFilterNode::downsampled_num_ranges</definition>
+        <argsstring></argsstring>
+        <name>downsampled_num_ranges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="65" column="9" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a5bf0a88265f937e7d134305bb5ee1ff0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::ray_short_weight_</definition>
+        <argsstring></argsstring>
+        <name>ray_short_weight_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="66" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1ace97df3de24c3853a368be4913101c51" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::ray_max_weight_</definition>
+        <argsstring></argsstring>
+        <name>ray_max_weight_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="67" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a799e95ac5376b3cd3642055b27ff62ea" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::ray_rand_weight_</definition>
+        <argsstring></argsstring>
+        <name>ray_rand_weight_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="68" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a0b41dddc3f29348bf0c14c87048c8c7c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::ray_hit_weight_</definition>
+        <argsstring></argsstring>
+        <name>ray_hit_weight_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="69" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a79873fb4974af9b4cc33ec8e0f38c31e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::ray_hit_sigma_</definition>
+        <argsstring></argsstring>
+        <name>ray_hit_sigma_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="70" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1aba80a48bb4141e4906adfbefb4253814" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::initial_pose_stddev_x_</definition>
+        <argsstring></argsstring>
+        <name>initial_pose_stddev_x_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="71" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a879b1cbbab341a4e3ed65bb670f7321a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::initial_pose_stddev_y_</definition>
+        <argsstring></argsstring>
+        <name>initial_pose_stddev_y_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="72" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1ab1112a5a645332b3c9f1bf668cb1a873" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::initial_pose_stddev_theta_</definition>
+        <argsstring></argsstring>
+        <name>initial_pose_stddev_theta_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="73" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a81a1f659aef3230d1193703228b3ca7a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::motion_dispersion_stddev_x_</definition>
+        <argsstring></argsstring>
+        <name>motion_dispersion_stddev_x_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="74" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a84da9300d1b377ff4dc014bef0330944" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::motion_dispersion_stddev_y_</definition>
+        <argsstring></argsstring>
+        <name>motion_dispersion_stddev_y_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="75" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a1ed7590d3a68db8055aac577dcc15069" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::motion_dispersion_stddev_theta_</definition>
+        <argsstring></argsstring>
+        <name>motion_dispersion_stddev_theta_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="76" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1aa6cbdead65e5c2ada7b8355d1495e1cc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleFilterNode::squash_factor_</definition>
+        <argsstring></argsstring>
+        <name>squash_factor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="77" column="11" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a635dfccdbdbbf48cb99c140e55c1b1e8" prot="private" static="no" mutable="no">
+        <type>arma::Col&lt; float &gt;</type>
+        <definition>arma::Col&lt;float&gt; ParticleFilterNode::downsampled_ranges</definition>
+        <argsstring></argsstring>
+        <name>downsampled_ranges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="78" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a281704ad8f04a4c551ce6e8dfdc68bb1" prot="private" static="no" mutable="no">
+        <type>arma::Col&lt; float &gt;</type>
+        <definition>arma::Col&lt;float&gt; ParticleFilterNode::downsampled_angles</definition>
+        <argsstring></argsstring>
+        <name>downsampled_angles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="79" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a2cacbd9e1817fcc6cbc1651cdced4f08" prot="private" static="no" mutable="no">
+        <type>arma::Mat&lt; double &gt;</type>
+        <definition>arma::Mat&lt;double&gt; ParticleFilterNode::sensor_model</definition>
+        <argsstring></argsstring>
+        <name>sensor_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="80" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1abf7b77f32a924b6562745a356cbfbfdf" prot="private" static="no" mutable="no">
+        <type>arma::Mat&lt; float &gt;</type>
+        <definition>arma::Mat&lt;float&gt; ParticleFilterNode::particles</definition>
+        <argsstring></argsstring>
+        <name>particles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="81" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a57c2dcec1eb7ea0f4dda881fcd7aa2fc" prot="private" static="no" mutable="no">
+        <type>arma::Mat&lt; float &gt;</type>
+        <definition>arma::Mat&lt;float&gt; ParticleFilterNode::ranges</definition>
+        <argsstring></argsstring>
+        <name>ranges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="82" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a2449e27714ab7b7399db01544ebdb90e" prot="private" static="no" mutable="no">
+        <type>arma::Col&lt; double &gt;</type>
+        <definition>arma::Col&lt;double&gt; ParticleFilterNode::weights</definition>
+        <argsstring></argsstring>
+        <name>weights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="83" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1ab17869b2498c60fe68c7263b9e11b3d6" prot="private" static="no" mutable="no">
+        <type>arma::Col&lt; float &gt;</type>
+        <definition>arma::Col&lt;float&gt; ParticleFilterNode::inferred_pose</definition>
+        <argsstring></argsstring>
+        <name>inferred_pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="84" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a3b78527907c799efe421ca7f005c2488" prot="private" static="no" mutable="no">
+        <type>arma::Mat&lt; float &gt;</type>
+        <definition>arma::Mat&lt;float&gt; ParticleFilterNode::local_deltas</definition>
+        <argsstring></argsstring>
+        <name>local_deltas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="85" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a10d9a524703f31d6c3b53186e7373958" prot="private" static="no" mutable="no">
+        <type>arma::Row&lt; float &gt;</type>
+        <definition>arma::Row&lt;float&gt; ParticleFilterNode::local_deltas_sines</definition>
+        <argsstring></argsstring>
+        <name>local_deltas_sines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="86" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a8d2658a357169f89651c17e466b22d4c" prot="private" static="no" mutable="no">
+        <type>arma::Row&lt; float &gt;</type>
+        <definition>arma::Row&lt;float&gt; ParticleFilterNode::local_deltas_cosines</definition>
+        <argsstring></argsstring>
+        <name>local_deltas_cosines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="87" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1acfd46d55c7f872dc2da5678435c4e1b9" prot="private" static="no" mutable="no">
+        <type>arma::Row&lt; float &gt;</type>
+        <definition>arma::Row&lt;float&gt; ParticleFilterNode::local_deltas_noise_x</definition>
+        <argsstring></argsstring>
+        <name>local_deltas_noise_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="88" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a9e490a19f3cc6ac64210570cd7f0a598" prot="private" static="no" mutable="no">
+        <type>arma::Row&lt; float &gt;</type>
+        <definition>arma::Row&lt;float&gt; ParticleFilterNode::local_deltas_noise_y</definition>
+        <argsstring></argsstring>
+        <name>local_deltas_noise_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="89" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1ae421048f769b821cf5b54983fccbe79d" prot="private" static="no" mutable="no">
+        <type>arma::Row&lt; float &gt;</type>
+        <definition>arma::Row&lt;float&gt; ParticleFilterNode::local_deltas_noise_theta</definition>
+        <argsstring></argsstring>
+        <name>local_deltas_noise_theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="90" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a4dd6081d5d52dc60be08ffe125f2e1a4" prot="private" static="no" mutable="no">
+        <type>arma::Col&lt; double &gt;</type>
+        <definition>arma::Col&lt;double&gt; ParticleFilterNode::cdf</definition>
+        <argsstring></argsstring>
+        <name>cdf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="91" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a2c2914d09e57413bd754313803acd98e" prot="private" static="no" mutable="no">
+        <type>arma::Col&lt; double &gt;</type>
+        <definition>arma::Col&lt;double&gt; ParticleFilterNode::uniform_samples</definition>
+        <argsstring></argsstring>
+        <name>uniform_samples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="92" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a0c67badf2a7e541673f9bf41c60db2d6" prot="private" static="no" mutable="no">
+        <type>arma::Mat&lt; float &gt;</type>
+        <definition>arma::Mat&lt;float&gt; ParticleFilterNode::particles_tmp</definition>
+        <argsstring></argsstring>
+        <name>particles_tmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="93" column="15" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a5f2b75815f039b1e5ecc547b8e584252" prot="private" static="no" mutable="no">
+        <type>range_libc::RangeMethod *</type>
+        <definition>range_libc::RangeMethod* ParticleFilterNode::range_method</definition>
+        <argsstring></argsstring>
+        <name>range_method</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="95" column="29" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1af47f9af845a14e9d58b20512d83d1fae" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;nav_msgs::msg::Odometry&gt;::SharedPtr ParticleFilterNode::odom_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>odom_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="97" column="38" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a5c8ae4887a251a3dcbafd16f10ae5def" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; sensor_msgs::msg::LaserScan &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;sensor_msgs::msg::LaserScan&gt;::SharedPtr ParticleFilterNode::scan_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>scan_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="98" column="38" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a3cab34aeade2c52b213af8b075d76ad9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; geometry_msgs::msg::PoseWithCovarianceStamped &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;geometry_msgs::msg::PoseWithCovarianceStamped&gt;::SharedPtr ParticleFilterNode::rviz_pose_subscriber_</definition>
+        <argsstring></argsstring>
+        <name>rviz_pose_subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="99" column="38" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a3b7b4573cfc0e9328515e2c15fd117c4" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; geometry_msgs::msg::Pose &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;geometry_msgs::msg::Pose&gt;::SharedPtr ParticleFilterNode::pose_publisher_</definition>
+        <argsstring></argsstring>
+        <name>pose_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="101" column="35" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticleFilterNode_1a6f866fbaa5d9fcc777968ebae9e5b33e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; nav_msgs::msg::Odometry &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;nav_msgs::msg::Odometry&gt;::SharedPtr ParticleFilterNode::odom_publisher_</definition>
+        <argsstring></argsstring>
+        <name>odom_publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="102" column="35" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classParticleFilterNode_1a7c01c0d4ab2a3e34427ed1169a254e73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParticleFilterNode::ParticleFilterNode</definition>
+        <argsstring>()</argsstring>
+        <name>ParticleFilterNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classParticleFilterNode_1ab1d8033543f38cb76d734b88ab7f3e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParticleFilterNode::~ParticleFilterNode</definition>
+        <argsstring>()</argsstring>
+        <name>~ParticleFilterNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="27" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classParticleFilterNode_1a565d724a42805a9ffdf864e78f589078" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleFilterNode::odom_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr odom_msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>odom_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="104" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classParticleFilterNode_1afaa33062e0b52120759163103105dadb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleFilterNode::scan_callback</definition>
+        <argsstring>(const sensor_msgs::msg::LaserScan::SharedPtr scan_msg)</argsstring>
+        <name>scan_callback</name>
+        <param>
+          <type>const sensor_msgs::msg::LaserScan::SharedPtr</type>
+          <declname>scan_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="106" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classParticleFilterNode_1ad065d83496ed88294bab8d7689a92b9c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleFilterNode::rviz_pose_callback</definition>
+        <argsstring>(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr rviz_pose_msg)</argsstring>
+        <name>rviz_pose_callback</name>
+        <param>
+          <type>const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr</type>
+          <declname>rviz_pose_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="108" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classParticleFilterNode_1ab6abe88511fb79250a99bf7fc5e78fd7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>nav_msgs::msg::Odometry</type>
+        <definition>nav_msgs::msg::Odometry ParticleFilterNode::create_odom_msg</definition>
+        <argsstring>(const float &amp;x, const float &amp;y, const float &amp;theta, const float &amp;speed)</argsstring>
+        <name>create_odom_msg</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="110" column="29" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="110" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classParticleFilterNode_1a2f500d3e2fa0c958e4ec1829ac245c4b" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>geometry_msgs::msg::Pose</type>
+        <definition>geometry_msgs::msg::Pose ParticleFilterNode::create_pose_msg</definition>
+        <argsstring>(const float &amp;x, const float &amp;y, const float &amp;theta) const</argsstring>
+        <name>create_pose_msg</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="134" column="30" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="134" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ParticleFilterNode</label>
+        <link refid="classParticleFilterNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ParticleFilterNode</label>
+        <link refid="classParticleFilterNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/particle_filter_cpp/particle_filter_node.hpp" line="24" column="1" bodyfile="include/particle_filter_cpp/particle_filter_node.hpp" bodystart="23" bodyend="149"/>
+    <listofallmembers>
+      <member refid="classParticleFilterNode_1af96286a76cde3379e6fff0e559fbe54c" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>add_gaussian_noise_to_odom_</name></member>
+      <member refid="classParticleFilterNode_1a266d69304f18ed8c49c288b7b20a0d9e" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>angle_increment</name></member>
+      <member refid="classParticleFilterNode_1a4dd6081d5d52dc60be08ffe125f2e1a4" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>cdf</name></member>
+      <member refid="classParticleFilterNode_1aa929b2995407247b5f64bbdb4478f6c7" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>considered_lidar_fov_deg_</name></member>
+      <member refid="classParticleFilterNode_1a8107bb4f57d54b83b924bd6a3907ab6e" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>considered_lidar_fov_rad</name></member>
+      <member refid="classParticleFilterNode_1ab6abe88511fb79250a99bf7fc5e78fd7" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>create_odom_msg</name></member>
+      <member refid="classParticleFilterNode_1a2f500d3e2fa0c958e4ec1829ac245c4b" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>create_pose_msg</name></member>
+      <member refid="classParticleFilterNode_1a8f598bc3209eb2a807a92ab730654c19" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>disable_print_timeout_</name></member>
+      <member refid="classParticleFilterNode_1a281704ad8f04a4c551ce6e8dfdc68bb1" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>downsampled_angles</name></member>
+      <member refid="classParticleFilterNode_1ad2dfc325b252ca1deb70f28c045907eb" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>downsampled_num_ranges</name></member>
+      <member refid="classParticleFilterNode_1a635dfccdbdbbf48cb99c140e55c1b1e8" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>downsampled_ranges</name></member>
+      <member refid="classParticleFilterNode_1ab17869b2498c60fe68c7263b9e11b3d6" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>inferred_pose</name></member>
+      <member refid="classParticleFilterNode_1a5cc07b38867ec1858b016c4db40fed2d" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>initial_pose_obtained</name></member>
+      <member refid="classParticleFilterNode_1ab1112a5a645332b3c9f1bf668cb1a873" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>initial_pose_stddev_theta_</name></member>
+      <member refid="classParticleFilterNode_1aba80a48bb4141e4906adfbefb4253814" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>initial_pose_stddev_x_</name></member>
+      <member refid="classParticleFilterNode_1a879b1cbbab341a4e3ed65bb670f7321a" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>initial_pose_stddev_y_</name></member>
+      <member refid="classParticleFilterNode_1aa347b6dc8b710027b799ef57a0db1f61" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>last_odom_x</name></member>
+      <member refid="classParticleFilterNode_1a188cede669adb735df9762598988085a" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>last_odom_y</name></member>
+      <member refid="classParticleFilterNode_1ab2d934e9a52c1645cd294a792d6ba807" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>last_odom_yaw</name></member>
+      <member refid="classParticleFilterNode_1a9389e2cc22caa5e237813a5d8fc135ab" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>lidar_fov_rad</name></member>
+      <member refid="classParticleFilterNode_1a3b78527907c799efe421ca7f005c2488" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>local_deltas</name></member>
+      <member refid="classParticleFilterNode_1a8d2658a357169f89651c17e466b22d4c" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>local_deltas_cosines</name></member>
+      <member refid="classParticleFilterNode_1ae421048f769b821cf5b54983fccbe79d" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>local_deltas_noise_theta</name></member>
+      <member refid="classParticleFilterNode_1acfd46d55c7f872dc2da5678435c4e1b9" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>local_deltas_noise_x</name></member>
+      <member refid="classParticleFilterNode_1a9e490a19f3cc6ac64210570cd7f0a598" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>local_deltas_noise_y</name></member>
+      <member refid="classParticleFilterNode_1a10d9a524703f31d6c3b53186e7373958" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>local_deltas_sines</name></member>
+      <member refid="classParticleFilterNode_1a9e5401bb8de6c1482965f6e8975f2324" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>map</name></member>
+      <member refid="classParticleFilterNode_1a4618692b725ffbd3d990defd8c2206b5" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>max_range_</name></member>
+      <member refid="classParticleFilterNode_1a7f3817005cf66a522bc0051d88f56d16" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>max_range_px</name></member>
+      <member refid="classParticleFilterNode_1a1ed7590d3a68db8055aac577dcc15069" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>motion_dispersion_stddev_theta_</name></member>
+      <member refid="classParticleFilterNode_1a81a1f659aef3230d1193703228b3ca7a" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>motion_dispersion_stddev_x_</name></member>
+      <member refid="classParticleFilterNode_1a84da9300d1b377ff4dc014bef0330944" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>motion_dispersion_stddev_y_</name></member>
+      <member refid="classParticleFilterNode_1abd161f3060fb0c941032464da94eaac5" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>num_particles_</name></member>
+      <member refid="classParticleFilterNode_1a565d724a42805a9ffdf864e78f589078" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>odom_callback</name></member>
+      <member refid="classParticleFilterNode_1aa4871a5324eb6b416d1eca6e696ff457" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>odom_obtained</name></member>
+      <member refid="classParticleFilterNode_1a6f866fbaa5d9fcc777968ebae9e5b33e" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>odom_publisher_</name></member>
+      <member refid="classParticleFilterNode_1ac005b9c0b35629e171032d88c09d2c69" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>odom_speed</name></member>
+      <member refid="classParticleFilterNode_1af47f9af845a14e9d58b20512d83d1fae" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>odom_subscriber_</name></member>
+      <member refid="classParticleFilterNode_1a934152197734f4b8ba1ba6b791ce7752" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>odom_x</name></member>
+      <member refid="classParticleFilterNode_1a426aa2cf8956e3f1008c72d4d1a3b7c0" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>odom_y</name></member>
+      <member refid="classParticleFilterNode_1a0da00e02a8d4783d2eaa789f099c9faf" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>odom_yaw</name></member>
+      <member refid="classParticleFilterNode_1a7c01c0d4ab2a3e34427ed1169a254e73" prot="public" virt="non-virtual"><scope>ParticleFilterNode</scope><name>ParticleFilterNode</name></member>
+      <member refid="classParticleFilterNode_1abf7b77f32a924b6562745a356cbfbfdf" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>particles</name></member>
+      <member refid="classParticleFilterNode_1a0c67badf2a7e541673f9bf41c60db2d6" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>particles_tmp</name></member>
+      <member refid="classParticleFilterNode_1a3b7b4573cfc0e9328515e2c15fd117c4" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>pose_publisher_</name></member>
+      <member refid="classParticleFilterNode_1a5f2b75815f039b1e5ecc547b8e584252" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>range_method</name></member>
+      <member refid="classParticleFilterNode_1a6cf76ebfcc76d3808d187a3ff25ca920" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>range_step_</name></member>
+      <member refid="classParticleFilterNode_1a57c2dcec1eb7ea0f4dda881fcd7aa2fc" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>ranges</name></member>
+      <member refid="classParticleFilterNode_1a585570de204c42f5233f53b8ceacaf70" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>ranges_end_index</name></member>
+      <member refid="classParticleFilterNode_1aa640ca526b9a381fa59ac4c9b41d9eb1" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>ranges_start_index</name></member>
+      <member refid="classParticleFilterNode_1a0666b68348da6151dc5a6b5214d8b792" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>ray_cast_algo_</name></member>
+      <member refid="classParticleFilterNode_1a79873fb4974af9b4cc33ec8e0f38c31e" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>ray_hit_sigma_</name></member>
+      <member refid="classParticleFilterNode_1a0b41dddc3f29348bf0c14c87048c8c7c" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>ray_hit_weight_</name></member>
+      <member refid="classParticleFilterNode_1ace97df3de24c3853a368be4913101c51" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>ray_max_weight_</name></member>
+      <member refid="classParticleFilterNode_1a799e95ac5376b3cd3642055b27ff62ea" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>ray_rand_weight_</name></member>
+      <member refid="classParticleFilterNode_1a5bf0a88265f937e7d134305bb5ee1ff0" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>ray_short_weight_</name></member>
+      <member refid="classParticleFilterNode_1ad065d83496ed88294bab8d7689a92b9c" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>rviz_pose_callback</name></member>
+      <member refid="classParticleFilterNode_1a3cab34aeade2c52b213af8b075d76ad9" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>rviz_pose_subscriber_</name></member>
+      <member refid="classParticleFilterNode_1afaa33062e0b52120759163103105dadb" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>scan_callback</name></member>
+      <member refid="classParticleFilterNode_1a0cae3bf5519b09b5900bde0212b83e77" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>scan_obtained</name></member>
+      <member refid="classParticleFilterNode_1a5c8ae4887a251a3dcbafd16f10ae5def" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>scan_subscriber_</name></member>
+      <member refid="classParticleFilterNode_1a2cacbd9e1817fcc6cbc1651cdced4f08" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>sensor_model</name></member>
+      <member refid="classParticleFilterNode_1aef808de06cb130ea787ae40c8dfa5aec" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>sensor_model_eval_method_</name></member>
+      <member refid="classParticleFilterNode_1a3bc26c57cdfe35bc80e760e1256d4676" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>sensor_model_type_</name></member>
+      <member refid="classParticleFilterNode_1aa6cbdead65e5c2ada7b8355d1495e1cc" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>squash_factor_</name></member>
+      <member refid="classParticleFilterNode_1a8e005e850638e87b9e71673ebcee662f" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>theta_discretization_</name></member>
+      <member refid="classParticleFilterNode_1a2c2914d09e57413bd754313803acd98e" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>uniform_samples</name></member>
+      <member refid="classParticleFilterNode_1a8c1e8cfdba1c1d5a45073edb98781e20" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>use_pf_estimated_speed_</name></member>
+      <member refid="classParticleFilterNode_1a2449e27714ab7b7399db01544ebdb90e" prot="private" virt="non-virtual"><scope>ParticleFilterNode</scope><name>weights</name></member>
+      <member refid="classParticleFilterNode_1ab1d8033543f38cb76d734b88ab7f3e9e" prot="public" virt="non-virtual"><scope>ParticleFilterNode</scope><name>~ParticleFilterNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

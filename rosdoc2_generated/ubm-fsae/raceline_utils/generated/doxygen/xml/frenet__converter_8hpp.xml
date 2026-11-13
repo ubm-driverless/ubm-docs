@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="frenet__converter_8hpp" kind="file" language="C++">
+    <compoundname>frenet_converter.hpp</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">float.h</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="raceline__utils_8hpp" local="yes">include/raceline_utils.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>float.h</label>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>numeric</label>
+      </node>
+      <node id="7">
+        <label>tuple</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="1">
+        <label>include/frenet_converter.hpp</label>
+        <link refid="frenet__converter_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/raceline_utils.hpp</label>
+        <link refid="raceline__utils_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/frenet_converter.hpp</label>
+        <link refid="frenet__converter_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="frenet__converter_8hpp_1ae5812e69ea7ea1aa57e7f71627aa49cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float compute_distance_d</definition>
+        <argsstring>(const float &amp;x, const float &amp;y, const float &amp;x_r, const float &amp;y_r, const float &amp;heading_r)</argsstring>
+        <name>compute_distance_d</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x_r</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>y_r</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>heading_r</declname>
+        </param>
+        <briefdescription>
+<para>Computes the normal distance from a point (x, y) to a reference point (x_r, y_r) along a reference angle psi_r. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates the perpendicular distance from a given point to a reference line defined by a reference point and an angle. The distance is computed using the following formula:</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the reference point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y_r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the reference point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>heading_r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference angle in radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The normal distance from the point to the reference line. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_converter.hpp" line="32" column="14" bodyfile="include/frenet_converter.hpp" bodystart="32" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="frenet__converter_8hpp_1ab392555c3de5cd69fd233b66c324bae2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::tuple&lt; float, float &gt;</type>
+        <definition>std::tuple&lt;float, float&gt; frenet_to_cartesian</definition>
+        <argsstring>(const float &amp;distance_d, const float &amp;x_r, const float &amp;y_r, const float &amp;heading_r)</argsstring>
+        <name>frenet_to_cartesian</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>distance_d</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x_r</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>y_r</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>heading_r</declname>
+        </param>
+        <briefdescription>
+<para>Converts Frenet coordinates to Cartesian coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a distance along the normal to the reference path (Frenet coordinate) and converts it to Cartesian coordinates (x, y) based on the reference point (x_r, y_r) and the heading of the reference path (heading_r).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>distance_d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distance along the normal to the reference path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-coordinate of the reference point on the path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y_r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-coordinate of the reference point on the path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>heading_r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The heading angle of the reference path at the reference point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tuple containing the Cartesian coordinates (x, y). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_converter.hpp" line="58" column="19" bodyfile="include/frenet_converter.hpp" bodystart="58" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="frenet__converter_8hpp_1ae8ced3a5d6a176df90a0a0f6879b9fa1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int mod</definition>
+        <argsstring>(const int &amp;a, const int &amp;n)</argsstring>
+        <name>mod</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Computes the modulus of two integers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the remainder of the division of <computeroutput>a</computeroutput> by <computeroutput>n</computeroutput>. The result is always non-negative, even if <computeroutput>a</computeroutput> is negative.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dividend. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The divisor. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int The remainder of the division of <computeroutput>a</computeroutput> by <computeroutput>n</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/frenet_converter.hpp" line="79" column="12" bodyfile="include/frenet_converter.hpp" bodystart="79" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/frenet_converter.hpp"/>
+  </compounddef>
+</doxygen>

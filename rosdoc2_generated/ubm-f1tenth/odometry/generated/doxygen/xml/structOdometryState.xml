@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structOdometryState" kind="struct" language="C++" prot="public">
+    <compoundname>OdometryState</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structOdometryState_1a46a22d555d73f8f95c7595c506d239db" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryState::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>X position of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="20" column="12" bodyfile="include/odometry/odometry.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structOdometryState_1ab753d23b6e67e5adceccd444d3e68e2f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryState::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Y position of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="21" column="12" bodyfile="include/odometry/odometry.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structOdometryState_1add7b8bea2f13473dc71639f9b18b1028" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryState::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <briefdescription>
+<para>Heading angle (yaw) of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="22" column="12" bodyfile="include/odometry/odometry.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structOdometryState_1aead3bff5532a82a500497c0749f82adb" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryState::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+<para>Linear velocity of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="23" column="12" bodyfile="include/odometry/odometry.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structOdometryState_1a4b3019021dfc5c7e4f640b868a5d680c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double OdometryState::omega</definition>
+        <argsstring></argsstring>
+        <name>omega</name>
+        <briefdescription>
+<para>Angular velocity (yaw rate) of the vehicle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="24" column="12" bodyfile="include/odometry/odometry.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structOdometryState_1a2b3727078bb764670fdb6522d8ca9272" prot="public" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat OdometryState::P</definition>
+        <argsstring></argsstring>
+        <name>P</name>
+        <briefdescription>
+<para>Covariance matrix of the state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="25" column="15" bodyfile="include/odometry/odometry.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structOdometryState_1a308984c135dc60e8531812c14de4fafe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>OdometryState::OdometryState</definition>
+        <argsstring>(double x_0=0.0, double y_0=0.0, double theta_0=0.0, double v_0=0.0, double omega_0=0.0, const arma::mat p_0=arma::eye(5, 5))</argsstring>
+        <name>OdometryState</name>
+        <param>
+          <type>double</type>
+          <declname>x_0</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y_0</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta_0</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v_0</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>omega_0</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>const arma::mat</type>
+          <declname>p_0</declname>
+          <defval>arma::eye(5, 5)</defval>
+        </param>
+        <briefdescription>
+<para>Constructor to initialize the odometry state with optional covariance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x_0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial x position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y_0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial y position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta_0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial heading angle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial linear velocity. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>omega_0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial angular velocity. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial covariance matrix (default: identity). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/odometry/odometry.hpp" line="36" column="5" bodyfile="include/odometry/odometry.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/odometry/odometry.hpp" line="19" column="20" bodyfile="include/odometry/odometry.hpp" bodystart="19" bodyend="39"/>
+    <listofallmembers>
+      <member refid="structOdometryState_1a308984c135dc60e8531812c14de4fafe" prot="public" virt="non-virtual"><scope>OdometryState</scope><name>OdometryState</name></member>
+      <member refid="structOdometryState_1a4b3019021dfc5c7e4f640b868a5d680c" prot="public" virt="non-virtual"><scope>OdometryState</scope><name>omega</name></member>
+      <member refid="structOdometryState_1a2b3727078bb764670fdb6522d8ca9272" prot="public" virt="non-virtual"><scope>OdometryState</scope><name>P</name></member>
+      <member refid="structOdometryState_1add7b8bea2f13473dc71639f9b18b1028" prot="public" virt="non-virtual"><scope>OdometryState</scope><name>theta</name></member>
+      <member refid="structOdometryState_1aead3bff5532a82a500497c0749f82adb" prot="public" virt="non-virtual"><scope>OdometryState</scope><name>v</name></member>
+      <member refid="structOdometryState_1a46a22d555d73f8f95c7595c506d239db" prot="public" virt="non-virtual"><scope>OdometryState</scope><name>x</name></member>
+      <member refid="structOdometryState_1ab753d23b6e67e5adceccd444d3e68e2f" prot="public" virt="non-virtual"><scope>OdometryState</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

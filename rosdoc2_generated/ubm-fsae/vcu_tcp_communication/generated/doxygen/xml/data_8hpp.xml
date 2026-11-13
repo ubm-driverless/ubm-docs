@@ -1,0 +1,1185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="data_8hpp" kind="file" language="C++">
+    <compoundname>data.hpp</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">endian.h</includes>
+    <includes local="no">inttypes.h</includes>
+    <includedby refid="socket_8hpp" local="no">include/vcu_tcp_communication/socket.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>limits</label>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>endian.h</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>include/vcu_tcp_communication/data.hpp</label>
+        <link refid="data_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cstring</label>
+      </node>
+      <node id="8">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structVCUData" prot="public">VCUData</innerclass>
+    <innerclass refid="structASUData" prot="public">ASUData</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="data_8hpp_1a9d0fc963e216895a1ede27a8d5a26a20" prot="public" static="no" strong="yes">
+        <type>enum_t</type>
+        <name>VCUDataType</name>
+        <enumvalue id="data_8hpp_1a9d0fc963e216895a1ede27a8d5a26a20a8ac2e6a87304dbccf127f1a6df5fac10" prot="public">
+          <name>MISSION_T</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1a9d0fc963e216895a1ede27a8d5a26a20a16e1962cd4b0ae42d33f4a1715b06120" prot="public">
+          <name>ASS_T</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1a9d0fc963e216895a1ede27a8d5a26a20a448da12b427d4877f07b90ebf158cc2c" prot="public">
+          <name>VCU_SENSORS_T</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="138" column="23" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="138" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="enum" id="data_8hpp_1afeb30af9e8c2e9e480e9b632ec6f0f40" prot="public" static="no" strong="yes">
+        <type>enum_t</type>
+        <name>ASUDataType</name>
+        <enumvalue id="data_8hpp_1afeb30af9e8c2e9e480e9b632ec6f0f40a8ac2e6a87304dbccf127f1a6df5fac10" prot="public">
+          <name>MISSION_T</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1afeb30af9e8c2e9e480e9b632ec6f0f40a16e1962cd4b0ae42d33f4a1715b06120" prot="public">
+          <name>ASS_T</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1afeb30af9e8c2e9e480e9b632ec6f0f40a6e16655c081f19fa98003dddd6a640ba" prot="public">
+          <name>ASU_TARGETS_T</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="166" column="23" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="166" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="enum" id="data_8hpp_1af686af98019fe71e9f18190349618431" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Mission</name>
+        <enumvalue id="data_8hpp_1af686af98019fe71e9f18190349618431ada1654d85f683fabf2b5468b2ae0eb7a" prot="public">
+          <name>MANUAL_DRIVING</name>
+          <initializer>= (enum_t) 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1af686af98019fe71e9f18190349618431acc313c985549b695d777b0cd3d772555" prot="public">
+          <name>ACCELERATION</name>
+          <initializer>= (enum_t) 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1af686af98019fe71e9f18190349618431a6bc0810ff00cd4a385271784ee4c46eb" prot="public">
+          <name>SKIDPAD</name>
+          <initializer>= (enum_t) 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1af686af98019fe71e9f18190349618431a75101ac04ae702e4d933997b1d854388" prot="public">
+          <name>AUTOCROSS</name>
+          <initializer>= (enum_t) 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1af686af98019fe71e9f18190349618431acd54d652c407892c09d1c0394be11a18" prot="public">
+          <name>TRACKDRIVE</name>
+          <initializer>= (enum_t) 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1af686af98019fe71e9f18190349618431a600401a2aada0e65f36f57f235aa473d" prot="public">
+          <name>EBS_TEST</name>
+          <initializer>= (enum_t) 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1af686af98019fe71e9f18190349618431ace8b34ffaf92d0e32f8d3e9aae65831a" prot="public">
+          <name>INSPECTION</name>
+          <initializer>= (enum_t) 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="194" column="13" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="194" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="enum" id="data_8hpp_1aca2c100dd4dab4b11de301ce4e94b8c7" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ASS</name>
+        <enumvalue id="data_8hpp_1aca2c100dd4dab4b11de301ce4e94b8c7ad3dbca9ba6f2fba3a430d433f805610d" prot="public">
+          <name>AS_OFF</name>
+          <initializer>= (enum_t) 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1aca2c100dd4dab4b11de301ce4e94b8c7a12e6349519b7e8b6f7a741771d466d9a" prot="public">
+          <name>AS_READY</name>
+          <initializer>= (enum_t) 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1aca2c100dd4dab4b11de301ce4e94b8c7a00403438ec64b3dfe8863a2538f52b6e" prot="public">
+          <name>AS_DRIVING</name>
+          <initializer>= (enum_t) 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1aca2c100dd4dab4b11de301ce4e94b8c7a9ff7e39e50950a96c29d94801bb950f8" prot="public">
+          <name>AS_EMERGENCY</name>
+          <initializer>= (enum_t) 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="data_8hpp_1aca2c100dd4dab4b11de301ce4e94b8c7a8d6279a9386c6360f81abf51a5b805bf" prot="public">
+          <name>AS_FINISHED</name>
+          <initializer>= (enum_t) 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="236" column="9" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="236" bodyend="242"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="data_8hpp_1a22f279793847eba127de149437848c48" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>using counter_t =  uint32_t</definition>
+        <argsstring></argsstring>
+        <name>counter_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="18" column="1" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="data_8hpp_1a50e9dfcf6c3931a1863ae88c47540289" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>using enum_t =  uint8_t</definition>
+        <argsstring></argsstring>
+        <name>enum_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="19" column="1" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="data_8hpp_1a29c2a360eb9bd82013afc6fc93b2e981" prot="public" static="no">
+        <type>float</type>
+        <definition>using fp32_t =  float</definition>
+        <argsstring></argsstring>
+        <name>fp32_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="20" column="1" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="data_8hpp_1ab4e783a0cdbaff352febb74368c68b7c" prot="public" static="no">
+        <type>double</type>
+        <definition>using fp64_t =  double</definition>
+        <argsstring></argsstring>
+        <name>fp64_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="21" column="1" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="data_8hpp_1a002fced8e6f13ffed94f87dca5d06ba9" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int DATA_TYPE_SIZE</definition>
+        <argsstring></argsstring>
+        <name>DATA_TYPE_SIZE</name>
+        <initializer>= sizeof(enum_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="35" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a85a95aa8b9dbfad31e88b6fe5385df15" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int MISSION_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MISSION_SIZE</name>
+        <initializer>= sizeof(enum_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="36" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a7ca1615ca1e17c846fdc6fa27a415733" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int ASS_SIZE</definition>
+        <argsstring></argsstring>
+        <name>ASS_SIZE</name>
+        <initializer>= sizeof(enum_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="37" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a0ebc91cadf4181f99526554e5434b402" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int MISSION_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MISSION_HEADER_SIZE</name>
+        <initializer>= sizeof(counter_t) + DATA_TYPE_SIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="39" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1ac660b2312cdf2521d2104e47588f7d00" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int ASS_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>ASS_HEADER_SIZE</name>
+        <initializer>= MISSION_HEADER_SIZE + MISSION_SIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="40" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1ab5a4733f848dec763547b0b2bbaaa974" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>HEADER_SIZE</name>
+        <initializer>= ASS_HEADER_SIZE + ASS_SIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="41" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a8acff042230b1d92b24e9ce5b5e8c6e2" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int VCU_AS_ACTIVATION_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VCU_AS_ACTIVATION_HEADER_SIZE</name>
+        <initializer>= HEADER_SIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="44" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a4bb0ce64350c6cfc6ef1b49f886c5a04" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int VCU_THROTTLE_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VCU_THROTTLE_HEADER_SIZE</name>
+        <initializer>= VCU_AS_ACTIVATION_HEADER_SIZE + 2 * sizeof(uint8_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="45" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1aa345b3bbffc4ad1733d61d50183c949b" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int VCU_BRAKE_PRESSURE_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VCU_BRAKE_PRESSURE_HEADER_SIZE</name>
+        <initializer>= VCU_THROTTLE_HEADER_SIZE + 2 * sizeof(uint16_t) + sizeof(fp32_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="46" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1ae2f77302106f7d0ae842bb9102148918" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int VCU_PUMP_TEMP_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VCU_PUMP_TEMP_HEADER_SIZE</name>
+        <initializer>= VCU_BRAKE_PRESSURE_HEADER_SIZE + 2 * sizeof(fp32_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="47" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a17346ddf1e1317215fd727301aa5274f" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int VCU_IMU_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VCU_IMU_HEADER_SIZE</name>
+        <initializer>= VCU_PUMP_TEMP_HEADER_SIZE + 2 * sizeof(fp32_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="48" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a9d2d73e955844280e3e2a0fd4be33d63" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int VCU_GPS_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VCU_GPS_HEADER_SIZE</name>
+        <initializer>= VCU_IMU_HEADER_SIZE + 9 * sizeof(fp32_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="49" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a8c84f740a965e4a24f06bc6c8b0cbd6b" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int VCU_POWERTRAIN_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VCU_POWERTRAIN_HEADER_SIZE</name>
+        <initializer>= VCU_GPS_HEADER_SIZE + 6 * sizeof(fp32_t) + 2 * sizeof(fp64_t) +
+                                           sizeof(uint8_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="50" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1ad0156045ed3481e099a31e9829b0ae91" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int VCU_CPU_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VCU_CPU_HEADER_SIZE</name>
+        <initializer>= VCU_POWERTRAIN_HEADER_SIZE + sizeof(enum_t) + 6 * sizeof(fp32_t) +
+                                    4 * sizeof(int32_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="52" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a1697685c5b2605fe7f95bc03209fc708" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int VCU_KF_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VCU_KF_HEADER_SIZE</name>
+        <initializer>= VCU_CPU_HEADER_SIZE + 2 * sizeof(fp32_t) + sizeof(int64_t) + sizeof(uint64_t) +
+                                   2 * sizeof(uint16_t) + sizeof(uint32_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="54" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a3d392773ed189516c80615b4c37573a5" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int VCU_DATA_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VCU_DATA_SIZE</name>
+        <initializer>= VCU_KF_HEADER_SIZE + 2 * sizeof(fp32_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="57" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1abbc21c34edd7b78e838be8e1e640fd0c" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int ASU_READY_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>ASU_READY_HEADER_SIZE</name>
+        <initializer>= HEADER_SIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="60" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a40c67562faa9c2cf8d1f6be9171175b8" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int ASU_TARGETS_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>ASU_TARGETS_HEADER_SIZE</name>
+        <initializer>= ASU_READY_HEADER_SIZE + sizeof(uint8_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="61" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1a3483d0cc816b0bde8ce61dc3f18fae08" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int ASU_LAP_INFO_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>ASU_LAP_INFO_HEADER_SIZE</name>
+        <initializer>= ASU_TARGETS_HEADER_SIZE + 7 * sizeof(fp32_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="62" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="data_8hpp_1aa3123ccd65c9a11e194d7c75d935536c" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int ASU_DATA_SIZE</definition>
+        <argsstring></argsstring>
+        <name>ASU_DATA_SIZE</name>
+        <initializer>= ASU_LAP_INFO_HEADER_SIZE + 2 * sizeof(uint8_t) + sizeof(uint16_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="64" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="data_8hpp_1a17bb703dea01d3889dbb8cd90be7a573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void check_fp32_t</definition>
+        <argsstring>()</argsstring>
+        <name>check_fp32_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="23" column="6" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a85e5ffd10dc86142ba0e9596828e41a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void check_fp64_t</definition>
+        <argsstring>()</argsstring>
+        <name>check_fp64_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="28" column="6" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a556ce9d6386242c266f14dfb435b705b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_binary</definition>
+        <argsstring>(const char *array, size_t length)</argsstring>
+        <name>print_binary</name>
+        <param>
+          <type>const char *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="67" column="6" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="67" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a5abee632ad6a64d2909715b47a0aa4c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_byte_values</definition>
+        <argsstring>(char *array, size_t length)</argsstring>
+        <name>print_byte_values</name>
+        <param>
+          <type>char *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="77" column="6" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="77" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1ab4359521a94680ab2abd23c716d2c8da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t htobefp32</definition>
+        <argsstring>(fp32_t n)</argsstring>
+        <name>htobefp32</name>
+        <param>
+          <type>fp32_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="85" column="10" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="85" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a203d7025806e6ff306f1026c252aab85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>fp32_t</type>
+        <definition>fp32_t befp32toh</definition>
+        <argsstring>(uint32_t n)</argsstring>
+        <name>befp32toh</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="93" column="8" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="93" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a2137c13c87cb421eccbe26016eefe88e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>fp32_t</type>
+        <definition>fp32_t befp32toh</definition>
+        <argsstring>(char *n)</argsstring>
+        <name>befp32toh</name>
+        <param>
+          <type>char *</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="101" column="8" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="101" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a18c9241127860e3dec6c4e6c3c3a4cf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t htobefp64</definition>
+        <argsstring>(fp64_t n)</argsstring>
+        <name>htobefp64</name>
+        <param>
+          <type>fp64_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="111" column="10" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="111" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a02b0c0e813807643131b46dad2cacb27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>fp64_t</type>
+        <definition>fp64_t befp64toh</definition>
+        <argsstring>(uint64_t n)</argsstring>
+        <name>befp64toh</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="119" column="8" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="119" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a12dcd58e12097d706557da52bc80595d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>fp64_t</type>
+        <definition>fp64_t befp64toh</definition>
+        <argsstring>(char *n)</argsstring>
+        <name>befp64toh</name>
+        <param>
+          <type>char *</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="127" column="8" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="127" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a1fc3c48666f56c7b0209363cf6acd2f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>enum_t</type>
+        <definition>enum_t get_vcu_data_type_id</definition>
+        <argsstring>(VCUDataType vcu_data_type)</argsstring>
+        <name>get_vcu_data_type_id</name>
+        <param>
+          <type>VCUDataType</type>
+          <declname>vcu_data_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="144" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1af2552a605321e5884623262ba0730117" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>VCUDataType</type>
+        <definition>VCUDataType get_vcu_data_type</definition>
+        <argsstring>(enum_t vcu_data_type_id)</argsstring>
+        <name>get_vcu_data_type</name>
+        <param>
+          <type>enum_t</type>
+          <declname>vcu_data_type_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="148" column="20" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="148" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a1edb003166f76d698feba50b9eb87195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string get_vcu_data_type_name</definition>
+        <argsstring>(enum_t vcu_data_type)</argsstring>
+        <name>get_vcu_data_type_name</name>
+        <param>
+          <type>enum_t</type>
+          <declname>vcu_data_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="152" column="13" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="152" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a61e02f31eed98b548a783a227594b1a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>enum_t</type>
+        <definition>enum_t get_asu_data_type_id</definition>
+        <argsstring>(ASUDataType asu_data_type)</argsstring>
+        <name>get_asu_data_type_id</name>
+        <param>
+          <type>ASUDataType</type>
+          <declname>asu_data_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="172" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1aec17cf4c32bdc7eba6d7625f01cd4a3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ASUDataType</type>
+        <definition>ASUDataType get_asu_data_type</definition>
+        <argsstring>(enum_t asu_data_type_id)</argsstring>
+        <name>get_asu_data_type</name>
+        <param>
+          <type>enum_t</type>
+          <declname>asu_data_type_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="176" column="20" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1abdf5340f6680de818b7429013b3821e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string get_asu_data_type_name</definition>
+        <argsstring>(enum_t asu_data_type)</argsstring>
+        <name>get_asu_data_type_name</name>
+        <param>
+          <type>enum_t</type>
+          <declname>asu_data_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="180" column="13" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="180" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1aa0d3e987c30927da6af9b34bb47d3b97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>enum_t</type>
+        <definition>enum_t get_mission_id</definition>
+        <argsstring>(Mission mission)</argsstring>
+        <name>get_mission_id</name>
+        <param>
+          <type>Mission</type>
+          <declname>mission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="204" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="204" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1ae6ebc36ee75bc2bb8bf193af0787c277" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mission</type>
+        <definition>Mission get_mission</definition>
+        <argsstring>(enum_t mission_id)</argsstring>
+        <name>get_mission</name>
+        <param>
+          <type>enum_t</type>
+          <declname>mission_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="208" column="16" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="208" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a67d63fa0111eef835274d775bfdea440" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string get_mission_name</definition>
+        <argsstring>(enum_t mission)</argsstring>
+        <name>get_mission_name</name>
+        <param>
+          <type>enum_t</type>
+          <declname>mission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="212" column="13" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="212" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a0b2b3e7e513e968c776474135ceb2beb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>enum_t</type>
+        <definition>enum_t get_ass_id</definition>
+        <argsstring>(ASS ass)</argsstring>
+        <name>get_ass_id</name>
+        <param>
+          <type>ASS</type>
+          <declname>ass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="244" column="15" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="244" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a5cd5991ef362c1edf1079712cdbac78e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ASS</type>
+        <definition>ASS get_ass</definition>
+        <argsstring>(enum_t ass_id)</argsstring>
+        <name>get_ass</name>
+        <param>
+          <type>enum_t</type>
+          <declname>ass_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="248" column="12" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="248" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a97c4beeeb2b6f8eb0509479adf95ea4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string get_ass_name</definition>
+        <argsstring>(enum_t ass)</argsstring>
+        <name>get_ass_name</name>
+        <param>
+          <type>enum_t</type>
+          <declname>ass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="252" column="13" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="252" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1abb5a4c909b6e060a333be0c735bdbdb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pack_mission</definition>
+        <argsstring>(VCUData data, char *buffer)</argsstring>
+        <name>pack_mission</name>
+        <param>
+          <type><ref refid="structVCUData" kindref="compound">VCUData</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="439" column="6" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="439" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1aa7d388ea3bd4dc0cc90605e1f8f83792" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pack_ass</definition>
+        <argsstring>(VCUData data, char *buffer)</argsstring>
+        <name>pack_ass</name>
+        <param>
+          <type><ref refid="structVCUData" kindref="compound">VCUData</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="448" column="6" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="448" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a2840b156634d0b23ab67f49eaf2eaece" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pack_vcu_sensors</definition>
+        <argsstring>(VCUData data, char *buffer)</argsstring>
+        <name>pack_vcu_sensors</name>
+        <param>
+          <type><ref refid="structVCUData" kindref="compound">VCUData</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="457" column="6" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="457" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1abde348a8ab651d0cff873219314a9fa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void unpack_vcu_sensors</definition>
+        <argsstring>(void *buffer, VCUData &amp;data)</argsstring>
+        <name>unpack_vcu_sensors</name>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="structVCUData" kindref="compound">VCUData</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="541" column="6" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="541" bodyend="614"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1aee060e0f07beaba23ff1e4e88786f66e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVCUData" kindref="compound">VCUData</ref></type>
+        <definition>VCUData unpack_vcu_data</definition>
+        <argsstring>(void *buffer)</argsstring>
+        <name>unpack_vcu_data</name>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="616" column="9" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="616" bodyend="640"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a0a9a74cee40b405c07b22411b00181b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int check_counter</definition>
+        <argsstring>(counter_t current_counter, counter_t &amp;old_counter)</argsstring>
+        <name>check_counter</name>
+        <param>
+          <type>counter_t</type>
+          <declname>current_counter</declname>
+        </param>
+        <param>
+          <type>counter_t &amp;</type>
+          <declname>old_counter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="643" column="5" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="643" bodyend="662"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1ab815bcfb41fecd1fe23597d8d8e416d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int handle_multiple_packets</definition>
+        <argsstring>(void *buffer, int num_packets, int it, counter_t &amp;old_counter, std::vector&lt; VCUData &gt; &amp;enact_packets, VCUData &amp;last_sensors_packet)</argsstring>
+        <name>handle_multiple_packets</name>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_packets</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>counter_t &amp;</type>
+          <declname>old_counter</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structVCUData" kindref="compound">VCUData</ref> &gt; &amp;</type>
+          <declname>enact_packets</declname>
+        </param>
+        <param>
+          <type><ref refid="structVCUData" kindref="compound">VCUData</ref> &amp;</type>
+          <declname>last_sensors_packet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="667" column="5" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="667" bodyend="722"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a626fd17fe6c711c8dd1ba15cb5ad7d6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pack_asu_data</definition>
+        <argsstring>(ASUData data, char *buffer)</argsstring>
+        <name>pack_asu_data</name>
+        <param>
+          <type><ref refid="structASUData" kindref="compound">ASUData</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="789" column="6" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="789" bodyend="811"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1a8ef501285c64c49549c579701ce91ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pack_asu_data_little_endian</definition>
+        <argsstring>(ASUData data, char *buffer)</argsstring>
+        <name>pack_asu_data_little_endian</name>
+        <param>
+          <type><ref refid="structASUData" kindref="compound">ASUData</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="813" column="6" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="813" bodyend="834"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8hpp_1aff4acfbd01d6d98ba20da718d7fc7d62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structASUData" kindref="compound">ASUData</ref></type>
+        <definition>ASUData unpack_asu_data</definition>
+        <argsstring>(void *buffer)</argsstring>
+        <name>unpack_asu_data</name>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vcu_tcp_communication/data.hpp" line="836" column="9" bodyfile="include/vcu_tcp_communication/data.hpp" bodystart="836" bodyend="859"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/vcu_tcp_communication/data.hpp"/>
+  </compounddef>
+</doxygen>

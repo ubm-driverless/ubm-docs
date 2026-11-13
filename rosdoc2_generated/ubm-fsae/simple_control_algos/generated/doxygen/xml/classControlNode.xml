@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classControlNode" kind="class" language="C++" prot="public">
+    <compoundname>ControlNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>Mission</name>
+        <enumvalue id="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84aee49d439f92c07271c132560998b73e1" prot="private">
+          <name>ACCELERATION</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84abaf272b06d68165527e91888c294dd52" prot="private">
+          <name>SKIDPAD</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84a748105e3604329b8be29b48c8de915f7" prot="private">
+          <name>AUTOCROSS</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84a0ca25c5af22edc019d28afcf211c34dd" prot="private">
+          <name>TRACKDRIVE</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84a3805508c91ba0e8c66494b9fb9a96c4f" prot="private">
+          <name>EBS_TEST</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="57" column="23" bodyfile="include/control_node.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classControlNode_1a13495747bb83f8be0d4f9d652dafee61" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ControlNode::raceline_file</definition>
+        <argsstring></argsstring>
+        <name>raceline_file</name>
+        <briefdescription>
+<para>Path to the raceline CSV file for the active mission. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="45" column="17" bodyfile="include/control_node.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classControlNode_1a513023bca93058d958669de04cf222af" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1NodeConfig" kindref="compound">control_structs::NodeConfig</ref></type>
+        <definition>control_structs::NodeConfig ControlNode::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="47" column="36" bodyfile="include/control_node.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classControlNode_1aafd14713a442470d4ca845d2f0363f79" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1RosInterfaces" kindref="compound">control_structs::RosInterfaces</ref></type>
+        <definition>control_structs::RosInterfaces ControlNode::ros_</definition>
+        <argsstring></argsstring>
+        <name>ros_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="48" column="36" bodyfile="include/control_node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classControlNode_1a927b82b9a91fd83707ebe092ac054a04" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1ControlState" kindref="compound">control_structs::ControlState</ref></type>
+        <definition>control_structs::ControlState ControlNode::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="49" column="36" bodyfile="include/control_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classControlNode_1a3004c510bac460f255f2b5081e37aeab" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1PathFollowerParameters" kindref="compound">control_structs::PathFollowerParameters</ref></type>
+        <definition>control_structs::PathFollowerParameters ControlNode::pathf_</definition>
+        <argsstring></argsstring>
+        <name>pathf_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="50" column="45" bodyfile="include/control_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classControlNode_1a1fc5f856d1363bb9d65e0992d5e57c03" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1DummyControllerParameters" kindref="compound">control_structs::DummyControllerParameters</ref></type>
+        <definition>control_structs::DummyControllerParameters ControlNode::dummy_</definition>
+        <argsstring></argsstring>
+        <name>dummy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="51" column="48" bodyfile="include/control_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classControlNode_1af138c5a51c45d61ee405dc2504223da1" prot="private" static="no" mutable="no">
+        <type><ref refid="structcontrol__structs_1_1SpeedProfileParameters" kindref="compound">control_structs::SpeedProfileParameters</ref></type>
+        <definition>control_structs::SpeedProfileParameters ControlNode::speed_params_</definition>
+        <argsstring></argsstring>
+        <name>speed_params_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="52" column="45" bodyfile="include/control_node.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classControlNode_1a4a4bc2f5b0bcedf4c900972a5d4aa2b0" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classMissionController" kindref="compound">MissionController</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;MissionController&gt; ControlNode::controller</definition>
+        <argsstring></argsstring>
+        <name>controller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="55" column="21" bodyfile="include/control_node.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classControlNode_1aa4c4b748703206897d4fd7f06ec30f26" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ControlNode::mission_type_</definition>
+        <argsstring></argsstring>
+        <name>mission_type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="60" column="9" bodyfile="include/control_node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classControlNode_1a9c8c3aa26e9a5f20457f000fdcb6765a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ControlNode::ControlNode</definition>
+        <argsstring>()</argsstring>
+        <name>ControlNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="41" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classControlNode_1a346145f2ddf2f225e2e6ddcdbdafce17" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>rcl_interfaces::msg::SetParametersResult</type>
+        <definition>rcl_interfaces::msg::SetParametersResult ControlNode::params_callback</definition>
+        <argsstring>(const std::vector&lt; rclcpp::Parameter &gt; &amp;parameters)</argsstring>
+        <name>params_callback</name>
+        <param>
+          <type>const std::vector&lt; rclcpp::Parameter &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Callback for dynamic parameter updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="67" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlNode_1a30329e6bf5c2e6f61a6867993802bd97" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlNode::handle_service</definition>
+        <argsstring>(const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt; request, std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt; response)</argsstring>
+        <name>handle_service</name>
+        <param>
+          <type>const std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; ubm_interfaces::srv::IsReady::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+<para>Handle the readiness service request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the service request to check if the node is ready.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The service request. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The service response. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="77" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlNode_1a91bcb1f0a690d3fe04eb0232eda152c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlNode::odom_callback</definition>
+        <argsstring>(const nav_msgs::msg::Odometry::SharedPtr odom_msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>const nav_msgs::msg::Odometry::SharedPtr</type>
+          <declname>odom_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle odometry updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>odom_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odometry message containing the current speed and pose. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="84" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlNode_1a82374c66e3d65691ba62fd031f80e51f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlNode::start_control_callback</definition>
+        <argsstring>(const ubm_interfaces::msg::CustomBool::SharedPtr start_control_msg)</argsstring>
+        <name>start_control_callback</name>
+        <param>
+          <type>const ubm_interfaces::msg::CustomBool::SharedPtr</type>
+          <declname>start_control_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to start or stop the control loop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_control_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean message indicating whether to start or stop the control loop. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="91" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlNode_1aacd38d7d0ed3ff288f90ad7742165533" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlNode::reset_lap_statistics_callback</definition>
+        <argsstring>(const ubm_interfaces::msg::CustomBool::SharedPtr reset_msg)</argsstring>
+        <name>reset_lap_statistics_callback</name>
+        <param>
+          <type>const ubm_interfaces::msg::CustomBool::SharedPtr</type>
+          <declname>reset_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to reset lap statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message indicating whether to reset lap statistics. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="97" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlNode_1a38f13805ddb3d466a53603db32ea7af4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlNode::watchdog_callback</definition>
+        <argsstring>()</argsstring>
+        <name>watchdog_callback</name>
+        <briefdescription>
+<para>Watchdog callback to check if data has been received. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called periodically to check if data has been received. If no data is received for a certain period, it shuts down the node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="105" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlNode_1a38c9da34c099ef3876001bdc87f8a9ab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlNode::control_publisher_callback</definition>
+        <argsstring>()</argsstring>
+        <name>control_publisher_callback</name>
+        <briefdescription>
+<para>Publish drive commands This method publishes the drive commands to the drive topic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="111" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlNode_1abe63a1f11affd47b205418f479a1e317" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlNode::full_path_limits_callback</definition>
+        <argsstring>(const ubm_interfaces::msg::PathLimits::SharedPtr path_limits_msg)</argsstring>
+        <name>full_path_limits_callback</name>
+        <param>
+          <type>const ubm_interfaces::msg::PathLimits::SharedPtr</type>
+          <declname>path_limits_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle full path limits updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path_limits_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PathLimits message containing the full raceline points. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="118" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlNode_1a973879156ed6568043e6ea3a64ebc51b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlNode::partial_path_limits_callback</definition>
+        <argsstring>(const ubm_interfaces::msg::PathLimits::SharedPtr path_limits_msg)</argsstring>
+        <name>partial_path_limits_callback</name>
+        <param>
+          <type>const ubm_interfaces::msg::PathLimits::SharedPtr</type>
+          <declname>path_limits_msg</declname>
+        </param>
+        <briefdescription>
+<para>Callback to handle path limits updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path_limits_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PathLimits message containing the raceline points. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/control_node.hpp" line="125" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ControlNode</label>
+        <link refid="classControlNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ControlNode</label>
+        <link refid="classControlNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/control_node.hpp" line="40" column="1" bodyfile="include/control_node.hpp" bodystart="39" bodyend="127"/>
+    <listofallmembers>
+      <member refid="classControlNode_1a513023bca93058d958669de04cf222af" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>config_</name></member>
+      <member refid="classControlNode_1a38c9da34c099ef3876001bdc87f8a9ab" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>control_publisher_callback</name></member>
+      <member refid="classControlNode_1a4a4bc2f5b0bcedf4c900972a5d4aa2b0" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>controller</name></member>
+      <member refid="classControlNode_1a9c8c3aa26e9a5f20457f000fdcb6765a" prot="public" virt="non-virtual"><scope>ControlNode</scope><name>ControlNode</name></member>
+      <member refid="classControlNode_1a1fc5f856d1363bb9d65e0992d5e57c03" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>dummy_</name></member>
+      <member refid="classControlNode_1abe63a1f11affd47b205418f479a1e317" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>full_path_limits_callback</name></member>
+      <member refid="classControlNode_1a30329e6bf5c2e6f61a6867993802bd97" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>handle_service</name></member>
+      <member refid="classControlNode_1a7f940d14b4b61b9f81b1481e647cdc84" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>Mission</name></member>
+      <member refid="classControlNode_1aa4c4b748703206897d4fd7f06ec30f26" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>mission_type_</name></member>
+      <member refid="classControlNode_1a91bcb1f0a690d3fe04eb0232eda152c9" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>odom_callback</name></member>
+      <member refid="classControlNode_1a346145f2ddf2f225e2e6ddcdbdafce17" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>params_callback</name></member>
+      <member refid="classControlNode_1a973879156ed6568043e6ea3a64ebc51b" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>partial_path_limits_callback</name></member>
+      <member refid="classControlNode_1a3004c510bac460f255f2b5081e37aeab" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>pathf_</name></member>
+      <member refid="classControlNode_1a13495747bb83f8be0d4f9d652dafee61" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>raceline_file</name></member>
+      <member refid="classControlNode_1aacd38d7d0ed3ff288f90ad7742165533" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>reset_lap_statistics_callback</name></member>
+      <member refid="classControlNode_1aafd14713a442470d4ca845d2f0363f79" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>ros_</name></member>
+      <member refid="classControlNode_1af138c5a51c45d61ee405dc2504223da1" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>speed_params_</name></member>
+      <member refid="classControlNode_1a82374c66e3d65691ba62fd031f80e51f" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>start_control_callback</name></member>
+      <member refid="classControlNode_1a927b82b9a91fd83707ebe092ac054a04" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>state_</name></member>
+      <member refid="classControlNode_1a38f13805ddb3d466a53603db32ea7af4" prot="private" virt="non-virtual"><scope>ControlNode</scope><name>watchdog_callback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

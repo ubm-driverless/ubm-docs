@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="Logger_8hpp" kind="file" language="C++">
+    <compoundname>Logger.hpp</compoundname>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">map</includes>
+    <includes local="no">queue</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iomanip</includes>
+    <includedby refid="DelaunayTri_8hpp" local="yes">include/modules/DelaunayTri.hpp</includedby>
+    <includedby refid="WayComputer_8hpp" local="yes">include/modules/WayComputer.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>iomanip</label>
+      </node>
+      <node id="5">
+        <label>queue</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/utils/Logger.hpp</label>
+        <link refid="Logger_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>chrono</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/modules/WayComputer.hpp</label>
+        <link refid="WayComputer_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/utils/Logger.hpp</label>
+        <link refid="Logger_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/modules/DelaunayTri.hpp</label>
+        <link refid="DelaunayTri_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classLogger" prot="public">Logger</innerclass>
+    <innerclass refid="structLogger_1_1Task" prot="public">Logger::Task</innerclass>
+    <briefdescription>
+<para>Contains the <ref refid="classLogger" kindref="compound">Logger</ref> class specification for time profiling and logging in ROS2. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Oriol Gorriz (<ulink url="mailto:origovi2000@gmail.com">origovi2000@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>2.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2025-04-12</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2025 TUfast e.V. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/utils/Logger.hpp"/>
+  </compounddef>
+</doxygen>

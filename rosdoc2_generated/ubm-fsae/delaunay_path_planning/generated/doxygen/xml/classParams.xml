@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classParams" kind="class" language="C++" prot="public">
+    <compoundname>Params</compoundname>
+    <includes local="no">Params.hpp</includes>
+    <innerclass refid="structParams_1_1Main" prot="public">Params::Main</innerclass>
+    <innerclass refid="structParams_1_1Visualization" prot="public">Params::Visualization</innerclass>
+    <innerclass refid="structParams_1_1WayComputer" prot="public">Params::WayComputer</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classParams_1a763ca800e3911646c01d38894553ccab" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structParams_1_1Main" kindref="compound">Params::Main</ref></type>
+        <definition>struct Params::Main Params::main</definition>
+        <argsstring></argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Params.hpp" line="37" column="8"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParams_1a180b2e6be670c5f87a986aad939a6307" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structParams_1_1WayComputer" kindref="compound">Params::WayComputer</ref></type>
+        <definition>struct Params::WayComputer Params::wayComputer</definition>
+        <argsstring></argsstring>
+        <name>wayComputer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Params.hpp" line="59" column="15"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParams_1ab16ca4c74f1d715b06df61c0bcdedeae" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structParams_1_1Visualization" kindref="compound">Params::Visualization</ref></type>
+        <definition>struct Params::Visualization Params::visualization</definition>
+        <argsstring></argsstring>
+        <name>visualization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Params.hpp" line="66" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents all the parameters that the program needs divided into modules and structures. The class pretends to be a bridge between the .yaml and the program modules and structures. In ROS2, i parametri vengono assegnati dal nodo, non dal costruttore. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>Params::WayComputer::Trace</label>
+        <link refid="structParams_1_1WayComputer_1_1Trace"/>
+      </node>
+      <node id="1">
+        <label>Params</label>
+        <link refid="classParams"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>wayComputer</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>main</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>visualization</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Params::Main</label>
+        <link refid="structParams_1_1Main"/>
+      </node>
+      <node id="3">
+        <label>Params::WayComputer::Search</label>
+        <link refid="structParams_1_1WayComputer_1_1Search"/>
+      </node>
+      <node id="2">
+        <label>Params::WayComputer</label>
+        <link refid="structParams_1_1WayComputer"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>search</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>trace</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Params::Visualization</label>
+        <link refid="structParams_1_1Visualization"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/utils/Params.hpp" line="26" column="13" bodyfile="include/utils/Params.hpp" bodystart="26" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classParams_1a763ca800e3911646c01d38894553ccab" prot="public" virt="non-virtual"><scope>Params</scope><name>main</name></member>
+      <member refid="classParams_1ab16ca4c74f1d715b06df61c0bcdedeae" prot="public" virt="non-virtual"><scope>Params</scope><name>visualization</name></member>
+      <member refid="classParams_1a180b2e6be670c5f87a986aad939a6307" prot="public" virt="non-virtual"><scope>Params</scope><name>wayComputer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

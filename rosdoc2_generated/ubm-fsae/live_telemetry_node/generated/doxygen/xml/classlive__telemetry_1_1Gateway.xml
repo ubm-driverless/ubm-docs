@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlive__telemetry_1_1Gateway" kind="class" language="C++" prot="public">
+    <compoundname>live_telemetry::Gateway</compoundname>
+    <includes local="no">gateway.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1Gateway_1aed07ba6a2e49621dd0a5e91e72d40de1" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node *</type>
+        <definition>rclcpp::Node* live_telemetry::Gateway::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="74" column="18" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1Gateway_1a6aba23aa1186c36f54ed2be4d35407ea" prot="private" static="no" mutable="no">
+        <type><ref refid="structlive__telemetry_1_1GatewayConfig" kindref="compound">GatewayConfig</ref></type>
+        <definition>GatewayConfig live_telemetry::Gateway::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="75" column="19" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1Gateway_1aacceef6d1b29679e140505c4e956b48b" prot="private" static="no" mutable="no">
+        <type><ref refid="classlive__telemetry_1_1FoxgloveLogger" kindref="compound">FoxgloveLogger</ref> *</type>
+        <definition>FoxgloveLogger* live_telemetry::Gateway::logger_</definition>
+        <argsstring></argsstring>
+        <name>logger_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="76" column="20" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1Gateway_1af71ed72878e5df46534d74940b36907c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool live_telemetry::Gateway::verbose_</definition>
+        <argsstring></argsstring>
+        <name>verbose_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="77" column="10" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1Gateway_1a44435d820650506364292bd539e2d571" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; live_telemetry::Gateway::handled_topics_</definition>
+        <argsstring></argsstring>
+        <name>handled_topics_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="78" column="17" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1Gateway_1af1584145fee5ce672ab9a6477d882bb2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structlive__telemetry_1_1ExplicitTopicConfig" kindref="compound">ExplicitTopicConfig</ref> &gt;</type>
+        <definition>std::vector&lt;ExplicitTopicConfig&gt; live_telemetry::Gateway::explicit_topics_</definition>
+        <argsstring></argsstring>
+        <name>explicit_topics_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="79" column="17" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1Gateway_1a6fda3890aafae782c7f36840e9b8dbb9" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="structlive__telemetry_1_1TopicSubscription" kindref="compound">TopicSubscription</ref> &gt;</type>
+        <definition>std::map&lt;std::string, TopicSubscription&gt; live_telemetry::Gateway::subscriptions_</definition>
+        <argsstring></argsstring>
+        <name>subscriptions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="81" column="14" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1Gateway_1ac826e8c22d53610ce4c4c1e8c1024a57" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr live_telemetry::Gateway::discovery_timer_</definition>
+        <argsstring></argsstring>
+        <name>discovery_timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="82" column="34" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1Gateway_1a9f9d549445cc99196349858a6a6b8e22" prot="private" static="yes" mutable="no">
+        <type>const std::vector&lt; std::string &gt;</type>
+        <definition>const std::vector&lt;std::string&gt; live_telemetry::Gateway::SYSTEM_TOPICS</definition>
+        <argsstring></argsstring>
+        <name>SYSTEM_TOPICS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="84" column="30" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1a8fc535dce9a01827edc0c56cf0822591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>live_telemetry::Gateway::Gateway</definition>
+        <argsstring>(rclcpp::Node *node, const GatewayConfig &amp;config, FoxgloveLogger *logger, bool verbose, const std::vector&lt; std::string &gt; &amp;handled_topics={}, const std::vector&lt; ExplicitTopicConfig &gt; &amp;explicit_topics={})</argsstring>
+        <name>Gateway</name>
+        <param>
+          <type>rclcpp::Node *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1GatewayConfig" kindref="compound">GatewayConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="classlive__telemetry_1_1FoxgloveLogger" kindref="compound">FoxgloveLogger</ref> *</type>
+          <declname>logger</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>handled_topics</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="structlive__telemetry_1_1ExplicitTopicConfig" kindref="compound">ExplicitTopicConfig</ref> &gt; &amp;</type>
+          <declname>explicit_topics</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="53" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1a0434a1b7323b1d6cb20258011a3f1522" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::Gateway::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1a248e2494af2e79693a123d90a609a3fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::Gateway::discoverAndSubscribe</definition>
+        <argsstring>()</argsstring>
+        <name>discoverAndSubscribe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1a6a667e5aa9a81f2f692f40b7e7682325" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::Gateway::getSubscriptionCount</definition>
+        <argsstring>() const</argsstring>
+        <name>getSubscriptionCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="61" column="12" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1a49e9c3ce47d4e03d381619ffd035aac8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::Gateway::getExplicitTopicCount</definition>
+        <argsstring>() const</argsstring>
+        <name>getExplicitTopicCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="62" column="12" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1a1340c3ea983f1c6648d1b937b897bc23" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::Gateway::isBlacklisted</definition>
+        <argsstring>(const std::string &amp;topic_name) const</argsstring>
+        <name>isBlacklisted</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="65" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1acab5d09cf9c88282d72bb3fb2598d028" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::Gateway::isHandledByExplicitHandler</definition>
+        <argsstring>(const std::string &amp;topic_name) const</argsstring>
+        <name>isHandledByExplicitHandler</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1a5af3b5409b11cce6fb7a4653e7642770" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int live_telemetry::Gateway::getDownsampleRatio</definition>
+        <argsstring>(const std::string &amp;topic_name) const</argsstring>
+        <name>getDownsampleRatio</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="67" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1a4282cb81a811a4463470c2909bbf6553" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::Gateway::isSystemTopic</definition>
+        <argsstring>(const std::string &amp;topic_name) const</argsstring>
+        <name>isSystemTopic</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="68" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1a2e55318043578c82dff731745340d316" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::Gateway::isExplicitTopic</definition>
+        <argsstring>(const std::string &amp;topic_name) const</argsstring>
+        <name>isExplicitTopic</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="69" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1ade2375dd1c9bf5dc9c3acd7e05a5f9db" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int live_telemetry::Gateway::getExplicitDownsampleRatio</definition>
+        <argsstring>(const std::string &amp;topic_name) const</argsstring>
+        <name>getExplicitDownsampleRatio</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="70" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1Gateway_1a631b7a97120497223085736bb7e2f0d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::Gateway::onMessage</definition>
+        <argsstring>(const std::string &amp;topic_name, const std::string &amp;topic_type, std::shared_ptr&lt; rclcpp::SerializedMessage &gt; msg)</argsstring>
+        <name>onMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_type</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; rclcpp::SerializedMessage &gt;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/gateway.hpp" line="71" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Unified gateway for topic forwarding. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The gateway handles both:<orderedlist>
+<listitem><para>Explicit topics - configured with specific downsample ratios</para>
+</listitem><listitem><para>Auto-discovered topics - found via ROS graph introspection</para>
+</listitem></orderedlist>
+</para>
+<para>Message types are always auto-discovered, eliminating the need for manual type specification in config. </para>
+    </detaileddescription>
+    <location file="include/live_telemetry_node/gateway.hpp" line="51" column="1" bodyfile="include/live_telemetry_node/gateway.hpp" bodystart="50" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classlive__telemetry_1_1Gateway_1a6aba23aa1186c36f54ed2be4d35407ea" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>config_</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a248e2494af2e79693a123d90a609a3fd" prot="public" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>discoverAndSubscribe</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1ac826e8c22d53610ce4c4c1e8c1024a57" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>discovery_timer_</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1af1584145fee5ce672ab9a6477d882bb2" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>explicit_topics_</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a8fc535dce9a01827edc0c56cf0822591" prot="public" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>Gateway</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a5af3b5409b11cce6fb7a4653e7642770" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>getDownsampleRatio</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1ade2375dd1c9bf5dc9c3acd7e05a5f9db" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>getExplicitDownsampleRatio</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a49e9c3ce47d4e03d381619ffd035aac8" prot="public" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>getExplicitTopicCount</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a6a667e5aa9a81f2f692f40b7e7682325" prot="public" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>getSubscriptionCount</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a44435d820650506364292bd539e2d571" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>handled_topics_</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a1340c3ea983f1c6648d1b937b897bc23" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>isBlacklisted</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a2e55318043578c82dff731745340d316" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>isExplicitTopic</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1acab5d09cf9c88282d72bb3fb2598d028" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>isHandledByExplicitHandler</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a4282cb81a811a4463470c2909bbf6553" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>isSystemTopic</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1aacceef6d1b29679e140505c4e956b48b" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>logger_</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1aed07ba6a2e49621dd0a5e91e72d40de1" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>node_</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a631b7a97120497223085736bb7e2f0d6" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>onMessage</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a0434a1b7323b1d6cb20258011a3f1522" prot="public" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>start</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a6fda3890aafae782c7f36840e9b8dbb9" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>subscriptions_</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1a9f9d549445cc99196349858a6a6b8e22" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>SYSTEM_TOPICS</name></member>
+      <member refid="classlive__telemetry_1_1Gateway_1af71ed72878e5df46534d74940b36907c" prot="private" virt="non-virtual"><scope>live_telemetry::Gateway</scope><name>verbose_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

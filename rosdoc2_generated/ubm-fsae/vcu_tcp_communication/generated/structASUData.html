@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struct ASUData &mdash; vcu_tcp_communication 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct VCUData" href="structVCUData.html" />
+    <link rel="prev" title="C++ API" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            vcu_tcp_communication
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Struct ASUData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structVCUData.html">Struct VCUData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum_data_8hpp_1aca2c100dd4dab4b11de301ce4e94b8c7.html">Enum ASS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_data_8hpp_1afeb30af9e8c2e9e480e9b632ec6f0f40.html">Enum ASUDataType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_data_8hpp_1af686af98019fe71e9f18190349618431.html">Enum Mission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_data_8hpp_1a9d0fc963e216895a1ede27a8d5a26a20.html">Enum VCUDataType</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a203d7025806e6ff306f1026c252aab85.html">Function befp32toh(uint32_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a2137c13c87cb421eccbe26016eefe88e.html">Function befp32toh(char *)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a02b0c0e813807643131b46dad2cacb27.html">Function befp64toh(uint64_t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a12dcd58e12097d706557da52bc80595d.html">Function befp64toh(char *)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a0a9a74cee40b405c07b22411b00181b4.html">Function check_counter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a17bb703dea01d3889dbb8cd90be7a573.html">Function check_fp32_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a85e5ffd10dc86142ba0e9596828e41a9.html">Function check_fp64_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a5cd5991ef362c1edf1079712cdbac78e.html">Function get_ass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a0b2b3e7e513e968c776474135ceb2beb.html">Function get_ass_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a97c4beeeb2b6f8eb0509479adf95ea4d.html">Function get_ass_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1aec17cf4c32bdc7eba6d7625f01cd4a3b.html">Function get_asu_data_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a61e02f31eed98b548a783a227594b1a9.html">Function get_asu_data_type_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1abdf5340f6680de818b7429013b3821e0.html">Function get_asu_data_type_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_socket_8hpp_1a294867ba9d7ff47e39d421134d8e12ab.html">Function get_in_addr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_socket_8hpp_1a4754ca299b65a2ed77bc84d67b7cdad2.html">Function get_listener_socket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1ae6ebc36ee75bc2bb8bf193af0787c277.html">Function get_mission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1aa0d3e987c30927da6af9b34bb47d3b97.html">Function get_mission_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a67d63fa0111eef835274d775bfdea440.html">Function get_mission_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1af2552a605321e5884623262ba0730117.html">Function get_vcu_data_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a1fc3c48666f56c7b0209363cf6acd2f0.html">Function get_vcu_data_type_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a1edb003166f76d698feba50b9eb87195.html">Function get_vcu_data_type_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1ab815bcfb41fecd1fe23597d8d8e416d3.html">Function handle_multiple_packets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1ab4359521a94680ab2abd23c716d2c8da.html">Function htobefp32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a18c9241127860e3dec6c4e6c3c3a4cf9.html">Function htobefp64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_socket_8hpp_1a251dfa6b00da7da73210a3ebdc0af58a.html">Function mrecvall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1aa7d388ea3bd4dc0cc90605e1f8f83792.html">Function pack_ass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a626fd17fe6c711c8dd1ba15cb5ad7d6e.html">Function pack_asu_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a8ef501285c64c49549c579701ce91ee0.html">Function pack_asu_data_little_endian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1abb5a4c909b6e060a333be0c735bdbdb5.html">Function pack_mission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a2840b156634d0b23ab67f49eaf2eaece.html">Function pack_vcu_sensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a556ce9d6386242c266f14dfb435b705b.html">Function print_binary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1a5abee632ad6a64d2909715b47a0aa4c8.html">Function print_byte_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_socket_8hpp_1a6ba8e01dc6bc96324e22aa5d073977bf.html">Function receive_data_from_asu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_socket_8hpp_1a80b0d0cfd3fbf5ff0d3a38c2797eb108.html">Function receive_data_from_vcu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_socket_8hpp_1ab3e1c6fa3dad0543b8d453a563d90c0e.html">Function recvall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_socket_8hpp_1aa5cf7b2f0402743015383f01919c96b3.html">Function sendall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_socket_8hpp_1a44c7425dbcf78e8abef233c114626846.html">Function set_socket_scs_timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1aff4acfbd01d6d98ba20da718d7fc7d62.html">Function unpack_asu_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1aee060e0f07beaba23ff1e4e88786f66e.html">Function unpack_vcu_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_data_8hpp_1abde348a8ab651d0cff873219314a9fa8.html">Function unpack_vcu_sensors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1ac660b2312cdf2521d2104e47588f7d00.html">Variable ASS_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a7ca1615ca1e17c846fdc6fa27a415733.html">Variable ASS_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1aa3123ccd65c9a11e194d7c75d935536c.html">Variable ASU_DATA_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a3483d0cc816b0bde8ce61dc3f18fae08.html">Variable ASU_LAP_INFO_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1abbc21c34edd7b78e838be8e1e640fd0c.html">Variable ASU_READY_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a40c67562faa9c2cf8d1f6be9171175b8.html">Variable ASU_TARGETS_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a002fced8e6f13ffed94f87dca5d06ba9.html">Variable DATA_TYPE_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1ab5a4733f848dec763547b0b2bbaaa974.html">Variable HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a0ebc91cadf4181f99526554e5434b402.html">Variable MISSION_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a85a95aa8b9dbfad31e88b6fe5385df15.html">Variable MISSION_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a8acff042230b1d92b24e9ce5b5e8c6e2.html">Variable VCU_AS_ACTIVATION_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1aa345b3bbffc4ad1733d61d50183c949b.html">Variable VCU_BRAKE_PRESSURE_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1ad0156045ed3481e099a31e9829b0ae91.html">Variable VCU_CPU_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a3d392773ed189516c80615b4c37573a5.html">Variable VCU_DATA_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a9d2d73e955844280e3e2a0fd4be33d63.html">Variable VCU_GPS_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a17346ddf1e1317215fd727301aa5274f.html">Variable VCU_IMU_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a1697685c5b2605fe7f95bc03209fc708.html">Variable VCU_KF_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a8c84f740a965e4a24f06bc6c8b0cbd6b.html">Variable VCU_POWERTRAIN_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1ae2f77302106f7d0ae842bb9102148918.html">Variable VCU_PUMP_TEMP_HEADER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variable_data_8hpp_1a4bb0ce64350c6cfc6ef1b49f886c5a04.html">Variable VCU_THROTTLE_HEADER_SIZE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_data_8hpp_1a22f279793847eba127de149437848c48.html">Typedef counter_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_data_8hpp_1a50e9dfcf6c3931a1863ae88c47540289.html">Typedef enum_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_data_8hpp_1a29c2a360eb9bd82013afc6fc93b2e981.html">Typedef fp32_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_data_8hpp_1ab4e783a0cdbaff352febb74368c68b7c.html">Typedef fp64_t</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_vcu_tcp_communication.html">Directory vcu_tcp_communication</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vcu_tcp_communication_data.hpp.html">File data.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_vcu_tcp_communication_socket.hpp.html">File socket.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vcu_tcp_communication</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Struct ASUData</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/structASUData.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-asudata">
+<span id="exhale-struct-structasudata"></span><h1>Struct ASUData<a class="headerlink" href="#struct-asudata" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_vcu_tcp_communication_data.hpp.html#file-include-vcu-tcp-communication-data-hpp"><span class="std std-ref">File data.hpp</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv47ASUData">
+<span id="_CPPv37ASUData"></span><span id="_CPPv27ASUData"></span><span id="ASUData"></span><span class="target" id="structASUData"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ASUData</span></span></span><a class="headerlink" href="#_CPPv47ASUData" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData9to_stringEv">
+<span id="_CPPv3N7ASUData9to_stringEv"></span><span id="_CPPv2N7ASUData9to_stringEv"></span><span id="ASUData::to_string"></span><span class="target" id="structASUData_1a2a5506e634ac3d39093b4f10424da6d8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">to_string</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ASUData9to_stringEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData7counterE">
+<span id="_CPPv3N7ASUData7counterE"></span><span id="_CPPv2N7ASUData7counterE"></span><span id="ASUData::counter__counter_t"></span><span class="target" id="structASUData_1a4d193649cf2636798da076f3ac0060d3"></span><a class="reference internal" href="typedef_data_8hpp_1a22f279793847eba127de149437848c48.html#_CPPv49counter_t" title="counter_t"><span class="n"><span class="pre">counter_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">counter</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData7counterE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData13asu_data_typeE">
+<span id="_CPPv3N7ASUData13asu_data_typeE"></span><span id="_CPPv2N7ASUData13asu_data_typeE"></span><span id="ASUData::asu_data_type__enum_t"></span><span class="target" id="structASUData_1a8bc323e209ccfbfc4ce41bee10280f82"></span><a class="reference internal" href="typedef_data_8hpp_1a50e9dfcf6c3931a1863ae88c47540289.html#_CPPv46enum_t" title="enum_t"><span class="n"><span class="pre">enum_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">asu_data_type</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData13asu_data_typeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData7missionE">
+<span id="_CPPv3N7ASUData7missionE"></span><span id="_CPPv2N7ASUData7missionE"></span><span id="ASUData::mission__enum_t"></span><span class="target" id="structASUData_1ac30737f7659b39a1f6534d2a3d1cc99b"></span><a class="reference internal" href="typedef_data_8hpp_1a50e9dfcf6c3931a1863ae88c47540289.html#_CPPv46enum_t" title="enum_t"><span class="n"><span class="pre">enum_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mission</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData7missionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData3assE">
+<span id="_CPPv3N7ASUData3assE"></span><span id="_CPPv2N7ASUData3assE"></span><span id="ASUData::ass__enum_t"></span><span class="target" id="structASUData_1ac3d9997fd0b2e68857d65203315df785"></span><a class="reference internal" href="typedef_data_8hpp_1a50e9dfcf6c3931a1863ae88c47540289.html#_CPPv46enum_t" title="enum_t"><span class="n"><span class="pre">enum_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ass</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData3assE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData9asu_readyE">
+<span id="_CPPv3N7ASUData9asu_readyE"></span><span id="_CPPv2N7ASUData9asu_readyE"></span><span id="ASUData::asu_ready__uint8_t"></span><span class="target" id="structASUData_1a5286925570de350ddaa7a902c5629d22"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">asu_ready</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData9asu_readyE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData19torque_fl_target_nmE">
+<span id="_CPPv3N7ASUData19torque_fl_target_nmE"></span><span id="_CPPv2N7ASUData19torque_fl_target_nmE"></span><span id="ASUData::torque_fl_target_nm__fp32_t"></span><span class="target" id="structASUData_1a06b64b3096b19b0f87061b5b5553d306"></span><a class="reference internal" href="typedef_data_8hpp_1a29c2a360eb9bd82013afc6fc93b2e981.html#_CPPv46fp32_t" title="fp32_t"><span class="n"><span class="pre">fp32_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">torque_fl_target_nm</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData19torque_fl_target_nmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData19torque_fr_target_nmE">
+<span id="_CPPv3N7ASUData19torque_fr_target_nmE"></span><span id="_CPPv2N7ASUData19torque_fr_target_nmE"></span><span id="ASUData::torque_fr_target_nm__fp32_t"></span><span class="target" id="structASUData_1a0e228b88c8a0bb7198aeda806c7298a0"></span><a class="reference internal" href="typedef_data_8hpp_1a29c2a360eb9bd82013afc6fc93b2e981.html#_CPPv46fp32_t" title="fp32_t"><span class="n"><span class="pre">fp32_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">torque_fr_target_nm</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData19torque_fr_target_nmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData19torque_rr_target_nmE">
+<span id="_CPPv3N7ASUData19torque_rr_target_nmE"></span><span id="_CPPv2N7ASUData19torque_rr_target_nmE"></span><span id="ASUData::torque_rr_target_nm__fp32_t"></span><span class="target" id="structASUData_1a5d870eb53b54f586da30520d842539a2"></span><a class="reference internal" href="typedef_data_8hpp_1a29c2a360eb9bd82013afc6fc93b2e981.html#_CPPv46fp32_t" title="fp32_t"><span class="n"><span class="pre">fp32_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">torque_rr_target_nm</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData19torque_rr_target_nmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData19torque_rl_target_nmE">
+<span id="_CPPv3N7ASUData19torque_rl_target_nmE"></span><span id="_CPPv2N7ASUData19torque_rl_target_nmE"></span><span id="ASUData::torque_rl_target_nm__fp32_t"></span><span class="target" id="structASUData_1acb4ca2ba8a99fdfd30f205fd9f26273a"></span><a class="reference internal" href="typedef_data_8hpp_1a29c2a360eb9bd82013afc6fc93b2e981.html#_CPPv46fp32_t" title="fp32_t"><span class="n"><span class="pre">fp32_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">torque_rl_target_nm</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData19torque_rl_target_nmE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData16speed_target_mpsE">
+<span id="_CPPv3N7ASUData16speed_target_mpsE"></span><span id="_CPPv2N7ASUData16speed_target_mpsE"></span><span id="ASUData::speed_target_mps__fp32_t"></span><span class="target" id="structASUData_1a79707395ec45ca98481945fa1ec9e11e"></span><a class="reference internal" href="typedef_data_8hpp_1a29c2a360eb9bd82013afc6fc93b2e981.html#_CPPv46fp32_t" title="fp32_t"><span class="n"><span class="pre">fp32_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">speed_target_mps</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData16speed_target_mpsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData16brake_target_barE">
+<span id="_CPPv3N7ASUData16brake_target_barE"></span><span id="_CPPv2N7ASUData16brake_target_barE"></span><span id="ASUData::brake_target_bar__fp32_t"></span><span class="target" id="structASUData_1a479c89bb2791cb2d93a11892eb5d0e34"></span><a class="reference internal" href="typedef_data_8hpp_1a29c2a360eb9bd82013afc6fc93b2e981.html#_CPPv46fp32_t" title="fp32_t"><span class="n"><span class="pre">fp32_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">brake_target_bar</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData16brake_target_barE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData16steer_target_degE">
+<span id="_CPPv3N7ASUData16steer_target_degE"></span><span id="_CPPv2N7ASUData16steer_target_degE"></span><span id="ASUData::steer_target_deg__fp32_t"></span><span class="target" id="structASUData_1a06f9768917a8a414d97ccf951831ba91"></span><a class="reference internal" href="typedef_data_8hpp_1a29c2a360eb9bd82013afc6fc93b2e981.html#_CPPv46fp32_t" title="fp32_t"><span class="n"><span class="pre">fp32_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">steer_target_deg</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData16steer_target_degE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData11lap_counterE">
+<span id="_CPPv3N7ASUData11lap_counterE"></span><span id="_CPPv2N7ASUData11lap_counterE"></span><span id="ASUData::lap_counter__uint8_t"></span><span class="target" id="structASUData_1a440025a59e0e8a9c1d410d3c4aa6b097"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lap_counter</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData11lap_counterE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData18cones_count_actualE">
+<span id="_CPPv3N7ASUData18cones_count_actualE"></span><span id="_CPPv2N7ASUData18cones_count_actualE"></span><span id="ASUData::cones_count_actual__uint8_t"></span><span class="target" id="structASUData_1a57d537c4709a4e02d7efaaeefe301399"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cones_count_actual</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData18cones_count_actualE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7ASUData15cones_count_allE">
+<span id="_CPPv3N7ASUData15cones_count_allE"></span><span id="_CPPv2N7ASUData15cones_count_allE"></span><span id="ASUData::cones_count_all__uint16_t"></span><span class="target" id="structASUData_1a97cddf4bf3dd2178dfa2a38cc6cf058e"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cones_count_all</span></span></span><a class="headerlink" href="#_CPPv4N7ASUData15cones_count_allE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="C++ API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structVCUData.html" class="btn btn-neutral float-right" title="Struct VCUData" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;vcu_tcp_communication&gt; Contributors. License: MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
