@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="defines_8hpp" kind="file" language="C++">
+    <compoundname>defines.hpp</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">cxxabi.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">chrono</includes>
+    <includedby refid="videocapture_8hpp" local="yes">include/videocapture.hpp</includedby>
+    <includedby refid="sensorcapture_8hpp" local="yes">include/sensorcapture.hpp</includedby>
+    <includedby refid="sensorcapture__def_8hpp" local="yes">include/sensorcapture_def.hpp</includedby>
+    <includedby refid="videocapture__def_8hpp" local="yes">include/videocapture_def.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/defines.hpp</label>
+        <link refid="defines_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="5">
+        <label>cxxabi.h</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>chrono</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacesl__oc">sl_oc</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="defines_8hpp_1af824d9301fd86c3a85f918a25610aad8" prot="public" static="no">
+        <name>ZED_OC_MAJOR_VERSION</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/defines.hpp" line="46" column="9" bodyfile="include/defines.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8hpp_1a666c1d538268780b803dd4de7c70d80a" prot="public" static="no">
+        <name>ZED_OC_MINOR_VERSION</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/defines.hpp" line="47" column="9" bodyfile="include/defines.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8hpp_1a49bf1e31edc40b29eba0c870ca93a42c" prot="public" static="no">
+        <name>ZED_OC_PATCH_VERSION</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/defines.hpp" line="48" column="9" bodyfile="include/defines.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8hpp_1aaeb55e0334e074dfe62ea807a90286fb" prot="public" static="no">
+        <name>ZED_OC_VERSION_ATTRIBUTE</name>
+        <initializer>private: uint32_t mMajorVer = ZED_OC_MAJOR_VERSION, mMinorVer = ZED_OC_MINOR_VERSION, mPatchVer = ZED_OC_PATCH_VERSION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/defines.hpp" line="50" column="9" bodyfile="include/defines.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8hpp_1af5ffa89cacceb879f8932c2d50ea0509" prot="public" static="no">
+        <name>INFO_OUT</name>
+        <param><defname>lvl</defname></param>
+        <param><defname>msg</defname></param>
+        <initializer>{ int status_dem_0; if (lvl&gt;=3) std::cout &lt;&lt; &quot;[&quot; &lt;&lt; abi::__cxa_demangle(typeid(*this).name(), 0, 0, &amp;status_dem_0) &lt;&lt; &quot;] INFO: &quot; &lt;&lt; msg &lt;&lt; std::endl; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/defines.hpp" line="53" column="9" bodyfile="include/defines.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8hpp_1a76f51a2a59c23e0e3324b387a577a2b7" prot="public" static="no">
+        <name>WARNING_OUT</name>
+        <param><defname>lvl</defname></param>
+        <param><defname>msg</defname></param>
+        <initializer>{ int status_dem_0; if (lvl&gt;=2) std::cerr &lt;&lt; &quot;[&quot; &lt;&lt; abi::__cxa_demangle(typeid(*this).name(), 0, 0, &amp;status_dem_0) &lt;&lt; &quot;] WARNING: &quot; &lt;&lt; msg &lt;&lt; std::endl; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/defines.hpp" line="54" column="9" bodyfile="include/defines.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8hpp_1a5ad98a46012c95db8bd24ee139692d9a" prot="public" static="no">
+        <name>ERROR_OUT</name>
+        <param><defname>lvl</defname></param>
+        <param><defname>msg</defname></param>
+        <initializer>{ int status_dem_0; if (lvl&gt;=1) std::cerr &lt;&lt; &quot;[&quot; &lt;&lt; abi::__cxa_demangle(typeid(*this).name(), 0, 0, &amp;status_dem_0) &lt;&lt; &quot;] ERROR: &quot; &lt;&lt; msg &lt;&lt; std::endl; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/defines.hpp" line="55" column="9" bodyfile="include/defines.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="defines_8hpp_1a7655773641067c1b3945975cd79b4fdb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t getSteadyTimestamp</definition>
+        <argsstring>()</argsstring>
+        <name>getSteadyTimestamp</name>
+        <briefdescription>
+<para>Get the current system clock as steady clock, so with no jumps even if the system time changes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the current steady system clock in nanoseconds </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/defines.hpp" line="63" column="17" bodyfile="include/defines.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="defines_8hpp_1abaa6ff2bb60843da4683abd7710ded22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t getWallTimestamp</definition>
+        <argsstring>()</argsstring>
+        <name>getWallTimestamp</name>
+        <briefdescription>
+<para>Get the current system clock as wall clock (it can have jumps if the system clock is updated by a sync service) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the current wall system clock in nanoseconds </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/defines.hpp" line="69" column="17" bodyfile="include/defines.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/defines.hpp"/>
+  </compounddef>
+</doxygen>

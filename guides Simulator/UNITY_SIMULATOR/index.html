@@ -1,0 +1,3205 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ubm-driverless.github.io/ubm-docs/guides%20Simulator/UNITY_SIMULATOR/">
+      
+      
+        <link rel="prev" href="../NAVSIM_TRACKGEN_SIMULATOR/">
+      
+      
+        <link rel="next" href="../connections/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Unity Formula Student Driverless Simulator - UBM Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CSource+Code+Pro+:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Source Code Pro "}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unity-formula-student-driverless-simulator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="UBM Documentation" class="md-header__button md-logo" aria-label="UBM Documentation" data-md-component="logo">
+      
+  <img src="../../assets/UBM-Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UBM Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unity Formula Student Driverless Simulator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="red"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ubm-driverless" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ubm-driverless
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guides%20F1tenth/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guides F1tenth
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guides%20FSAE/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guides FSAE
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guides Simulator
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../repositories/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Repositories
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UBM Documentation" class="md-nav__button md-logo" aria-label="UBM Documentation" data-md-component="logo">
+      
+  <img src="../../assets/UBM-Logo.png" alt="logo">
+
+    </a>
+    UBM Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ubm-driverless" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ubm-driverless
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/DOCS_GENERATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/SETUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup of the "ubm-f1tenth" environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides F1tenth
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides F1tenth
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/ADD_DOCUMENTATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to Add Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/F1TENTH_HARDWARE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F1Tenth Hardware Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/FOXGLOVE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Foxglove
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/IMAGE_PARSER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to Use image_parser.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/INSTALL_CPP_DEPENDENCIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to install GEOS and nanoflann and FLANN for C++
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/JETSON_INFO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philly's Jetson Xavier NX info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/LINTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/MODEM_INTERNET_CONNECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to connect to router to the internet using USB tethering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/RACELINE_ENV/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raceline virtual environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/ROS_PACKAGE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide for creating a ROS2 package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/SETUP_CAR_FROM_SCRATCH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    From 0 to Working Car
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run real world car
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Run real world car
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/1_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/2_BRINGUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bringup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/3_MAPPING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/4_RACELINE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raceline &amp; Speed Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/5_RUN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/6_SHUTDOWN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shutdown
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/TROUBLESHOOTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides FSAE
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides FSAE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20FSAE/CONNECT_TO_ASU_OFF_CAR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connecting to the ASU Outside the Car
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20FSAE/DRIVERLESS_PROCEDURE_FSAE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Driverless Procedure for Formula Student
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20FSAE/GITHUB_WORKFLOW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Workflow for Github
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20FSAE/HARDWARE_FSAE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSAE Hardware Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20FSAE/USEFULL_COMMANDS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USEFULL COMMANDS IN SEVERAL OCCASION
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides Simulator
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides Simulator
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NAVSIM_TRACKGEN_SIMULATOR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NavSim TrackGen Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity Formula Student Driverless Simulator
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity Formula Student Driverless Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-simulator-fits-into-the-ros-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the simulator fits into the ROS pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-and-open-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download and open the project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-a-standalone-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start a standalone simulation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-ros-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect ROS 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connect ROS 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ros-tcp-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROS-TCP-Connector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros-and-rosbridge-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROS# and rosbridge fallback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-ros-odometry-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select ROS odometry control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#published-ros-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Published ROS interfaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launch-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launch menu
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Launch menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vehicle-and-display-lod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vehicle and display LOD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidar-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LiDAR sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-and-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track and environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-settings-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runtime Settings menu
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime Settings menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROS connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracks-and-map-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracks and map formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#driving-cone-impacts-and-run-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Driving, cone impacts, and run timing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cameras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cameras
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cameras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overhead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overhead
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orbit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free-roam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Free roam
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-and-mouse-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keyboard and mouse shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-and-diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance and diagnostics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-a-standalone-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build a standalone player
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity-cannot-connect-to-ros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity cannot connect to ROS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-vehicle-does-not-move-in-ros-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The vehicle does not move in ROS mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-custom-message-cannot-be-advertised" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A custom message cannot be advertised
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-project-opens-with-missing-vehicle-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The project opens with missing vehicle meshes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-rendering-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux rendering artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Connections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/UNITY_NAVSIM_ROS_TRANSPORTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity, NavSim, ROS 2 and Foxglove
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/UNITY_P5JS_ODOMETRY_TEST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test integrato Unity e p5.js TrackSim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/UNITY_P5JS_ODOMETRY_WINDOWS_UBUNTU_TEST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test odometria: NavSim su Ubuntu e Unity su Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connections/UNITY_ROS_TCP_VISUALIZATION_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity Windows ↔ ROS 2 Ubuntu: ROS-TCP e visualizzazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repositories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repositories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-simulator-fits-into-the-ros-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the simulator fits into the ROS pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-and-open-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download and open the project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-a-standalone-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start a standalone simulation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-ros-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect ROS 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connect ROS 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ros-tcp-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROS-TCP-Connector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros-and-rosbridge-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROS# and rosbridge fallback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-ros-odometry-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select ROS odometry control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#published-ros-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Published ROS interfaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launch-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launch menu
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Launch menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vehicle-and-display-lod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vehicle and display LOD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidar-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LiDAR sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-and-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track and environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-settings-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runtime Settings menu
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime Settings menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROS connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracks-and-map-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracks and map formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#driving-cone-impacts-and-run-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Driving, cone impacts, and run timing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cameras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cameras
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cameras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overhead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overhead
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orbit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free-roam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Free roam
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-and-mouse-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keyboard and mouse shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-and-diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance and diagnostics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-a-standalone-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build a standalone player
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity-cannot-connect-to-ros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity cannot connect to ROS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-vehicle-does-not-move-in-ros-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The vehicle does not move in ROS mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-custom-message-cannot-be-advertised" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A custom message cannot be advertised
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-project-opens-with-missing-vehicle-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The project opens with missing vehicle meshes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-rendering-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux rendering artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="unity-formula-student-driverless-simulator">Unity Formula Student Driverless Simulator</h1>
+<p>The UBM Formula Student Driverless Simulator is a Unity-based 3D front end for
+the <code>ubm-fsae</code> ROS 2 stack. It loads cone tracks, renders the Formula Student
+vehicle and environment, receives the vehicle pose from ROS, and publishes
+simulated LiDAR, stereo-camera, cone, and transform data.</p>
+<p>The simulator can also run without ROS. In standalone mode, the vehicle can be
+driven with a keyboard, gamepad, or joystick, which is useful for inspecting a
+track, validating sensor settings, and measuring simulator performance before
+connecting the complete pipeline.</p>
+<p>Typical uses include:</p>
+<ul>
+<li>visualizing the vehicle on Formula Student cone tracks;</li>
+<li>testing the perception pipeline with simulated point clouds and stereo
+  camera data;</li>
+<li>receiving localization output from <code>/ekf_pose/odom</code> and applying it to the
+  simulated vehicle;</li>
+<li>checking TF, sensor frames, topic names, rates, and payload sizes;</li>
+<li>evaluating different LiDAR sampling and stereo-camera configurations;</li>
+<li>reproducing tests with bundled TrackGen/NavSim maps;</li>
+<li>running manual driving sessions, cone-impact tests, and timed laps.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">UNITY_SIM_SCREENSHOT_01 — Simulator overview</p>
+<p>Replace this note with a screenshot of the running simulator showing the
+vehicle, track, cone counter, session timer, Settings button, and diagnostic
+HUD. Suggested file: <code>docs/assets/unity-simulator/runtime-overview.png</code>.</p>
+<p>Use: <code>![Unity simulator runtime overview](site:/assets/unity-simulator/runtime-overview.png)</code></p>
+</div>
+<h2 id="how-the-simulator-fits-into-the-ros-pipeline">How the simulator fits into the ROS pipeline</h2>
+<p>The Unity simulator supports two communication transports:</p>
+<ul>
+<li><strong>ROS-TCP-Connector</strong>, the default transport, using a ROS-TCP-Endpoint on the
+  ROS 2 computer;</li>
+<li><strong>ROS#</strong>, the fallback transport, using rosbridge over a WebSocket.</li>
+</ul>
+<p>Both transports expose the same simulator topics to the rest of the stack.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>                    odometry input
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ROS 2  ------------------------------------&gt;  Unity vehicle pose
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>       /ekf_pose/odom
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>ROS 2  &lt;------------------------------------  Unity simulated sensors
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>       /lidar_points, /camera_data, /cones, /tf
+</code></pre></div>
+<p>Unlike NavSim, the Unity simulator does not publish simulated odometry. In ROS
+odometry mode it subscribes to odometry and uses it to position the vehicle.
+It then produces sensor data from that pose and the 3D scene.</p>
+<p>The simulator does not currently calculate complete vehicle dynamics.
+Standalone movement is kinematic, and ROS mode follows received odometry. Cone
+collisions use lightweight Unity rigidbodies and are not a validated Formula
+Student impact model.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Unity Hub;</li>
+<li>Unity Editor <code>6000.6.0f1</code>;</li>
+<li>Git and Git LFS;</li>
+<li>network access while Unity resolves packages from Git;</li>
+<li>for ROS integration, an Ubuntu 24.04 system running ROS 2 Jazzy and a built
+  <code>ubm-fsae</code> workspace.</li>
+</ul>
+<p>The required Unity version is recorded in the project's
+<code>ProjectSettings/ProjectVersion.txt</code>. Do not downgrade the project to the old
+<code>6000.0.32f1</code> version. The current version is newer than the fixed Unity
+baseline for CVE-2025-59489.</p>
+<h2 id="download-and-open-the-project">Download and open the project</h2>
+<p>Install and initialize Git LFS before cloning. Vehicle FBX and Blender files
+are stored through LFS:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>lfs<span class="w"> </span>install
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ubm-driverless/ubm-fsae-sim.git
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">cd</span><span class="w"> </span>ubm-fsae-sim
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>git<span class="w"> </span>lfs<span class="w"> </span>pull
+</code></pre></div>
+<p>Avoid downloading the project as a GitHub source ZIP: depending on the archive
+configuration, large model files may be downloaded as small LFS pointer files
+instead of real assets.</p>
+<p>Open Unity Hub and:</p>
+<ol>
+<li>install Unity <code>6000.6.0f1</code> if it is not already available;</li>
+<li>select <strong>Add -&gt; Add project from disk</strong>;</li>
+<li>choose the cloned <code>ubm-fsae-sim</code> directory;</li>
+<li>open the project with Unity <code>6000.6.0f1</code>;</li>
+<li>wait for Unity Package Manager and asset import to finish;</li>
+<li>open <code>Assets/Scenes/MainMenu.unity</code>;</li>
+<li>enter Play mode.</li>
+</ol>
+<p>The project includes ROS-TCP-Connector, ROS#, URP, the Input System, and the
+other Unity packages in <code>Packages/manifest.json</code>. They are resolved when the
+project is opened for the first time.</p>
+<p>If an FBX or <code>.blend</code> file contains only text beginning with
+<code>version https://git-lfs.github.com/spec/v1</code>, close Unity and run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>lfs<span class="w"> </span>pull
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">UNITY_SIM_SCREENSHOT_02 — Unity project and Play button</p>
+<p>Replace this note with a screenshot of Unity showing the Project panel,
+<code>Assets/Scenes/MainMenu.unity</code>, and the Play button. Suggested file:
+<code>docs/assets/unity-simulator/unity-editor-start.png</code>.</p>
+<p>Use: <code>![Opening the Unity simulator project](site:/assets/unity-simulator/unity-editor-start.png)</code></p>
+</div>
+<h2 id="start-a-standalone-simulation">Start a standalone simulation</h2>
+<p>ROS is optional for a standalone session.</p>
+<ol>
+<li>Open <code>Assets/Scenes/MainMenu.unity</code> and enter Play mode.</li>
+<li>Select an <strong>Athena</strong> or <strong>Visione</strong> vehicle.</li>
+<li>Select the display LOD. LOD 1 is the recommended default.</li>
+<li>Select the number of LiDAR vertical layers and points per layer.</li>
+<li>Choose one of the bundled tracks.</li>
+<li>Choose the asphalt preset. Time-of-day options are currently saved
+   placeholders and do not yet provide a complete environment change.</li>
+<li>Click <strong>Start Simulation</strong>.</li>
+<li>Press <code>Esc</code>, open <strong>Controls</strong>, and select <strong>Standalone input</strong>.</li>
+<li>Drive with <code>W/A/S/D</code> or the arrow keys.</li>
+</ol>
+<p>Standalone input uses simplified kinematic movement. It is intended for
+simulator interaction and sensor testing, not vehicle-dynamics validation.</p>
+<h2 id="connect-ros-2">Connect ROS 2</h2>
+<p>The transport is selected from <strong>Settings -&gt; ROS connection</strong> after the
+simulation starts.</p>
+<h3 id="ros-tcp-connector">ROS-TCP-Connector</h3>
+<p>ROS-TCP-Connector is the default transport. On the ROS 2 computer:</p>
+<ol>
+<li>install ROS-TCP-Endpoint in the same workspace as <code>ubm_interfaces</code>;</li>
+<li>build the workspace;</li>
+<li>source ROS 2 and the workspace;</li>
+<li>start ROS-TCP-Endpoint on a network interface reachable from the computer
+   running Unity, using port <code>10000</code> by default.</li>
+</ol>
+<p>Follow the ROS 2 setup instructions in the official
+<a href="https://github.com/Unity-Technologies/ROS-TCP-Endpoint">ROS-TCP-Endpoint repository</a>
+for the exact installation and launch commands supported by the installed
+version.</p>
+<p>In Unity:</p>
+<ol>
+<li>press <code>Esc</code>;</li>
+<li>open <strong>ROS connection</strong>;</li>
+<li>select <strong>ROS-TCP-Connector</strong>;</li>
+<li>set <strong>ROS-TCP host/IP</strong> to the ROS computer's address;</li>
+<li>keep port <code>10000</code> unless the endpoint uses another port;</li>
+<li>click <strong>Retry connection</strong>;</li>
+<li>check the connection status at the top of the page.</li>
+</ol>
+<p><code>127.0.0.1</code> works only when Unity and ROS-TCP-Endpoint share the same host
+network. When Unity runs on Windows and ROS runs on another Ubuntu computer,
+enter the Ubuntu computer's LAN address.</p>
+<h3 id="ros-and-rosbridge-fallback">ROS# and rosbridge fallback</h3>
+<p>ROS# communicates through rosbridge. In a terminal where ROS 2 and the built
+<code>ubm-fsae</code> workspace are sourced, start rosbridge:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">source</span><span class="w"> </span>/opt/ros/jazzy/setup.bash
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>/path/to/your/ubm-fsae-workspace
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">source</span><span class="w"> </span>install/setup.bash
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>ros2<span class="w"> </span>launch<span class="w"> </span>rosbridge_server<span class="w"> </span>rosbridge_websocket_launch.xml<span class="w"> </span>port:<span class="o">=</span><span class="m">9090</span>
+</code></pre></div>
+<p>In Unity:</p>
+<ol>
+<li>open <strong>Settings -&gt; ROS connection</strong>;</li>
+<li>select <strong>ROS# fallback</strong>;</li>
+<li>set the rosbridge URL, for example <code>ws://localhost:9090</code> or
+   <code>ws://&lt;ROS_HOST_IP&gt;:9090</code>;</li>
+<li>click <strong>Retry connection</strong>.</li>
+</ol>
+<p>The workspace containing <code>ubm_interfaces</code> must be sourced before starting
+rosbridge; otherwise the bridge cannot advertise the custom camera message.</p>
+<div class="admonition note">
+<p class="admonition-title">UNITY_SIM_SCREENSHOT_03 — ROS connection page</p>
+<p>Replace this note with screenshots of the ROS-TCP and ROS# transport
+selections, including endpoint fields and connected status. Suggested
+file: <code>docs/assets/unity-simulator/ros-connection.png</code>.</p>
+<p>Use: <code>![Unity simulator ROS connection settings](site:/assets/unity-simulator/ros-connection.png)</code></p>
+</div>
+<h3 id="select-ros-odometry-control">Select ROS odometry control</h3>
+<p>Connecting a transport does not automatically change the vehicle input mode.
+Open <strong>Settings -&gt; Controls</strong> and select <strong>ROS odometry</strong>. The default input is:</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/ekf_pose/odom</code></td>
+<td><code>nav_msgs/msg/Odometry</code></td>
+<td>UBM FSAE vehicle pose</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>ROS connection</strong> page provides two shortcuts:</p>
+<ul>
+<li><strong>UBM FSAE topic</strong> selects <code>/ekf_pose/odom</code>;</li>
+<li><strong>Legacy sim topic</strong> selects <code>/command_odom</code>.</li>
+</ul>
+<p>Verify the selected input on the ROS system:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ros2<span class="w"> </span>topic<span class="w"> </span>info<span class="w"> </span>/ekf_pose/odom
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/ekf_pose/odom<span class="w"> </span>--once
+</code></pre></div>
+<h2 id="published-ros-interfaces">Published ROS interfaces</h2>
+<p>Defaults are loaded from <code>Assets/StreamingAssets/default_settings.json</code> and can
+be changed at runtime.</p>
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Default topic</th>
+<th>Message</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subscribe</td>
+<td><code>/ekf_pose/odom</code></td>
+<td><code>nav_msgs/msg/Odometry</code></td>
+<td>Vehicle position and orientation</td>
+</tr>
+<tr>
+<td>Publish</td>
+<td><code>/lidar_points</code></td>
+<td><code>sensor_msgs/msg/PointCloud2</code></td>
+<td>Simulated LiDAR point cloud</td>
+</tr>
+<tr>
+<td>Publish</td>
+<td><code>/cones</code></td>
+<td><code>visualization_msgs/msg/MarkerArray</code></td>
+<td>Visible/noisy/missing cone simulation</td>
+</tr>
+<tr>
+<td>Publish</td>
+<td><code>/camera_data</code></td>
+<td><code>ubm_interfaces/msg/CameraData</code></td>
+<td>Left/right images and camera information</td>
+</tr>
+<tr>
+<td>Publish</td>
+<td><code>/tf</code></td>
+<td><code>tf2_msgs/msg/TFMessage</code></td>
+<td>Vehicle and sensor transforms</td>
+</tr>
+</tbody>
+</table>
+<p>The point cloud is normally published in the <code>hesai_lidar</code> frame. Vehicle and
+sensor frame names can be edited from <strong>ROS connection -&gt; Frames</strong>.</p>
+<p>Useful checks include:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ros2<span class="w"> </span>topic<span class="w"> </span>hz<span class="w"> </span>/lidar_points
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ros2<span class="w"> </span>topic<span class="w"> </span>hz<span class="w"> </span>/camera_data
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/tf<span class="w"> </span>--once
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/cones<span class="w"> </span>--once
+</code></pre></div>
+<p>The optional <code>DriveSubscriber</code> understands <code>ubm_interfaces/msg/Control</code> on
+<code>/control</code>, but it is currently diagnostic. Vehicle movement in ROS mode still
+follows odometry.</p>
+<h2 id="launch-menu">Launch menu</h2>
+<p>The launch menu configures the session before the simulation scene is loaded.</p>
+<h3 id="vehicle-and-display-lod">Vehicle and display LOD</h3>
+<ul>
+<li><strong>Athena</strong> and <strong>Visione</strong> select the vehicle model and matching sensor
+  arrangement.</li>
+<li><strong>LOD 0 High</strong> uses the most detailed display mesh.</li>
+<li><strong>LOD 1 Medium</strong> is the default and recommended general-purpose choice.</li>
+<li><strong>LOD 2 Low</strong> reduces rendering cost on slower computers.</li>
+</ul>
+<p>The collision mesh remains separate from the selected visual LOD.</p>
+<h3 id="lidar-sampling">LiDAR sampling</h3>
+<ul>
+<li><strong>Vertical layers</strong> controls the number of simulated scan layers.</li>
+<li><strong>Points per layer</strong> controls horizontal sampling.</li>
+<li>The summary displays the total points generated per scan.</li>
+</ul>
+<p>Dense scans increase CPU work, message size, serialization cost, and network
+traffic. Start with a smaller configuration when testing on a low-spec laptop.</p>
+<h3 id="track-and-environment">Track and environment</h3>
+<p>The track selector shows a top-down preview, cone counts, dimensions, format,
+and start position. Bundled JSON and CSV maps are read from
+<code>Assets/StreamingAssets/</code>.</p>
+<p>The environment section selects an asphalt material. Time-of-day selections
+are stored for future use but are currently placeholders.</p>
+<div class="admonition note">
+<p class="admonition-title">UNITY_SIM_SCREENSHOT_04 — Launch menu</p>
+<p>Replace this note with a screenshot of the complete launch menu, including
+vehicle, LOD, LiDAR sampling, track preview, and environment settings.
+Suggested file: <code>docs/assets/unity-simulator/launch-menu.png</code>.</p>
+<p>Use: <code>![Unity simulator launch menu](site:/assets/unity-simulator/launch-menu.png)</code></p>
+</div>
+<h2 id="runtime-settings-menu">Runtime Settings menu</h2>
+<p>Press <code>Esc</code> or click <strong>Settings</strong> to open the runtime panel. Vehicle input and
+camera interaction are paused while the panel is open. Values are saved in
+Unity <code>PlayerPrefs</code> when the panel closes.</p>
+<h3 id="overview">Overview</h3>
+<p><strong>Overview</strong> summarizes the ROS connection, active camera, graphics status,
+vehicle position, and diagnostics. It also links to maps, controls, ROS, and
+the main launch menu.</p>
+<h3 id="maps">Maps</h3>
+<p><strong>Maps</strong> searches and loads bundled tracks without restarting Play mode. It can
+also load a CSV or TrackGen/NavSim JSON file using an absolute filesystem path.
+Selecting a map does not activate it until <strong>Load selected map</strong> is pressed.</p>
+<h3 id="controls">Controls</h3>
+<p><strong>Controls</strong> switches between standalone input and ROS odometry and configures
+maximum speed, acceleration, and steering rate for standalone motion.</p>
+<h3 id="ros-connection">ROS connection</h3>
+<p><strong>ROS connection</strong> selects the transport and endpoint, retries or closes the
+connection, edits topic names, selects odometry presets, configures TF
+frequency, and changes vehicle/sensor frame names.</p>
+<h3 id="sensors">Sensors</h3>
+<p><strong>Sensors</strong> enables or disables the point cloud, cone, and stereo-camera
+publishers. Disabling unused publishers is the fastest way to reduce simulator
+load during movement-only tests.</p>
+<p>The point-cloud section controls:</p>
+<ul>
+<li>topic and field/layer definition files;</li>
+<li>horizontal angular resolution and vertical-layer count;</li>
+<li>maximum distance and scan frequency;</li>
+<li>visualization of rays that hit cones.</li>
+</ul>
+<p>The cone-detection section controls topic, mesh markers, distance, frequency,
+missing detections, noisy detections, and maximum position noise.</p>
+<p>The stereo-camera section controls topic, publication frequency, image size,
+raw or JPEG payload, and JPEG quality. The available per-eye profiles are
+1280×720, 960×540, 640×360, and 426×240.</p>
+<div class="admonition note">
+<p class="admonition-title">UNITY_SIM_SCREENSHOT_05 — Sensor settings</p>
+<p>Replace this note with a screenshot of the Sensors page showing publisher
+toggles, LiDAR parameters, and stereo-camera profiles. Suggested file:
+<code>docs/assets/unity-simulator/sensor-settings.png</code>.</p>
+<p>Use: <code>![Unity simulator sensor settings](site:/assets/unity-simulator/sensor-settings.png)</code></p>
+</div>
+<h3 id="camera">Camera</h3>
+<p>The simulator provides four display views:</p>
+<ul>
+<li><strong>Chase</strong> follows the vehicle from behind;</li>
+<li><strong>Overhead</strong> follows the position while keeping a fixed world orientation;</li>
+<li><strong>Orbit</strong> rotates around and follows the vehicle;</li>
+<li><strong>Free roam</strong> detaches the camera for independent scene inspection.</li>
+</ul>
+<p>The page also controls overhead height/framing, orbit distance, orbit-axis
+inversion, and follow smoothing.</p>
+<h3 id="graphics">Graphics</h3>
+<p><strong>Graphics</strong> provides Low, Balanced, and High runtime profiles, along with
+target FPS, VSync, URP render scale, real-time shadows, and the performance HUD.
+Graphics API selection requires restarting Unity; on Linux, use
+<code>-force-vulkan</code> if the OpenGL editor backend produces rendering artifacts.</p>
+<div class="admonition note">
+<p class="admonition-title">UNITY_SIM_SCREENSHOT_06 — Runtime Settings tabs</p>
+<p>Replace this note with an annotated screenshot identifying Overview, Maps,
+Controls, ROS connection, Sensors, Camera, and Graphics. Suggested file:
+<code>docs/assets/unity-simulator/runtime-settings-tabs.png</code>.</p>
+<p>Use: <code>![Unity simulator Settings tabs](site:/assets/unity-simulator/runtime-settings-tabs.png)</code></p>
+</div>
+<h2 id="tracks-and-map-formats">Tracks and map formats</h2>
+<p>Bundled tracks belong in <code>Assets/StreamingAssets/</code>. Supported files appear in
+both the launch menu and the runtime map library and are included in standalone
+builds.</p>
+<p>The simulator supports:</p>
+<ul>
+<li>TrackGen/NavSim JSON;</li>
+<li>typed CSV with <code>start</code>, <code>blue</code>, <code>yellow</code>, <code>orange</code>, and <code>big</code> rows;</li>
+<li>legacy <code>x,y</code> CSV files, loaded as unknown cones.</li>
+</ul>
+<p>A typed CSV example is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>start,0.0,0.0,0.0
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>blue,5.0,2.0
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>yellow,5.0,-2.0
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>orange,0.0,1.0
+</code></pre></div>
+<p>TrackGen/NavSim JSON preserves <code>initialPosition</code>, cones, path, and significant
+positions. Unity currently instantiates the cones and applies the initial pose;
+path and significant-position data are accepted for compatibility but are not
+used for Unity path following.</p>
+<p>Unity uses <code>x/z</code> as the ground plane, while TrackGen and ROS use <code>x/y</code>:</p>
+<table>
+<thead>
+<tr>
+<th>TrackGen/ROS</th>
+<th>Unity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x</code></td>
+<td><code>x</code></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td><code>z</code></td>
+</tr>
+<tr>
+<td>positive yaw</td>
+<td>negative Unity yaw around <code>y</code></td>
+</tr>
+</tbody>
+</table>
+<p>Press <code>R</code> to place the vehicle at the active map's start pose. If the map has
+no start pose, the simulator uses the scene's initial vehicle position.</p>
+<div class="admonition note">
+<p class="admonition-title">UNITY_SIM_SCREENSHOT_07 — Map library and track</p>
+<p>Replace this note with a composite image showing a map selected in the
+runtime library and the corresponding cone track in the scene. Suggested
+file: <code>docs/assets/unity-simulator/map-library.png</code>.</p>
+<p>Use: <code>![Unity simulator map library](site:/assets/unity-simulator/map-library.png)</code></p>
+</div>
+<h2 id="driving-cone-impacts-and-run-timing">Driving, cone impacts, and run timing</h2>
+<p>In standalone mode, <code>W/S</code> controls throttle and brake/reverse, while <code>A/D</code>
+steers. Arrow keys are aliases. Gamepads and generic joysticks are supported.</p>
+<p>Track cones can be knocked over. Each cone impact is counted once. Press
+<code>Shift+R</code> or use the cone HUD reset button to restore every cone and clear the
+counter.</p>
+<p>Press <code>T</code> to start or stop the run timer. The timer uses unscaled Unity time,
+so it continues to measure consistently across frame-rate changes.</p>
+<h2 id="cameras">Cameras</h2>
+<p>Press <code>C</code> to cycle through Chase, Overhead, Orbit, and Free roam views.</p>
+<h3 id="overhead">Overhead</h3>
+<p>Use the mouse wheel to change altitude and orthographic framing. With a
+gamepad, the vertical left stick changes height; use the triggers for vehicle
+throttle while this camera is active.</p>
+<h3 id="orbit">Orbit</h3>
+<p>Use the mouse wheel to change distance. Drag with the left mouse button or use
+the gamepad right stick to orbit around the vehicle.</p>
+<h3 id="free-roam">Free roam</h3>
+<p>Drag with either mouse button to look around. Use <code>W/A/S/D</code> to move on the
+horizontal plane, <code>E/Q</code> to move vertically, and hold <code>Shift</code> for precise slow
+movement. Vehicle keyboard input is disabled while Free roam is active.</p>
+<h2 id="keyboard-and-mouse-shortcuts">Keyboard and mouse shortcuts</h2>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Esc</code></td>
+<td>Open or close runtime Settings</td>
+</tr>
+<tr>
+<td><code>C</code></td>
+<td>Cycle Chase, Overhead, Orbit, and Free roam cameras</td>
+</tr>
+<tr>
+<td><code>W/A/S/D</code> or arrows</td>
+<td>Drive in standalone mode</td>
+</tr>
+<tr>
+<td><code>R</code></td>
+<td>Respawn at the active map start pose</td>
+</tr>
+<tr>
+<td><code>Shift+R</code></td>
+<td>Restore all cones and clear the impact counter</td>
+</tr>
+<tr>
+<td><code>T</code></td>
+<td>Start or stop the session timer</td>
+</tr>
+<tr>
+<td><code>F3</code></td>
+<td>Show or hide the performance/ROS diagnostics HUD</td>
+</tr>
+<tr>
+<td><code>L</code></td>
+<td>Show or hide LiDAR rays that hit cones</td>
+</tr>
+<tr>
+<td>Mouse wheel</td>
+<td>Change Overhead height or Orbit distance</td>
+</tr>
+<tr>
+<td>Left-mouse drag</td>
+<td>Rotate the Orbit camera</td>
+</tr>
+<tr>
+<td>Either-mouse drag</td>
+<td>Look around in Free roam</td>
+</tr>
+<tr>
+<td><code>W/A/S/D</code> in Free roam</td>
+<td>Move the detached camera horizontally</td>
+</tr>
+<tr>
+<td><code>E/Q</code> in Free roam</td>
+<td>Move the detached camera up/down</td>
+</tr>
+<tr>
+<td><code>Shift</code> in Free roam</td>
+<td>Precise slow camera movement</td>
+</tr>
+<tr>
+<td><code>Alt+F4</code></td>
+<td>Close a standalone Linux/Windows player</td>
+</tr>
+</tbody>
+</table>
+<p>Vehicle and free-roam input are paused while Settings is open. Shortcut
+handlers also ignore focused text fields where applicable.</p>
+<h2 id="performance-and-diagnostics">Performance and diagnostics</h2>
+<p>Press <code>F3</code> to open the diagnostics HUD. It reports:</p>
+<ul>
+<li>FPS, frame time, and Unity/managed memory;</li>
+<li>LiDAR and camera publish cadence, payload size, and transmit age;</li>
+<li>odometry receive and application counts;</li>
+<li>odometry message age and recent message intervals;</li>
+<li>source motion and vehicle tracking error;</li>
+<li>vehicle ground clearance.</li>
+</ul>
+<p>If performance is poor:</p>
+<ol>
+<li>disable unused publishers in <strong>Sensors</strong>;</li>
+<li>reduce LiDAR layers, points per layer, or scan frequency;</li>
+<li>reduce stereo resolution or frequency;</li>
+<li>enable JPEG payloads when network bandwidth is the bottleneck;</li>
+<li>select the Low or Balanced graphics profile;</li>
+<li>reduce URP render scale or disable real-time shadows.</li>
+</ol>
+<p>Raw stereo images and dense point clouds are expensive to render, serialize,
+and transmit. The camera publisher keeps at most one stereo capture in flight
+and drops missed periods instead of building an unbounded queue.</p>
+<h2 id="build-a-standalone-player">Build a standalone player</h2>
+<p>In Unity, open <strong>File -&gt; Build Profiles</strong> and create or select the target
+platform profile. The scene order must contain:</p>
+<ol>
+<li><code>Assets/Scenes/MainMenu.unity</code>;</li>
+<li><code>Assets/Scenes/scene.unity</code>.</li>
+</ol>
+<p>Build into a directory outside <code>Assets/</code>. Generated Unity directories such as
+<code>Library</code>, <code>Temp</code>, <code>Logs</code>, <code>Builds</code>, and <code>UserSettings</code> must not be committed.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="unity-cannot-connect-to-ros">Unity cannot connect to ROS</h3>
+<ul>
+<li>Confirm that the selected transport matches the server running on the ROS
+  computer.</li>
+<li>For ROS-TCP, verify the endpoint address and port <code>10000</code>.</li>
+<li>For ROS#, verify the WebSocket URL and rosbridge port <code>9090</code>.</li>
+<li>Use the ROS computer's LAN IP when Unity runs on another machine.</li>
+<li>Ensure <code>ubm_interfaces</code> is built and sourced before starting the endpoint or
+  rosbridge.</li>
+<li>Check firewall rules for the selected TCP port.</li>
+</ul>
+<h3 id="the-vehicle-does-not-move-in-ros-mode">The vehicle does not move in ROS mode</h3>
+<ul>
+<li>Select <strong>ROS odometry</strong> under <strong>Controls</strong>.</li>
+<li>Select the <strong>UBM FSAE topic</strong> preset or set <code>/ekf_pose/odom</code> manually.</li>
+<li>Run <code>ros2 topic echo /ekf_pose/odom --once</code>.</li>
+<li>Open the <code>F3</code> HUD. <code>ODOM: STALE</code> indicates that Unity is not receiving fresh
+  messages.</li>
+<li>If messages arrive but tracking error grows, investigate pose application or
+  coordinate conversion.</li>
+</ul>
+<h3 id="a-custom-message-cannot-be-advertised">A custom message cannot be advertised</h3>
+<p>Build and source the matching <code>ubm_interfaces</code> package in the same ROS
+environment as ROS-TCP-Endpoint or rosbridge, then restart the server.</p>
+<h3 id="the-project-opens-with-missing-vehicle-meshes">The project opens with missing vehicle meshes</h3>
+<p>Install Git LFS, close Unity, run <code>git lfs pull</code>, and reopen the project.</p>
+<h3 id="linux-rendering-artifacts">Linux rendering artifacts</h3>
+<p>Restart the Unity Editor or standalone player with <code>-force-vulkan</code>. Graphics
+API selection is not changed by the runtime graphics profile.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 © UniBo Motorsport
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

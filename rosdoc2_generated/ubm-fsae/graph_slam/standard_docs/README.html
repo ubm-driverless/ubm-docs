@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>README &mdash; graph_slam 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="PACKAGE" href="PACKAGE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            graph_slam
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../generated/index.html">C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generated/index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/index.html#full-c-api">Full C++ API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/index.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/structLandmarkInfo.html">Struct LandmarkInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/structPoseInfo.html">Struct PoseInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/structProfilingTimers.html">Struct ProfilingTimers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/structSensorConfig.html">Struct SensorConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/structValidObservation.html">Struct ValidObservation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/classGraphSLAM.html">Class GraphSLAM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/dir_include_graph_slam.html">Directory graph_slam</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/file_include_graph_slam_graph_slam.hpp.html">File graph_slam.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../standards.html">Standard Documents</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#graph-slam-ros2-node">Graph SLAM ROS2 Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-structure">Code Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visualization-on-rviz">Visualization on RVIZ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#limitations-todos">Limitations &amp; TODOs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">graph_slam</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../standards.html">Standard Documents</a></li>
+      <li class="breadcrumb-item active">README</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/standard_docs/README.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="readme">
+<h1>README<a class="headerlink" href="#readme" title="Link to this heading"></a></h1>
+<section id="graph-slam-ros2-node">
+<h2>Graph SLAM ROS2 Node<a class="headerlink" href="#graph-slam-ros2-node" title="Link to this heading"></a></h2>
+<p>A ROS2 implementation of Graph-based SLAM using the <code class="docutils literal notranslate"><span class="pre">g2o</span></code> optimization framework. This node fuses odometry and landmark detections (e.g., cones) to build a consistent map while detecting loop closures.</p>
+<hr class="docutils" />
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Pose Graph Construction</strong>: SE2 poses and landmark vertices.</p></li>
+<li><p><strong>Data Association</strong>: KD-Tree-based nearest-neighbor search for landmark matching.</p></li>
+<li><p><strong>Loop Closure Detection</strong>: Automatically detects loops when revisiting landmarks.</p></li>
+<li><p><strong>Incremental Optimization</strong>: Balances accuracy and computational efficiency.</p></li>
+<li><p><strong>Visualization</strong>: Publishes landmarks and robot poses as ROS markers.</p></li>
+<li><p><strong>Covariance Handling</strong>: Configurable sensor uncertainty parameters.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>ROS2 Humble</strong> (or newer).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">g2o</span></code> (Graph Optimization Library), follow these <a class="reference external" href="https://github.com/RainerKuemmerle/g2o">instructions</a> to install it</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PCL</span></code> (Point Cloud Library).</p></li>
+<li><p>ROS2 Packages: <code class="docutils literal notranslate"><span class="pre">tf2</span></code>, <code class="docutils literal notranslate"><span class="pre">pcl_conversions</span></code>, <code class="docutils literal notranslate"><span class="pre">visualization_msgs</span></code>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p><strong>Launch the node</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>graph_slam<span class="w"> </span>graph_slam.launch.py
+</pre></div>
+</div>
+</li>
+</ol>
+<p>or uncomment the line in <code class="docutils literal notranslate"><span class="pre">launch/bringup.py</span></code> and launch everything.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Required Topics</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/ekf_pose/odom</span></code> (Odometry input).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/detections_info</span></code> (Landmark detections).</p></li>
+</ul>
+</li>
+<li><p><strong>Visualization</strong>:</p>
+<ul class="simple">
+<li><p>View map in RVIZ2: <code class="docutils literal notranslate"><span class="pre">/slam_map</span></code> (MarkerArray).</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<p>Most of the parameters must be modifies, as the first two of them are not being used at all given the latest refactors</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">euclidean_threshold</span></code></p></td>
+<td><p>Max distance (meters) for landmark association</p></td>
+<td><p>1.5</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sensor_covariance</span></code></p></td>
+<td><p>Sensor measurement covariance matrix</p></td>
+<td><p>[1.0, 0.0, 0.0, 1.0]</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">loop_closure_min_id_diff</span></code></p></td>
+<td><p>Minimum pose ID gap for loop closure</p></td>
+<td><p>400</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="code-structure">
+<h3>Code Structure<a class="headerlink" href="#code-structure" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>graph_slam/
+├── include/graph_slam/graph_slam.hpp  # Class declaration
+├── src/graph_slam.cpp                 # Main implementation
+└── CMakeLists.txt
+</pre></div>
+</div>
+<section id="key-components">
+<h4>Key Components<a class="headerlink" href="#key-components" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p><strong>Optimizer Setup</strong>:</p>
+<ul class="simple">
+<li><p>Levenberg-Marquardt solver with dynamic block sizing.</p></li>
+</ul>
+</li>
+<li><p><strong>Odom Callback</strong>:</p>
+<ul class="simple">
+<li><p>Adds new pose vertices.</p></li>
+<li><p>Creates odometry edges between consecutive poses.</p></li>
+</ul>
+</li>
+<li><p><strong>Landmark Handling</strong>:</p>
+<ul class="simple">
+<li><p>KD-Tree for efficient landmark retrieval.</p></li>
+<li><p>Mahalanobis distance-based data association.</p></li>
+<li><p>Automatic loop closure detection.</p></li>
+</ul>
+</li>
+<li><p><strong>Optimization Strategy</strong>:</p>
+<ul class="simple">
+<li><p>Incremental optimization every 10 poses.</p></li>
+<li><p>Full optimization on demand.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="visualization-on-rviz">
+<h3>Visualization on RVIZ<a class="headerlink" href="#visualization-on-rviz" title="Link to this heading"></a></h3>
+<p><em>Red spheres: Landmarks, Green arrows: Robot poses.</em></p>
+</section>
+<hr class="docutils" />
+<section id="limitations-todos">
+<h3>Limitations &amp; TODOs<a class="headerlink" href="#limitations-todos" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>[ ] Implement proper odometry covariance handling.</p></li>
+<li><p>[ ] Add multi-threading support.</p></li>
+<li><p>[ ] Improve landmark association logic.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="PACKAGE.html" class="btn btn-neutral float-left" title="PACKAGE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;graph_slam&gt; Contributors. License: MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

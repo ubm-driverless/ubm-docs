@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struct ValidObservation &mdash; graph_slam 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class GraphSLAM" href="classGraphSLAM.html" />
+    <link rel="prev" title="Struct SensorConfig" href="structSensorConfig.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            graph_slam
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structLandmarkInfo.html">Struct LandmarkInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structPoseInfo.html">Struct PoseInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structProfilingTimers.html">Struct ProfilingTimers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structSensorConfig.html">Struct SensorConfig</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Struct ValidObservation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classGraphSLAM.html">Class GraphSLAM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_graph_slam.html">Directory graph_slam</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_graph_slam_graph_slam.hpp.html">File graph_slam.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#graph-slam-ros2-node">Graph SLAM ROS2 Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#features">Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#code-structure">Code Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#visualization-on-rviz">Visualization on RVIZ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#limitations-todos">Limitations &amp; TODOs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">graph_slam</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Struct ValidObservation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/structValidObservation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-validobservation">
+<span id="exhale-struct-structvalidobservation"></span><h1>Struct ValidObservation<a class="headerlink" href="#struct-validobservation" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_graph_slam_graph_slam.hpp.html#file-include-graph-slam-graph-slam-hpp"><span class="std std-ref">File graph_slam.hpp</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv416ValidObservation">
+<span id="_CPPv316ValidObservation"></span><span id="_CPPv216ValidObservation"></span><span id="ValidObservation"></span><span class="target" id="structValidObservation"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidObservation</span></span></span><a class="headerlink" href="#_CPPv416ValidObservation" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16ValidObservation4dataE">
+<span id="_CPPv3N16ValidObservation4dataE"></span><span id="_CPPv2N16ValidObservation4dataE"></span><span id="ValidObservation::data__ubm_interfaces::msg::Landmark"></span><span class="target" id="structValidObservation_1aaf8a04a8ee695125388dd2d77b45503b"></span><span class="n"><span class="pre">ubm_interfaces</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Landmark</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><a class="headerlink" href="#_CPPv4N16ValidObservation4dataE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16ValidObservation5z_carE">
+<span id="_CPPv3N16ValidObservation5z_carE"></span><span id="_CPPv2N16ValidObservation5z_carE"></span><span id="ValidObservation::z_car__Eigen::Vector2d"></span><span class="target" id="structValidObservation_1a400379d09781c11eee6202a3f0d06def"></span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Vector2d</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z_car</span></span></span><a class="headerlink" href="#_CPPv4N16ValidObservation5z_carE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16ValidObservation5z_mapE">
+<span id="_CPPv3N16ValidObservation5z_mapE"></span><span id="_CPPv2N16ValidObservation5z_mapE"></span><span id="ValidObservation::z_map__Eigen::Vector2d"></span><span class="target" id="structValidObservation_1a6a74410e7f98b958ef96063491c01f90"></span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Vector2d</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z_map</span></span></span><a class="headerlink" href="#_CPPv4N16ValidObservation5z_mapE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16ValidObservation8landmarkE">
+<span id="_CPPv3N16ValidObservation8landmarkE"></span><span id="_CPPv2N16ValidObservation8landmarkE"></span><span id="ValidObservation::landmark__g2o::VertexPointXYP"></span><span class="target" id="structValidObservation_1a4e1af9830d6d5d3176c65dcf75f01198"></span><span class="n"><span class="pre">g2o</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">VertexPointXY</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">landmark</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N16ValidObservation8landmarkE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structSensorConfig.html" class="btn btn-neutral float-left" title="Struct SensorConfig" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classGraphSLAM.html" class="btn btn-neutral float-right" title="Class GraphSLAM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;graph_slam&gt; Contributors. License: MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

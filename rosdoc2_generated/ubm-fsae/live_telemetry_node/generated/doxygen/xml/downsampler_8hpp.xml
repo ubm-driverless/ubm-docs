@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="downsampler_8hpp" kind="file" language="C++">
+    <compoundname>downsampler.hpp</compoundname>
+    <includes local="no">functional</includes>
+    <includes local="no">atomic</includes>
+    <includes refid="config_8hpp" local="yes">live_telemetry_node/config.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/camera_data.hpp</includes>
+    <includedby refid="camera__data__handler_8hpp" local="yes">include/live_telemetry_node/camera_data_handler.hpp</includedby>
+    <includedby refid="point__cloud__handler_8hpp" local="yes">include/live_telemetry_node/point_cloud_handler.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>atomic</label>
+      </node>
+      <node id="2">
+        <label>functional</label>
+      </node>
+      <node id="1">
+        <label>include/live_telemetry_node/downsampler.hpp</label>
+        <link refid="downsampler_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ubm_interfaces/msg/camera_data.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classlive__telemetry_1_1IDataProcessor" prot="public">live_telemetry::IDataProcessor</innerclass>
+    <innerclass refid="classlive__telemetry_1_1Downsampler" prot="public">live_telemetry::Downsampler</innerclass>
+    <innernamespace refid="namespacelive__telemetry">live_telemetry</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/live_telemetry_node/downsampler.hpp"/>
+  </compounddef>
+</doxygen>

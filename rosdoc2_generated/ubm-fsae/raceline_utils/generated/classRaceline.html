@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Raceline &mdash; raceline_utils 1.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=fc837d61"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function compute_distance_d" href="function_frenet__converter_8hpp_1ae5812e69ea7ea1aa57e7f71627aa49cb.html" />
+    <link rel="prev" title="Struct RacelineRow" href="structRacelineRow.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            raceline_utils
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structRacelineData.html">Struct RacelineData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structRacelineRow.html">Struct RacelineRow</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class Raceline</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_frenet__converter_8hpp_1ae5812e69ea7ea1aa57e7f71627aa49cb.html">Function compute_distance_d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_frenet__converter_8hpp_1ab392555c3de5cd69fd233b66c324bae2.html">Function frenet_to_cartesian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_frenet__converter_8hpp_1ae8ced3a5d6a176df90a0a0f6879b9fa1.html">Function mod</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_frenet_converter.hpp.html">File frenet_converter.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_raceline_utils.hpp.html">File raceline_utils.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#raceline-utils">Raceline utils</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#utilities-overview">Utilities Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#license">License</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">raceline_utils</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class Raceline</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classRaceline.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-raceline">
+<span id="exhale-class-classraceline"></span><h1>Class Raceline<a class="headerlink" href="#class-raceline" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_raceline_utils.hpp.html#file-include-raceline-utils-hpp"><span class="std std-ref">File raceline_utils.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv48Raceline">
+<span id="_CPPv38Raceline"></span><span id="_CPPv28Raceline"></span><span id="Raceline"></span><span class="target" id="classRaceline"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Raceline</span></span></span><a class="headerlink" href="#_CPPv48Raceline" title="Link to this definition"></a><br /></dt>
+<dd><p>Represents the path that the car follows, extracted from the map. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Raceline8RacelineEv">
+<span id="_CPPv3N8Raceline8RacelineEv"></span><span id="_CPPv2N8Raceline8RacelineEv"></span><span id="Raceline::Raceline"></span><span class="target" id="classRaceline_1abf073897de0800ef0d35ffc9b011b90f"></span><span class="sig-name descname"><span class="n"><span class="pre">Raceline</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Raceline8RacelineEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor for the <a class="reference internal" href="#classRaceline"><span class="std std-ref">Raceline</span></a> class. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Raceline10initializeERKNSt6stringEb">
+<span id="_CPPv3N8Raceline10initializeERKNSt6stringEb"></span><span id="_CPPv2N8Raceline10initializeERKNSt6stringEb"></span><span id="Raceline::initialize__ssCR.b"></span><span class="target" id="classRaceline_1a9b2d9ce976b69f2b4ff470b436712b13"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">is_closed_track</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Raceline10initializeERKNSt6stringEb" title="Link to this definition"></a><br /></dt>
+<dd><p>Initializes the <a class="reference internal" href="#classRaceline"><span class="std std-ref">Raceline</span></a> object with raceline data. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> – Name of the CSV file containing the raceline data. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Raceline10initializeERKNSt6stringERbb">
+<span id="_CPPv3N8Raceline10initializeERKNSt6stringERbb"></span><span id="_CPPv2N8Raceline10initializeERKNSt6stringERbb"></span><span id="Raceline::initialize__ssCR.bR.b"></span><span class="target" id="classRaceline_1a120f692e3eab2f5596fab4edec7e776a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">success</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">is_closed_track</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Raceline10initializeERKNSt6stringERbb" title="Link to this definition"></a><br /></dt>
+<dd><p>Initializes the <a class="reference internal" href="#classRaceline"><span class="std std-ref">Raceline</span></a> object with raceline data. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – Name of the CSV file containing the raceline data. </p></li>
+<li><p><strong>success</strong> – Reference to a boolean variable to store the success status. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline16get_target_speedEi">
+<span id="_CPPv3NK8Raceline16get_target_speedEi"></span><span id="_CPPv2NK8Raceline16get_target_speedEi"></span><span id="Raceline::get_target_speed__iC"></span><span class="target" id="classRaceline_1abf0c8a748c99ba9fa9dbf5e3d798c7a3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_target_speed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline16get_target_speedEi" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves the target speed based on the speed function. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> – The index of the point on the path. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The target speed at the given index. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline16get_raceline_rowEi">
+<span id="_CPPv3NK8Raceline16get_raceline_rowEi"></span><span id="_CPPv2NK8Raceline16get_raceline_rowEi"></span><span id="Raceline::get_raceline_row__iC"></span><span class="target" id="classRaceline_1a7107b141ee18ab2903a0ccbc223a755a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="structRacelineRow.html#_CPPv411RacelineRow" title="RacelineRow"><span class="n"><span class="pre">RacelineRow</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_raceline_row</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline16get_raceline_rowEi" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves the raceline data at a given index. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> – The index of the point on the path. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The raceline data at the given index. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline17get_raceline_dataEv">
+<span id="_CPPv3NK8Raceline17get_raceline_dataEv"></span><span id="_CPPv2NK8Raceline17get_raceline_dataEv"></span><span id="Raceline::get_raceline_dataC"></span><span class="target" id="classRaceline_1a5f738bda8f2a17a9cb028167d6afc8ce"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="structRacelineData.html#_CPPv412RacelineData" title="RacelineData"><span class="n"><span class="pre">RacelineData</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_raceline_data</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline17get_raceline_dataEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves the whole raceline data. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The raceline data. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline11get_bordersEv">
+<span id="_CPPv3NK8Raceline11get_bordersEv"></span><span id="_CPPv2NK8Raceline11get_bordersEv"></span><span id="Raceline::get_bordersC"></span><span class="target" id="classRaceline_1ac68554cf5c5b04f8553ea7f9410c43f3"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_borders</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline11get_bordersEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves the borders of the raceline. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A tuple containing the borders of the raceline:<ul class="simple">
+<li><p>first: x coordinates of the left border</p></li>
+<li><p>second: y coordinates of the left border</p></li>
+<li><p>third: x coordinates of the right border</p></li>
+<li><p>fourth: y coordinates of the right border </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline14get_num_pointsEv">
+<span id="_CPPv3NK8Raceline14get_num_pointsEv"></span><span id="_CPPv2NK8Raceline14get_num_pointsEv"></span><span id="Raceline::get_num_pointsC"></span><span class="target" id="classRaceline_1ac9bd1e1519a3c0a750277682d7220b6e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_num_points</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline14get_num_pointsEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves the raceline data at a given index. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of points in the raceline. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline17get_nearest_indexEv">
+<span id="_CPPv3NK8Raceline17get_nearest_indexEv"></span><span id="_CPPv2NK8Raceline17get_nearest_indexEv"></span><span id="Raceline::get_nearest_indexC"></span><span class="target" id="classRaceline_1a1cf7e809bc8c48e9277daa03098b63eb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_nearest_index</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline17get_nearest_indexEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves the nearest index. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The index of the nearest point on the raceline. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline15get_raceline_xyEv">
+<span id="_CPPv3NK8Raceline15get_raceline_xyEv"></span><span id="_CPPv2NK8Raceline15get_raceline_xyEv"></span><span id="Raceline::get_raceline_xyC"></span><span class="target" id="classRaceline_1a7d6e815f9c106d7e3f5e4589ad0e76df"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_raceline_xy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline15get_raceline_xyEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves the raceline points. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A pair of vectors containing the x and y coordinates:<ul class="simple">
+<li><p>first: x coordinates as a vector</p></li>
+<li><p>second: y coordinates as a vector </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline11get_headingEv">
+<span id="_CPPv3NK8Raceline11get_headingEv"></span><span id="_CPPv2NK8Raceline11get_headingEv"></span><span id="Raceline::get_headingC"></span><span class="target" id="classRaceline_1a7c068656577610cc2d886b7ebeb5d6ae"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_heading</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline11get_headingEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves the heading angles of the raceline points. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A vector containing the heading angles of the raceline points. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline13get_curvatureEv">
+<span id="_CPPv3NK8Raceline13get_curvatureEv"></span><span id="_CPPv2NK8Raceline13get_curvatureEv"></span><span id="Raceline::get_curvatureC"></span><span class="target" id="classRaceline_1add99458f3bd73f1c9b3d6da1d7ffe874"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_curvature</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline13get_curvatureEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves the curvature values of the raceline points. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A vector containing the curvature values of the raceline points. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Raceline8read_csvERKNSt6stringE">
+<span id="_CPPv3N8Raceline8read_csvERKNSt6stringE"></span><span id="_CPPv2N8Raceline8read_csvERKNSt6stringE"></span><span id="Raceline::read_csv__ssCR"></span><span class="target" id="classRaceline_1ade34f664e8a27af40d6510d80df05385"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_csv</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filename</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Raceline8read_csvERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Reads the raceline data from a CSV file. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> – The name of the CSV file to read. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Raceline8read_csvERKNSt6stringERb">
+<span id="_CPPv3N8Raceline8read_csvERKNSt6stringERb"></span><span id="_CPPv2N8Raceline8read_csvERKNSt6stringERb"></span><span id="Raceline::read_csv__ssCR.bR"></span><span class="target" id="classRaceline_1aa3efb17ba36d0cf471bb97298e93e3d7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_csv</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">success</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Raceline8read_csvERKNSt6stringERb" title="Link to this definition"></a><br /></dt>
+<dd><p>Reads the raceline data from a CSV file and returns success status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The name of the CSV file to read. </p></li>
+<li><p><strong>success</strong> – A reference to a boolean variable to store the success status. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline20search_nearest_indexERKfRKff">
+<span id="_CPPv3NK8Raceline20search_nearest_indexERKfRKff"></span><span id="_CPPv2NK8Raceline20search_nearest_indexERKfRKff"></span><span id="Raceline::search_nearest_index__floatCR.floatCR.floatC"></span><span class="target" id="classRaceline_1afa932197db453381eead1b651921a182"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">search_nearest_index</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">x</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">y</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">window_size_m</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0f</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline20search_nearest_indexERKfRKff" title="Link to this definition"></a><br /></dt>
+<dd><p>Searches for the nearest index in a set of points to a given (x, y) coordinate. </p>
+<p>This function iterates through the set of points defined by the raceline data, and finds the index of the point that is closest to the given (x, y) coordinate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The x-coordinate of the point to search for. </p></li>
+<li><p><strong>y</strong> – The y-coordinate of the point to search for. </p></li>
+<li><p><strong>window_size_m</strong> – Search window (meters) around the last nearest index. 0 = full scan. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>int The index of the nearest point in the set. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline20search_nearest_indexERKf">
+<span id="_CPPv3NK8Raceline20search_nearest_indexERKf"></span><span id="_CPPv2NK8Raceline20search_nearest_indexERKf"></span><span id="Raceline::search_nearest_index__floatCRC"></span><span class="target" id="classRaceline_1aad62e43dcfca48dfa7e469fcc9fa538a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">search_nearest_index</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline20search_nearest_indexERKf" title="Link to this definition"></a><br /></dt>
+<dd><p>Searches for the nearest index in the array based on the given value. </p>
+<p>This function iterates through the array of s values in the raceline and finds the index of the point that is closest to the given value <code class="docutils literal notranslate"><span class="pre">s</span></code>. The distance is calculated using the absolute difference between the given value and each point in the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> – The value to search for the nearest index. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The index of the point that is closest to the given value <code class="docutils literal notranslate"><span class="pre">s</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline21frenet_to_cartesian_rERKfRKf">
+<span id="_CPPv3NK8Raceline21frenet_to_cartesian_rERKfRKf"></span><span id="_CPPv2NK8Raceline21frenet_to_cartesian_rERKfRKf"></span><span id="Raceline::frenet_to_cartesian_r__floatCR.floatCRC"></span><span class="target" id="classRaceline_1a5ac5b899a8b789fb8f6dbbc3df56ec1a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frenet_to_cartesian_r</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">d</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline21frenet_to_cartesian_rERKfRKf" title="Link to this definition"></a><br /></dt>
+<dd><p>Converts a Frenet s and d Frenet coordinate into cartesian coordinate. </p>
+<p>This function takes a pair of Frenet coordinates (s, d) and converts them into Cartesian coordinates based on the raceline data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – The Frenet s coordinate. </p></li>
+<li><p><strong>d</strong> – The Frenet d coordinate. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The vector of Cartesian points. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline21frenet_to_cartesian_rERKNSt4pairIffEE">
+<span id="_CPPv3NK8Raceline21frenet_to_cartesian_rERKNSt4pairIffEE"></span><span id="_CPPv2NK8Raceline21frenet_to_cartesian_rERKNSt4pairIffEE"></span><span id="Raceline::frenet_to_cartesian_r__std::pair:float.float:CRC"></span><span class="target" id="classRaceline_1aae7fc45e5e675845358de48875754f7f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frenet_to_cartesian_r</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">point</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline21frenet_to_cartesian_rERKNSt4pairIffEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Converts a single Frenet point into Cartesian coordinates. </p>
+<p>This function takes a single point in Frenet coordinates and converts it into Cartesian coordinates based on the raceline data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>point</strong> – The Frenet point to convert, tuple of s and d. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Cartesian point. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline21frenet_to_cartesian_rERKNSt6vectorINSt4pairIffEEEE">
+<span id="_CPPv3NK8Raceline21frenet_to_cartesian_rERKNSt6vectorINSt4pairIffEEEE"></span><span id="_CPPv2NK8Raceline21frenet_to_cartesian_rERKNSt6vectorINSt4pairIffEEEE"></span><span id="Raceline::frenet_to_cartesian_r__std::vector:std::pair:float.float::CRC"></span><span class="target" id="classRaceline_1a89e5ffab20629c4cc740b5b78c62b2d2"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frenet_to_cartesian_r</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">points</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline21frenet_to_cartesian_rERKNSt6vectorINSt4pairIffEEEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Converts a set of Frenet points into Cartesian coordinates. </p>
+<p>This function takes a set of points in Frenet coordinates and converts them into Cartesian coordinates based on the raceline data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>points</strong> – The vector of Frenet points to convert. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The vector of Cartesian points. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline19cartesian_to_frenetERKfRKf">
+<span id="_CPPv3NK8Raceline19cartesian_to_frenetERKfRKf"></span><span id="_CPPv2NK8Raceline19cartesian_to_frenetERKfRKf"></span><span id="Raceline::cartesian_to_frenet__floatCR.floatCRC"></span><span class="target" id="classRaceline_1a68766d8eda8fcc468f86e703885f11c1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cartesian_to_frenet</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">x</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">y</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline19cartesian_to_frenetERKfRKf" title="Link to this definition"></a><br /></dt>
+<dd><p>Converts a Cartesian point into Frenet coordinates. </p>
+<p>This function takes a Cartesian point and converts it into Frenet coordinates based on the raceline data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The x-coordinate of the point. </p></li>
+<li><p><strong>y</strong> – The y-coordinate of the point. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Frenet coordinates of the point. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline19cartesian_to_frenetERKNSt4pairIffEE">
+<span id="_CPPv3NK8Raceline19cartesian_to_frenetERKNSt4pairIffEE"></span><span id="_CPPv2NK8Raceline19cartesian_to_frenetERKNSt4pairIffEE"></span><span id="Raceline::cartesian_to_frenet__std::pair:float.float:CRC"></span><span class="target" id="classRaceline_1a558912c11d4a84dcd82c1a23eb8e527d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cartesian_to_frenet</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">points</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline19cartesian_to_frenetERKNSt4pairIffEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Converts a single Cartesian point into Frenet coordinates. </p>
+<p>This function takes a single Cartesian point and converts it into Frenet coordinates based on the raceline data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>points</strong> – The Cartesian point to convert, tuple of x and y. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Frenet coordinates of the point. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8Raceline19cartesian_to_frenetERKNSt6vectorINSt4pairIffEEEE">
+<span id="_CPPv3NK8Raceline19cartesian_to_frenetERKNSt6vectorINSt4pairIffEEEE"></span><span id="_CPPv2NK8Raceline19cartesian_to_frenetERKNSt6vectorINSt4pairIffEEEE"></span><span id="Raceline::cartesian_to_frenet__std::vector:std::pair:float.float::CRC"></span><span class="target" id="classRaceline_1a638fdef02e75565a2a502a6953e1d011"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cartesian_to_frenet</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">points</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8Raceline19cartesian_to_frenetERKNSt6vectorINSt4pairIffEEEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Converts a set of Cartesian points into Frenet coordinates. </p>
+<p>This function takes a set of Cartesian points and converts them into Frenet coordinates based on the raceline data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>points</strong> – The vector of tuple x,y to convert. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The vector of Frenet points. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Raceline34search_nearest_point_tdp_projectedERKfRKfRKi">
+<span id="_CPPv3N8Raceline34search_nearest_point_tdp_projectedERKfRKfRKi"></span><span id="_CPPv2N8Raceline34search_nearest_point_tdp_projectedERKfRKfRKi"></span><span id="Raceline::search_nearest_point_tdp_projected__floatCR.floatCR.iCR"></span><span class="target" id="classRaceline_1ad36ddb5725155f32939af2edac82ea15"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">search_nearest_point_tdp_projected</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">actual_x</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">actual_y</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tdp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Raceline34search_nearest_point_tdp_projectedERKfRKfRKi" title="Link to this definition"></a><br /></dt>
+<dd><p>Compute frenet coordinates of the car with respect to the path and the equivalent cartesian coordinate. It comprehends the computation of the index of the nearest point on the path. The tdp is considered. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actual_x</strong> – The x-coordinate of the car. </p></li>
+<li><p><strong>actual_y</strong> – The y-coordinate of the car. </p></li>
+<li><p><strong>tdp</strong> – The time delay parameter (int). </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>std::tuple&lt;float, float, float, float, int&gt; A tuple containing:<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">current_x</span></code>: The x-coordinate of the car (considering tdp)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">current_y</span></code>: The y-coordinate of the car (considering tdp)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s_euclidian[projected_index]</span></code>: The frenet s coordinate (considering tdp)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">distance_d</span></code>: The frenet n coordinate (considering tdp)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">heading[projected_index]</span></code>: The heading angle of the car (considering tdp)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nearest_index</span></code>: The index of the nearest point on the path (considering tdp) </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8Raceline23search_look_ahead_pointERKfRKfRKfRKfRKff">
+<span id="_CPPv3N8Raceline23search_look_ahead_pointERKfRKfRKfRKfRKff"></span><span id="_CPPv2N8Raceline23search_look_ahead_pointERKfRKfRKfRKfRKff"></span><span id="Raceline::search_look_ahead_point__floatCR.floatCR.floatCR.floatCR.floatCR.float"></span><span class="target" id="classRaceline_1aa63bd39dd91cdf6d576a8aa069f1c448"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">search_look_ahead_point</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">actual_x</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">actual_y</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">actual_v</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">look_ahead_gain</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">min_look_ahead_dist</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">window_size_m</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8Raceline23search_look_ahead_pointERKfRKfRKfRKfRKff" title="Link to this definition"></a><br /></dt>
+<dd><p>Searches the look ahead point on the path considering car position and speed. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actual_x</strong> – The x-coordinate of the car. </p></li>
+<li><p><strong>actual_y</strong> – The y-coordinate of the car. </p></li>
+<li><p><strong>actual_v</strong> – The speed of the car. </p></li>
+<li><p><strong>look_ahead_gain</strong> – The look ahead gain. </p></li>
+<li><p><strong>min_look_ahead_dist</strong> – The minimum look ahead distance. </p></li>
+<li><p><strong>window_size_m</strong> – Search window (meters) around the last nearest index. 0 = full scan. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple with look_ahead_x, look_ahead_y, nearest_index. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structRacelineRow.html" class="btn btn-neutral float-left" title="Struct RacelineRow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="function_frenet__converter_8hpp_1ae5812e69ea7ea1aa57e7f71627aa49cb.html" class="btn btn-neutral float-right" title="Function compute_distance_d" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;raceline_utils&gt; Contributors. License: MIT Lincense.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

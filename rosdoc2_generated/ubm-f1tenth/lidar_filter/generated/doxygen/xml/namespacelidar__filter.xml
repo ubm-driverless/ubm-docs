@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacelidar__filter" kind="namespace" language="C++">
+    <compoundname>lidar_filter</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacelidar__filter_1ae162c387c37c3f324c0be7dd1de4f917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lidar_filter::central_linspace</definition>
+        <argsstring>(const float start, const float end, const int num, std::vector&lt; float &gt; &amp;linspaced)</argsstring>
+        <name>central_linspace</name>
+        <param>
+          <type>const float</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>linspaced</declname>
+        </param>
+        <briefdescription>
+<para>Create a linearly spaced vector of floats. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>It&apos;s a variation of the linspace function in Python&apos;s NumPy library. In particular we don&apos;t want to get the start and the end value inside the vector and needs to work for a single value</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting value of the sequence (excluded) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end value of the sequence (excluded) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of samples to generate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linspaced</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resulting vector containing the sequence. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter.hpp" line="51" column="10" declfile="include/lidar_filter/lidar_filter.hpp" declline="51" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacelidar__filter_1a6b328c08f548ba09a9bae6074364d4c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lidar_filter::mean_convolution</definition>
+        <argsstring>(std::vector&lt; float &gt; &amp;signal, const int kernel_size)</argsstring>
+        <name>mean_convolution</name>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>kernel_size</declname>
+        </param>
+        <briefdescription>
+<para>Apply a mean convolution of size kernel_size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1D array of floats to be filtered </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kernel_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kernel size of the mean convolution </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter.hpp" line="59" column="10" declfile="include/lidar_filter/lidar_filter.hpp" declline="59" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacelidar__filter_1a7705989d70d5be6fa41f3d4309e1da38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lidar_filter::mean_convolution_box</definition>
+        <argsstring>(std::vector&lt; float &gt; &amp;signal, const int kernel_size)</argsstring>
+        <name>mean_convolution_box</name>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>kernel_size</declname>
+        </param>
+        <briefdescription>
+<para>Apply a mean convolution using the box method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique pointer to 1D array of floats to be filtered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kernel_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kernel size of the mean convolution </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter.hpp" line="67" column="10" declfile="include/lidar_filter/lidar_filter.hpp" declline="67" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacelidar__filter_1a5f62665f5c6b90c9ed935cc7abf6f1d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lidar_filter::median_filter</definition>
+        <argsstring>(std::vector&lt; float &gt; &amp;signal, const int window_size)</argsstring>
+        <name>median_filter</name>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>window_size</declname>
+        </param>
+        <briefdescription>
+<para>Apply a median filter with the given window size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>High computation time: use with small window_size</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique pointer to 1D array of floats to be filtered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>window_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the median filter window </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter.hpp" line="76" column="10" declfile="include/lidar_filter/lidar_filter.hpp" declline="76" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacelidar__filter_1a18dac0133bac5d1bc88af7c5f6db3afd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lidar_filter::outliers_filtering</definition>
+        <argsstring>(std::vector&lt; float &gt; &amp;signal, const float &amp;threshold, const float &amp;min_range)</argsstring>
+        <name>outliers_filtering</name>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>threshold</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>min_range</declname>
+        </param>
+        <briefdescription>
+<para>Filter lidar signal data to remove outliers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This method discard all the value above a certain threshold and sobstitute them with an iterpoleted value of the two nearest point that are under the threshold</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique pointer to 1D array of floats to be filtered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum valid value for the signal </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lidar_filter/lidar_filter.hpp" line="86" column="10" declfile="include/lidar_filter/lidar_filter.hpp" declline="86" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Namespace containing various filtering functions for LiDAR data processing. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/lidar_filter/lidar_filter.hpp" line="34" column="1"/>
+  </compounddef>
+</doxygen>

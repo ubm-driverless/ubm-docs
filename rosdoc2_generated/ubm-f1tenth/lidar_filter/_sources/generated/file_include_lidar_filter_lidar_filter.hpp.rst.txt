@@ -1,0 +1,96 @@
+
+.. _file_include_lidar_filter_lidar_filter.hpp:
+
+File lidar_filter.hpp
+=====================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_lidar_filter>` (``include/lidar_filter``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Header file for lidar signal filtering utilities. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/lidar_filter/lidar_filter.hpp``)
+------------------------------------------------------
+
+
+
+
+Detailed Description
+--------------------
+
+This header file defines several utilities for processing and filtering lidar data. It includes methods to apply basic signal processing operations such as linear spacing, mean and median convolutions, and outlier removal. These functions are designed to work with 1D arrays of floats representing lidar signal data. The filters aim to smooth the data, remove noise, and handle outliers, making the lidar data more reliable for further processing.
+
+The filtering operations include:
+
+- Linearly spaced values generation with ``central_linspace``
+
+- Mean convolution for smoothing with ``mean_convolution`` and ``mean_convolution_box``
+
+- Median filtering for noise reduction with ``median_filter``
+
+- Outlier removal with ``outliers_filtering`` 
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``algorithm``
+
+- ``cmath``
+
+- ``cstdlib``
+
+- ``memory``
+
+- ``rclcpp/logging.hpp``
+
+- ``rclcpp/rclcpp.hpp``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_lidar_filter_lidar_filter_node.hpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_lidar_filter`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespacelidar__filter_1ae162c387c37c3f324c0be7dd1de4f917`
+
+- :ref:`exhale_function_namespacelidar__filter_1a6b328c08f548ba09a9bae6074364d4c8`
+
+- :ref:`exhale_function_namespacelidar__filter_1a7705989d70d5be6fa41f3d4309e1da38`
+
+- :ref:`exhale_function_namespacelidar__filter_1a5f62665f5c6b90c9ed935cc7abf6f1d9`
+
+- :ref:`exhale_function_namespacelidar__filter_1a18dac0133bac5d1bc88af7c5f6db3afd`
+

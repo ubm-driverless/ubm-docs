@@ -1,0 +1,913 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacesl__oc_1_1tools" kind="namespace" language="C++">
+    <compoundname>sl_oc::tools</compoundname>
+    <innerclass refid="classsl__oc_1_1tools_1_1ConfManager" prot="public">sl_oc::tools::ConfManager</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1CSimpleIniTempl" prot="public">sl_oc::tools::CSimpleIniTempl</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1SI__ConvertA" prot="public">sl_oc::tools::SI_ConvertA</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1SI__ConvertW" prot="public">sl_oc::tools::SI_ConvertW</innerclass>
+    <innerclass refid="structsl__oc_1_1tools_1_1SI__GenericCase" prot="public">sl_oc::tools::SI_GenericCase</innerclass>
+    <innerclass refid="structsl__oc_1_1tools_1_1SI__GenericNoCase" prot="public">sl_oc::tools::SI_GenericNoCase</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1StereoSgbmPar" prot="public">sl_oc::tools::StereoSgbmPar</innerclass>
+    <innerclass refid="classsl__oc_1_1tools_1_1StopWatch" prot="public">sl_oc::tools::StopWatch</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="calibration_8hpp_1a51eabf2462a3dcda43054000de00b788" prot="public" static="no" strong="no">
+        <type></type>
+        <name>SI_Error</name>
+        <enumvalue id="calibration_8hpp_1a51eabf2462a3dcda43054000de00b788a7c165d350a4f6506c9f90e6e8e007603" prot="public">
+          <name>SI_OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>No error. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calibration_8hpp_1a51eabf2462a3dcda43054000de00b788a4c716344b13b3618985765bd2a11446a" prot="public">
+          <name>SI_UPDATED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>An existing value was updated. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calibration_8hpp_1a51eabf2462a3dcda43054000de00b788af724d40d815eddb724d2659a1fe58392" prot="public">
+          <name>SI_INSERTED</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>A new value was inserted. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calibration_8hpp_1a51eabf2462a3dcda43054000de00b788a60901892e1c871d305380634f31ba5a2" prot="public">
+          <name>SI_FAIL</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+<para>Generic failure. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calibration_8hpp_1a51eabf2462a3dcda43054000de00b788a0bf0399f3cda79e62e3d7995ef110749" prot="public">
+          <name>SI_NOMEM</name>
+          <initializer>= -2</initializer>
+          <briefdescription>
+<para>Out of memory error. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calibration_8hpp_1a51eabf2462a3dcda43054000de00b788ade3bb720585eebf96d4d014caa0f56bf" prot="public">
+          <name>SI_FILE</name>
+          <initializer>= -3</initializer>
+          <briefdescription>
+<para>File error (see errno for detail error) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="93" column="14" bodyfile="include/calibration.hpp" bodystart="93" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="enum" id="calibration_8hpp_1aa90f2e80a67048d6d16f1b462a96f085" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ConversionResult</name>
+        <enumvalue id="calibration_8hpp_1aa90f2e80a67048d6d16f1b462a96f085ac8cc3b9d4722b2b3cc28f38e6d2108ca" prot="public">
+          <name>conversionOK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calibration_8hpp_1aa90f2e80a67048d6d16f1b462a96f085ae859a707c1311a6434a707f00c4f81ed" prot="public">
+          <name>sourceExhausted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calibration_8hpp_1aa90f2e80a67048d6d16f1b462a96f085af8c82194b5c9c4919808b34a4846b577" prot="public">
+          <name>targetExhausted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calibration_8hpp_1aa90f2e80a67048d6d16f1b462a96f085abd39ed48b21b5f68281ae795041f7735" prot="public">
+          <name>sourceIllegal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2779" column="14" bodyfile="include/calibration.hpp" bodystart="2779" bodyend="2784"/>
+      </memberdef>
+      <memberdef kind="enum" id="calibration_8hpp_1a3613acdc7847bb77a6df2178e714c1c5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ConversionFlags</name>
+        <enumvalue id="calibration_8hpp_1a3613acdc7847bb77a6df2178e714c1c5a9c7f7a380da3135d69849f6c7a9510d8" prot="public">
+          <name>strictConversion</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="calibration_8hpp_1a3613acdc7847bb77a6df2178e714c1c5acbe7e5304badd7fadce50be8d5a0f031" prot="public">
+          <name>lenientConversion</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2786" column="14" bodyfile="include/calibration.hpp" bodystart="2786" bodyend="2789"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="calibration_8hpp_1acffdd6a4e1d813786c22deb23ec3576e" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int sl_oc::tools::UTF32</definition>
+        <argsstring></argsstring>
+        <name>UTF32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2768" column="22" bodyfile="include/calibration.hpp" bodystart="2768" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="calibration_8hpp_1afb080ee2bf31c65afac54f6f38aede58" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short sl_oc::tools::UTF16</definition>
+        <argsstring></argsstring>
+        <name>UTF16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2769" column="24" bodyfile="include/calibration.hpp" bodystart="2769" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="calibration_8hpp_1a07dd52ea2c75ebdf01f2608a41b31e86" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char sl_oc::tools::UTF8</definition>
+        <argsstring></argsstring>
+        <name>UTF8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2770" column="23" bodyfile="include/calibration.hpp" bodystart="2770" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="calibration_8hpp_1aa25db66d7e4465a2cde0aaecdcdde810" prot="public" static="no">
+        <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl" kindref="compound">CSimpleIniTempl</ref>&lt; char, SI_NoCase&lt; char &gt;, <ref refid="classsl__oc_1_1tools_1_1SI__ConvertA" kindref="compound">SI_ConvertA</ref>&lt; char &gt; &gt;</type>
+        <definition>typedef CSimpleIniTempl&lt;char,SI_NoCase&lt;char&gt;, SI_ConvertA&lt;char&gt; &gt; sl_oc::tools::CSimpleIniA</definition>
+        <argsstring></argsstring>
+        <name>CSimpleIniA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3935" column="2" bodyfile="include/calibration.hpp" bodystart="3935" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="calibration_8hpp_1a76bb991756a840242fe13b7393317b6a" prot="public" static="no">
+        <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl" kindref="compound">CSimpleIniTempl</ref>&lt; char, SI_Case&lt; char &gt;, <ref refid="classsl__oc_1_1tools_1_1SI__ConvertA" kindref="compound">SI_ConvertA</ref>&lt; char &gt; &gt;</type>
+        <definition>typedef CSimpleIniTempl&lt;char,SI_Case&lt;char&gt;, SI_ConvertA&lt;char&gt; &gt; sl_oc::tools::CSimpleIniCaseA</definition>
+        <argsstring></argsstring>
+        <name>CSimpleIniCaseA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3937" column="2" bodyfile="include/calibration.hpp" bodystart="3937" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="calibration_8hpp_1ab0c6a63cdb66c1f6cd00c2533cdee03b" prot="public" static="no">
+        <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl" kindref="compound">CSimpleIniTempl</ref>&lt; wchar_t, SI_NoCase&lt; wchar_t &gt;, <ref refid="classsl__oc_1_1tools_1_1SI__ConvertW" kindref="compound">SI_ConvertW</ref>&lt; wchar_t &gt; &gt;</type>
+        <definition>typedef CSimpleIniTempl&lt;wchar_t,SI_NoCase&lt;wchar_t&gt;, SI_ConvertW&lt;wchar_t&gt; &gt; sl_oc::tools::CSimpleIniW</definition>
+        <argsstring></argsstring>
+        <name>CSimpleIniW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3946" column="2" bodyfile="include/calibration.hpp" bodystart="3946" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="calibration_8hpp_1ae54b02add2c4fb6e15601e6b8ef5fe6a" prot="public" static="no">
+        <type><ref refid="classsl__oc_1_1tools_1_1CSimpleIniTempl" kindref="compound">CSimpleIniTempl</ref>&lt; wchar_t, SI_Case&lt; wchar_t &gt;, <ref refid="classsl__oc_1_1tools_1_1SI__ConvertW" kindref="compound">SI_ConvertW</ref>&lt; wchar_t &gt; &gt;</type>
+        <definition>typedef CSimpleIniTempl&lt;wchar_t,SI_Case&lt;wchar_t&gt;, SI_ConvertW&lt;wchar_t&gt; &gt; sl_oc::tools::CSimpleIniCaseW</definition>
+        <argsstring></argsstring>
+        <name>CSimpleIniCaseW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3948" column="2" bodyfile="include/calibration.hpp" bodystart="3948" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="calibration_8hpp_1add12a4369807f793ce0e71f21bf3ac9f" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int sl_oc::tools::halfShift</definition>
+        <argsstring></argsstring>
+        <name>halfShift</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2828" column="22" bodyfile="include/calibration.hpp" bodystart="2828" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="calibration_8hpp_1a977fc1bd2e975c4f7b0ea1168b7566b1" prot="public" static="yes" mutable="no">
+        <type>const UTF32</type>
+        <definition>const UTF32 sl_oc::tools::halfBase</definition>
+        <argsstring></argsstring>
+        <name>halfBase</name>
+        <initializer>= 0x0010000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2830" column="24" bodyfile="include/calibration.hpp" bodystart="2830" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="calibration_8hpp_1ad0069c26fa178885a3c4a5662921e7df" prot="public" static="yes" mutable="no">
+        <type>const UTF32</type>
+        <definition>const UTF32 sl_oc::tools::halfMask</definition>
+        <argsstring></argsstring>
+        <name>halfMask</name>
+        <initializer>= 0x3FFUL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2831" column="24" bodyfile="include/calibration.hpp" bodystart="2831" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="calibration_8hpp_1ad0cf93a3110204dfe281003bcf18cc54" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char sl_oc::tools::trailingBytesForUTF8[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>trailingBytesForUTF8</name>
+        <initializer>= {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2958" column="23" bodyfile="include/calibration.hpp" bodystart="2958" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="calibration_8hpp_1ab193c3f0e1fd5eed468fe6b51db98bea" prot="public" static="yes" mutable="no">
+        <type>const UTF32</type>
+        <definition>const UTF32 sl_oc::tools::offsetsFromUTF8[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>offsetsFromUTF8</name>
+        <initializer>= {0x00000000UL, 0x00003080UL, 0x000E2080UL,
+        0x03C82080UL, 0xFA082080UL, 0x82082080UL}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2974" column="24" bodyfile="include/calibration.hpp" bodystart="2974" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="calibration_8hpp_1a795b34b0abcfec9961022ffa2d55289c" prot="public" static="yes" mutable="no">
+        <type>const UTF8</type>
+        <definition>const UTF8 sl_oc::tools::firstByteMark[7]</definition>
+        <argsstring>[7]</argsstring>
+        <name>firstByteMark</name>
+        <initializer>= {0x00, 0x00, 0xC0, 0xE0, 0xF0, 0xF8, 0xFC}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2984" column="23" bodyfile="include/calibration.hpp" bodystart="2984" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="stereo_8hpp_1ae1d2f3b1e614750a77b952e3407327b4" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string sl_oc::tools::STEREO_PAR_FILENAME</definition>
+        <argsstring></argsstring>
+        <name>STEREO_PAR_FILENAME</name>
+        <initializer>= &quot;zed_oc_stereo.yaml&quot;</initializer>
+        <briefdescription>
+<para>STEREO_PAR_FILENAME default stereo parameter configuration file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/stereo.hpp" line="14" column="19" bodyfile="include/stereo.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="calibration_8hpp_1a6a0499b21f309924cda50985c7e7042b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ConversionResult</type>
+        <definition>ConversionResult sl_oc::tools::ConvertUTF32toUTF16</definition>
+        <argsstring>(const UTF32 **sourceStart, const UTF32 *sourceEnd, UTF16 **targetStart, UTF16 *targetEnd, ConversionFlags flags)</argsstring>
+        <name>ConvertUTF32toUTF16</name>
+        <param>
+          <type>const UTF32 **</type>
+          <declname>sourceStart</declname>
+        </param>
+        <param>
+          <type>const UTF32 *</type>
+          <declname>sourceEnd</declname>
+        </param>
+        <param>
+          <type>UTF16 **</type>
+          <declname>targetStart</declname>
+        </param>
+        <param>
+          <type>UTF16 *</type>
+          <declname>targetEnd</declname>
+        </param>
+        <param>
+          <type>ConversionFlags</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2842" column="22" bodyfile="include/calibration.hpp" bodystart="2842" bodyend="2889"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1ac0e8b124de994366769532275fbdb32c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ConversionResult</type>
+        <definition>ConversionResult sl_oc::tools::ConvertUTF16toUTF32</definition>
+        <argsstring>(const UTF16 **sourceStart, const UTF16 *sourceEnd, UTF32 **targetStart, UTF32 *targetEnd, ConversionFlags flags)</argsstring>
+        <name>ConvertUTF16toUTF32</name>
+        <param>
+          <type>const UTF16 **</type>
+          <declname>sourceStart</declname>
+        </param>
+        <param>
+          <type>const UTF16 *</type>
+          <declname>sourceEnd</declname>
+        </param>
+        <param>
+          <type>UTF32 **</type>
+          <declname>targetStart</declname>
+        </param>
+        <param>
+          <type>UTF32 *</type>
+          <declname>targetEnd</declname>
+        </param>
+        <param>
+          <type>ConversionFlags</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2893" column="22" bodyfile="include/calibration.hpp" bodystart="2893" bodyend="2947"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1a2428870f3bba27f663fef13fe2ca13eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ConversionResult</type>
+        <definition>ConversionResult sl_oc::tools::ConvertUTF16toUTF8</definition>
+        <argsstring>(const UTF16 **sourceStart, const UTF16 *sourceEnd, UTF8 **targetStart, UTF8 *targetEnd, ConversionFlags flags)</argsstring>
+        <name>ConvertUTF16toUTF8</name>
+        <param>
+          <type>const UTF16 **</type>
+          <declname>sourceStart</declname>
+        </param>
+        <param>
+          <type>const UTF16 *</type>
+          <declname>sourceEnd</declname>
+        </param>
+        <param>
+          <type>UTF8 **</type>
+          <declname>targetStart</declname>
+        </param>
+        <param>
+          <type>UTF8 *</type>
+          <declname>targetEnd</declname>
+        </param>
+        <param>
+          <type>ConversionFlags</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="2998" column="22" bodyfile="include/calibration.hpp" bodystart="2998" bodyend="3074"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1aa3ad40e2819bccb7441d8b47b9d8e2df" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool sl_oc::tools::isLegalUTF8</definition>
+        <argsstring>(const UTF8 *source, int length)</argsstring>
+        <name>isLegalUTF8</name>
+        <param>
+          <type>const UTF8 *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3089" column="17" bodyfile="include/calibration.hpp" bodystart="3089" bodyend="3116"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1acef2a34205d0a61d44338b8e7b89b1c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::isLegalUTF8Sequence</definition>
+        <argsstring>(const UTF8 *source, const UTF8 *sourceEnd)</argsstring>
+        <name>isLegalUTF8Sequence</name>
+        <param>
+          <type>const UTF8 *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>const UTF8 *</type>
+          <declname>sourceEnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3124" column="10" bodyfile="include/calibration.hpp" bodystart="3124" bodyend="3130"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1a4488263ad01827c0ad99594199719d2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ConversionResult</type>
+        <definition>ConversionResult sl_oc::tools::ConvertUTF8toUTF16</definition>
+        <argsstring>(const UTF8 **sourceStart, const UTF8 *sourceEnd, UTF16 **targetStart, UTF16 *targetEnd, ConversionFlags flags)</argsstring>
+        <name>ConvertUTF8toUTF16</name>
+        <param>
+          <type>const UTF8 **</type>
+          <declname>sourceStart</declname>
+        </param>
+        <param>
+          <type>const UTF8 *</type>
+          <declname>sourceEnd</declname>
+        </param>
+        <param>
+          <type>UTF16 **</type>
+          <declname>targetStart</declname>
+        </param>
+        <param>
+          <type>UTF16 *</type>
+          <declname>targetEnd</declname>
+        </param>
+        <param>
+          <type>ConversionFlags</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3134" column="22" bodyfile="include/calibration.hpp" bodystart="3134" bodyend="3211"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1a2dc5d1addef1dcd50755ec057a32f858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ConversionResult</type>
+        <definition>ConversionResult sl_oc::tools::ConvertUTF32toUTF8</definition>
+        <argsstring>(const UTF32 **sourceStart, const UTF32 *sourceEnd, UTF8 **targetStart, UTF8 *targetEnd, ConversionFlags flags)</argsstring>
+        <name>ConvertUTF32toUTF8</name>
+        <param>
+          <type>const UTF32 **</type>
+          <declname>sourceStart</declname>
+        </param>
+        <param>
+          <type>const UTF32 *</type>
+          <declname>sourceEnd</declname>
+        </param>
+        <param>
+          <type>UTF8 **</type>
+          <declname>targetStart</declname>
+        </param>
+        <param>
+          <type>UTF8 *</type>
+          <declname>targetEnd</declname>
+        </param>
+        <param>
+          <type>ConversionFlags</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3215" column="22" bodyfile="include/calibration.hpp" bodystart="3215" bodyend="3274"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1a481007179dab61d58148c5ec520082b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ConversionResult</type>
+        <definition>ConversionResult sl_oc::tools::ConvertUTF8toUTF32</definition>
+        <argsstring>(const UTF8 **sourceStart, const UTF8 *sourceEnd, UTF32 **targetStart, UTF32 *targetEnd, ConversionFlags flags)</argsstring>
+        <name>ConvertUTF8toUTF32</name>
+        <param>
+          <type>const UTF8 **</type>
+          <declname>sourceStart</declname>
+        </param>
+        <param>
+          <type>const UTF8 *</type>
+          <declname>sourceEnd</declname>
+        </param>
+        <param>
+          <type>UTF32 **</type>
+          <declname>targetStart</declname>
+        </param>
+        <param>
+          <type>UTF32 *</type>
+          <declname>targetEnd</declname>
+        </param>
+        <param>
+          <type>ConversionFlags</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3278" column="22" bodyfile="include/calibration.hpp" bodystart="3278" bodyend="3343"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1aab95954583f50edf3fe9efcd942ef56d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt; &amp;</type>
+        <definition>std::vector&lt;std::string&gt;&amp; sl_oc::tools::split</definition>
+        <argsstring>(const std::string &amp;s, char delim, std::vector&lt; std::string &gt; &amp;elems)</argsstring>
+        <name>split</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>delim</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>elems</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3988" column="20" bodyfile="include/calibration.hpp" bodystart="3988" bodyend="3995"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1a430082bffe0c16af5e6536b855270837" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; sl_oc::tools::split</definition>
+        <argsstring>(const std::string &amp;s, char delim)</argsstring>
+        <name>split</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>delim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="3997" column="20" bodyfile="include/calibration.hpp" bodystart="3997" bodyend="4001"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1a62ebc6820d709ab1c850bd786e3e072f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::checkFile</definition>
+        <argsstring>(std::string path)</argsstring>
+        <name>checkFile</name>
+        <param>
+          <type>std::string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4048" column="6" bodyfile="include/calibration.hpp" bodystart="4048" bodyend="4051"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1ab4aeb5d56112b0a21bdbb46cc1bf8437" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string sl_oc::tools::getRootHiddenDir</definition>
+        <argsstring>()</argsstring>
+        <name>getRootHiddenDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4053" column="27" bodyfile="include/calibration.hpp" bodystart="4053" bodyend="4088"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1a9c1dadffa0704d0123cc603ca8642918" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string sl_oc::tools::getHiddenDir</definition>
+        <argsstring>()</argsstring>
+        <name>getHiddenDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4091" column="27" bodyfile="include/calibration.hpp" bodystart="4091" bodyend="4099"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1a86089056315c8aeb84786ecabc86ce0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::downloadCalibrationFile</definition>
+        <argsstring>(unsigned int serial_number, std::string &amp;calibration_file)</argsstring>
+        <name>downloadCalibrationFile</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>serial_number</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>calibration_file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4101" column="6" bodyfile="include/calibration.hpp" bodystart="4101" bodyend="4167"/>
+      </memberdef>
+      <memberdef kind="function" id="calibration_8hpp_1a080f90de48a271e995bd4934fc9dc490" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sl_oc::tools::initCalibration</definition>
+        <argsstring>(std::string calibration_file, cv::Size2i image_size, cv::Mat &amp;map_left_x, cv::Mat &amp;map_left_y, cv::Mat &amp;map_right_x, cv::Mat &amp;map_right_y, cv::Mat &amp;cameraMatrix_left, cv::Mat &amp;cameraMatrix_right, double *baseline=nullptr)</argsstring>
+        <name>initCalibration</name>
+        <param>
+          <type>std::string</type>
+          <declname>calibration_file</declname>
+        </param>
+        <param>
+          <type>cv::Size2i</type>
+          <declname>image_size</declname>
+        </param>
+        <param>
+          <type>cv::Mat &amp;</type>
+          <declname>map_left_x</declname>
+        </param>
+        <param>
+          <type>cv::Mat &amp;</type>
+          <declname>map_left_y</declname>
+        </param>
+        <param>
+          <type>cv::Mat &amp;</type>
+          <declname>map_right_x</declname>
+        </param>
+        <param>
+          <type>cv::Mat &amp;</type>
+          <declname>map_right_y</declname>
+        </param>
+        <param>
+          <type>cv::Mat &amp;</type>
+          <declname>cameraMatrix_left</declname>
+        </param>
+        <param>
+          <type>cv::Mat &amp;</type>
+          <declname>cameraMatrix_right</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>baseline</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/calibration.hpp" line="4172" column="6" bodyfile="include/calibration.hpp" bodystart="4172" bodyend="4283"/>
+      </memberdef>
+      <memberdef kind="function" id="ocv__display_8hpp_1a35f9e533cc3d146bad0a5e81b11438b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::showImage</definition>
+        <argsstring>(std::string name, cv::UMat &amp;img, sl_oc::video::RESOLUTION res, bool change_name=true, std::string info=&quot;&quot;)</argsstring>
+        <name>showImage</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>cv::UMat &amp;</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>sl_oc::video::RESOLUTION</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>change_name</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>info</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Rescale the OpenCV T-API images [cv::UMat] according to the selected resolution to better display them on screen and show. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the display window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image to be displayed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image resolution </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>change_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Add rescaling information in window name if true </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>optional info string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ocv_display.hpp" line="27" column="6" bodyfile="include/ocv_display.hpp" bodystart="27" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="ocv__display_8hpp_1a0d9b42e65a019bc9656d7b7975bd34fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sl_oc::tools::showImage</definition>
+        <argsstring>(std::string name, cv::Mat &amp;img, sl_oc::video::RESOLUTION res, bool change_name=true, std::string info=&quot;&quot;)</argsstring>
+        <name>showImage</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>cv::Mat &amp;</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>sl_oc::video::RESOLUTION</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>change_name</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>info</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Rescale the OpenCV images [cv::Mat] according to the selected resolution to better display them on screen and show. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the display window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image to be displayed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image resolution </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>change_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Add rescaling information in window name if true </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>optional info string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ocv_display.hpp" line="64" column="6" bodyfile="include/ocv_display.hpp" bodystart="64" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/calibration.hpp" line="91" column="15"/>
+  </compounddef>
+</doxygen>

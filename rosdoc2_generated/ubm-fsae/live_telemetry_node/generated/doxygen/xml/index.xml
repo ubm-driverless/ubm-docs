@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classlive__telemetry_1_1CameraDataHandler" kind="class"><name>live_telemetry::CameraDataHandler</name>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1ad2013156250fff376ad75964cf32a742" kind="typedef"><name>CameraDataMsg</name></member>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1a0efd6eeffceca917b7c9209aeb29b923" kind="variable"><name>subscriber_</name></member>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1adb5ca77862c03b0884887169256e2ec7" kind="variable"><name>downsampler_</name></member>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1a34ac8f3427b387eec9b792080bb79353" kind="variable"><name>log_interval_</name></member>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1a75677be446477d808f16da6feb7fb844" kind="variable"><name>stats_log_counter_</name></member>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1a1c978ade8ec10d944f8a9682e63e23eb" kind="function"><name>CameraDataHandler</name></member>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1aa87f7286c77244eb378f1bc310a3f0be" kind="function"><name>getName</name></member>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1aa0fe751e49cc9b83f36c441fac9de5bf" kind="function"><name>setDownsamplingRatio</name></member>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1aa239ed67b6453f1c212debcdc8096187" kind="function"><name>onMessage</name></member>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1a881d991093996a2e219967dc714f8792" kind="function"><name>onForward</name></member>
+    <member refid="classlive__telemetry_1_1CameraDataHandler_1a44f697d5ec8b7653bf848b72ab886d14" kind="function"><name>logStats</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1Downsampler" kind="class"><name>live_telemetry::Downsampler</name>
+    <member refid="classlive__telemetry_1_1Downsampler_1a2abef976df98bb1f2e5a94e0edd9984e" kind="typedef"><name>MessageType</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a1ea1f0f466aac8d9a0868c9d2f202238" kind="typedef"><name>OnForwardCallback</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1ab76b0a7eb472fb24bd72ab5538dd9a02" kind="variable"><name>config_</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a465ea17e5a34b18132a222bf420b9a91" kind="variable"><name>processed_count_</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a4f997fbfedcb43e65c8d85640fe10947" kind="variable"><name>forwarded_count_</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a8dd7434ef9c5b27ebbb8d9a7b9248bf8" kind="variable"><name>on_forward_</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1ab5596e8a3184d9a40413217e70eead64" kind="function"><name>Downsampler</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a92456056c4d3921b2a114730cd39c683" kind="function"><name>setOnForwardCallback</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a567504b6ad88168a3239d2a2515cb19d" kind="function"><name>process</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a4f72d8f849477b04f3690abd5443a031" kind="function"><name>getRatio</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a76f196e23a67b819cd317ffa38706584" kind="function"><name>setRatio</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1aa0581c35cc0db22edc6b59c3ba10c5e3" kind="function"><name>getProcessedCount</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1ab8a69f557c77939be2261fae2d176bda" kind="function"><name>getForwardedCount</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1ace012d84c3815c10483f42d6087367cf" kind="function"><name>resetStats</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a69faef23a77c43d718a704c50b40cea7" kind="function"><name>getSkipRate</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a13806407b575add443dd272f5db5cc2d" kind="function"><name>validateConfig</name></member>
+    <member refid="classlive__telemetry_1_1Downsampler_1a91146ee4dfd4b6e1251414d81831276b" kind="function"><name>shouldForward</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1DownsamplerConfig" kind="struct"><name>live_telemetry::DownsamplerConfig</name>
+    <member refid="structlive__telemetry_1_1DownsamplerConfig_1a873253c96911b4c7300a6e4f8c651976" kind="variable"><name>ratio</name></member>
+    <member refid="structlive__telemetry_1_1DownsamplerConfig_1ab1702b80818b871840b0db5fce9d4466" kind="variable"><name>min_ratio</name></member>
+    <member refid="structlive__telemetry_1_1DownsamplerConfig_1ade541a6a487caf0f35aca4d6d6bb7858" kind="variable"><name>max_ratio</name></member>
+    <member refid="structlive__telemetry_1_1DownsamplerConfig_1a9d2f134e7f1a2b9a1a7855ee8f6cfe18" kind="function"><name>isValid</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1ExplicitTopicConfig" kind="struct"><name>live_telemetry::ExplicitTopicConfig</name>
+    <member refid="structlive__telemetry_1_1ExplicitTopicConfig_1a481170c67ec1650437391cd03bdd9924" kind="variable"><name>topic_name</name></member>
+    <member refid="structlive__telemetry_1_1ExplicitTopicConfig_1abe2a77947f83d0b2f1849f49b18e8c28" kind="variable"><name>downsample_ratio</name></member>
+    <member refid="structlive__telemetry_1_1ExplicitTopicConfig_1a961e379d840181b600f434851aca0959" kind="variable"><name>queue_size</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache" kind="struct"><name>live_telemetry::PointCloudHandler::FieldOffsetCache</name>
+    <member refid="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache_1af690ec6d7f923708a90b579ed506801f" kind="variable"><name>point_step</name></member>
+    <member refid="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache_1a016d16143e9e4a077b887895300b9cdc" kind="variable"><name>off_x</name></member>
+    <member refid="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache_1a257f9767a5239865acd2cb41574bf0a7" kind="variable"><name>off_y</name></member>
+    <member refid="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache_1aefaf5523ec869fe5aee5e76015ba3b23" kind="variable"><name>off_z</name></member>
+    <member refid="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache_1a48c8a23a0d104b9c33e10132a51b1bed" kind="variable"><name>off_i</name></member>
+    <member refid="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache_1a97eb4a71545d51acb02218c1eb342a6f" kind="variable"><name>valid</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1FoxgloveConfig" kind="struct"><name>live_telemetry::FoxgloveConfig</name>
+    <member refid="structlive__telemetry_1_1FoxgloveConfig_1a4725fb33b155bb7f5f9a1e383feac629" kind="variable"><name>log_channel</name></member>
+    <member refid="structlive__telemetry_1_1FoxgloveConfig_1a0fb190412c814a604b399b556fff5be0" kind="variable"><name>camera_data_channel</name></member>
+    <member refid="structlive__telemetry_1_1FoxgloveConfig_1afd7d9fe98b0fa7710d80a4059c5e103e" kind="variable"><name>log_interval</name></member>
+    <member refid="structlive__telemetry_1_1FoxgloveConfig_1a67449ca4ec539f381cec75c22702f8c5" kind="variable"><name>enabled</name></member>
+    <member refid="structlive__telemetry_1_1FoxgloveConfig_1a2531cd39e5a274b3da89208c64d4e883" kind="variable"><name>image_scale</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1FoxgloveLogger" kind="class"><name>live_telemetry::FoxgloveLogger</name>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76" kind="enum"><name>Level</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76aa603905470e2a5b8c13e96b579ef0dba" kind="enumvalue"><name>Debug</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76a4059b0251f66a18cb56f544728796875" kind="enumvalue"><name>Info</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76a0eaadb4fcb48a0a0ed7bc9868be9fbaa" kind="enumvalue"><name>Warning</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76a902b0d55fddef6f8d651fe1035b7d4bd" kind="enumvalue"><name>Error</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a31ee1c1ff7f86ca5ba4ceb27fc7dfe45" kind="variable"><name>config_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1ac1b5fe34a1e86155bd1599e11a7a1512" kind="variable"><name>initialized_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a906bf7adbe4df4d4f35b8bf704433e6d" kind="variable"><name>schema_data_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1af0cf67b51e5c1cceb4f71c4e9728be09" kind="variable"><name>image_scaler_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a8d828552086fe86706c6e29073e79567" kind="variable"><name>jpeg_compressor_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7e65483767d489878c6d5321158232a1" kind="variable"><name>server_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a0b3c6dfe19ed886046efd893169c1c02" kind="variable"><name>log_channel_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a2ac344d1ee9fed5da625c92bfa1e4a13" kind="variable"><name>camera_data_channel_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a1df0845fdc39c602cfddddf4b1a31954" kind="variable"><name>generic_channels_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7c1a18deac748a760e5ece68cb585bd6" kind="variable"><name>point_cloud_channels_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1ada8c7a1b2604f12b869af5165a9c34da" kind="variable"><name>msg_def_provider_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a17d44a89e961d65d2d7ef46f7fef6348" kind="variable"><name>definition_cache_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a17ec3626fe9154ac5eea4db0afd741b6" kind="variable"><name>stats_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a1af43242a30bf6b92a2369bba79de92a" kind="variable"><name>last_stats_time_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a8e6ec28cfc7a744a6e0294682a05a28d" kind="variable"><name>bytes_this_second_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a88f3504b7ad5ae8cdecff36a13ddfbcf" kind="variable"><name>messages_this_second_</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1ab96c1824240aae70147a302d8acfe186" kind="function"><name>FoxgloveLogger</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1ac200f759d7ff1117b39c1b0cbab489aa" kind="function"><name>isReady</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a17ba0ed24d95f9b182f0e12d45d8b3f8" kind="function"><name>info</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a26c82554e670390b5838a5f27520ba94" kind="function"><name>debug</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a5f7919347307bb59ec846eb84a5d5997" kind="function"><name>warning</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1addf46be30588b5de732dfee9fdb688b6" kind="function"><name>error</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a41c42315dc66cf7ba24b9a5866536c42" kind="function"><name>log</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1afb8ce662dbcee1fd3f5789df96fff0bc" kind="function"><name>publishCameraData</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1ac460a1cdb83da6dd719b21a51ea6cb1a" kind="function"><name>getStats</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a0fce06e2cc2548925d6bc41af7b8c218" kind="function"><name>getBandwidthMbps</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a311e74f20e82a62f3733167493c6cf74" kind="function"><name>getStatsString</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a518a0b76d990d6f3a993e3c9c2c1f335" kind="function"><name>setImageScaleConfig</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a947eccc49cade04718ae38872526e55a" kind="function"><name>getImageScaleConfig</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a82601ba19e2759a8f4dad0fc108a107b" kind="function"><name>getServer</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1af68dc43bbd542b81ff2f900ccf7e26b9" kind="function"><name>publishPointCloud</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1ae1c672981a0274781d351cc5bf4f7e98" kind="function"><name>publishGenericMessage</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a63993736125647097f704335d067019f" kind="function"><name>hasChannel</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1aaa5d212818a4d832b23cb7b4b42190ce" kind="function"><name>createPointCloudChannel</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a90303525c8f536586da0d3052bb30ed3" kind="function"><name>createGenericChannel</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7e2b4e0208a7ccbee230f735636b687e" kind="function"><name>initialize</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7fb3509fd0567c84df4e4dbbcd1a21c8" kind="function"><name>initializeProtobufChannel</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1af9b3ab2e07dbe2155f6aac795fe18b80" kind="function"><name>getCurrentTimestamp</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a92819e7ee3227790e91603eea8fc4440" kind="function"><name>updateStats</name></member>
+    <member refid="classlive__telemetry_1_1FoxgloveLogger_1a92d4efa569ad511b3b751d7ce458abc8" kind="function"><name>toFoxgloveLevel</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1Gateway" kind="class"><name>live_telemetry::Gateway</name>
+    <member refid="classlive__telemetry_1_1Gateway_1aed07ba6a2e49621dd0a5e91e72d40de1" kind="variable"><name>node_</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a6aba23aa1186c36f54ed2be4d35407ea" kind="variable"><name>config_</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1aacceef6d1b29679e140505c4e956b48b" kind="variable"><name>logger_</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1af71ed72878e5df46534d74940b36907c" kind="variable"><name>verbose_</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a44435d820650506364292bd539e2d571" kind="variable"><name>handled_topics_</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1af1584145fee5ce672ab9a6477d882bb2" kind="variable"><name>explicit_topics_</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a6fda3890aafae782c7f36840e9b8dbb9" kind="variable"><name>subscriptions_</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1ac826e8c22d53610ce4c4c1e8c1024a57" kind="variable"><name>discovery_timer_</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a9f9d549445cc99196349858a6a6b8e22" kind="variable"><name>SYSTEM_TOPICS</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a8fc535dce9a01827edc0c56cf0822591" kind="function"><name>Gateway</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a0434a1b7323b1d6cb20258011a3f1522" kind="function"><name>start</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a248e2494af2e79693a123d90a609a3fd" kind="function"><name>discoverAndSubscribe</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a6a667e5aa9a81f2f692f40b7e7682325" kind="function"><name>getSubscriptionCount</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a49e9c3ce47d4e03d381619ffd035aac8" kind="function"><name>getExplicitTopicCount</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a1340c3ea983f1c6648d1b937b897bc23" kind="function"><name>isBlacklisted</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1acab5d09cf9c88282d72bb3fb2598d028" kind="function"><name>isHandledByExplicitHandler</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a5af3b5409b11cce6fb7a4653e7642770" kind="function"><name>getDownsampleRatio</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a4282cb81a811a4463470c2909bbf6553" kind="function"><name>isSystemTopic</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a2e55318043578c82dff731745340d316" kind="function"><name>isExplicitTopic</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1ade2375dd1c9bf5dc9c3acd7e05a5f9db" kind="function"><name>getExplicitDownsampleRatio</name></member>
+    <member refid="classlive__telemetry_1_1Gateway_1a631b7a97120497223085736bb7e2f0d6" kind="function"><name>onMessage</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1GatewayConfig" kind="struct"><name>live_telemetry::GatewayConfig</name>
+    <member refid="structlive__telemetry_1_1GatewayConfig_1a87da237d97df9cc9ad97195fd7c4cc51" kind="variable"><name>enabled</name></member>
+    <member refid="structlive__telemetry_1_1GatewayConfig_1a1789f9c6c47c122c710a28f56629d22e" kind="variable"><name>default_downsample_ratio</name></member>
+    <member refid="structlive__telemetry_1_1GatewayConfig_1a3b00779e28d85e1432505dccbced15c0" kind="variable"><name>blacklist</name></member>
+    <member refid="structlive__telemetry_1_1GatewayConfig_1ae39e25bdbbd651f5cfe18a85722c4661" kind="variable"><name>downsample_topics</name></member>
+    <member refid="structlive__telemetry_1_1GatewayConfig_1ad77b530a4e011a25a5a25d23e5a3942e" kind="variable"><name>downsample_ratios</name></member>
+    <member refid="structlive__telemetry_1_1GatewayConfig_1a5f860e5e920078f878e4627e77348084" kind="variable"><name>explicit_topics</name></member>
+    <member refid="structlive__telemetry_1_1GatewayConfig_1add7a461911e935caf3d2ef28d080a407" kind="variable"><name>explicit_ratios</name></member>
+    <member refid="structlive__telemetry_1_1GatewayConfig_1aec5b3697e1f3b90f1b2292aef0d55a85" kind="variable"><name>explicit_queue_sizes</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1HandlerConfig" kind="struct"><name>live_telemetry::HandlerConfig</name>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a4dde150773d02a54166908ea25e6a102" kind="variable"><name>input_topic</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a2fb4af4259a51ede16c10b66ddb8daf6" kind="variable"><name>queue_size</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a1096c0638ad615192a75e0500f2c1440" kind="variable"><name>downsample_ratio</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1adeed25457a37a1c0addf7d4325ec3461" kind="variable"><name>verbose</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1aa3825cb25c692486980ca614e9214554" kind="variable"><name>scale_enabled</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a36378c68ae028a0e383a16f95720f105" kind="variable"><name>target_width</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1ab4c6aa5a4cd10132cdabe224a2ec7246" kind="variable"><name>target_height</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a71a25c19a61e6f3688784bb8884eacbe" kind="variable"><name>scale_factor</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a7432da7c86fda695ad1e280ed7668f27" kind="variable"><name>jpeg_enabled</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a8461dac360e6e9dfeb8c8f0ec284fe8e" kind="variable"><name>jpeg_quality</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1ab9f3d5717535eb5428c5ec43e65ed04c" kind="variable"><name>enable_voxel</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a7b31dd2c6aa335963101d82bcc77ed2c" kind="variable"><name>enable_crop</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a7601ca6127aec4e36dbfa2ea498fa8fb" kind="variable"><name>use_worker_queue</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a22f66e68a50c4ade3a4fdda303f73dde" kind="variable"><name>use_raw_output</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a1df60259661e4a79eba62d7820cfb0b0" kind="variable"><name>use_reliable_qos</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1ae3627f83f88b3d3085db23ebc2bbd2e6" kind="variable"><name>voxel_leaf_size</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1ab460dc5f7fb4ea6cdc48d2a3c9ba86d7" kind="variable"><name>max_radius</name></member>
+    <member refid="structlive__telemetry_1_1HandlerConfig_1a0293dba9108724dfa3dc6b582fc46c60" kind="variable"><name>include_intensity</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1HandlerRegistry" kind="class"><name>live_telemetry::HandlerRegistry</name>
+    <member refid="classlive__telemetry_1_1HandlerRegistry_1a550107a5092002f3b0a9d98543b34d3f" kind="variable"><name>factories_</name></member>
+    <member refid="classlive__telemetry_1_1HandlerRegistry_1abe4b0bd948b942999d8617f53ecea522" kind="function"><name>instance</name></member>
+    <member refid="classlive__telemetry_1_1HandlerRegistry_1a81975495ec0cede1c702de56a525dba6" kind="function"><name>registerHandler</name></member>
+    <member refid="classlive__telemetry_1_1HandlerRegistry_1a972988438992232f48b07aa4cc05fd79" kind="function"><name>createHandler</name></member>
+    <member refid="classlive__telemetry_1_1HandlerRegistry_1ab07f83ecc695f558bbafb98d21bb62a6" kind="function"><name>hasHandler</name></member>
+    <member refid="classlive__telemetry_1_1HandlerRegistry_1ad2e440072a9c7471f9d3aefcae8691c5" kind="function"><name>getRegisteredTypes</name></member>
+    <member refid="classlive__telemetry_1_1HandlerRegistry_1a5ef7512ced7c1ef236ea88c12e349b65" kind="function"><name>HandlerRegistry</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1HandlerStats" kind="struct"><name>live_telemetry::HandlerStats</name>
+    <member refid="structlive__telemetry_1_1HandlerStats_1ad81a817e2c75f0f39f89306e9094394a" kind="variable"><name>messages_received</name></member>
+    <member refid="structlive__telemetry_1_1HandlerStats_1af38061bcd96e9607d02eb8d4e2c645b2" kind="variable"><name>messages_forwarded</name></member>
+    <member refid="structlive__telemetry_1_1HandlerStats_1ae22d596ca5f74e13727c9ec8e8cc0e8f" kind="variable"><name>messages_dropped</name></member>
+    <member refid="structlive__telemetry_1_1HandlerStats_1afaf3712eb118099c283ad469115e49a2" kind="function"><name>getForwardRate</name></member>
+    <member refid="structlive__telemetry_1_1HandlerStats_1aba1dff60f7226d7170fea513eb193e85" kind="function"><name>getDropRate</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1IDataProcessor" kind="class"><name>live_telemetry::IDataProcessor</name>
+    <member refid="classlive__telemetry_1_1IDataProcessor_1aa249f26cb1bb1888bea9681f71cc8981" kind="function"><name>~IDataProcessor</name></member>
+    <member refid="classlive__telemetry_1_1IDataProcessor_1a34093788c13fcdd1aa088a7257b5231f" kind="function"><name>process</name></member>
+    <member refid="classlive__telemetry_1_1IDataProcessor_1a1dd06a12c8b426f63c27e318aef1d057" kind="function"><name>getProcessedCount</name></member>
+    <member refid="classlive__telemetry_1_1IDataProcessor_1ab6503f96b63517193e4a19c8fc7afd4b" kind="function"><name>getForwardedCount</name></member>
+    <member refid="classlive__telemetry_1_1IDataProcessor_1a7d08a84d81e319697ab3a39db829f27b" kind="function"><name>resetStats</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1ImageScaleConfig" kind="struct"><name>live_telemetry::ImageScaleConfig</name>
+    <member refid="structlive__telemetry_1_1ImageScaleConfig_1a460ccaae88b6f7baa2020eca7b62111e" kind="variable"><name>enabled</name></member>
+    <member refid="structlive__telemetry_1_1ImageScaleConfig_1a54325416ab6a11450e7253374061695f" kind="variable"><name>target_width</name></member>
+    <member refid="structlive__telemetry_1_1ImageScaleConfig_1a04e5f0c164d1a7b39b41ba9ad1d30d8d" kind="variable"><name>target_height</name></member>
+    <member refid="structlive__telemetry_1_1ImageScaleConfig_1a1b780a31d07056a382dbdc3d3510e04a" kind="variable"><name>scale_factor</name></member>
+    <member refid="structlive__telemetry_1_1ImageScaleConfig_1a644f57cd8297fef395fc8fb40598fe3c" kind="variable"><name>maintain_aspect</name></member>
+    <member refid="structlive__telemetry_1_1ImageScaleConfig_1a3e6300c8bfb5ca9bf51dc123f62dc361" kind="variable"><name>jpeg_enabled</name></member>
+    <member refid="structlive__telemetry_1_1ImageScaleConfig_1afd39f9f24f47fedaa99417df78051eae" kind="variable"><name>jpeg_quality</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1ImageScaler" kind="class"><name>live_telemetry::ImageScaler</name>
+    <member refid="classlive__telemetry_1_1ImageScaler_1aebe238cf71712d017b546efdc10feaeb" kind="variable"><name>config_</name></member>
+    <member refid="classlive__telemetry_1_1ImageScaler_1a1c3d642534031fd5fd68286a401b7473" kind="function"><name>ImageScaler</name></member>
+    <member refid="classlive__telemetry_1_1ImageScaler_1aad99e764756b6f32ce29e3bef7ec6e95" kind="function"><name>calculateOutputSize</name></member>
+    <member refid="classlive__telemetry_1_1ImageScaler_1a6026cd0432fdd3627f05f732d0187986" kind="function"><name>scaleNearest</name></member>
+    <member refid="classlive__telemetry_1_1ImageScaler_1a4925ccdc186033bd3edf27694cc1a37a" kind="function"><name>scale</name></member>
+    <member refid="classlive__telemetry_1_1ImageScaler_1a8b30bf3c32fea62db923952cde0c67a2" kind="function"><name>isEnabled</name></member>
+    <member refid="classlive__telemetry_1_1ImageScaler_1a267713bbdb5a8d2a92d6c0ef33e24695" kind="function"><name>getConfig</name></member>
+    <member refid="classlive__telemetry_1_1ImageScaler_1a454f37d66f5f5c1db189d0683ef032be" kind="function"><name>setConfig</name></member>
+    <member refid="classlive__telemetry_1_1ImageScaler_1ac0f219538693f7001761a22b34a5ac8c" kind="function"><name>getChannels</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1JpegCompressor" kind="class"><name>live_telemetry::JpegCompressor</name>
+    <member refid="classlive__telemetry_1_1JpegCompressor_1a22cdd4ac48d1b37e962c5f1865421334" kind="variable"><name>quality_</name></member>
+    <member refid="classlive__telemetry_1_1JpegCompressor_1af40da11fb682e78c6e7c9500549a65be" kind="variable"><name>compressor_</name></member>
+    <member refid="classlive__telemetry_1_1JpegCompressor_1aefe6766b7f77a3553e0e203c7674ccb2" kind="variable"><name>decompressor_</name></member>
+    <member refid="classlive__telemetry_1_1JpegCompressor_1ae479ab086f4b1115ed7fea4e984115ad" kind="function"><name>JpegCompressor</name></member>
+    <member refid="classlive__telemetry_1_1JpegCompressor_1a011865e54d961eb1e8671f8b88315b57" kind="function"><name>~JpegCompressor</name></member>
+    <member refid="classlive__telemetry_1_1JpegCompressor_1a401a57aa2efa9426805d40882fee7bc5" kind="function"><name>JpegCompressor</name></member>
+    <member refid="classlive__telemetry_1_1JpegCompressor_1a635fdaf014ddb6ed10db4921bf513eb0" kind="function"><name>operator=</name></member>
+    <member refid="classlive__telemetry_1_1JpegCompressor_1ad1e14d184be06cf6996ffed7da7aad40" kind="function"><name>compress</name></member>
+    <member refid="classlive__telemetry_1_1JpegCompressor_1a63a7c9c28c59130d5f23d3a2b818699f" kind="function"><name>setQuality</name></member>
+    <member refid="classlive__telemetry_1_1JpegCompressor_1a4b8074e4bfabe4cff8537021515d1761" kind="function"><name>getQuality</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1LiveTelemetryNode" kind="class"><name>live_telemetry::LiveTelemetryNode</name>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1ad1b7bcb442ca391e193e41dfb21f9485" kind="variable"><name>config_</name></member>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a2f7b52ef8b793093dcfad81239e1111e" kind="variable"><name>foxglove_logger_</name></member>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a4f642cf9b05e677a11fc30499110daf0" kind="variable"><name>handlers_</name></member>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a3579acee1f933bd3a10a708a8af10aca" kind="variable"><name>gateway_</name></member>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1ae0f3c0e7818574758b171b48f9dc1767" kind="function"><name>LiveTelemetryNode</name></member>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1ae3802f9f690070e060b90bdcfdc07aad" kind="function"><name>LiveTelemetryNode</name></member>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a2780bcefe4cadc15306cc085964cfb04" kind="function"><name>getConfig</name></member>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a65b8a3676cd6ed48debf76019cc130fe" kind="function"><name>initializeParameters</name></member>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1a09156fbddbf53a38fb2009670545de82" kind="function"><name>initializeHandlers</name></member>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1abbd928c05c9342e1314727c21202f625" kind="function"><name>logConfiguration</name></member>
+    <member refid="classlive__telemetry_1_1LiveTelemetryNode_1aaf5082e48d18107bd8d3209ff9bf669f" kind="function"><name>toHandlerConfig</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1MessageDefinitionProvider" kind="class"><name>live_telemetry::MessageDefinitionProvider</name>
+    <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a7787f1901057fc6c91a1ef3ec9ac8479" kind="variable"><name>cache_</name></member>
+    <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a5f39a07120a768edeaa30426641b6a1f" kind="variable"><name>BUILTINS</name></member>
+    <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a95ccb62607e3c6d9e6fecc8533c4dff5" kind="function"><name>getFullDefinition</name></member>
+    <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a77dbf2f9d7f047da7c9e1d208fb537d8" kind="function"><name>toShortType</name></member>
+    <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a4667c4fae77b068a5976b442d374ce3c" kind="function"><name>parseTypeName</name></member>
+    <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1addb35cc1250fe96e343041345986e27a" kind="function"><name>resolveTypeName</name></member>
+    <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1a2df6d7cedb5f5ab1a8967007bbf94cc9" kind="function"><name>readMsgFile</name></member>
+    <member refid="classlive__telemetry_1_1MessageDefinitionProvider_1aeb6a342d476cba953ed2c87a6f0b331b" kind="function"><name>enqueueDependencies</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1PointCloudHandler" kind="class"><name>live_telemetry::PointCloudHandler</name>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a49f646208bfd764b43cc8decd75464f4" kind="typedef"><name>PointCloud2Msg</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1ab89d3b6a61e48a3007cabadd0a6caa53" kind="variable"><name>subscriber_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a809d1ab1f810ef9ab2cdbf4595f734e9" kind="variable"><name>downsampler_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a366b6f12d18c9be6efcaf77385cf5d49" kind="variable"><name>voxel_leaf_size_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1abaf2fbd805e8cef5efedb78d189ab3ef" kind="variable"><name>max_radius_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1aee411adf7850d2dc815214a995690618" kind="variable"><name>max_radius_sq_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a61829c30ee329d18a2f4017c8dffdb6b" kind="variable"><name>include_intensity_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a8b88c5808468d602775b30ee420fd59d" kind="variable"><name>enable_voxel_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1aebe10c71be85ea1ba58771bc858d9baa" kind="variable"><name>enable_crop_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a6994478acf9276ccc44b697d45db90ab" kind="variable"><name>use_worker_queue_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1abfddb58bf0b5f62ddd94435ffefc9a29" kind="variable"><name>use_raw_output_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1aaf17c1d0e8abe89d564c81064f12f969" kind="variable"><name>use_reliable_qos_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1af538d89cef9ff7ed47fa76e27a4ab10c" kind="variable"><name>verbose_perf_logging_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1ad15e3af568b932cfa2d15d7a29f5d4dd" kind="variable"><name>log_interval_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a579cc3b68609ae1d6a786efa5c3d4c77" kind="variable"><name>stats_log_counter_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a9a45b8e49f50368967c9c2610a3c4a27" kind="variable"><name>queue_drop_counter_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1aed8da9940d108dd3c305599a0e2c0da6" kind="variable"><name>field_cache_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a5a807422fda8bd95b56f6250a34c0089" kind="variable"><name>queue_mutex_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a3e9f8571766817c498baa4a9ccbb8d3a" kind="variable"><name>queue_cv_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a5e5d943cb2e73c7a5655e3409595b9c8" kind="variable"><name>processing_queue_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1aadaab98a52891c1aef23468f474f7da1" kind="variable"><name>worker_thread_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a55579ccb12616c6ad5ba089c787ec20c" kind="variable"><name>stop_worker_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a6d6ab06e0edec87ddbe5da398b08489b" kind="variable"><name>max_queue_size_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a1a27088b961ff4dec0056b5df2215a84" kind="variable"><name>pointcloud_serializer_</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a230a757e93271de21f3ef3d3b0e27daa" kind="function"><name>PointCloudHandler</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1adbb09afc89e9e5ede15efd7a6d016961" kind="function"><name>~PointCloudHandler</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a440d7995abb4f2a88ffeb25394aa7572" kind="function"><name>getName</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a3a03d6272a51331074c7518575e7a7d4" kind="function"><name>setDownsamplingRatio</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1aacf1e5b4bcb8979ea099f639d605f400" kind="function"><name>onMessage</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1ac5b87f9519dde1cdb886cdf6ad7bfdcc" kind="function"><name>onForward</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a56606878b71a1a69d3d3aee7f9a03253" kind="function"><name>workerLoop</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a687b68b65c2e7824e1fb2334aa9d17b8" kind="function"><name>processQueuedMessage</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a1469dac8bdfe646875e2857c649fbed3" kind="function"><name>publishRawPointCloud</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a6378219248394ab27c7bfbfc16ee56ee" kind="function"><name>logStats</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1ae897bae32eaceb4bc70f1b27fdb2d6c9" kind="function"><name>applyRadiusCrop</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1af797ae2e2d1ce616879bd653af7b61bb" kind="function"><name>applyVoxelGrid</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a927b07beede14dc3320e411c59b85a0d" kind="function"><name>packAsProtobuf</name></member>
+    <member refid="classlive__telemetry_1_1PointCloudHandler_1a574cfbc4e3951df8940fde9f5fbfb7f1" kind="function"><name>packFilteredCloudAsProtobuf</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1FoxgloveLogger_1_1ProtobufChannelEntry" kind="struct"><name>live_telemetry::FoxgloveLogger::ProtobufChannelEntry</name>
+    <member refid="structlive__telemetry_1_1FoxgloveLogger_1_1ProtobufChannelEntry_1a663b21510b61128e8be5a886421cf59c" kind="variable"><name>channel</name></member>
+    <member refid="structlive__telemetry_1_1FoxgloveLogger_1_1ProtobufChannelEntry_1af56a61041a892de27812962db5af85ae" kind="variable"><name>schema_data</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1PublishStats" kind="struct"><name>live_telemetry::PublishStats</name>
+    <member refid="structlive__telemetry_1_1PublishStats_1af7572be626480eaea621ebbff5806ad1" kind="variable"><name>total_bytes_sent</name></member>
+    <member refid="structlive__telemetry_1_1PublishStats_1adf669022d30269b1d7bfb9241c28d930" kind="variable"><name>total_messages_sent</name></member>
+    <member refid="structlive__telemetry_1_1PublishStats_1ab3f1b1bccbd88b0938e924b56d5210e2" kind="variable"><name>bytes_last_second</name></member>
+    <member refid="structlive__telemetry_1_1PublishStats_1abdd9a0d1919517bc4cade941ce705e95" kind="variable"><name>messages_last_second</name></member>
+    <member refid="structlive__telemetry_1_1PublishStats_1a70f0650f2e7db8c8c49b598b1e578acd" kind="variable"><name>bandwidth_mbps</name></member>
+    <member refid="structlive__telemetry_1_1PublishStats_1a5667df1f9f610ef265635bca70ab76de" kind="variable"><name>avg_message_size_kb</name></member>
+    <member refid="structlive__telemetry_1_1PublishStats_1a1eccabbbc735aff9532c183aaffe81b8" kind="variable"><name>original_image_bytes</name></member>
+    <member refid="structlive__telemetry_1_1PublishStats_1ab8d77f0b267a6df8f6d505e4bccc75c5" kind="variable"><name>scaled_image_bytes</name></member>
+    <member refid="structlive__telemetry_1_1PublishStats_1a0334e8c7d1bc9ff8cbeec5d69dae1c21" kind="variable"><name>compression_ratio</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1TelemetryConfig" kind="struct"><name>live_telemetry::TelemetryConfig</name>
+    <member refid="structlive__telemetry_1_1TelemetryConfig_1a2dfc1b665a04833ad42e5b199b5fee7f" kind="variable"><name>foxglove</name></member>
+    <member refid="structlive__telemetry_1_1TelemetryConfig_1a8d48e79abc91c1fc8abcf4bf1df8c2b7" kind="variable"><name>gateway</name></member>
+    <member refid="structlive__telemetry_1_1TelemetryConfig_1a45cffd9a491eddedb341cd6c33bb4ebf" kind="variable"><name>handlers</name></member>
+    <member refid="structlive__telemetry_1_1TelemetryConfig_1acc9a591ea982c8c871f19c7a01245a11" kind="variable"><name>verbose</name></member>
+  </compound>
+  <compound refid="classlive__telemetry_1_1TopicHandler" kind="class"><name>live_telemetry::TopicHandler</name>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a1c292deb108e63785e7e3968a195b2a2" kind="variable"><name>node_</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a039d9637fa4acfec32fcd85d6a878b9c" kind="variable"><name>config_</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1ad9bb236e1bb4b85a18dba4aa36f388b3" kind="variable"><name>logger_</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1abbb40a10b5815acb437fe63f455ddb07" kind="variable"><name>stats_</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1addf9ed7f3579ee4642dba2ac2fafa020" kind="function"><name>TopicHandler</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a74a407290bc290250674b9cb210130f7" kind="function"><name>~TopicHandler</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a9c2bebf897706399b4ba401f2d696ae2" kind="function"><name>TopicHandler</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a73e12a4a6758c88edab63ae2fcebcba3" kind="function"><name>operator=</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a9ff3a67150695434f273352276ce92c6" kind="function"><name>TopicHandler</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a4347b11e89d90c9e0468079f100544c8" kind="function"><name>operator=</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1aa65adc11e497610bc4907516645cfd01" kind="function"><name>getName</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a3d65dcdb9e8aeafff1aa31127187c3cc" kind="function"><name>getInputTopic</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a6b8da113fb9c27d9ab56f74a99c3338a" kind="function"><name>getStats</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a8b17ee21369c866a4ea64e7f7311c0e4" kind="function"><name>isActive</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1a9197075b1a5012036ae148a76da39b89" kind="function"><name>shouldForward</name></member>
+    <member refid="classlive__telemetry_1_1TopicHandler_1ac5f3787aa080dfae5e28bacc3652ad6f" kind="function"><name>logVerbose</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1TopicHandlerEntry" kind="struct"><name>live_telemetry::TopicHandlerEntry</name>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1ab9731a2cf245f75cf8ebf5d45b33a852" kind="variable"><name>name</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1aa18e131e68c95032ac6ba229134bd3c8" kind="variable"><name>handler_type</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1ac59e977a91c0b10ea0522c3bad9acfc0" kind="variable"><name>input_topic</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1aac9e2ae0f52f5b580f0f78abf5e27152" kind="variable"><name>queue_size</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1ad0a7e4b0145294a0a03e95e407c3f9f9" kind="variable"><name>downsample_ratio</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1a286d2784e019bb3b882ee797ac3616d1" kind="variable"><name>scale_enabled</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1a2ec2baf055fb316baa069b4d8492cc73" kind="variable"><name>target_width</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1af8fc60da265455b06f50fffd54352eba" kind="variable"><name>target_height</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1acb9e06733e61521f69f953cc8feae9f8" kind="variable"><name>scale_factor</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1ae8d3a48ac6e986b8e5d00b11b48fbd6f" kind="variable"><name>jpeg_enabled</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1a000e451b4fd78759e7b1882f627a0930" kind="variable"><name>jpeg_quality</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1a44f96f6db6522953b50727579901f541" kind="variable"><name>enable_voxel</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1a588af7200930db288e17032aab23f21e" kind="variable"><name>enable_crop</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1a4654779f0c11efb9747bd9ab3a65991f" kind="variable"><name>use_worker_queue</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1aa33c001f2c996a69caee11542e20af13" kind="variable"><name>use_raw_output</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1acf2c8883b194ecb8cb0c9187d4d0312f" kind="variable"><name>use_reliable_qos</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1ad31b9d238ae3112931d9c1db1697048a" kind="variable"><name>voxel_leaf_size</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1a755bab09ff0e0658facea90c05cdee85" kind="variable"><name>max_radius</name></member>
+    <member refid="structlive__telemetry_1_1TopicHandlerEntry_1ada6f151b2b6c489cf042731d67bedc8c" kind="variable"><name>include_intensity</name></member>
+  </compound>
+  <compound refid="structlive__telemetry_1_1TopicSubscription" kind="struct"><name>live_telemetry::TopicSubscription</name>
+    <member refid="structlive__telemetry_1_1TopicSubscription_1ad1fd0a8c10aecb274454240e77059489" kind="variable"><name>topic_name</name></member>
+    <member refid="structlive__telemetry_1_1TopicSubscription_1a11b3676afd9a69dda4682d0eaa77957d" kind="variable"><name>topic_type</name></member>
+    <member refid="structlive__telemetry_1_1TopicSubscription_1adfe983ceb817e84e4fea83987c965c3f" kind="variable"><name>downsample_ratio</name></member>
+    <member refid="structlive__telemetry_1_1TopicSubscription_1ae7529a3c37745e3953a9250cb75fe5ff" kind="variable"><name>message_count</name></member>
+    <member refid="structlive__telemetry_1_1TopicSubscription_1ac388be2b5370d796e4d4d93752cbe7a3" kind="variable"><name>is_explicit</name></member>
+    <member refid="structlive__telemetry_1_1TopicSubscription_1a4b605a7742cb3152051f9bc09fccaf45" kind="variable"><name>subscription</name></member>
+  </compound>
+  <compound refid="namespacelive__telemetry" kind="namespace"><name>live_telemetry</name>
+    <member refid="downsampler_8hpp_1aa2c8255ba1f8ca167a256b784c994ddd" kind="typedef"><name>CameraDataDownsampler</name></member>
+    <member refid="point__cloud__handler_8hpp_1a28ee942b3cd4f29e99a564ae5240f529" kind="typedef"><name>PointCloud2Downsampler</name></member>
+    <member refid="topic__handler_8hpp_1a36bdfa6a4084a2867bf3bb495a57398e" kind="typedef"><name>HandlerFactory</name></member>
+    <member refid="handler__registry_8hpp_1af0e009243fdcaeca9fc2e1c3d46ef28f" kind="function"><name>registerBuiltinHandlers</name></member>
+    <member refid="protobuf__converter_8hpp_1a636f410d668aa2133d0167862b77b19f" kind="function"><name>SerializeFdSet</name></member>
+    <member refid="protobuf__converter_8hpp_1ad7ccfbc68745767e5472a03e85032818" kind="function"><name>toProtobuf</name></member>
+    <member refid="protobuf__converter_8hpp_1a414ba4df407aadc6d4f52ec37eeede52" kind="function"><name>toProtobuf</name></member>
+  </compound>
+  <compound refid="camera__data__handler_8hpp" kind="file"><name>camera_data_handler.hpp</name>
+  </compound>
+  <compound refid="config_8hpp" kind="file"><name>config.hpp</name>
+  </compound>
+  <compound refid="downsampler_8hpp" kind="file"><name>downsampler.hpp</name>
+  </compound>
+  <compound refid="foxglove__logger_8hpp" kind="file"><name>foxglove_logger.hpp</name>
+  </compound>
+  <compound refid="gateway_8hpp" kind="file"><name>gateway.hpp</name>
+  </compound>
+  <compound refid="handler__registry_8hpp" kind="file"><name>handler_registry.hpp</name>
+  </compound>
+  <compound refid="image__scaler_8hpp" kind="file"><name>image_scaler.hpp</name>
+  </compound>
+  <compound refid="jpeg__compressor_8hpp" kind="file"><name>jpeg_compressor.hpp</name>
+  </compound>
+  <compound refid="live__telemetry__node_8hpp" kind="file"><name>live_telemetry_node.hpp</name>
+  </compound>
+  <compound refid="message__definition__provider_8hpp" kind="file"><name>message_definition_provider.hpp</name>
+  </compound>
+  <compound refid="point__cloud__handler_8hpp" kind="file"><name>point_cloud_handler.hpp</name>
+  </compound>
+  <compound refid="protobuf__converter_8hpp" kind="file"><name>protobuf_converter.hpp</name>
+  </compound>
+  <compound refid="topic__handler_8hpp" kind="file"><name>topic_handler.hpp</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_b933d6942de04c158220533e175c887a" kind="dir"><name>include/live_telemetry_node</name>
+  </compound>
+</doxygenindex>

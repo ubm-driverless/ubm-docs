@@ -1,0 +1,1480 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classExtendedKalmanFilter" kind="class" language="C++" prot="public">
+    <compoundname>ExtendedKalmanFilter</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a9ebed2ac2890ab93fa45254c31cdeeeb" prot="public" static="no" mutable="no">
+        <type>arma::vec8</type>
+        <definition>arma::vec8 ExtendedKalmanFilter::model_current_state_estimate</definition>
+        <argsstring></argsstring>
+        <name>model_current_state_estimate</name>
+        <briefdescription>
+<para>Current state estimate of the model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="65" column="18" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a7b5dc47485bd95f429e5b03f4b582ce1" prot="public" static="no" mutable="no">
+        <type>arma::vec4</type>
+        <definition>arma::vec4 ExtendedKalmanFilter::model_tyre_forces</definition>
+        <argsstring></argsstring>
+        <name>model_tyre_forces</name>
+        <briefdescription>
+<para>Tyre forces at the front and rear axles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="66" column="18" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a092e7e97f210a332f06796fcea45e13c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <briefdescription>
+<para>Variable that determines the amount of adaptation of the covariance matrices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="96" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a1ff4ceaf8bd720639e26e52f1dedc139" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExtendedKalmanFilter::adaptive_R</definition>
+        <argsstring></argsstring>
+        <name>adaptive_R</name>
+        <briefdescription>
+<para>Flag that indicates whether the measurement covariance matrix is adapted or not. <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="97" column="12" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1acf6531d752c724786eb65e98defd8460" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::P_weight_param</definition>
+        <argsstring></argsstring>
+        <name>P_weight_param</name>
+        <briefdescription>
+<para>Diagonal values of the Parameter estimate covariance matrix P. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="98" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ad2aa239813f8372d791e46b420a19dea" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; ExtendedKalmanFilter::Q_weight_process</definition>
+        <argsstring></argsstring>
+        <name>Q_weight_process</name>
+        <briefdescription>
+<para>Diagonal values of the Process Covariance Matrix Q. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="99" column="19" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ae27b358a0b8369a87d3a98b0b716d726" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; ExtendedKalmanFilter::Q_weight_parameters</definition>
+        <argsstring></argsstring>
+        <name>Q_weight_parameters</name>
+        <briefdescription>
+<para>Diagonal values of the Parameter Estimate Covariance Matrix Q. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="100" column="19" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1aab9c32b88015b528897498dd345ac904" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; ExtendedKalmanFilter::R_weight_measurement</definition>
+        <argsstring></argsstring>
+        <name>R_weight_measurement</name>
+        <briefdescription>
+<para>Diagonal values of the Measurement Covariance Matrix Q. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="101" column="19" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a6e38d1e7942307ac0b0073ebefb2499b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExtendedKalmanFilter::debug</definition>
+        <argsstring></argsstring>
+        <name>debug</name>
+        <briefdescription>
+<para>Flag to indicate if debug mode is active. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="102" column="12" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1abce2e09aaeb42a363e50a6f0254ce699" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ExtendedKalmanFilter::state_dim</definition>
+        <argsstring></argsstring>
+        <name>state_dim</name>
+        <briefdescription>
+<para>State dimension. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="103" column="11" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a1ffe6a523ff4ec99220dc3652bd80e14" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::adaptive_weight</definition>
+        <argsstring></argsstring>
+        <name>adaptive_weight</name>
+        <briefdescription>
+<para>Amount of trust in the adaptation of Covariance matrix Q for state estimate <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="104" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ac3e091c7ea96564c5372439941f7bdcd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::wheel_base_sae</definition>
+        <argsstring></argsstring>
+        <name>wheel_base_sae</name>
+        <briefdescription>
+<para>Length between front and rear axles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="105" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a5c1e5fc20e9b97bda4de8a38ef7109c3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::radius_wheel</definition>
+        <argsstring></argsstring>
+        <name>radius_wheel</name>
+        <briefdescription>
+<para>Radius of the wheels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="106" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ad12f6c5ca60c4a37904941277a8f6ca8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::cog_pct_front</definition>
+        <argsstring></argsstring>
+        <name>cog_pct_front</name>
+        <briefdescription>
+<para>Percentage indicating the distribution of the center of gravity between front and rear axles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="107" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a48ef701105fa6ac0bd5fe392544766e6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::mass_sae</definition>
+        <argsstring></argsstring>
+        <name>mass_sae</name>
+        <briefdescription>
+<para>Mass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="108" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ae4c0776e2d42aab3733543d52b5973be" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+<para>Constant of gravity <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="109" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a98517ba0a9ca5d6639424fd281b7a8e2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::inertia_sae</definition>
+        <argsstring></argsstring>
+        <name>inertia_sae</name>
+        <briefdescription>
+<para>Moment of Inertia around the z-axis centered on the cog. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="110" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ac7029adb8d84e0edf03e1502ee0900e4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::aereodynamic_coefficient</definition>
+        <argsstring></argsstring>
+        <name>aereodynamic_coefficient</name>
+        <briefdescription>
+<para>Aerodynamic coefficient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="111" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a29eb36b89669b743718be03f15919d4d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::rolling_resistance</definition>
+        <argsstring></argsstring>
+        <name>rolling_resistance</name>
+        <briefdescription>
+<para>Rolling resistance <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="112" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ae077ffcae239df318de28194af966205" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; ExtendedKalmanFilter::pacejka_parameters</definition>
+        <argsstring></argsstring>
+        <name>pacejka_parameters</name>
+        <briefdescription>
+<para>Pacejka parameters for accurate tyre model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="113" column="19" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a781bb5d7bddd81551a856c798706f9fa" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExtendedKalmanFilter::parameter_EKF</definition>
+        <argsstring></argsstring>
+        <name>parameter_EKF</name>
+        <briefdescription>
+<para>To activate or not parameter estimation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="114" column="12" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a88ef0ab147512025b08b32652829cb88" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::tao_filter_parameter</definition>
+        <argsstring></argsstring>
+        <name>tao_filter_parameter</name>
+        <briefdescription>
+<para>To filter out accelerations predictions and measurements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="115" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a44e4c5de817ce22fff8913c28d4b8534" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExtendedKalmanFilter::plot</definition>
+        <argsstring></argsstring>
+        <name>plot</name>
+        <briefdescription>
+<para>To plot the graphs of the model propagation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="116" column="12" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a89eca996f899812e9d5b27bb4f450bca" prot="private" static="no" mutable="no">
+        <type>arma::vec8</type>
+        <definition>arma::vec8 ExtendedKalmanFilter::current_state_estimate</definition>
+        <argsstring></argsstring>
+        <name>current_state_estimate</name>
+        <briefdescription>
+<para>Current estimate of the EKF. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="119" column="18" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a0e276ad9d4231dde4ec4e7b25f3c2945" prot="private" static="no" mutable="no">
+        <type>arma::vec6</type>
+        <definition>arma::vec6 ExtendedKalmanFilter::current_parameter_estimate</definition>
+        <argsstring></argsstring>
+        <name>current_parameter_estimate</name>
+        <briefdescription>
+<para>Current parameter estimate of the EKF. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="120" column="18" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ac021a9100466f4969141abd97bc845d9" prot="private" static="no" mutable="no">
+        <type>arma::vec8</type>
+        <definition>arma::vec8 ExtendedKalmanFilter::refined_state_estimate</definition>
+        <argsstring></argsstring>
+        <name>refined_state_estimate</name>
+        <briefdescription>
+<para>Refined estimate of the EKF <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="121" column="18" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a22635fb188701d77df2fec07dd427111" prot="private" static="no" mutable="no">
+        <type>arma::vec6</type>
+        <definition>arma::vec6 ExtendedKalmanFilter::refined_parameter_estimate</definition>
+        <argsstring></argsstring>
+        <name>refined_parameter_estimate</name>
+        <briefdescription>
+<para>Refined parameter estimate of the EKF. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="122" column="18" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a78c7612d04cedf753738fae0dd084083" prot="private" static="no" mutable="no">
+        <type>arma::vec8</type>
+        <definition>arma::vec8 ExtendedKalmanFilter::next_state_estimate</definition>
+        <argsstring></argsstring>
+        <name>next_state_estimate</name>
+        <briefdescription>
+<para>Next state estimate based on the vehicle model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="123" column="18" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1aa83686ef796dcab206f18726e0e542e3" prot="private" static="no" mutable="no">
+        <type>arma::vec7</type>
+        <definition>arma::vec7 ExtendedKalmanFilter::innovation</definition>
+        <argsstring></argsstring>
+        <name>innovation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="124" column="18" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a914b213cd76d2afc804db5ec77e661ce" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::Q_process_cov</definition>
+        <argsstring></argsstring>
+        <name>Q_process_cov</name>
+        <briefdescription>
+<para>Q[k] Covariance matrix of the process model. It models the uncertainty coming from the model used for the prediction step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="127" column="17" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a3a7d00db9deee54d5c33e3bdb53215e4" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::Q_param_cov</definition>
+        <argsstring></argsstring>
+        <name>Q_param_cov</name>
+        <briefdescription>
+<para>Q[k] Covariance matrix of the parameter estimate. It models the uncertainty of the current estimate of the parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="128" column="17" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a34b3e049f22faf51d5578d5f2a1d1692" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::R_meas_cov</definition>
+        <argsstring></argsstring>
+        <name>R_meas_cov</name>
+        <briefdescription>
+<para>R[k] Covariance matrix of the measurement model. It modeles the uncertainty coming from the measurement used in the update step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="129" column="17" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a01e3f7c376123aad25557894ba9c68c1" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::P_state_estimate_cov</definition>
+        <argsstring></argsstring>
+        <name>P_state_estimate_cov</name>
+        <briefdescription>
+<para>P[k] Covariance matrix of the state estimate. It models the uncertainty of the current estimate of the EKF (before the measurement) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="130" column="17" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a30281824ef3962b4418305da875486d1" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::P_refined_cov</definition>
+        <argsstring></argsstring>
+        <name>P_refined_cov</name>
+        <briefdescription>
+<para>P^+[k] Covariance matrix of the refined state estimate. It models the uncertainty of the final estimate of the EKF. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="131" column="17" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a3a386459c9abb87adc1a8a17387d58bf" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::P_next_state_estimate_cov</definition>
+        <argsstring></argsstring>
+        <name>P_next_state_estimate_cov</name>
+        <briefdescription>
+<para>P[k+1] Covariance matrix of the predicted state estimate. It models the uncertainty of the estimate made at the prediction step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="132" column="17" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ae65a6b8adb14fd13a7194e305bb948a3" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::P_param_estimate_cov</definition>
+        <argsstring></argsstring>
+        <name>P_param_estimate_cov</name>
+        <briefdescription>
+<para>P[k] Covariance matrix of the parameter estimate. It models the uncertainty of the current estimate of the parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="133" column="17" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a3fe37142db762e8da0fe589a5d162883" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::P_param_refined_cov</definition>
+        <argsstring></argsstring>
+        <name>P_param_refined_cov</name>
+        <briefdescription>
+<para>P^+[k] Covariance matrix of the refined parameter estimate. It models the uncertainty of the final estimate of the parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="134" column="17" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a99ad424a0e9217d665705e386409df2f" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::kalman_param_gain</definition>
+        <argsstring></argsstring>
+        <name>kalman_param_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="137" column="17" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a766bd81177ad47e985cc518a4d37cfca" prot="private" static="no" mutable="no">
+        <type>arma::vec4</type>
+        <definition>arma::vec4 ExtendedKalmanFilter::tyre_forces</definition>
+        <argsstring></argsstring>
+        <name>tyre_forces</name>
+        <briefdescription>
+<para>Tyre forces in the x and y directions for front and rear axles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="139" column="18" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a912f659f716e9712c6fae3b5f45bcd06" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::cog_to_front_sae</definition>
+        <argsstring></argsstring>
+        <name>cog_to_front_sae</name>
+        <briefdescription>
+<para>Distance from the cog to the front axle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="140" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a767aece830b1b61859eda11e9bf32e36" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::Fz_front</definition>
+        <argsstring></argsstring>
+        <name>Fz_front</name>
+        <briefdescription>
+<para>Loading force on the front axle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="141" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ab47bf223d7cf3ad155f704c6e23e9121" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::Fz_rear</definition>
+        <argsstring></argsstring>
+        <name>Fz_rear</name>
+        <briefdescription>
+<para>Loading force on the rear axle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="142" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ad3673754ef1da6e1e46e0b3e01fbbb70" prot="private" static="no" mutable="no">
+        <type>arma::vec6</type>
+        <definition>arma::vec6 ExtendedKalmanFilter::last_filtered_param</definition>
+        <argsstring></argsstring>
+        <name>last_filtered_param</name>
+        <briefdescription>
+<para>Needed to filter parameter variation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="144" column="18" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a5f8bddb1bfa128a3f293c7c12eb111d0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::last_ay_filtered</definition>
+        <argsstring></argsstring>
+        <name>last_ay_filtered</name>
+        <briefdescription>
+<para>Needed to filter predicted lateral acceleration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="145" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1aa807f8d25616b69444d0acde73e4cf5c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ExtendedKalmanFilter::last_ax_filtered</definition>
+        <argsstring></argsstring>
+        <name>last_ax_filtered</name>
+        <briefdescription>
+<para>Needed to filter longitudinal acceleration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="146" column="14" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a0394ce9dd949e85a3d2d86bc03640f38" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; arma::vec &gt;</type>
+        <definition>std::vector&lt;arma::vec&gt; ExtendedKalmanFilter::refined_parameters_history</definition>
+        <argsstring></argsstring>
+        <name>refined_parameters_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="149" column="19" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a4a488d314994156a8c16255f597f7af8" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; arma::vec &gt;</type>
+        <definition>std::vector&lt;arma::vec&gt; ExtendedKalmanFilter::innovation_history</definition>
+        <argsstring></argsstring>
+        <name>innovation_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="150" column="19" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a035222208d9f9b3f65b9673edbb3d130" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; arma::vec &gt;</type>
+        <definition>std::vector&lt;arma::vec&gt; ExtendedKalmanFilter::ay_history</definition>
+        <argsstring></argsstring>
+        <name>ay_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="151" column="19" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a58b0154ab338602003f0e9088ca54d6e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; arma::vec &gt;</type>
+        <definition>std::vector&lt;arma::vec&gt; ExtendedKalmanFilter::yaw_rate_history</definition>
+        <argsstring></argsstring>
+        <name>yaw_rate_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="152" column="19" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a2cec446a454445844603202bf2071530" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; arma::vec &gt;</type>
+        <definition>std::vector&lt;arma::vec&gt; ExtendedKalmanFilter::positions_history</definition>
+        <argsstring></argsstring>
+        <name>positions_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="153" column="19" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a7420f288285e2b527ced48886ca1aa2c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; arma::vec &gt;</type>
+        <definition>std::vector&lt;arma::vec&gt; ExtendedKalmanFilter::velocities_history</definition>
+        <argsstring></argsstring>
+        <name>velocities_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="154" column="19" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a0ce8585eb639cdec812c7cb33d6dfa0d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ExtendedKalmanFilter::iterations</definition>
+        <argsstring></argsstring>
+        <name>iterations</name>
+        <briefdescription>
+<para>Number of iterations for the model propagation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="155" column="11" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ac8e48424115359109835f5970e63b3a1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExtendedKalmanFilter::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <briefdescription>
+<para>Flag to indicate if the filter is initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="157" column="12" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1ab77810f9317031f77385c68f4284f34c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExtendedKalmanFilter::filter_acc</definition>
+        <argsstring></argsstring>
+        <name>filter_acc</name>
+        <briefdescription>
+<para>Flag to indicate if the filter is used for acceleration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="158" column="12" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1a8f32f302397e5f03ed85efcf3cd08cd1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExtendedKalmanFilter::propagation_model</definition>
+        <argsstring></argsstring>
+        <name>propagation_model</name>
+        <briefdescription>
+<para>Flag to indicate if we want to visualize model propagation <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="159" column="12" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classExtendedKalmanFilter_1aa11622431bbe967ce6f8c1522d8cc52c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ExtendedKalmanFilter::propagation_model_init</definition>
+        <argsstring></argsstring>
+        <name>propagation_model_init</name>
+        <briefdescription>
+<para>Flag to indicate if the propagation model is initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="160" column="12" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classExtendedKalmanFilter_1aa6c7de5019997815e38f8ca4d6c9ce52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ExtendedKalmanFilter::ExtendedKalmanFilter</definition>
+        <argsstring>(const double &amp;alpha, const bool &amp;adaptive_R, const double &amp;P_weight_param, const std::vector&lt; double &gt; &amp;Q_weight_process, const std::vector&lt; double &gt; &amp;Q_weight_parameters, const std::vector&lt; double &gt; &amp;R_weight_measurement, const int &amp;state_dim, const double &amp;adaptive_weight, const double &amp;wheel_base_sae, const double &amp;radius_wheel, const double &amp;cog_pct_front, const double &amp;mass_sae, const double &amp;g, const double &amp;inertia_sae, const double &amp;aereodynamic_coefficient, const double &amp;rolling_resistance, const std::vector&lt; double &gt; &amp;pacejka_parameters, const bool &amp;parameter_EKF, const double &amp;tao_filter_parameter, const bool &amp;plot, const bool &amp;debug)</argsstring>
+        <name>ExtendedKalmanFilter</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>adaptive_R</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>P_weight_param</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>Q_weight_process</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>Q_weight_parameters</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_weight_measurement</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>state_dim</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>adaptive_weight</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>wheel_base_sae</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>radius_wheel</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>cog_pct_front</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>mass_sae</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>inertia_sae</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>aereodynamic_coefficient</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>rolling_resistance</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>pacejka_parameters</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>parameter_EKF</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>tao_filter_parameter</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>plot</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>debug</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Ekf object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="41" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classExtendedKalmanFilter_1a715d9c91a403d060413c4b0d23fb9c8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; arma::mat, arma::vec8 &gt;</type>
+        <definition>std::pair&lt;arma::mat, arma::vec8&gt; ExtendedKalmanFilter::update</definition>
+        <argsstring>(const arma::vec7 &amp;measurement, const double &amp;steering_angle, const double &amp;torque_left, const double &amp;torque_right, const double &amp;dt)</argsstring>
+        <name>update</name>
+        <param>
+          <type>const arma::vec7 &amp;</type>
+          <declname>measurement</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>steering_angle</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>torque_left</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>torque_right</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Update step of the Kalman FIlter. This is the method that is called after gathering data in the ROS2 node and constitutes the main part of the EKF. Measurements are compared to predictions, and based on the computed Kalman Gain, a refined state estimate is provided. Offers also the possibility to adapt the covariance matrices and estimate Pacejka parameters. <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>measurement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of measurements coming from the VCU </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Steering angle of the front wheels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>torque_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Torque applied to the left rear wheel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>torque_right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Torque applied to the right rear wheel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair containing the refined state covariance matrix and the refined state estimate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="80" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classExtendedKalmanFilter_1a5d8476e66090393e20c8eaf0e2a81b0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExtendedKalmanFilter::plot_graphs</definition>
+        <argsstring>()</argsstring>
+        <name>plot_graphs</name>
+        <briefdescription>
+<para>Plot diagrams for visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method generates and displays diagrams for various parameters. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="92" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classExtendedKalmanFilter_1a5d52dabe8691d6b5bc03184bab9264c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExtendedKalmanFilter::initialize</definition>
+        <argsstring>(const arma::vec7 &amp;initial_state_estimate)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const arma::vec7 &amp;</type>
+          <declname>initial_state_estimate</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the Extended Kalman Filter(s). The covariance matrices are initialized with the weights provided in the parameters. The P state covariance matrix is initialized with the R matrix, while the P parameter covariance matrix is initialized with P_weight_param. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initial_state_estimate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>it is the initial state estimate of the EKF. At startup, the best estimate of the state is provided by the VCU measurements </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="169" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classExtendedKalmanFilter_1a9594ee2b6c395df9124b476371a69537" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::process_jacobian</definition>
+        <argsstring>(const arma::vec8 &amp;state, const arma::vec4 &amp;tyre_forces, const double &amp;steering_angle, const double &amp;dt)</argsstring>
+        <name>process_jacobian</name>
+        <param>
+          <type>const arma::vec8 &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const arma::vec4 &amp;</type>
+          <declname>tyre_forces</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>steering_angle</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the jacobians of the process model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>state estimate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tyre_forces</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tyre forces at the front and rear axles </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>steering angle of the front wheels needed for the process model </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Jacobian matrix (8x8) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="181" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classExtendedKalmanFilter_1a9e346b1747e8794ee516d90237d03a1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::measurement_model_jacobian</definition>
+        <argsstring>(const arma::vec8 &amp;state, const arma::vec7 &amp;measurement)</argsstring>
+        <name>measurement_model_jacobian</name>
+        <param>
+          <type>const arma::vec8 &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const arma::vec7 &amp;</type>
+          <declname>measurement</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the jacobians of the measurement model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>state estimate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>measurement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a vector of measurements coming from the VCU <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Jacobian matrix (7x8) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="190" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classExtendedKalmanFilter_1a598d6a2fa13a492630b96e6ea3c0a342" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::mat</type>
+        <definition>arma::mat ExtendedKalmanFilter::parameter_estimation_jacobian</definition>
+        <argsstring>(const arma::vec8 &amp;state, const arma::vec6 &amp;parameter, const double &amp;steering_angle, const double &amp;dt, const double &amp;torque_left, const double &amp;torque_right)</argsstring>
+        <name>parameter_estimation_jacobian</name>
+        <param>
+          <type>const arma::vec8 &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const arma::vec6 &amp;</type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>steering_angle</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>torque_left</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>torque_right</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the Jacobians of the process model with respect to Pacejka parameters, for their estimation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>state estimate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pacejka parameters <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>steering angle of the front wheels needed for the process model </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>torque_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>torque applied to the left rear wheel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>torque_right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>torque applied to the right rear wheel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Jacobian matrix </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="204" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classExtendedKalmanFilter_1a950ae463e455a30ac0008df96e4019f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; arma::vec2, arma::vec4 &gt;</type>
+        <definition>std::pair&lt;arma::vec2, arma::vec4&gt; ExtendedKalmanFilter::calculate_acceleration</definition>
+        <argsstring>(const double &amp;v_x, const double &amp;v_y, const double &amp;yaw_dot, const arma::vec6 &amp;pacejka_params, const double &amp;steering_angle, const double &amp;torque_left, const double &amp;torque_right)</argsstring>
+        <name>calculate_acceleration</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>v_x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>v_y</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>yaw_dot</declname>
+        </param>
+        <param>
+          <type>const arma::vec6 &amp;</type>
+          <declname>pacejka_params</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>steering_angle</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>torque_left</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>torque_right</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the accelerations and the tyre forces according to the car&apos;s model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitudinal velocity </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lateral velocity </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaw_dot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yaw rate <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pacejka_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pacejka parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>steering angle of the front wheels needed for the process model </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>torque_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>torque applied to the left rear wheel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>torque_right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>torque applied to the right rear wheel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of vectors containing the accelerations and the tyre forces respectively </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="219" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classExtendedKalmanFilter_1a4cbcbaa6feee170427a5b809716d324f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::vec7</type>
+        <definition>arma::vec7 ExtendedKalmanFilter::measurement_model</definition>
+        <argsstring>(const arma::vec8 &amp;state)</argsstring>
+        <name>measurement_model</name>
+        <param>
+          <type>const arma::vec8 &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Measurement model of the EKF. It maps the state estimate to the measurement space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>estimate of the current state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector containing the state mapped to the measurement space </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="228" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classExtendedKalmanFilter_1ae9409d5040e08d9622adfd11101ca98a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::vec8</type>
+        <definition>arma::vec8 ExtendedKalmanFilter::prediction</definition>
+        <argsstring>(const arma::vec8 &amp;refined_state_estimate, const arma::vec4 &amp;tyre_forces, const double &amp;steering_angle, const double &amp;dt)</argsstring>
+        <name>prediction</name>
+        <param>
+          <type>const arma::vec8 &amp;</type>
+          <declname>refined_state_estimate</declname>
+        </param>
+        <param>
+          <type>const arma::vec4 &amp;</type>
+          <declname>tyre_forces</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>steering_angle</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Process model of the EKF. Predicts the next state based on the current state estimate and the inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>estimate of the current state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tyre_forces</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tyre forces at the front and rear axles </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>steering_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>steering angle of the front wheels needed for the process model </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>: prediction of the next state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ekf_cpp/ekf.hpp" line="238" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ekf_cpp/ekf.hpp" line="35" column="27" bodyfile="include/ekf_cpp/ekf.hpp" bodystart="35" bodyend="240"/>
+    <listofallmembers>
+      <member refid="classExtendedKalmanFilter_1a1ff4ceaf8bd720639e26e52f1dedc139" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>adaptive_R</name></member>
+      <member refid="classExtendedKalmanFilter_1a1ffe6a523ff4ec99220dc3652bd80e14" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>adaptive_weight</name></member>
+      <member refid="classExtendedKalmanFilter_1ac7029adb8d84e0edf03e1502ee0900e4" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>aereodynamic_coefficient</name></member>
+      <member refid="classExtendedKalmanFilter_1a092e7e97f210a332f06796fcea45e13c" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>alpha</name></member>
+      <member refid="classExtendedKalmanFilter_1a035222208d9f9b3f65b9673edbb3d130" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>ay_history</name></member>
+      <member refid="classExtendedKalmanFilter_1a950ae463e455a30ac0008df96e4019f7" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>calculate_acceleration</name></member>
+      <member refid="classExtendedKalmanFilter_1ad12f6c5ca60c4a37904941277a8f6ca8" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>cog_pct_front</name></member>
+      <member refid="classExtendedKalmanFilter_1a912f659f716e9712c6fae3b5f45bcd06" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>cog_to_front_sae</name></member>
+      <member refid="classExtendedKalmanFilter_1a0e276ad9d4231dde4ec4e7b25f3c2945" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>current_parameter_estimate</name></member>
+      <member refid="classExtendedKalmanFilter_1a89eca996f899812e9d5b27bb4f450bca" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>current_state_estimate</name></member>
+      <member refid="classExtendedKalmanFilter_1a6e38d1e7942307ac0b0073ebefb2499b" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>debug</name></member>
+      <member refid="classExtendedKalmanFilter_1aa6c7de5019997815e38f8ca4d6c9ce52" prot="public" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>ExtendedKalmanFilter</name></member>
+      <member refid="classExtendedKalmanFilter_1ab77810f9317031f77385c68f4284f34c" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>filter_acc</name></member>
+      <member refid="classExtendedKalmanFilter_1a767aece830b1b61859eda11e9bf32e36" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>Fz_front</name></member>
+      <member refid="classExtendedKalmanFilter_1ab47bf223d7cf3ad155f704c6e23e9121" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>Fz_rear</name></member>
+      <member refid="classExtendedKalmanFilter_1ae4c0776e2d42aab3733543d52b5973be" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>g</name></member>
+      <member refid="classExtendedKalmanFilter_1a98517ba0a9ca5d6639424fd281b7a8e2" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>inertia_sae</name></member>
+      <member refid="classExtendedKalmanFilter_1a5d52dabe8691d6b5bc03184bab9264c9" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>initialize</name></member>
+      <member refid="classExtendedKalmanFilter_1ac8e48424115359109835f5970e63b3a1" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>initialized</name></member>
+      <member refid="classExtendedKalmanFilter_1aa83686ef796dcab206f18726e0e542e3" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>innovation</name></member>
+      <member refid="classExtendedKalmanFilter_1a4a488d314994156a8c16255f597f7af8" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>innovation_history</name></member>
+      <member refid="classExtendedKalmanFilter_1a0ce8585eb639cdec812c7cb33d6dfa0d" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>iterations</name></member>
+      <member refid="classExtendedKalmanFilter_1a99ad424a0e9217d665705e386409df2f" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>kalman_param_gain</name></member>
+      <member refid="classExtendedKalmanFilter_1aa807f8d25616b69444d0acde73e4cf5c" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>last_ax_filtered</name></member>
+      <member refid="classExtendedKalmanFilter_1a5f8bddb1bfa128a3f293c7c12eb111d0" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>last_ay_filtered</name></member>
+      <member refid="classExtendedKalmanFilter_1ad3673754ef1da6e1e46e0b3e01fbbb70" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>last_filtered_param</name></member>
+      <member refid="classExtendedKalmanFilter_1a48ef701105fa6ac0bd5fe392544766e6" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>mass_sae</name></member>
+      <member refid="classExtendedKalmanFilter_1a4cbcbaa6feee170427a5b809716d324f" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>measurement_model</name></member>
+      <member refid="classExtendedKalmanFilter_1a9e346b1747e8794ee516d90237d03a1b" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>measurement_model_jacobian</name></member>
+      <member refid="classExtendedKalmanFilter_1a9ebed2ac2890ab93fa45254c31cdeeeb" prot="public" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>model_current_state_estimate</name></member>
+      <member refid="classExtendedKalmanFilter_1a7b5dc47485bd95f429e5b03f4b582ce1" prot="public" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>model_tyre_forces</name></member>
+      <member refid="classExtendedKalmanFilter_1a78c7612d04cedf753738fae0dd084083" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>next_state_estimate</name></member>
+      <member refid="classExtendedKalmanFilter_1a3a386459c9abb87adc1a8a17387d58bf" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>P_next_state_estimate_cov</name></member>
+      <member refid="classExtendedKalmanFilter_1ae65a6b8adb14fd13a7194e305bb948a3" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>P_param_estimate_cov</name></member>
+      <member refid="classExtendedKalmanFilter_1a3fe37142db762e8da0fe589a5d162883" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>P_param_refined_cov</name></member>
+      <member refid="classExtendedKalmanFilter_1a30281824ef3962b4418305da875486d1" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>P_refined_cov</name></member>
+      <member refid="classExtendedKalmanFilter_1a01e3f7c376123aad25557894ba9c68c1" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>P_state_estimate_cov</name></member>
+      <member refid="classExtendedKalmanFilter_1acf6531d752c724786eb65e98defd8460" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>P_weight_param</name></member>
+      <member refid="classExtendedKalmanFilter_1ae077ffcae239df318de28194af966205" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>pacejka_parameters</name></member>
+      <member refid="classExtendedKalmanFilter_1a781bb5d7bddd81551a856c798706f9fa" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>parameter_EKF</name></member>
+      <member refid="classExtendedKalmanFilter_1a598d6a2fa13a492630b96e6ea3c0a342" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>parameter_estimation_jacobian</name></member>
+      <member refid="classExtendedKalmanFilter_1a44e4c5de817ce22fff8913c28d4b8534" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>plot</name></member>
+      <member refid="classExtendedKalmanFilter_1a5d8476e66090393e20c8eaf0e2a81b0b" prot="public" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>plot_graphs</name></member>
+      <member refid="classExtendedKalmanFilter_1a2cec446a454445844603202bf2071530" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>positions_history</name></member>
+      <member refid="classExtendedKalmanFilter_1ae9409d5040e08d9622adfd11101ca98a" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>prediction</name></member>
+      <member refid="classExtendedKalmanFilter_1a9594ee2b6c395df9124b476371a69537" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>process_jacobian</name></member>
+      <member refid="classExtendedKalmanFilter_1a8f32f302397e5f03ed85efcf3cd08cd1" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>propagation_model</name></member>
+      <member refid="classExtendedKalmanFilter_1aa11622431bbe967ce6f8c1522d8cc52c" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>propagation_model_init</name></member>
+      <member refid="classExtendedKalmanFilter_1a3a7d00db9deee54d5c33e3bdb53215e4" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>Q_param_cov</name></member>
+      <member refid="classExtendedKalmanFilter_1a914b213cd76d2afc804db5ec77e661ce" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>Q_process_cov</name></member>
+      <member refid="classExtendedKalmanFilter_1ae27b358a0b8369a87d3a98b0b716d726" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>Q_weight_parameters</name></member>
+      <member refid="classExtendedKalmanFilter_1ad2aa239813f8372d791e46b420a19dea" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>Q_weight_process</name></member>
+      <member refid="classExtendedKalmanFilter_1a34b3e049f22faf51d5578d5f2a1d1692" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>R_meas_cov</name></member>
+      <member refid="classExtendedKalmanFilter_1aab9c32b88015b528897498dd345ac904" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>R_weight_measurement</name></member>
+      <member refid="classExtendedKalmanFilter_1a5c1e5fc20e9b97bda4de8a38ef7109c3" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>radius_wheel</name></member>
+      <member refid="classExtendedKalmanFilter_1a22635fb188701d77df2fec07dd427111" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>refined_parameter_estimate</name></member>
+      <member refid="classExtendedKalmanFilter_1a0394ce9dd949e85a3d2d86bc03640f38" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>refined_parameters_history</name></member>
+      <member refid="classExtendedKalmanFilter_1ac021a9100466f4969141abd97bc845d9" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>refined_state_estimate</name></member>
+      <member refid="classExtendedKalmanFilter_1a29eb36b89669b743718be03f15919d4d" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>rolling_resistance</name></member>
+      <member refid="classExtendedKalmanFilter_1abce2e09aaeb42a363e50a6f0254ce699" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>state_dim</name></member>
+      <member refid="classExtendedKalmanFilter_1a88ef0ab147512025b08b32652829cb88" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>tao_filter_parameter</name></member>
+      <member refid="classExtendedKalmanFilter_1a766bd81177ad47e985cc518a4d37cfca" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>tyre_forces</name></member>
+      <member refid="classExtendedKalmanFilter_1a715d9c91a403d060413c4b0d23fb9c8b" prot="public" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>update</name></member>
+      <member refid="classExtendedKalmanFilter_1a7420f288285e2b527ced48886ca1aa2c" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>velocities_history</name></member>
+      <member refid="classExtendedKalmanFilter_1ac3e091c7ea96564c5372439941f7bdcd" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>wheel_base_sae</name></member>
+      <member refid="classExtendedKalmanFilter_1a58b0154ab338602003f0e9088ca54d6e" prot="private" virt="non-virtual"><scope>ExtendedKalmanFilter</scope><name>yaw_rate_history</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

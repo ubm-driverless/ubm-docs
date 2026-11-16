@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class JpegCompressor &mdash; live_telemetry_node 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class LiveTelemetryNode" href="classlive__telemetry_1_1LiveTelemetryNode.html" />
+    <link rel="prev" title="Class ImageScaler" href="classlive__telemetry_1_1ImageScaler.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            live_telemetry_node
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_live_telemetry.html">Namespace live_telemetry</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1DownsamplerConfig.html">Struct DownsamplerConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1ExplicitTopicConfig.html">Struct ExplicitTopicConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1FoxgloveConfig.html">Struct FoxgloveConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1FoxgloveLogger_1_1ProtobufChannelEntry.html">Struct FoxgloveLogger::ProtobufChannelEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1GatewayConfig.html">Struct GatewayConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1HandlerConfig.html">Struct HandlerConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1HandlerStats.html">Struct HandlerStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1ImageScaleConfig.html">Struct ImageScaleConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache.html">Struct PointCloudHandler::FieldOffsetCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1PublishStats.html">Struct PublishStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TelemetryConfig.html">Struct TelemetryConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TopicHandlerEntry.html">Struct TopicHandlerEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TopicSubscription.html">Struct TopicSubscription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1CameraDataHandler.html">Class CameraDataHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1Downsampler.html">Template Class Downsampler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1FoxgloveLogger.html">Class FoxgloveLogger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1Gateway.html">Class Gateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1HandlerRegistry.html">Class HandlerRegistry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1IDataProcessor.html">Template Class IDataProcessor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1ImageScaler.html">Class ImageScaler</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class JpegCompressor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1LiveTelemetryNode.html">Class LiveTelemetryNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1MessageDefinitionProvider.html">Class MessageDefinitionProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1PointCloudHandler.html">Class PointCloudHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1TopicHandler.html">Class TopicHandler</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_handler__registry_8hpp_1af0e009243fdcaeca9fc2e1c3d46ef28f.html">Function live_telemetry::registerBuiltinHandlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1a636f410d668aa2133d0167862b77b19f.html">Function live_telemetry::SerializeFdSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1ad7ccfbc68745767e5472a03e85032818.html">Function live_telemetry::toProtobuf(const sensor_msgs::msg::Image&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1a414ba4df407aadc6d4f52ec37eeede52.html">Function live_telemetry::toProtobuf(const ubm_interfaces::msg::CameraData&amp;)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_downsampler_8hpp_1aa2c8255ba1f8ca167a256b784c994ddd.html">Typedef live_telemetry::CameraDataDownsampler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_topic__handler_8hpp_1a36bdfa6a4084a2867bf3bb495a57398e.html">Typedef live_telemetry::HandlerFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_point__cloud__handler_8hpp_1a28ee942b3cd4f29e99a564ae5240f529.html">Typedef live_telemetry::PointCloud2Downsampler</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_live_telemetry_node.html">Directory live_telemetry_node</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_camera_data_handler.hpp.html">File camera_data_handler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_config.hpp.html">File config.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_downsampler.hpp.html">File downsampler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_foxglove_logger.hpp.html">File foxglove_logger.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_gateway.hpp.html">File gateway.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_handler_registry.hpp.html">File handler_registry.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_image_scaler.hpp.html">File image_scaler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_jpeg_compressor.hpp.html">File jpeg_compressor.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_live_telemetry_node.hpp.html">File live_telemetry_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_message_definition_provider.hpp.html">File message_definition_provider.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_point_cloud_handler.hpp.html">File point_cloud_handler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_protobuf_converter.hpp.html">File protobuf_converter.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_topic_handler.hpp.html">File topic_handler.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#live-telemetry-node">Live Telemetry Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#problem">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#solution">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#architecture">Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#quick-start">Quick Start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#specialized-handlers">Specialized Handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#build-run">Build &amp; Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#performance-replay-docker">Performance Replay (Docker)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">live_telemetry_node</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class JpegCompressor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/classlive__telemetry_1_1JpegCompressor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-jpegcompressor">
+<span id="exhale-class-classlive-telemetry-1-1jpegcompressor"></span><h1>Class JpegCompressor<a class="headerlink" href="#class-jpegcompressor" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_live_telemetry_node_jpeg_compressor.hpp.html#file-include-live-telemetry-node-jpeg-compressor-hpp"><span class="std std-ref">File jpeg_compressor.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14JpegCompressorE">
+<span id="_CPPv3N14live_telemetry14JpegCompressorE"></span><span id="_CPPv2N14live_telemetry14JpegCompressorE"></span><span id="live_telemetry::JpegCompressor"></span><span class="target" id="classlive__telemetry_1_1JpegCompressor"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">JpegCompressor</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry14JpegCompressorE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14JpegCompressor14JpegCompressorEi">
+<span id="_CPPv3N14live_telemetry14JpegCompressor14JpegCompressorEi"></span><span id="_CPPv2N14live_telemetry14JpegCompressor14JpegCompressorEi"></span><span id="live_telemetry::JpegCompressor::JpegCompressor__i"></span><span class="target" id="classlive__telemetry_1_1JpegCompressor_1ae479ab086f4b1115ed7fea4e984115ad"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">JpegCompressor</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">quality</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">75</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14JpegCompressor14JpegCompressorEi" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14JpegCompressorD0Ev">
+<span id="_CPPv3N14live_telemetry14JpegCompressorD0Ev"></span><span id="_CPPv2N14live_telemetry14JpegCompressorD0Ev"></span><span id="live_telemetry::JpegCompressor::~JpegCompressor"></span><span class="target" id="classlive__telemetry_1_1JpegCompressor_1a011865e54d961eb1e8671f8b88315b57"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~JpegCompressor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14JpegCompressorD0Ev" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14JpegCompressor14JpegCompressorERK14JpegCompressor">
+<span id="_CPPv3N14live_telemetry14JpegCompressor14JpegCompressorERK14JpegCompressor"></span><span id="_CPPv2N14live_telemetry14JpegCompressor14JpegCompressorERK14JpegCompressor"></span><span id="live_telemetry::JpegCompressor::JpegCompressor__JpegCompressorCR"></span><span class="target" id="classlive__telemetry_1_1JpegCompressor_1a401a57aa2efa9426805d40882fee7bc5"></span><span class="sig-name descname"><span class="n"><span class="pre">JpegCompressor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N14live_telemetry14JpegCompressor14JpegCompressorERK14JpegCompressor" title="live_telemetry::JpegCompressor::JpegCompressor"><span class="n"><span class="pre">JpegCompressor</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry14JpegCompressor14JpegCompressorERK14JpegCompressor" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14JpegCompressoraSERK14JpegCompressor">
+<span id="_CPPv3N14live_telemetry14JpegCompressoraSERK14JpegCompressor"></span><span id="_CPPv2N14live_telemetry14JpegCompressoraSERK14JpegCompressor"></span><span id="live_telemetry::JpegCompressor::assign-operator__JpegCompressorCR"></span><span class="target" id="classlive__telemetry_1_1JpegCompressor_1a635fdaf014ddb6ed10db4921bf513eb0"></span><a class="reference internal" href="#_CPPv4N14live_telemetry14JpegCompressorE" title="live_telemetry::JpegCompressor"><span class="n"><span class="pre">JpegCompressor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N14live_telemetry14JpegCompressorE" title="live_telemetry::JpegCompressor"><span class="n"><span class="pre">JpegCompressor</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry14JpegCompressoraSERK14JpegCompressor" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14JpegCompressor8compressERKN11sensor_msgs3msg5ImageE">
+<span id="_CPPv3N14live_telemetry14JpegCompressor8compressERKN11sensor_msgs3msg5ImageE"></span><span id="_CPPv2N14live_telemetry14JpegCompressor8compressERKN11sensor_msgs3msg5ImageE"></span><span id="live_telemetry::JpegCompressor::compress__sensor_msgs::msg::ImageCR"></span><span class="target" id="classlive__telemetry_1_1JpegCompressor_1ad1e14d184be06cf6996ffed7da7aad40"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">sensor_msgs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Image</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compress</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">sensor_msgs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Image</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">input</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14JpegCompressor8compressERKN11sensor_msgs3msg5ImageE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry14JpegCompressor10setQualityEi">
+<span id="_CPPv3N14live_telemetry14JpegCompressor10setQualityEi"></span><span id="_CPPv2N14live_telemetry14JpegCompressor10setQualityEi"></span><span id="live_telemetry::JpegCompressor::setQuality__i"></span><span class="target" id="classlive__telemetry_1_1JpegCompressor_1a63a7c9c28c59130d5f23d3a2b818699f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setQuality</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">quality</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14live_telemetry14JpegCompressor10setQualityEi" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14live_telemetry14JpegCompressor10getQualityEv">
+<span id="_CPPv3NK14live_telemetry14JpegCompressor10getQualityEv"></span><span id="_CPPv2NK14live_telemetry14JpegCompressor10getQualityEv"></span><span id="live_telemetry::JpegCompressor::getQualityC"></span><span class="target" id="classlive__telemetry_1_1JpegCompressor_1a4b8074e4bfabe4cff8537021515d1761"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getQuality</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14live_telemetry14JpegCompressor10getQualityEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classlive__telemetry_1_1ImageScaler.html" class="btn btn-neutral float-left" title="Class ImageScaler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classlive__telemetry_1_1LiveTelemetryNode.html" class="btn btn-neutral float-right" title="Class LiveTelemetryNode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;live_telemetry_node&gt; Contributors. License: MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

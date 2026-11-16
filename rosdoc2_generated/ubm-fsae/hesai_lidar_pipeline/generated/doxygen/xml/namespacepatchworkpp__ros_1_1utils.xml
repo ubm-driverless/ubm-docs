@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacepatchworkpp__ros_1_1utils" kind="namespace" language="C++">
+    <compoundname>patchworkpp_ros::utils</compoundname>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="Utils_8hpp_1a1364910ab4ca90aa740485a164581738" prot="public" static="no">
+        <type>sensor_msgs::msg::PointCloud2</type>
+        <definition>using patchworkpp_ros::utils::PointCloud2 = typedef sensor_msgs::msg::PointCloud2</definition>
+        <argsstring></argsstring>
+        <name>PointCloud2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="19" column="1" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Utils_8hpp_1ab3e0143996b88df515251c27f35cff30" prot="public" static="no">
+        <type>sensor_msgs::msg::PointField</type>
+        <definition>using patchworkpp_ros::utils::PointField = typedef sensor_msgs::msg::PointField</definition>
+        <argsstring></argsstring>
+        <name>PointField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="20" column="1" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="Utils_8hpp_1ae144a48de978d56d20c4fd97caf66281" prot="public" static="no">
+        <type>std_msgs::msg::Header</type>
+        <definition>using patchworkpp_ros::utils::Header = typedef std_msgs::msg::Header</definition>
+        <argsstring></argsstring>
+        <name>Header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="21" column="1" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Utils_8hpp_1a7c2f014dc6b94f7ccbcd392a8a90ee52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string patchworkpp_ros::utils::FixFrameId</definition>
+        <argsstring>(const std::string &amp;frame_id)</argsstring>
+        <name>FixFrameId</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>frame_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="23" column="20" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1ae984a900ac400ecf42d40a54c72c76a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::optional&lt; PointField &gt;</type>
+        <definition>std::optional&lt;PointField&gt; patchworkpp_ros::utils::GetTimestampField</definition>
+        <argsstring>(const PointCloud2::ConstSharedPtr msg)</argsstring>
+        <name>GetTimestampField</name>
+        <param>
+          <type>const PointCloud2::ConstSharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="27" column="22" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="27" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1a9fea260292b666f981782f657c4081d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto patchworkpp_ros::utils::NormalizeTimestamps</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;timestamps)</argsstring>
+        <name>NormalizeTimestamps</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>timestamps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="42" column="13" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="42" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1a66b38a6a10b7c6bdf781b2089041d3c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto patchworkpp_ros::utils::ExtractTimestampsFromMsg</definition>
+        <argsstring>(const PointCloud2::ConstSharedPtr msg, const PointField &amp;timestamp_field)</argsstring>
+        <name>ExtractTimestampsFromMsg</name>
+        <param>
+          <type>const PointCloud2::ConstSharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const PointField &amp;</type>
+          <declname>timestamp_field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="57" column="13" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="57" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1aeec82bd89d70123833ab87790c7bdfdc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; PointCloud2 &gt;</type>
+        <definition>std::unique_ptr&lt;PointCloud2&gt; patchworkpp_ros::utils::CreatePointCloud2Msg</definition>
+        <argsstring>(const size_t n_points, const Header &amp;header, bool timestamp=false)</argsstring>
+        <name>CreatePointCloud2Msg</name>
+        <param>
+          <type>const size_t</type>
+          <declname>n_points</declname>
+        </param>
+        <param>
+          <type>const Header &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>timestamp</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="84" column="24" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="84" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1afb890964a15163bf452d33fe89aa5938" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void patchworkpp_ros::utils::FillPointCloud2XYZ</definition>
+        <argsstring>(const std::vector&lt; Eigen::Vector3d &gt; &amp;points, PointCloud2 &amp;msg)</argsstring>
+        <name>FillPointCloud2XYZ</name>
+        <param>
+          <type>const std::vector&lt; Eigen::Vector3d &gt; &amp;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>PointCloud2 &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="111" column="13" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="111" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1a7c46ad0c498c823a829eeb1df84136ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void patchworkpp_ros::utils::FillPointCloud2XYZ</definition>
+        <argsstring>(const Eigen::MatrixX3f &amp;points, PointCloud2 &amp;msg)</argsstring>
+        <name>FillPointCloud2XYZ</name>
+        <param>
+          <type>const Eigen::MatrixX3f &amp;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>PointCloud2 &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="123" column="13" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="123" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1affe07c837718a8d32742b2e1d36b4f7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void patchworkpp_ros::utils::FillPointCloud2Timestamp</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;timestamps, PointCloud2 &amp;msg)</argsstring>
+        <name>FillPointCloud2Timestamp</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>timestamps</declname>
+        </param>
+        <param>
+          <type>PointCloud2 &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="134" column="13" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1a026f458b6e7c0c9deb8fe2ef856b5c03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; patchworkpp_ros::utils::GetTimestamps</definition>
+        <argsstring>(const PointCloud2::ConstSharedPtr msg)</argsstring>
+        <name>GetTimestamps</name>
+        <param>
+          <type>const PointCloud2::ConstSharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="139" column="20" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="139" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1a7a206965266b5a13565952fc0a93448d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; Eigen::Vector3d &gt;</type>
+        <definition>std::vector&lt;Eigen::Vector3d&gt; patchworkpp_ros::utils::PointCloud2ToEigen</definition>
+        <argsstring>(const PointCloud2::ConstSharedPtr msg)</argsstring>
+        <name>PointCloud2ToEigen</name>
+        <param>
+          <type>const PointCloud2::ConstSharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="149" column="20" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="149" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1aa7afefa5aac37788974dae8ac0ea504e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::MatrixXf</type>
+        <definition>Eigen::MatrixXf patchworkpp_ros::utils::PointCloud2ToEigenMat</definition>
+        <argsstring>(const PointCloud2::ConstSharedPtr &amp;msg)</argsstring>
+        <name>PointCloud2ToEigenMat</name>
+        <param>
+          <type>const PointCloud2::ConstSharedPtr &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="161" column="24" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="161" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1abb4aac513b6394fe466dc0541e41c588" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; PointCloud2 &gt;</type>
+        <definition>std::unique_ptr&lt;PointCloud2&gt; patchworkpp_ros::utils::EigenToPointCloud2</definition>
+        <argsstring>(const std::vector&lt; Eigen::Vector3d &gt; &amp;points, const Header &amp;header)</argsstring>
+        <name>EigenToPointCloud2</name>
+        <param>
+          <type>const std::vector&lt; Eigen::Vector3d &gt; &amp;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>const Header &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="177" column="24" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="177" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1abd56b70d0c351fbf567ad193f4cb3849" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; PointCloud2 &gt;</type>
+        <definition>std::unique_ptr&lt;PointCloud2&gt; patchworkpp_ros::utils::EigenToPointCloud2</definition>
+        <argsstring>(const std::vector&lt; Eigen::Vector3d &gt; &amp;points, const std::vector&lt; double &gt; &amp;timestamps, const Header &amp;header)</argsstring>
+        <name>EigenToPointCloud2</name>
+        <param>
+          <type>const std::vector&lt; Eigen::Vector3d &gt; &amp;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>timestamps</declname>
+        </param>
+        <param>
+          <type>const Header &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="184" column="24" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="184" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1a45803f9b04ed1cf141d726df08802a28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; PointCloud2 &gt;</type>
+        <definition>std::unique_ptr&lt;PointCloud2&gt; patchworkpp_ros::utils::EigenMatToPointCloud2</definition>
+        <argsstring>(const Eigen::MatrixX3f &amp;points, const Header &amp;header)</argsstring>
+        <name>EigenMatToPointCloud2</name>
+        <param>
+          <type>const Eigen::MatrixX3f &amp;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>const Header &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="193" column="24" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="193" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="Utils_8hpp_1abb083c3f605ca09f5c58148d5a15fda5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float patchworkpp_ros::utils::estimate_vertical_samples_from_profile</definition>
+        <argsstring>(float lower_elevation_deg, float upper_elevation_deg, const std::vector&lt; float &gt; &amp;band_mins, const std::vector&lt; float &gt; &amp;band_maxs, const std::vector&lt; float &gt; &amp;band_resolutions, float fov_center_deg)</argsstring>
+        <name>estimate_vertical_samples_from_profile</name>
+        <param>
+          <type>float</type>
+          <declname>lower_elevation_deg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>upper_elevation_deg</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>band_mins</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>band_maxs</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>band_resolutions</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fov_center_deg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="205" column="14" bodyfile="include/Hesai_Lidar_Pipeline/Utils.hpp" bodystart="205" bodyend="250"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Hesai_Lidar_Pipeline/Utils.hpp" line="17" column="32"/>
+  </compounddef>
+</doxygen>

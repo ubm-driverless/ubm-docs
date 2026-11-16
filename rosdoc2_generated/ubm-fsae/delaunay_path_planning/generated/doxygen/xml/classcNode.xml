@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classcNode" kind="class" language="C++" prot="public">
+    <compoundname>cNode</compoundname>
+    <includes local="no">Node.hpp</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcNode_1ac937c1e99e29c24eacb68393e64a88ec" prot="private" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t cNode::SUPERTRIANGLE_BASEID</definition>
+        <argsstring></argsstring>
+        <name>SUPERTRIANGLE_BASEID</name>
+        <initializer>= (1 &lt;&lt; <ref refid="constants_8hpp_1a2560be515eb6295f164cb2897f21ab0a" kindref="member">HASH_SHIFT_NUM</ref>) - 3</initializer>
+        <briefdescription>
+<para>Supertriangle&apos;s Node(s) must have an id, this id must not interfere with existing Node&apos;s id, to solve this issue a huge id will be assigned to all Node(s) that are part of the supertriangle. See <ref refid="constants_8hpp" kindref="compound">utils/constants.hpp</ref>/HASH_SHIFT_NUM to know why this value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="38" column="25" bodyfile="include/structures/Node.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcNode_1aadda3680cf5fbfcaceee61851d719936" prot="private" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cNode::superTriangleNodeNum</definition>
+        <argsstring></argsstring>
+        <name>superTriangleNodeNum</name>
+        <briefdescription>
+<para>Current supertriangle node number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="43" column="19" bodyfile="include/structures/Node.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcNode_1a15a57e18a2d286962aee744d3c3b4071" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool cNode::belongsToSuperTriangle_</definition>
+        <argsstring></argsstring>
+        <name>belongsToSuperTriangle_</name>
+        <briefdescription>
+<para>Whether or not this Node belong to a supertriangle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="48" column="14" bodyfile="include/structures/Node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcNode_1add6ee901fa6134d91516d4d7eabf35d9" prot="private" static="no" mutable="yes">
+        <type><ref refid="classPoint" kindref="compound">Point</ref></type>
+        <definition>Point cNode::point_</definition>
+        <argsstring></argsstring>
+        <name>point_</name>
+        <briefdescription>
+<para>Cone point in local coordinates. <bold>Note</bold> that it is mutable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="54" column="17" bodyfile="include/structures/Node.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcNode_1a9b641438454f5b4cd72784394b97fded" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classPoint" kindref="compound">Point</ref></type>
+        <definition>const Point cNode::pointGlobal_</definition>
+        <argsstring></argsstring>
+        <name>pointGlobal_</name>
+        <briefdescription>
+<para>Cone point in global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="59" column="15" bodyfile="include/structures/Node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcNode_1a3fe0cd3869215162c10e5cde37fcb459" prot="public" static="no" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t cNode::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>Node&apos;s id, in principle given by the cone tracker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="73" column="18" bodyfile="include/structures/Node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcNode_1aaef13214271085f2473bc5d7db1bb32f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cNode::cNode</definition>
+        <argsstring>(const double &amp;x, const double &amp;y)</argsstring>
+        <name>cNode</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Node object that will be a supertriangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="67" column="3"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcNode_1a55208d3d001c2e2813591fc9d83769e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cNode::cNode</definition>
+        <argsstring>(const double &amp;x, const double &amp;y, const double &amp;xGlobal, const double &amp;yGlobal, const uint32_t &amp;id)</argsstring>
+        <name>cNode</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>xGlobal</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>yGlobal</declname>
+        </param>
+        <param>
+          <type>const uint32_t &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Node object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">xGlobal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">yGlobal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="84" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a28cd9f905690aa7375f1217c676e28e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cNode::cNode</definition>
+        <argsstring>(const ubm_interfaces::msg::Landmark &amp;c)</argsstring>
+        <name>cNode</name>
+        <param>
+          <type>const ubm_interfaces::msg::Landmark &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Node object from a custom_msgs::ConeWithId. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="91" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a7408a269c5fcaf7e0c306a41e374e347" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; cNode::x</definition>
+        <argsstring>() const</argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>Returns the Node x local coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="96" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a509726c2e23629260ff96e3d84b92038" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double&amp; cNode::y</definition>
+        <argsstring>() const</argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Returns the Node y local coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="101" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a6e535c6ced93d247ac33c848eae02ecd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cNode::operator==</definition>
+        <argsstring>(const cNode &amp;n) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator. Two nodes will be equal iff their id is same. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="108" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a775e30a9b36f409a8c67ba92ea38de68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cNode::operator!=</definition>
+        <argsstring>(const cNode &amp;n) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Negation of the comparison operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="115" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a9946c6834fcbcbbebc0166f281f5c3cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const bool &amp;</type>
+        <definition>const bool&amp; cNode::belongsToSuperTriangle</definition>
+        <argsstring>() const</argsstring>
+        <name>belongsToSuperTriangle</name>
+        <briefdescription>
+<para>Checks if the Node belongs to a supertriangle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="128" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a052310bb77967b059b08f744d59fdc74" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cNode::updateLocal</definition>
+        <argsstring>(const Eigen::Affine3d &amp;tf) const</argsstring>
+        <name>updateLocal</name>
+        <param>
+          <type>const Eigen::Affine3d &amp;</type>
+          <declname>tf</declname>
+        </param>
+        <briefdescription>
+<para>Updates the local coordinates of the Node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="135" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a72a4f386d0b85e3c53586db7ae3dae16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        <definition>const Point&amp; cNode::point</definition>
+        <argsstring>() const</argsstring>
+        <name>point</name>
+        <briefdescription>
+<para>Returns the point in local coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="140" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a5291a5698ea79a250f40c1f71285de14" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+        <definition>const Point&amp; cNode::pointGlobal</definition>
+        <argsstring>() const</argsstring>
+        <name>pointGlobal</name>
+        <briefdescription>
+<para>Returns the point in global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="145" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a923103314edb420ea2bb5228edc98455" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cNode::distSq</definition>
+        <argsstring>(const Point &amp;p) const</argsstring>
+        <name>distSq</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Returns the distance squared from the Node&apos;s local point to <emphasis>p</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="152" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcNode_1a3ccc31a1a03dc4290844a2269fc51dab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cNode::angleWith</definition>
+        <argsstring>(const cNode &amp;n0, const cNode &amp;n1) const</argsstring>
+        <name>angleWith</name>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n1</declname>
+        </param>
+        <briefdescription>
+<para>Returns the angle that the Node makes with the Node(s) <emphasis>n0</emphasis> and <emphasis>n1</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="161" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcNode_1a70f036c0485a97340262e55f7ba8627c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classcNode" kindref="compound">cNode</ref></type>
+        <definition>static cNode cNode::superTriangleNode</definition>
+        <argsstring>(const double &amp;x, const double &amp;y)</argsstring>
+        <name>superTriangleNode</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Returns a supertriangle Node with local coordinates <emphasis></emphasis>(x, y). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="123" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classcNode_1a1870a67d25ac8e70b4252846a4519b6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const cNode &amp;n)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcNode" kindref="compound">cNode</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Cout operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Node.hpp" line="169" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a node, i.e. the useful part of an custom_msgs::ConeWithId (position and id). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/structures/Node.hpp" line="30" column="12" bodyfile="include/structures/Node.hpp" bodystart="30" bodyend="170"/>
+    <listofallmembers>
+      <member refid="classcNode_1a3ccc31a1a03dc4290844a2269fc51dab" prot="public" virt="non-virtual"><scope>cNode</scope><name>angleWith</name></member>
+      <member refid="classcNode_1a9946c6834fcbcbbebc0166f281f5c3cb" prot="public" virt="non-virtual"><scope>cNode</scope><name>belongsToSuperTriangle</name></member>
+      <member refid="classcNode_1a15a57e18a2d286962aee744d3c3b4071" prot="private" virt="non-virtual"><scope>cNode</scope><name>belongsToSuperTriangle_</name></member>
+      <member refid="classcNode_1aaef13214271085f2473bc5d7db1bb32f" prot="private" virt="non-virtual"><scope>cNode</scope><name>cNode</name></member>
+      <member refid="classcNode_1a55208d3d001c2e2813591fc9d83769e5" prot="public" virt="non-virtual"><scope>cNode</scope><name>cNode</name></member>
+      <member refid="classcNode_1a28cd9f905690aa7375f1217c676e28e5" prot="public" virt="non-virtual"><scope>cNode</scope><name>cNode</name></member>
+      <member refid="classcNode_1a923103314edb420ea2bb5228edc98455" prot="public" virt="non-virtual"><scope>cNode</scope><name>distSq</name></member>
+      <member refid="classcNode_1a3fe0cd3869215162c10e5cde37fcb459" prot="public" virt="non-virtual"><scope>cNode</scope><name>id</name></member>
+      <member refid="classcNode_1a775e30a9b36f409a8c67ba92ea38de68" prot="public" virt="non-virtual"><scope>cNode</scope><name>operator!=</name></member>
+      <member refid="classcNode_1a1870a67d25ac8e70b4252846a4519b6b" prot="public" virt="non-virtual"><scope>cNode</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classcNode_1a6e535c6ced93d247ac33c848eae02ecd" prot="public" virt="non-virtual"><scope>cNode</scope><name>operator==</name></member>
+      <member refid="classcNode_1a72a4f386d0b85e3c53586db7ae3dae16" prot="public" virt="non-virtual"><scope>cNode</scope><name>point</name></member>
+      <member refid="classcNode_1add6ee901fa6134d91516d4d7eabf35d9" prot="private" virt="non-virtual"><scope>cNode</scope><name>point_</name></member>
+      <member refid="classcNode_1a5291a5698ea79a250f40c1f71285de14" prot="public" virt="non-virtual"><scope>cNode</scope><name>pointGlobal</name></member>
+      <member refid="classcNode_1a9b641438454f5b4cd72784394b97fded" prot="private" virt="non-virtual"><scope>cNode</scope><name>pointGlobal_</name></member>
+      <member refid="classcNode_1ac937c1e99e29c24eacb68393e64a88ec" prot="private" virt="non-virtual"><scope>cNode</scope><name>SUPERTRIANGLE_BASEID</name></member>
+      <member refid="classcNode_1a70f036c0485a97340262e55f7ba8627c" prot="public" virt="non-virtual"><scope>cNode</scope><name>superTriangleNode</name></member>
+      <member refid="classcNode_1aadda3680cf5fbfcaceee61851d719936" prot="private" virt="non-virtual"><scope>cNode</scope><name>superTriangleNodeNum</name></member>
+      <member refid="classcNode_1a052310bb77967b059b08f744d59fdc74" prot="public" virt="non-virtual"><scope>cNode</scope><name>updateLocal</name></member>
+      <member refid="classcNode_1a7408a269c5fcaf7e0c306a41e374e347" prot="public" virt="non-virtual"><scope>cNode</scope><name>x</name></member>
+      <member refid="classcNode_1a509726c2e23629260ff96e3d84b92038" prot="public" virt="non-virtual"><scope>cNode</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

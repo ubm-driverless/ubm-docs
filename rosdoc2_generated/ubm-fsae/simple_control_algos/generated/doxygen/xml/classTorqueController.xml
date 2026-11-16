@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classTorqueController" kind="class" language="C++" prot="public">
+    <compoundname>TorqueController</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classTorqueController_1a44c3e483457ee59a0e4e3652a9ddb9d8" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* TorqueController::kk_torque_ptr</definition>
+        <argsstring></argsstring>
+        <name>kk_torque_ptr</name>
+        <briefdescription>
+<para>pointer to proportional gain for PI controller </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_sae_controller.hpp" line="53" column="17" bodyfile="include/utils/speed_sae_controller.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTorqueController_1a67835ffa0534e3f254743929f3ec67f7" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* TorqueController::ki_torque_ptr</definition>
+        <argsstring></argsstring>
+        <name>ki_torque_ptr</name>
+        <briefdescription>
+<para>pointer to integral gain for PI controller </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_sae_controller.hpp" line="54" column="17" bodyfile="include/utils/speed_sae_controller.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTorqueController_1ae197c0fba32a0dd33dfe97cda3335216" prot="private" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* TorqueController::maximum_torque_ptr</definition>
+        <argsstring></argsstring>
+        <name>maximum_torque_ptr</name>
+        <briefdescription>
+<para>pointer to maximum allowable torque </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_sae_controller.hpp" line="55" column="17" bodyfile="include/utils/speed_sae_controller.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTorqueController_1adc3c461c358fd0fedf91ffed59401494" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TorqueController::integral_error</definition>
+        <argsstring></argsstring>
+        <name>integral_error</name>
+        <briefdescription>
+<para>Integral error for PI controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_sae_controller.hpp" line="57" column="11" bodyfile="include/utils/speed_sae_controller.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTorqueController_1adc8d7e08b0a0ff19426f5a0f48c5e44d" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point TorqueController::last_time</definition>
+        <argsstring></argsstring>
+        <name>last_time</name>
+        <briefdescription>
+<para>Last recorded time for PD controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_sae_controller.hpp" line="58" column="52" bodyfile="include/utils/speed_sae_controller.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTorqueController_1a23bbb61072d9c87a2bd2a61afe2ffb0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TorqueController::TorqueController</definition>
+        <argsstring>()</argsstring>
+        <name>TorqueController</name>
+        <briefdescription>
+<para>Constructor for the <ref refid="classTorqueController" kindref="compound">TorqueController</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_sae_controller.hpp" line="16" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classTorqueController_1af374f9ab6bcb9237afc2d4ed73e353a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TorqueController::initialize</definition>
+        <argsstring>(const float &amp;kk_torque, const float &amp;ki_torque, const float &amp;maximum_torque)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>kk_torque</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>ki_torque</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>maximum_torque</declname>
+        </param>
+        <briefdescription>
+<para>initialize the PI controller parameters </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kk_torque</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Proportional gain for PI controller </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ki_torque</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Integral gain for PI controller </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maximum_torque</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowable torque </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_sae_controller.hpp" line="25" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classTorqueController_1aa6c19d160f1cff421af337d96efca31d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TorqueController::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset the controller state This function resets the integral error and the last recorded time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_sae_controller.hpp" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classTorqueController_1a57f8bb32e0206cd9b44b743a2801bbae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float TorqueController::pi_controller</definition>
+        <argsstring>(const float &amp;velocity_reference, const float &amp;velocity_current, float &amp;error_speed, float &amp;error_integral, float &amp;term_proportional, float &amp;term_integral)</argsstring>
+        <name>pi_controller</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>velocity_reference</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>velocity_current</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>error_speed</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>error_integral</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>term_proportional</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>term_integral</declname>
+        </param>
+        <briefdescription>
+<para>PI controller for speed control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>velocity_reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired speed reference </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>velocity_current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current speed of the vehicle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to store speed error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error_integral</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to store integral error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>term_proportional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to store proportional term </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>term_integral</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to store integral term </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float Calculated torque to be applied </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/speed_sae_controller.hpp" line="45" column="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/utils/speed_sae_controller.hpp" line="10" column="23" bodyfile="include/utils/speed_sae_controller.hpp" bodystart="10" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classTorqueController_1af374f9ab6bcb9237afc2d4ed73e353a4" prot="public" virt="non-virtual"><scope>TorqueController</scope><name>initialize</name></member>
+      <member refid="classTorqueController_1adc3c461c358fd0fedf91ffed59401494" prot="private" virt="non-virtual"><scope>TorqueController</scope><name>integral_error</name></member>
+      <member refid="classTorqueController_1a67835ffa0534e3f254743929f3ec67f7" prot="private" virt="non-virtual"><scope>TorqueController</scope><name>ki_torque_ptr</name></member>
+      <member refid="classTorqueController_1a44c3e483457ee59a0e4e3652a9ddb9d8" prot="private" virt="non-virtual"><scope>TorqueController</scope><name>kk_torque_ptr</name></member>
+      <member refid="classTorqueController_1adc8d7e08b0a0ff19426f5a0f48c5e44d" prot="private" virt="non-virtual"><scope>TorqueController</scope><name>last_time</name></member>
+      <member refid="classTorqueController_1ae197c0fba32a0dd33dfe97cda3335216" prot="private" virt="non-virtual"><scope>TorqueController</scope><name>maximum_torque_ptr</name></member>
+      <member refid="classTorqueController_1a57f8bb32e0206cd9b44b743a2801bbae" prot="public" virt="non-virtual"><scope>TorqueController</scope><name>pi_controller</name></member>
+      <member refid="classTorqueController_1aa6c19d160f1cff421af337d96efca31d" prot="public" virt="non-virtual"><scope>TorqueController</scope><name>reset</name></member>
+      <member refid="classTorqueController_1a23bbb61072d9c87a2bd2a61afe2ffb0a" prot="public" virt="non-virtual"><scope>TorqueController</scope><name>TorqueController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

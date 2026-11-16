@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classFailsafe" kind="class" language="C++" prot="public">
+    <compoundname>Failsafe</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
+    <includes local="no">Failsafe.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFailsafe_1a871bd82fedd4701ac0e7fb50746b89d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Failsafe&lt; T &gt;::Failsafe</definition>
+        <argsstring>()=default</argsstring>
+        <name>Failsafe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Failsafe.hpp" line="25" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classFailsafe_1a7954599851177fc5a5396a3bd6ef5000" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Failsafe&lt; T &gt;::Failsafe</definition>
+        <argsstring>(const T &amp;x)</argsstring>
+        <name>Failsafe</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Failsafe.hpp" line="26" column="3" bodyfile="include/utils/Failsafe.hpp" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classFailsafe_1aac9cd803b28ab4283adf762409fe7826" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Failsafe&lt; T &gt;::initGeneral</definition>
+        <argsstring>(const T &amp;params, const double &amp;safetyFactor, const int &amp;failsafe_max_way_horizon_size)</argsstring>
+        <name>initGeneral</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>safetyFactor</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>failsafe_max_way_horizon_size</declname>
+        </param>
+        <briefdescription>
+<para>Sets implicit object to a general failsafe object, using its parameters. The objectives are: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Increase all parameters (thresholds) by a factor.</para>
+</listitem><listitem><para>Limit sight length.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>safetyFactor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>failsafe_max_way_horizon_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils/Failsafe.hpp" line="38" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class that provides all functionality to create and manage failsafe parameters. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>Failsafe&lt; T &gt;</label>
+        <link refid="classFailsafe"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>Failsafe&lt; T &gt;</label>
+        <link refid="classFailsafe"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/utils/Failsafe.hpp" line="22" column="24" bodyfile="include/utils/Failsafe.hpp" bodystart="22" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classFailsafe_1a871bd82fedd4701ac0e7fb50746b89d3" prot="public" virt="non-virtual"><scope>Failsafe</scope><name>Failsafe</name></member>
+      <member refid="classFailsafe_1a7954599851177fc5a5396a3bd6ef5000" prot="public" virt="non-virtual"><scope>Failsafe</scope><name>Failsafe</name></member>
+      <member refid="classFailsafe_1aac9cd803b28ab4283adf762409fe7826" prot="public" virt="non-virtual"><scope>Failsafe</scope><name>initGeneral</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

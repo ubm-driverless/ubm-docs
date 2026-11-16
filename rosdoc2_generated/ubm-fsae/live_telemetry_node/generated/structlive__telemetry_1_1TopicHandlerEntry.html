@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struct TopicHandlerEntry &mdash; live_telemetry_node 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct TopicSubscription" href="structlive__telemetry_1_1TopicSubscription.html" />
+    <link rel="prev" title="Struct TelemetryConfig" href="structlive__telemetry_1_1TelemetryConfig.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            live_telemetry_node
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_live_telemetry.html">Namespace live_telemetry</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1DownsamplerConfig.html">Struct DownsamplerConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1ExplicitTopicConfig.html">Struct ExplicitTopicConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1FoxgloveConfig.html">Struct FoxgloveConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1FoxgloveLogger_1_1ProtobufChannelEntry.html">Struct FoxgloveLogger::ProtobufChannelEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1GatewayConfig.html">Struct GatewayConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1HandlerConfig.html">Struct HandlerConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1HandlerStats.html">Struct HandlerStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1ImageScaleConfig.html">Struct ImageScaleConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1PointCloudHandler_1_1FieldOffsetCache.html">Struct PointCloudHandler::FieldOffsetCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1PublishStats.html">Struct PublishStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TelemetryConfig.html">Struct TelemetryConfig</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Struct TopicHandlerEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structlive__telemetry_1_1TopicSubscription.html">Struct TopicSubscription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1CameraDataHandler.html">Class CameraDataHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1Downsampler.html">Template Class Downsampler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1FoxgloveLogger.html">Class FoxgloveLogger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1Gateway.html">Class Gateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1HandlerRegistry.html">Class HandlerRegistry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1IDataProcessor.html">Template Class IDataProcessor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1ImageScaler.html">Class ImageScaler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1JpegCompressor.html">Class JpegCompressor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1LiveTelemetryNode.html">Class LiveTelemetryNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1MessageDefinitionProvider.html">Class MessageDefinitionProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1PointCloudHandler.html">Class PointCloudHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classlive__telemetry_1_1TopicHandler.html">Class TopicHandler</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_handler__registry_8hpp_1af0e009243fdcaeca9fc2e1c3d46ef28f.html">Function live_telemetry::registerBuiltinHandlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1a636f410d668aa2133d0167862b77b19f.html">Function live_telemetry::SerializeFdSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1ad7ccfbc68745767e5472a03e85032818.html">Function live_telemetry::toProtobuf(const sensor_msgs::msg::Image&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_protobuf__converter_8hpp_1a414ba4df407aadc6d4f52ec37eeede52.html">Function live_telemetry::toProtobuf(const ubm_interfaces::msg::CameraData&amp;)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_downsampler_8hpp_1aa2c8255ba1f8ca167a256b784c994ddd.html">Typedef live_telemetry::CameraDataDownsampler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_topic__handler_8hpp_1a36bdfa6a4084a2867bf3bb495a57398e.html">Typedef live_telemetry::HandlerFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_point__cloud__handler_8hpp_1a28ee942b3cd4f29e99a564ae5240f529.html">Typedef live_telemetry::PointCloud2Downsampler</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_live_telemetry_node.html">Directory live_telemetry_node</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_camera_data_handler.hpp.html">File camera_data_handler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_config.hpp.html">File config.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_downsampler.hpp.html">File downsampler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_foxglove_logger.hpp.html">File foxglove_logger.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_gateway.hpp.html">File gateway.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_handler_registry.hpp.html">File handler_registry.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_image_scaler.hpp.html">File image_scaler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_jpeg_compressor.hpp.html">File jpeg_compressor.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_live_telemetry_node.hpp.html">File live_telemetry_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_message_definition_provider.hpp.html">File message_definition_provider.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_point_cloud_handler.hpp.html">File point_cloud_handler.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_protobuf_converter.hpp.html">File protobuf_converter.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_live_telemetry_node_topic_handler.hpp.html">File topic_handler.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#live-telemetry-node">Live Telemetry Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#problem">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#solution">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#architecture">Architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#quick-start">Quick Start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#specialized-handlers">Specialized Handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#build-run">Build &amp; Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#performance-replay-docker">Performance Replay (Docker)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">live_telemetry_node</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Struct TopicHandlerEntry</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/structlive__telemetry_1_1TopicHandlerEntry.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-topichandlerentry">
+<span id="exhale-struct-structlive-telemetry-1-1topichandlerentry"></span><h1>Struct TopicHandlerEntry<a class="headerlink" href="#struct-topichandlerentry" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_live_telemetry_node_config.hpp.html#file-include-live-telemetry-node-config-hpp"><span class="std std-ref">File config.hpp</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntryE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntryE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntryE"></span><span id="live_telemetry::TopicHandlerEntry"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TopicHandlerEntry</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntryE" title="Link to this definition"></a><br /></dt>
+<dd><p>Configuration for a single topic handler. </p>
+<p>Each handler entry in the YAML config maps to this struct. The handler_type determines which handler factory is used.</p>
+<p>Note: For simple forwarding with downsampling, use the gateway’s explicit_topics instead of creating a handler. Handlers are only needed for custom processing (e.g., image compression). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry4nameE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry4nameE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry4nameE"></span><span id="live_telemetry::TopicHandlerEntry::name__ss"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1ab9731a2cf245f75cf8ebf5d45b33a852"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry4nameE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry12handler_typeE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry12handler_typeE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry12handler_typeE"></span><span id="live_telemetry::TopicHandlerEntry::handler_type__ss"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1aa18e131e68c95032ac6ba229134bd3c8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handler_type</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry12handler_typeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry11input_topicE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry11input_topicE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry11input_topicE"></span><span id="live_telemetry::TopicHandlerEntry::input_topic__ss"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1ac59e977a91c0b10ea0522c3bad9acfc0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">input_topic</span></span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry11input_topicE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry10queue_sizeE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry10queue_sizeE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry10queue_sizeE"></span><span id="live_telemetry::TopicHandlerEntry::queue_size__i"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1aac9e2ae0f52f5b580f0f78abf5e27152"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">queue_size</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry10queue_sizeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry16downsample_ratioE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry16downsample_ratioE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry16downsample_ratioE"></span><span id="live_telemetry::TopicHandlerEntry::downsample_ratio__i"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1ad0a7e4b0145294a0a03e95e407c3f9f9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">downsample_ratio</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry16downsample_ratioE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry13scale_enabledE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry13scale_enabledE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry13scale_enabledE"></span><span id="live_telemetry::TopicHandlerEntry::scale_enabled__b"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1a286d2784e019bb3b882ee797ac3616d1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scale_enabled</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry13scale_enabledE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry12target_widthE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry12target_widthE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry12target_widthE"></span><span id="live_telemetry::TopicHandlerEntry::target_width__i"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1a2ec2baf055fb316baa069b4d8492cc73"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">target_width</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry12target_widthE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry13target_heightE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry13target_heightE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry13target_heightE"></span><span id="live_telemetry::TopicHandlerEntry::target_height__i"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1af8fc60da265455b06f50fffd54352eba"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">target_height</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry13target_heightE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry12scale_factorE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry12scale_factorE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry12scale_factorE"></span><span id="live_telemetry::TopicHandlerEntry::scale_factor__float"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1acb9e06733e61521f69f953cc8feae9f8"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scale_factor</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0f</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry12scale_factorE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry12jpeg_enabledE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry12jpeg_enabledE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry12jpeg_enabledE"></span><span id="live_telemetry::TopicHandlerEntry::jpeg_enabled__b"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1ae8d3a48ac6e986b8e5d00b11b48fbd6f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jpeg_enabled</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry12jpeg_enabledE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry12jpeg_qualityE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry12jpeg_qualityE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry12jpeg_qualityE"></span><span id="live_telemetry::TopicHandlerEntry::jpeg_quality__i"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1a000e451b4fd78759e7b1882f627a0930"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">jpeg_quality</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">80</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry12jpeg_qualityE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry12enable_voxelE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry12enable_voxelE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry12enable_voxelE"></span><span id="live_telemetry::TopicHandlerEntry::enable_voxel__b"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1a44f96f6db6522953b50727579901f541"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable_voxel</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry12enable_voxelE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry11enable_cropE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry11enable_cropE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry11enable_cropE"></span><span id="live_telemetry::TopicHandlerEntry::enable_crop__b"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1a588af7200930db288e17032aab23f21e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable_crop</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry11enable_cropE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry16use_worker_queueE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry16use_worker_queueE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry16use_worker_queueE"></span><span id="live_telemetry::TopicHandlerEntry::use_worker_queue__b"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1a4654779f0c11efb9747bd9ab3a65991f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">use_worker_queue</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry16use_worker_queueE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry14use_raw_outputE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry14use_raw_outputE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry14use_raw_outputE"></span><span id="live_telemetry::TopicHandlerEntry::use_raw_output__b"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1aa33c001f2c996a69caee11542e20af13"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">use_raw_output</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry14use_raw_outputE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry16use_reliable_qosE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry16use_reliable_qosE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry16use_reliable_qosE"></span><span id="live_telemetry::TopicHandlerEntry::use_reliable_qos__b"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1acf2c8883b194ecb8cb0c9187d4d0312f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">use_reliable_qos</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry16use_reliable_qosE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry15voxel_leaf_sizeE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry15voxel_leaf_sizeE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry15voxel_leaf_sizeE"></span><span id="live_telemetry::TopicHandlerEntry::voxel_leaf_size__float"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1ad31b9d238ae3112931d9c1db1697048a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">voxel_leaf_size</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.1f</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry15voxel_leaf_sizeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry10max_radiusE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry10max_radiusE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry10max_radiusE"></span><span id="live_telemetry::TopicHandlerEntry::max_radius__float"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1a755bab09ff0e0658facea90c05cdee85"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_radius</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">50.0f</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry10max_radiusE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14live_telemetry17TopicHandlerEntry17include_intensityE">
+<span id="_CPPv3N14live_telemetry17TopicHandlerEntry17include_intensityE"></span><span id="_CPPv2N14live_telemetry17TopicHandlerEntry17include_intensityE"></span><span id="live_telemetry::TopicHandlerEntry::include_intensity__b"></span><span class="target" id="structlive__telemetry_1_1TopicHandlerEntry_1ada6f151b2b6c489cf042731d67bedc8c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">include_intensity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N14live_telemetry17TopicHandlerEntry17include_intensityE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structlive__telemetry_1_1TelemetryConfig.html" class="btn btn-neutral float-left" title="Struct TelemetryConfig" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structlive__telemetry_1_1TopicSubscription.html" class="btn btn-neutral float-right" title="Struct TopicSubscription" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;live_telemetry_node&gt; Contributors. License: MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

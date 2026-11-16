@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classVector" kind="class" language="C++" prot="public">
+    <compoundname>Vector</compoundname>
+    <basecompoundref refid="classPoint" prot="public" virt="non-virtual">Point</basecompoundref>
+    <includes local="no">Vector.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classVector_1aa7cd5c26e95000b885a8ba842b3ca182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Vector::Vector</definition>
+        <argsstring>()=default</argsstring>
+        <name>Vector</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classVector" kindref="compound">Vector</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Vector.hpp" line="24" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classVector_1a4d7a871a37ddd44668d283d76a58f28c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Vector::Vector</definition>
+        <argsstring>(const Point &amp;a, const Point &amp;b)</argsstring>
+        <name>Vector</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classVector" kindref="compound">Vector</ref> object from two <ref refid="classPoint" kindref="compound">Point(s)</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Vector.hpp" line="32" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classVector_1aba1f90012ab8125baf4a973c5a84bc13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Vector::Vector</definition>
+        <argsstring>(const double &amp;x, const double &amp;y)</argsstring>
+        <name>Vector</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classVector" kindref="compound">Vector</ref> object from the two coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Vector.hpp" line="40" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classVector_1a205058fd3f1e3c67c0af6003b0ead2cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Vector::dot</definition>
+        <argsstring>(const Vector &amp;v) const</argsstring>
+        <name>dot</name>
+        <param>
+          <type>const <ref refid="classVector" kindref="compound">Vector</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Returns the dot product between the implicit <ref refid="classVector" kindref="compound">Vector</ref> and <emphasis>v</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Vector.hpp" line="47" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classVector_1a5543b3c368f1381b4628adf7f263ad49" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Vector::angleWith</definition>
+        <argsstring>(const Vector &amp;v) const</argsstring>
+        <name>angleWith</name>
+        <param>
+          <type>const <ref refid="classVector" kindref="compound">Vector</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Returns the angle that the implicit <ref refid="classVector" kindref="compound">Vector</ref> makes with <emphasis>v</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Vector.hpp" line="54" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classVector_1a78f154a8bbd5a56f778ec8c3f0fe3dec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classVector" kindref="compound">Vector</ref></type>
+        <definition>Vector Vector::rotClock</definition>
+        <argsstring>() const</argsstring>
+        <name>rotClock</name>
+        <briefdescription>
+<para>Returns a <ref refid="classVector" kindref="compound">Vector</ref> rotated clockwise 90 deg. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Vector.hpp" line="68" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classVector_1a35bfee3971a588bf1df69ce9d56dac43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classVector" kindref="compound">Vector</ref></type>
+        <definition>Vector Vector::rotCounterClock</definition>
+        <argsstring>() const</argsstring>
+        <name>rotCounterClock</name>
+        <briefdescription>
+<para>Returns a <ref refid="classVector" kindref="compound">Vector</ref> rotated counterclockwise 90 deg. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Vector.hpp" line="73" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classVector_1aa8b6eece5a9089cb441e26a99d83b888" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Vector::pointBehind</definition>
+        <argsstring>(const Point &amp;futPos, const Point &amp;actPos, const Vector &amp;dir)</argsstring>
+        <name>pointBehind</name>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>futPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPoint" kindref="compound">Point</ref> &amp;</type>
+          <declname>actPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classVector" kindref="compound">Vector</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the <ref refid="classPoint" kindref="compound">Point</ref> <emphasis>actPos</emphasis> is behind <emphasis>futPos</emphasis> along the direction <emphasis>dir</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">futPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">actPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/structures/Vector.hpp" line="63" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a vector in 2D space, inherits from the <ref refid="classPoint" kindref="compound">Point</ref> class. It provides all basic functions with vectors in 2D. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Point</label>
+        <link refid="classPoint"/>
+      </node>
+      <node id="1">
+        <label>Vector</label>
+        <link refid="classVector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Point</label>
+        <link refid="classPoint"/>
+      </node>
+      <node id="1">
+        <label>Vector</label>
+        <link refid="classVector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/structures/Vector.hpp" line="19" column="26" bodyfile="include/structures/Vector.hpp" bodystart="19" bodyend="74"/>
+    <listofallmembers>
+      <member refid="classVector_1a5543b3c368f1381b4628adf7f263ad49" prot="public" virt="non-virtual"><scope>Vector</scope><name>angleWith</name></member>
+      <member refid="classPoint_1a7d4097708ca61a5d9a7fbffc0c41d3c4" prot="public" virt="non-virtual"><scope>Vector</scope><name>at</name></member>
+      <member refid="classPoint_1ab3df7d2767ccce7e5e5171d13ac32e69" prot="public" virt="non-virtual"><scope>Vector</scope><name>ccw</name></member>
+      <member refid="classPoint_1aeca1564cf90b5331a5afe85f1fcc5509" prot="public" virt="non-virtual"><scope>Vector</scope><name>dist</name></member>
+      <member refid="classPoint_1a58bbfa131072c8f16b85e3bce9823ff6" prot="public" virt="non-virtual"><scope>Vector</scope><name>distSq</name></member>
+      <member refid="classVector_1a205058fd3f1e3c67c0af6003b0ead2cb" prot="public" virt="non-virtual"><scope>Vector</scope><name>dot</name></member>
+      <member refid="classPoint_1ae223ec7dd82924e73443c5b01b7b41ad" prot="public" virt="non-virtual"><scope>Vector</scope><name>gmPoint</name></member>
+      <member refid="classPoint_1a36be054620373f156e6fa79596a271b9" prot="public" virt="non-virtual"><scope>Vector</scope><name>operator*</name></member>
+      <member refid="classPoint_1af37b9b0144f12d56b1160b243683c2d5" prot="public" virt="non-virtual"><scope>Vector</scope><name>operator*=</name></member>
+      <member refid="classPoint_1a4218ebbe1cc5d02a823c49e3fc9c0703" prot="public" virt="non-virtual"><scope>Vector</scope><name>operator+</name></member>
+      <member refid="classPoint_1a39e9fcbe976c10685aee99ed4ed48b96" prot="public" virt="non-virtual"><scope>Vector</scope><name>operator+=</name></member>
+      <member refid="classPoint_1ae4ec92b14e766b962f09000aff318f48" prot="public" virt="non-virtual"><scope>Vector</scope><name>operator-</name></member>
+      <member refid="classPoint_1aca49d0368e9813d728a65015075f597f" prot="public" virt="non-virtual"><scope>Vector</scope><name>operator-=</name></member>
+      <member refid="classPoint_1a939f5eabab27d53c5a800a5ef137fb1e" prot="public" virt="non-virtual"><scope>Vector</scope><name>operator/</name></member>
+      <member refid="classPoint_1a8b220ddac6bfae87a833240fe3b589ec" prot="public" virt="non-virtual"><scope>Vector</scope><name>operator/=</name></member>
+      <member refid="classPoint_1ad92f2337b839a94ce97dcdb439b4325a" prot="public" virt="non-virtual"><scope>Vector</scope><name>Point</name></member>
+      <member refid="classPoint_1a1eddf7a357485285eef8c6ee03bcbce2" prot="public" virt="non-virtual"><scope>Vector</scope><name>Point</name></member>
+      <member refid="classPoint_1aae2ed23f982215b2262872ee1f728824" prot="public" virt="non-virtual"><scope>Vector</scope><name>Point</name></member>
+      <member refid="classVector_1aa8b6eece5a9089cb441e26a99d83b888" prot="public" virt="non-virtual"><scope>Vector</scope><name>pointBehind</name></member>
+      <member refid="classVector_1a78f154a8bbd5a56f778ec8c3f0fe3dec" prot="public" virt="non-virtual"><scope>Vector</scope><name>rotClock</name></member>
+      <member refid="classVector_1a35bfee3971a588bf1df69ce9d56dac43" prot="public" virt="non-virtual"><scope>Vector</scope><name>rotCounterClock</name></member>
+      <member refid="classPoint_1a3b9cb873438bf446e88f45bdad33f66e" prot="public" virt="non-virtual"><scope>Vector</scope><name>segmentsIntersect</name></member>
+      <member refid="classPoint_1a02869627c05187c446154dbe07a6c264" prot="public" virt="non-virtual"><scope>Vector</scope><name>size</name></member>
+      <member refid="classPoint_1a1bea2a5908280d640d14bab39bc9cc26" prot="public" virt="non-virtual"><scope>Vector</scope><name>transformed</name></member>
+      <member refid="classVector_1aa7cd5c26e95000b885a8ba842b3ca182" prot="public" virt="non-virtual"><scope>Vector</scope><name>Vector</name></member>
+      <member refid="classVector_1a4d7a871a37ddd44668d283d76a58f28c" prot="public" virt="non-virtual"><scope>Vector</scope><name>Vector</name></member>
+      <member refid="classVector_1aba1f90012ab8125baf4a973c5a84bc13" prot="public" virt="non-virtual"><scope>Vector</scope><name>Vector</name></member>
+      <member refid="classPoint_1ab99c56589bc8ad5fa5071387110a5bc7" prot="public" virt="non-virtual"><scope>Vector</scope><name>x</name></member>
+      <member refid="classPoint_1afa38be143ae800e6ad69ce8ed4df62d8" prot="public" virt="non-virtual"><scope>Vector</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

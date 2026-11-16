@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlive__telemetry_1_1CameraDataHandler" kind="class" language="C++" prot="public">
+    <compoundname>live_telemetry::CameraDataHandler</compoundname>
+    <basecompoundref refid="classlive__telemetry_1_1TopicHandler" prot="public" virt="non-virtual">live_telemetry::TopicHandler</basecompoundref>
+    <includes local="no">camera_data_handler.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classlive__telemetry_1_1CameraDataHandler_1ad2013156250fff376ad75964cf32a742" prot="public" static="no">
+        <type>ubm_interfaces::msg::CameraData</type>
+        <definition>using live_telemetry::CameraDataHandler::CameraDataMsg =  ubm_interfaces::msg::CameraData</definition>
+        <argsstring></argsstring>
+        <name>CameraDataMsg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="31" column="5" bodyfile="include/live_telemetry_node/camera_data_handler.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1CameraDataHandler_1a0efd6eeffceca917b7c9209aeb29b923" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; CameraDataMsg &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;CameraDataMsg&gt;::SharedPtr live_telemetry::CameraDataHandler::subscriber_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="45" column="38" bodyfile="include/live_telemetry_node/camera_data_handler.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1CameraDataHandler_1adb5ca77862c03b0884887169256e2ec7" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classlive__telemetry_1_1Downsampler" kindref="compound">CameraDataDownsampler</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;CameraDataDownsampler&gt; live_telemetry::CameraDataHandler::downsampler_</definition>
+        <argsstring></argsstring>
+        <name>downsampler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="46" column="21" bodyfile="include/live_telemetry_node/camera_data_handler.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1CameraDataHandler_1a34ac8f3427b387eec9b792080bb79353" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::CameraDataHandler::log_interval_</definition>
+        <argsstring></argsstring>
+        <name>log_interval_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="48" column="12" bodyfile="include/live_telemetry_node/camera_data_handler.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1CameraDataHandler_1a75677be446477d808f16da6feb7fb844" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::CameraDataHandler::stats_log_counter_</definition>
+        <argsstring></argsstring>
+        <name>stats_log_counter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="49" column="12" bodyfile="include/live_telemetry_node/camera_data_handler.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1CameraDataHandler_1a1c978ade8ec10d944f8a9682e63e23eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>live_telemetry::CameraDataHandler::CameraDataHandler</definition>
+        <argsstring>(rclcpp::Node *node, const HandlerConfig &amp;config, FoxgloveLogger *logger)</argsstring>
+        <name>CameraDataHandler</name>
+        <param>
+          <type>rclcpp::Node *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1HandlerConfig" kindref="compound">HandlerConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="classlive__telemetry_1_1FoxgloveLogger" kindref="compound">FoxgloveLogger</ref> *</type>
+          <declname>logger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1CameraDataHandler_1aa87f7286c77244eb378f1bc310a3f0be" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string live_telemetry::CameraDataHandler::getName</definition>
+        <argsstring>() const override</argsstring>
+        <name>getName</name>
+        <reimplements refid="classlive__telemetry_1_1TopicHandler_1aa65adc11e497610bc4907516645cfd01">getName</reimplements>
+        <briefdescription>
+<para>Get the handler name for logging and identification. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="36" column="17" bodyfile="include/live_telemetry_node/camera_data_handler.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1CameraDataHandler_1aa0fe751e49cc9b83f36c441fac9de5bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::CameraDataHandler::setDownsamplingRatio</definition>
+        <argsstring>(int ratio)</argsstring>
+        <name>setDownsamplingRatio</name>
+        <param>
+          <type>int</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="38" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1CameraDataHandler_1aa239ed67b6453f1c212debcdc8096187" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::CameraDataHandler::onMessage</definition>
+        <argsstring>(const CameraDataMsg::SharedPtr msg)</argsstring>
+        <name>onMessage</name>
+        <param>
+          <type>const CameraDataMsg::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="41" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1CameraDataHandler_1a881d991093996a2e219967dc714f8792" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::CameraDataHandler::onForward</definition>
+        <argsstring>(const CameraDataMsg &amp;msg)</argsstring>
+        <name>onForward</name>
+        <param>
+          <type>const CameraDataMsg &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1CameraDataHandler_1a44f697d5ec8b7653bf848b72ab886d14" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::CameraDataHandler::logStats</definition>
+        <argsstring>()</argsstring>
+        <name>logStats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/camera_data_handler.hpp" line="43" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Specialized handler for camera_data topics. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This handler provides full processing for camera messages:<itemizedlist>
+<listitem><para>Message downsampling (skip N frames)</para>
+</listitem><listitem><para>Image scaling (resize to target dimensions)</para>
+</listitem><listitem><para>JPEG compression (reduce bandwidth)</para>
+</listitem><listitem><para>Protobuf conversion (efficient Foxglove streaming)</para>
+</listitem></itemizedlist>
+</para>
+<para>Use this handler for camera topics where bandwidth optimization and image quality tradeoffs are needed. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>live_telemetry::CameraDataHandler</label>
+        <link refid="classlive__telemetry_1_1CameraDataHandler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>live_telemetry::TopicHandler</label>
+        <link refid="classlive__telemetry_1_1TopicHandler"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>live_telemetry::CameraDataHandler</label>
+        <link refid="classlive__telemetry_1_1CameraDataHandler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>live_telemetry::TopicHandler</label>
+        <link refid="classlive__telemetry_1_1TopicHandler"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>logger_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>config_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>stats_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>live_telemetry::FoxgloveLogger</label>
+        <link refid="classlive__telemetry_1_1FoxgloveLogger"/>
+      </node>
+      <node id="5">
+        <label>live_telemetry::HandlerStats</label>
+        <link refid="structlive__telemetry_1_1HandlerStats"/>
+      </node>
+      <node id="4">
+        <label>live_telemetry::HandlerConfig</label>
+        <link refid="structlive__telemetry_1_1HandlerConfig"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/live_telemetry_node/camera_data_handler.hpp" line="29" column="1" bodyfile="include/live_telemetry_node/camera_data_handler.hpp" bodystart="28" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1a1c978ade8ec10d944f8a9682e63e23eb" prot="public" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>CameraDataHandler</name></member>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1ad2013156250fff376ad75964cf32a742" prot="public" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>CameraDataMsg</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a039d9637fa4acfec32fcd85d6a878b9c" prot="protected" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>config_</name></member>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1adb5ca77862c03b0884887169256e2ec7" prot="private" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>downsampler_</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a3d65dcdb9e8aeafff1aa31127187c3cc" prot="public" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>getInputTopic</name></member>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1aa87f7286c77244eb378f1bc310a3f0be" prot="public" virt="virtual"><scope>live_telemetry::CameraDataHandler</scope><name>getName</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a6b8da113fb9c27d9ab56f74a99c3338a" prot="public" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>getStats</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a8b17ee21369c866a4ea64e7f7311c0e4" prot="public" virt="virtual"><scope>live_telemetry::CameraDataHandler</scope><name>isActive</name></member>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1a34ac8f3427b387eec9b792080bb79353" prot="private" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>log_interval_</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1ad9bb236e1bb4b85a18dba4aa36f388b3" prot="protected" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>logger_</name></member>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1a44f697d5ec8b7653bf848b72ab886d14" prot="private" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>logStats</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1ac5f3787aa080dfae5e28bacc3652ad6f" prot="protected" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>logVerbose</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a1c292deb108e63785e7e3968a195b2a2" prot="protected" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>node_</name></member>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1a881d991093996a2e219967dc714f8792" prot="private" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>onForward</name></member>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1aa239ed67b6453f1c212debcdc8096187" prot="private" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>onMessage</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a73e12a4a6758c88edab63ae2fcebcba3" prot="public" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>operator=</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a4347b11e89d90c9e0468079f100544c8" prot="public" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>operator=</name></member>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1aa0fe751e49cc9b83f36c441fac9de5bf" prot="public" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>setDownsamplingRatio</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a9197075b1a5012036ae148a76da39b89" prot="protected" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>shouldForward</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1abbb40a10b5815acb437fe63f455ddb07" prot="protected" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>stats_</name></member>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1a75677be446477d808f16da6feb7fb844" prot="private" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>stats_log_counter_</name></member>
+      <member refid="classlive__telemetry_1_1CameraDataHandler_1a0efd6eeffceca917b7c9209aeb29b923" prot="private" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>subscriber_</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1addf9ed7f3579ee4642dba2ac2fafa020" prot="public" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>TopicHandler</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a9c2bebf897706399b4ba401f2d696ae2" prot="public" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>TopicHandler</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a9ff3a67150695434f273352276ce92c6" prot="public" virt="non-virtual"><scope>live_telemetry::CameraDataHandler</scope><name>TopicHandler</name></member>
+      <member refid="classlive__telemetry_1_1TopicHandler_1a74a407290bc290250674b9cb210130f7" prot="public" virt="virtual"><scope>live_telemetry::CameraDataHandler</scope><name>~TopicHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

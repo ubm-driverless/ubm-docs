@@ -1,0 +1,941 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="functional__cone__matching_8hpp" kind="file" language="C++">
+    <compoundname>functional_cone_matching.hpp</compoundname>
+    <includes refid="utils_8hpp" local="yes">cone_path_planner/utils.hpp</includes>
+    <includes refid="calculate__configurations_8hpp" local="yes">cone_path_planner/calculate_configurations.hpp</includes>
+    <includes refid="cone__sorting_8hpp" local="yes">cone_path_planner/cone_sorting.hpp</includes>
+    <includes refid="arma__conversions_8hpp" local="yes">cone_path_planner/arma_conversions.hpp</includes>
+    <includes refid="matching__utils_8hpp" local="yes">cone_path_planner/matching_utils.hpp</includes>
+    <includes refid="costs__utils_8hpp" local="yes">cone_path_planner/costs_utils.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">armadillo</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">array</includes>
+    <includes local="no">string</includes>
+    <includes local="no">cassert</includes>
+    <includedby refid="cone__matching_8hpp" local="yes">include/cone_path_planner/cone_matching.hpp</includedby>
+    <includedby refid="costs__utils_8hpp" local="yes">include/cone_path_planner/costs_utils.hpp</includedby>
+    <includedby refid="nearby__cone__search_8hpp" local="yes">include/cone_path_planner/nearby_cone_search.hpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>limits</label>
+      </node>
+      <node id="2">
+        <label>cone_path_planner/costs_utils.hpp</label>
+        <link refid="costs__utils_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="15">
+        <label>cassert</label>
+      </node>
+      <node id="13">
+        <label>numeric</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>armadillo</label>
+      </node>
+      <node id="10">
+        <label>cone_path_planner/cone_common_types.hpp</label>
+        <link refid="cone__common__types_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>tuple</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>array</label>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/functional_cone_matching.hpp</label>
+        <link refid="functional__cone__matching_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>unordered_map</label>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/cone_path_planner/costs_utils.hpp</label>
+        <link refid="costs__utils_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/cone_path_planner/calculate_costs.hpp</label>
+        <link refid="calculate__costs_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/functional_cone_matching.hpp</label>
+        <link refid="functional__cone__matching_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="functional__cone__matching_8hpp_1a18bbc3fc4b88e28cc20ab2f652a06c03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; arma::fmat, arma::ivec, arma::ivec, arma::fmat, arma::ivec, arma::ivec &gt;</type>
+        <definition>std::tuple&lt;arma::fmat, arma::ivec, arma::ivec, arma::fmat, arma::ivec, arma::ivec&gt; calculate_virtual_cones_for_both_sides</definition>
+        <argsstring>(const arma::fmat &amp;left_cones, const arma::fmat &amp;right_cones, const arma::fvec &amp;car_position, const arma::fvec &amp;car_direction, float min_track_width, float major_radius, float minor_radius, float max_search_angle)</argsstring>
+        <name>calculate_virtual_cones_for_both_sides</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>left_cones</declname>
+        </param>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>right_cones</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>car_position</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>car_direction</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>min_track_width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>major_radius</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>minor_radius</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_search_angle</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the virtual cones for both sides of the track. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function computes virtual cones for both the left and right sides of the track based on the provided cone positions, car position, direction, and geometric parameters. It returns the resulting virtual cones and their corresponding match indices for both sides.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of left side cone positions (N x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of right side cone positions (M x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector representing the car position in the track (2D). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector representing the direction the car is facing (2D). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_track_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum track width to consider when placing virtual cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>major_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The major radius of the cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minor_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minor radius of the cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_search_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum search angle allowed for matching cones. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tuple containing:<itemizedlist>
+<listitem><para>Left side result cones (N x 2).</para>
+</listitem><listitem><para>Left side match indices (1D array of matches).</para>
+</listitem><listitem><para>Right side result cones (M x 2).</para>
+</listitem><listitem><para>Right side match indices (1D array of matches). </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/functional_cone_matching.hpp" line="44" column="1" declfile="include/cone_path_planner/functional_cone_matching.hpp" declline="44" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="functional__cone__matching_8hpp_1a723dc5ba34f17b91638495af8c14f163" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; arma::fmat, arma::ivec, arma::ivec &gt;</type>
+        <definition>std::tuple&lt;arma::fmat, arma::ivec, arma::ivec&gt; calculate_cones_for_other_side</definition>
+        <argsstring>(const arma::fmat &amp;cones, ConeType cone_type, float major_radius, float minor_radius, float max_search_angle, const arma::fmat &amp;other_side_cones, float min_track_width, const arma::fvec &amp;car_pos, const arma::fvec &amp;car_dir)</argsstring>
+        <name>calculate_cones_for_other_side</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>major_radius</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>minor_radius</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_search_angle</declname>
+        </param>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>other_side_cones</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>min_track_width</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>car_pos</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>car_dir</declname>
+        </param>
+        <briefdescription>
+<para>Calculates cones for the other side of the track by matching them with cones on the given side. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function matches cones from one side of the track to cones on the other side and creates virtual cones for those without a match. The cones are then combined and sorted.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cone positions on the current side of the track (N x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of cones (either LEFT or RIGHT). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>major_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The major radius of the cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minor_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minor radius of the cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_search_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum angle allowed when searching for matches. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>other_side_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cone positions on the opposite side of the track (M x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_track_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum width of the track. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current car position (2D). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current car direction (2D). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair containing:<itemizedlist>
+<listitem><para>Combined and sorted cones (N x 2).</para>
+</listitem><listitem><para>Mask indicating which cones are virtual (1D array). </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/functional_cone_matching.hpp" line="74" column="12" declfile="include/cone_path_planner/functional_cone_matching.hpp" declline="74" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="functional__cone__matching_8hpp_1a3011cbdef50a04318434263896740d2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; arma::fmat, arma::ivec, arma::fmat &gt;</type>
+        <definition>std::tuple&lt;arma::fmat, arma::ivec, arma::fmat&gt; calculate_matches_for_side</definition>
+        <argsstring>(const arma::fmat &amp;cones, ConeType cone_type, const arma::fmat &amp;other_side_cones, float major_radius, float minor_radius, float max_search_angle)</argsstring>
+        <name>calculate_matches_for_side</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>other_side_cones</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>major_radius</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>minor_radius</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_search_angle</declname>
+        </param>
+        <briefdescription>
+<para>Calculates matches between cones on one side of the track and cones on the other side. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function finds the best match for each cone from one side of the track to the other, based on direction and geometric criteria.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cone positions on the current side of the track (N x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of cones (either LEFT or RIGHT). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>other_side_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cone positions on the opposite side of the track (M x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>major_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The major radius of the cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minor_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minor radius of the cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_search_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum angle allowed when searching for matches. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tuple containing:<itemizedlist>
+<listitem><para>Matchable cone positions (N x 2).</para>
+</listitem><listitem><para>Indices of the best matches (1D array of indices).</para>
+</listitem><listitem><para>Search directions (N x 2). </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/functional_cone_matching.hpp" line="104" column="1" declfile="include/cone_path_planner/functional_cone_matching.hpp" declline="104" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="functional__cone__matching_8hpp_1a3e9e35b39c326b6e2ca3117b09da6081" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::frowvec</type>
+        <definition>arma::frowvec calculate_search_direction_for_one</definition>
+        <argsstring>(const arma::fmat &amp;cones, int idx1, int idx2, ConeType cone_type)</argsstring>
+        <name>calculate_search_direction_for_one</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx2</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the search direction between two cones. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function computes the search direction for one pair of cones. It computes the direction based on the relative position of the cones and applies a 90-degree rotation depending on the cone type (LEFT or RIGHT).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cone positions (N x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the first cone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the second cone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of cone (LEFT or RIGHT). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The normalized search direction between the two cones (2D vector). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/functional_cone_matching.hpp" line="126" column="15" declfile="include/cone_path_planner/functional_cone_matching.hpp" declline="126" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="functional__cone__matching_8hpp_1aca428314ac09e7e2c61b11ad9562f9da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fmat</type>
+        <definition>arma::fmat calculate_search_direction</definition>
+        <argsstring>(const arma::fmat &amp;cones, ConeType cone_type)</argsstring>
+        <name>calculate_search_direction</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>ConeType</type>
+          <declname>cone_type</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the search direction for all cones on one side of the track. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function computes the search direction for all cones on a given side of the track. The direction is computed between consecutive cones, with special cases for the first and last cone.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cone positions (N x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cone_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of cone (LEFT or RIGHT). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A matrix of search directions (N x 2). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/functional_cone_matching.hpp" line="143" column="12" declfile="include/cone_path_planner/functional_cone_matching.hpp" declline="143" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="functional__cone__matching_8hpp_1a500d8618208d324a9ed47c52d9ee1913" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::ivec</type>
+        <definition>arma::ivec select_best_match_candidate</definition>
+        <argsstring>(const arma::fmat &amp;start_points, const arma::fmat &amp;directions, const arma::fmat &amp;other_side_cones, const arma::fmat &amp;other_side_directions, const arma::fvec &amp;angles, const arma::fvec &amp;radii_square, float max_search_angle)</argsstring>
+        <name>select_best_match_candidate</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>start_points</declname>
+        </param>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>directions</declname>
+        </param>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>other_side_cones</declname>
+        </param>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>other_side_directions</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>radii_square</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_search_angle</declname>
+        </param>
+        <briefdescription>
+<para>Selects the best match for each cone based on Euclidean distance and angular criteria. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function matches cones from one side of the track with cones on the other side. It uses both Euclidean distance and angular criteria to select the best match for each cone.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cone positions on the start side of the track (M x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>directions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of directions associated with each cone (M x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>other_side_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cone positions on the other side of the track (N x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>other_side_directions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of directions for the other side (N x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of angles for the cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radii_square</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of squared radii for the cones. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_search_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum angle allowed for matching cones. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of indices corresponding to the best matches for each cone (M x 1). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/functional_cone_matching.hpp" line="163" column="12" declfile="include/cone_path_planner/functional_cone_matching.hpp" declline="163" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="functional__cone__matching_8hpp_1ae0cfcb990f6c04336f1c0f1904ced768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::fmat</type>
+        <definition>arma::fmat calculate_positions_of_virtual_cones</definition>
+        <argsstring>(const arma::fmat &amp;cones, const arma::uvec &amp;indices_of_unmatched_cones, const arma::fmat &amp;search_directions, float min_track_width)</argsstring>
+        <name>calculate_positions_of_virtual_cones</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>const arma::uvec &amp;</type>
+          <declname>indices_of_unmatched_cones</declname>
+        </param>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>search_directions</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>min_track_width</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the positions of virtual cones based on unmatched cones and search directions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates virtual cone positions by extending the unmatched cones along their respective search directions. The virtual cones are placed at a distance determined by the minimum track width.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cone positions (N x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>indices_of_unmatched_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indices of the cones that did not have a match. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>search_directions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of search directions for the cones (N x 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_track_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum track width used to determine virtual cone positioning. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A matrix of virtual cone positions (M x 2). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/functional_cone_matching.hpp" line="186" column="12" declfile="include/cone_path_planner/functional_cone_matching.hpp" declline="186" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="functional__cone__matching_8hpp_1a44b714b594e5b94d1cc28250d2ff7e0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::tuple&lt; arma::fmat, arma::ivec &gt;</type>
+        <definition>std::tuple&lt;arma::fmat, arma::ivec&gt; combine_and_sort_virtual_with_real</definition>
+        <argsstring>(const arma::fmat &amp;other_side_cones, const arma::fmat &amp;other_side_virtual_cones, const arma::ivec &amp;match_idx_original, const arma::fvec &amp;car_pos, const arma::fvec &amp;car_dir)</argsstring>
+        <name>combine_and_sort_virtual_with_real</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>other_side_cones</declname>
+        </param>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>other_side_virtual_cones</declname>
+        </param>
+        <param>
+          <type>const arma::ivec &amp;</type>
+          <declname>match_idx_original</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>car_pos</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>car_dir</declname>
+        </param>
+        <briefdescription>
+<para>Combines real and virtual cones, sorts them, and identifies virtual cones based on distance from real cones. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function combines two sets of cones (real and virtual), inserts the virtual cones into the existing set of real cones, and sorts them. It then calculates the Euclidean distance between the combined cones and the real cones to determine which cones are virtual. A cone is considered virtual if it is sufficiently far from all real cones, as defined by an epsilon value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other_side_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of real cones (rows = points, cols = dimensions), type <computeroutput>arma::fmat</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>other_side_virtual_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of virtual cones (rows = points, cols = dimensions), type <computeroutput>arma::fmat</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>match_idx_original</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of indices that match the original cones, type <computeroutput>arma::ivec</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix representing the position of the car (used for insertion), type <computeroutput>arma::fvec</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix representing the direction of the car (currently not used), type <computeroutput>arma::fvec</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tuple containing:<itemizedlist>
+<listitem><para>A matrix of sorted and combined cones (real and virtual), type <computeroutput>arma::mat</computeroutput>.</para>
+</listitem><listitem><para>A boolean vector indicating whether each cone is virtual (1 if virtual, 0 if real), type <computeroutput>arma::ivec</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="note"><para>This function assumes that <computeroutput>other_side_cones</computeroutput> and <computeroutput>other_side_virtual_cones</computeroutput> are matrices where each row represents a cone in a multi-dimensional space. The <computeroutput>car_pos</computeroutput> vector represents the position of the car, which is used when inserting virtual cones.</para>
+</simplesect>
+<simplesect kind="see"><para>insert_virtual_cones_to_existing, my_cdist_sq_euclidean </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/functional_cone_matching.hpp" line="218" column="1" declfile="include/cone_path_planner/functional_cone_matching.hpp" declline="218" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="functional__cone__matching_8hpp_1a67d29e8d606665b9b54e9741c7da2b0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; arma::fmat, arma::ivec &gt;</type>
+        <definition>std::pair&lt;arma::fmat, arma::ivec&gt; insert_virtual_cones_to_existing</definition>
+        <argsstring>(const arma::fmat &amp;other_side_cones, const arma::fmat &amp;other_side_virtual_cones, const arma::ivec &amp;match_idx_original, const arma::fvec &amp;car_pos)</argsstring>
+        <name>insert_virtual_cones_to_existing</name>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>other_side_cones</declname>
+        </param>
+        <param>
+          <type>const arma::fmat &amp;</type>
+          <declname>other_side_virtual_cones</declname>
+        </param>
+        <param>
+          <type>const arma::ivec &amp;</type>
+          <declname>match_idx_original</declname>
+        </param>
+        <param>
+          <type>const arma::fvec &amp;</type>
+          <declname>car_pos</declname>
+        </param>
+        <briefdescription>
+<para>Inserts virtual cones into an existing set of cones based on proximity and angle constraints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes two sets of cones (real and virtual) from the opposite side, along with the position of the car, and inserts the virtual cones into the existing cones in an optimized manner. The cones are first sorted based on their proximity to the existing cones, and then the virtual cones are inserted where necessary, either between existing cones or at the end based on angle constraints. After inserting the virtual cones, the function filters out cones that would create small angles (&lt; 85 degrees) between consecutive cones.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other_side_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cones representing the existing cones on the opposite side. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>other_side_virtual_cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix of cones representing the virtual cones to be inserted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>match_idx_original</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of indices that match the original cones, used for sorting and insertion. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>car_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A row vector representing the position of the car.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A matrix of cones after inserting virtual cones and filtering out those creating small angles, and a vector indicating which cones are virtual (1 if virtual, 0 if real).</para>
+</simplesect>
+<simplesect kind="note"><para>This function assumes that <computeroutput>other_side_cones</computeroutput> and <computeroutput>other_side_virtual_cones</computeroutput> are matrices where each row represents a cone in 2D or 3D space (depending on the context). The <computeroutput>car_pos</computeroutput> vector is assumed to represent the position of the car in a 2D or 3D coordinate system.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Throws an exception if an unreachable code block is encountered during the insertion of cones. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/functional_cone_matching.hpp" line="252" column="11" declfile="include/cone_path_planner/functional_cone_matching.hpp" declline="252" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/functional_cone_matching.hpp"/>
+  </compounddef>
+</doxygen>

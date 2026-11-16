@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function calculate_mean &mdash; simple_control_algos 1.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=fc837d61"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function calculate_mean_in_range" href="function_utils_8hpp_1a7c87b3820a510fe8ba3d31de23d1368d.html" />
+    <link rel="prev" title="Template Function argmin" href="function_utils_8hpp_1a548f490e1cc2964ec6a3099dedee3485.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            simple_control_algos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-c-api">Full C++ API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_control_structs.html">Namespace control_structs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1ControlState.html">Struct ControlState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1DummyControllerParameters.html">Struct DummyControllerParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1NodeConfig.html">Struct NodeConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1PathFollowerParameters.html">Struct PathFollowerParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1RosInterfaces.html">Struct RosInterfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structcontrol__structs_1_1SpeedProfileParameters.html">Struct SpeedProfileParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structDummyController_1_1ProfilingTimers.html">Struct DummyController::ProfilingTimers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structLapPerformanceData.html">Struct LapPerformanceData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structSpeedProfileGenerator_1_1RawSample.html">Struct SpeedProfileGenerator::RawSample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classAccelerationController.html">Class AccelerationController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classControlNode.html">Class ControlNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classcubic__spline__2d.html">Class cubic_spline_2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline1d.html">Class CubicSpline1d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classCubicSpline2d.html">Class CubicSpline2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classDummyController.html">Class DummyController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classEbsController.html">Class EbsController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFeedForwardAction.html">Class FeedForwardAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classLapPerformance.html">Class LapPerformance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMissionController.html">Class MissionController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classPathFollowerNode.html">Class PathFollowerNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomial.html">Class QuarticPolynomial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classQuarticPolynomialMiddlePose.html">Class QuarticPolynomialMiddlePose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSkidpadController.html">Class SkidpadController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSpeedGenerator.html">Class SpeedGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSpeedProfileGenerator.html">Class SpeedProfileGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSteeringController.html">Class SteeringController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classThirdPolynomial.html">Class ThirdPolynomial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTorqueController.html">Class TorqueController</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a548f490e1cc2964ec6a3099dedee3485.html">Template Function argmin</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Function calculate_mean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a7c87b3820a510fe8ba3d31de23d1368d.html">Function calculate_mean_in_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a49e610728a5471f56fc020d2b6ee6e9b.html">Function get_rgb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1ab868f789f6ce2325022257f61de9c9f8.html">Function heading_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a478f9c32589c5d73b481c36e939f27a1.html">Function linspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a1c302fecbc320694c92b7363cd0d7f35.html">Function publish_performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1abe1b1b997bef9846de6c15b8c8d5fa0f.html">Function publish_points_as_marker_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a19d41a1984d9db4166ff1979918e1a7a.html">Function publish_points_as_pointcloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1a2eb198870d55f9cb7c26e1f60b9a1979.html">Function publish_raceline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a588d8ae799d233a401111c312e73364f.html">Function rafi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_utils_8hpp_1a88dbb5d572b05732c37a6ab53f130fab.html">Function rifa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_simple__speed_8hpp_1a8666ead035190ddbcd155650aeb37176.html">Function speed_proportional_steering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_simple__speed_8hpp_1ad8b9a9a94d3855969c36725c280f7d5b.html">Function speed_steer_and_fov</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1acdd4d10e13db0d62aa9bf84a812c7895.html">Function visualize_markers(const rclcpp::Publisher&lt;geometry_msgs::msg::PoseStamped&gt;::SharedPtr&amp;, const ubm_interfaces::msg::CustomHeader&amp;, float, float)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ros__utils_8hpp_1ad8bece350207dd4e9535a9776f902abc.html">Function visualize_markers(const rclcpp::Publisher&lt;geometry_msgs::msg::PointStamped&gt;::SharedPtr&amp;, const ubm_interfaces::msg::CustomHeader&amp;, float, float)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#directories">Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dir_include.html">Directory include</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_interfaces.html">Directory interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dir_include_utils.html">Directory utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#files">Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="file_include_acceleration_controller.hpp.html">File acceleration_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_control_node.hpp.html">File control_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_ControlStructDataType.hpp.html">File ControlStructDataType.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_dummy_controller.hpp.html">File dummy_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_ebs_controller.hpp.html">File ebs_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_lap_performance.hpp.html">File lap_performance.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_interfaces_mission_controller.hpp.html">File mission_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_path_follower_node.hpp.html">File path_follower_node.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_ros_utils.hpp.html">File ros_utils.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_simple_speed.hpp.html">File simple_speed.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_skidpad_controller.hpp.html">File skidpad_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_interfaces_speed_generator.hpp.html">File speed_generator.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_speed_profile_generator.hpp.html">File speed_profile_generator.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_speed_sae_controller.hpp.html">File speed_sae_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_spline_and_polynomial.hpp.html">File spline_and_polynomial.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_steering_controller.hpp.html">File steering_controller.hpp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="file_include_utils_utils.hpp.html">File utils.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/LICENSE.html">LICENSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../standard_docs/README.html#simple-control-algorithms">Simple Control Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#reactive-algorithms-nodes-overview">Reactive Algorithms Nodes Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../standard_docs/README.html#libraries">Libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">simple_control_algos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Function calculate_mean</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/function_utils_8hpp_1a7961cf9f682c353bbbbee08688449363.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="function-calculate-mean">
+<span id="exhale-function-utils-8hpp-1a7961cf9f682c353bbbbee08688449363"></span><h1>Function calculate_mean<a class="headerlink" href="#function-calculate-mean" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_utils_utils.hpp.html#file-include-utils-utils-hpp"><span class="std std-ref">File utils.hpp</span></a></p></li>
+</ul>
+<section id="function-documentation">
+<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414calculate_meanRKNSt6vectorIfEE">
+<span id="_CPPv314calculate_meanRKNSt6vectorIfEE"></span><span id="_CPPv214calculate_meanRKNSt6vectorIfEE"></span><span id="calculate_mean__std::vector:float:CR"></span><span class="target" id="utils_8hpp_1a7961cf9f682c353bbbbee08688449363"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calculate_mean</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414calculate_meanRKNSt6vectorIfEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Calculates the mean of the elements in a given vector. </p>
+<p>This function takes a vector of floats as input and returns the mean (average) of its elements. If the vector is empty, the behavior is undefined.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vector</strong> – A constant reference to a vector of floats whose mean is to be calculated. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The mean of the elements in the vector as a float. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="function_utils_8hpp_1a548f490e1cc2964ec6a3099dedee3485.html" class="btn btn-neutral float-left" title="Template Function argmin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="function_utils_8hpp_1a7c87b3820a510fe8ba3d31de23d1368d.html" class="btn btn-neutral float-right" title="Function calculate_mean_in_range" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;simple_control_algos&gt; Contributors. License: MIT Lincense.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

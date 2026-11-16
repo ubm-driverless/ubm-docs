@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="utils_8hpp" kind="file" language="C++">
+    <compoundname>utils.hpp</compoundname>
+    <includes local="no">array</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">armadillo</includes>
+    <includes local="no">queue</includes>
+    <includes refid="arma__conversions_8hpp" local="yes">arma_conversions.hpp</includes>
+    <includedby refid="calculate__configurations_8hpp" local="yes">include/cone_path_planner/calculate_configurations.hpp</includedby>
+    <includedby refid="calculate__costs_8hpp" local="yes">include/cone_path_planner/calculate_costs.hpp</includedby>
+    <includedby refid="combine__traces_8hpp" local="yes">include/cone_path_planner/combine_traces.hpp</includedby>
+    <includedby refid="cone__matching_8hpp" local="yes">include/cone_path_planner/cone_matching.hpp</includedby>
+    <includedby refid="cone__sorting_8hpp" local="yes">include/cone_path_planner/cone_sorting.hpp</includedby>
+    <includedby refid="costs__utils_8hpp" local="yes">include/cone_path_planner/costs_utils.hpp</includedby>
+    <includedby refid="functional__cone__matching_8hpp" local="yes">include/cone_path_planner/functional_cone_matching.hpp</includedby>
+    <includedby refid="nearby__cone__search_8hpp" local="yes">include/cone_path_planner/nearby_cone_search.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>queue</label>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>armadillo</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>array</label>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/cone_path_planner/costs_utils.hpp</label>
+        <link refid="costs__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/cone_path_planner/calculate_costs.hpp</label>
+        <link refid="calculate__costs_8hpp"/>
+      </node>
+      <node id="1">
+        <label>include/cone_path_planner/utils.hpp</label>
+        <link refid="utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85d" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ConeType</name>
+        <enumvalue id="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85da684d325a7303f52e64011467ff5c5758" prot="public">
+          <name>LEFT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85da87a39f874fe63364c38b84409c89e503" prot="public">
+          <name>ORANGE_BIG</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85da666560577ad308857699da5cac332553" prot="public">
+          <name>ORANGE_SMALL</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85da696b031073e74bf2cb98e5ef201d4aa3" prot="public">
+          <name>UNKNOWN</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="utils_8hpp_1a01126571d9d48a03e31190a1d16fa85da21507b40c80068eda19865706fdc2403" prot="public">
+          <name>RIGHT</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum class representing different types of cones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/utils.hpp" line="20" column="20" bodyfile="include/cone_path_planner/utils.hpp" bodystart="20" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="utils_8hpp_1a5b81972b6f8c6255aeb78a4a7af2b847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; arma::vec2 &gt;</type>
+        <definition>std::vector&lt;arma::vec2&gt; convert_to_arma_vector</definition>
+        <argsstring>(const std::vector&lt; std::array&lt; float, 2 &gt;&gt; vector)</argsstring>
+        <name>convert_to_arma_vector</name>
+        <param>
+          <type>const std::vector&lt; std::array&lt; float, 2 &gt;&gt;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+<para>Create a vector of 2D points (arma::vec2) from general vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of 2D points represented as arrays of two floats [x, y]. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of 2D points (arma::vec2). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/utils.hpp" line="35" column="13" declfile="include/cone_path_planner/utils.hpp" declline="35" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a229e86e09149bdecf85f1e91e0dd98e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::array&lt; float, 2 &gt; &gt;</type>
+        <definition>std::vector&lt;std::array&lt;float, 2&gt; &gt; convert_from_arma_vector</definition>
+        <argsstring>(const std::vector&lt; arma::vec2 &gt; &amp;arma_vector)</argsstring>
+        <name>convert_from_arma_vector</name>
+        <param>
+          <type>const std::vector&lt; arma::vec2 &gt; &amp;</type>
+          <declname>arma_vector</declname>
+        </param>
+        <briefdescription>
+<para>Converts a vector of arma::vec2 to a vector of std::array&lt;float, 2&gt;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is the inverse of convert_to_arma_vector(). It transforms an Armadillo-style 2D vector into a standard C++ representation using arrays of floats.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arma_vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector containing arma::vec2 elements. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;std::array&lt;float, 2&gt;&gt; The converted vector in standard format. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/utils.hpp" line="46" column="13" declfile="include/cone_path_planner/utils.hpp" declline="46" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1ab346cbc8e58adf1d01aa6a34b65f699f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; arma::vec2 &gt;</type>
+        <definition>std::vector&lt;arma::vec2&gt; rotate</definition>
+        <argsstring>(const std::vector&lt; arma::vec2 &gt; points, double angle)</argsstring>
+        <name>rotate</name>
+        <param>
+          <type>const std::vector&lt; arma::vec2 &gt;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>Rotates a vector of 2D points by a specified angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a vector of 2D points and rotates each point around the origin by the given angle (in radians). The rotation is performed using a standard 2D rotation matrix, being counterclockwise if theta is negative.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of 2D points (arma::vec2) to be rotated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle of rotation in radians. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of 2D points after rotation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/utils.hpp" line="59" column="13" declfile="include/cone_path_planner/utils.hpp" declline="59" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a4f41df9a8a8c4d7a420fdd7333e50a63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; angle_from_2d_vector</definition>
+        <argsstring>(const std::vector&lt; arma::vec2 &gt; points)</argsstring>
+        <name>angle_from_2d_vector</name>
+        <param>
+          <type>const std::vector&lt; arma::vec2 &gt;</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Computes the angles of 2D vectors relative to the x-axis. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a vector of 2D points (arma::vec2) and calculates the angle (in radians) of each point relative to the x-axis using the arctangent function (std::atan2).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of 2D points (arma::vec2). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of angles (in radians) corresponding to the input points. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/utils.hpp" line="71" column="13" declfile="include/cone_path_planner/utils.hpp" declline="71" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8hpp_1a8554a4bf66d0232bb5759d4ba87b8a4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; vec_angle_between</definition>
+        <argsstring>(const std::vector&lt; arma::vec2 &gt; vecs1, const std::vector&lt; arma::vec2 &gt; vecs2)</argsstring>
+        <name>vec_angle_between</name>
+        <param>
+          <type>const std::vector&lt; arma::vec2 &gt;</type>
+          <declname>vecs1</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; arma::vec2 &gt;</type>
+          <declname>vecs2</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the angle between two vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vecs1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of 2D points (arma::vec2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vecs2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of 2D points (arma::vec2). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of angles (in radians) between the corresponding vectors in vecs1 and vecs2. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cone_path_planner/utils.hpp" line="80" column="13" declfile="include/cone_path_planner/utils.hpp" declline="80" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/cone_path_planner/utils.hpp"/>
+  </compounddef>
+</doxygen>

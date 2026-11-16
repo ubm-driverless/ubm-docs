@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlive__telemetry_1_1FoxgloveLogger" kind="class" language="C++" prot="public">
+    <compoundname>live_telemetry::FoxgloveLogger</compoundname>
+    <innerclass refid="structlive__telemetry_1_1FoxgloveLogger_1_1ProtobufChannelEntry" prot="private">live_telemetry::FoxgloveLogger::ProtobufChannelEntry</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Level</name>
+        <enumvalue id="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76aa603905470e2a5b8c13e96b579ef0dba" prot="public">
+          <name>Debug</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76a4059b0251f66a18cb56f544728796875" prot="public">
+          <name>Info</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76a0eaadb4fcb48a0a0ed7bc9868be9fbaa" prot="public">
+          <name>Warning</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76a902b0d55fddef6f8d651fe1035b7d4bd" prot="public">
+          <name>Error</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="46" column="1" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="45" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a31ee1c1ff7f86ca5ba4ceb27fc7dfe45" prot="private" static="no" mutable="no">
+        <type><ref refid="structlive__telemetry_1_1FoxgloveConfig" kindref="compound">FoxgloveConfig</ref></type>
+        <definition>FoxgloveConfig live_telemetry::FoxgloveLogger::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="444" column="20" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1ac1b5fe34a1e86155bd1599e11a7a1512" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool live_telemetry::FoxgloveLogger::initialized_</definition>
+        <argsstring></argsstring>
+        <name>initialized_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="445" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a906bf7adbe4df4d4f35b8bf704433e6d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string live_telemetry::FoxgloveLogger::schema_data_</definition>
+        <argsstring></argsstring>
+        <name>schema_data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="446" column="17" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1af0cf67b51e5c1cceb4f71c4e9728be09" prot="private" static="no" mutable="no">
+        <type><ref refid="classlive__telemetry_1_1ImageScaler" kindref="compound">ImageScaler</ref></type>
+        <definition>ImageScaler live_telemetry::FoxgloveLogger::image_scaler_</definition>
+        <argsstring></argsstring>
+        <name>image_scaler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="447" column="17" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a8d828552086fe86706c6e29073e79567" prot="private" static="no" mutable="no">
+        <type><ref refid="classlive__telemetry_1_1JpegCompressor" kindref="compound">JpegCompressor</ref></type>
+        <definition>JpegCompressor live_telemetry::FoxgloveLogger::jpeg_compressor_</definition>
+        <argsstring></argsstring>
+        <name>jpeg_compressor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="448" column="20" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a7e65483767d489878c6d5321158232a1" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; foxglove::WebSocketServer &gt;</type>
+        <definition>std::optional&lt;foxglove::WebSocketServer&gt; live_telemetry::FoxgloveLogger::server_</definition>
+        <argsstring></argsstring>
+        <name>server_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="449" column="19" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a0b3c6dfe19ed886046efd893169c1c02" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; foxglove::schemas::LogChannel &gt;</type>
+        <definition>std::optional&lt;foxglove::schemas::LogChannel&gt; live_telemetry::FoxgloveLogger::log_channel_</definition>
+        <argsstring></argsstring>
+        <name>log_channel_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="450" column="19" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a2ac344d1ee9fed5da625c92bfa1e4a13" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; foxglove::RawChannel &gt;</type>
+        <definition>std::optional&lt;foxglove::RawChannel&gt; live_telemetry::FoxgloveLogger::camera_data_channel_</definition>
+        <argsstring></argsstring>
+        <name>camera_data_channel_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="451" column="19" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a1df0845fdc39c602cfddddf4b1a31954" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::unique_ptr&lt; foxglove::RawChannel &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::unique_ptr&lt;foxglove::RawChannel&gt; &gt; live_telemetry::FoxgloveLogger::generic_channels_</definition>
+        <argsstring></argsstring>
+        <name>generic_channels_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="452" column="14" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a7c1a18deac748a760e5ece68cb585bd6" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, ProtobufChannelEntry &gt;</type>
+        <definition>std::map&lt;std::string, ProtobufChannelEntry&gt; live_telemetry::FoxgloveLogger::point_cloud_channels_</definition>
+        <argsstring></argsstring>
+        <name>point_cloud_channels_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="453" column="14" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1ada8c7a1b2604f12b869af5165a9c34da" prot="private" static="no" mutable="no">
+        <type><ref refid="classlive__telemetry_1_1MessageDefinitionProvider" kindref="compound">MessageDefinitionProvider</ref></type>
+        <definition>MessageDefinitionProvider live_telemetry::FoxgloveLogger::msg_def_provider_</definition>
+        <argsstring></argsstring>
+        <name>msg_def_provider_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="454" column="31" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a17d44a89e961d65d2d7ef46f7fef6348" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; live_telemetry::FoxgloveLogger::definition_cache_</definition>
+        <argsstring></argsstring>
+        <name>definition_cache_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="455" column="14" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="455" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a17ec3626fe9154ac5eea4db0afd741b6" prot="private" static="no" mutable="no">
+        <type><ref refid="structlive__telemetry_1_1PublishStats" kindref="compound">PublishStats</ref></type>
+        <definition>PublishStats live_telemetry::FoxgloveLogger::stats_</definition>
+        <argsstring></argsstring>
+        <name>stats_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="457" column="18" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a1af43242a30bf6b92a2369bba79de92a" prot="private" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point live_telemetry::FoxgloveLogger::last_stats_time_</definition>
+        <argsstring></argsstring>
+        <name>last_stats_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="458" column="43" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="458" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a8e6ec28cfc7a744a6e0294682a05a28d" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::FoxgloveLogger::bytes_this_second_</definition>
+        <argsstring></argsstring>
+        <name>bytes_this_second_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="459" column="12" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="459" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlive__telemetry_1_1FoxgloveLogger_1a88f3504b7ad5ae8cdecff36a13ddfbcf" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t live_telemetry::FoxgloveLogger::messages_this_second_</definition>
+        <argsstring></argsstring>
+        <name>messages_this_second_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="460" column="12" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="460" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1ab96c1824240aae70147a302d8acfe186" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>live_telemetry::FoxgloveLogger::FoxgloveLogger</definition>
+        <argsstring>(const FoxgloveConfig &amp;config)</argsstring>
+        <name>FoxgloveLogger</name>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1FoxgloveConfig" kindref="compound">FoxgloveConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="53" column="14" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="53" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1ac200f759d7ff1117b39c1b0cbab489aa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::FoxgloveLogger::isReady</definition>
+        <argsstring>() const</argsstring>
+        <name>isReady</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="69" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a17ba0ed24d95f9b182f0e12d45d8b3f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::info</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>info</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="74" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a26c82554e670390b5838a5f27520ba94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::debug</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>debug</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="79" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a5f7919347307bb59ec846eb84a5d5997" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::warning</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>warning</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="84" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1addf46be30588b5de732dfee9fdb688b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::error</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>error</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="89" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a41c42315dc66cf7ba24b9a5866536c42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::log</definition>
+        <argsstring>(Level level, const std::string &amp;message)</argsstring>
+        <name>log</name>
+        <param>
+          <type>Level</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="94" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="94" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1afb8ce662dbcee1fd3f5789df96fff0bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::publishCameraData</definition>
+        <argsstring>(const ubm_interfaces::msg::CameraData &amp;ros_msg)</argsstring>
+        <name>publishCameraData</name>
+        <param>
+          <type>const ubm_interfaces::msg::CameraData &amp;</type>
+          <declname>ros_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="111" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="111" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1ac460a1cdb83da6dd719b21a51ea6cb1a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlive__telemetry_1_1PublishStats" kindref="compound">PublishStats</ref></type>
+        <definition>PublishStats live_telemetry::FoxgloveLogger::getStats</definition>
+        <argsstring>() const</argsstring>
+        <name>getStats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="150" column="18" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a0fce06e2cc2548925d6bc41af7b8c218" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double live_telemetry::FoxgloveLogger::getBandwidthMbps</definition>
+        <argsstring>() const</argsstring>
+        <name>getBandwidthMbps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="155" column="12" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a311e74f20e82a62f3733167493c6cf74" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string live_telemetry::FoxgloveLogger::getStatsString</definition>
+        <argsstring>() const</argsstring>
+        <name>getStatsString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="160" column="17" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="160" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a518a0b76d990d6f3a993e3c9c2c1f335" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::setImageScaleConfig</definition>
+        <argsstring>(const ImageScaleConfig &amp;config)</argsstring>
+        <name>setImageScaleConfig</name>
+        <param>
+          <type>const <ref refid="structlive__telemetry_1_1ImageScaleConfig" kindref="compound">ImageScaleConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="172" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="172" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a947eccc49cade04718ae38872526e55a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structlive__telemetry_1_1ImageScaleConfig" kindref="compound">ImageScaleConfig</ref> &amp;</type>
+        <definition>const ImageScaleConfig&amp; live_telemetry::FoxgloveLogger::getImageScaleConfig</definition>
+        <argsstring>() const</argsstring>
+        <name>getImageScaleConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="177" column="28" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="177" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a82601ba19e2759a8f4dad0fc108a107b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::optional&lt; foxglove::WebSocketServer &gt; &amp;</type>
+        <definition>std::optional&lt;foxglove::WebSocketServer&gt;&amp; live_telemetry::FoxgloveLogger::getServer</definition>
+        <argsstring>()</argsstring>
+        <name>getServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="182" column="19" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="182" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1af68dc43bbd542b81ff2f900ccf7e26b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::publishPointCloud</definition>
+        <argsstring>(const std::string &amp;topic_name, const std::string &amp;serialized_proto)</argsstring>
+        <name>publishPointCloud</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>serialized_proto</declname>
+        </param>
+        <briefdescription>
+<para>Publish a pre-serialized foxglove.PointCloud protobuf message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The channel is lazily created on the first call for each topic_name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="192" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="192" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1ae1c672981a0274781d351cc5bf4f7e98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::publishGenericMessage</definition>
+        <argsstring>(const std::string &amp;topic_name, const std::string &amp;topic_type, const std::shared_ptr&lt; rclcpp::SerializedMessage &gt; &amp;msg)</argsstring>
+        <name>publishGenericMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_type</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; rclcpp::SerializedMessage &gt; &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="223" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="223" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a63993736125647097f704335d067019f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::FoxgloveLogger::hasChannel</definition>
+        <argsstring>(const std::string &amp;topic_name) const</argsstring>
+        <name>hasChannel</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="257" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="257" bodyend="260"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1aaa5d212818a4d832b23cb7b4b42190ce" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::FoxgloveLogger::createPointCloudChannel</definition>
+        <argsstring>(const std::string &amp;topic_name)</argsstring>
+        <name>createPointCloudChannel</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="269" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="269" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a90303525c8f536586da0d3052bb30ed3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool live_telemetry::FoxgloveLogger::createGenericChannel</definition>
+        <argsstring>(const std::string &amp;topic_name, const std::string &amp;topic_type)</argsstring>
+        <name>createGenericChannel</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="295" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="295" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a7e2b4e0208a7ccbee230f735636b687e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="332" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="332" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a7fb3509fd0567c84df4e4dbbcd1a21c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::initializeProtobufChannel</definition>
+        <argsstring>()</argsstring>
+        <name>initializeProtobufChannel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="358" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="358" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1af9b3ab2e07dbe2155f6aac795fe18b80" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>foxglove::schemas::Timestamp</type>
+        <definition>foxglove::schemas::Timestamp live_telemetry::FoxgloveLogger::getCurrentTimestamp</definition>
+        <argsstring>() const</argsstring>
+        <name>getCurrentTimestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="379" column="34" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="379" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a92819e7ee3227790e91603eea8fc4440" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void live_telemetry::FoxgloveLogger::updateStats</definition>
+        <argsstring>(size_t message_bytes, size_t original_image_bytes, size_t scaled_image_bytes)</argsstring>
+        <name>updateStats</name>
+        <param>
+          <type>size_t</type>
+          <declname>message_bytes</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>original_image_bytes</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>scaled_image_bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="410" column="10" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="410" bodyend="442"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classlive__telemetry_1_1FoxgloveLogger_1a92d4efa569ad511b3b751d7ce458abc8" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>foxglove::schemas::Log::LogLevel</type>
+        <definition>static foxglove::schemas::Log::LogLevel live_telemetry::FoxgloveLogger::toFoxgloveLevel</definition>
+        <argsstring>(Level level)</argsstring>
+        <name>toFoxgloveLevel</name>
+        <param>
+          <type>Level</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/live_telemetry_node/foxglove_logger.hpp" line="393" column="45" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="393" bodyend="408"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/live_telemetry_node/foxglove_logger.hpp" line="43" column="1" bodyfile="include/live_telemetry_node/foxglove_logger.hpp" bodystart="42" bodyend="461"/>
+    <listofallmembers>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a8e6ec28cfc7a744a6e0294682a05a28d" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>bytes_this_second_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a2ac344d1ee9fed5da625c92bfa1e4a13" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>camera_data_channel_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a31ee1c1ff7f86ca5ba4ceb27fc7dfe45" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>config_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a90303525c8f536586da0d3052bb30ed3" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>createGenericChannel</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1aaa5d212818a4d832b23cb7b4b42190ce" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>createPointCloudChannel</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a26c82554e670390b5838a5f27520ba94" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>debug</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a17d44a89e961d65d2d7ef46f7fef6348" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>definition_cache_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1addf46be30588b5de732dfee9fdb688b6" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>error</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1ab96c1824240aae70147a302d8acfe186" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>FoxgloveLogger</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a1df0845fdc39c602cfddddf4b1a31954" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>generic_channels_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a0fce06e2cc2548925d6bc41af7b8c218" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>getBandwidthMbps</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1af9b3ab2e07dbe2155f6aac795fe18b80" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>getCurrentTimestamp</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a947eccc49cade04718ae38872526e55a" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>getImageScaleConfig</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a82601ba19e2759a8f4dad0fc108a107b" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>getServer</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1ac460a1cdb83da6dd719b21a51ea6cb1a" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>getStats</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a311e74f20e82a62f3733167493c6cf74" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>getStatsString</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a63993736125647097f704335d067019f" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>hasChannel</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1af0cf67b51e5c1cceb4f71c4e9728be09" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>image_scaler_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a17ba0ed24d95f9b182f0e12d45d8b3f8" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>info</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7e2b4e0208a7ccbee230f735636b687e" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>initialize</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1ac1b5fe34a1e86155bd1599e11a7a1512" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>initialized_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7fb3509fd0567c84df4e4dbbcd1a21c8" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>initializeProtobufChannel</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1ac200f759d7ff1117b39c1b0cbab489aa" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>isReady</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a8d828552086fe86706c6e29073e79567" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>jpeg_compressor_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a1af43242a30bf6b92a2369bba79de92a" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>last_stats_time_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7ada12d48932f11f0f5a6848365acf76" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>Level</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a41c42315dc66cf7ba24b9a5866536c42" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>log</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a0b3c6dfe19ed886046efd893169c1c02" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>log_channel_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a88f3504b7ad5ae8cdecff36a13ddfbcf" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>messages_this_second_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1ada8c7a1b2604f12b869af5165a9c34da" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>msg_def_provider_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7c1a18deac748a760e5ece68cb585bd6" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>point_cloud_channels_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1afb8ce662dbcee1fd3f5789df96fff0bc" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>publishCameraData</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1ae1c672981a0274781d351cc5bf4f7e98" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>publishGenericMessage</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1af68dc43bbd542b81ff2f900ccf7e26b9" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>publishPointCloud</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a906bf7adbe4df4d4f35b8bf704433e6d" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>schema_data_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a7e65483767d489878c6d5321158232a1" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>server_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a518a0b76d990d6f3a993e3c9c2c1f335" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>setImageScaleConfig</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a17ec3626fe9154ac5eea4db0afd741b6" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>stats_</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a92d4efa569ad511b3b751d7ce458abc8" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>toFoxgloveLevel</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a92819e7ee3227790e91603eea8fc4440" prot="private" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>updateStats</name></member>
+      <member refid="classlive__telemetry_1_1FoxgloveLogger_1a5f7919347307bb59ec846eb84a5d5997" prot="public" virt="non-virtual"><scope>live_telemetry::FoxgloveLogger</scope><name>warning</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

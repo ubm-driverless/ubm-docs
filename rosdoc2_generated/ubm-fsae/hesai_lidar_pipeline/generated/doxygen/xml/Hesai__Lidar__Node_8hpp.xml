@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="Hesai__Lidar__Node_8hpp" kind="file" language="C++">
+    <compoundname>Hesai_Lidar_Node.hpp</compoundname>
+    <includes local="yes">patchwork/patchworkpp.h</includes>
+    <includes refid="Utils_8hpp" local="yes">Hesai_Lidar_Pipeline/Utils.hpp</includes>
+    <includes refid="Utils__clustering_8hpp" local="yes">Hesai_Lidar_Pipeline/Utils_clustering.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">map</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">sensor_msgs/msg/point_cloud2.hpp</includes>
+    <includes local="yes">std_msgs/msg/header.hpp</includes>
+    <includes local="no">ubm_interfaces/msg/vcu_data.hpp</includes>
+    <includes local="no">ubm_interfaces/srv/is_ready.hpp</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">pcl/common/common.h</includes>
+    <includes local="no">pcl/common/transforms.h</includes>
+    <includes local="no">pcl/filters/filter.h</includes>
+    <includes local="no">pcl/point_types.h</includes>
+    <includes local="no">pcl/common/centroid.h</includes>
+    <includes local="no">pcl/filters/voxel_grid.h</includes>
+    <includes local="no">pcl/filters/passthrough.h</includes>
+    <includes local="no">pcl/kdtree/kdtree_flann.h</includes>
+    <includes local="no">pcl/filters/extract_indices.h</includes>
+    <includes local="no">pcl/search/kdtree.h</includes>
+    <includes local="no">pcl/segmentation/extract_clusters.h</includes>
+    <includes local="no">pcl/io/pcd_io.h</includes>
+    <includes local="no">pcl/point_cloud.h</includes>
+    <includes local="no">pcl/filters/crop_box.h</includes>
+    <includes local="no">pcl_conversions/pcl_conversions.h</includes>
+    <includes local="yes">ubm_interfaces/msg/landmark.hpp</includes>
+    <includes local="yes">ubm_interfaces/msg/landmark_array.hpp</includes>
+    <includes local="no">nav_msgs/msg/odometry.hpp</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">filesystem</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>ubm_interfaces/srv/is_ready.hpp</label>
+      </node>
+      <node id="15">
+        <label>pcl/point_types.h</label>
+      </node>
+      <node id="34">
+        <label>filesystem</label>
+      </node>
+      <node id="13">
+        <label>pcl/common/transforms.h</label>
+      </node>
+      <node id="25">
+        <label>pcl/filters/crop_box.h</label>
+      </node>
+      <node id="18">
+        <label>pcl/filters/passthrough.h</label>
+      </node>
+      <node id="22">
+        <label>pcl/segmentation/extract_clusters.h</label>
+      </node>
+      <node id="29">
+        <label>nav_msgs/msg/odometry.hpp</label>
+      </node>
+      <node id="24">
+        <label>pcl/point_cloud.h</label>
+      </node>
+      <node id="9">
+        <label>ubm_interfaces/msg/vcu_data.hpp</label>
+      </node>
+      <node id="32">
+        <label>cmath</label>
+      </node>
+      <node id="33">
+        <label>numeric</label>
+      </node>
+      <node id="27">
+        <label>ubm_interfaces/msg/landmark.hpp</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>patchwork/patchworkpp.h</label>
+      </node>
+      <node id="28">
+        <label>ubm_interfaces/msg/landmark_array.hpp</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>std_msgs/msg/header.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp</label>
+        <link refid="Hesai__Lidar__Node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="7">
+        <label>sensor_msgs/msg/point_cloud2.hpp</label>
+      </node>
+      <node id="11">
+        <label>fstream</label>
+      </node>
+      <node id="12">
+        <label>pcl/common/common.h</label>
+      </node>
+      <node id="20">
+        <label>pcl/filters/extract_indices.h</label>
+      </node>
+      <node id="5">
+        <label>tuple</label>
+      </node>
+      <node id="16">
+        <label>pcl/common/centroid.h</label>
+      </node>
+      <node id="21">
+        <label>pcl/search/kdtree.h</label>
+      </node>
+      <node id="19">
+        <label>pcl/kdtree/kdtree_flann.h</label>
+      </node>
+      <node id="30">
+        <label>chrono</label>
+      </node>
+      <node id="31">
+        <label>algorithm</label>
+      </node>
+      <node id="26">
+        <label>pcl_conversions/pcl_conversions.h</label>
+      </node>
+      <node id="14">
+        <label>pcl/filters/filter.h</label>
+      </node>
+      <node id="23">
+        <label>pcl/io/pcd_io.h</label>
+      </node>
+      <node id="17">
+        <label>pcl/filters/voxel_grid.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classHesaiLidarNode" prot="public">HesaiLidarNode</innerclass>
+    <innerclass refid="structHesaiLidarNode_1_1ProfilingStats" prot="private">HesaiLidarNode::ProfilingStats</innerclass>
+    <innerclass refid="structHesaiLidarNode_1_1PoseState" prot="private">HesaiLidarNode::PoseState</innerclass>
+    <innerclass refid="structHesaiLidarNode_1_1TrackedCone" prot="private">HesaiLidarNode::TrackedCone</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Hesai_Lidar_Pipeline/Hesai_Lidar_Node.hpp"/>
+  </compounddef>
+</doxygen>

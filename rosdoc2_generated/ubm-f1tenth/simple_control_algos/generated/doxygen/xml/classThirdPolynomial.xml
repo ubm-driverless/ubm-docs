@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classThirdPolynomial" kind="class" language="C++" prot="public">
+    <compoundname>ThirdPolynomial</compoundname>
+    <includes local="no">spline_and_polynomial.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classThirdPolynomial_1afa6d476dc9028097078738f63e613fbc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ThirdPolynomial::a_0</definition>
+        <argsstring></argsstring>
+        <name>a_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="133" column="11" bodyfile="include/spline_and_polynomial.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThirdPolynomial_1ad71b608f05e102c1a0377b4b937ac993" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ThirdPolynomial::a_1</definition>
+        <argsstring></argsstring>
+        <name>a_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="133" column="15" bodyfile="include/spline_and_polynomial.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThirdPolynomial_1a9d8672ddd87f7b7601c6cd224ca3dcdd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ThirdPolynomial::a_2</definition>
+        <argsstring></argsstring>
+        <name>a_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="133" column="19" bodyfile="include/spline_and_polynomial.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classThirdPolynomial_1a76a5dee437812bd85231fb04a77eeedd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ThirdPolynomial::a_3</definition>
+        <argsstring></argsstring>
+        <name>a_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="133" column="23" bodyfile="include/spline_and_polynomial.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classThirdPolynomial_1aa0a9d9dca17b52b9a8b737dc81b6367c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ThirdPolynomial::ThirdPolynomial</definition>
+        <argsstring>(const float &amp;xs, const float &amp;xe, const float &amp;vxe, const float &amp;axe, const float &amp;time)</argsstring>
+        <name>ThirdPolynomial</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>xe</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>vxe</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>axe</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for third_polynomial. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Final position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vxe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Final velocity. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Final acceleration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Duration over which the polynomial is defined. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="143" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classThirdPolynomial_1ad278e37fa40b17efc838a7bd67ded65a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float ThirdPolynomial::calc_point</definition>
+        <argsstring>(const float &amp;t) const</argsstring>
+        <name>calc_point</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the value of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="155" column="18" bodyfile="include/spline_and_polynomial.hpp" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classThirdPolynomial_1a4d67bba3a4498295315922d891e57aa0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float ThirdPolynomial::calc_first_derivative</definition>
+        <argsstring>(const float &amp;t) const</argsstring>
+        <name>calc_first_derivative</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="167" column="18" bodyfile="include/spline_and_polynomial.hpp" bodystart="167" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classThirdPolynomial_1a3a56fac53ffe8e6f49078f8acf71cec5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float ThirdPolynomial::calc_second_derivative</definition>
+        <argsstring>(const float &amp;t) const</argsstring>
+        <name>calc_second_derivative</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the second derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Second derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="177" column="18" bodyfile="include/spline_and_polynomial.hpp" bodystart="177" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classThirdPolynomial_1a16af3b32694d807dae8705a076fe365f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float ThirdPolynomial::calc_third_derivative</definition>
+        <argsstring>() const</argsstring>
+        <name>calc_third_derivative</name>
+        <briefdescription>
+<para>Calculates the third derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Third derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="187" column="18" bodyfile="include/spline_and_polynomial.hpp" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classThirdPolynomial_1a2dbde603bad187b56449332ea9499857" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::tuple&lt; float, float, float, float &gt;</type>
+        <definition>std::tuple&lt;float, float, float, float&gt; ThirdPolynomial::calc_all</definition>
+        <argsstring>(const float &amp;t) const</argsstring>
+        <name>calc_all</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the value, first derivative, second derivative, and third derivative of the polynomial at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which to evaluate the polynomial. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tuple containing the value, first derivative, second derivative, and third derivative of the polynomial at time t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/spline_and_polynomial.hpp" line="197" column="23" bodyfile="include/spline_and_polynomial.hpp" bodystart="197" bodyend="204"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents a cubic polynomial defined by its initial position, final position, final velocity, final acceleration, and time duration. </para>
+    </detaileddescription>
+    <location file="include/spline_and_polynomial.hpp" line="131" column="22" bodyfile="include/spline_and_polynomial.hpp" bodystart="131" bodyend="205"/>
+    <listofallmembers>
+      <member refid="classThirdPolynomial_1afa6d476dc9028097078738f63e613fbc" prot="public" virt="non-virtual"><scope>ThirdPolynomial</scope><name>a_0</name></member>
+      <member refid="classThirdPolynomial_1ad71b608f05e102c1a0377b4b937ac993" prot="public" virt="non-virtual"><scope>ThirdPolynomial</scope><name>a_1</name></member>
+      <member refid="classThirdPolynomial_1a9d8672ddd87f7b7601c6cd224ca3dcdd" prot="public" virt="non-virtual"><scope>ThirdPolynomial</scope><name>a_2</name></member>
+      <member refid="classThirdPolynomial_1a76a5dee437812bd85231fb04a77eeedd" prot="public" virt="non-virtual"><scope>ThirdPolynomial</scope><name>a_3</name></member>
+      <member refid="classThirdPolynomial_1a2dbde603bad187b56449332ea9499857" prot="public" virt="non-virtual"><scope>ThirdPolynomial</scope><name>calc_all</name></member>
+      <member refid="classThirdPolynomial_1a4d67bba3a4498295315922d891e57aa0" prot="public" virt="non-virtual"><scope>ThirdPolynomial</scope><name>calc_first_derivative</name></member>
+      <member refid="classThirdPolynomial_1ad278e37fa40b17efc838a7bd67ded65a" prot="public" virt="non-virtual"><scope>ThirdPolynomial</scope><name>calc_point</name></member>
+      <member refid="classThirdPolynomial_1a3a56fac53ffe8e6f49078f8acf71cec5" prot="public" virt="non-virtual"><scope>ThirdPolynomial</scope><name>calc_second_derivative</name></member>
+      <member refid="classThirdPolynomial_1a16af3b32694d807dae8705a076fe365f" prot="public" virt="non-virtual"><scope>ThirdPolynomial</scope><name>calc_third_derivative</name></member>
+      <member refid="classThirdPolynomial_1aa0a9d9dca17b52b9a8b737dc81b6367c" prot="public" virt="non-virtual"><scope>ThirdPolynomial</scope><name>ThirdPolynomial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

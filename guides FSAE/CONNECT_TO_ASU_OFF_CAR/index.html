@@ -1,0 +1,2388 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ubm-driverless.github.io/ubm-docs/guides%20FSAE/CONNECT_TO_ASU_OFF_CAR/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../DRIVERLESS_PROCEDURE_FSAE/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Connecting to the ASU Outside the Car - UBM Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CSource+Code+Pro+:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Source Code Pro "}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#connecting-to-the-asu-outside-the-car" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="UBM Documentation" class="md-header__button md-logo" aria-label="UBM Documentation" data-md-component="logo">
+      
+  <img src="../../assets/UBM-Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UBM Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Connecting to the ASU Outside the Car
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="red"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ubm-driverless" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ubm-driverless
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guides%20F1tenth/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guides F1tenth
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guides FSAE
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guides%20Simulator/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guides Simulator
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../repositories/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Repositories
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UBM Documentation" class="md-nav__button md-logo" aria-label="UBM Documentation" data-md-component="logo">
+      
+  <img src="../../assets/UBM-Logo.png" alt="logo">
+
+    </a>
+    UBM Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ubm-driverless" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ubm-driverless
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/DOCS_GENERATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/SETUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup of the "ubm-f1tenth" environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides F1tenth
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides F1tenth
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/ADD_DOCUMENTATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to Add Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/F1TENTH_HARDWARE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F1Tenth Hardware Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/FOXGLOVE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Foxglove
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/IMAGE_PARSER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to Use image_parser.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/INSTALL_CPP_DEPENDENCIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to install GEOS and nanoflann and FLANN for C++
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/JETSON_INFO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philly's Jetson Xavier NX info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/LINTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/MODEM_INTERNET_CONNECTION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to connect to router to the internet using USB tethering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/RACELINE_ENV/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raceline virtual environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/ROS_PACKAGE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide for creating a ROS2 package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/SETUP_CAR_FROM_SCRATCH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    From 0 to Working Car
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run real world car
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Run real world car
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/1_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/2_BRINGUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bringup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/3_MAPPING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/4_RACELINE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raceline &amp; Speed Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/5_RUN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/6_SHUTDOWN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shutdown
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20F1tenth/run_real_world_car/TROUBLESHOOTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides FSAE
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides FSAE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connecting to the ASU Outside the Car
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connecting to the ASU Outside the Car
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#safety-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety and scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required hardware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asu-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASU assembly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asu-network-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASU network router
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-router-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internet router (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-and-cooling-equipment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power and cooling equipment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prepare-the-bench-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Prepare the bench setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-power-on-the-asu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Power on the ASU
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-connect-the-operator-laptop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Connect the operator laptop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-connect-over-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Connect over SSH
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-inspect-the-automatic-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Inspect the automatic startup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-connect-foxglove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Connect Foxglove
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-mission-state-testing-without-the-car" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Mission-state testing without the car
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shutdown
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DRIVERLESS_PROCEDURE_FSAE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Driverless Procedure for Formula Student
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GITHUB_WORKFLOW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Workflow for Github
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HARDWARE_FSAE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FSAE Hardware Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../USEFULL_COMMANDS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USEFULL COMMANDS IN SEVERAL OCCASION
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides Simulator
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides Simulator
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20Simulator/NAVSIM_TRACKGEN_SIMULATOR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NavSim TrackGen Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20Simulator/UNITY_SIMULATOR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity Formula Student Driverless Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Connections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20Simulator/connections/UNITY_NAVSIM_ROS_TRANSPORTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity, NavSim, ROS 2 and Foxglove
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20Simulator/connections/UNITY_P5JS_ODOMETRY_TEST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test integrato Unity e p5.js TrackSim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20Simulator/connections/UNITY_P5JS_ODOMETRY_WINDOWS_UBUNTU_TEST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test odometria: NavSim su Ubuntu e Unity su Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides%20Simulator/connections/UNITY_ROS_TCP_VISUALIZATION_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity Windows ↔ ROS 2 Ubuntu: ROS-TCP e visualizzazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repositories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repositories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#safety-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety and scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required hardware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asu-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASU assembly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asu-network-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASU network router
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-router-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internet router (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-and-cooling-equipment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power and cooling equipment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prepare-the-bench-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Prepare the bench setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-power-on-the-asu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Power on the ASU
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-connect-the-operator-laptop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Connect the operator laptop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-connect-over-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Connect over SSH
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-inspect-the-automatic-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Inspect the automatic startup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-connect-foxglove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Connect Foxglove
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-mission-state-testing-without-the-car" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Mission-state testing without the car
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shutdown
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="connecting-to-the-asu-outside-the-car">Connecting to the ASU Outside the Car</h1>
+<p>This guide explains how to power, reach, and inspect the Autonomous System Unit (ASU) when it has been removed from the car for workshop debugging.</p>
+<p>This is not the vehicle startup procedure. When the ASU is installed in the car, follow <a href="../DRIVERLESS_PROCEDURE_FSAE/">Driverless Procedure for Formula Student</a> instead.</p>
+<h2 id="safety-and-scope">Safety and scope</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The ASU, its cooling system, batteries, and power supplies are expensive and can be damaged by incorrect wiring, reversed polarity, or an unsuitable supply voltage. Assemble and power the bench setup only with approval from a Driverless manager or the CTO.</p>
+</div>
+<ul>
+<li>Do not guess the required voltage or current limit.</li>
+<li>Do not connect or disconnect power while the system is energized.</li>
+<li>Check polarity before applying power.</li>
+<li>Make sure the liquid-cooling loop and its fan are operating whenever the ASU is powered.</li>
+<li>Do not bypass safety logic merely to make the software stack start.</li>
+<li>The procedure below is intended for software debugging with the ASU disconnected from the vehicle actuators.</li>
+</ul>
+<h2 id="required-hardware">Required hardware</h2>
+<p>The exact workshop setup may change. Before powering anything, identify the following parts and verify their connections with a responsible team member.</p>
+<h3 id="asu-assembly">ASU assembly</h3>
+<p>The ASU is the main computer used to run the Driverless stack. In the workshop configuration, identify:</p>
+<ul>
+<li>the ASU enclosure and liquid-cooling loop;</li>
+<li>the <strong>BUT</strong> lead used for the power-button signal;</li>
+<li>the <strong>LED</strong> lead;</li>
+<li>the USB connection for the ZED camera, if the camera is required for the test;</li>
+<li>the positive and negative power leads.</li>
+</ul>
+<!-- Add an overview image at ../assets/connect_to_asu_off_car/asu-overview.jpg -->
+
+<!-- Add a close-up of the labelled BUT and LED leads at ../assets/connect_to_asu_off_car/but-led-leads.jpg -->
+
+<h3 id="asu-network-router">ASU network router</h3>
+<p>Use the black router with four antennas to create the local network between the ASU and the operator laptop.</p>
+<!-- Add an image at ../assets/connect_to_asu_off_car/asu-router.jpg -->
+
+<h3 id="internet-router-optional">Internet router (optional)</h3>
+<p>The grey router normally used in the car broadcasts the <code>UBM_EV_5GHz</code> network. In the workshop it may provide Internet access through USB tethering from a phone. Internet access is optional for local SSH and ROS 2 debugging.</p>
+<p>The connection between the Internet router and the ASU network router depends on the current workshop layout. Verify the correct Ethernet ports and cabling before connecting them.</p>
+<!-- Add an image at ../assets/connect_to_asu_off_car/internet-router.jpg -->
+
+<h3 id="power-and-cooling-equipment">Power and cooling equipment</h3>
+<p>Use only the approved batteries, power supplies, chargers, and cooling-system supply for the ASU bench setup. Confirm the required voltage, current limit, polarity, and grounding before switching on any supply.</p>
+<!-- Add a labelled image at ../assets/connect_to_asu_off_car/power-and-cooling.jpg -->
+
+<h2 id="1-prepare-the-bench-setup">1. Prepare the bench setup</h2>
+<ol>
+<li>Place the ASU on a stable, dry, non-conductive surface with unobstructed airflow.</li>
+<li>Inspect the cooling loop for loose fittings, leaks, or trapped cables.</li>
+<li>Connect the cooling-system power according to the approved workshop setup.</li>
+<li>Connect the ASU to the black network router using the designated Ethernet cable.</li>
+<li>Connect the camera and other sensors only if they are required for the test.</li>
+<li>With all supplies still switched off, connect the ASU power leads and verify their polarity.</li>
+<li>Have a second team member check the setup before applying power.</li>
+</ol>
+<h2 id="2-power-on-the-asu">2. Power on the ASU</h2>
+<ol>
+<li>Switch on the approved power and cooling supplies.</li>
+<li>Locate the two power-button signal contacts inside the female end of the lead labelled <strong>BUT</strong>.</li>
+<li>Briefly bridge only those two contacts with a small insulated flat-head screwdriver, then remove the screwdriver immediately. This emulates a momentary press of the computer power button.</li>
+<li>Confirm that the ASU starts and that the cooling system remains operational.</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Do not bridge unidentified contacts, power terminals, or battery terminals. If the BUT connector or its pinout does not match this description, stop and ask a responsible team member.</p>
+</div>
+<h2 id="3-connect-the-operator-laptop">3. Connect the operator laptop</h2>
+<p>Connect the laptop to the same local network as the ASU. Depending on the current setup, this may be the Wi-Fi network broadcast by the ASU router or a wired Ethernet connection.</p>
+<p>The ASU is normally configured with the static address <code>192.168.1.155</code>. Test it first:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ping<span class="w"> </span><span class="m">192</span>.168.1.155
+</code></pre></div>
+<p>If the address does not respond, scan the local <code>/24</code> subnet from a laptop connected to the same network:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nmap<span class="w"> </span>-sn<span class="w"> </span><span class="m">192</span>.168.1.0/24
+</code></pre></div>
+<p><code>192.168.1.0/24</code> denotes the subnet from <code>192.168.1.0</code> to <code>192.168.1.255</code>. Scan only networks that you are authorized to test.</p>
+<h2 id="4-connect-over-ssh">4. Connect over SSH</h2>
+<p>Connect using the ASU account and enter its password when prompted:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh<span class="w"> </span>ubm@192.168.1.155
+</code></pre></div>
+<p>If the ASU uses a different address, replace <code>192.168.1.155</code> with the address found in the previous step.</p>
+<h2 id="5-inspect-the-automatic-startup">5. Inspect the automatic startup</h2>
+<p>The <code>asu_manager</code> systemd service normally starts the Driverless stack automatically. Outside the car, vehicle-side devices such as the VCU may be unavailable, so the manager can report connection failures or restart the stack.</p>
+<p>Check the service state:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>asu_manager.service
+</code></pre></div>
+<p>Follow its live log:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>asu_manager.service<span class="w"> </span>-f<span class="w"> </span>-o<span class="w"> </span>cat
+</code></pre></div>
+<p>Press <code>Ctrl+C</code> to stop following the log. The command stops only the log view; it does not stop <code>asu_manager</code>.</p>
+<p>On the current <code>ubm-fsae</code> <code>main</code> branch, the deployed repository and relevant files are:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/home/ubm/ubm-fsae/
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── launch/asu_manager.yaml
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>└── launch/bringup.yaml
+</code></pre></div>
+<p>For off-car testing, verify that <code>workshop_testing</code> is enabled in <code>launch/asu_manager.yaml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">workshop_testing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p>The normal startup list in <code>launch/bringup.yaml</code> includes both <code>vcu_tcp_communication</code> and <code>asu_watchdog</code>. With the VCU disconnected, the TCP node cannot connect to <code>192.168.1.88</code>; moreover, the watchdog expects a continuous <code>/vcu/data</code> stream. For an approved off-car test, comment out both entries in the <code>startup</code> section:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">startup</span><span class="p">:</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="c1"># - vcu_tcp_communication</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">odometry</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="c1"># ...other nodes required for the test...</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="c1"># - asu_watchdog</span>
+</code></pre></div>
+<p>Keep only the sensors and startup nodes that are physically present and required for the test. For example, also disable a camera or LiDAR driver when its corresponding sensor is disconnected.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a bench-only configuration for an ASU disconnected from the car and its actuators. Do not use it in the vehicle. Restore <code>vcu_tcp_communication</code>, <code>asu_watchdog</code>, and every required sensor node before returning the ASU to the car. Keep workshop-only changes out of competition configuration.</p>
+</div>
+<p>After an approved configuration change, restart the service with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>asu_manager.service
+</code></pre></div>
+<p>Then follow the journal again and verify that the expected nodes start.</p>
+<h2 id="6-connect-foxglove">6. Connect Foxglove</h2>
+<p>The current stack does not require the standard <code>foxglove_bridge</code> package. <code>live_telemetry_node</code>, which is part of the normal startup list, provides its own Foxglove WebSocket server on port <code>8765</code>.</p>
+<p>Confirm that <code>live_telemetry_node</code> is present in the <code>startup</code> section of <code>launch/bringup.yaml</code> and that it started successfully in the <code>asu_manager</code> journal.</p>
+<p>If you need to run it manually while <code>asu_manager</code> is stopped, use a separate SSH terminal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>/home/ubm/ubm-fsae
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">source</span><span class="w"> </span>install/setup.bash
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>ros2<span class="w"> </span>run<span class="w"> </span>live_telemetry_node<span class="w"> </span>live_telemetry_node<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span>--ros-args<span class="w"> </span>--params-file<span class="w"> </span>launch/live_telemetry_node.yaml
+</code></pre></div>
+<p>In Foxglove Studio:</p>
+<ol>
+<li>Select <strong>Open connection</strong>.</li>
+<li>Select <strong>Foxglove WebSocket</strong>.</li>
+<li>
+<p>Enter:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ws://192.168.1.155:8765
+</code></pre></div>
+</li>
+</ol>
+<p>Port <code>8765</code> is fixed by the current <code>live_telemetry_node</code> implementation. Keep the terminal running for the duration of the connection when the node was started manually.</p>
+<h2 id="7-mission-state-testing-without-the-car">7. Mission-state testing without the car</h2>
+<p>In the car, mission selection and Autonomous System Master Switch (ASMS) state are normally received from the VCU. With the ASU disconnected from the car, those messages are absent; consequently, <code>asu_manager</code> may remain in its startup state and nodes that wait for the readiness service may not proceed.</p>
+<p>Emulating VCU messages is an advanced software test. The commands below match the current <code>ubm-fsae</code> <code>main</code> branch. Before using them on another revision, verify the topic, message type, and constants in <code>ubm_interfaces/msg/VCUData.msg</code>.</p>
+<p>First emulate a VCU sensor packet with the ASMS enabled:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/vcu/data<span class="w"> </span>ubm_interfaces/msg/VCUData<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="s2">&quot;{vcu_data_type: 2, asms_on: 1}&quot;</span>
+</code></pre></div>
+<p>Then select the mission. The following example selects Autocross:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--once<span class="w"> </span>/vcu/data<span class="w"> </span>ubm_interfaces/msg/VCUData<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="s2">&quot;{vcu_data_type: 0, mission: 3}&quot;</span>
+</code></pre></div>
+<p>Once <code>asu_manager</code> has received both <code>asms_on: 1</code> and a mission-selection packet, it locks the selected mission and starts the corresponding section from <code>launch/bringup.yaml</code>.</p>
+<p>The mission identifiers in the current message definition are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Value</th>
+<th>Mission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><code>0</code></td>
+<td>Manual driving</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>1</code></td>
+<td>Acceleration</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>2</code></td>
+<td>Skidpad</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>3</code></td>
+<td>Autocross</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>4</code></td>
+<td>Trackdrive</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>5</code></td>
+<td>EBS test</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>6</code></td>
+<td>Inspection</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Publish simulated VCU data only when the ASU is physically disconnected from the car and all actuators. These one-shot messages replace only the state needed to start the selected software nodes; they do not reproduce the continuous VCU sensor stream. Do not reuse numeric mission values from another software revision without checking its message definition.</p>
+</div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Check</th>
+<th>Suggested action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The ASU does not power on</td>
+<td>Power supply, polarity, BUT lead, and cooling-system power</td>
+<td>Switch everything off and have the wiring checked; do not try other contacts</td>
+</tr>
+<tr>
+<td><code>192.168.1.155</code> does not respond</td>
+<td>Laptop address, router connection, and subnet</td>
+<td>Reconnect to the ASU network and use <code>nmap -sn 192.168.1.0/24</code></td>
+</tr>
+<tr>
+<td>SSH reports <code>Connection timed out</code></td>
+<td>Network path and ASU address</td>
+<td>Check the router and confirm the address with a subnet scan</td>
+</tr>
+<tr>
+<td>SSH reports <code>Connection refused</code></td>
+<td>SSH service on the ASU</td>
+<td>Check the local ASU console or ask the system maintainer</td>
+</tr>
+<tr>
+<td><code>asu_manager</code> repeatedly restarts</td>
+<td>Missing VCU or another required node</td>
+<td>Read the journal and use the approved workshop configuration</td>
+</tr>
+<tr>
+<td>Foxglove cannot connect</td>
+<td><code>live_telemetry_node</code> and port <code>8765</code></td>
+<td>Confirm the node is running and the laptop is on the ASU network</td>
+</tr>
+<tr>
+<td>Expected ROS 2 topics are missing</td>
+<td>ROS environment and selected bringup nodes</td>
+<td>Source the deployed workspace and inspect the manager log</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shutdown">Shutdown</h2>
+<ol>
+<li>Stop any manually launched ROS 2 processes with <code>Ctrl+C</code>.</li>
+<li>
+<p>Shut down the ASU cleanly over SSH:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>now
+</code></pre></div>
+</li>
+<li>
+<p>Wait until the operating system has shut down and the ASU is no longer active.</p>
+</li>
+<li>Switch off the ASU power supply and then the cooling-system supply according to the approved bench procedure.</li>
+<li>Disconnect batteries and cables only after all supplies are off.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 © UniBo Motorsport
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
