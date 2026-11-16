@@ -5,6 +5,9 @@ development guides for the UBM Driverless projects.
 
 ## Documentation Website
 
+<img width="1854" height="1048" alt="Schermata del 2026-11-16 15-16-48" src="https://github.com/user-attachments/assets/be9fc9a7-4683-4193-bfed-0ba39dc2ab81" />
+
+
 Start from the documentation landing page:
 
 **[Open the UBM Driverless Documentation](https://ubm-driverless.github.io/ubm-docs/)**
