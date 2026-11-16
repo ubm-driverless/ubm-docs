@@ -174,6 +174,11 @@ background images, and track metadata. CSV export is useful for cone positions
 and the initial pose. DRD import reads a centerline and generates blue and
 yellow track boundaries.
 
+See the
+[Cones, Naming, IDs, and Track File Formats](../concepts-and-standards/cones-and-track-formats.md)
+guide for the canonical cone class IDs, exact schemas, pipeline compatibility
+notes, and VI-grade DRD conversion behavior.
+
 ### Driving
 
 The **Driving** menu configures vehicle and navigation behavior:
